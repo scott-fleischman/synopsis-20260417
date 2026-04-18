@@ -1,0 +1,2770 @@
+top_nonlocal_echoes:
+- mark_ref: Mark 13:13
+  matt_ref: Matt 10:22
+  score: 0.9999999999999999
+  wj_content: 1.0
+  wj_all: 1.0
+  wj_bigram: 1.0
+  sr_content: 1.0
+  rare_inter: 35.503058087437275
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 7:7
+  matt_ref: Matt 15:9
+  score: 0.9999999999999999
+  wj_content: 1.0
+  wj_all: 1.0
+  wj_bigram: 1.0
+  sr_content: 1.0
+  rare_inter: 37.91786066392467
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:12
+  matt_ref: Matt 10:21
+  score: 0.9962966977560191
+  wj_content: 1.0
+  wj_all: 0.9629669775601924
+  wj_bigram: 1.0
+  sr_content: 1.0
+  rare_inter: 45.937405565194794
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 4:25
+  matt_ref: Matt 13:12
+  score: 0.7394159452678352
+  wj_content: 0.747640289999197
+  wj_all: 0.6715084350911192
+  wj_bigram: 0.5966412183696718
+  sr_content: 0.9333333333333333
+  rare_inter: 19.306890595500786
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 9:37
+  matt_ref: Matt 18:5
+  score: 0.5548247867697416
+  wj_content: 0.7276354689045962
+  wj_all: 0.6470206299891335
+  wj_bigram: 0.19360419391218273
+  sr_content: 0.5714285714285714
+  rare_inter: 20.26276752436895
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 3:18
+  matt_ref: Matt 10:3
+  score: 0.5502144271540766
+  wj_content: 0.6549136775006144
+  wj_all: 0.6659599085198363
+  wj_bigram: 0.22229579237393285
+  sr_content: 0.6666666666666666
+  rare_inter: 48.229456091033725
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 1:31
+  matt_ref: Matt 8:15
+  score: 0.5320193057922952
+  wj_content: 0.6391609555523764
+  wj_all: 0.6700713075675148
+  wj_bigram: 0.2172512878402047
+  sr_content: 0.6153846153846154
+  rare_inter: 26.75469022497167
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 1:5
+  matt_ref: Matt 3:6
+  score: 0.5128071625651115
+  wj_content: 0.5209141292411128
+  wj_all: 0.5665768101373132
+  wj_bigram: 0.3869524935715175
+  sr_content: 0.625
+  rare_inter: 31.448047567038405
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 4:25
+  matt_ref: Matt 25:29
+  score: 0.5022272522319541
+  wj_content: 0.5075583588108077
+  wj_all: 0.5692238475772263
+  wj_bigram: 0.26761442403747204
+  sr_content: 0.75
+  rare_inter: 16.42383126407456
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 10:31
+  matt_ref: Matt 20:16
+  score: 0.4960005337449533
+  wj_content: 0.6069937109846517
+  wj_all: 0.5949559120654807
+  wj_bigram: 0.2534310903812475
+  sr_content: 0.5
+  rare_inter: 13.100733273064364
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 6:34
+  matt_ref: Matt 9:36
+  score: 0.495295043969794
+  wj_content: 0.5273903899898578
+  wj_all: 0.4330370191877734
+  wj_bigram: 0.3021409270918879
+  sr_content: 0.6956521739130435
+  rare_inter: 35.75747645182578
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 8:18
+  matt_ref: Matt 13:16
+  score: 0.4011555304551388
+  wj_content: 0.5065755651327261
+  wj_all: 0.43230188062365504
+  wj_bigram: 0.09319868566551949
+  sr_content: 0.5333333333333333
+  rare_inter: 20.21435177356916
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:11
+  matt_ref: Matt 8:30
+  score: 0.3957587697265029
+  wj_content: 0.46376222927211674
+  wj_all: 0.4059299058062692
+  wj_bigram: 0.09358341158600136
+  sr_content: 0.6153846153846154
+  rare_inter: 22.19361147506962
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:24
+  matt_ref: Matt 19:2
+  score: 0.395095007045155
+  wj_content: 0.3645666202951188
+  wj_all: 0.3755851131407285
+  wj_bigram: 0.29392606639311464
+  sr_content: 0.6
+  rare_inter: 12.561847379565503
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 6:7
+  matt_ref: Matt 10:1
+  score: 0.38495526926760004
+  wj_content: 0.408869607287359
+  wj_all: 0.411649709787746
+  wj_bigram: 0.22180459569022945
+  sr_content: 0.5217391304347826
+  rare_inter: 30.85096611466437
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:24
+  matt_ref: Matt 8:1
+  score: 0.3840982359586774
+  wj_content: 0.3587635700068087
+  wj_all: 0.2917311285733488
+  wj_bigram: 0.29392606639311464
+  sr_content: 0.6
+  rare_inter: 12.561847379565503
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 9:37
+  matt_ref: Matt 10:40
+  score: 0.3816499502109877
+  wj_content: 0.3938302089557312
+  wj_all: 0.2931514120797906
+  wj_bigram: 0.24330200274886113
+  sr_content: 0.5714285714285714
+  rare_inter: 10.967153621795113
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:24
+  matt_ref: Matt 20:29
+  score: 0.37706214994180437
+  wj_content: 0.33673335301442814
+  wj_all: 0.32538582283647016
+  wj_bigram: 0.29197423520665866
+  sr_content: 0.6
+  rare_inter: 12.561847379565503
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:11
+  matt_ref: Matt 10:19
+  score: 0.3764437385623025
+  wj_content: 0.34216454617703596
+  wj_all: 0.4043360517535651
+  wj_bigram: 0.2710014932862621
+  sr_content: 0.5714285714285714
+  rare_inter: 21.564267217780042
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 8:35
+  matt_ref: Matt 10:39
+  score: 0.35649876159105476
+  wj_content: 0.346250190638383
+  wj_all: 0.3865914578871875
+  wj_bigram: 0.19096526291739743
+  sr_content: 0.5714285714285714
+  rare_inter: 10.685302469654127
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: false
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 9:27
+  matt_ref: Matt 9:25
+  score: 0.3488931461296125
+  wj_content: 0.3380487038152151
+  wj_all: 0.37952976296417473
+  wj_bigram: 0.2352730124653928
+  sr_content: 0.5
+  rare_inter: 14.202169874837896
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 7:5
+  matt_ref: Matt 15:2
+  score: 0.3474604895006084
+  wj_content: 0.4366361142820192
+  wj_all: 0.427424269610906
+  wj_bigram: 0.05197486349805595
+  sr_content: 0.47619047619047616
+  rare_inter: 32.41526626592501
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:14
+  matt_ref: Matt 8:33
+  score: 0.32755772306667197
+  wj_content: 0.425320307981899
+  wj_all: 0.4243186959944153
+  wj_bigram: 0.07492685950150331
+  sr_content: 0.375
+  rare_inter: 23.511351505522736
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:35
+  matt_ref: Matt 24:42
+  score: 0.3233060923821084
+  wj_content: 0.320245606227585
+  wj_all: 0.29415816871546124
+  wj_bigram: 0.1285307755384782
+  sr_content: 0.5882352941176471
+  rare_inter: 20.65076144556287
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 1:32
+  matt_ref: Matt 8:16
+  score: 0.3190899082653979
+  wj_content: 0.3400944335513845
+  wj_all: 0.3761309205615477
+  wj_bigram: 0.15010092080811693
+  sr_content: 0.45454545454545453
+  rare_inter: 28.373408331166978
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 6:11
+  matt_ref: Matt 10:14
+  score: 0.30814641322937797
+  wj_content: 0.31787477819224663
+  wj_all: 0.35469776637198064
+  wj_bigram: 0.11853194562267538
+  sr_content: 0.5
+  rare_inter: 26.544454874782957
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 11:25
+  matt_ref: Matt 6:14
+  score: 0.29534713502983956
+  wj_content: 0.3929455353567083
+  wj_all: 0.24762706843845095
+  wj_bigram: 0.07503574910190276
+  sr_content: 0.375
+  rare_inter: 19.448859907116983
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 8:8
+  matt_ref: Matt 14:20
+  score: 0.2926720189678029
+  wj_content: 0.31462870733623727
+  wj_all: 0.3222434341230357
+  wj_bigram: 0.07545902901677023
+  sr_content: 0.5
+  rare_inter: 22.212479959374004
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:11
+  matt_ref: Matt 10:20
+  score: 0.282996934575957
+  wj_content: 0.2662201709703271
+  wj_all: 0.3040749627930745
+  wj_bigram: 0.19431934017685148
+  sr_content: 0.42105263157894735
+  rare_inter: 14.761061923094097
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 4:12
+  matt_ref: Matt 13:13
+  score: 0.2756312531414616
+  wj_content: 0.32695175938936133
+  wj_all: 0.23239803521512153
+  wj_bigram: 0.0
+  sr_content: 0.5263157894736842
+  rare_inter: 14.619461518200817
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 11:25
+  matt_ref: Matt 6:15
+  score: 0.2753141669967619
+  wj_content: 0.2944894676398057
+  wj_all: 0.23383295367703016
+  wj_bigram: 0.07764244476458548
+  sr_content: 0.5
+  rare_inter: 15.380519904376975
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 1:5
+  matt_ref: Matt 3:5
+  score: 0.2736610723969742
+  wj_content: 0.2715772047809667
+  wj_all: 0.31097554944004985
+  wj_bigram: 0.06036246962718937
+  sr_content: 0.5263157894736842
+  rare_inter: 20.834742830255344
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 2:6
+  matt_ref: Matt 6:21
+  score: 0.27026207092201304
+  wj_content: 0.320858212030907
+  wj_all: 0.2587587550810489
+  wj_bigram: 0.0
+  sr_content: 0.5
+  rare_inter: 12.344527956537283
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 5:24
+  matt_ref: Matt 4:25
+  score: 0.2667746234442454
+  wj_content: 0.23341460149074594
+  wj_all: 0.21765712939906237
+  wj_bigram: 0.1906585901032446
+  sr_content: 0.46153846153846156
+  rare_inter: 12.561847379565503
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 8:18
+  matt_ref: Matt 13:13
+  score: 0.2644762437008928
+  wj_content: 0.23647075604158357
+  wj_all: 0.1855264672025834
+  wj_bigram: 0.22120492178452933
+  sr_content: 0.42105263157894735
+  rare_inter: 11.747781893316805
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 8:10
+  matt_ref: Matt 9:1
+  score: 0.26212199819430104
+  wj_content: 0.2638738523395742
+  wj_all: 0.2985308538260321
+  wj_bigram: 0.08487194780478846
+  sr_content: 0.46153846153846156
+  rare_inter: 14.365680997424718
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:26
+  matt_ref: Matt 25:31
+  score: 0.2610369570733652
+  wj_content: 0.33706334987179076
+  wj_all: 0.35999376344124956
+  wj_bigram: 0.04080471420036909
+  sr_content: 0.3157894736842105
+  rare_inter: 20.422880760785645
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:9
+  matt_ref: Matt 10:17
+  score: 0.26008046472004503
+  wj_content: 0.24504964712915892
+  wj_all: 0.2525248153438293
+  wj_bigram: 0.1782225679101624
+  sr_content: 0.4
+  rare_inter: 16.62025993256154
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:9
+  matt_ref: Matt 10:18
+  score: 0.2584741852210861
+  wj_content: 0.26126617710298455
+  wj_all: 0.40897254316595244
+  wj_bigram: 0.08002860483259136
+  sr_content: 0.4
+  rare_inter: 17.489213988894246
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 13:26
+  matt_ref: Matt 16:27
+  score: 0.2584558072976624
+  wj_content: 0.27249591431324277
+  wj_all: 0.31380557224410544
+  wj_bigram: 0.09780835452917024
+  sr_content: 0.4
+  rare_inter: 20.422880760785645
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 4:33
+  matt_ref: Matt 13:13
+  score: 0.2566843617943336
+  wj_content: 0.34278307261745444
+  wj_all: 0.22431979116479084
+  wj_bigram: 0.0
+  sr_content: 0.4
+  rare_inter: 13.712379725411973
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 4:20
+  matt_ref: Matt 13:8
+  score: 0.2542104272622807
+  wj_content: 0.3499575969636583
+  wj_all: 0.3247982305259042
+  wj_bigram: 0.048303090130263175
+  sr_content: 0.2608695652173913
+  rare_inter: 29.03683762063419
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: nonlocal_echo
+  loose_blocks: []
+- mark_ref: Mark 14:33
+  matt_ref: Matt 17:1
+  score: 0.25016125176991305
+  wj_content: 0.24007135968919488
+  wj_all: 0.282121211314868
+  wj_bigram: 0.11882596984999635
+  sr_content: 0.42105263157894735
+  rare_inter: 19.984496787666963
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: false
+  category: nonlocal_echo
+  loose_blocks: []
+top_alternate_within_primary_span:
+- mark_ref: Mark 14:39
+  matt_ref: Matt 26:44
+  score: 0.6587465782457099
+  wj_content: 0.727613833309076
+  wj_all: 0.6407291722562062
+  wj_bigram: 0.42898974412401997
+  sr_content: 0.8
+  rare_inter: 27.309925230053814
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 23
+- mark_ref: Mark 10:36
+  matt_ref: Matt 20:32
+  score: 0.45757365490658014
+  wj_content: 0.41531639938511195
+  wj_all: 0.5105162578543246
+  wj_bigram: 0.34518526425805585
+  sr_content: 0.6666666666666666
+  rare_inter: 9.93330967155415
+  mark_flags:
+    short_content: true
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 19
+- mark_ref: Mark 3:32
+  matt_ref: Matt 12:46
+  score: 0.4485656441401726
+  wj_content: 0.5186073539293738
+  wj_all: 0.5033915403786466
+  wj_bigram: 0.15941272333635892
+  sr_content: 0.625
+  rare_inter: 24.493911441074253
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 9
+- mark_ref: Mark 15:10
+  matt_ref: Matt 27:18
+  score: 0.4404960432193926
+  wj_content: 0.45406223201027335
+  wj_all: 0.6047315366173219
+  wj_bigram: 0.2456366834692924
+  sr_content: 0.5714285714285714
+  rare_inter: 11.89514039343246
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 24
+- mark_ref: Mark 7:20
+  matt_ref: Matt 15:11
+  score: 0.43780781769476673
+  wj_content: 0.5034494860491999
+  wj_all: 0.371770528209185
+  wj_bigram: 0.23917112746397598
+  sr_content: 0.5714285714285714
+  rare_inter: 15.445274665108856
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 14
+- mark_ref: Mark 10:8
+  matt_ref: Matt 19:6
+  score: 0.42821235746153224
+  wj_content: 0.4776210722549195
+  wj_all: 0.48297298550218687
+  wj_bigram: 0.3231002003232412
+  sr_content: 0.42105263157894735
+  rare_inter: 23.290587795272597
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 18
+- mark_ref: Mark 11:33
+  matt_ref: Matt 21:24
+  score: 0.4198931583317387
+  wj_content: 0.39278252457058255
+  wj_all: 0.46951146706847535
+  wj_bigram: 0.2514261689391827
+  sr_content: 0.6666666666666666
+  rare_inter: 18.22671502142687
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 20
+- mark_ref: Mark 14:48
+  matt_ref: Matt 26:55
+  score: 0.4158765714855832
+  wj_content: 0.45133625347027445
+  wj_all: 0.4825800493550342
+  wj_bigram: 0.24067770560599897
+  sr_content: 0.5217391304347826
+  rare_inter: 35.901112874863216
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 23
+- mark_ref: Mark 9:45
+  matt_ref: Matt 18:9
+  score: 0.40914477689632417
+  wj_content: 0.4808650131288502
+  wj_all: 0.49204817617441343
+  wj_bigram: 0.11705995634074388
+  sr_content: 0.5714285714285714
+  rare_inter: 41.940589007041055
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 17
+- mark_ref: Mark 10:12
+  matt_ref: Matt 19:9
+  score: 0.4015718720181243
+  wj_content: 0.49883778690047886
+  wj_all: 0.3696789195284176
+  wj_bigram: 0.16050790384026814
+  sr_content: 0.5
+  rare_inter: 22.538635229024287
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 18
+- mark_ref: Mark 8:37
+  matt_ref: Matt 16:26
+  score: 0.39839047888051693
+  wj_content: 0.3940771182958433
+  wj_all: 0.4139850815606239
+  wj_bigram: 0.2919624032986334
+  sr_content: 0.5333333333333333
+  rare_inter: 20.27785777009254
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 16
+- mark_ref: Mark 9:43
+  matt_ref: Matt 18:8
+  score: 0.38717337194008006
+  wj_content: 0.4672173340007046
+  wj_all: 0.4718600989383844
+  wj_bigram: 0.09542883521899231
+  sr_content: 0.5294117647058824
+  rare_inter: 48.33664327404278
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 17
+- mark_ref: Mark 12:26
+  matt_ref: Matt 22:32
+  score: 0.3840777775600701
+  wj_content: 0.43512622442488064
+  wj_all: 0.3544935991346466
+  wj_bigram: 0.2684293237644939
+  sr_content: 0.42857142857142855
+  rare_inter: 32.17512527966246
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 21
+- mark_ref: Mark 2:19
+  matt_ref: Matt 9:15
+  score: 0.3801504482315883
+  wj_content: 0.43720412163226
+  wj_all: 0.4683200323302419
+  wj_bigram: 0.16009946450446405
+  sr_content: 0.4827586206896552
+  rare_inter: 35.448447125037696
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 6
+- mark_ref: Mark 9:43
+  matt_ref: Matt 18:9
+  score: 0.366144968074223
+  wj_content: 0.4370761175964683
+  wj_all: 0.45598529833566803
+  wj_bigram: 0.06878207462231495
+  sr_content: 0.5333333333333333
+  rare_inter: 42.914038152755154
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 17
+- mark_ref: Mark 4:18
+  matt_ref: Matt 13:20
+  score: 0.3539552169589059
+  wj_content: 0.32512489298198605
+  wj_all: 0.3185084258051741
+  wj_bigram: 0.27652602347931254
+  sr_content: 0.5333333333333333
+  rare_inter: 15.970704573832734
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 10
+- mark_ref: Mark 11:29
+  matt_ref: Matt 21:27
+  score: 0.3497045011434687
+  wj_content: 0.33534083863044056
+  wj_all: 0.5521509754375221
+  wj_bigram: 0.1743441048640729
+  sr_content: 0.5
+  rare_inter: 18.22671502142687
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 20
+- mark_ref: Mark 3:3
+  matt_ref: Matt 12:10
+  score: 0.34410677993475414
+  wj_content: 0.3504211999743853
+  wj_all: 0.2983841034189347
+  wj_bigram: 0.2498447301822547
+  sr_content: 0.47058823529411764
+  rare_inter: 20.727610031416365
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 7
+- mark_ref: Mark 10:29
+  matt_ref: Matt 19:29
+  score: 0.3417286083453652
+  wj_content: 0.3718940558952511
+  wj_all: 0.4009147891486672
+  wj_bigram: 0.1638058837772088
+  sr_content: 0.4666666666666667
+  rare_inter: 39.467745980937835
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 18
+- mark_ref: Mark 4:18
+  matt_ref: Matt 13:22
+  score: 0.34161820625453787
+  wj_content: 0.30733765858670675
+  wj_all: 0.3663410089552422
+  wj_bigram: 0.26672863597998253
+  sr_content: 0.5
+  rare_inter: 22.48758358218987
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 10
+- mark_ref: Mark 13:14
+  matt_ref: Matt 24:16
+  score: 0.3410833316177008
+  wj_content: 0.3228306217036573
+  wj_all: 0.2855022708024152
+  wj_bigram: 0.2690372990832539
+  sr_content: 0.5
+  rare_inter: 20.82470521308368
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 22
+- mark_ref: Mark 8:6
+  matt_ref: Matt 15:35
+  score: 0.338673167378516
+  wj_content: 0.3441768685185472
+  wj_all: 0.3693530377314783
+  wj_bigram: 0.23187753553253193
+  sr_content: 0.4444444444444444
+  rare_inter: 22.199234732623985
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 15
+- mark_ref: Mark 3:24
+  matt_ref: Matt 12:26
+  score: 0.3372455513798378
+  wj_content: 0.40199138674309537
+  wj_all: 0.38597100217623975
+  wj_bigram: 0.10177853928051435
+  sr_content: 0.46153846153846156
+  rare_inter: 15.76459382250382
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 8
+- mark_ref: Mark 11:30
+  matt_ref: Matt 21:25
+  score: 0.3367563440036559
+  wj_content: 0.43943934117806344
+  wj_all: 0.38217415934838844
+  wj_bigram: 0.066322792891596
+  sr_content: 0.42105263157894735
+  rare_inter: 20.827421132121003
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 20
+- mark_ref: Mark 14:72
+  matt_ref: Matt 26:34
+  score: 0.3342352893835544
+  wj_content: 0.379847675239699
+  wj_all: 0.35372684766898843
+  wj_bigram: 0.1424938338043947
+  sr_content: 0.46153846153846156
+  rare_inter: 37.37770989405681
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 23
+- mark_ref: Mark 3:33
+  matt_ref: Matt 12:49
+  score: 0.3308287731452055
+  wj_content: 0.3477898659547947
+  wj_all: 0.3327567451402046
+  wj_bigram: 0.12782699944247325
+  sr_content: 0.5454545454545454
+  rare_inter: 11.286200117236547
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 9
+- mark_ref: Mark 15:29
+  matt_ref: Matt 27:40
+  score: 0.3271204966556201
+  wj_content: 0.36395423900750923
+  wj_all: 0.3173886907043259
+  wj_bigram: 0.16277251649086957
+  sr_content: 0.45454545454545453
+  rare_inter: 30.09794135612713
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 24
+- mark_ref: Mark 14:30
+  matt_ref: Matt 26:75
+  score: 0.3232778207009569
+  wj_content: 0.3078086113704928
+  wj_all: 0.3701943797418235
+  wj_bigram: 0.19097803044021114
+  sr_content: 0.5
+  rare_inter: 30.52435864907846
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 23
+- mark_ref: Mark 8:16
+  matt_ref: Matt 16:8
+  score: 0.3145645193282921
+  wj_content: 0.35925689226489665
+  wj_all: 0.25249224371892154
+  wj_bigram: 0.11059877374878568
+  sr_content: 0.5
+  rare_inter: 13.81717309914314
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 15
+- mark_ref: Mark 6:42
+  matt_ref: Matt 14:20
+  score: 0.31435208337860143
+  wj_content: 0.2787715254227904
+  wj_all: 0.2908565175347813
+  wj_bigram: 0.23927698073947035
+  sr_content: 0.5
+  rare_inter: 14.16412458005248
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: true
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 13
+- mark_ref: Mark 14:36
+  matt_ref: Matt 26:39
+  score: 0.3090818810199677
+  wj_content: 0.3102541225314485
+  wj_all: 0.3550615409989384
+  wj_bigram: 0.09948185076005174
+  sr_content: 0.5454545454545454
+  rare_inter: 25.341767488423848
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 23
+- mark_ref: Mark 10:51
+  matt_ref: Matt 20:32
+  score: 0.3060287572654195
+  wj_content: 0.27382193461995313
+  wj_all: 0.35808339071538176
+  wj_bigram: 0.161335523792943
+  sr_content: 0.5333333333333333
+  rare_inter: 12.958019520043404
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 19
+- mark_ref: Mark 13:13
+  matt_ref: Matt 24:9
+  score: 0.3054238521965421
+  wj_content: 0.27960943382542947
+  wj_all: 0.39328376947710175
+  wj_bigram: 0.16108492010955466
+  sr_content: 0.5
+  rare_inter: 17.099406935318196
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 22
+- mark_ref: Mark 7:23
+  matt_ref: Matt 15:18
+  score: 0.3026105268962434
+  wj_content: 0.33808141684306015
+  wj_all: 0.2607139356550102
+  wj_bigram: 0.09760998300546117
+  sr_content: 0.5
+  rare_inter: 15.445274665108856
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 14
+- mark_ref: Mark 13:25
+  matt_ref: Matt 24:29
+  score: 0.3009887820363344
+  wj_content: 0.3420663073305934
+  wj_all: 0.28896473643423193
+  wj_bigram: 0.109013516740213
+  sr_content: 0.45454545454545453
+  rare_inter: 28.05060052462329
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 22
+- mark_ref: Mark 15:9
+  matt_ref: Matt 27:21
+  score: 0.30077341136571584
+  wj_content: 0.31449558803438915
+  wj_all: 0.3595696501903432
+  wj_bigram: 0.06650706025815876
+  sr_content: 0.5333333333333333
+  rare_inter: 15.26135451933431
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 24
+- mark_ref: Mark 3:23
+  matt_ref: Matt 12:26
+  score: 0.2994459954293741
+  wj_content: 0.32899848871881593
+  wj_all: 0.2634147461200267
+  wj_bigram: 0.18022080357561712
+  sr_content: 0.4
+  rare_inter: 16.14885672296138
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 8
+- mark_ref: Mark 3:24
+  matt_ref: Matt 12:25
+  score: 0.29431345880794496
+  wj_content: 0.32861670276070104
+  wj_all: 0.29201355102775184
+  wj_bigram: 0.1320962445882594
+  sr_content: 0.42105263157894735
+  rare_inter: 18.647653153930044
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 8
+- mark_ref: Mark 10:8
+  matt_ref: Matt 19:5
+  score: 0.2915455039818528
+  wj_content: 0.3045248577759792
+  wj_all: 0.2294979697687909
+  wj_bigram: 0.20623808402313218
+  sr_content: 0.4
+  rare_inter: 17.130383730854195
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 18
+- mark_ref: Mark 15:36
+  matt_ref: Matt 27:49
+  score: 0.2908526744465425
+  wj_content: 0.21600135803959616
+  wj_all: 0.2637828903132745
+  wj_bigram: 0.269095097189587
+  sr_content: 0.5
+  rare_inter: 18.49898699710557
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 24
+- mark_ref: Mark 11:28
+  matt_ref: Matt 21:24
+  score: 0.2901672087292562
+  wj_content: 0.302866903291062
+  wj_all: 0.336201327338627
+  wj_bigram: 0.1810278780576623
+  sr_content: 0.375
+  rare_inter: 11.193563311778677
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 20
+- mark_ref: Mark 4:15
+  matt_ref: Matt 13:20
+  score: 0.28942102396009944
+  wj_content: 0.3260691611890411
+  wj_all: 0.32824463642763524
+  wj_bigram: 0.11946175112906941
+  sr_content: 0.4
+  rare_inter: 20.56229272033729
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 10
+- mark_ref: Mark 3:33
+  matt_ref: Matt 12:47
+  score: 0.28791880776496415
+  wj_content: 0.29200377986307413
+  wj_all: 0.3009273574139335
+  wj_bigram: 0.1056974843407498
+  sr_content: 0.5
+  rare_inter: 11.286200117236547
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 9
+- mark_ref: Mark 3:31
+  matt_ref: Matt 12:47
+  score: 0.28732330420529484
+  wj_content: 0.2892868469586347
+  wj_all: 0.2602676779914847
+  wj_bigram: 0.18161267824190025
+  sr_content: 0.42857142857142855
+  rare_inter: 15.218025749960873
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 9
+- mark_ref: Mark 13:31
+  matt_ref: Matt 24:34
+  score: 0.286957960216197
+  wj_content: 0.30679655612106255
+  wj_all: 0.19085046551140153
+  wj_bigram: 0.17640071078517178
+  sr_content: 0.42857142857142855
+  rare_inter: 12.153247001424969
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 22
+- mark_ref: Mark 13:30
+  matt_ref: Matt 24:35
+  score: 0.2866120541876475
+  wj_content: 0.30679655612106255
+  wj_all: 0.18739140522590672
+  wj_bigram: 0.17640071078517178
+  sr_content: 0.42857142857142855
+  rare_inter: 12.153247001424969
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 22
+- mark_ref: Mark 3:32
+  matt_ref: Matt 12:49
+  score: 0.2845473390741656
+  wj_content: 0.24389720187469924
+  wj_all: 0.2903254808004614
+  wj_bigram: 0.2138134313712499
+  sr_content: 0.46153846153846156
+  rare_inter: 11.286200117236547
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 9
+- mark_ref: Mark 10:47
+  matt_ref: Matt 20:31
+  score: 0.28083785230433783
+  wj_content: 0.3296290771635268
+  wj_all: 0.31435314218309374
+  wj_bigram: 0.09951590868786082
+  sr_content: 0.38095238095238093
+  rare_inter: 22.412088643825214
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 19
+- mark_ref: Mark 8:20
+  matt_ref: Matt 15:37
+  score: 0.27867632233810524
+  wj_content: 0.35438241716493696
+  wj_all: 0.3102666602697615
+  wj_bigram: 0.0703573331711591
+  sr_content: 0.35294117647058826
+  rare_inter: 23.71655735615028
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 15
+- mark_ref: Mark 2:17
+  matt_ref: Matt 9:13
+  score: 0.2735542506268427
+  wj_content: 0.244935942475889
+  wj_all: 0.2500153576151766
+  wj_bigram: 0.19777060744914435
+  sr_content: 0.4444444444444444
+  rare_inter: 22.878316142207176
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: alternate_within_primary_span
+  loose_blocks:
+  - 6
+top_formulaic_or_short_echoes:
+- mark_ref: Mark 4:23
+  matt_ref: Matt 11:15
+  score: 0.8469595240848281
+  wj_content: 1.0
+  wj_all: 0.6210712893215429
+  wj_bigram: 0.6536952948964093
+  sr_content: 0.8571428571428571
+  rare_inter: 13.551165262845792
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: true
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:23
+  matt_ref: Matt 13:9
+  score: 0.8469595240848281
+  wj_content: 1.0
+  wj_all: 0.6210712893215429
+  wj_bigram: 0.6536952948964093
+  sr_content: 0.8571428571428571
+  rare_inter: 13.551165262845792
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: true
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 3:12
+  matt_ref: Matt 12:16
+  score: 0.8271731508275716
+  wj_content: 0.8379188747417544
+  wj_all: 0.873777326207152
+  wj_bigram: 0.7398165871811561
+  sr_content: 0.8888888888888888
+  rare_inter: 19.545055808831393
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:9
+  matt_ref: Matt 11:15
+  score: 0.7290454708513067
+  wj_content: 0.8733008034039718
+  wj_all: 0.6383677694244252
+  wj_bigram: 0.48889332950830733
+  sr_content: 0.75
+  rare_inter: 13.551165262845792
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: true
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 1:2
+  matt_ref: Matt 11:10
+  score: 0.6494653014186572
+  wj_content: 0.712403504446766
+  wj_all: 0.6038356034615652
+  wj_bigram: 0.4340006562858236
+  sr_content: 0.8
+  rare_inter: 33.29991974704362
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 12:39
+  matt_ref: Matt 23:6
+  score: 0.6262385998357074
+  wj_content: 0.804071552880448
+  wj_all: 0.7871541519452554
+  wj_bigram: 0.38720838782436545
+  sr_content: 0.4444444444444444
+  rare_inter: 27.37726593329752
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 7:6
+  matt_ref: Matt 15:8
+  score: 0.542669488789192
+  wj_content: 0.5425433206429094
+  wj_all: 0.5284334337475254
+  wj_bigram: 0.4493932711671875
+  sr_content: 0.6666666666666666
+  rare_inter: 38.17379403806187
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:41
+  matt_ref: Matt 8:27
+  score: 0.5216487237563423
+  wj_content: 0.5028339220427083
+  wj_all: 0.3698531886517251
+  wj_bigram: 0.4688466775348628
+  sr_content: 0.7058823529411765
+  rare_inter: 26.233517316189772
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 5:28
+  matt_ref: Matt 9:21
+  score: 0.5173033377296878
+  wj_content: 0.5922506058362683
+  wj_all: 0.5551494297556867
+  wj_bigram: 0.1411024885111938
+  sr_content: 0.8
+  rare_inter: 17.89522996942496
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 9:36
+  matt_ref: Matt 18:2
+  score: 0.45813768897485974
+  wj_content: 0.45548909091524487
+  wj_all: 0.5278480214154027
+  wj_bigram: 0.32153118368583733
+  sr_content: 0.6
+  rare_inter: 16.09001622293845
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:4
+  matt_ref: Matt 19:7
+  score: 0.4542830014869014
+  wj_content: 0.5438498437940431
+  wj_all: 0.44871692825856513
+  wj_bigram: 0.08728694438633042
+  sr_content: 0.7142857142857143
+  rare_inter: 27.12568822036345
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:15
+  matt_ref: Matt 18:3
+  score: 0.44746739668015334
+  wj_content: 0.47135855255981624
+  wj_all: 0.48560167340831806
+  wj_bigram: 0.267183522749617
+  sr_content: 0.6
+  rare_inter: 21.777740777681657
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 9:41
+  matt_ref: Matt 10:42
+  score: 0.4385294930024606
+  wj_content: 0.4614685129545749
+  wj_all: 0.49700051981263177
+  wj_bigram: 0.19134110743322136
+  sr_content: 0.6666666666666666
+  rare_inter: 36.51673291337539
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 12:12
+  matt_ref: Matt 21:46
+  score: 0.3948221827387511
+  wj_content: 0.40196411352158984
+  wj_all: 0.32617542920417886
+  wj_bigram: 0.2986164882678043
+  sr_content: 0.5333333333333333
+  rare_inter: 19.468062114100917
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 3:22
+  matt_ref: Matt 9:34
+  score: 0.39035086458739576
+  wj_content: 0.3757404618690772
+  wj_all: 0.35361394919414285
+  wj_bigram: 0.2436250473075869
+  sr_content: 0.625
+  rare_inter: 18.579759418766933
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:43
+  matt_ref: Matt 23:11
+  score: 0.38948011020025564
+  wj_content: 0.46892347927615685
+  wj_all: 0.37070876976296235
+  wj_bigram: 0.1292110338351189
+  sr_content: 0.5454545454545454
+  rare_inter: 13.687337205717434
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:11
+  matt_ref: Matt 5:32
+  score: 0.3727516636514274
+  wj_content: 0.45398720336809406
+  wj_all: 0.348622335496715
+  wj_bigram: 0.06379251905033666
+  sr_content: 0.5882352941176471
+  rare_inter: 24.547209010669665
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:3
+  matt_ref: Matt 13:18
+  score: 0.3725706985246076
+  wj_content: 0.49923677607265343
+  wj_all: 0.33628435006199286
+  wj_bigram: 0.0
+  sr_content: 0.5714285714285714
+  rare_inter: 9.111582639822105
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 11:18
+  matt_ref: Matt 22:33
+  score: 0.3657772152987498
+  wj_content: 0.3795046234448899
+  wj_all: 0.4308650878166247
+  wj_bigram: 0.1809878372008807
+  sr_content: 0.5333333333333333
+  rare_inter: 20.325410310341624
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 15:29
+  matt_ref: Matt 26:61
+  score: 0.36533013975088513
+  wj_content: 0.43359887865121965
+  wj_all: 0.35822370690898137
+  wj_bigram: 0.1165004630888054
+  sr_content: 0.5263157894736842
+  rare_inter: 30.09794135612713
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 15:27
+  matt_ref: Matt 20:21
+  score: 0.3634138024180947
+  wj_content: 0.39075975775600613
+  wj_all: 0.3000510199600095
+  wj_bigram: 0.20921460614861667
+  sr_content: 0.5263157894736842
+  rare_inter: 20.311557688538382
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 11:33
+  matt_ref: Matt 25:12
+  score: 0.36184399299642334
+  wj_content: 0.4286095649853773
+  wj_all: 0.29256581796676456
+  wj_bigram: 0.15885242782530834
+  sr_content: 0.5
+  rare_inter: 13.559104401530638
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 9:28
+  matt_ref: Matt 17:19
+  score: 0.3583927320831337
+  wj_content: 0.3819893266913518
+  wj_all: 0.4251669039019066
+  wj_bigram: 0.13147893428289437
+  sr_content: 0.5555555555555556
+  rare_inter: 21.235148261444426
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:39
+  matt_ref: Matt 8:26
+  score: 0.35304536250037566
+  wj_content: 0.3907010393745054
+  wj_all: 0.38713962099987786
+  wj_bigram: 0.15406373072744173
+  sr_content: 0.5
+  rare_inter: 34.01080352762514
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 9:6
+  matt_ref: Matt 25:12
+  score: 0.3487142907184474
+  wj_content: 0.46395531810299623
+  wj_all: 0.2769640456460245
+  wj_bigram: 0.12895197202998662
+  sr_content: 0.4
+  rare_inter: 11.593090234304052
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 14:58
+  matt_ref: Matt 27:40
+  score: 0.3453523123286565
+  wj_content: 0.37090890546125393
+  wj_all: 0.2846867968285689
+  wj_bigram: 0.1635348643893051
+  sr_content: 0.5454545454545454
+  rare_inter: 30.09794135612713
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 1:11
+  matt_ref: Matt 17:5
+  score: 0.3436316890635154
+  wj_content: 0.35770781673889657
+  wj_all: 0.3796997971636118
+  wj_bigram: 0.17877276725860308
+  sr_content: 0.5
+  rare_inter: 25.255225880494326
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:11
+  matt_ref: Matt 5:31
+  score: 0.343463248490133
+  wj_content: 0.28943415095107816
+  wj_all: 0.3837020452238812
+  wj_bigram: 0.26302706779540236
+  sr_content: 0.5454545454545454
+  rare_inter: 11.62896388107724
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 6:15
+  matt_ref: Matt 16:14
+  score: 0.33915867807729655
+  wj_content: 0.44126345298615727
+  wj_all: 0.3428566526114134
+  wj_bigram: 0.06966228033398207
+  sr_content: 0.4444444444444444
+  rare_inter: 20.780051859534854
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 3:19
+  matt_ref: Matt 10:4
+  score: 0.3386673946863458
+  wj_content: 0.343547743750227
+  wj_all: 0.29179938387797993
+  wj_bigram: 0.13956388644378276
+  sr_content: 0.6
+  rare_inter: 14.423035355225322
+  mark_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 13:30
+  matt_ref: Matt 5:18
+  score: 0.33776944133486064
+  wj_content: 0.34520351119953563
+  wj_all: 0.2775573676469888
+  wj_bigram: 0.1615456409786257
+  sr_content: 0.5714285714285714
+  rare_inter: 21.020462613664872
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 11:9
+  matt_ref: Matt 23:39
+  score: 0.3377096642893889
+  wj_content: 0.34675250177824435
+  wj_all: 0.2576586155634557
+  wj_bigram: 0.24715011949603943
+  sr_content: 0.47058823529411764
+  rare_inter: 18.169595789877214
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 8:10
+  matt_ref: Matt 8:23
+  score: 0.33697002322495895
+  wj_content: 0.3556561208678972
+  wj_all: 0.40960927607712494
+  wj_bigram: 0.10749172854313432
+  sr_content: 0.5454545454545454
+  rare_inter: 14.895788550740159
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 13:26
+  matt_ref: Matt 26:64
+  score: 0.33160900492489964
+  wj_content: 0.3944086341613544
+  wj_all: 0.2975578052743073
+  wj_bigram: 0.149651269142916
+  sr_content: 0.43478260869565216
+  rare_inter: 25.859014482303095
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 8:29
+  matt_ref: Matt 19:27
+  score: 0.33091230218358453
+  wj_content: 0.33200653006781394
+  wj_all: 0.3954329322732347
+  wj_bigram: 0.1678642817029789
+  sr_content: 0.5
+  rare_inter: 13.056721513710364
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 12:11
+  matt_ref: Matt 21:42
+  score: 0.3298527317186344
+  wj_content: 0.29275651020286475
+  wj_all: 0.372498669699943
+  wj_bigram: 0.2624973596770228
+  sr_content: 0.47619047619047616
+  rare_inter: 22.674325757400865
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 13:37
+  matt_ref: Matt 13:51
+  score: 0.32608902079398644
+  wj_content: 0.3089045364461318
+  wj_all: 0.14641024212464987
+  wj_bigram: 0.2326209635801915
+  sr_content: 0.5714285714285714
+  rare_inter: 5.208447499560709
+  mark_flags:
+    short_content: true
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: true
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 9:7
+  matt_ref: Matt 3:17
+  score: 0.3246662780070205
+  wj_content: 0.3499006524915381
+  wj_all: 0.39878438685178796
+  wj_bigram: 0.13285959456730406
+  sr_content: 0.47058823529411764
+  rare_inter: 18.401874635515977
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:24
+  matt_ref: Matt 7:2
+  score: 0.3241321699516859
+  wj_content: 0.3101157073089094
+  wj_all: 0.37580418153226963
+  wj_bigram: 0.21876796480702956
+  sr_content: 0.46153846153846156
+  rare_inter: 14.440671665036895
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 5:13
+  matt_ref: Matt 8:32
+  score: 0.32307268185141425
+  wj_content: 0.34461548046223967
+  wj_all: 0.4052364589153006
+  wj_bigram: 0.14065750977673608
+  sr_content: 0.46153846153846156
+  rare_inter: 36.73769850829245
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 11:33
+  matt_ref: Matt 25:45
+  score: 0.32135931520421374
+  wj_content: 0.3970554125248824
+  wj_all: 0.3650803738038908
+  wj_bigram: 0.043752987798129146
+  sr_content: 0.47619047619047616
+  rare_inter: 18.390446153915025
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 8:29
+  matt_ref: Matt 15:15
+  score: 0.3159499289683558
+  wj_content: 0.2947472381281554
+  wj_all: 0.3374667493451267
+  wj_bigram: 0.22903721827392345
+  sr_content: 0.46153846153846156
+  rare_inter: 10.653055551879714
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 10:47
+  matt_ref: Matt 9:27
+  score: 0.31547130992534256
+  wj_content: 0.362620110802054
+  wj_all: 0.38378121686594935
+  wj_bigram: 0.09202018987492981
+  sr_content: 0.45454545454545453
+  rare_inter: 25.436798492314466
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 13:31
+  matt_ref: Matt 5:18
+  score: 0.3146071314085349
+  wj_content: 0.34459973591762716
+  wj_all: 0.24808987209629563
+  wj_bigram: 0.15796067119151166
+  sr_content: 0.47619047619047616
+  rare_inter: 20.53596437808505
+  mark_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:13
+  matt_ref: Matt 26:70
+  score: 0.3144576729428566
+  wj_content: 0.36835235823715845
+  wj_all: 0.26405566160136007
+  wj_bigram: 0.14631703944685429
+  sr_content: 0.42857142857142855
+  rare_inter: 12.79309587270582
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 7:6
+  matt_ref: Matt 15:7
+  score: 0.31385284064218755
+  wj_content: 0.38044980874585343
+  wj_all: 0.34129295755928796
+  wj_bigram: 0.15173158262602826
+  sr_content: 0.35294117647058826
+  rare_inter: 26.768761292046413
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 4:21
+  matt_ref: Matt 5:15
+  score: 0.3137463922835983
+  wj_content: 0.44512188172129735
+  wj_all: 0.3844154550901448
+  wj_bigram: 0.0
+  sr_content: 0.375
+  rare_inter: 27.495048968953903
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: false
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 11:31
+  matt_ref: Matt 16:7
+  score: 0.3133341349586253
+  wj_content: 0.3764473852260168
+  wj_all: 0.22585134500160658
+  wj_bigram: 0.11615993919625911
+  sr_content: 0.46153846153846156
+  rare_inter: 11.009277563071214
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 1:15
+  matt_ref: Matt 3:2
+  score: 0.3133006249077064
+  wj_content: 0.37979627017562007
+  wj_all: 0.3491166208010089
+  wj_bigram: 0.08706542213716319
+  sr_content: 0.42857142857142855
+  rare_inter: 18.600378705969668
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []
+- mark_ref: Mark 8:29
+  matt_ref: Matt 14:28
+  score: 0.31301403624738305
+  wj_content: 0.30558231874011377
+  wj_all: 0.3367432422612796
+  wj_bigram: 0.16731067435281557
+  sr_content: 0.5
+  rare_inter: 13.056721513710364
+  mark_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  matt_flags:
+    short_content: false
+    citation_formula: true
+    short_surface: false
+  nonlocal: true
+  category: formulaic_or_short_echo
+  loose_blocks: []

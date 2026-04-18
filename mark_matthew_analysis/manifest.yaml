@@ -1,0 +1,47 @@
+project: Mark–Matthew literary dependence case study
+generated_on: '2026-04-18'
+files:
+- path: data/00_source_metadata.yaml
+  description: Source files, local copies, upstream URLs.
+- path: data/01_negative_space_flags.csv
+  description: 'Per-verse flags for cheap/shared material: short verse, citation formula, etc.'
+- path: data/02_verse_similarity_full.csv.gz
+  description: Full 673 x 1068 verse similarity matrix (compressed).
+- path: data/03_verse_similarity_top20_mark_to_matt.csv
+  description: Top 20 verse matches for each Mark verse.
+- path: data/04_verse_similarity_top20_matt_to_mark.csv
+  description: Top 20 verse matches for each Matthew verse.
+- path: data/05_window3_similarity_top10_mark_to_matt.csv
+  description: Top 10 contextual 3-verse-window matches for each Mark window.
+- path: data/06_window3_similarity_top10_matt_to_mark.csv
+  description: Top 10 contextual 3-verse-window matches for each Matthew window.
+- path: data/07_primary_chain_pairs.csv
+  description: Primary one-to-one monotonic Mark↔Matthew chain, one row per aligned pair.
+- path: data/08_primary_chain_pairs_detailed.jsonl
+  description: Detailed pair objects with diff opcodes and variant notes.
+- path: data/09_loose_blocks.yaml
+  description: 25 loose block alignments with block summaries and directional ledgers.
+- path: data/10_tight_blocks.yaml
+  description: 51 tight block alignments for finer segmentation.
+- path: data/11_order_intervals.yaml
+  description: Gap intervals between loose blocks, with comparative interpretation.
+- path: data/12_secondary_echoes.yaml
+  description: '231 non-primary echoes: alternate local matches, nonlocal echoes, formulaic ties.'
+- path: data/13_variants_by_primary_pair.yaml
+  description: Apparatus notes attached to each primary pair.
+- path: data/14_direction_ledger_by_loose_block.yaml
+  description: Both-direction editing hypotheses for every loose block.
+- path: data/15_direction_burden_totals.yaml
+  description: Aggregate burden vectors, gap totals, and operation counts.
+- path: data/16_global_summary.yaml
+  description: Global metrics, style markers, top lexical deltas, top gap intervals.
+- path: data/17_macro_block_table.csv
+  description: Tabular summary of the 25 loose blocks.
+- path: data/18_micro_block_table.csv
+  description: Tabular summary of the 51 tight blocks.
+- path: data/19_pair_diffs_flat.tsv
+  description: 'Flat per-pair change log: inserted/deleted/moved lemmas and aligned texts.'
+- path: data/20_top_lemma_deltas.yaml
+  description: Top lexical asymmetries and replacement pairs.
+- path: data/21_selected_secondary_echoes.yaml
+  description: Selected strongest examples from the secondary-echo set.

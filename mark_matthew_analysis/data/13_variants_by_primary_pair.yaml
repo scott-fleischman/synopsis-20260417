@@ -1,0 +1,3192 @@
+- mark_ref: Mark 1:3
+  matt_ref: Matt 3:3
+  macro_block: 1
+  score: 0.724305
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 3 διὰ WH Treg NA28 ] ὑπὸ RP
+- mark_ref: Mark 1:6
+  matt_ref: Matt 3:4
+  macro_block: 1
+  score: 0.599029
+  mark_variant_notes:
+  - 6 καὶ ἦν WH Treg NA28 ] Ἦν δὲ RP
+  matt_variant_notes:
+  - 4 ἦν αὐτοῦ WH Treg NA28 ] αὐτοῦ ἦν RP
+- mark_ref: Mark 1:8
+  matt_ref: Matt 3:11
+  macro_block: 2
+  score: 0.321375
+  mark_variant_notes:
+  - 8 ἐγὼ WH Treg NA28 ] + μὲν RP
+  - • ὑμᾶς WH NA28 ] + ἐν Treg RP
+  - • ἐν Treg NA28 RP ] – WH
+  matt_variant_notes:
+  - 11 ὑμᾶς βαπτίζω WH Treg NA28 ] βαπτίζω ὑμᾶς RP
+  - • καὶ πυρί WH Treg NA28 ] – RP
+- mark_ref: Mark 1:9
+  matt_ref: Matt 3:13
+  macro_block: 2
+  score: 0.364714
+  mark_variant_notes:
+  - 9 εἰς τὸν Ἰορδάνην ὑπὸ Ἰωάννου WH Treg NA28 ] ὑπὸ Ἰωάννου εἰς τὸν Ἰορδάνην RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:10
+  matt_ref: Matt 3:16
+  macro_block: 2
+  score: 0.441694
+  mark_variant_notes:
+  - 10 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • ἐκ WH Treg NA28 ] ἀπὸ RP
+  - • ὡς WH Treg NA28 ] ὡσεὶ RP
+  - • εἰς WH Treg NA28 ] ἐπʼ RP
+  matt_variant_notes:
+  - 16 βαπτισθεὶς δὲ WH Treg NA28 ] Καὶ βαπτισθεὶς RP
+  - • εὐθὺς ἀνέβη WH Treg NA28 ] ἀνέβη εὐθὺς RP
+  - • ἠνεῴχθησαν WH NIV ] + αὐτῷ Treg RP NA28
+  - • πνεῦμα WH ] τὸ πνεῦμα τοῦ Treg NA28 RP
+  - •  περιστερὰν WH ] + καὶ Treg NA28 RP
+- mark_ref: Mark 1:11
+  matt_ref: Matt 3:17
+  macro_block: 2
+  score: 0.695115
+  mark_variant_notes:
+  - 11 σοὶ WH Treg NA28 ] ᾧ RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:12
+  matt_ref: Matt 4:1
+  macro_block: 2
+  score: 0.159163
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 1:13
+  matt_ref: Matt 4:2
+  macro_block: 2
+  score: 0.107074
+  mark_variant_notes:
+  - 13 ἦν WH Treg NA28 ] + ἐκεῖ RP
+  - • τεσσεράκοντα ἡμέρας WH Treg NA28 ] ἡμέρας τεσσεράκοντα RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:15
+  matt_ref: Matt 4:17
+  macro_block: 3
+  score: 0.235632
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 1:16
+  matt_ref: Matt 4:18
+  macro_block: 3
+  score: 0.464942
+  mark_variant_notes:
+  - 16 Καὶ παράγων WH Treg NA28 ] Περιπατῶν δὲ RP
+  - • ἀδελφὸν WH Treg NA28 ] + αὐτοῦ τοῦ RP
+  - • ἀμφιβάλλοντας WH Treg NA28 ] βάλλοντας ἀμφίβληστρον RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:17
+  matt_ref: Matt 4:19
+  macro_block: 3
+  score: 0.658052
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 1:18
+  matt_ref: Matt 4:20
+  macro_block: 3
+  score: 0.601287
+  mark_variant_notes:
+  - 18 εὐθὺς WH NA28 ] εὐθέως RP Treg
+  - • δίκτυα WH Treg NA28 ] + αὐτῶν RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:19
+  matt_ref: Matt 4:21
+  macro_block: 3
+  score: 0.509798
+  mark_variant_notes:
+  - 19 προβὰς WH Treg NA28 ] ἐκεῖθεν RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:20
+  matt_ref: Matt 4:22
+  macro_block: 3
+  score: 0.202243
+  mark_variant_notes:
+  - 20 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  matt_variant_notes: []
+- mark_ref: Mark 1:21
+  matt_ref: Matt 4:23
+  macro_block: 3
+  score: 0.117302
+  mark_variant_notes:
+  - 21 εὐθὺς WH NA28 ] εὐθέως Treg RP
+  - • ἐδίδασκεν εἰς τὴν συναγωγήν Holmes WHmarg ] εἰσελθὼν εἰς τὴν συναγωγὴν ἐδίδασκεν WH Treg NA28 RP
+  matt_variant_notes:
+  - 23 ἐν ὅλῃ τῇ Γαλιλαίᾳ WH NA28 ] ὁ Ἰησοῦς ἐν ὅλῃ τῇ Γαλιλαίᾳ Treg; ὅλην τὴν Γαλιλαίαν ὁ Ἰησοῦς RP
+- mark_ref: Mark 1:22
+  matt_ref: Matt 7:29
+  macro_block: 4
+  score: 0.714092
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 29 αὐτῶν WH Treg NA28 ] – RP
+- mark_ref: Mark 1:40
+  matt_ref: Matt 8:2
+  macro_block: 5
+  score: 0.409025
+  mark_variant_notes:
+  - 40 γονυπετῶν WH ] + καὶ NA28; αὐτὸν καὶ Treg RP
+  matt_variant_notes:
+  - 2 προσελθὼν WH Treg NA28 ] ἐλθὼν RP
+- mark_ref: Mark 1:41
+  matt_ref: Matt 8:3
+  macro_block: 5
+  score: 0.607865
+  mark_variant_notes:
+  - 41 καὶ WH Treg NA28 ] Ὁ δὲ Ἰησοῦς RP
+  - • ὀργισθεὶς Holmes WHmarg ] σπλαγχνισθεὶς WH Treg NA28 RP
+  - • αὐτοῦ ἥψατο WH Treg NA28 ] ἥψατο αὐτοῦ RP
+  matt_variant_notes:
+  - 3 αὐτοῦ WH Treg NA28 ] + ὁ Ἰησοῦς RP
+- mark_ref: Mark 1:44
+  matt_ref: Matt 8:4
+  macro_block: 5
+  score: 0.712436
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 2:1
+  matt_ref: Matt 8:5
+  macro_block: 5
+  score: 0.186444
+  mark_variant_notes:
+  - 2:1 εἰσελθὼν WH Treg NA28 ] εἰσῆλθεν RP
+  - • ἡμερῶν WH Treg NA28 ] + καὶ RP
+  - • ἐν οἴκῳ WH Treg NA28 ] εἰς οἶκόν RP
+  matt_variant_notes:
+  - 5 Εἰσελθόντος δὲ αὐτοῦ WH Treg NA28 ] Εἰσελθόντι δὲ αὐτῷ RP
+- mark_ref: Mark 2:5
+  matt_ref: Matt 9:2
+  macro_block: 6
+  score: 0.590619
+  mark_variant_notes:
+  - 5 καὶ ἰδὼν WH NA28 ] ἰδὼν δὲ Treg RP
+  - • ἀφίενταί σου WH Treg NA28 ] ἀφέωνταί σοι RP
+  - • ἁμαρτίαι WH Treg NA28 ] + σου RP
+  matt_variant_notes:
+  - 2 ἀφίενταί WH Treg NA28 ] ἀφέωνταί RP
+  - • σου αἱ ἁμαρτίαι WH Treg NA28 ] σοι αἱ ἁμαρτίαι σου RP
+- mark_ref: Mark 2:6
+  matt_ref: Matt 9:3
+  macro_block: 6
+  score: 0.109288
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 2:8
+  matt_ref: Matt 9:4
+  macro_block: 6
+  score: 0.159573
+  mark_variant_notes:
+  - 8 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • οὕτως WH Treg NA28 ] + αὐτοὶ RP
+  - • λέγει WH Treg NA28 ] εἶπεν RP
+  matt_variant_notes:
+  - 4 εἰδὼς WH Treg NIV ] ἰδὼν RP NA28
+  - • Ἱνατί WH Treg NA28 ] + ὑμεῖς RP
+- mark_ref: Mark 2:9
+  matt_ref: Matt 9:5
+  macro_block: 6
+  score: 0.625912
+  mark_variant_notes:
+  - 9 Ἀφίενταί WH Treg NA28 ] Ἀφέωνταί RP
+  - • Ἔγειρε NA28 ] Ἐγείρου WH Treg; Ἔγειραι RP
+  - • τὸν κράβαττόν σου WH Treg NA28 ] σου τὸν κράββατον RP
+  matt_variant_notes:
+  - 5 Ἀφίενταί WH Treg NA28 ] Ἀφέωνταί RP
+  - • Ἔγειρε WH Treg NA28 ] Ἔγειραι RP
+- mark_ref: Mark 2:10
+  matt_ref: Matt 9:6
+  macro_block: 6
+  score: 0.601217
+  mark_variant_notes:
+  - 10 ἐπὶ τῆς γῆς ἀφιέναι ἁμαρτίας Treg ] ἀφιέναι ἁμαρτίας ἐπὶ τῆς γῆς WH NA28; ἀφιέναι ἐπὶ τῆς γῆς ἁμαρτίας RP
+  matt_variant_notes:
+  - 6 Ἐγερθεὶς NA28 RP ] Ἔγειρε WH Treg
+- mark_ref: Mark 2:11
+  matt_ref: Matt 9:7
+  macro_block: 6
+  score: 0.260199
+  mark_variant_notes:
+  - 11 ἔγειρε WH Treg NA28 ] ἔγειραι καὶ RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:12
+  matt_ref: Matt 9:8
+  macro_block: 6
+  score: 0.141355
+  mark_variant_notes:
+  - 12 καὶ εὐθὺς WH Treg NA28 ] εὐθέως καὶ RP
+  - • ἔμπροσθεν WH NA28 ] ἐναντίον Treg RP
+  - • Οὕτως οὐδέποτε WH Treg NA28 ] Οὐδέποτε οὕτως RP
+  matt_variant_notes:
+  - 8 ἐφοβήθησαν WH Treg NA28 ] ἐθαύμασαν RP
+- mark_ref: Mark 2:14
+  matt_ref: Matt 9:9
+  macro_block: 6
+  score: 0.480507
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 2:15
+  matt_ref: Matt 9:10
+  macro_block: 6
+  score: 0.561783
+  mark_variant_notes:
+  - 15 γίνεται WH NA28 ] γίνεται ἐν τῷ Treg; ἐγένετο ἐν τῷ RP
+  - • ἠκολούθουν WH Treg NA28 ] ἠκολούθησαν RP
+  matt_variant_notes:
+  - 10 καὶ WH Treg RP NA28 ] – NIV
+- mark_ref: Mark 2:16
+  matt_ref: Matt 9:11
+  macro_block: 6
+  score: 0.52239
+  mark_variant_notes:
+  - 16 τῶν Φαρισαίων WH Treg NA28 ] καὶ οἱ Φαρισαῖοι RP
+  - • ἰδόντες WH NA28 RP ] καὶ ἰδόντες Treg
+  - • ὅτι ἐσθίει WH NA28 ] ὅτι ἤσθιεν Treg; αὐτὸν ἐσθίοντα RP
+  - • ἁμαρτωλῶν καὶ τελωνῶν WH Treg NA28 ] τελωνῶν καὶ ἁμαρτωλῶν RP
+  - • Ὅτι WH Treg NA28 ] Τί ὅτι RP
+  - • τελωνῶν καὶ ἁμαρτωλῶν WH NA28 RP ] ἁμαρτωλῶν καὶ τῶν τελωνῶν Treg
+  - • ἐσθίει WH NA28 ] + καὶ πίνει Treg RP
+  matt_variant_notes:
+  - 11 ἔλεγον WH Treg NA28 ] εἶπον RP
+- mark_ref: Mark 2:17
+  matt_ref: Matt 9:12
+  macro_block: 6
+  score: 0.60524
+  mark_variant_notes:
+  - 17 ὅτι WH NA28 ] – Treg RP
+  - • ἁμαρτωλούς WH Treg NA28 ] + εἰς μετάνοιαν RP
+  matt_variant_notes:
+  - 12 δὲ WH NA28 ] + Ἰησοῦς Treg RP
+  - • εἶπεν WH Treg NA28 ] + αὐτοῖς RP
+- mark_ref: Mark 2:18
+  matt_ref: Matt 9:14
+  macro_block: 6
+  score: 0.436739
+  mark_variant_notes:
+  - 18 Φαρισαῖοι WH Treg NA28 ] τῶν Φαρισαίων RP
+  - • μαθηταὶ WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 14 πολλά Treg RP NA28 ] – WH NIV
+- mark_ref: Mark 2:20
+  matt_ref: Matt 9:15
+  macro_block: 6
+  score: 0.519634
+  mark_variant_notes:
+  - 20 ἐκείνῃ τῇ ἡμέρᾳ WH Treg NA28 ] ἐκείναις ταῖς ἡμέραις RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:21
+  matt_ref: Matt 9:16
+  macro_block: 6
+  score: 0.635736
+  mark_variant_notes:
+  - 21 Οὐδεὶς WH Treg NA28 ] Καὶ οὐδεὶς RP
+  - • ἱμάτιον παλαιόν WH Treg NA28 ] ἱματίῳ παλαιῷ RP
+  - • ἀπʼ WH NA28 ] – Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:22
+  matt_ref: Matt 9:17
+  macro_block: 6
+  score: 0.621467
+  mark_variant_notes:
+  - 22 ῥήξει ὁ οἶνος WH Treg NA28 ] ῥήσσει ὁ οἶνος ὁ νέος RP
+  - • ἀπόλλυται καὶ οἱ ἀσκοί WH Treg NA28 ] ἐκχεῖται καὶ οἱ ἀσκοὶ ἀπολοῦνται RP
+  - • καινούς WH NA28 ] + βλητέον Treg RP
+  matt_variant_notes:
+  - 17 ἀπόλλυνται WH Treg NA28 ] ἀπολοῦνται RP
+- mark_ref: Mark 2:23
+  matt_ref: Matt 12:1
+  macro_block: 7
+  score: 0.394311
+  mark_variant_notes:
+  - 23 αὐτὸν … σάββασιν παραπορεύεσθαι NA28 ] αὐτὸν … σάββασιν διαπορεύεσθαι WH Treg; παραπορεύεσθαι αὐτὸν … σάββασιν RP
+  - • οἱ μαθηταὶ αὐτοῦ ἤρξαντο WH Treg NA28 ] ἤρξαντο οἱ μαθηταὶ αὐτοῦ RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:24
+  matt_ref: Matt 12:2
+  macro_block: 7
+  score: 0.547861
+  mark_variant_notes:
+  - 24 ποιοῦσιν WH Treg NA28 ] + ἐν RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:25
+  matt_ref: Matt 12:3
+  macro_block: 7
+  score: 0.539691
+  mark_variant_notes:
+  - 25 λέγει WH Treg NA28 ] αὐτὸς ἔλεγεν RP
+  matt_variant_notes:
+  - 12:3 ἐπείνασεν WH Treg NA28 ] + αὐτὸς RP
+- mark_ref: Mark 2:26
+  matt_ref: Matt 12:4
+  macro_block: 7
+  score: 0.616209
+  mark_variant_notes:
+  - 26 πῶς WH Treg RP NA28 ] – NIV
+  - • τοὺς ἱερεῖς WH NA28 ] τοῖς ἱερεῦσιν Treg RP
+  matt_variant_notes:
+  - 4 ἔφαγον, ὃ WH NA28 ] ἔφαγεν, ὃ Treg; ἔφαγεν οὓς RP
+- mark_ref: Mark 2:27
+  matt_ref: Matt 12:5
+  macro_block: 7
+  score: 0.104961
+  mark_variant_notes:
+  - 27 καὶ WH Treg NA28 ] – RP
+  matt_variant_notes: []
+- mark_ref: Mark 2:28
+  matt_ref: Matt 12:8
+  macro_block: 7
+  score: 0.644069
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 3:2
+  matt_ref: Matt 12:10
+  macro_block: 7
+  score: 0.315655
+  mark_variant_notes:
+  - 2 κατηγορήσωσιν WH NA28 RP ] κατηγορήσουσιν Treg
+  matt_variant_notes:
+  - 10 ἄνθρωπος WH Treg NA28 ] + ἦν τὴν RP
+  - • θεραπεύειν WH Treg RP ] θεραπεῦσαι NA28
+- mark_ref: Mark 3:3
+  matt_ref: Matt 12:11
+  macro_block: 7
+  score: 0.195231
+  mark_variant_notes:
+  - 3 τὴν χεῖρα ἔχοντι ξηράν WH Treg ] τὴν ξηράν χεῖρα ἔχοντι NA28; ἐξηραμμένην  ἔχοντι τὴν χεῖρα RP
+  - • Ἔγειρε WH Treg NA28 ] Ἔγειραι RP
+  matt_variant_notes:
+  - 11 ἔσται WH NA28 RP ] – Treg
+- mark_ref: Mark 3:4
+  matt_ref: Matt 12:12
+  macro_block: 7
+  score: 0.144607
+  mark_variant_notes:
+  - 4 ἀγαθοποιῆσαι WH Treg RP ] ἀγαθὸν ποιῆσαι NA28
+  matt_variant_notes: []
+- mark_ref: Mark 3:5
+  matt_ref: Matt 12:13
+  macro_block: 7
+  score: 0.368298
+  mark_variant_notes:
+  - 5 χεῖρα NA28 ] + σου WH Treg RP
+  - • αὐτοῦ WH Treg NA28 ] + ὑγιὴς ὡς ἡ ἄλλη RP
+  matt_variant_notes:
+  - 13 σου τὴν χεῖρα WH Treg NA28 ] τὴν χεῖρά σου RP
+- mark_ref: Mark 3:6
+  matt_ref: Matt 12:14
+  macro_block: 7
+  score: 0.442394
+  mark_variant_notes:
+  - 6 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • ἐδίδουν WH Treg NA28 ] ἐποίουν RP
+  matt_variant_notes:
+  - 14 ἐξελθόντες δὲ οἱ Φαρισαῖοι … αὐτοῦ WH Treg NA28 ] Οἱ δὲ Φαρισαῖοι … αὐτοῦ ἐξελθόντες RP
+- mark_ref: Mark 3:7
+  matt_ref: Matt 12:15
+  macro_block: 7
+  score: 0.220799
+  mark_variant_notes:
+  - 7 μετὰ … αὐτοῦ ἀνεχώρησεν WH Treg NA28 ] ἀνεχώρησεν μετὰ … αὐτοῦ RP
+  - • ἠκολούθησεν WH Treg NA28 ] ἠκολούθησαν αὐτῷ RP
+  matt_variant_notes:
+  - 15 αὐτῷ WH NIV ] + ὄχλοι Treg RP NA28
+- mark_ref: Mark 3:21
+  matt_ref: Matt 12:23
+  macro_block: 8
+  score: 0.146501
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 3:22
+  matt_ref: Matt 12:24
+  macro_block: 8
+  score: 0.337709
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 3:25
+  matt_ref: Matt 12:25
+  macro_block: 8
+  score: 0.299301
+  mark_variant_notes:
+  - 25 δυνήσεται WH Treg NA28 ] δύναται RP
+  - • ἡ οἰκία ἐκείνη σταθῆναι NA28 ] ἡ οἰκία ἐκείνη στῆναι WH Treg; σταθῆναι ἡ οἰκία ἐκείνη RP
+  matt_variant_notes:
+  - 25 δὲ WH Treg NA28 ] + ὁ Ἰησοῦς RP
+- mark_ref: Mark 3:26
+  matt_ref: Matt 12:26
+  macro_block: 8
+  score: 0.26859
+  mark_variant_notes:
+  - 26 ἐμερίσθη WH NA28 ] μεμέρισται Treg RP
+  - • στῆναι WH Treg NA28 ] σταθῆναι RP
+  matt_variant_notes: []
+- mark_ref: Mark 3:27
+  matt_ref: Matt 12:29
+  macro_block: 8
+  score: 0.594697
+  mark_variant_notes:
+  - 27 ἀλλʼ οὐδεὶς δύναται Treg ] ἀλλʼ οὐ δύναται οὐδεὶς WH NA28; οὐδεὶς δύναται RP
+  - • εἰς τὴν οἰκίαν τοῦ ἰσχυροῦ εἰσελθὼν τὰ σκεύη WH Treg NA28 ] τὰ σκεύη τοῦ ἰσχυροῦ εἰσελθὼν εἰς τὴν οἰκίαν RP
+  - • διαρπάσει WH Treg NA28 ] διαρπάσῃ RP
+  matt_variant_notes:
+  - 29 ἁρπάσαι WH Treg NA28 ] διαρπάσαι RP
+  - • διαρπάσει WH Treg RP NA28 ] διαρπάσῃ NIV
+- mark_ref: Mark 3:28
+  matt_ref: Matt 12:31
+  macro_block: 8
+  score: 0.326882
+  mark_variant_notes:
+  - 28 τοῖς … ἀνθρώπων τὰ ἁμαρτήματα WH Treg NA28 ] τὰ ἁμαρτήματα τοῖς … ἀνθρώπων RP
+  - • αἱ βλασφημίαι ὅσα ἐὰν WH Treg NA28 ] βλασφημίαι ὅσας ἂν RP
+  matt_variant_notes:
+  - 31 ἀφεθήσεται WH Treg NA28 ] + τοῖς ἀνθρώποις RP
+- mark_ref: Mark 3:29
+  matt_ref: Matt 12:32
+  macro_block: 8
+  score: 0.223082
+  mark_variant_notes:
+  - 29 ἁμαρτήματος WH Treg NA28 ] κρίσεως RP
+  matt_variant_notes:
+  - 32 τούτῳ τῷ WH Treg NA28 ] τῷ νῦν RP
+- mark_ref: Mark 3:31
+  matt_ref: Matt 12:46
+  macro_block: 9
+  score: 0.229785
+  mark_variant_notes:
+  - 31 Καὶ ἔρχονται WH Treg ] Καὶ ἔρχεται NA28; Ἔρχονται οὖν RP
+  - • ἡ μήτηρ αὐτοῦ καὶ οἱ ἀδελφοὶ αὐτοῦ WH Treg NA28 ] οἱ ἀδελφοὶ καὶ ἡ μήτηρ αὐτοῦ RP
+  - • στήκοντες WH Treg NA28 ] ἑστῶτες RP
+  - • καλοῦντες WH Treg NA28 ] φωνοῦντες RP
+  matt_variant_notes:
+  - 46 δὲ RP ] – WH Treg NA28
+- mark_ref: Mark 3:32
+  matt_ref: Matt 12:47
+  macro_block: 9
+  score: 0.518345
+  mark_variant_notes:
+  - 32 περὶ αὐτὸν ὄχλος WH Treg NA28 ] ὄχλος περὶ αὐτόν RP
+  - • καὶ λέγουσιν WH Treg NA28 ] εἶπον δὲ RP
+  - • σου WH Treg NIV ] +  καὶ αἱ ἀδελφαί σου RP NA28
+  matt_variant_notes:
+  - 47 εἶπεν … λαλῆσαι Treg NA28 RP ] – WH
+- mark_ref: Mark 3:33
+  matt_ref: Matt 12:48
+  macro_block: 9
+  score: 0.797745
+  mark_variant_notes:
+  - 33 ἀποκριθεὶς αὐτοῖς λέγει WH Treg NA28 ] ἀπεκρίθη αὐτοῖς λέγων RP
+  - • ἢ RP ] καὶ WH Treg NA28
+  - • μου Treg NA28 RP ] – WH
+  matt_variant_notes:
+  - 48 λέγοντι WH Treg NA28 ] εἰπόντι RP
+- mark_ref: Mark 3:34
+  matt_ref: Matt 12:49
+  macro_block: 9
+  score: 0.297957
+  mark_variant_notes:
+  - 34 τοὺς περὶ αὐτὸν κύκλῳ WH Treg NA28 ] κύκλῳ τοὺς περὶ αὐτὸν RP
+  matt_variant_notes: []
+- mark_ref: Mark 3:35
+  matt_ref: Matt 12:50
+  macro_block: 9
+  score: 0.642696
+  mark_variant_notes:
+  - 35 γὰρ Treg NA28 RP ] – WH
+  - • ἀδελφὴ WH Treg NA28 ] + μου RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:1
+  matt_ref: Matt 13:2
+  macro_block: 9
+  score: 0.458921
+  mark_variant_notes:
+  - 4:1 συνάγεται WH Treg NA28 ] συνήχθη RP
+  - • πλεῖστος WH Treg NA28 ] πολύς RP
+  - • εἰς πλοῖον ἐμβάντα WH Treg NA28 ] ἐμβάντα εἰς τὸ πλοῖον RP
+  - • ἦσαν WH Treg NA28 ] ἦν RP
+  matt_variant_notes:
+  - 2 εἰς WH Treg NA28 ] + τὸ RP
+- mark_ref: Mark 4:3
+  matt_ref: Matt 13:3
+  macro_block: 9
+  score: 0.362975
+  mark_variant_notes:
+  - 3 σπείρων WH NA28 ] + τοῦ Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:4
+  matt_ref: Matt 13:4
+  macro_block: 9
+  score: 0.887777
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 4 ἐλθόντα τὰ πετεινὰ WH NA28 ] ἦλθεν τὰ πετεινὰ καὶ RP; ἦλθον τὰ πετεινὰ καὶ Treg
+- mark_ref: Mark 4:5
+  matt_ref: Matt 13:5
+  macro_block: 9
+  score: 0.826208
+  mark_variant_notes:
+  - 5 καὶ ἄλλο WH Treg NA28 ] Ἄλλο δὲ RP
+  - • ὅπου NA28 RP ] καὶ ὅπου WH Treg
+  - • εὐθὺς WH Treg NA28 ] εὐθέως RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:6
+  matt_ref: Matt 13:6
+  macro_block: 9
+  score: 0.826669
+  mark_variant_notes:
+  - 6 καὶ ὅτε ἀνέτειλεν ὁ ἥλιος WH Treg NA28 ] ἡλίου δὲ ἀνατείλαντος RP
+  - • ἐκαυματίσθη WH RP NA28 ] ἐκαυματίσθησαν Treg NIV
+  matt_variant_notes: []
+- mark_ref: Mark 4:7
+  matt_ref: Matt 13:7
+  macro_block: 9
+  score: 0.487907
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 7 ἔπνιξαν NA28 ] ἀπέπνιξαν WH Treg RP
+- mark_ref: Mark 4:8
+  matt_ref: Matt 13:8
+  macro_block: 9
+  score: 0.554848
+  mark_variant_notes:
+  - 8 ἄλλα WH NA28 ] ἄλλο Treg RP
+  - • αὐξανόμενα WH NA28 ] αὐξανόμενον Treg; αὐξάνοντα RP
+  - • ἓν … ἓν … ἓν NA28 ] εἰς … ἐν … ἐν WH; εἰς … εἰς … εἰς Treg; ἐν … ἐν … ἐν RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:9
+  matt_ref: Matt 13:9
+  macro_block: 9
+  score: 0.729045
+  mark_variant_notes:
+  - 9 Ὃς ἔχει WH Treg NA28 ] Ὃ ἔχων RP
+  matt_variant_notes:
+  - 9 ὦτα WH NA28 ] + ἀκούειν Treg RP
+- mark_ref: Mark 4:10
+  matt_ref: Matt 13:10
+  macro_block: 9
+  score: 0.108511
+  mark_variant_notes:
+  - 10 Καὶ ὅτε WH Treg NA28 ] Ὅτε δὲ RP
+  - • ἠρώτων WH Treg NA28 ] ἠρώτησαν RP
+  - • τὰς παραβολάς WH Treg NA28 ] τὴν παραβολήν RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:11
+  matt_ref: Matt 13:11
+  macro_block: 9
+  score: 0.248596
+  mark_variant_notes:
+  - 11 τὸ μυστήριον δέδοται WH Treg NA28 ] δέδοται γνῶναι τὸ μυστήριον RP
+  matt_variant_notes:
+  - 11 αὐτοῖς Treg RP NA28 ] – WH NIV
+- mark_ref: Mark 4:14
+  matt_ref: Matt 13:18
+  macro_block: 10
+  score: 0.217046
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 18 σπείραντος WH Treg NA28 ] σπείροντος RP
+- mark_ref: Mark 4:15
+  matt_ref: Matt 13:19
+  macro_block: 10
+  score: 0.226695
+  mark_variant_notes:
+  - 15 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • εἰς αὐτούς WH Treg NA28 ] ἐν ταῖς καρδίαις αὐτῶν RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:16
+  matt_ref: Matt 13:20
+  macro_block: 10
+  score: 0.663939
+  mark_variant_notes:
+  - 16 ὁμοίως WH Treg NIV RP ] – NA28
+  - • εὐθὺς WH Treg NA28 ] εὐθέως RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:17
+  matt_ref: Matt 13:21
+  macro_block: 10
+  score: 0.861694
+  mark_variant_notes:
+  - 17 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:19
+  matt_ref: Matt 13:22
+  macro_block: 10
+  score: 0.533853
+  mark_variant_notes:
+  - 19 αἰῶνος WH Treg NA28 ] + τούτου RP; βίου NIV
+  matt_variant_notes:
+  - 22 τούτου RP ] – WH Treg NA28
+- mark_ref: Mark 4:20
+  matt_ref: Matt 13:23
+  macro_block: 10
+  score: 0.434947
+  mark_variant_notes:
+  - 20 ἐκεῖνοί WH Treg NA28 ] οὗτοί RP
+  - • ἓν … ἓν … ἓν NA28 ] ἐν … ἐν … ἐν WH Treg RP
+  matt_variant_notes:
+  - 23 καλὴν γῆν WH Treg NA28 ] γῆν τὴν καλὴν RP
+  - • συνιείς WH Treg NA28 ] συνιών RP
+- mark_ref: Mark 4:31
+  matt_ref: Matt 13:31
+  macro_block: 11
+  score: 0.201906
+  mark_variant_notes:
+  - 31 κόκκῳ WH NA28 ] κόκκον Treg RP
+  - • μικρότερον ὂν WH Treg NA28 ] μικρότερος RP
+  - •  σπερμάτων WH Treg NA28 ] + ἐστὶν RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:32
+  matt_ref: Matt 13:32
+  macro_block: 11
+  score: 0.311901
+  mark_variant_notes:
+  - 32 μεῖζον πάντων τῶν λαχάνων WH NA28 ] μείζων πάντων τῶν λαχάνων Treg; πάντων τῶν λαχάνων μείζων RP
+  matt_variant_notes: []
+- mark_ref: Mark 4:34
+  matt_ref: Matt 13:34
+  macro_block: 11
+  score: 0.215028
+  mark_variant_notes:
+  - 34 ἰδίοις μαθηταῖς WH NA28 ] μαθηταῖς αὐτοῦ Treg RP
+  matt_variant_notes:
+  - 34 οὐδὲν WH Treg NA28 ] οὐκ RP
+- mark_ref: Mark 6:2
+  matt_ref: Matt 13:54
+  macro_block: 12
+  score: 0.428874
+  mark_variant_notes:
+  - 2 διδάσκειν ἐν τῇ συναγωγῇ WH Treg NA28 ] ἐν τῇ συναγωγῇ διδάσκειν RP
+  - • οἱ WH ] – Treg NA28 RP
+  - • τούτῳ WH Treg NA28 ] αὐτῷ RP
+  - • αἱ WH NA28 ] – Treg RP
+  - • γινόμεναι WH Treg NA28 ] γίνονται RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:3
+  matt_ref: Matt 13:55
+  macro_block: 12
+  score: 0.365632
+  mark_variant_notes:
+  - 3 τῆς WH Treg NA28 ] – RP
+  - • καὶ ἀδελφὸς WH Treg NA28 ] ἀδελφὸς δὲ RP
+  - • Ἰωσῆτος WH Treg NA28 ] Ἰωσῆ RP
+  matt_variant_notes:
+  - 55 οὐχ WH Treg NA28 ] Οὐχί RP
+  - • Ἰωσὴφ WH Treg NA28 ] Ἰωσῆς RP
+- mark_ref: Mark 6:4
+  matt_ref: Matt 13:57
+  macro_block: 12
+  score: 0.663822
+  mark_variant_notes:
+  - 4 καὶ ἔλεγεν WH Treg NA28 ] Ἔλεγεν δὲ RP
+  - • συγγενεῦσιν αὐτοῦ WH Treg NA28 ] συγγενέσιν RP
+  matt_variant_notes:
+  - 57 πατρίδι WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 6:5
+  matt_ref: Matt 13:58
+  macro_block: 12
+  score: 0.200443
+  mark_variant_notes:
+  - 5 ποιῆσαι οὐδεμίαν δύναμιν WH Treg NA28 ] οὐδεμίαν δύναμιν ποιῆσαι RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:14
+  matt_ref: Matt 14:2
+  macro_block: 13
+  score: 0.308781
+  mark_variant_notes:
+  - 14 ἔλεγον WH NA28 ] ἔλεγεν Treg RP
+  - • ἐγήγερται ἐκ νεκρῶν WH Treg NA28 ] ἐκ νεκρῶν ἠγέρθη RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:17
+  matt_ref: Matt 14:3
+  macro_block: 13
+  score: 0.682852
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 14:3 αὐτὸν Treg NA28 RP ] – WH
+  - • ἐν φυλακῇ ἀπέθετο WH NA28 ] ἐν τῇ φυλακῇ ἀπέθετο Treg; ἔθετο ἐν φυλακῇ RP
+- mark_ref: Mark 6:18
+  matt_ref: Matt 14:4
+  macro_block: 13
+  score: 0.550563
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 4 αὐτῷ ὁ Ἰωάννης RP ] ὁ Ἰωάννης αὐτῷ WH NA28; ὁ Ἰωάννης Treg
+- mark_ref: Mark 6:19
+  matt_ref: Matt 14:5
+  macro_block: 13
+  score: 0.205655
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 6:22
+  matt_ref: Matt 14:6
+  macro_block: 13
+  score: 0.298483
+  mark_variant_notes:
+  - 22 αὐτῆς τῆς Treg RP ] αὐτοῦ WH NA28
+  - • καὶ ἀρεσάσης RP ] ἤρεσεν WH Treg NA28
+  - • εἶπεν ὁ βασιλεὺς NA28 RP ] ὁ δὲ βασιλεὺς εἶπεν WH Treg
+  matt_variant_notes:
+  - 6 γενεσίοις δὲ γενομένοις WH Treg NA28 ] Γενεσίων δὲ ἀγομένων RP
+- mark_ref: Mark 6:23
+  matt_ref: Matt 14:7
+  macro_block: 13
+  score: 0.169733
+  mark_variant_notes:
+  - 23 αὐτῇ WH Treg NIV RP ] + πολλά NA28
+  - • Ὅ τι NA28 ] Ὅτι WH; ὅτι Ὃ Treg RP
+  matt_variant_notes:
+  - 7 ἐὰν WH NA28 RP ] ἂν Treg
+- mark_ref: Mark 6:25
+  matt_ref: Matt 14:8
+  macro_block: 13
+  score: 0.293486
+  mark_variant_notes:
+  - 25 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • ἐξαυτῆς δῷς μοι WH Treg NA28 ] μοι δῷς ἐξαυτῆς RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:26
+  matt_ref: Matt 14:9
+  macro_block: 13
+  score: 0.181739
+  mark_variant_notes:
+  - 26 ἀνακειμένους WH Treg NA28 ] συνανακειμένους RP
+  - • ἀθετῆσαι αὐτήν WH Treg NA28 ] αὐτὴν ἀθετῆσαι RP
+  matt_variant_notes:
+  - 9 λυπηθεὶς ὁ βασιλεὺς διὰ WH Treg NA28 ] ἐλυπήθη ὁ βασιλεύς διὰ δὲ RP
+- mark_ref: Mark 6:27
+  matt_ref: Matt 14:10
+  macro_block: 13
+  score: 0.166225
+  mark_variant_notes:
+  - 27 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • ἐνέγκαι WH Treg NA28 ] ἐνεχθῆναι RP
+  - • καὶ WH Treg NA28 ] Ὁ δὲ RP
+  matt_variant_notes:
+  - 10 τὸν NA28 RP ] – WH Treg
+- mark_ref: Mark 6:28
+  matt_ref: Matt 14:11
+  macro_block: 13
+  score: 0.817212
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 6:29
+  matt_ref: Matt 14:12
+  macro_block: 13
+  score: 0.291481
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 12 πτῶμα WH Treg NA28 ] σῶμα RP
+  - • αὐτόν WH Treg NA28 ] αὐτό NIV RP
+- mark_ref: Mark 6:32
+  matt_ref: Matt 14:13
+  macro_block: 13
+  score: 0.332866
+  mark_variant_notes:
+  - 32 ἐν τῷ πλοίῳ εἰς ἔρημον τόπον WH NA28 ] εἰς ἔρημον τόπον τῷ πλοίῳ Treg RP
+  matt_variant_notes:
+  - 13 Ἀκούσας δὲ WH Treg NA28 ] Καὶ ἀκούσας RP
+- mark_ref: Mark 6:34
+  matt_ref: Matt 14:14
+  macro_block: 13
+  score: 0.352508
+  mark_variant_notes:
+  - 34 εἶδεν WH Treg NA28 ] + ὁ Ἰησοῦς RP
+  - • αὐτοὺς WH Treg NA28 ] αὐτοῖς RP
+  matt_variant_notes:
+  - 14 ἐξελθὼν WH Treg NA28 ] + ὁ Ἰησοῦς RP
+- mark_ref: Mark 6:35
+  matt_ref: Matt 14:15
+  macro_block: 13
+  score: 0.413327
+  mark_variant_notes:
+  - 35 ἔλεγον WH Treg NA28 ] λέγουσιν RP
+  matt_variant_notes:
+  - 15 μαθηταὶ WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 6:37
+  matt_ref: Matt 14:16
+  macro_block: 13
+  score: 0.221946
+  mark_variant_notes:
+  - 37 δώσομεν WH Treg NA28 ] δῶμεν RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:38
+  matt_ref: Matt 14:17
+  macro_block: 13
+  score: 0.404611
+  mark_variant_notes:
+  - 38 ἔχετε ἄρτους WH ] ἄρτους ἔχετε Treg NA28 RP
+  - • ὑπάγετε WH Treg NA28 ] + καὶ RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:41
+  matt_ref: Matt 14:19
+  macro_block: 13
+  score: 0.453166
+  mark_variant_notes:
+  - 41 αὐτοῦ NA28 RP ] – WH Treg
+  - • παρατιθῶσιν WH NA28 ] παραθῶσιν Treg RP
+  matt_variant_notes:
+  - 19 τοῦ χόρτου WH Treg NA28 ] τοὺς χόρτους RP
+- mark_ref: Mark 6:43
+  matt_ref: Matt 14:20
+  macro_block: 13
+  score: 0.351974
+  mark_variant_notes:
+  - 43 κλάσματα δώδεκα κοφίνων πληρώματα WH NA28 ]  κλασμάτων δώδεκα κοφίνους πληρώματα Treg; κλασμάτων δώδεκα κοφίνους πλήρεις RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:44
+  matt_ref: Matt 14:21
+  macro_block: 13
+  score: 0.32063
+  mark_variant_notes:
+  - 44 τοὺς ἄρτους WH Treg RP NA28 ] – NIV
+  matt_variant_notes: []
+- mark_ref: Mark 6:45
+  matt_ref: Matt 14:22
+  macro_block: 13
+  score: 0.686799
+  mark_variant_notes:
+  - 45 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • εἰς τὸ πέραν WH Treg RP NA28 ] – NIV
+  - • ἀπολύει WH Treg NA28 ] ἀπολύσῃ RP
+  matt_variant_notes:
+  - 22 ἠνάγκασεν WH Treg NA28 ] + ὁ Ἰησοῦς RP
+  - • εἰς WH Treg ] + τὸ NA28 RP
+- mark_ref: Mark 6:47
+  matt_ref: Matt 14:23
+  macro_block: 13
+  score: 0.204626
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 6:48
+  matt_ref: Matt 14:25
+  macro_block: 13
+  score: 0.448714
+  mark_variant_notes:
+  - 48 ἰδὼν WH Treg NA28 ] εἶδεν RP
+  - • αὐτοῖς WH Treg NA28 ] + καὶ RP
+  matt_variant_notes:
+  - 25 ἦλθεν WH Treg NA28 ] ἀπῆλθεν NIV RP
+  - • αὐτοὺς WH Treg NA28 ] + ὁ Ἰησοῦς RP
+  - • τὴν θάλασσαν WH Treg NA28 ] τῆς θαλάσσης RP
+- mark_ref: Mark 6:49
+  matt_ref: Matt 14:26
+  macro_block: 13
+  score: 0.39845
+  mark_variant_notes:
+  - 49 ἐπὶ τῆς θαλάσσης περιπατοῦντα WH NA28 ] περιπατοῦντα ἐπὶ τῆς θαλάσσης Treg RP
+  - • ὅτι φάντασμά ἐστιν WH NA28 ] φάντασμα εἶναι Treg RP
+  matt_variant_notes:
+  - 26 οἱ δὲ μαθηταὶ ἰδόντες αὐτὸν WH NA28 ] καὶ ἰδόντες αὐτὸν οἱ μαθηταὶ Treg RP
+  - • τῆς θαλάσσης WH Treg NA28 ] τὴν θάλασσαν RP
+- mark_ref: Mark 6:50
+  matt_ref: Matt 14:27
+  macro_block: 13
+  score: 0.609172
+  mark_variant_notes:
+  - 50 ὁ δὲ εὐθὺς WH NA28 ] καὶ εὐθὺς Treg; Καὶ εὐθέως RP
+  matt_variant_notes:
+  - 27 εὐθὺς WH Treg NA28 ] Εὐθέως RP
+  - • αὐτοῖς ὁ Ἰησοῦς Treg RP ] ὁ Ἰησοῦς αὐτοῖς WH NA28
+- mark_ref: Mark 6:51
+  matt_ref: Matt 14:32
+  macro_block: 13
+  score: 0.555029
+  mark_variant_notes:
+  - 51 ἐκ περισσοῦ Treg NA28 RP ] – WH
+  - • ἐξίσταντο WH Treg NA28 ] + καὶ ἐθαύμαζον RP
+  matt_variant_notes:
+  - 32 ἀναβάντων WH Treg NA28 ] ἐμβάντων RP
+- mark_ref: Mark 6:53
+  matt_ref: Matt 14:34
+  macro_block: 13
+  score: 0.54469
+  mark_variant_notes:
+  - 53 ἐπὶ τὴν γῆν ἦλθον εἰς WH NA28 ] ἦλθον ἐπὶ τὴν γῆν Treg RP
+  matt_variant_notes:
+  - 34 ἐπὶ τὴν γῆν εἰς WH Treg NA28 ] εἰς τὴν γῆν RP
+- mark_ref: Mark 6:55
+  matt_ref: Matt 14:35
+  macro_block: 13
+  score: 0.16154
+  mark_variant_notes:
+  - 55 περιέδραμον ὅλην τὴν χώραν ἐκείνην καὶ WH Treg NA28 ] περιδραμόντες ὅλην τὴν περίχωρον ἐκείνην RP
+  - • ὅτι WH NA28 ] + ἐκεῖ Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 6:56
+  matt_ref: Matt 14:36
+  macro_block: 13
+  score: 0.249669
+  mark_variant_notes:
+  - 56 εἰς πόλεις ἢ εἰς WH Treg NA28 ] πόλεις ἢ RP
+  - • ἐτίθεσαν WH Treg NA28 ] ἐτίθουν RP
+  - • ἥψαντο WH Treg NA28 ] ἥπτοντο RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:1
+  matt_ref: Matt 15:1
+  macro_block: 13
+  score: 0.317921
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 15:1 Ἰησοῦ WH Treg NA28 ] + οἱ RP
+  - • Φαρισαῖοι καὶ γραμματεῖς WH Treg NA28 ] γραμματεῖς καὶ Φαρισαῖοι RP
+- mark_ref: Mark 7:3
+  matt_ref: Matt 15:2
+  macro_block: 13
+  score: 0.300363
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 2 αὐτῶν Treg NA28 RP ] – WH
+- mark_ref: Mark 7:9
+  matt_ref: Matt 15:3
+  macro_block: 14
+  score: 0.35098
+  mark_variant_notes:
+  - 9 τηρήσητε WH Treg NIV RP ] στήσητε WHmarg NA28
+  matt_variant_notes: []
+- mark_ref: Mark 7:10
+  matt_ref: Matt 15:4
+  macro_block: 14
+  score: 0.809514
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 4 εἶπεν WH Treg NA28 ] ἐνετείλατο λέγων RP
+- mark_ref: Mark 7:11
+  matt_ref: Matt 15:5
+  macro_block: 14
+  score: 0.584297
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 7:13
+  matt_ref: Matt 15:6
+  macro_block: 14
+  score: 0.37245
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 6 οὐ WH Treg NA28 ] καὶ οὐ RP
+  - • τιμήσει WH Treg NA28 ] τιμήσῃ RP
+  - • αὐτοῦ WH NA28 ] + ἢ τὴν μητέρα αὐτοῦ Treg RP
+  - • τὸν λόγον WH Treg NA28 ] τὴν ἐντολὴν RP
+- mark_ref: Mark 7:14
+  matt_ref: Matt 15:10
+  macro_block: 14
+  score: 0.622002
+  mark_variant_notes:
+  - 14 πάλιν WH Treg NA28 ] πάντα RP
+  - • Ἀκούσατέ WH Treg NA28 ] Ἀκούετέ RP
+  - • σύνετε WH Treg NA28 ] συνίετε RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:15
+  matt_ref: Matt 15:11
+  macro_block: 14
+  score: 0.322891
+  mark_variant_notes:
+  - 15 κοινῶσαι αὐτόν WH NA28 ] αὐτὸν κοινῶσαι Treg RP
+  - • ἐκ τοῦ ἀνθρώπου ἐκπορευόμενά WH NA28 ] + ἐκεῖνά Treg; ἐκπορευόμενα ἀπʼ αὐτοῦ ἐκεῖνά RP
+  - • ἄνθρωπον WH NA28 ] + 16 Εἴ τις ἔχει ὦτα ἀκούειν ἀκουέτω Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:18
+  matt_ref: Matt 15:16
+  macro_block: 14
+  score: 0.244424
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 16 δὲ WH Treg NA28 ] + Ἰησοῦς RP
+- mark_ref: Mark 7:19
+  matt_ref: Matt 15:17
+  macro_block: 14
+  score: 0.251821
+  mark_variant_notes:
+  - 19 καθαρίζων WH Treg NA28 ] καθαρίζον RP
+  matt_variant_notes:
+  - 17 οὐ WH Treg NA28 ] Οὔπω RP
+- mark_ref: Mark 7:20
+  matt_ref: Matt 15:18
+  macro_block: 14
+  score: 0.392252
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 7:21
+  matt_ref: Matt 15:19
+  macro_block: 14
+  score: 0.319161
+  mark_variant_notes:
+  - 21–22 πορνεῖαι κλοπαί φόνοι μοιχεῖαι WH Treg NA28 ] μοιχεῖαι πορνεῖαι φόνοι κλοπαί RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:23
+  matt_ref: Matt 15:20
+  macro_block: 14
+  score: 0.181074
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 7:24
+  matt_ref: Matt 15:21
+  macro_block: 14
+  score: 0.116027
+  mark_variant_notes:
+  - 24 Ἐκεῖθεν δὲ WH NA28 ] Καὶ ἐκεῖθεν Treg RP
+  - • ὅρια WH Treg NA28 ] μεθόρια RP
+  - • Τύρου NA28 ] + καὶ Σιδῶνος WH Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:27
+  matt_ref: Matt 15:26
+  macro_block: 14
+  score: 0.50852
+  mark_variant_notes:
+  - 27 καὶ ἔλεγεν WH Treg NA28 ] Ὁ δὲ Ἰησοῦς εἶπεν RP
+  - • καλόν ἐστιν RP ] ἐστιν καλὸν WH Treg NA28
+  - • τοῖς κυναρίοις βαλεῖν WH Treg NA28 ] βαλεῖν τοῖς κυναρίοις RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:28
+  matt_ref: Matt 15:27
+  macro_block: 14
+  score: 0.590154
+  mark_variant_notes:
+  - 28 Κύριε NA28 ] Ναί κύριε WH Treg NIV RP
+  - • καὶ WH Treg NA28 ] + γὰρ NIV RP
+  - • ἐσθίουσιν WH Treg NA28 ] ἐσθίει RP
+  matt_variant_notes: []
+- mark_ref: Mark 7:29
+  matt_ref: Matt 15:28
+  macro_block: 14
+  score: 0.106018
+  mark_variant_notes:
+  - 29 ἐκ … σου τὸ δαιμόνιον WH NA28 ] τὸ δαιμόνιον ἐκ … σου Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:2
+  matt_ref: Matt 15:32
+  macro_block: 15
+  score: 0.518682
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 8:4
+  matt_ref: Matt 15:33
+  macro_block: 15
+  score: 0.405907
+  mark_variant_notes:
+  - 4 ὅτι WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 33 μαθηταί WH NA28 ] + αὐτοῦ Treg RP
+- mark_ref: Mark 8:5
+  matt_ref: Matt 15:34
+  macro_block: 15
+  score: 0.356258
+  mark_variant_notes:
+  - 5 ἠρώτα WH Treg NA28 ] ἐπηρώτα RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:6
+  matt_ref: Matt 15:36
+  macro_block: 15
+  score: 0.505625
+  mark_variant_notes:
+  - 6 παραγγέλλει WH Treg NA28 ] παρήγγειλεν RP
+  - • παρατιθῶσιν WH Treg NA28 ] παραθῶσιν RP
+  matt_variant_notes:
+  - 36 ἔλαβεν WH Treg NA28 ] καὶ λαβὼν RP
+  - • καὶ WH Treg NA28 ] – RP
+  - • ἐδίδου WH Treg NA28 ] ἔδωκεν RP
+  - • μαθηταῖς WH NA28 ] + αὐτοῦ Treg RP
+  - • τοῖς ὄχλοις WH Treg NA28 ] τῷ ὄχλῷ RP
+- mark_ref: Mark 8:8
+  matt_ref: Matt 15:37
+  macro_block: 15
+  score: 0.468615
+  mark_variant_notes:
+  - 8 καὶ ἔφαγον WH Treg NA28 ] Ἔφαγον δέ RP
+  matt_variant_notes:
+  - 37 τὸ … κλασμάτων ἦραν WH Treg NA28 ] ἦραν τὸ … κλασμάτων RP
+- mark_ref: Mark 8:9
+  matt_ref: Matt 15:38
+  macro_block: 15
+  score: 0.204347
+  mark_variant_notes:
+  - 9 δὲ WH NA28 ] + οἱ φαγόντες Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:10
+  matt_ref: Matt 15:39
+  macro_block: 15
+  score: 0.240436
+  mark_variant_notes:
+  - 10 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  matt_variant_notes:
+  - 39 Μαγαδάν WH Treg NA28 ] Μαγδαλά RP
+- mark_ref: Mark 8:11
+  matt_ref: Matt 16:1
+  macro_block: 15
+  score: 0.268986
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 8:12
+  matt_ref: Matt 16:4
+  macro_block: 15
+  score: 0.181758
+  mark_variant_notes:
+  - 12 ζητεῖ σημεῖον WH Treg NA28 ] σημεῖον ἐπιζητεῖ RP
+  - • ὑμῖν Treg NA28 RP ] – WH
+  matt_variant_notes:
+  - 4 Ἰωνᾶ WH Treg NA28 ] + τοῦ προφήτου RP
+- mark_ref: Mark 8:14
+  matt_ref: Matt 16:5
+  macro_block: 15
+  score: 0.239258
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 5 μαθηταὶ WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 8:15
+  matt_ref: Matt 16:6
+  macro_block: 15
+  score: 0.345592
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 8:16
+  matt_ref: Matt 16:7
+  macro_block: 15
+  score: 0.471932
+  mark_variant_notes:
+  - 16 ἀλλήλους WH Treg NA28 ] + λέγοντες NIV RP
+  - • ἔχουσιν WH Treg NA28 ] ἔχομεν NIV RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:17
+  matt_ref: Matt 16:8
+  macro_block: 15
+  score: 0.293747
+  mark_variant_notes:
+  - 17 γνοὺς WH NA28 ] + ὁ Ἰησοῦς Treg NIV RP
+  - • πεπωρωμένην WH Treg NA28 ] Ἔτι πεπωρωμένην RP
+  matt_variant_notes:
+  - 8 εἶπεν WH Treg NA28 ] + αὐτοῖς RP
+  - • ἐλάβετε Treg RP ] ἔχετε WH NA28
+- mark_ref: Mark 8:19
+  matt_ref: Matt 16:9
+  macro_block: 15
+  score: 0.289446
+  mark_variant_notes:
+  - 19 κλασμάτων πλήρεις WH Treg NA28 ] πλήρεις κλασμάτων RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:20
+  matt_ref: Matt 16:10
+  macro_block: 15
+  score: 0.335021
+  mark_variant_notes:
+  - 20 καὶ NIV ] – WH NA28; δὲ Treg RP
+  - • καὶ λέγουσιν αὐτῷ WH NA28 ] οἱ δὲ εἶπον Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:27
+  matt_ref: Matt 16:13
+  macro_block: 16
+  score: 0.41195
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 13 Τίνα WH Treg NA28 ] + με RP
+- mark_ref: Mark 8:28
+  matt_ref: Matt 16:14
+  macro_block: 16
+  score: 0.636512
+  mark_variant_notes:
+  - 28 εἶπαν αὐτῷ λέγοντες WH NA28 ] ἀπεκρίθησαν αὐτῷ λέγοντες Treg; ἀπεκρίθησαν RP
+  - • ὅτι WH NA28 ] – Treg RP
+  - • ὅτι εἷς WH Treg NA28 ] ἕνα RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:29
+  matt_ref: Matt 16:16
+  macro_block: 16
+  score: 0.412455
+  mark_variant_notes:
+  - 29 ἐπηρώτα αὐτούς WH Treg NA28 ] λέγει αὐτοῖς RP
+  - • ἀποκριθεὶς WH Treg NA28 ] + δὲ RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:30
+  matt_ref: Matt 16:20
+  macro_block: 16
+  score: 0.237866
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 20 διεστείλατο Treg RP NA28 ] ἐπετίμησεν WH NIV
+  - • μαθηταῖς WH Treg NA28 ] + αὐτοῦ RP
+  - • ἐστιν WH Treg NA28 ] + Ἰησοῦς RP
+- mark_ref: Mark 8:31
+  matt_ref: Matt 16:21
+  macro_block: 16
+  score: 0.364998
+  mark_variant_notes:
+  - 31 ὑπὸ WH Treg NA28 ] ἀπὸ RP
+  matt_variant_notes:
+  - 21 ὁ Ἰησοῦς Treg NA28 RP ] Ἰησοῦς Χριστὸς WH
+  - • εἰς Ἱεροσόλυμα ἀπελθεῖν WH Treg NA28 ] ἀπελθεῖν εἰς Ἱεροσόλυμα RP
+- mark_ref: Mark 8:32
+  matt_ref: Matt 16:22
+  macro_block: 16
+  score: 0.358496
+  mark_variant_notes:
+  - 32 ὁ Πέτρος αὐτὸν WH Treg NA28 ] αὐτὸν ὁ Πέτρος RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:33
+  matt_ref: Matt 16:23
+  macro_block: 16
+  score: 0.465462
+  mark_variant_notes:
+  - 33 Πέτρῳ WH Treg NA28 ] τῷ Πέτρῳ RP
+  - • καὶ λέγει WH Treg NA28 ] λέγων RP
+  matt_variant_notes:
+  - 23 εἶ ἐμοῦ WH Treg NA28 ] μου εἶ RP
+- mark_ref: Mark 8:34
+  matt_ref: Matt 16:24
+  macro_block: 16
+  score: 0.621725
+  mark_variant_notes:
+  - 34 Εἴ τις WH Treg NA28 ] Ὅστις RP
+  - • ἐλθεῖν WH ] ἀκολουθεῖν Treg NA28 RP
+  matt_variant_notes: []
+- mark_ref: Mark 8:35
+  matt_ref: Matt 16:25
+  macro_block: 16
+  score: 0.685587
+  mark_variant_notes:
+  - 35 ἐὰν WH Treg NA28 ] ἂν RP
+  - • ⸂ψυχὴν αὐτοῦ⸃ Treg NA28 RP ] ἑαυτοῦ ψυχὴν WH
+  - • ἀπολέσει WH Treg NA28 ] ἀπολέσῃ RP
+  - • ⸄ψυχὴν αὐτοῦ⸅ WH NA28 ] ἑαυτοῦ ψυχὴν Treg RP
+  - • σώσει WH Treg NA28 ] οὗτος σώσει RP
+  matt_variant_notes:
+  - 25 ἐὰν WH Treg NA28 ] ἂν RP
+- mark_ref: Mark 8:36
+  matt_ref: Matt 16:26
+  macro_block: 16
+  score: 0.586961
+  mark_variant_notes:
+  - 36 ὠφελεῖ WH NA28 ] ὠφελήσει Treg RP
+  - • ἄνθρωπον WH NA28 RP ] τὸν ἄνθρωπον Treg
+  - • κερδῆσαι τὸν … καὶ ζημιωθῆναι WH NA28 ] ἐὰν κερδήσῃ τὸν … καὶ ζημιωθῇ Treg RP
+  matt_variant_notes:
+  - 26 ὠφεληθήσεται WH Treg NA28 ] ὠφελεῖται RP
+- mark_ref: Mark 8:38
+  matt_ref: Matt 16:27
+  macro_block: 16
+  score: 0.279543
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 9:1
+  matt_ref: Matt 16:28
+  macro_block: 16
+  score: 0.676578
+  mark_variant_notes:
+  - 9:1 τῶν ὧδε RP ] ὧδε τῶν WH Treg NA28
+  matt_variant_notes:
+  - 28 ὅτι WH NA28 ] – Treg RP
+  - • τῶν ὧδε ἑστώτων WH Treg NA28 ] ὧδε ἑστῶτες RP
+- mark_ref: Mark 9:2
+  matt_ref: Matt 17:1
+  macro_block: 16
+  score: 0.75824
+  mark_variant_notes:
+  - 2 καὶ WH Treg RP ] + τὸν NA28
+  matt_variant_notes: []
+- mark_ref: Mark 9:3
+  matt_ref: Matt 17:2
+  macro_block: 16
+  score: 0.168773
+  mark_variant_notes:
+  - 3 ἐγένετο WH NA28 ] ἐγένοντο Treg RP
+  - • λίαν WH Treg NA28 ] + ὡς χιών RP
+  - • οὕτως WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 17:2 ἐγένετο WH Treg NA28 ] ἐγένοντο RP
+- mark_ref: Mark 9:4
+  matt_ref: Matt 17:3
+  macro_block: 16
+  score: 0.536608
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 3 ὤφθη WH Treg NA28 ] ὤφθησαν RP
+  - • συλλαλοῦντες μετʼ αὐτοῦ WH Treg NA28 ] μετʼ αὐτοῦ συλλαλοῦντες RP
+- mark_ref: Mark 9:5
+  matt_ref: Matt 17:4
+  macro_block: 16
+  score: 0.743463
+  mark_variant_notes:
+  - 5 τρεῖς σκηνάς WH Treg NA28 ] σκηνὰς τρεῖς RP
+  matt_variant_notes:
+  - 4 ποιήσω WH NA28 ] ποιήσωμεν Treg RP
+  - • Ἠλίᾳ μίαν WH Treg NA28 ] μίαν Ἠλίᾳ RP
+- mark_ref: Mark 9:7
+  matt_ref: Matt 17:5
+  macro_block: 16
+  score: 0.475734
+  mark_variant_notes:
+  - 7 ἐγένετο WH NA28 ] ἦλθεν Treg RP
+  - • ἀκούετε αὐτοῦ WH Treg NA28 ] αὐτοῦ ἀκούετε RP
+  matt_variant_notes:
+  - 5 ἀκούετε αὐτοῦ WH Treg NA28 ] αὐτοῦ ἀκούετε RP
+- mark_ref: Mark 9:8
+  matt_ref: Matt 17:8
+  macro_block: 16
+  score: 0.328557
+  mark_variant_notes:
+  - 8 ἀλλὰ τὸν Ἰησοῦν μόνον μεθʼ ἑαυτῶν Treg NA28 RP ] μεθʼ ἑαυτῶν εἰ μὴ τὸν Ἰησοῦν μόνον WH
+  matt_variant_notes:
+  - 8 αὐτὸν WH NA28 ] τὸν Treg RP
+- mark_ref: Mark 9:9
+  matt_ref: Matt 17:9
+  macro_block: 16
+  score: 0.344895
+  mark_variant_notes:
+  - 9 Καὶ καταβαινόντων WH Treg NA28 ] Καταβαινόντων δὲ RP
+  - • ἐκ WH NA28 ] ἀπὸ Treg RP
+  - • ἃ εἶδον διηγήσωνται WH Treg NA28 ] διηγήσωνται ἃ εἶδον RP
+  matt_variant_notes:
+  - 9 ἐγερθῇ WH Treg NA28 ] ἀναστῇ RP
+- mark_ref: Mark 9:11
+  matt_ref: Matt 17:10
+  macro_block: 16
+  score: 0.653787
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 10 μαθηταὶ WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 9:12
+  matt_ref: Matt 17:11
+  macro_block: 16
+  score: 0.269283
+  mark_variant_notes:
+  - 12 ἔφη WH Treg NA28 ] ἀποκριθείς εἶπεν RP
+  - • ἀποκαθιστάνει WH Treg NA28 ] ἀποκαθιστᾷ RP
+  - • ἐξουδενηθῇ WH Treg NA28 ] ἐξουδενωθῇ RP
+  matt_variant_notes:
+  - 11 δὲ WH Treg NA28 ] + Ἰησοῦς RP
+  - • εἶπεν WH Treg NA28 ] + αὐτοῖς RP
+  - • ἔρχεται WH Treg NA28 ] + πρῶτον RP
+- mark_ref: Mark 9:13
+  matt_ref: Matt 17:12
+  macro_block: 16
+  score: 0.297533
+  mark_variant_notes:
+  - 13 ἤθελον WH Treg NA28 ] ἠθέλησαν RP
+  matt_variant_notes: []
+- mark_ref: Mark 9:14
+  matt_ref: Matt 17:14
+  macro_block: 16
+  score: 0.166572
+  mark_variant_notes:
+  - 14 ἐλθόντες πρὸς τοὺς μαθητὰς εἶδον WH Treg NA28 ] ἐλθὼν πρὸς τοὺς μαθητὰς εἶδεν RP
+  - • πρὸς αὐτούς WH Treg NA28 ] αὐτοῖς RP
+  matt_variant_notes:
+  - 14 ἐλθόντων WH Treg NA28 ] + αὐτῶν RP
+- mark_ref: Mark 9:18
+  matt_ref: Matt 17:16
+  macro_block: 16
+  score: 0.102066
+  mark_variant_notes:
+  - 18 ἐὰν WH Treg NA28 ] ἂν RP
+  - • ὀδόντας WH Treg NA28 ] + αὐτοῦ RP
+  matt_variant_notes: []
+- mark_ref: Mark 9:19
+  matt_ref: Matt 17:17
+  macro_block: 16
+  score: 0.687394
+  mark_variant_notes:
+  - 19 αὐτοῖς WH Treg NA28 ] αὐτῷ RP
+  matt_variant_notes:
+  - 17 μεθʼ ὑμῶν ἔσομαι WH Treg NA28 ] ἔσομαι μεθʼ ὑμῶν RP
+- mark_ref: Mark 9:42
+  matt_ref: Matt 18:6
+  macro_block: 17
+  score: 0.449998
+  mark_variant_notes:
+  - 42 ἂν WH Treg NA28 ] ἐὰν RP
+  - • τούτων WH Treg NA28 ] – RP
+  - • εἰς ἐμέ Treg NA28 RP ] – WH
+  - • μύλος ὀνικὸς WH Treg NA28 ] λίθος μυλικὸς RP
+  matt_variant_notes:
+  - 6 εἰς RP ] περὶ WH Treg NA28
+- mark_ref: Mark 9:45
+  matt_ref: Matt 18:8
+  macro_block: 17
+  score: 0.512546
+  mark_variant_notes:
+  - 45 σε WH Treg NA28 ] σοι RP
+  - • γέενναν WH NA28 ] + εἰς τὸ πῦρ τὸ ἄσβεστον 46 ὅπου ὁ σκώληξ αὐτῶν οὐ τελευτᾷ καὶ τὸ πῦρ οὐ σβέννυται Treg RP
+  matt_variant_notes:
+  - 8 αὐτὸν WH Treg NA28 ] αὐτὰ RP
+  - • κυλλὸν ἢ χωλόν WH NA28 ] χωλὸν ἢ κυλλόν Treg RP
+- mark_ref: Mark 9:47
+  matt_ref: Matt 18:9
+  macro_block: 17
+  score: 0.566896
+  mark_variant_notes:
+  - 47 σέ WH Treg NA28 ] σοι RP
+  - • τὴν Treg NA28 RP ] – WH
+  - • γέενναν WH Treg NA28 ] + τοῦ πυρός RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:6
+  matt_ref: Matt 19:4
+  macro_block: 18
+  score: 0.446631
+  mark_variant_notes:
+  - 6 αὐτούς WH Treg NA28 ] + ὁ θεός RP
+  matt_variant_notes:
+  - 4 εἶπεν WH Treg NA28 ] + αὐτοῖς RP
+  - • κτίσας WH Treg NA28 ] ποιήσας RP
+- mark_ref: Mark 10:7
+  matt_ref: Matt 19:5
+  macro_block: 18
+  score: 0.393585
+  mark_variant_notes:
+  - 7 καὶ προσκολληθήσεται πρὸς τὴν γυναῖκα αὐτοῦ Treg NA28 RP ] – WH
+  matt_variant_notes:
+  - 5 Ἕνεκα WH Treg NA28 ] Ἕνεκεν RP
+  - • κολληθήσεται WH Treg NA28 ] προσκολληθήσεται RP
+- mark_ref: Mark 10:9
+  matt_ref: Matt 19:6
+  macro_block: 18
+  score: 0.534298
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 10:11
+  matt_ref: Matt 19:9
+  macro_block: 18
+  score: 0.631934
+  mark_variant_notes:
+  - 11 ἂν WH Treg NA28 ] ἐὰν RP
+  matt_variant_notes:
+  - 9 ὅτι WH NA28 RP ] – Treg
+  - • καὶ ὁ ἀπολελυμένην γαμήσας μοιχᾶται Treg RP ] – WH NA28
+- mark_ref: Mark 10:13
+  matt_ref: Matt 19:13
+  macro_block: 18
+  score: 0.430938
+  mark_variant_notes:
+  - 13 αὐτῶν ἅψηται WH NA28 ] ἅψηται αὐτῶν Treg RP
+  - • ἐπετίμησαν αὐτοῖς WH NA28 ] ἐπετίμων τοῖς προσφέρουσιν Treg RP
+  matt_variant_notes:
+  - 13 προσηνέχθησαν WH Treg NA28 ] προσηνέχθη RP
+- mark_ref: Mark 10:14
+  matt_ref: Matt 19:14
+  macro_block: 18
+  score: 0.575292
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 10:16
+  matt_ref: Matt 19:15
+  macro_block: 18
+  score: 0.117479
+  mark_variant_notes:
+  - 16 κατευλόγει τιθεὶς … αὐτά WH NA28 ] κατηυλόγει τιθεὶς … αὐτά Treg; τιθεὶς … αὐτά, εὐλόγει αὐτά RP
+  matt_variant_notes:
+  - 15 τὰς χεῖρας αὐτοῖς WH Treg NA28 ] αὐτοῖς τὰς χεῖρας RP
+- mark_ref: Mark 10:17
+  matt_ref: Matt 19:16
+  macro_block: 18
+  score: 0.381656
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 16 αὐτῷ εἶπεν WH Treg NA28 ] εἶπεν αὐτῷ RP
+  - • Διδάσκαλε WH Treg NA28 ] + ἀγαθέ RP
+  - • σχῶ WH Treg NA28 ] ἔχω RP
+- mark_ref: Mark 10:18
+  matt_ref: Matt 19:17
+  macro_block: 18
+  score: 0.175227
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 17 ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός WH Treg NA28 ] λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός εἰ μὴ εἷς ὁ θεός RP
+  - • εἰς τὴν ζωὴν εἰσελθεῖν WH Treg NA28 ] εἰσελθεῖν εἰς τὴν ζωήν RP
+  - • τήρησον NA28 RP ] τήρει WH Treg
+- mark_ref: Mark 10:19
+  matt_ref: Matt 19:18
+  macro_block: 18
+  score: 0.262333
+  mark_variant_notes:
+  - 19 φονεύσῃς Μὴ μοιχεύσῃς WH NA28 ] μοιχεύσῃς μὴ φονεύσῃς Treg RP
+  matt_variant_notes:
+  - 18 εἶπεν Treg NA28 RP ] ἔφη WH
+- mark_ref: Mark 10:20
+  matt_ref: Matt 19:20
+  macro_block: 18
+  score: 0.220162
+  mark_variant_notes:
+  - 20 ἔφη WH NA28 ] ἀποκριθεὶς ἔφη Treg; ἀποκριθεὶς  εἶπεν RP
+  matt_variant_notes:
+  - 20 Πάντα ταῦτα NA28 RP ] Ταῦτα πάντα WH Treg
+  - • ἐφύλαξα WH Treg NA28 ] ἐφυλαξάμην ἐκ νεότητός μου RP
+- mark_ref: Mark 10:21
+  matt_ref: Matt 19:21
+  macro_block: 18
+  score: 0.462222
+  mark_variant_notes:
+  - 21 σε WH NA28 ] σοι Treg RP
+  - • τοῖς WH NA28 ] – Treg RP
+  - • μοι WH Treg NA28 ] + ἄρας τὸν σταυρόν RP
+  matt_variant_notes:
+  - 21 δὸς RP ] + τοῖς WH Treg NA28
+  - • οὐρανοῖς WH Treg NA28 ] οὐρανῷ RP
+- mark_ref: Mark 10:22
+  matt_ref: Matt 19:22
+  macro_block: 18
+  score: 0.681203
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 22 λόγον Treg NA28 RP ] + τοῦτον WH
+- mark_ref: Mark 10:23
+  matt_ref: Matt 19:23
+  macro_block: 18
+  score: 0.336256
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 23 πλούσιος δυσκόλως WH Treg NA28 ] δυσκόλως πλούσιος RP
+- mark_ref: Mark 10:25
+  matt_ref: Matt 19:24
+  macro_block: 18
+  score: 0.52323
+  mark_variant_notes:
+  - 25 τῆς τρυμαλιᾶς τῆς NA28 RP ] τρυμαλιᾶς WH Treg
+  - • διελθεῖν WH Treg NA28 ] εἰσελθεῖν RP
+  matt_variant_notes:
+  - 24 τρυπήματος Treg NA28 RP ] τρήματος WH
+  - • εἰσελθεῖν WH Treg ] διελθεῖν NA28 RP
+  - • εἰς τὴν βασιλείαν τοῦ θεοῦ WH ] εἰσελθεῖν εἰς … τοῦ θεοῦ NA28; εἰς … τοῦ θεοῦ εἰσελθεῖν RP; εἰσελθεῖν εἰς τὴν βασιλείαν τῶν οὐρανῶν Treg
+- mark_ref: Mark 10:26
+  matt_ref: Matt 19:25
+  macro_block: 18
+  score: 0.437028
+  mark_variant_notes:
+  - 26 ἑαυτούς Treg NA28 RP ] αὐτόν WH
+  matt_variant_notes:
+  - 25 μαθηταὶ WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 10:27
+  matt_ref: Matt 19:26
+  macro_block: 18
+  score: 0.759327
+  mark_variant_notes:
+  - 27 ἐμβλέψας WH Treg NA28 ] + δὲ RP
+  - • δυνατὰ WH Treg NA28 ] + ἐστιν RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:28
+  matt_ref: Matt 19:27
+  macro_block: 18
+  score: 0.47504
+  mark_variant_notes:
+  - 28 λέγειν ὁ Πέτρος WH NA28 ] ὁ Πέτρος λέγειν Treg RP
+  - • ἠκολουθήκαμέν WH Treg NA28 ] ἠκολουθήσαμέν RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:30
+  matt_ref: Matt 19:29
+  macro_block: 18
+  score: 0.390061
+  mark_variant_notes:
+  - 30 μητέρας WH NA28 RP ] μητέρα Treg
+  matt_variant_notes:
+  - 29 ὅστις WH Treg NA28 ] ὅς RP
+  - • οἰκίας ἢ WH NA28 RP ] – Treg
+  - • γυναῖκα ἢ RP ] – WH Treg NA28
+  - • ἀγροὺς WH NA28 RP ] + ἢ οἰκίας Treg
+  - • ὀνόματός μου Treg NA28 RP ] ἐμοῦ ὀνόματος WH
+  - • ἑκατονταπλασίονα NA28 RP ] πολλαπλασίονα WH Treg
+- mark_ref: Mark 10:31
+  matt_ref: Matt 19:30
+  macro_block: 18
+  score: 0.994802
+  mark_variant_notes:
+  - 31 οἱ WH Treg NA28 ] – RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:32
+  matt_ref: Matt 20:17
+  macro_block: 19
+  score: 0.226991
+  mark_variant_notes:
+  - 32 οἱ δὲ WH Treg NA28 ] καὶ RP
+  matt_variant_notes:
+  - 17 Καὶ ἀναβαίνων ὁ Treg NA28 RP ] Μέλλων δὲ ἀναβαίνειν WH
+  - • μαθητὰς WH NA28 RP ] – Treg
+  - • καὶ ἐν τῇ ὁδῷ WH Treg NA28 ] ἐν τῇ ὁδῷ καὶ RP; καὶ NIV
+- mark_ref: Mark 10:33
+  matt_ref: Matt 20:18
+  macro_block: 19
+  score: 0.787443
+  mark_variant_notes:
+  - 33 τοῖς WH Treg NA28 ] – RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:34
+  matt_ref: Matt 20:19
+  macro_block: 19
+  score: 0.224006
+  mark_variant_notes:
+  - 34 ἐμπτύσουσιν αὐτῷ καὶ μαστιγώσουσιν αὐτὸν WH Treg NA28 ] μαστιγώσουσιν αὐτόν καὶ ἐμπτύσουσιν αὐτῷ RP
+  - • ἀποκτενοῦσιν WH NA28 ] + αὐτόν Treg RP
+  - • μετὰ τρεῖς ἡμέρας WH Treg NA28 ] τῇ τρίτῃ ἡμέρᾳ RP
+  matt_variant_notes:
+  - 19 ἐγερθήσεται WH Treg NA28 ] ἀναστήσεται RP
+- mark_ref: Mark 10:35
+  matt_ref: Matt 20:20
+  macro_block: 19
+  score: 0.203635
+  mark_variant_notes:
+  - 35 οἱ Treg NA28 RP ] + δύο WH
+  - • αὐτῷ WH Treg NA28 ] – RP
+  - • σε WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 20 παρʼ RP ] ἀπʼ WH Treg NA28
+- mark_ref: Mark 10:37
+  matt_ref: Matt 20:21
+  macro_block: 19
+  score: 0.286716
+  mark_variant_notes:
+  - 37 σου ἐκ δεξιῶν WH Treg NA28 ] ἐκ δεξιῶν σου RP
+  - • ἀριστερῶν WH Treg NA28 ] εὐωνύμων σου RP
+  matt_variant_notes:
+  - 21 σου Treg NA28 RP ] – WH
+- mark_ref: Mark 10:38
+  matt_ref: Matt 20:22
+  macro_block: 19
+  score: 0.582217
+  mark_variant_notes:
+  - 38 ἢ WH Treg NA28 ] καὶ RP
+  matt_variant_notes:
+  - 22 πίνειν WH Treg NA28 ] + ἢ τὸ βάπτισμα ὃ ἐγὼ βαπτίζομαι βαπτισθῆναι RP
+- mark_ref: Mark 10:40
+  matt_ref: Matt 20:23
+  macro_block: 19
+  score: 0.687536
+  mark_variant_notes:
+  - 40 ἢ WH Treg NA28 ] καὶ RP
+  matt_variant_notes:
+  - 23 λέγει WH Treg NA28 ] Καὶ λέγει RP
+  - • πίεσθε WH Treg NA28 ] + καὶ τὸ βάπτισμα ὃ ἐγὼ βαπτίζομαι βαπτισθήσεσθε RP
+  - • εὐωνύμων WH Treg NA28 ] + μου RP
+  - • ἐμὸν WH Treg NIV RP ] + τοῦτο WHmarg NA28
+- mark_ref: Mark 10:41
+  matt_ref: Matt 20:24
+  macro_block: 19
+  score: 0.379279
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 10:42
+  matt_ref: Matt 20:25
+  macro_block: 19
+  score: 0.60992
+  mark_variant_notes:
+  - 42 καὶ προσκαλεσάμενος αὐτοὺς ὁ Ἰησοῦς WH Treg NA28 ] Ὁ δὲ Ἰησοῦς προσκαλεσάμενος αὐτοὺς RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:43
+  matt_ref: Matt 20:26
+  macro_block: 19
+  score: 0.995642
+  mark_variant_notes:
+  - 43 ἐστιν WH Treg NA28 ] ἔσται RP
+  - • ἂν WH Treg NA28 ] ἐὰν RP
+  - • μέγας γενέσθαι WH Treg NA28 ] γενέσθαι μέγας RP
+  matt_variant_notes:
+  - 26 ἔσται NA28 ] δέ ἔσται RP; ἐστὶν WH Treg
+  - • ἂν WH Treg ] ἐὰν NA28 RP
+- mark_ref: Mark 10:44
+  matt_ref: Matt 20:27
+  macro_block: 19
+  score: 0.768817
+  mark_variant_notes:
+  - 44 ἂν WH NA28 ] ἐὰν Treg RP
+  - • ἐν ὑμῖν εἶναι WH NA28 ] ὑμῶν εἶναι Treg; ὑμῶν γενέσθαι RP
+  matt_variant_notes:
+  - 27 ἂν WH Treg NA28 ] ἐὰν RP
+  - • ἔσται WH Treg NA28 ] ἔστω RP
+- mark_ref: Mark 10:45
+  matt_ref: Matt 20:28
+  macro_block: 19
+  score: 0.908783
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 10:46
+  matt_ref: Matt 20:29
+  macro_block: 19
+  score: 0.19691
+  mark_variant_notes:
+  - 46 ὁ WH Treg NA28 ] – RP
+  - • τυφλὸς WH Treg NA28 ] ὁ τυφλὸς RP
+  - • προσαίτης ἐκάθητο … ὁδόν WH Treg NA28 ] ἐκάθητο … ὁδὸν προσαιτῶν NIV RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:47
+  matt_ref: Matt 20:30
+  macro_block: 19
+  score: 0.354315
+  mark_variant_notes:
+  - 47 Ναζαρηνός WH Treg NA28 ] Ναζωραῖός RP
+  - • Υἱὲ WH Treg NA28 ] Ὁ ὑιὸς RP
+  matt_variant_notes:
+  - 30 Κύριε ἐλέησον ἡμᾶς WH Treg NIV ] Ἐλέησον ἡμᾶς κύριε RP NA28
+  - • υἱὸς WH Treg RP NA28 ] υἱὲ NIV
+- mark_ref: Mark 10:48
+  matt_ref: Matt 20:31
+  macro_block: 19
+  score: 0.439743
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 31 ἔκραξαν WH Treg NA28 ] ἔκραζον RP
+  - • Κύριε ἐλέησον ἡμᾶς WH Treg NIV ] Ἐλέησον ἡμᾶς κύριε RP NA28
+  - • υἱὸς WH Treg RP NA28 ] υἱὲ NIV
+- mark_ref: Mark 10:49
+  matt_ref: Matt 20:32
+  macro_block: 19
+  score: 0.316928
+  mark_variant_notes:
+  - 49 Φωνήσατε αὐτόν WH Treg NA28 ] αὐτὸν φωνηθῆναι RP
+  - • ἔγειρε WH Treg NA28 ] ἔγειραι RP
+  matt_variant_notes: []
+- mark_ref: Mark 10:52
+  matt_ref: Matt 20:34
+  macro_block: 19
+  score: 0.212401
+  mark_variant_notes:
+  - 52 καὶ ὁ WH NA28 ] ὁ δὲ Treg RP
+  - • εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • αὐτῷ WH Treg NA28 ] τῷ Ἰησοῦ RP
+  matt_variant_notes:
+  - 34 ὀμμάτων WH Treg NA28 ] ὀφθαλμῶν RP
+  - • ἀνέβλεψαν WH Treg NA28 ] + αὐτῶν οἱ ὀφθαλμοί RP
+- mark_ref: Mark 11:1
+  matt_ref: Matt 21:1
+  macro_block: 19
+  score: 0.622686
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 21:1 εἰς WH Treg NA28 ] πρὸς RP
+  - • Ἰησοῦς WH NA28 ] ὁ Ἰησοῦς Treg RP
+- mark_ref: Mark 11:2
+  matt_ref: Matt 21:2
+  macro_block: 19
+  score: 0.262626
+  mark_variant_notes:
+  - 11:2 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • οὔπω WH Treg NA28 ] – RP
+  - • ἐκάθισεν WH NA28 ] κεκάθικεν Treg RP
+  - • λύσατε αὐτὸν καὶ φέρετε WH Treg NA28 ] λύσαντες αὐτὸν ἀγάγετε RP
+  matt_variant_notes:
+  - 2 Πορεύεσθε WH Treg NA28 ] Πορεύθητε RP
+  - • κατέναντι WH Treg NA28 ] ἀπέναντι RP
+  - • εὐθέως Treg NA28 RP ] εὐθὺς WH
+  - • ἀγάγετέ WH NA28 RP ] ἄγετέ Treg
+- mark_ref: Mark 11:3
+  matt_ref: Matt 21:3
+  macro_block: 19
+  score: 0.647275
+  mark_variant_notes:
+  - 3 ὅτι RP ] – WH Treg NA28
+  - • εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • πάλιν WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 3 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • ἀποστελεῖ WH Treg NA28 ] ἀποστέλλει RP
+- mark_ref: Mark 11:5
+  matt_ref: Matt 21:5
+  macro_block: 19
+  score: 0.102987
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 5 ἐπὶ WH Treg NA28 ] – RP
+- mark_ref: Mark 11:6
+  matt_ref: Matt 21:6
+  macro_block: 19
+  score: 0.12886
+  mark_variant_notes:
+  - 6 εἶπεν WH Treg NA28 ] ἐνετείλατο RP
+  matt_variant_notes:
+  - 6 συνέταξεν WH Treg NA28 ] προσέταξεν RP
+- mark_ref: Mark 11:7
+  matt_ref: Matt 21:7
+  macro_block: 19
+  score: 0.17963
+  mark_variant_notes:
+  - 7 φέρουσιν WH Treg NA28 ] ἤγαγον RP
+  - • ἐπιβάλλουσιν WH Treg NA28 ] ἐπέβαλον RP
+  - • αὐτόν WH Treg NA28 ] αὐτῷ RP
+  matt_variant_notes:
+  - 7 ἐπʼ WH Treg NA28 ] ἐπάνω RP
+  - • ἱμάτια WH Treg NA28 ] + αὐτῶν RP
+- mark_ref: Mark 11:8
+  matt_ref: Matt 21:8
+  macro_block: 19
+  score: 0.393421
+  mark_variant_notes:
+  - 8 καὶ πολλοὶ WH Treg NA28 ] Πολλοὶ δὲ RP
+  - • κόψαντες ἐκ τῶν ἀγρῶν WH Treg NA28 ] ἔκοπτον ἐκ τῶν δένδρων καὶ ἐστρώννυον εἰς τὴν  ὁδόν RP
+  matt_variant_notes: []
+- mark_ref: Mark 11:9
+  matt_ref: Matt 21:9
+  macro_block: 19
+  score: 0.589081
+  mark_variant_notes:
+  - 9 ἔκραζον WH Treg NA28 ] + λέγοντες RP
+  matt_variant_notes:
+  - 9 αὐτὸν WH Treg NA28 ] – RP
+- mark_ref: Mark 11:11
+  matt_ref: Matt 21:10
+  macro_block: 19
+  score: 0.21409
+  mark_variant_notes:
+  - 11 Ἱεροσόλυμα WH Treg NA28 ] + ὁ Ἰησοῦς καὶ RP
+  - • ὀψὲ WH ] ὀψίας Treg NA28 RP
+  matt_variant_notes: []
+- mark_ref: Mark 11:15
+  matt_ref: Matt 21:12
+  macro_block: 19
+  score: 0.64079
+  mark_variant_notes:
+  - 15 εἰσελθὼν WH Treg NA28 ] + ὁ Ἰησοῦς RP
+  - • τοὺς WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 12 Ἰησοῦς WH Treg NA28 ] ὁ Ἰησοῦς RP
+  - • ἱερόν WH Treg NA28 ] + τοῦ θεοῦ RP
+- mark_ref: Mark 11:17
+  matt_ref: Matt 21:13
+  macro_block: 19
+  score: 0.729798
+  mark_variant_notes:
+  - 17 καὶ ἔλεγεν WH Treg NA28 ] λέγων RP
+  - • αὐτοῖς Treg NA28 RP ] – WH
+  - • πεποιήκατε WH Treg NA28 ] ἐποιήσατε RP
+  matt_variant_notes:
+  - 13 ποιεῖτε WH Treg NA28 ] ἐποιήσατε RP
+- mark_ref: Mark 11:21
+  matt_ref: Matt 21:20
+  macro_block: 20
+  score: 0.172562
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 11:23
+  matt_ref: Matt 21:21
+  macro_block: 20
+  score: 0.333573
+  mark_variant_notes:
+  - 23 ἀμὴν WH NA28 ] + γὰρ Treg RP
+  - • πιστεύῃ WH NA28 ] πιστεύσῃ Treg RP
+  - • ὃ λαλεῖ γίνεται, ἔσται αὐτῷ WH Treg NA28 ] ἃ λέγει γίνεται ἔσται αὐτῷ ὃ ἐὰν εἴπῃ RP
+  matt_variant_notes: []
+- mark_ref: Mark 11:24
+  matt_ref: Matt 21:22
+  macro_block: 20
+  score: 0.4356
+  mark_variant_notes:
+  - 24 προσεύχεσθε καὶ αἰτεῖσθε WH Treg NA28 ] ἄν προσευχόμενοιαἰτῆσθε RP
+  - • ἐλάβετε WH Treg NA28 ] λαμβάνετε RP
+  matt_variant_notes:
+  - 22 ἂν WH NA28 ] ἐὰν Treg RP
+- mark_ref: Mark 11:28
+  matt_ref: Matt 21:23
+  macro_block: 20
+  score: 0.381257
+  mark_variant_notes:
+  - 28 ἔλεγον WH Treg NA28 ] λέγουσιν RP
+  - • ἢ WH NA28 ] καὶ Treg RP
+  - • ἔδωκεν τὴν … ταύτην WH Treg NA28 ] τὴν … ταύτην ἔδωκεν RP
+  matt_variant_notes:
+  - 23 ἐλθόντος αὐτοῦ WH Treg NA28 ] ἐλθόντι αὐτῷ RP
+- mark_ref: Mark 11:29
+  matt_ref: Matt 21:24
+  macro_block: 20
+  score: 0.552237
+  mark_variant_notes:
+  - 29 Ἰησοῦς WH Treg NA28 ] + ἀποκριθεὶς RP
+  - • ὑμᾶς WH Treg NA28 ] + καὶ ἐγὼ RP
+  matt_variant_notes: []
+- mark_ref: Mark 11:31
+  matt_ref: Matt 21:25
+  macro_block: 20
+  score: 0.511503
+  mark_variant_notes:
+  - 31 διελογίζοντο WH Treg NA28 ] ἐλογίζοντο RP
+  - • Τί εἴπωμεν; Holmes ] – WH Treg NA28 RP
+  - • οὖν WH NA28 RP ] – Treg
+  matt_variant_notes:
+  - 25 τὸ WH Treg NA28 ] – RP
+  - • ἐν WH Treg NA28 ] παρʼ RP
+- mark_ref: Mark 11:32
+  matt_ref: Matt 21:26
+  macro_block: 20
+  score: 0.520381
+  mark_variant_notes:
+  - 32 ὄχλον WH NA28 ] λαόν Treg RP
+  - • ὄντως ὅτι WH Treg NA28 ] ὅτι ὄντως RP
+  matt_variant_notes:
+  - 26 ὡς προφήτην ἔχουσιν τὸν Ἰωάννην WH Treg NA28 ] ἔχουσιν τὸν Ἰωάννην ὡς προφήτην RP
+- mark_ref: Mark 11:33
+  matt_ref: Matt 21:27
+  macro_block: 20
+  score: 0.73072
+  mark_variant_notes:
+  - 33 τῷ Ἰησοῦ λέγουσιν WH Treg NA28 ] λέγουσιν τῷ Ἰησοῦ RP
+  - • Ἰησοῦς WH Treg NA28 ] + ἀποκριθεὶς RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:1
+  matt_ref: Matt 21:33
+  macro_block: 20
+  score: 0.501801
+  mark_variant_notes:
+  - 12:1 λαλεῖν WH Treg NA28 ] λέγειν RP
+  - • ἄνθρωπος ἐφύτευσεν WH NA28 ] ἐφύτευσεν ἄνθρωπος Treg RP
+  matt_variant_notes:
+  - 33 Ἄνθρωπος WH Treg NA28 ] + τις RP
+- mark_ref: Mark 12:2
+  matt_ref: Matt 21:34
+  macro_block: 20
+  score: 0.567929
+  mark_variant_notes:
+  - 2 τῶν καρπῶν WH Treg NA28 ] τοῦ καρποῦ RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:3
+  matt_ref: Matt 21:35
+  macro_block: 20
+  score: 0.207974
+  mark_variant_notes:
+  - 3 καὶ WH Treg NA28 ] Οἱ δὲ RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:4
+  matt_ref: Matt 21:36
+  macro_block: 20
+  score: 0.384706
+  mark_variant_notes:
+  - 4 κἀκεῖνον WH Treg NA28 ] + λιθοβολήσαντες RP
+  - • ἐκεφαλίωσαν WH NA28 ] ἐκεφαλαίωσαν Treg RP
+  - • ἠτίμασαν WH NA28 ] ἠτίμησαν Treg; ἀπέστειλαν ἠτιμωμένον RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:6
+  matt_ref: Matt 21:37
+  macro_block: 20
+  score: 0.3439
+  mark_variant_notes:
+  - 6 ἕνα … ἀπέστειλεν WH Treg NA28 ] οὖν ἕνα υἱὸν ἔχων ἀγαπητὸν αὐτοῦ, ἀπέστειλεν καὶ RP
+  - • ἔσχατον πρὸς αὐτοὺς WH Treg NA28 ] πρὸς αὐτοὺς ἔσχατον RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:7
+  matt_ref: Matt 21:38
+  macro_block: 20
+  score: 0.644235
+  mark_variant_notes:
+  - 7 πρὸς ἑαυτοὺς εἶπαν WH Treg NA28 ] εἶπον πρὸς ἑαυτοὺς RP
+  matt_variant_notes:
+  - 38 σχῶμεν WH Treg NA28 ] κατάσχωμεν RP
+- mark_ref: Mark 12:8
+  matt_ref: Matt 21:39
+  macro_block: 20
+  score: 0.747891
+  mark_variant_notes:
+  - 8 ἀπέκτειναν αὐτόν, καὶ ἐξέβαλον αὐτὸν WH Treg NA28 ] αὐτὸν ἀπέκτειναν καὶ ἐξέβαλον RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:9
+  matt_ref: Matt 21:40
+  macro_block: 20
+  score: 0.436102
+  mark_variant_notes:
+  - 9 τί WH ] + οὖν Treg NA28 RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:10
+  matt_ref: Matt 21:42
+  macro_block: 20
+  score: 0.49023
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 12:13
+  matt_ref: Matt 22:15
+  macro_block: 21
+  score: 0.155763
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 12:14
+  matt_ref: Matt 22:16
+  macro_block: 21
+  score: 0.530643
+  mark_variant_notes:
+  - 14 καὶ WH Treg NA28 ] Οἱ δὲ RP
+  - • δοῦναι κῆνσον Καίσαρι WH Treg NA28 ] κῆνσον Καίσαρι δοῦναι RP
+  matt_variant_notes:
+  - 16 λέγοντες NA28 RP ] λέγοντας WH Treg
+- mark_ref: Mark 12:15
+  matt_ref: Matt 22:18
+  macro_block: 21
+  score: 0.183433
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 12:16
+  matt_ref: Matt 22:20
+  macro_block: 21
+  score: 0.555213
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 12:17
+  matt_ref: Matt 22:21
+  macro_block: 21
+  score: 0.530638
+  mark_variant_notes:
+  - 17 ὁ δὲ WH Treg NA28 ] Καὶ ἀποκριθεὶς ὁ RP
+  - • αὐτοῖς Treg NA28 RP ] – WH
+  - • Τὰ Καίσαρος ἀπόδοτε WH Treg NA28 ] Ἀπόδοτε τὰ Καίσαρος RP
+  - • ἐξεθαύμαζον WH NA28 ] ἐθαύμαζον Treg; ἐθαύμασαν RP
+  matt_variant_notes:
+  - 21 αὐτῷ Treg NA28 RP ] – WH
+- mark_ref: Mark 12:18
+  matt_ref: Matt 22:23
+  macro_block: 21
+  score: 0.520409
+  mark_variant_notes:
+  - 18 ἐπηρώτων WH Treg NA28 ] ἐπηρώτησαν RP
+  matt_variant_notes:
+  - 23 λέγοντες WH Treg NA28 ] οἱ λέγοντες RP
+- mark_ref: Mark 12:19
+  matt_ref: Matt 22:24
+  macro_block: 21
+  score: 0.407291
+  mark_variant_notes:
+  - 19 μὴ ἀφῇ τέκνον WH NA28 ] τέκνα μὴ ἀφῇ Treg RP
+  - • γυναῖκα WH Treg NA28 ] + αὐτοῦ RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:20
+  matt_ref: Matt 22:25
+  macro_block: 21
+  score: 0.353711
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 25 γήμας WH Treg NA28 ] γαμήσας RP
+- mark_ref: Mark 12:21
+  matt_ref: Matt 22:26
+  macro_block: 21
+  score: 0.188358
+  mark_variant_notes:
+  - 21 μὴ καταλιπὼν WH Treg NA28 ] καὶ οὐδὲ αὐτὸς ἀφῆκεν RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:22
+  matt_ref: Matt 22:27
+  macro_block: 21
+  score: 0.218752
+  mark_variant_notes:
+  - 22 οἱ ἑπτὰ WH Treg NA28 ] ἔλαβον αὐτὴν οἱ ἑπτά καὶ RP
+  - • ἔσχατον WH Treg NA28 ] Ἐσχάτη RP
+  - • καὶ ἡ γυνὴ ἀπέθανεν WH Treg NA28 ] ἀπέθανεν καὶ ἡ γυνή RP
+  matt_variant_notes:
+  - 27 ἡ WH NA28 ] καὶ ἡ Treg RP
+- mark_ref: Mark 12:23
+  matt_ref: Matt 22:28
+  macro_block: 21
+  score: 0.471561
+  mark_variant_notes:
+  - 23 ὅταν ἀναστῶσιν RP NA28 ] – WH Treg NIV
+  matt_variant_notes:
+  - 28 ἀναστάσει οὖν WH Treg NA28 ] οὖν ἀναστάσει RP
+- mark_ref: Mark 12:24
+  matt_ref: Matt 22:29
+  macro_block: 21
+  score: 0.6972
+  mark_variant_notes:
+  - 24 ἔφη αὐτοῖς ὁ Ἰησοῦς WH Treg NA28 ] Καὶ ἀποκριθεὶς ὁ Ἰησοῦς εἶπεν αὐτοῖς RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:25
+  matt_ref: Matt 22:30
+  macro_block: 21
+  score: 0.409121
+  mark_variant_notes:
+  - 25 γαμίζονται WH Treg NA28 ] γαμίσκονται RP
+  - • ἄγγελοι WH NA28 ] + οἱ Treg RP
+  matt_variant_notes:
+  - 30 γαμίζονται WH Treg NA28 ] ἐκγαμίζονται RP
+  - • θεοῦ Holmes ] τοῦ θεοῦ RP; – WH Treg NA28
+  - • τῷ WH Treg NA28 ] – RP
+- mark_ref: Mark 12:26
+  matt_ref: Matt 22:31
+  macro_block: 21
+  score: 0.253813
+  mark_variant_notes:
+  - 26 πῶς WH Treg NA28 ] ὡς RP
+  - • ὁ θεὸς … καὶ ὁ NA28 RP ] θεὸς … καὶ WH Treg
+  matt_variant_notes: []
+- mark_ref: Mark 12:27
+  matt_ref: Matt 22:32
+  macro_block: 21
+  score: 0.410323
+  mark_variant_notes:
+  - 27 θεὸς WH Treg NA28 ] ὁ θεὸς NIV RP
+  - • ἀλλὰ WH Treg NA28 ] + θεὸς RP
+  - • πολὺ WH NA28 ] ὑμεῖς  οὖν πολὺ  Treg RP
+  matt_variant_notes:
+  - 32 ὁ θεὸς WH Treg NA28 ] ὁ θεὸς θεὸς RP; θεὸς WHmarg
+- mark_ref: Mark 12:30
+  matt_ref: Matt 22:37
+  macro_block: 21
+  score: 0.750299
+  mark_variant_notes:
+  - 30 τῆς Treg NA28 RP ] – WH
+  - • σου WH NA28 ] + αὕτη πρώτη ἐντολή Treg RP
+  matt_variant_notes:
+  - 37 δὲ WH Treg NA28 ] + Ἰησοῦς RP
+  - • ⸀τῇ Treg NA28 ] – WH RP
+  - • ⸁τῇ WH Treg NA28 ] – RP
+- mark_ref: Mark 12:31
+  matt_ref: Matt 22:39
+  macro_block: 21
+  score: 0.363199
+  mark_variant_notes:
+  - 31 δευτέρα WH NA28 ] + ὁμοία Treg; Καὶ δευτέρα ὁμοία RP
+  matt_variant_notes:
+  - 39 δὲ Treg NA28 RP ] – WH
+  - • αὐτῇ Treg NA28 RP ] αὕτη WH
+- mark_ref: Mark 12:35
+  matt_ref: Matt 22:42
+  macro_block: 21
+  score: 0.288249
+  mark_variant_notes:
+  - 35 Δαυίδ ἐστιν WH Treg NA28 ] ἐστιν Δαυίδ RP
+  matt_variant_notes: []
+- mark_ref: Mark 12:36
+  matt_ref: Matt 22:44
+  macro_block: 21
+  score: 0.700581
+  mark_variant_notes:
+  - 36 αὐτὸς WH NA28 ] + γὰρ Treg RP
+  - • τῷ πνεύματι τῷ WH Treg NA28 ] πνεύματι RP
+  - • Εἶπεν WH NA28 ] Λέγει Treg RP
+  - • κύριος WH Treg NA28 ] ὁ κύριος RP
+  - • Κάθου WH NA28 RP ] Κάθισον Treg
+  - • ὑποκάτω WH NA28 ] ὑποπόδιον Treg RP
+  matt_variant_notes:
+  - 44 Εἶπεν WH Treg NA28 ] + ὁ RP
+  - • ὑποκάτω WH Treg NA28 ] ὑποπόδιον RP
+- mark_ref: Mark 12:37
+  matt_ref: Matt 22:45
+  macro_block: 21
+  score: 0.231896
+  mark_variant_notes:
+  - 37 αὐτὸς WH Treg NA28 ] + οὖν RP
+  - • αὐτοῦ ἐστιν υἱός WH Treg NA28 ] υἱὸς αὐτοῦ ἐστιν RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:1
+  matt_ref: Matt 24:1
+  macro_block: 22
+  score: 0.212407
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 24:1 ἀπὸ τοῦ ἱεροῦ ἐπορεύετο WH Treg NA28 ] ἐπορεύετο ἀπὸ τοῦ ἱεροῦ RP
+- mark_ref: Mark 13:2
+  matt_ref: Matt 24:2
+  macro_block: 22
+  score: 0.585439
+  mark_variant_notes:
+  - 13:2 Ἰησοῦς WH Treg NA28 ] + ἀποκριθεὶς RP
+  - • ὧδε WH Treg NA28 ] – RP
+  - • λίθον WH Treg NA28 ] λίθῷ RP
+  matt_variant_notes:
+  - 2 ἀποκριθεὶς WH Treg NA28 ] Ἰησοῦς RP
+  - • ταῦτα πάντα WH Treg NA28 ] πάντα ταῦτα RP
+- mark_ref: Mark 13:4
+  matt_ref: Matt 24:3
+  macro_block: 22
+  score: 0.222068
+  mark_variant_notes:
+  - 4 ταῦτα συντελεῖσθαι πάντα WH Treg NA28 ] πάντα ταῦτα συντελεῖσθαι RP
+  matt_variant_notes:
+  - 3 καὶ WH Treg NA28 ] + τῆς RP
+- mark_ref: Mark 13:5
+  matt_ref: Matt 24:4
+  macro_block: 22
+  score: 0.610139
+  mark_variant_notes:
+  - 5 ἤρξατο λέγειν αὐτοῖς WH Treg NA28 ] ἀποκριθεὶς αὐτοῖς ἤρξατο λέγειν RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:6
+  matt_ref: Matt 24:5
+  macro_block: 22
+  score: 0.773993
+  mark_variant_notes:
+  - 6 πολλοὶ WH NA28 ] + γὰρ Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:7
+  matt_ref: Matt 24:6
+  macro_block: 22
+  score: 0.732003
+  mark_variant_notes:
+  - 7 ἀκούσητε WH NA28 RP ] ἀκούετε Treg
+  - • δεῖ WH NA28 ] + γὰρ Treg RP
+  matt_variant_notes:
+  - 6 γὰρ WH Treg NA28 ] + πάντα RP
+- mark_ref: Mark 13:8
+  matt_ref: Matt 24:7
+  macro_block: 22
+  score: 0.697462
+  mark_variant_notes:
+  - 8 ⸀ἔσονται WH Treg NA28 ] καὶ ἔσονται RP
+  - • ⸁ἔσονται WH NA28 ] καὶ ἔσονται Treg RP
+  - • λιμοί WH Treg NA28 ] + καὶ ταραχαί RP
+  - • ἀρχὴ WH Treg NA28 ] ἀρχαὶ RP
+  matt_variant_notes:
+  - 7 λιμοὶ WH Treg NA28 ] + καὶ λοιμοὶ RP
+- mark_ref: Mark 13:10
+  matt_ref: Matt 24:9
+  macro_block: 22
+  score: 0.149384
+  mark_variant_notes:
+  - 10 πρῶτον δεῖ WH Treg NA28 ] δεῖ πρῶτον RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:13
+  matt_ref: Matt 24:13
+  macro_block: 22
+  score: 0.483052
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 13:14
+  matt_ref: Matt 24:15
+  macro_block: 22
+  score: 0.361576
+  mark_variant_notes:
+  - 14 ἑστηκότα WH Treg NA28 ] τὸ ῥηθὲν ὑπὸ Δανιὴλ τοῦ προφήτου ἑστὼς RP
+  matt_variant_notes:
+  - 15 ἑστὸς WH Treg NA28 ] ἑστὼς RP
+- mark_ref: Mark 13:15
+  matt_ref: Matt 24:17
+  macro_block: 22
+  score: 0.760709
+  mark_variant_notes:
+  - 15 ὁ WH NIV ] + δὲ Treg RP NA28
+  - • καταβάτω WH NA28 ] + εἰς τὴν οἰκίαν Treg RP
+  - • τι ἆραι WH Treg ] ἆραί τι NA28 RP
+  matt_variant_notes:
+  - 17 καταβάτω WH Treg NA28 ] καταβαινέτω RP
+- mark_ref: Mark 13:16
+  matt_ref: Matt 24:18
+  macro_block: 22
+  score: 0.987262
+  mark_variant_notes:
+  - 16 ἀγρὸν WH Treg NA28 ] + ὢν RP
+  matt_variant_notes:
+  - 18 τὸ ἱμάτιον WH Treg NA28 ] τὰ ἱμάτια RP
+- mark_ref: Mark 13:17
+  matt_ref: Matt 24:19
+  macro_block: 22
+  score: 1.0
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 13:18
+  matt_ref: Matt 24:20
+  macro_block: 22
+  score: 0.555341
+  mark_variant_notes:
+  - 18 γένηται WH Treg NA28 ] + ἡ φυγὴ ὑμῶν RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:19
+  matt_ref: Matt 24:21
+  macro_block: 22
+  score: 0.45972
+  mark_variant_notes:
+  - 19 ἣν WH Treg NA28 ] ἧς RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:20
+  matt_ref: Matt 24:22
+  macro_block: 22
+  score: 0.737493
+  mark_variant_notes:
+  - 20 ἐκολόβωσεν κύριος WH NA28 ] κύριος ἐκολόβωσεν Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:21
+  matt_ref: Matt 24:23
+  macro_block: 22
+  score: 0.73048
+  mark_variant_notes:
+  - 21 καὶ WH Treg NA28 ] – RP
+  - • ⸀Ἴδε WH Treg NA28 ] Ἰδού RP
+  - • χριστός WH NA28 ] + ἢ Treg RP
+  - • ⸁Ἴδε WH Treg NA28 ] Ἰδού RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:22
+  matt_ref: Matt 24:24
+  macro_block: 22
+  score: 0.603589
+  mark_variant_notes:
+  - 22 δυνατὸν WH NA28 ] + καὶ Treg RP
+  matt_variant_notes:
+  - 24 πλανῆσαι NA28 RP ] πλανᾶσθαι WH Treg
+- mark_ref: Mark 13:23
+  matt_ref: Matt 24:25
+  macro_block: 22
+  score: 0.352582
+  mark_variant_notes:
+  - 23 προείρηκα WH Treg NA28 ] ἰδού προείρηκα RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:24
+  matt_ref: Matt 24:29
+  macro_block: 22
+  score: 0.510387
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 13:26
+  matt_ref: Matt 24:30
+  macro_block: 22
+  score: 0.435011
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 30 τῷ RP ] – WH Treg NA28
+- mark_ref: Mark 13:27
+  matt_ref: Matt 24:31
+  macro_block: 22
+  score: 0.631725
+  mark_variant_notes:
+  - 27 ἀγγέλους WH Treg NA28 ] + αὐτοῦ RP
+  - • ἐκλεκτοὺς Treg ] + αὐτοῦ WH NA28 RP
+  matt_variant_notes:
+  - 31 σάλπιγγος WH NA28 ] + φωνῆς Treg RP
+  - • τῶν WH Treg NA28 ] – RP
+- mark_ref: Mark 13:28
+  matt_ref: Matt 24:32
+  macro_block: 22
+  score: 0.77801
+  mark_variant_notes:
+  - 28 ἤδη ὁ κλάδος αὐτῆς WH Treg NA28 ] αὐτῆς ἤδη ὁ κλάδος RP
+  matt_variant_notes: []
+- mark_ref: Mark 13:29
+  matt_ref: Matt 24:33
+  macro_block: 22
+  score: 0.76578
+  mark_variant_notes:
+  - 29 ἴδητε ταῦτα WH Treg NA28 ] ταῦτα ἴδητε RP
+  matt_variant_notes:
+  - 33 πάντα ταῦτα WH NA28 ] ταῦτα πάντα Treg RP
+- mark_ref: Mark 13:30
+  matt_ref: Matt 24:34
+  macro_block: 22
+  score: 0.96835
+  mark_variant_notes:
+  - 30 ταῦτα πάντα WH Treg NA28 ] πάντα ταῦτα RP
+  matt_variant_notes:
+  - 34 ὅτι WH Treg NA28 ] – RP
+- mark_ref: Mark 13:31
+  matt_ref: Matt 24:35
+  macro_block: 22
+  score: 1.0
+  mark_variant_notes:
+  - 31 ⸀παρελεύσονται WH Treg NA28 ] παρελεύσεται RP
+  - • μὴ NA28 RP ] – WH Treg
+  - • ⸁παρελεύσονται WH Treg NA28 ] παρέλθωσιν RP
+  matt_variant_notes:
+  - 35 παρελεύσεται WH Treg NA28 ] παρελεύσονται RP
+- mark_ref: Mark 13:32
+  matt_ref: Matt 24:36
+  macro_block: 22
+  score: 0.896228
+  mark_variant_notes:
+  - 32 τῆς WH Treg NA28 ] – RP
+  - • ἐν WH Treg NA28 ] οἱ ἐν RP
+  matt_variant_notes:
+  - 36 οὐδὲ ὁ υἱός WH NA28 ] – Treg RP
+  - • πατὴρ WH Treg NA28 ] + μου RP
+- mark_ref: Mark 14:1
+  matt_ref: Matt 26:4
+  macro_block: 23
+  score: 0.239572
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:2
+  matt_ref: Matt 26:5
+  macro_block: 23
+  score: 0.621402
+  mark_variant_notes:
+  - 14:2 γάρ WH Treg NA28 ] δέ RP
+  - • ἔσται θόρυβος WH Treg NA28 ] θόρυβος ἔσται RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:3
+  matt_ref: Matt 26:6
+  macro_block: 23
+  score: 0.223974
+  mark_variant_notes:
+  - 3 συντρίψασα WH NA28 ] καὶ συντρίψασα Treg RP
+  - • τὴν WH Treg NA28 ] τὸ RP
+  - • αὐτοῦ WH Treg NA28 ] + κατὰ RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:4
+  matt_ref: Matt 26:8
+  macro_block: 23
+  score: 0.297155
+  mark_variant_notes:
+  - 4 ἑαυτούς WH NA28 ] + καὶ λέγοντες Treg RP
+  matt_variant_notes:
+  - 8 μαθηταὶ WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 14:5
+  matt_ref: Matt 26:9
+  macro_block: 23
+  score: 0.368972
+  mark_variant_notes:
+  - 5 τὸ μύρον WH Treg NA28 ] – RP
+  - • δηναρίων τριακοσίων WH Treg NA28 ] τριακοσίων δηναρίων RP
+  matt_variant_notes:
+  - 9 τοῦτο WH Treg NA28 ] + τὸ μύρον NIV RP
+- mark_ref: Mark 14:6
+  matt_ref: Matt 26:10
+  macro_block: 23
+  score: 0.570155
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:7
+  matt_ref: Matt 26:11
+  macro_block: 23
+  score: 0.534219
+  mark_variant_notes:
+  - 7 αὐτοῖς NA28 Treg ] αὐτοῖς πάντοτε WH; αὐτοὺς RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:8
+  matt_ref: Matt 26:12
+  macro_block: 23
+  score: 0.129603
+  mark_variant_notes:
+  - 8 ἔσχεν WH NA28 ] + αὕτη Treg RP
+  - • τὸ σῶμά μου WH Treg NA28 ] μου τὸ σῶμα RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:9
+  matt_ref: Matt 26:13
+  macro_block: 23
+  score: 0.829363
+  mark_variant_notes:
+  - 9 δὲ WH Treg NA28 ] – RP
+  - • ἐὰν WH NA28 RP ] ἂν Treg
+  - • εὐαγγέλιον WH Treg NA28 ] + τοῦτο RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:10
+  matt_ref: Matt 26:14
+  macro_block: 23
+  score: 0.296864
+  mark_variant_notes:
+  - 10 Καὶ WH Treg NA28 ] + ὁ RP
+  - • Ἰσκαριὼθ ὁ WH NA28 ] Ἰσκαριώτης ὁ Treg; ὁ Ἰσκαριώτης RP
+  - • παραδοῖ αὐτοῖς WH Treg NA28 ] παραδῷ αὐτὸν RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:11
+  matt_ref: Matt 26:16
+  macro_block: 23
+  score: 0.148737
+  mark_variant_notes:
+  - 11 αὐτὸν εὐκαίρως παραδοῖ WH Treg NA28 ] εὐκαίρως αὐτὸν παραδῷ RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:12
+  matt_ref: Matt 26:17
+  macro_block: 23
+  score: 0.488103
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 17 λέγοντες WH Treg NA28 ] αὐτῷ RP
+  - • ἑτοιμάσωμέν WH Treg NA28 ] ἑτοιμάσομέν RP
+- mark_ref: Mark 14:14
+  matt_ref: Matt 26:18
+  macro_block: 23
+  score: 0.243747
+  mark_variant_notes:
+  - 14 ἐὰν WH NA28 RP ] ἂν Treg
+  - • μου WH Treg NA28 ] – RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:16
+  matt_ref: Matt 26:19
+  macro_block: 23
+  score: 0.285057
+  mark_variant_notes:
+  - 16 μαθηταὶ WH NA28 ] + αὐτοῦ Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:17
+  matt_ref: Matt 26:20
+  macro_block: 23
+  score: 0.458714
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 20 μαθητῶν WH ] – Treg NA28 RP
+- mark_ref: Mark 14:18
+  matt_ref: Matt 26:21
+  macro_block: 23
+  score: 0.589282
+  mark_variant_notes:
+  - 18 ὁ Ἰησοῦς εἶπεν WH NA28 ] εἶπεν ὁ Ἰησοῦς Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:19
+  matt_ref: Matt 26:22
+  macro_block: 23
+  score: 0.377484
+  mark_variant_notes:
+  - 19 ἤρξαντο WH NA28 ] οἱ δὲ ἤρξαντο Treg RP
+  - • ἐγώ WH Treg NA28 ] + Καὶ ἄλλος Μήτι ἐγώ RP
+  matt_variant_notes:
+  - 22 εἷς ἕκαστος WH Treg NA28 ] ἕκαστος αὐτῶν RP
+- mark_ref: Mark 14:20
+  matt_ref: Matt 26:23
+  macro_block: 23
+  score: 0.350551
+  mark_variant_notes:
+  - 20 δὲ WH Treg NA28 ] + ἀποκριθεὶς RP
+  - • Εἷς WH NA28 ] + ἐκ Treg RP
+  - • τὸ Treg NA28 RP ] + ἓν WH
+  matt_variant_notes:
+  - 23 τὴν χεῖρα ἐν τῷ τρυβλίῳ WH Treg NA28 ] ἐν τῷ τρυβλίῳ τὴν χεῖρα RP
+- mark_ref: Mark 14:21
+  matt_ref: Matt 26:24
+  macro_block: 23
+  score: 0.895321
+  mark_variant_notes:
+  - 21 ὅτι WH Treg NA28 ] – RP
+  - • καλὸν WH NA28 ] + ἦν Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:22
+  matt_ref: Matt 26:26
+  macro_block: 23
+  score: 0.744902
+  mark_variant_notes:
+  - 22 λαβὼν WH NA28 ] + ὁ Ἰησοῦς Treg NIV RP
+  - •  Λάβετε WH Treg NA28 ] + φάγετε RP
+  matt_variant_notes:
+  - 26 ἄρτον WH Treg NA28 ] τὸν ἄρτον RP
+  - • εὐλογήσας WH Treg NA28 ] εὐχαριστήσας RP
+  - • δοὺς τοῖς μαθηταῖς WH Treg NA28 ] ἐδίδου τοῖς μαθηταῖς καὶ RP
+- mark_ref: Mark 14:23
+  matt_ref: Matt 26:27
+  macro_block: 23
+  score: 0.843287
+  mark_variant_notes:
+  - 23 λαβὼν WH Treg NA28 ] + τὸ RP
+  matt_variant_notes:
+  - 27 λαβὼν WH Treg NA28 ] + τὸ RP
+- mark_ref: Mark 14:24
+  matt_ref: Matt 26:28
+  macro_block: 23
+  score: 0.514659
+  mark_variant_notes:
+  - 24 τῆς WH NA28 ] τὸ τῆς Treg; τὸ τῆς καινῆς RP
+  - • ἐκχυννόμενον ὑπὲρ πολλῶν WH Treg NA28 ] περὶ πολλῶν ἐκχυνόμενον RP
+  matt_variant_notes:
+  - 28 μου WH Treg NA28 ] + τὸ RP
+  - • τῆς WH NA28 ] + καινῆς Treg RP
+- mark_ref: Mark 14:25
+  matt_ref: Matt 26:29
+  macro_block: 23
+  score: 0.672431
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 29 ὑμῖν WH Treg NA28 ] + ὅτι RP
+- mark_ref: Mark 14:26
+  matt_ref: Matt 26:30
+  macro_block: 23
+  score: 1.0
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:27
+  matt_ref: Matt 26:31
+  macro_block: 23
+  score: 0.618237
+  mark_variant_notes:
+  - 27 σκανδαλισθήσεσθε WH Treg NA28 ] + ἐν ἐμοὶ ἐν τῇ νυκτὶ ταύτῃ RP
+  - • τὰ πρόβατα διασκορπισθήσονται WH Treg NA28 ] διασκορπισθήσεται τὰ πρόβατα RP
+  matt_variant_notes:
+  - 31 διασκορπισθήσονται WH Treg NA28 ] διασκορπισθήσεται RP
+- mark_ref: Mark 14:28
+  matt_ref: Matt 26:32
+  macro_block: 23
+  score: 0.981902
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:29
+  matt_ref: Matt 26:33
+  macro_block: 23
+  score: 0.318858
+  mark_variant_notes:
+  - 29 Εἰ καὶ WH Treg NA28 ] Καὶ εἰ RP
+  matt_variant_notes:
+  - 33 ἐγὼ WH Treg NA28 ] + δὲ RP
+- mark_ref: Mark 14:30
+  matt_ref: Matt 26:34
+  macro_block: 23
+  score: 0.549376
+  mark_variant_notes:
+  - 30 ταύτῃ τῇ νυκτὶ WH Treg NA28 ] ἐν τῇ νυκτὶ ταύτῃ RP
+  - • με ἀπαρνήσῃ WH Treg NA28 ] ἀπαρνήσῃ με RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:31
+  matt_ref: Matt 26:35
+  macro_block: 23
+  score: 0.330859
+  mark_variant_notes:
+  - 31 ἐκπερισσῶς ἐλάλει WH Treg NA28 ] ἐκπερισσοῦ ἔλεγεν μᾶλλον RP
+  - • δέῃ με WH Treg NA28 ] με δέῃ RP
+  - • ἀπαρνήσομαι WH Treg NA28 ] ἀπαρνήσωμαι RP
+  matt_variant_notes:
+  - 35 ἀπαρνήσομαι WH Treg NA28 ] ἀπαρνήσωμαι RP
+  - • ὁμοίως WH Treg NA28 ] + δὲ RP
+- mark_ref: Mark 14:32
+  matt_ref: Matt 26:36
+  macro_block: 23
+  score: 0.450378
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 36 ἐκεῖ προσεύξωμαι WH Treg NA28 ] προσεύξωμαι ἐκεῖ RP
+- mark_ref: Mark 14:33
+  matt_ref: Matt 26:37
+  macro_block: 23
+  score: 0.330912
+  mark_variant_notes:
+  - 33 Ἰάκωβον καὶ Treg NIV RP ] τὸν Ἰάκωβον καὶ τὸν WH NA28
+  - • αὐτοῦ WH Treg NA28 ] ἑαυτοῦ RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:34
+  matt_ref: Matt 26:38
+  macro_block: 23
+  score: 0.911364
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 38 αὐτοῖς WH Treg NA28 ] + ὁ Ἰησοῦς RP
+- mark_ref: Mark 14:35
+  matt_ref: Matt 26:39
+  macro_block: 23
+  score: 0.472349
+  mark_variant_notes:
+  - 35 προελθὼν μικρὸν ἔπιπτεν WH NA28 ] προσελθὼν μικρὸν ἔπεσεν Treg RP
+  matt_variant_notes:
+  - 39 προελθὼν WH NA28 ] προσελθὼν Treg RP
+- mark_ref: Mark 14:37
+  matt_ref: Matt 26:40
+  macro_block: 23
+  score: 0.688193
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:38
+  matt_ref: Matt 26:41
+  macro_block: 23
+  score: 0.802674
+  mark_variant_notes:
+  - 38 ἔλθητε WH NA28 ] εἰσέλθητε Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:39
+  matt_ref: Matt 26:42
+  macro_block: 23
+  score: 0.22593
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 42 τοῦτο WH Treg NA28 ] + τὸ ποτήριον RP
+  - • παρελθεῖν WH Treg NA28 ] + ἀπʼ ἐμοῦ RP
+- mark_ref: Mark 14:40
+  matt_ref: Matt 26:43
+  macro_block: 23
+  score: 0.451763
+  mark_variant_notes:
+  - 40 πάλιν ἐλθὼν εὗρεν αὐτοὺς WH NA28 ] ἐλθὼν εὗρεν αὐτοὺς Treg; ὑποστρέψας εὗρεν αὐτοὺς πάλιν RP
+  - • αὐτῶν οἱ ὀφθαλμοὶ WH NA28 ] οἱ ὀφθαλμοὶ αὐτῶν Treg RP
+  - • καταβαρυνόμενοι WH Treg NA28 ] βεβαρημένοι RP
+  - • ἀποκριθῶσιν αὐτῷ WH Treg NA28 ] αὐτῷ ἀποκριθῶσιν RP
+  matt_variant_notes:
+  - 43 πάλιν εὗρεν αὐτοὺς WH Treg NA28 ] εὑρίσκει αὐτοὺς πάλιν RP
+- mark_ref: Mark 14:41
+  matt_ref: Matt 26:45
+  macro_block: 23
+  score: 0.565567
+  mark_variant_notes:
+  - 41 τὸ WH NA28 ] – Treg RP
+  matt_variant_notes:
+  - 45 μαθητὰς WH Treg NA28 ] + αὐτοῦ RP
+  - • τὸ Treg NA28 RP ] – WH
+- mark_ref: Mark 14:42
+  matt_ref: Matt 26:46
+  macro_block: 23
+  score: 0.748401
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:43
+  matt_ref: Matt 26:47
+  macro_block: 23
+  score: 0.56809
+  mark_variant_notes:
+  - 43 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • Ἰούδας NA28 RP ] ὁ Ἰούδας WH; ὁ Ἰούδας ὁ Ἰσκαριώτης Treg
+  - • εἷς WH Treg NA28 ] + ὢν RP
+  - • ὄχλος WH Treg NA28 ] + πολὺς RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:44
+  matt_ref: Matt 26:48
+  macro_block: 23
+  score: 0.460806
+  mark_variant_notes:
+  - 44 ἀπάγετε WH Treg NA28 ] ἀπαγάγετε RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:45
+  matt_ref: Matt 26:49
+  macro_block: 23
+  score: 0.408535
+  mark_variant_notes:
+  - 45 εὐθὺς WH Treg NA28 ] εὐθέως RP
+  - • Ῥαββί WH Treg NA28 ] αὐτῷ Ῥαββί ῥαββί RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:46
+  matt_ref: Matt 26:50
+  macro_block: 23
+  score: 0.321981
+  mark_variant_notes:
+  - 46 τὰς χεῖρας αὐτῷ WH Treg NA28 ] ἐπʼ αὐτὸν τὰς χεῖρας αὐτῶν RP
+  matt_variant_notes:
+  - 50 ὃ WH Treg NA28 ] ᾧ RP
+- mark_ref: Mark 14:47
+  matt_ref: Matt 26:51
+  macro_block: 23
+  score: 0.288391
+  mark_variant_notes:
+  - 47 τις WH NA28 RP ] – Treg
+  - • ὠτάριον WH Treg NA28 ] ὠτίον RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:48
+  matt_ref: Matt 26:52
+  macro_block: 23
+  score: 0.129303
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 52 τὴν μάχαιράν σου WH Treg NA28 ] σου τὴν μάχαιραν RP
+  - • ἀπολοῦνται WH Treg NA28 ] ἀποθανοῦνται RP
+- mark_ref: Mark 14:49
+  matt_ref: Matt 26:55
+  macro_block: 23
+  score: 0.253332
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 55 ἡμέραν WH NA28 ] + πρὸς ὑμᾶς Treg RP
+  - • ἐν τῷ ἱερῷ ἐκαθεζόμην διδάσκων WH Treg NA28 ] ἐκαθεζόμην διδάσκων ἐν τῷ ἱερῷ RP
+- mark_ref: Mark 14:50
+  matt_ref: Matt 26:56
+  macro_block: 23
+  score: 0.240637
+  mark_variant_notes:
+  - 50 ἔφυγον πάντες WH Treg NA28 ] πάντες ἔφυγον RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:53
+  matt_ref: Matt 26:57
+  macro_block: 23
+  score: 0.303856
+  mark_variant_notes:
+  - 53 συνέρχονται WH NA28 ] + αὐτῷ Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:54
+  matt_ref: Matt 26:58
+  macro_block: 23
+  score: 0.375056
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:55
+  matt_ref: Matt 26:59
+  macro_block: 23
+  score: 0.445409
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 59 καὶ WH Treg NA28 ] + οἱ πρεσβύτεροι καὶ RP
+  - • αὐτὸν θανατώσωσιν WH NA28 ] αὐτὸν θανατώσουσιν Treg; θανατώσωσιν αὐτόν RP
+- mark_ref: Mark 14:58
+  matt_ref: Matt 26:61
+  macro_block: 23
+  score: 0.401986
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:60
+  matt_ref: Matt 26:62
+  macro_block: 23
+  score: 0.491463
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:61
+  matt_ref: Matt 26:63
+  macro_block: 23
+  score: 0.314267
+  mark_variant_notes:
+  - 61 οὐκ ἀπεκρίνατο οὐδέν WH Treg NA28 ] οὐδὲν ἀπεκρίνατο RP
+  matt_variant_notes:
+  - 63 καὶ WH Treg NA28 ] + ἀποκριθεὶς RP
+- mark_ref: Mark 14:62
+  matt_ref: Matt 26:64
+  macro_block: 23
+  score: 0.666963
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 14:63
+  matt_ref: Matt 26:65
+  macro_block: 23
+  score: 0.460808
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 65 λέγων WH Treg NA28 ] + ὅτι RP
+  - • βλασφημίαν WH Treg NA28 ] + αὐτοῦ RP
+- mark_ref: Mark 14:64
+  matt_ref: Matt 26:66
+  macro_block: 23
+  score: 0.222699
+  mark_variant_notes:
+  - 64 ἔνοχον εἶναι WH Treg NA28 ] εἶναι ἔνοχον RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:65
+  matt_ref: Matt 26:67
+  macro_block: 23
+  score: 0.254649
+  mark_variant_notes:
+  - 65 αὐτοῦ τὸ πρόσωπον WH Treg NA28 ] τὸ πρόσωπον αὐτοῦ RP
+  - • ἔλαβον WH Treg NA28 ] ἔβαλλον RP
+  matt_variant_notes: []
+- mark_ref: Mark 14:66
+  matt_ref: Matt 26:69
+  macro_block: 23
+  score: 0.285425
+  mark_variant_notes:
+  - 66 κάτω ἐν τῇ αὐλῇ WH Treg NA28 ] ἐν τῇ αὐλῇ κάτω RP
+  matt_variant_notes:
+  - 69 ἐκάθητο ἔξω WH Treg NA28 ] ἔξω ἐκάθητο RP
+- mark_ref: Mark 14:68
+  matt_ref: Matt 26:70
+  macro_block: 23
+  score: 0.228794
+  mark_variant_notes:
+  - 68 Οὔτε οἶδα οὔτε ἐπίσταμαι σὺ τί WH Treg NA28 ] Οὐκ οἶδα οὐδὲ ἐπίσταμαι τί σὺ RP
+  - • καὶ ἀλέκτωρ ἐφώνησεν Treg RP NA28 ] – WH NIV
+  matt_variant_notes:
+  - 70 ἔμπροσθεν WH Treg NA28 ] + αὐτῶν RP
+- mark_ref: Mark 14:69
+  matt_ref: Matt 26:71
+  macro_block: 23
+  score: 0.150621
+  mark_variant_notes:
+  - 69 ἤρξατο πάλιν WH NA28 ] πάλιν ἤρξατο Treg RP
+  - • παρεστῶσιν WH Treg NA28 ] παρεστηκόσιν RP
+  matt_variant_notes:
+  - 71 δὲ WH Treg NA28 ] + αὐτὸν RP
+  - • τοῖς WH Treg NA28 ] αὐτοῖς RP
+  - • Οὗτος WH NA28 ] Καὶ οὗτος Treg RP
+- mark_ref: Mark 14:70
+  matt_ref: Matt 26:73
+  macro_block: 23
+  score: 0.356972
+  mark_variant_notes:
+  - 70 καὶ ἡ λαλιά σου ὁμοιάζει RP ] – WH Treg NA28
+  matt_variant_notes: []
+- mark_ref: Mark 14:71
+  matt_ref: Matt 26:74
+  macro_block: 23
+  score: 0.370374
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 74 εὐθέως NA28 RP ] εὐθὺς WH Treg
+- mark_ref: Mark 14:72
+  matt_ref: Matt 26:75
+  macro_block: 23
+  score: 0.425416
+  mark_variant_notes:
+  - 72 εὐθὺς WH Treg NA28 ] – RP
+  - • ὡς WH Treg NA28 ] ὃ RP
+  - • φωνῆσαι δὶς τρίς με ἀπαρνήσῃ NA28 ] δὶς φωνῆσαι τρίς με ἀπαρνήσῃ WH Treg; φωνῆσαι δὶς ἀπαρνήσῃ με τρίς RP
+  matt_variant_notes:
+  - 75 ῥήματος WH Treg NA28 ] + τοῦ RP
+  - • εἰρηκότος WH Treg NA28 ] + αὐτῷ RP
+- mark_ref: Mark 15:1
+  matt_ref: Matt 27:1
+  macro_block: 23
+  score: 0.178589
+  mark_variant_notes:
+  - 15:1 εὐθὺς WH Treg NA28 ] εὐθέως ἐπὶ τὸ RP
+  - • παρέδωκαν WH Treg NA28 ] + τῷ RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:2
+  matt_ref: Matt 27:11
+  macro_block: 24
+  score: 0.359823
+  mark_variant_notes:
+  - 2 αὐτῷ λέγει WH Treg NA28 ] εἶπεν αὐτῷ RP
+  matt_variant_notes:
+  - 11 ἐστάθη WH Treg NA28 ] ἔστη RP
+  - • ἔφη WH NA28 ] + αὐτῷ Treg RP
+- mark_ref: Mark 15:3
+  matt_ref: Matt 27:12
+  macro_block: 24
+  score: 0.362594
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 12 καὶ WH NA28 ] + τῶν Treg RP
+- mark_ref: Mark 15:4
+  matt_ref: Matt 27:13
+  macro_block: 24
+  score: 0.180727
+  mark_variant_notes:
+  - 4 ἐπηρώτα WH Treg NA28 ] ἐπηρώτησεν RP
+  - • κατηγοροῦσιν WH Treg NA28 ] καταμαρτυροῦσιν RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:5
+  matt_ref: Matt 27:14
+  macro_block: 24
+  score: 0.15331
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:6
+  matt_ref: Matt 27:15
+  macro_block: 24
+  score: 0.392977
+  mark_variant_notes:
+  - 6 ὃν παρῃτοῦντο WH NA28 ] ὅνπερ ᾐτοῦντο Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:7
+  matt_ref: Matt 27:16
+  macro_block: 24
+  score: 0.120948
+  mark_variant_notes:
+  - 7 στασιαστῶν WH Treg NA28 ] συστασιαστῶν RP
+  matt_variant_notes:
+  - 16 Ἰησοῦν NA28 ] – WH Treg NIV RP
+- mark_ref: Mark 15:11
+  matt_ref: Matt 27:20
+  macro_block: 24
+  score: 0.230349
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:12
+  matt_ref: Matt 27:21
+  macro_block: 24
+  score: 0.212655
+  mark_variant_notes:
+  - 12 πάλιν ἀποκριθεὶς ἔλεγεν WH Treg NA28 ] ἀποκριθεὶς πάλιν εἶπεν RP
+  - • θέλετε Treg RP NA28 ] – WH NIV
+  - • ὃν λέγετε WH NA28 RP ] – Treg
+  - • τὸν WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 21 Τὸν WH Treg NA28 ] – RP
+- mark_ref: Mark 15:13
+  matt_ref: Matt 27:22
+  macro_block: 24
+  score: 0.11426
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 22 λέγουσιν WH Treg NA28 ] + αὐτῷ RP
+- mark_ref: Mark 15:14
+  matt_ref: Matt 27:23
+  macro_block: 24
+  score: 0.544493
+  mark_variant_notes:
+  - 14 ἐποίησεν κακόν WH Treg NA28 ] κακὸν ἐποίησεν RP
+  - • περισσῶς WH Treg NA28 ] περισσοτέρως RP
+  matt_variant_notes:
+  - 23 δὲ WH Treg NA28 ] + ἡγεμὼν RP
+- mark_ref: Mark 15:15
+  matt_ref: Matt 27:26
+  macro_block: 24
+  score: 0.429911
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:16
+  matt_ref: Matt 27:27
+  macro_block: 24
+  score: 0.305688
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:18
+  matt_ref: Matt 27:29
+  macro_block: 24
+  score: 0.206213
+  mark_variant_notes:
+  - 18 βασιλεῦ WH Treg NA28 ] ὁ βασιλεὺς RP
+  matt_variant_notes:
+  - 29 τῆς κεφαλῆς WH Treg NA28 ] τὴν κεφαλὴν RP
+  - • ἐν τῇ δεξιᾷ WH Treg NA28 ] ἐπὶ τὴν δεξιὰν RP
+  - • ἐνέπαιξαν WH NA28 ] ἐνέπαιζον Treg RP
+  - • βασιλεῦ WH Treg NA28 ] ὁ βασιλεὺς RP
+- mark_ref: Mark 15:19
+  matt_ref: Matt 27:30
+  macro_block: 24
+  score: 0.381666
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:20
+  matt_ref: Matt 27:31
+  macro_block: 24
+  score: 0.438845
+  mark_variant_notes:
+  - 20 τὰ ἴδια Treg RP ] αὐτοῦ WH NA28
+  - • σταυρώσωσιν WH NA28 RP ] σταυρώσουσιν Treg
+  matt_variant_notes: []
+- mark_ref: Mark 15:21
+  matt_ref: Matt 27:32
+  macro_block: 24
+  score: 0.277317
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:22
+  matt_ref: Matt 27:33
+  macro_block: 24
+  score: 0.433624
+  mark_variant_notes:
+  - 22 τὸν WH Treg NA28 ] – RP
+  - • Γολγοθᾶν WH NA28 ] Γολγοθᾶ Treg RP
+  - • μεθερμηνευόμενον Treg NA28 RP ] μεθερμηνευόμενος WH
+  matt_variant_notes:
+  - 33 Κρανίου Τόπος λεγόμενος WH Treg NA28 ] λεγόμενος Κρανίου Τόπος RP
+- mark_ref: Mark 15:23
+  matt_ref: Matt 27:34
+  macro_block: 24
+  score: 0.215161
+  mark_variant_notes:
+  - 23 αὐτῷ WH Treg NA28 ] + πιεῖν RP
+  - • ὃς WH Treg NA28 ] ὁ RP
+  matt_variant_notes:
+  - 34 οἶνον WH Treg NA28 ] ὄξος RP
+  - • ἠθέλησεν WH Treg NA28 ] ἤθελεν RP
+- mark_ref: Mark 15:24
+  matt_ref: Matt 27:35
+  macro_block: 24
+  score: 0.837233
+  mark_variant_notes:
+  - 24 σταυροῦσιν αὐτὸν καὶ WH Treg NA28 ] σταυρώσαντες αὐτὸν RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:26
+  matt_ref: Matt 27:37
+  macro_block: 24
+  score: 0.306075
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:27
+  matt_ref: Matt 27:38
+  macro_block: 24
+  score: 0.891463
+  mark_variant_notes:
+  - 27 αὐτοῦ WH NA28 ] + 28 Καὶ ἐπληρώθη ἡ γραφὴ ἡ λέγουσα, Καὶ μετὰ ἀνόμων ἐλογίσθη Treg RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:29
+  matt_ref: Matt 27:39
+  macro_block: 24
+  score: 0.444302
+  mark_variant_notes:
+  - 29 οἰκοδομῶν ἐν τρισὶν ἡμέραις WH NA28 ] οἰκοδομῶν τρισὶν ἡμέραις Treg; ἐν τρισὶν ἡμέραις οἰκοδομῶν RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:30
+  matt_ref: Matt 27:40
+  macro_block: 24
+  score: 0.271082
+  mark_variant_notes:
+  - 30 καταβὰς WH Treg NA28 ] καὶ κατάβα RP
+  matt_variant_notes:
+  - 40 κατάβηθι WH Treg NIV RP ] καὶ κατάβηθι NA28
+- mark_ref: Mark 15:31
+  matt_ref: Matt 27:41
+  macro_block: 24
+  score: 0.514374
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 41 καὶ WH NA28 ] δὲ καὶ Treg RP
+  - • πρεσβυτέρων WH Treg NA28 ] + καὶ Φαρισαίων RP
+- mark_ref: Mark 15:32
+  matt_ref: Matt 27:42
+  macro_block: 24
+  score: 0.394028
+  mark_variant_notes:
+  - 32 βασιλεὺς WH Treg NA28 ] + τοῦ RP
+  - • πιστεύσωμεν WH Treg NA28 ] + αὐτῷ RP
+  - • σὺν WH NA28 ] – Treg RP
+  matt_variant_notes:
+  - 42 βασιλεὺς WH Treg NA28 ] Εἰ βασιλεὺς RP
+  - • αὐτόν WH Treg NA28 ] αὐτῷ RP
+- mark_ref: Mark 15:33
+  matt_ref: Matt 27:45
+  macro_block: 24
+  score: 0.636182
+  mark_variant_notes:
+  - 33 Καὶ γενομένης WH Treg NA28 ] Γενομένης δὲ RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:34
+  matt_ref: Matt 27:46
+  macro_block: 24
+  score: 0.491249
+  mark_variant_notes:
+  - 34 ἐνάτῃ ὥρᾳ WH Treg NA28 ] ὥρᾳ τῇ ἐνάτῃ RP
+  - • μεγάλῃ WH Treg NA28 ] + λέγων RP
+  - • λεμὰ NA28 ] λαμὰ WH Treg;  λιμὰ RP
+  - • ἐγκατέλιπές με WH Treg NA28 ] με ἐγκατέλιπες RP
+  matt_variant_notes:
+  - 46 ἀνεβόησεν NA28 RP ] ἐβόησεν WH Treg
+  - • Ἠλὶ ἠλὶ Treg RP NA28 ] Ἐλωῒ ἐλωῒ WH NIV
+- mark_ref: Mark 15:35
+  matt_ref: Matt 27:47
+  macro_block: 24
+  score: 0.533947
+  mark_variant_notes:
+  - 35 Ἴδε WH Treg NA28 ] Ἰδού RP
+  matt_variant_notes:
+  - 47 ἑστηκότων WH Treg NA28 ] ἑστώτων RP
+- mark_ref: Mark 15:36
+  matt_ref: Matt 27:48
+  macro_block: 24
+  score: 0.375298
+  mark_variant_notes:
+  - 36 τις καὶ Treg NA28 ] τις WH; εἷς καὶ RP
+  - • περιθεὶς WH Treg NA28 ] + τε RP
+  matt_variant_notes: []
+- mark_ref: Mark 15:37
+  matt_ref: Matt 27:50
+  macro_block: 24
+  score: 0.371993
+  mark_variant_notes: []
+  matt_variant_notes: []
+- mark_ref: Mark 15:38
+  matt_ref: Matt 27:51
+  macro_block: 24
+  score: 0.568782
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 51 ἀπʼ ἄνωθεν ἕως κάτω εἰς δύο WH Treg NA28 ] εἰς δύο ἀπὸ ἄνωθεν ἕως κάτω RP
+- mark_ref: Mark 15:39
+  matt_ref: Matt 27:54
+  macro_block: 24
+  score: 0.221427
+  mark_variant_notes:
+  - 39 οὕτως WH NA28 ] + κράξας Treg NIV RP
+  - • οὗτος ὁ ἄνθρωπος WH Treg NA28 ] ὁ ἄνθρωπος οὗτος RP
+  - • θεοῦ ἦν WH NA28 ] ἦν θεοῦ Treg RP
+  matt_variant_notes:
+  - 54 γενόμενα NA28 RP ] γινόμενα WH Treg
+  - • θεοῦ υἱὸς WH NA28 RP ] υἱὸς θεοῦ Treg
+- mark_ref: Mark 15:40
+  matt_ref: Matt 27:56
+  macro_block: 24
+  score: 0.315623
+  mark_variant_notes:
+  - 40 αἷς WH NA28 ] + ἦν Treg RP
+  - • Μαρία Treg NA28 RP ] Μαριὰμ WH
+  - • ἡ WH Treg NA28 ] + τοῦ RP
+  - • Ἰωσῆτος WH Treg NA28 ] Ἰωσῆ RP
+  matt_variant_notes:
+  - 56 Ἰωσὴφ WH NA28 ] Ἰωσῆ Treg NIV RP
+- mark_ref: Mark 15:42
+  matt_ref: Matt 27:57
+  macro_block: 24
+  score: 0.125112
+  mark_variant_notes:
+  - 42 προσάββατον WH NA28 RP ] πρὸς σάββατον Treg
+  matt_variant_notes:
+  - 57 ἐμαθητεύθη WH Treg NA28 ] ἐμαθήτευσεν RP
+- mark_ref: Mark 15:43
+  matt_ref: Matt 27:58
+  macro_block: 24
+  score: 0.201109
+  mark_variant_notes:
+  - 43 ἐλθὼν WH Treg NA28 ] ἦλθεν RP
+  - • ὁ Treg NA28 RP ] – WH
+  - • τὸν WH Treg NA28 ] – RP
+  matt_variant_notes:
+  - 58 ἀποδοθῆναι WH NA28 ] + τὸ σῶμα Treg RP
+- mark_ref: Mark 15:46
+  matt_ref: Matt 27:60
+  macro_block: 24
+  score: 0.451559
+  mark_variant_notes:
+  - 46 σινδόνα WH Treg NA28 ] + καὶ RP
+  - • ἔθηκεν WH Treg NA28 ] κατέθηκεν RP
+  - • μνημείῳ Treg NA28 RP ] μνήματι WH
+  matt_variant_notes: []
+- mark_ref: Mark 15:47
+  matt_ref: Matt 27:61
+  macro_block: 24
+  score: 0.128958
+  mark_variant_notes:
+  - 47 ἡ Ἰωσῆτος WH Treg NA28 ] Ἰωσῆ RP
+  - • τέθειται WH Treg NA28 ] τίθεται RP
+  matt_variant_notes:
+  - 61 Μαριὰμ WH NA28 ] Μαρία Treg RP
+- mark_ref: Mark 16:6
+  matt_ref: Matt 28:6
+  macro_block: 25
+  score: 0.301712
+  mark_variant_notes: []
+  matt_variant_notes:
+  - 6 ἔκειτο WH NA28 ] + ὁ κύριος Treg RP
+- mark_ref: Mark 16:7
+  matt_ref: Matt 28:7
+  macro_block: 25
+  score: 0.471119
+  mark_variant_notes: []
+  matt_variant_notes: []

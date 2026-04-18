@@ -1,0 +1,10898 @@
+- id: 1
+  level: micro
+  pair_count: 1
+  confidence: low
+  avg_score: 0.724305
+  mark_start_ref: Mark 1:3
+  mark_end_ref: Mark 1:3
+  matt_start_ref: Matt 3:3
+  matt_end_ref: Matt 3:3
+  mark_span_refs:
+  - Mark 1:3
+  matt_span_refs:
+  - Matt 3:3
+  matched_pairs:
+  - mark_ref: Mark 1:3
+    matt_ref: Matt 3:3
+    score: 0.724305
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 14
+  matt_token_count: 24
+  mark_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 0
+    present_indicative: 0
+    present_indicative_ratio: null
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 1
+    present_indicative: 1
+    present_indicative_ratio: 1.0
+  aggregate_diff:
+    lemma_insertions: 10
+    lemma_deletions: 0
+    lemma_replacements: 0
+    moved_tokens_top: []
+    common_lemmas_top:
+    - - αυτος
+      - 1
+    - - βοαω
+      - 1
+    - - εν
+      - 1
+    - - ερημος
+      - 1
+    - - ετοιμαζω
+      - 1
+    - - ευθυς
+      - 1
+    - - κυριος
+      - 1
+    - - ο
+      - 1
+    - - οδος
+      - 1
+    - - ποιεω
+      - 1
+    - - τριβος
+      - 1
+    - - φωνη
+      - 1
+    mark_only_lemmas_top: []
+    matt_only_lemmas_top:
+    - - γαρ
+      - 1
+    - - δια
+      - 1
+    - - ειμι
+      - 1
+    - - ησαιας
+      - 1
+    - - λεγω
+      - 1
+    - - ουτος
+      - 1
+    - - προφητης
+      - 1
+  variant_mark_refs: []
+  variant_matt_refs:
+  - Matt 3:3
+  variant_mark_count: 0
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 2
+  level: micro
+  pair_count: 1
+  confidence: low
+  avg_score: 0.599029
+  mark_start_ref: Mark 1:6
+  mark_end_ref: Mark 1:6
+  matt_start_ref: Matt 3:4
+  matt_end_ref: Matt 3:4
+  mark_span_refs:
+  - Mark 1:6
+  matt_span_refs:
+  - Matt 3:4
+  matched_pairs:
+  - mark_ref: Mark 1:6
+    matt_ref: Matt 3:4
+    score: 0.599029
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 20
+  matt_token_count: 27
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 1
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 2
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 0
+    lemma_deletions: 0
+    lemma_replacements: 12
+    moved_tokens_top:
+    - - ειμι
+      - 1
+    common_lemmas_top:
+    - - αγριος
+      - 1
+    - - ακρις
+      - 1
+    - - αυτος
+      - 1
+    - - δερματινος
+      - 1
+    - - ειμι
+      - 1
+    - - ζωνη
+      - 1
+    - - θριξ
+      - 1
+    - - ιωαννης
+      - 1
+    - - και
+      - 1
+    - - καμηλος
+      - 1
+    - - μελι
+      - 1
+    - - ο
+      - 1
+    - - οσφυς
+      - 1
+    - - περι
+      - 1
+    mark_only_lemmas_top:
+    - - ενδυω
+      - 1
+    - - εσθω
+      - 1
+    matt_only_lemmas_top:
+    - - απο
+      - 1
+    - - δε
+      - 1
+    - - ενδυμα
+      - 1
+    - - εχω
+      - 1
+    - - τροφη
+      - 1
+  variant_mark_refs:
+  - Mark 1:6
+  variant_matt_refs:
+  - Matt 3:4
+  variant_mark_count: 1
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 3
+  level: micro
+  pair_count: 6
+  confidence: medium
+  avg_score: 0.348189
+  mark_start_ref: Mark 1:8
+  mark_end_ref: Mark 1:13
+  matt_start_ref: Matt 3:11
+  matt_end_ref: Matt 4:2
+  mark_span_refs:
+  - Mark 1:8
+  - Mark 1:9
+  - Mark 1:10
+  - Mark 1:11
+  - Mark 1:12
+  - Mark 1:13
+  matt_span_refs:
+  - Matt 3:11
+  - Matt 3:12
+  - Matt 3:13
+  - Matt 3:14
+  - Matt 3:15
+  - Matt 3:16
+  - Matt 3:17
+  - Matt 4:1
+  - Matt 4:2
+  matched_pairs:
+  - mark_ref: Mark 1:8
+    matt_ref: Matt 3:11
+    score: 0.321375
+  - mark_ref: Mark 1:9
+    matt_ref: Matt 3:13
+    score: 0.364714
+  - mark_ref: Mark 1:10
+    matt_ref: Matt 3:16
+    score: 0.441694
+  - mark_ref: Mark 1:11
+    matt_ref: Matt 3:17
+    score: 0.695115
+  - mark_ref: Mark 1:12
+    matt_ref: Matt 4:1
+    score: 0.159163
+  - mark_ref: Mark 1:13
+    matt_ref: Matt 4:2
+    score: 0.107074
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 3:12
+  - Matt 3:14
+  - Matt 3:15
+  mark_token_count: 94
+  matt_token_count: 175
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 2
+    present_indicative_ratio: 0.1538
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 1
+    grapho: 0
+    indicative_total: 21
+    present_indicative: 9
+    present_indicative_ratio: 0.4286
+  aggregate_diff:
+    lemma_insertions: 37
+    lemma_deletions: 13
+    lemma_replacements: 43
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    - - δε
+      - 1
+    - - συ
+      - 1
+    - - υδωρ
+      - 1
+    - - βαπτιζω
+      - 1
+    - - ιωαννης
+      - 1
+    - - και
+      - 1
+    - - καταβαινω
+      - 1
+    - - ο
+      - 1
+    - - οραω
+      - 1
+    - - πνευμα
+      - 1
+    - - ημερα
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 4
+    - - πνευμα
+      - 3
+    - - και
+      - 3
+    - - αυτος
+      - 2
+    - - βαπτιζω
+      - 2
+    - - εγω
+      - 2
+    - - εν
+      - 2
+    - - υδωρ
+      - 2
+    - - ουρανος
+      - 2
+    - - αγιος
+      - 1
+    - - δε
+      - 1
+    - - συ
+      - 1
+    - - απο
+      - 1
+    - - γαλιλαια
+      - 1
+    - - ιησους
+      - 1
+    - - ιορδανης
+      - 1
+    - - ιωαννης
+      - 1
+    - - υπο
+      - 1
+    - - αναβαινω
+      - 1
+    - - ευθυς
+      - 1
+    mark_only_lemmas_top:
+    - - γινομαι
+      - 2
+    - - εις
+      - 2
+    - - εν
+      - 2
+    - - και
+      - 2
+    - - αυτος
+      - 2
+    - - εκεινος
+      - 1
+    - - ερχομαι
+      - 1
+    - - ημερα
+      - 1
+    - - ναζαρετ
+      - 1
+    - - εκ
+      - 1
+    - - σχιζω
+      - 1
+    - - ως
+      - 1
+    - - συ
+      - 1
+    - - εκβαλλω
+      - 1
+    - - ευθυς
+      - 1
+    - - αγγελος
+      - 1
+    - - διακονεω
+      - 1
+    - - ειμι
+      - 1
+    - - ερημος
+      - 1
+    - - θηριον
+      - 1
+    matt_only_lemmas_top:
+    - - ερχομαι
+      - 2
+    - - ος
+      - 2
+    - - επι
+      - 2
+    - - τοτε
+      - 2
+    - - ιδου
+      - 2
+    - - ιησους
+      - 2
+    - - βασταζω
+      - 1
+    - - ειμι
+      - 1
+    - - εις
+      - 1
+    - - ικανος
+      - 1
+    - - ισχυρος
+      - 1
+    - - και
+      - 1
+    - - μεν
+      - 1
+    - - μετανοια
+      - 1
+    - - ο
+      - 1
+    - - οπισω
+      - 1
+    - - ου
+      - 1
+    - - πυρ
+      - 1
+    - - υποδημα
+      - 1
+    - - αυτος
+      - 1
+  variant_mark_refs:
+  - Mark 1:8
+  - Mark 1:9
+  - Mark 1:10
+  - Mark 1:11
+  - Mark 1:13
+  variant_matt_refs:
+  - Matt 3:11
+  - Matt 3:12
+  - Matt 3:14
+  - Matt 3:15
+  - Matt 3:16
+  variant_mark_count: 11
+  variant_matt_count: 10
+  span_density: 0.666667
+- id: 4
+  level: micro
+  pair_count: 7
+  confidence: medium
+  avg_score: 0.398465
+  mark_start_ref: Mark 1:15
+  mark_end_ref: Mark 1:21
+  matt_start_ref: Matt 4:17
+  matt_end_ref: Matt 4:23
+  mark_span_refs:
+  - Mark 1:15
+  - Mark 1:16
+  - Mark 1:17
+  - Mark 1:18
+  - Mark 1:19
+  - Mark 1:20
+  - Mark 1:21
+  matt_span_refs:
+  - Matt 4:17
+  - Matt 4:18
+  - Matt 4:19
+  - Matt 4:20
+  - Matt 4:21
+  - Matt 4:22
+  - Matt 4:23
+  matched_pairs:
+  - mark_ref: Mark 1:15
+    matt_ref: Matt 4:17
+    score: 0.235632
+  - mark_ref: Mark 1:16
+    matt_ref: Matt 4:18
+    score: 0.464942
+  - mark_ref: Mark 1:17
+    matt_ref: Matt 4:19
+    score: 0.658052
+  - mark_ref: Mark 1:18
+    matt_ref: Matt 4:20
+    score: 0.601287
+  - mark_ref: Mark 1:19
+    matt_ref: Matt 4:21
+    score: 0.509798
+  - mark_ref: Mark 1:20
+    matt_ref: Matt 4:22
+    score: 0.202243
+  - mark_ref: Mark 1:21
+    matt_ref: Matt 4:23
+    score: 0.117302
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 112
+  matt_token_count: 131
+  mark_marker_counts:
+    euthys: 3
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 1
+    grapho: 0
+    indicative_total: 12
+    present_indicative: 1
+    present_indicative_ratio: 0.0833
+  matt_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 1
+    pleroo: 0
+    grapho: 0
+    indicative_total: 11
+    present_indicative: 1
+    present_indicative_ratio: 0.0909
+  aggregate_diff:
+    lemma_insertions: 47
+    lemma_deletions: 10
+    lemma_replacements: 38
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - και
+      - 2
+    - - μετανοεω
+      - 1
+    - - αυτος
+      - 1
+    - - αφιημι
+      - 1
+    - - πλοιον
+      - 1
+    common_lemmas_top:
+    - - και
+      - 6
+    - - ο
+      - 6
+    - - αυτος
+      - 4
+    - - λεγω
+      - 2
+    - - αδελφος
+      - 2
+    - - αλιευς
+      - 2
+    - - οραω
+      - 2
+    - - αφιημι
+      - 2
+    - - δικτυον
+      - 2
+    - - πλοιον
+      - 2
+    - - βασιλεια
+      - 1
+    - - εγγιζω
+      - 1
+    - - μετανοεω
+      - 1
+    - - ανδρεας
+      - 1
+    - - γαλιλαια
+      - 1
+    - - γαρ
+      - 1
+    - - ειμι
+      - 1
+    - - θαλασσα
+      - 1
+    - - παρα
+      - 1
+    - - σιμων
+      - 1
+    mark_only_lemmas_top:
+    - - εν
+      - 3
+    - - ευθυς
+      - 3
+    - - ευαγγελιον
+      - 1
+    - - θεος
+      - 1
+    - - καιρος
+      - 1
+    - - οτι
+      - 1
+    - - πιστευω
+      - 1
+    - - πληροω
+      - 1
+    - - αμφιβαλλω
+      - 1
+    - - παραγω
+      - 1
+    - - γινομαι
+      - 1
+    - - ιησους
+      - 1
+    - - ο
+      - 1
+    - - και
+      - 1
+    - - ολιγος
+      - 1
+    - - απερχομαι
+      - 1
+    - - ζεβεδαιος
+      - 1
+    - - καλεω
+      - 1
+    - - μετα
+      - 1
+    - - μισθωτος
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 3
+    - - κηρυσσω
+      - 2
+    - - αυτος
+      - 2
+    - - δυο
+      - 2
+    - - ευθεως
+      - 2
+    - - απο
+      - 1
+    - - αρχω
+      - 1
+    - - γαρ
+      - 1
+    - - ιησους
+      - 1
+    - - ουρανος
+      - 1
+    - - τοτε
+      - 1
+    - - αμφιβληστρον
+      - 1
+    - - βαλλω
+      - 1
+    - - εις
+      - 1
+    - - λεγω
+      - 1
+    - - περιπατεω
+      - 1
+    - - πετρος
+      - 1
+    - - αλλος
+      - 1
+    - - εκειθεν
+      - 1
+    - - καλεω
+      - 1
+  variant_mark_refs:
+  - Mark 1:16
+  - Mark 1:18
+  - Mark 1:19
+  - Mark 1:20
+  - Mark 1:21
+  variant_matt_refs:
+  - Matt 4:23
+  variant_mark_count: 9
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 5
+  level: micro
+  pair_count: 1
+  confidence: low
+  avg_score: 0.714092
+  mark_start_ref: Mark 1:22
+  mark_end_ref: Mark 1:22
+  matt_start_ref: Matt 7:29
+  matt_end_ref: Matt 7:29
+  mark_span_refs:
+  - Mark 1:22
+  matt_span_refs:
+  - Matt 7:29
+  matched_pairs:
+  - mark_ref: Mark 1:22
+    matt_ref: Matt 7:29
+    score: 0.714092
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 18
+  matt_token_count: 13
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 2
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 1
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 1
+    lemma_deletions: 6
+    lemma_replacements: 0
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 1
+    - - γαρ
+      - 1
+    - - γραμματευς
+      - 1
+    - - διδασκω
+      - 1
+    - - ειμι
+      - 1
+    - - εξουσια
+      - 1
+    - - εχω
+      - 1
+    - - και
+      - 1
+    - - ο
+      - 1
+    - - ου
+      - 1
+    - - ως
+      - 1
+    mark_only_lemmas_top:
+    - - διδαχη
+      - 1
+    - - εκπλησσομαι
+      - 1
+    - - επι
+      - 1
+    matt_only_lemmas_top: []
+  variant_mark_refs: []
+  variant_matt_refs:
+  - Matt 7:29
+  variant_mark_count: 0
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 6
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.508445
+  mark_start_ref: Mark 1:40
+  mark_end_ref: Mark 1:41
+  matt_start_ref: Matt 8:2
+  matt_end_ref: Matt 8:3
+  mark_span_refs:
+  - Mark 1:40
+  - Mark 1:41
+  matt_span_refs:
+  - Matt 8:2
+  - Matt 8:3
+  matched_pairs:
+  - mark_ref: Mark 1:40
+    matt_ref: Matt 8:2
+    score: 0.409025
+  - mark_ref: Mark 1:41
+    matt_ref: Matt 8:3
+    score: 0.607865
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 29
+  matt_token_count: 28
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 4
+    present_indicative_ratio: 0.8
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 2
+    present_indicative_ratio: 0.4
+  aggregate_diff:
+    lemma_insertions: 7
+    lemma_deletions: 9
+    lemma_replacements: 6
+    moved_tokens_top:
+    - - λεπρος
+      - 1
+    - - απτω
+      - 1
+    - - αυτος
+      - 1
+    - - και
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 2
+    - - θελω
+      - 2
+    - - καθαριζω
+      - 2
+    - - και
+      - 2
+    - - λεγω
+      - 2
+    - - δυναμαι
+      - 1
+    - - εαν
+      - 1
+    - - εγω
+      - 1
+    - - λεπρος
+      - 1
+    - - απτω
+      - 1
+    - - εκτεινω
+      - 1
+    - - ο
+      - 1
+    - - χειρ
+      - 1
+    mark_only_lemmas_top:
+    - - γονυπετεω
+      - 1
+    - - ερχομαι
+      - 1
+    - - οτι
+      - 1
+    - - παρακαλεω
+      - 1
+    - - προς
+      - 1
+    - - οργιζομαι
+      - 1
+    matt_only_lemmas_top:
+    - - ιδου
+      - 1
+    - - κυριος
+      - 1
+    - - προσερχομαι
+      - 1
+    - - προσκυνεω
+      - 1
+    - - ευθεως
+      - 1
+    - - λεπρα
+      - 1
+  variant_mark_refs:
+  - Mark 1:40
+  - Mark 1:41
+  variant_matt_refs:
+  - Matt 8:2
+  - Matt 8:3
+  variant_mark_count: 4
+  variant_matt_count: 2
+  span_density: 1.0
+- id: 7
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.44944
+  mark_start_ref: Mark 1:44
+  mark_end_ref: Mark 2:1
+  matt_start_ref: Matt 8:4
+  matt_end_ref: Matt 8:5
+  mark_span_refs:
+  - Mark 1:44
+  - Mark 1:45
+  - Mark 2:1
+  matt_span_refs:
+  - Matt 8:4
+  - Matt 8:5
+  matched_pairs:
+  - mark_ref: Mark 1:44
+    matt_ref: Matt 8:4
+    score: 0.712436
+  - mark_ref: Mark 2:1
+    matt_ref: Matt 8:5
+    score: 0.186444
+  unmatched_mark_refs:
+  - Mark 1:45
+  unmatched_matt_refs: []
+  mark_token_count: 66
+  matt_token_count: 34
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 2
+    present_indicative_ratio: 0.2857
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 3
+    present_indicative: 1
+    present_indicative_ratio: 0.3333
+  aggregate_diff:
+    lemma_insertions: 2
+    lemma_deletions: 3
+    lemma_replacements: 11
+    moved_tokens_top: []
+    common_lemmas_top:
+    - - εις
+      - 2
+    - - αλλα
+      - 1
+    - - αυτος
+      - 1
+    - - δεικνυμι
+      - 1
+    - - ιερευς
+      - 1
+    - - και
+      - 1
+    - - λεγω
+      - 1
+    - - μαρτυριον
+      - 1
+    - - μηδεις
+      - 1
+    - - μωυσης
+      - 1
+    - - ο
+      - 1
+    - - οραω
+      - 1
+    - - ος
+      - 1
+    - - προστασσω
+      - 1
+    - - προσφερω
+      - 1
+    - - σεαυτου
+      - 1
+    - - υπαγω
+      - 1
+    - - εισερχομαι
+      - 1
+    - - καφαρναουμ
+      - 1
+    mark_only_lemmas_top:
+    - - καθαρισμος
+      - 1
+    - - περι
+      - 1
+    - - συ
+      - 1
+    - - ακουω
+      - 1
+    - - δια
+      - 1
+    - - ειμι
+      - 1
+    - - εν
+      - 1
+    - - ημερα
+      - 1
+    - - και
+      - 1
+    - - οικος
+      - 1
+    - - οτι
+      - 1
+    - - παλιν
+      - 1
+    matt_only_lemmas_top:
+    - - δωρον
+      - 1
+    - - ιησους
+      - 1
+    - - αυτος
+      - 1
+    - - δε
+      - 1
+    - - εκατονταρχος
+      - 1
+    - - παρακαλεω
+      - 1
+    - - προσερχομαι
+      - 1
+  variant_mark_refs:
+  - Mark 1:45
+  - Mark 2:1
+  variant_matt_refs:
+  - Matt 8:5
+  variant_mark_count: 5
+  variant_matt_count: 1
+  span_density: 0.666667
+- id: 8
+  level: micro
+  pair_count: 15
+  confidence: high
+  avg_score: 0.458111
+  mark_start_ref: Mark 2:5
+  mark_end_ref: Mark 2:22
+  matt_start_ref: Matt 9:2
+  matt_end_ref: Matt 9:17
+  mark_span_refs:
+  - Mark 2:5
+  - Mark 2:6
+  - Mark 2:7
+  - Mark 2:8
+  - Mark 2:9
+  - Mark 2:10
+  - Mark 2:11
+  - Mark 2:12
+  - Mark 2:13
+  - Mark 2:14
+  - Mark 2:15
+  - Mark 2:16
+  - Mark 2:17
+  - Mark 2:18
+  - Mark 2:19
+  - Mark 2:20
+  - Mark 2:21
+  - Mark 2:22
+  matt_span_refs:
+  - Matt 9:2
+  - Matt 9:3
+  - Matt 9:4
+  - Matt 9:5
+  - Matt 9:6
+  - Matt 9:7
+  - Matt 9:8
+  - Matt 9:9
+  - Matt 9:10
+  - Matt 9:11
+  - Matt 9:12
+  - Matt 9:13
+  - Matt 9:14
+  - Matt 9:15
+  - Matt 9:16
+  - Matt 9:17
+  matched_pairs:
+  - mark_ref: Mark 2:5
+    matt_ref: Matt 9:2
+    score: 0.590619
+  - mark_ref: Mark 2:6
+    matt_ref: Matt 9:3
+    score: 0.109288
+  - mark_ref: Mark 2:8
+    matt_ref: Matt 9:4
+    score: 0.159573
+  - mark_ref: Mark 2:9
+    matt_ref: Matt 9:5
+    score: 0.625912
+  - mark_ref: Mark 2:10
+    matt_ref: Matt 9:6
+    score: 0.601217
+  - mark_ref: Mark 2:11
+    matt_ref: Matt 9:7
+    score: 0.260199
+  - mark_ref: Mark 2:12
+    matt_ref: Matt 9:8
+    score: 0.141355
+  - mark_ref: Mark 2:14
+    matt_ref: Matt 9:9
+    score: 0.480507
+  - mark_ref: Mark 2:15
+    matt_ref: Matt 9:10
+    score: 0.561783
+  - mark_ref: Mark 2:16
+    matt_ref: Matt 9:11
+    score: 0.52239
+  - mark_ref: Mark 2:17
+    matt_ref: Matt 9:12
+    score: 0.60524
+  - mark_ref: Mark 2:18
+    matt_ref: Matt 9:14
+    score: 0.436739
+  - mark_ref: Mark 2:20
+    matt_ref: Matt 9:15
+    score: 0.519634
+  - mark_ref: Mark 2:21
+    matt_ref: Matt 9:16
+    score: 0.635736
+  - mark_ref: Mark 2:22
+    matt_ref: Matt 9:17
+    score: 0.621467
+  unmatched_mark_refs:
+  - Mark 2:7
+  - Mark 2:13
+  - Mark 2:19
+  unmatched_matt_refs:
+  - Matt 9:13
+  mark_token_count: 375
+  matt_token_count: 313
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 51
+    present_indicative: 32
+    present_indicative_ratio: 0.6275
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 43
+    present_indicative: 26
+    present_indicative_ratio: 0.6047
+  aggregate_diff:
+    lemma_insertions: 67
+    lemma_deletions: 50
+    lemma_replacements: 78
+    moved_tokens_top:
+    - - ο
+      - 4
+    - - και
+      - 3
+    - - οραω
+      - 2
+    - - αυτος
+      - 2
+    - - δια
+      - 1
+    - - λεγω
+      - 1
+    - - τις
+      - 1
+    - - δε
+      - 1
+    - - απολλυμι
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 15
+    - - και
+      - 13
+    - - αυτος
+      - 8
+    - - λεγω
+      - 8
+    - - δε
+      - 5
+    - - οραω
+      - 4
+    - - αμαρτια
+      - 3
+    - - αφιημι
+      - 3
+    - - ιησους
+      - 3
+    - - συ
+      - 3
+    - - εν
+      - 3
+    - - τις
+      - 3
+    - - επι
+      - 3
+    - - μαθητης
+      - 3
+    - - παραλυτικος
+      - 2
+    - - εγειρω
+      - 2
+    - - εχω
+      - 2
+    - - εις
+      - 2
+    - - αμαρτωλος
+      - 2
+    - - γινομαι
+      - 2
+    mark_only_lemmas_top:
+    - - οτι
+      - 4
+    - - ειμι
+      - 3
+    - - αιρω
+      - 3
+    - - κραβαττος
+      - 3
+    - - αυτος
+      - 2
+    - - διαλογιζομαι
+      - 2
+    - - ευθυς
+      - 2
+    - - ουτως
+      - 2
+    - - λεγω
+      - 2
+    - - ερχομαι
+      - 2
+    - - δε
+      - 1
+    - - εκει
+      - 1
+    - - καθημαι
+      - 1
+    - - καρδια
+      - 1
+    - - εαυτου
+      - 1
+    - - επιγινωσκω
+      - 1
+    - - ουτος
+      - 1
+    - - πνευμα
+      - 1
+    - - τις
+      - 1
+    - - παραλυτικος
+      - 1
+    matt_only_lemmas_top:
+    - - ιδου
+      - 3
+    - - συ
+      - 3
+    - - επι
+      - 2
+    - - κλινη
+      - 2
+    - - λεγω
+      - 2
+    - - γαρ
+      - 2
+    - - τοτε
+      - 2
+    - - ανθρωπος
+      - 2
+    - - δε
+      - 2
+    - - ιησους
+      - 2
+    - - βαλλω
+      - 1
+    - - θαρσεω
+      - 1
+    - - προσφερω
+      - 1
+    - - βλασφημεω
+      - 1
+    - - εαυτου
+      - 1
+    - - ουτος
+      - 1
+    - - ενθυμεομαι
+      - 1
+    - - ενθυμησις
+      - 1
+    - - ινατι
+      - 1
+    - - οραω
+      - 1
+  variant_mark_refs:
+  - Mark 2:5
+  - Mark 2:7
+  - Mark 2:8
+  - Mark 2:9
+  - Mark 2:10
+  - Mark 2:11
+  - Mark 2:12
+  - Mark 2:15
+  - Mark 2:16
+  - Mark 2:17
+  - Mark 2:18
+  - Mark 2:19
+  - Mark 2:20
+  - Mark 2:21
+  - Mark 2:22
+  variant_matt_refs:
+  - Matt 9:2
+  - Matt 9:4
+  - Matt 9:5
+  - Matt 9:6
+  - Matt 9:8
+  - Matt 9:10
+  - Matt 9:11
+  - Matt 9:12
+  - Matt 9:13
+  - Matt 9:14
+  - Matt 9:17
+  variant_mark_count: 36
+  variant_matt_count: 15
+  span_density: 0.833333
+- id: 9
+  level: micro
+  pair_count: 12
+  confidence: medium
+  avg_score: 0.377841
+  mark_start_ref: Mark 2:23
+  mark_end_ref: Mark 3:7
+  matt_start_ref: Matt 12:1
+  matt_end_ref: Matt 12:15
+  mark_span_refs:
+  - Mark 2:23
+  - Mark 2:24
+  - Mark 2:25
+  - Mark 2:26
+  - Mark 2:27
+  - Mark 2:28
+  - Mark 3:1
+  - Mark 3:2
+  - Mark 3:3
+  - Mark 3:4
+  - Mark 3:5
+  - Mark 3:6
+  - Mark 3:7
+  matt_span_refs:
+  - Matt 12:1
+  - Matt 12:2
+  - Matt 12:3
+  - Matt 12:4
+  - Matt 12:5
+  - Matt 12:6
+  - Matt 12:7
+  - Matt 12:8
+  - Matt 12:9
+  - Matt 12:10
+  - Matt 12:11
+  - Matt 12:12
+  - Matt 12:13
+  - Matt 12:14
+  - Matt 12:15
+  matched_pairs:
+  - mark_ref: Mark 2:23
+    matt_ref: Matt 12:1
+    score: 0.394311
+  - mark_ref: Mark 2:24
+    matt_ref: Matt 12:2
+    score: 0.547861
+  - mark_ref: Mark 2:25
+    matt_ref: Matt 12:3
+    score: 0.539691
+  - mark_ref: Mark 2:26
+    matt_ref: Matt 12:4
+    score: 0.616209
+  - mark_ref: Mark 2:27
+    matt_ref: Matt 12:5
+    score: 0.104961
+  - mark_ref: Mark 2:28
+    matt_ref: Matt 12:8
+    score: 0.644069
+  - mark_ref: Mark 3:2
+    matt_ref: Matt 12:10
+    score: 0.315655
+  - mark_ref: Mark 3:3
+    matt_ref: Matt 12:11
+    score: 0.195231
+  - mark_ref: Mark 3:4
+    matt_ref: Matt 12:12
+    score: 0.144607
+  - mark_ref: Mark 3:5
+    matt_ref: Matt 12:13
+    score: 0.368298
+  - mark_ref: Mark 3:6
+    matt_ref: Matt 12:14
+    score: 0.442394
+  - mark_ref: Mark 3:7
+    matt_ref: Matt 12:15
+    score: 0.220799
+  unmatched_mark_refs:
+  - Mark 3:1
+  unmatched_matt_refs:
+  - Matt 12:6
+  - Matt 12:7
+  - Matt 12:9
+  mark_token_count: 223
+  matt_token_count: 240
+  mark_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 31
+    present_indicative: 9
+    present_indicative_ratio: 0.2903
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 40
+    present_indicative: 13
+    present_indicative_ratio: 0.325
+  aggregate_diff:
+    lemma_insertions: 54
+    lemma_deletions: 32
+    lemma_replacements: 94
+    moved_tokens_top:
+    - - ο
+      - 6
+    - - και
+      - 2
+    - - σαββατον
+      - 2
+    - - αυτος
+      - 1
+    - - ειμι
+      - 1
+    - - ου
+      - 1
+    - - ανθρωπος
+      - 1
+    - - εις
+      - 1
+    - - εχω
+      - 1
+    - - λεγω
+      - 1
+    - - ακολουθεω
+      - 1
+    - - αναχωρεω
+      - 1
+    - - ιησους
+      - 1
+    - - πολυς
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 12
+    - - και
+      - 8
+    - - αυτος
+      - 7
+    - - σαββατον
+      - 6
+    - - λεγω
+      - 4
+    - - εξεστιν
+      - 3
+    - - ου
+      - 3
+    - - ανθρωπος
+      - 3
+    - - ος
+      - 2
+    - - ποιεω
+      - 2
+    - - φαρισαιος
+      - 2
+    - - ει
+      - 2
+    - - ειμι
+      - 2
+    - - εις
+      - 2
+    - - αρχω
+      - 1
+    - - δια
+      - 1
+    - - εν
+      - 1
+    - - μαθητης
+      - 1
+    - - σποριμος
+      - 1
+    - - σταχυς
+      - 1
+    mark_only_lemmas_top:
+    - - και
+      - 4
+    - - αυτος
+      - 3
+    - - μετα
+      - 3
+    - - γινομαι
+      - 2
+    - - διδωμι
+      - 2
+    - - επι
+      - 2
+    - - λεγω
+      - 2
+    - - οδος
+      - 1
+    - - παραπορευομαι
+      - 1
+    - - ποιεω
+      - 1
+    - - ιδε
+      - 1
+    - - τις
+      - 1
+    - - εχω
+      - 1
+    - - ουδεποτε
+      - 1
+    - - χρεια
+      - 1
+    - - αβιαθαρ
+      - 1
+    - - αρχιερευς
+      - 1
+    - - συν
+      - 1
+    - - ανθρωπος
+      - 1
+    - - δια
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 6
+    - - συ
+      - 3
+    - - εν
+      - 2
+    - - ιδου
+      - 2
+    - - ειμι
+      - 2
+    - - ανθρωπος
+      - 2
+    - - προβατον
+      - 2
+    - - εκεινος
+      - 1
+    - - εσθιω
+      - 1
+    - - ιησους
+      - 1
+    - - καιρος
+      - 1
+    - - πειναω
+      - 1
+    - - πορευομαι
+      - 1
+    - - μαθητης
+      - 1
+    - - οραω
+      - 1
+    - - ου
+      - 1
+    - - μετα
+      - 1
+    - - μονος
+      - 1
+    - - ουδε
+      - 1
+    - - αναγινωσκω
+      - 1
+  variant_mark_refs:
+  - Mark 2:23
+  - Mark 2:24
+  - Mark 2:25
+  - Mark 2:26
+  - Mark 2:27
+  - Mark 3:1
+  - Mark 3:2
+  - Mark 3:3
+  - Mark 3:4
+  - Mark 3:5
+  - Mark 3:6
+  - Mark 3:7
+  variant_matt_refs:
+  - Matt 12:3
+  - Matt 12:4
+  - Matt 12:10
+  - Matt 12:11
+  - Matt 12:13
+  - Matt 12:14
+  - Matt 12:15
+  variant_mark_count: 18
+  variant_matt_count: 8
+  span_density: 0.8
+- id: 10
+  level: micro
+  pair_count: 2
+  confidence: low
+  avg_score: 0.242105
+  mark_start_ref: Mark 3:21
+  mark_end_ref: Mark 3:22
+  matt_start_ref: Matt 12:23
+  matt_end_ref: Matt 12:24
+  mark_span_refs:
+  - Mark 3:21
+  - Mark 3:22
+  matt_span_refs:
+  - Matt 12:23
+  - Matt 12:24
+  matched_pairs:
+  - mark_ref: Mark 3:21
+    matt_ref: Matt 12:23
+    score: 0.146501
+  - mark_ref: Mark 3:22
+    matt_ref: Matt 12:24
+    score: 0.337709
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 33
+  matt_token_count: 31
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 2
+    present_indicative_ratio: 0.3333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 2
+    present_indicative_ratio: 0.4
+  aggregate_diff:
+    lemma_insertions: 1
+    lemma_deletions: 4
+    lemma_replacements: 29
+    moved_tokens_top:
+    - - εξιστημι
+      - 1
+    - - βεελζεβουλ
+      - 1
+    - - δαιμονιον
+      - 1
+    - - εκβαλλω
+      - 1
+    - - λεγω
+      - 1
+    common_lemmas_top:
+    - - λεγω
+      - 2
+    - - ο
+      - 2
+    - - εξιστημι
+      - 1
+    - - και
+      - 1
+    - - αρχων
+      - 1
+    - - βεελζεβουλ
+      - 1
+    - - δαιμονιον
+      - 1
+    - - εκβαλλω
+      - 1
+    - - εν
+      - 1
+    mark_only_lemmas_top:
+    - - οτι
+      - 2
+    - - ακουω
+      - 1
+    - - αυτος
+      - 1
+    - - γαρ
+      - 1
+    - - εξερχομαι
+      - 1
+    - - κρατεω
+      - 1
+    - - παρα
+      - 1
+    - - απο
+      - 1
+    - - γραμματευς
+      - 1
+    - - εχω
+      - 1
+    - - ιεροσολυμα
+      - 1
+    - - και
+      - 1
+    - - καταβαινω
+      - 1
+    matt_only_lemmas_top:
+    - - ουτος
+      - 2
+    - - δαυιδ
+      - 1
+    - - ειμι
+      - 1
+    - - μητι
+      - 1
+    - - οχλος
+      - 1
+    - - πας
+      - 1
+    - - υιος
+      - 1
+    - - ακουω
+      - 1
+    - - δε
+      - 1
+    - - ει
+      - 1
+    - - μη
+      - 1
+    - - ου
+      - 1
+    - - φαρισαιος
+      - 1
+  variant_mark_refs: []
+  variant_matt_refs: []
+  variant_mark_count: 0
+  variant_matt_count: 0
+  span_density: 1.0
+- id: 11
+  level: micro
+  pair_count: 5
+  confidence: medium
+  avg_score: 0.34251
+  mark_start_ref: Mark 3:25
+  mark_end_ref: Mark 3:29
+  matt_start_ref: Matt 12:25
+  matt_end_ref: Matt 12:32
+  mark_span_refs:
+  - Mark 3:25
+  - Mark 3:26
+  - Mark 3:27
+  - Mark 3:28
+  - Mark 3:29
+  matt_span_refs:
+  - Matt 12:25
+  - Matt 12:26
+  - Matt 12:27
+  - Matt 12:28
+  - Matt 12:29
+  - Matt 12:30
+  - Matt 12:31
+  - Matt 12:32
+  matched_pairs:
+  - mark_ref: Mark 3:25
+    matt_ref: Matt 12:25
+    score: 0.299301
+  - mark_ref: Mark 3:26
+    matt_ref: Matt 12:26
+    score: 0.26859
+  - mark_ref: Mark 3:27
+    matt_ref: Matt 12:29
+    score: 0.594697
+  - mark_ref: Mark 3:28
+    matt_ref: Matt 12:31
+    score: 0.326882
+  - mark_ref: Mark 3:29
+    matt_ref: Matt 12:32
+    score: 0.223082
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 12:27
+  - Matt 12:28
+  - Matt 12:30
+  mark_token_count: 90
+  matt_token_count: 169
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 11
+    present_indicative: 6
+    present_indicative_ratio: 0.5455
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 20
+    present_indicative: 9
+    present_indicative_ratio: 0.45
+  aggregate_diff:
+    lemma_insertions: 32
+    lemma_deletions: 10
+    lemma_replacements: 36
+    moved_tokens_top:
+    - - μεριζω
+      - 1
+    - - ο
+      - 1
+    - - δεω
+      - 1
+    - - εισερχομαι
+      - 1
+    - - και
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 5
+    - - και
+      - 4
+    - - εαυτου
+      - 2
+    - - ιστημι
+      - 2
+    - - μεριζω
+      - 2
+    - - οικια
+      - 2
+    - - ου
+      - 2
+    - - ει
+      - 1
+    - - επι
+      - 1
+    - - σατανας
+      - 1
+    - - αυτος
+      - 1
+    - - δεω
+      - 1
+    - - διαρπαζω
+      - 1
+    - - δυναμαι
+      - 1
+    - - εαν
+      - 1
+    - - εις
+      - 1
+    - - εισερχομαι
+      - 1
+    - - ισχυρος
+      - 1
+    - - μη
+      - 1
+    - - πρωτος
+      - 1
+    mark_only_lemmas_top:
+    - - αλλα
+      - 3
+    - - δυναμαι
+      - 2
+    - - εαν
+      - 2
+    - - εχω
+      - 2
+    - - αμαρτημα
+      - 2
+    - - βλασφημεω
+      - 2
+    - - εκεινος
+      - 1
+    - - επι
+      - 1
+    - - ανιστημι
+      - 1
+    - - ου
+      - 1
+    - - τελος
+      - 1
+    - - ουδεις
+      - 1
+    - - αμην
+      - 1
+    - - οσος
+      - 1
+    - - οτι
+      - 1
+    - - υιος
+      - 1
+    - - αιωνιος
+      - 1
+    - - αφεσις
+      - 1
+    - - ειμι
+      - 1
+    - - εις
+      - 1
+    matt_only_lemmas_top:
+    - - αυτος
+      - 3
+    - - βασιλεια
+      - 2
+    - - δε
+      - 2
+    - - η
+      - 2
+    - - κατα
+      - 2
+    - - λεγω
+      - 2
+    - - πως
+      - 2
+    - - ουτος
+      - 2
+    - - ενθυμησις
+      - 1
+    - - ερημοομαι
+      - 1
+    - - οραω
+      - 1
+    - - πας
+      - 1
+    - - πολις
+      - 1
+    - - εκβαλλω
+      - 1
+    - - ουν
+      - 1
+    - - αρπαζω
+      - 1
+    - - τις
+      - 1
+    - - αμαρτια
+      - 1
+    - - δια
+      - 1
+    - - ου
+      - 1
+  variant_mark_refs:
+  - Mark 3:25
+  - Mark 3:26
+  - Mark 3:27
+  - Mark 3:28
+  - Mark 3:29
+  variant_matt_refs:
+  - Matt 12:25
+  - Matt 12:27
+  - Matt 12:29
+  - Matt 12:31
+  - Matt 12:32
+  variant_mark_count: 10
+  variant_matt_count: 6
+  span_density: 0.625
+- id: 12
+  level: micro
+  pair_count: 15
+  confidence: high
+  avg_score: 0.531866
+  mark_start_ref: Mark 3:31
+  mark_end_ref: Mark 4:11
+  matt_start_ref: Matt 12:46
+  matt_end_ref: Matt 13:11
+  mark_span_refs:
+  - Mark 3:31
+  - Mark 3:32
+  - Mark 3:33
+  - Mark 3:34
+  - Mark 3:35
+  - Mark 4:1
+  - Mark 4:2
+  - Mark 4:3
+  - Mark 4:4
+  - Mark 4:5
+  - Mark 4:6
+  - Mark 4:7
+  - Mark 4:8
+  - Mark 4:9
+  - Mark 4:10
+  - Mark 4:11
+  matt_span_refs:
+  - Matt 12:46
+  - Matt 12:47
+  - Matt 12:48
+  - Matt 12:49
+  - Matt 12:50
+  - Matt 13:1
+  - Matt 13:2
+  - Matt 13:3
+  - Matt 13:4
+  - Matt 13:5
+  - Matt 13:6
+  - Matt 13:7
+  - Matt 13:8
+  - Matt 13:9
+  - Matt 13:10
+  - Matt 13:11
+  matched_pairs:
+  - mark_ref: Mark 3:31
+    matt_ref: Matt 12:46
+    score: 0.229785
+  - mark_ref: Mark 3:32
+    matt_ref: Matt 12:47
+    score: 0.518345
+  - mark_ref: Mark 3:33
+    matt_ref: Matt 12:48
+    score: 0.797745
+  - mark_ref: Mark 3:34
+    matt_ref: Matt 12:49
+    score: 0.297957
+  - mark_ref: Mark 3:35
+    matt_ref: Matt 12:50
+    score: 0.642696
+  - mark_ref: Mark 4:1
+    matt_ref: Matt 13:2
+    score: 0.458921
+  - mark_ref: Mark 4:3
+    matt_ref: Matt 13:3
+    score: 0.362975
+  - mark_ref: Mark 4:4
+    matt_ref: Matt 13:4
+    score: 0.887777
+  - mark_ref: Mark 4:5
+    matt_ref: Matt 13:5
+    score: 0.826208
+  - mark_ref: Mark 4:6
+    matt_ref: Matt 13:6
+    score: 0.826669
+  - mark_ref: Mark 4:7
+    matt_ref: Matt 13:7
+    score: 0.487907
+  - mark_ref: Mark 4:8
+    matt_ref: Matt 13:8
+    score: 0.554848
+  - mark_ref: Mark 4:9
+    matt_ref: Matt 13:9
+    score: 0.729045
+  - mark_ref: Mark 4:10
+    matt_ref: Matt 13:10
+    score: 0.108511
+  - mark_ref: Mark 4:11
+    matt_ref: Matt 13:11
+    score: 0.248596
+  unmatched_mark_refs:
+  - Mark 4:2
+  unmatched_matt_refs:
+  - Matt 13:1
+  mark_token_count: 267
+  matt_token_count: 253
+  mark_marker_counts:
+    euthys: 1
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 39
+    present_indicative: 10
+    present_indicative_ratio: 0.2564
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 1
+    pleroo: 0
+    grapho: 0
+    indicative_total: 30
+    present_indicative: 4
+    present_indicative_ratio: 0.1333
+  aggregate_diff:
+    lemma_insertions: 15
+    lemma_deletions: 46
+    lemma_replacements: 80
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - αυτος
+      - 1
+    - - και
+      - 1
+    - - λεγω
+      - 1
+    - - εγω
+      - 1
+    - - ηλιος
+      - 1
+    - - εκατον
+      - 1
+    - - εξηκοντα
+      - 1
+    - - παραβολη
+      - 1
+    - - διδωμι
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 14
+    - - και
+      - 12
+    - - αυτος
+      - 9
+    - - αδελφος
+      - 5
+    - - μητηρ
+      - 5
+    - - λεγω
+      - 4
+    - - πιπτω
+      - 4
+    - - εγω
+      - 3
+    - - αλλος
+      - 3
+    - - εχω
+      - 3
+    - - εξω
+      - 2
+    - - ιδου
+      - 2
+    - - συ
+      - 2
+    - - ειμι
+      - 2
+    - - επι
+      - 2
+    - - πολυς
+      - 2
+    - - σπειρω
+      - 2
+    - - γη
+      - 2
+    - - δια
+      - 2
+    - - μη
+      - 2
+    mark_only_lemmas_top:
+    - - περι
+      - 3
+    - - γινομαι
+      - 3
+    - - καθημαι
+      - 2
+    - - θεος
+      - 2
+    - - ος
+      - 2
+    - - εν
+      - 2
+    - - οτε
+      - 2
+    - - εις
+      - 2
+    - - και
+      - 2
+    - - αποστελλω
+      - 1
+    - - ερχομαι
+      - 1
+    - - καλεω
+      - 1
+    - - προς
+      - 1
+    - - στηκω
+      - 1
+    - - οχλος
+      - 1
+    - - η
+      - 1
+    - - ιδε
+      - 1
+    - - κυκλω
+      - 1
+    - - περιβλεπομαι
+      - 1
+    - - ουτος
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 7
+    - - λαλεω
+      - 4
+    - - ιστημι
+      - 3
+    - - επι
+      - 3
+    - - εν
+      - 3
+    - - ιδου
+      - 2
+    - - τις
+      - 2
+    - - μαθητης
+      - 2
+    - - αυτος
+      - 2
+    - - ουρανος
+      - 2
+    - - λεγω
+      - 2
+    - - ετι
+      - 1
+    - - ζητεω
+      - 1
+    - - οχλος
+      - 1
+    - - εκτεινω
+      - 1
+    - - χειρ
+      - 1
+    - - οστις
+      - 1
+    - - πατηρ
+      - 1
+    - - αιγιαλος
+      - 1
+    - - και
+      - 1
+  variant_mark_refs:
+  - Mark 3:31
+  - Mark 3:32
+  - Mark 3:33
+  - Mark 3:34
+  - Mark 3:35
+  - Mark 4:1
+  - Mark 4:3
+  - Mark 4:5
+  - Mark 4:6
+  - Mark 4:8
+  - Mark 4:9
+  - Mark 4:10
+  - Mark 4:11
+  variant_matt_refs:
+  - Matt 12:46
+  - Matt 12:47
+  - Matt 12:48
+  - Matt 13:1
+  - Matt 13:2
+  - Matt 13:4
+  - Matt 13:7
+  - Matt 13:9
+  - Matt 13:11
+  variant_mark_count: 31
+  variant_matt_count: 10
+  span_density: 0.9375
+- id: 13
+  level: micro
+  pair_count: 6
+  confidence: high
+  avg_score: 0.489696
+  mark_start_ref: Mark 4:14
+  mark_end_ref: Mark 4:20
+  matt_start_ref: Matt 13:18
+  matt_end_ref: Matt 13:23
+  mark_span_refs:
+  - Mark 4:14
+  - Mark 4:15
+  - Mark 4:16
+  - Mark 4:17
+  - Mark 4:18
+  - Mark 4:19
+  - Mark 4:20
+  matt_span_refs:
+  - Matt 13:18
+  - Matt 13:19
+  - Matt 13:20
+  - Matt 13:21
+  - Matt 13:22
+  - Matt 13:23
+  matched_pairs:
+  - mark_ref: Mark 4:14
+    matt_ref: Matt 13:18
+    score: 0.217046
+  - mark_ref: Mark 4:15
+    matt_ref: Matt 13:19
+    score: 0.226695
+  - mark_ref: Mark 4:16
+    matt_ref: Matt 13:20
+    score: 0.663939
+  - mark_ref: Mark 4:17
+    matt_ref: Matt 13:21
+    score: 0.861694
+  - mark_ref: Mark 4:19
+    matt_ref: Matt 13:22
+    score: 0.533853
+  - mark_ref: Mark 4:20
+    matt_ref: Matt 13:23
+    score: 0.434947
+  unmatched_mark_refs:
+  - Mark 4:18
+  unmatched_matt_refs: []
+  mark_token_count: 132
+  matt_token_count: 129
+  mark_marker_counts:
+    euthys: 3
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 18
+    present_indicative: 18
+    present_indicative_ratio: 1.0
+  matt_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 13
+    present_indicative_ratio: 1.0
+  aggregate_diff:
+    lemma_insertions: 44
+    lemma_deletions: 49
+    lemma_replacements: 24
+    moved_tokens_top:
+    - - ο
+      - 4
+    - - ακουω
+      - 3
+    - - και
+      - 2
+    - - σπειρω
+      - 2
+    - - αυτος
+      - 1
+    - - ερχομαι
+      - 1
+    - - λογος
+      - 1
+    - - ειμι
+      - 1
+    - - ουτος
+      - 1
+    - - γη
+      - 1
+    - - εκατον
+      - 1
+    - - εξηκοντα
+      - 1
+    - - επι
+      - 1
+    - - καλος
+      - 1
+    - - καρποφορεω
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 6
+    - - λογος
+      - 5
+    - - σπειρω
+      - 4
+    - - ειμι
+      - 4
+    - - και
+      - 4
+    - - ακουω
+      - 3
+    - - αυτος
+      - 2
+    - - ουτος
+      - 2
+    - - επι
+      - 2
+    - - ευθυς
+      - 2
+    - - γινομαι
+      - 2
+    - - ερχομαι
+      - 1
+    - - οδος
+      - 1
+    - - παρα
+      - 1
+    - - λαμβανω
+      - 1
+    - - μετα
+      - 1
+    - - πετρωδες
+      - 1
+    - - χαρα
+      - 1
+    - - αλλα
+      - 1
+    - - δια
+      - 1
+    mark_only_lemmas_top:
+    - - εις
+      - 2
+    - - οταν
+      - 2
+    - - λογος
+      - 1
+    - - αιρω
+      - 1
+    - - δε
+      - 1
+    - - ευθυς
+      - 1
+    - - οπου
+      - 1
+    - - σατανας
+      - 1
+    - - ομοιως
+      - 1
+    - - ος
+      - 1
+    - - ειτα
+      - 1
+    - - και
+      - 1
+    - - εισπορευομαι
+      - 1
+    - - επιθυμια
+      - 1
+    - - λοιπος
+      - 1
+    - - περι
+      - 1
+    - - εκεινος
+      - 1
+    - - οστις
+      - 1
+    - - παραδεχομαι
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 4
+    - - ακουω
+      - 2
+    - - συνιημι
+      - 2
+    - - ουτος
+      - 2
+    - - ουν
+      - 1
+    - - παραβολη
+      - 1
+    - - συ
+      - 1
+    - - αρπαζω
+      - 1
+    - - βασιλεια
+      - 1
+    - - εν
+      - 1
+    - - καρδια
+      - 1
+    - - μη
+      - 1
+    - - πας
+      - 1
+    - - πονηρος
+      - 1
+    - - ακανθα
+      - 1
+    - - ειμι
+      - 1
+    - - εις
+      - 1
+    - - σπειρω
+      - 1
+    - - δη
+      - 1
+    - - μεν
+      - 1
+  variant_mark_refs:
+  - Mark 4:15
+  - Mark 4:16
+  - Mark 4:17
+  - Mark 4:18
+  - Mark 4:19
+  - Mark 4:20
+  variant_matt_refs:
+  - Matt 13:18
+  - Matt 13:22
+  - Matt 13:23
+  variant_mark_count: 11
+  variant_matt_count: 4
+  span_density: 0.857143
+- id: 14
+  level: micro
+  pair_count: 3
+  confidence: low
+  avg_score: 0.242945
+  mark_start_ref: Mark 4:31
+  mark_end_ref: Mark 4:34
+  matt_start_ref: Matt 13:31
+  matt_end_ref: Matt 13:34
+  mark_span_refs:
+  - Mark 4:31
+  - Mark 4:32
+  - Mark 4:33
+  - Mark 4:34
+  matt_span_refs:
+  - Matt 13:31
+  - Matt 13:32
+  - Matt 13:33
+  - Matt 13:34
+  matched_pairs:
+  - mark_ref: Mark 4:31
+    matt_ref: Matt 13:31
+    score: 0.201906
+  - mark_ref: Mark 4:32
+    matt_ref: Matt 13:32
+    score: 0.311901
+  - mark_ref: Mark 4:34
+    matt_ref: Matt 13:34
+    score: 0.215028
+  unmatched_mark_refs:
+  - Mark 4:33
+  unmatched_matt_refs:
+  - Matt 13:33
+  mark_token_count: 68
+  matt_token_count: 88
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 3
+    present_indicative_ratio: 0.4286
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 2
+    pleroo: 0
+    grapho: 0
+    indicative_total: 12
+    present_indicative: 5
+    present_indicative_ratio: 0.4167
+  aggregate_diff:
+    lemma_insertions: 15
+    lemma_deletions: 9
+    lemma_replacements: 51
+    moved_tokens_top:
+    - - ο
+      - 3
+    - - πας
+      - 2
+    - - ειμι
+      - 1
+    - - αυτος
+      - 1
+    - - και
+      - 1
+    - - κλαδος
+      - 1
+    - - λαχανον
+      - 1
+    - - μεγας
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 3
+    - - αυτος
+      - 2
+    - - πας
+      - 2
+    - - ειμι
+      - 1
+    - - κοκκος
+      - 1
+    - - ος
+      - 1
+    - - σιναπι
+      - 1
+    - - σπειρω
+      - 1
+    - - γινομαι
+      - 1
+    - - και
+      - 1
+    - - κατασκηνοω
+      - 1
+    - - κλαδος
+      - 1
+    - - λαχανον
+      - 1
+    - - μεγας
+      - 1
+    - - οταν
+      - 1
+    - - ουρανος
+      - 1
+    - - πετεινον
+      - 1
+    - - ωστε
+      - 1
+    - - λαλεω
+      - 1
+    - - παραβολη
+      - 1
+    mark_only_lemmas_top:
+    - - γη
+      - 1
+    - - επι
+      - 1
+    - - μικρος
+      - 1
+    - - οταν
+      - 1
+    - - πας
+      - 1
+    - - σπερμα
+      - 1
+    - - ως
+      - 1
+    - - αναβαινω
+      - 1
+    - - δυναμαι
+      - 1
+    - - ποιεω
+      - 1
+    - - σκια
+      - 1
+    - - σπειρω
+      - 1
+    - - υπο
+      - 1
+    - - δε
+      - 1
+    - - επιλυω
+      - 1
+    - - ιδιος
+      - 1
+    - - κατα
+      - 1
+    - - μαθητης
+      - 1
+    - - ου
+      - 1
+    matt_only_lemmas_top:
+    - - εν
+      - 3
+    - - αγρος
+      - 1
+    - - αλλος
+      - 1
+    - - ανθρωπος
+      - 1
+    - - αυτος
+      - 1
+    - - βασιλεια
+      - 1
+    - - λαμβανω
+      - 1
+    - - λεγω
+      - 1
+    - - ομοιος
+      - 1
+    - - ουρανος
+      - 1
+    - - παραβολη
+      - 1
+    - - παρατιθημι
+      - 1
+    - - αυξανω
+      - 1
+    - - δε
+      - 1
+    - - δενδρον
+      - 1
+    - - ειμι
+      - 1
+    - - ερχομαι
+      - 1
+    - - μεν
+      - 1
+    - - μικρος
+      - 1
+    - - ος
+      - 1
+  variant_mark_refs:
+  - Mark 4:31
+  - Mark 4:32
+  - Mark 4:34
+  variant_matt_refs:
+  - Matt 13:33
+  - Matt 13:34
+  variant_mark_count: 5
+  variant_matt_count: 2
+  span_density: 0.75
+- id: 15
+  level: micro
+  pair_count: 4
+  confidence: high
+  avg_score: 0.414693
+  mark_start_ref: Mark 6:2
+  mark_end_ref: Mark 6:5
+  matt_start_ref: Matt 13:54
+  matt_end_ref: Matt 13:58
+  mark_span_refs:
+  - Mark 6:2
+  - Mark 6:3
+  - Mark 6:4
+  - Mark 6:5
+  matt_span_refs:
+  - Matt 13:54
+  - Matt 13:55
+  - Matt 13:56
+  - Matt 13:57
+  - Matt 13:58
+  matched_pairs:
+  - mark_ref: Mark 6:2
+    matt_ref: Matt 13:54
+    score: 0.428874
+  - mark_ref: Mark 6:3
+    matt_ref: Matt 13:55
+    score: 0.365632
+  - mark_ref: Mark 6:4
+    matt_ref: Matt 13:57
+    score: 0.663822
+  - mark_ref: Mark 6:5
+    matt_ref: Matt 13:58
+    score: 0.200443
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 13:56
+  mark_token_count: 105
+  matt_token_count: 96
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 9
+    present_indicative: 3
+    present_indicative_ratio: 0.3333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 4
+    present_indicative_ratio: 0.5
+  aggregate_diff:
+    lemma_insertions: 15
+    lemma_deletions: 28
+    lemma_replacements: 33
+    moved_tokens_top:
+    - - αυτος
+      - 3
+    - - ο
+      - 3
+    - - εκπλησσομαι
+      - 1
+    - - ιουδας
+      - 1
+    - - και
+      - 1
+    - - ου
+      - 1
+    - - υιος
+      - 1
+    - - εν
+      - 1
+    - - ιησους
+      - 1
+    - - ποιεω
+      - 1
+    common_lemmas_top:
+    - - και
+      - 4
+    - - ο
+      - 4
+    - - αυτος
+      - 3
+    - - ου
+      - 3
+    - - δυναμις
+      - 2
+    - - εν
+      - 2
+    - - λεγω
+      - 2
+    - - ουτος
+      - 2
+    - - ειμι
+      - 2
+    - - διδασκω
+      - 1
+    - - εκπλησσομαι
+      - 1
+    - - ποθεν
+      - 1
+    - - σοφια
+      - 1
+    - - συναγωγη
+      - 1
+    - - αδελφος
+      - 1
+    - - ιακωβος
+      - 1
+    - - ιουδας
+      - 1
+    - - σιμων
+      - 1
+    - - τεκτων
+      - 1
+    - - υιος
+      - 1
+    mark_only_lemmas_top:
+    - - χειρ
+      - 2
+    - - ακουω
+      - 1
+    - - αρχω
+      - 1
+    - - γινομαι
+      - 1
+    - - δια
+      - 1
+    - - διδωμι
+      - 1
+    - - πολυς
+      - 1
+    - - σαββατον
+      - 1
+    - - τις
+      - 1
+    - - τοιουτος
+      - 1
+    - - αδελφη
+      - 1
+    - - εγω
+      - 1
+    - - εν
+      - 1
+    - - ιωσης
+      - 1
+    - - μαρια
+      - 1
+    - - προς
+      - 1
+    - - σκανδαλιζω
+      - 1
+    - - ωδε
+      - 1
+    - - οτι
+      - 1
+    - - συγγενης
+      - 1
+    matt_only_lemmas_top:
+    - - εις
+      - 1
+    - - ερχομαι
+      - 1
+    - - πατρις
+      - 1
+    - - ωστε
+      - 1
+    - - ιωσηφ
+      - 1
+    - - λεγω
+      - 1
+    - - μαριαμ
+      - 1
+    - - μητηρ
+      - 1
+    - - δε
+      - 1
+    - - σκανδαλιζω
+      - 1
+    - - απιστια
+      - 1
+    - - αυτος
+      - 1
+    - - δια
+      - 1
+    - - πολυς
+      - 1
+  variant_mark_refs:
+  - Mark 6:2
+  - Mark 6:3
+  - Mark 6:4
+  - Mark 6:5
+  variant_matt_refs:
+  - Matt 13:55
+  - Matt 13:57
+  variant_mark_count: 11
+  variant_matt_count: 3
+  span_density: 0.8
+- id: 16
+  level: micro
+  pair_count: 1
+  confidence: low
+  avg_score: 0.308781
+  mark_start_ref: Mark 6:14
+  mark_end_ref: Mark 6:14
+  matt_start_ref: Matt 14:2
+  matt_end_ref: Matt 14:2
+  mark_span_refs:
+  - Mark 6:14
+  matt_span_refs:
+  - Matt 14:2
+  matched_pairs:
+  - mark_ref: Mark 6:14
+    matt_ref: Matt 14:2
+    score: 0.308781
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 28
+  matt_token_count: 23
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 1
+    present_indicative_ratio: 0.2
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 4
+    present_indicative: 2
+    present_indicative_ratio: 0.5
+  aggregate_diff:
+    lemma_insertions: 1
+    lemma_deletions: 12
+    lemma_replacements: 9
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    - - ενεργεω
+      - 1
+    - - ο
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 1
+    - - δια
+      - 1
+    - - δυναμις
+      - 1
+    - - εγειρω
+      - 1
+    - - εν
+      - 1
+    - - ενεργεω
+      - 1
+    - - ιωαννης
+      - 1
+    - - και
+      - 1
+    - - λεγω
+      - 1
+    - - νεκρος
+      - 1
+    - - ο
+      - 1
+    - - ουτος
+      - 1
+    mark_only_lemmas_top:
+    - - ακουω
+      - 1
+    - - βαπτιζω
+      - 1
+    - - βασιλευς
+      - 1
+    - - γαρ
+      - 1
+    - - γινομαι
+      - 1
+    - - εκ
+      - 1
+    - - ηρωδης
+      - 1
+    - - ονομα
+      - 1
+    - - οτι
+      - 1
+    - - φανερος
+      - 1
+    matt_only_lemmas_top:
+    - - απο
+      - 1
+    - - βαπτιστης
+      - 1
+    - - ειμι
+      - 1
+    - - παις
+      - 1
+  variant_mark_refs:
+  - Mark 6:14
+  variant_matt_refs: []
+  variant_mark_count: 2
+  variant_matt_count: 0
+  span_density: 1.0
+- id: 17
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.47969
+  mark_start_ref: Mark 6:17
+  mark_end_ref: Mark 6:19
+  matt_start_ref: Matt 14:3
+  matt_end_ref: Matt 14:5
+  mark_span_refs:
+  - Mark 6:17
+  - Mark 6:18
+  - Mark 6:19
+  matt_span_refs:
+  - Matt 14:3
+  - Matt 14:4
+  - Matt 14:5
+  matched_pairs:
+  - mark_ref: Mark 6:17
+    matt_ref: Matt 14:3
+    score: 0.682852
+  - mark_ref: Mark 6:18
+    matt_ref: Matt 14:4
+    score: 0.550563
+  - mark_ref: Mark 6:19
+    matt_ref: Matt 14:5
+    score: 0.205655
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 52
+  matt_token_count: 42
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 1
+    present_indicative_ratio: 0.125
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 1
+    present_indicative_ratio: 0.1667
+  aggregate_diff:
+    lemma_insertions: 3
+    lemma_deletions: 14
+    lemma_replacements: 14
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - και
+      - 1
+    - - αυτος
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 3
+    - - αυτος
+      - 2
+    - - γαρ
+      - 2
+    - - ιωαννης
+      - 2
+    - - και
+      - 2
+    - - αδελφος
+      - 1
+    - - γυνη
+      - 1
+    - - δεω
+      - 1
+    - - δια
+      - 1
+    - - εν
+      - 1
+    - - ηρωδης
+      - 1
+    - - ηρωδιας
+      - 1
+    - - κρατεω
+      - 1
+    - - φιλιππος
+      - 1
+    - - φυλακη
+      - 1
+    - - εξεστιν
+      - 1
+    - - εχω
+      - 1
+    - - λεγω
+      - 1
+    - - ου
+      - 1
+    - - συ
+      - 1
+    mark_only_lemmas_top:
+    - - οτι
+      - 2
+    - - αποστελλω
+      - 1
+    - - γαμεω
+      - 1
+    - - αδελφος
+      - 1
+    - - γυνη
+      - 1
+    - - ηρωδης
+      - 1
+    - - δε
+      - 1
+    - - δυναμαι
+      - 1
+    - - ενεχω
+      - 1
+    - - ηρωδιας
+      - 1
+    - - ου
+      - 1
+    matt_only_lemmas_top:
+    - - αποτιθημι
+      - 1
+    - - αυτος
+      - 1
+    - - εχω
+      - 1
+    - - οτι
+      - 1
+    - - οχλος
+      - 1
+    - - προφητης
+      - 1
+    - - φοβεομαι
+      - 1
+    - - ως
+      - 1
+  variant_mark_refs: []
+  variant_matt_refs:
+  - Matt 14:3
+  - Matt 14:4
+  variant_mark_count: 0
+  variant_matt_count: 3
+  span_density: 1.0
+- id: 18
+  level: micro
+  pair_count: 7
+  confidence: medium
+  avg_score: 0.316908
+  mark_start_ref: Mark 6:22
+  mark_end_ref: Mark 6:29
+  matt_start_ref: Matt 14:6
+  matt_end_ref: Matt 14:12
+  mark_span_refs:
+  - Mark 6:22
+  - Mark 6:23
+  - Mark 6:24
+  - Mark 6:25
+  - Mark 6:26
+  - Mark 6:27
+  - Mark 6:28
+  - Mark 6:29
+  matt_span_refs:
+  - Matt 14:6
+  - Matt 14:7
+  - Matt 14:8
+  - Matt 14:9
+  - Matt 14:10
+  - Matt 14:11
+  - Matt 14:12
+  matched_pairs:
+  - mark_ref: Mark 6:22
+    matt_ref: Matt 14:6
+    score: 0.298483
+  - mark_ref: Mark 6:23
+    matt_ref: Matt 14:7
+    score: 0.169733
+  - mark_ref: Mark 6:25
+    matt_ref: Matt 14:8
+    score: 0.293486
+  - mark_ref: Mark 6:26
+    matt_ref: Matt 14:9
+    score: 0.181739
+  - mark_ref: Mark 6:27
+    matt_ref: Matt 14:10
+    score: 0.166225
+  - mark_ref: Mark 6:28
+    matt_ref: Matt 14:11
+    score: 0.817212
+  - mark_ref: Mark 6:29
+    matt_ref: Matt 14:12
+    score: 0.291481
+  unmatched_mark_refs:
+  - Mark 6:24
+  unmatched_matt_refs: []
+  mark_token_count: 151
+  matt_token_count: 96
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 17
+    present_indicative: 1
+    present_indicative_ratio: 0.0588
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 12
+    present_indicative: 1
+    present_indicative_ratio: 0.0833
+  aggregate_diff:
+    lemma_insertions: 5
+    lemma_deletions: 35
+    lemma_replacements: 48
+    moved_tokens_top:
+    - - ο
+      - 1
+    - - ορχεομαι
+      - 1
+    - - διδωμι
+      - 1
+    - - αποκεφαλιζω
+      - 1
+    - - ερχομαι
+      - 1
+    - - και
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 6
+    - - και
+      - 5
+    - - αυτος
+      - 3
+    - - διδωμι
+      - 3
+    - - επι
+      - 2
+    - - κεφαλη
+      - 2
+    - - πιναξ
+      - 2
+    - - αρεσκω
+      - 1
+    - - ηρωδης
+      - 1
+    - - ηρωδιας
+      - 1
+    - - θυγατηρ
+      - 1
+    - - ορχεομαι
+      - 1
+    - - αιτεω
+      - 1
+    - - εαν
+      - 1
+    - - ος
+      - 1
+    - - βαπτιστης
+      - 1
+    - - εγω
+      - 1
+    - - ιωαννης
+      - 1
+    - - βασιλευς
+      - 1
+    - - δια
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 3
+    - - βασιλευς
+      - 3
+    - - θελω
+      - 3
+    - - αιτεω
+      - 2
+    - - εγω
+      - 2
+    - - εισερχομαι
+      - 2
+    - - λεγω
+      - 2
+    - - συ
+      - 2
+    - - και
+      - 2
+    - - ευθυς
+      - 2
+    - - διδωμι
+      - 1
+    - - εαν
+      - 1
+    - - κορασιον
+      - 1
+    - - ος
+      - 1
+    - - συνανακειμαι
+      - 1
+    - - βασιλεια
+      - 1
+    - - εως
+      - 1
+    - - ημισυς
+      - 1
+    - - ο
+      - 1
+    - - ομνυω
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 2
+    - - γενεσια
+      - 1
+    - - γινομαι
+      - 1
+    - - εν
+      - 1
+    - - μεσος
+      - 1
+    - - μετα
+      - 1
+    - - οθεν
+      - 1
+    - - ομολογεω
+      - 1
+    - - ορκος
+      - 1
+    - - αυτος
+      - 1
+    - - μητηρ
+      - 1
+    - - προβιβαζω
+      - 1
+    - - υπο
+      - 1
+    - - φημι
+      - 1
+    - - ωδε
+      - 1
+    - - διδωμι
+      - 1
+    - - κελευω
+      - 1
+    - - λυπεω
+      - 1
+    - - συνανακειμαι
+      - 1
+    - - ιωαννης
+      - 1
+  variant_mark_refs:
+  - Mark 6:22
+  - Mark 6:23
+  - Mark 6:24
+  - Mark 6:25
+  - Mark 6:26
+  - Mark 6:27
+  variant_matt_refs:
+  - Matt 14:6
+  - Matt 14:7
+  - Matt 14:9
+  - Matt 14:10
+  - Matt 14:12
+  variant_mark_count: 15
+  variant_matt_count: 6
+  span_density: 0.875
+- id: 19
+  level: micro
+  pair_count: 5
+  confidence: medium
+  avg_score: 0.345052
+  mark_start_ref: Mark 6:32
+  mark_end_ref: Mark 6:38
+  matt_start_ref: Matt 14:13
+  matt_end_ref: Matt 14:17
+  mark_span_refs:
+  - Mark 6:32
+  - Mark 6:33
+  - Mark 6:34
+  - Mark 6:35
+  - Mark 6:36
+  - Mark 6:37
+  - Mark 6:38
+  matt_span_refs:
+  - Matt 14:13
+  - Matt 14:14
+  - Matt 14:15
+  - Matt 14:16
+  - Matt 14:17
+  matched_pairs:
+  - mark_ref: Mark 6:32
+    matt_ref: Matt 14:13
+    score: 0.332866
+  - mark_ref: Mark 6:34
+    matt_ref: Matt 14:14
+    score: 0.352508
+  - mark_ref: Mark 6:35
+    matt_ref: Matt 14:15
+    score: 0.413327
+  - mark_ref: Mark 6:37
+    matt_ref: Matt 14:16
+    score: 0.221946
+  - mark_ref: Mark 6:38
+    matt_ref: Matt 14:17
+    score: 0.404611
+  unmatched_mark_refs:
+  - Mark 6:33
+  - Mark 6:36
+  unmatched_matt_refs: []
+  mark_token_count: 120
+  matt_token_count: 92
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 17
+    present_indicative: 5
+    present_indicative_ratio: 0.2941
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 12
+    present_indicative: 4
+    present_indicative_ratio: 0.3333
+  aggregate_diff:
+    lemma_insertions: 20
+    lemma_deletions: 29
+    lemma_replacements: 27
+    moved_tokens_top:
+    - - και
+      - 1
+    - - ο
+      - 1
+    - - ωρα
+      - 1
+    - - απερχομαι
+      - 1
+    - - πεντε
+      - 1
+    common_lemmas_top:
+    - - και
+      - 4
+    - - ο
+      - 4
+    - - αυτος
+      - 4
+    - - λεγω
+      - 3
+    - - ερημος
+      - 2
+    - - τοπος
+      - 2
+    - - δε
+      - 2
+    - - εις
+      - 1
+    - - εν
+      - 1
+    - - ιδιος
+      - 1
+    - - κατα
+      - 1
+    - - πλοιον
+      - 1
+    - - εξερχομαι
+      - 1
+    - - επι
+      - 1
+    - - οραω
+      - 1
+    - - οχλος
+      - 1
+    - - πολυς
+      - 1
+    - - σπλαγχνιζομαι
+      - 1
+    - - γινομαι
+      - 1
+    - - ειμι
+      - 1
+    mark_only_lemmas_top:
+    - - οτι
+      - 2
+    - - απερχομαι
+      - 1
+    - - αρχω
+      - 1
+    - - διδασκω
+      - 1
+    - - ειμι
+      - 1
+    - - εχω
+      - 1
+    - - μη
+      - 1
+    - - ποιμην
+      - 1
+    - - προβατον
+      - 1
+    - - ως
+      - 1
+    - - πολυς
+      - 1
+    - - αγοραζω
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - αρτος
+      - 1
+    - - δηναριον
+      - 1
+    - - διακοσιοι
+      - 1
+    - - και
+      - 1
+    - - γινωσκω
+      - 1
+    - - οραω
+      - 1
+    - - ποσος
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 2
+    - - ιησους
+      - 2
+    - - οχλος
+      - 2
+    - - ου
+      - 2
+    - - ακολουθεω
+      - 1
+    - - ακουω
+      - 1
+    - - αναχωρεω
+      - 1
+    - - απο
+      - 1
+    - - αυτος
+      - 1
+    - - εκειθεν
+      - 1
+    - - πεζη
+      - 1
+    - - πολις
+      - 1
+    - - αρρωστος
+      - 1
+    - - θεραπευω
+      - 1
+    - - ο
+      - 1
+    - - αγοραζω
+      - 1
+    - - απερχομαι
+      - 1
+    - - απολυω
+      - 1
+    - - βρωμα
+      - 1
+    - - εαυτου
+      - 1
+  variant_mark_refs:
+  - Mark 6:32
+  - Mark 6:33
+  - Mark 6:34
+  - Mark 6:35
+  - Mark 6:36
+  - Mark 6:37
+  - Mark 6:38
+  variant_matt_refs:
+  - Matt 14:13
+  - Matt 14:14
+  - Matt 14:15
+  variant_mark_count: 10
+  variant_matt_count: 3
+  span_density: 0.714286
+- id: 20
+  level: micro
+  pair_count: 8
+  confidence: high
+  avg_score: 0.434191
+  mark_start_ref: Mark 6:41
+  mark_end_ref: Mark 6:50
+  matt_start_ref: Matt 14:19
+  matt_end_ref: Matt 14:27
+  mark_span_refs:
+  - Mark 6:41
+  - Mark 6:42
+  - Mark 6:43
+  - Mark 6:44
+  - Mark 6:45
+  - Mark 6:46
+  - Mark 6:47
+  - Mark 6:48
+  - Mark 6:49
+  - Mark 6:50
+  matt_span_refs:
+  - Matt 14:19
+  - Matt 14:20
+  - Matt 14:21
+  - Matt 14:22
+  - Matt 14:23
+  - Matt 14:24
+  - Matt 14:25
+  - Matt 14:26
+  - Matt 14:27
+  matched_pairs:
+  - mark_ref: Mark 6:41
+    matt_ref: Matt 14:19
+    score: 0.453166
+  - mark_ref: Mark 6:43
+    matt_ref: Matt 14:20
+    score: 0.351974
+  - mark_ref: Mark 6:44
+    matt_ref: Matt 14:21
+    score: 0.32063
+  - mark_ref: Mark 6:45
+    matt_ref: Matt 14:22
+    score: 0.686799
+  - mark_ref: Mark 6:47
+    matt_ref: Matt 14:23
+    score: 0.204626
+  - mark_ref: Mark 6:48
+    matt_ref: Matt 14:25
+    score: 0.448714
+  - mark_ref: Mark 6:49
+    matt_ref: Matt 14:26
+    score: 0.39845
+  - mark_ref: Mark 6:50
+    matt_ref: Matt 14:27
+    score: 0.609172
+  unmatched_mark_refs:
+  - Mark 6:42
+  - Mark 6:46
+  unmatched_matt_refs:
+  - Matt 14:24
+  mark_token_count: 164
+  matt_token_count: 156
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 23
+    present_indicative: 5
+    present_indicative_ratio: 0.2174
+  matt_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 17
+    present_indicative: 2
+    present_indicative_ratio: 0.1176
+  aggregate_diff:
+    lemma_insertions: 39
+    lemma_deletions: 31
+    lemma_replacements: 51
+    moved_tokens_top:
+    - - ο
+      - 4
+    - - αρτος
+      - 1
+    - - και
+      - 1
+    - - ανηρ
+      - 1
+    - - ειμι
+      - 1
+    - - εσθιω
+      - 1
+    - - πεντακισχιλιοι
+      - 1
+    - - αυτος
+      - 1
+    - - μονος
+      - 1
+    - - δε
+      - 1
+    - - ευθυς
+      - 1
+    - - λαλεω
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 8
+    - - και
+      - 6
+    - - ειμι
+      - 4
+    - - αυτος
+      - 4
+    - - εις
+      - 2
+    - - μαθητης
+      - 2
+    - - επι
+      - 2
+    - - θαλασσα
+      - 2
+    - - περιπατεω
+      - 2
+    - - δε
+      - 2
+    - - αναβλεπω
+      - 1
+    - - αρτος
+      - 1
+    - - διδωμι
+      - 1
+    - - δυο
+      - 1
+    - - ευλογεω
+      - 1
+    - - ιχθυς
+      - 1
+    - - λαμβανω
+      - 1
+    - - ουρανος
+      - 1
+    - - πεντε
+      - 1
+    - - αιρω
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 2
+    - - πας
+      - 2
+    - - εν
+      - 2
+    - - γαρ
+      - 2
+    - - και
+      - 2
+    - - οραω
+      - 2
+    - - ινα
+      - 1
+    - - κατακλαω
+      - 1
+    - - μεριζω
+      - 1
+    - - παρατιθημι
+      - 1
+    - - απο
+      - 1
+    - - ιχθυς
+      - 1
+    - - πληρωμα
+      - 1
+    - - αρτος
+      - 1
+    - - βηθσαιδαν
+      - 1
+    - - ευθυς
+      - 1
+    - - προς
+      - 1
+    - - γη
+      - 1
+    - - επι
+      - 1
+    - - θαλασσα
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 4
+    - - οχλος
+      - 2
+    - - ανακλινω
+      - 1
+    - - επι
+      - 1
+    - - κελευω
+      - 1
+    - - κλαω
+      - 1
+    - - χορτος
+      - 1
+    - - εσθιω
+      - 1
+    - - πας
+      - 1
+    - - περισσευω
+      - 1
+    - - πληρης
+      - 1
+    - - χορταζω
+      - 1
+    - - γυνη
+      - 1
+    - - παιδιον
+      - 1
+    - - χωρις
+      - 1
+    - - ωσει
+      - 1
+    - - ευθεως
+      - 1
+    - - ος
+      - 1
+    - - αναβαινω
+      - 1
+    - - απολυω
+      - 1
+  variant_mark_refs:
+  - Mark 6:41
+  - Mark 6:43
+  - Mark 6:44
+  - Mark 6:45
+  - Mark 6:48
+  - Mark 6:49
+  - Mark 6:50
+  variant_matt_refs:
+  - Matt 14:19
+  - Matt 14:22
+  - Matt 14:24
+  - Matt 14:25
+  - Matt 14:26
+  - Matt 14:27
+  variant_mark_count: 12
+  variant_matt_count: 11
+  span_density: 0.8
+- id: 21
+  level: micro
+  pair_count: 6
+  confidence: medium
+  avg_score: 0.354869
+  mark_start_ref: Mark 6:51
+  mark_end_ref: Mark 7:3
+  matt_start_ref: Matt 14:32
+  matt_end_ref: Matt 15:2
+  mark_span_refs:
+  - Mark 6:51
+  - Mark 6:52
+  - Mark 6:53
+  - Mark 6:54
+  - Mark 6:55
+  - Mark 6:56
+  - Mark 7:1
+  - Mark 7:2
+  - Mark 7:3
+  matt_span_refs:
+  - Matt 14:32
+  - Matt 14:33
+  - Matt 14:34
+  - Matt 14:35
+  - Matt 14:36
+  - Matt 15:1
+  - Matt 15:2
+  matched_pairs:
+  - mark_ref: Mark 6:51
+    matt_ref: Matt 14:32
+    score: 0.555029
+  - mark_ref: Mark 6:53
+    matt_ref: Matt 14:34
+    score: 0.54469
+  - mark_ref: Mark 6:55
+    matt_ref: Matt 14:35
+    score: 0.16154
+  - mark_ref: Mark 6:56
+    matt_ref: Matt 14:36
+    score: 0.249669
+  - mark_ref: Mark 7:1
+    matt_ref: Matt 15:1
+    score: 0.317921
+  - mark_ref: Mark 7:3
+    matt_ref: Matt 15:2
+    score: 0.300363
+  unmatched_mark_refs:
+  - Mark 6:52
+  - Mark 6:54
+  - Mark 7:2
+  unmatched_matt_refs:
+  - Matt 14:33
+  mark_token_count: 150
+  matt_token_count: 94
+  mark_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 20
+    present_indicative: 5
+    present_indicative_ratio: 0.25
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 12
+    present_indicative: 4
+    present_indicative_ratio: 0.3333
+  aggregate_diff:
+    lemma_insertions: 15
+    lemma_deletions: 39
+    lemma_replacements: 41
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - ερχομαι
+      - 1
+    - - απτω
+      - 1
+    - - απο
+      - 1
+    - - ιεροσολυμα
+      - 1
+    - - γαρ
+      - 1
+    - - εσθιω
+      - 1
+    - - νιπτω
+      - 1
+    - - ου
+      - 1
+    - - χειρ
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 6
+    - - και
+      - 5
+    - - αυτος
+      - 2
+    - - εις
+      - 2
+    - - αναβαινω
+      - 1
+    - - ανεμος
+      - 1
+    - - κοπαζω
+      - 1
+    - - πλοιον
+      - 1
+    - - γεννησαρετ
+      - 1
+    - - γη
+      - 1
+    - - διαπεραω
+      - 1
+    - - επι
+      - 1
+    - - ερχομαι
+      - 1
+    - - εκεινος
+      - 1
+    - - εχω
+      - 1
+    - - κακως
+      - 1
+    - - ολος
+      - 1
+    - - απτω
+      - 1
+    - - ιματιον
+      - 1
+    - - ινα
+      - 1
+    mark_only_lemmas_top:
+    - - εν
+      - 2
+    - - προς
+      - 2
+    - - οπου
+      - 2
+    - - εαυτου
+      - 1
+    - - εκ
+      - 1
+    - - εξιστημι
+      - 1
+    - - λιαν
+      - 1
+    - - περισσος
+      - 1
+    - - προσορμιζομαι
+      - 1
+    - - ακουω
+      - 1
+    - - αρχω
+      - 1
+    - - ειμι
+      - 1
+    - - επι
+      - 1
+    - - κραβαττος
+      - 1
+    - - οτι
+      - 1
+    - - περιτρεχω
+      - 1
+    - - περιφερω
+      - 1
+    - - χωρα
+      - 1
+    - - αγορα
+      - 1
+    - - αγρος
+      - 1
+    matt_only_lemmas_top:
+    - - αυτος
+      - 2
+    - - ανηρ
+      - 1
+    - - αποστελλω
+      - 1
+    - - εις
+      - 1
+    - - επιγινωσκω
+      - 1
+    - - πας
+      - 1
+    - - περιχωρος
+      - 1
+    - - προσφερω
+      - 1
+    - - τοπος
+      - 1
+    - - διασωζω
+      - 1
+    - - μονος
+      - 1
+    - - ιησους
+      - 1
+    - - λεγω
+      - 1
+    - - προσερχομαι
+      - 1
+    - - τοτε
+      - 1
+    - - αρτος
+      - 1
+    - - δια
+      - 1
+    - - μαθητης
+      - 1
+    - - οταν
+      - 1
+    - - παραβαινω
+      - 1
+  variant_mark_refs:
+  - Mark 6:51
+  - Mark 6:52
+  - Mark 6:53
+  - Mark 6:54
+  - Mark 6:55
+  - Mark 6:56
+  - Mark 7:2
+  variant_matt_refs:
+  - Matt 14:32
+  - Matt 14:33
+  - Matt 14:34
+  - Matt 15:1
+  - Matt 15:2
+  variant_mark_count: 13
+  variant_matt_count: 6
+  span_density: 0.666667
+- id: 22
+  level: micro
+  pair_count: 4
+  confidence: high
+  avg_score: 0.52931
+  mark_start_ref: Mark 7:9
+  mark_end_ref: Mark 7:13
+  matt_start_ref: Matt 15:3
+  matt_end_ref: Matt 15:6
+  mark_span_refs:
+  - Mark 7:9
+  - Mark 7:10
+  - Mark 7:11
+  - Mark 7:12
+  - Mark 7:13
+  matt_span_refs:
+  - Matt 15:3
+  - Matt 15:4
+  - Matt 15:5
+  - Matt 15:6
+  matched_pairs:
+  - mark_ref: Mark 7:9
+    matt_ref: Matt 15:3
+    score: 0.35098
+  - mark_ref: Mark 7:10
+    matt_ref: Matt 15:4
+    score: 0.809514
+  - mark_ref: Mark 7:11
+    matt_ref: Matt 15:5
+    score: 0.584297
+  - mark_ref: Mark 7:13
+    matt_ref: Matt 15:6
+    score: 0.37245
+  unmatched_mark_refs:
+  - Mark 7:12
+  unmatched_matt_refs: []
+  mark_token_count: 78
+  matt_token_count: 69
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 5
+    present_indicative_ratio: 0.625
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 2
+    present_indicative_ratio: 0.3333
+  aggregate_diff:
+    lemma_insertions: 9
+    lemma_deletions: 14
+    lemma_replacements: 12
+    moved_tokens_top:
+    - - και
+      - 2
+    - - ος
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 4
+    - - και
+      - 3
+    - - λεγω
+      - 3
+    - - συ
+      - 3
+    - - θεος
+      - 2
+    - - παραδοσις
+      - 2
+    - - η
+      - 2
+    - - μητηρ
+      - 2
+    - - πατηρ
+      - 2
+    - - αυτος
+      - 1
+    - - εντολη
+      - 1
+    - - γαρ
+      - 1
+    - - θανατος
+      - 1
+    - - κακολογεω
+      - 1
+    - - τελευταω
+      - 1
+    - - τιμαω
+      - 1
+    - - δε
+      - 1
+    - - δωρον
+      - 1
+    - - εαν
+      - 1
+    - - εγω
+      - 1
+    mark_only_lemmas_top:
+    - - αθετεω
+      - 1
+    - - ινα
+      - 1
+    - - καλως
+      - 1
+    - - τηρεω
+      - 1
+    - - μωυσης
+      - 1
+    - - συ
+      - 1
+    - - ανθρωπος
+      - 1
+    - - ειμι
+      - 1
+    - - κορβαν
+      - 1
+    - - ος
+      - 1
+    - - παραδιδωμι
+      - 1
+    - - παρομοιος
+      - 1
+    - - ποιεω
+      - 1
+    - - πολυς
+      - 1
+    - - τοιουτος
+      - 1
+    matt_only_lemmas_top:
+    - - δια
+      - 2
+    - - αποκρινομαι
+      - 1
+    - - δε
+      - 1
+    - - παραβαινω
+      - 1
+    - - τις
+      - 1
+    - - θεος
+      - 1
+    - - αν
+      - 1
+    - - αυτος
+      - 1
+    - - μη
+      - 1
+    - - ου
+      - 1
+    - - πατηρ
+      - 1
+    - - τιμαω
+      - 1
+  variant_mark_refs:
+  - Mark 7:9
+  - Mark 7:12
+  variant_matt_refs:
+  - Matt 15:4
+  - Matt 15:6
+  variant_mark_count: 4
+  variant_matt_count: 5
+  span_density: 0.8
+- id: 23
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.472446
+  mark_start_ref: Mark 7:14
+  mark_end_ref: Mark 7:15
+  matt_start_ref: Matt 15:10
+  matt_end_ref: Matt 15:11
+  mark_span_refs:
+  - Mark 7:14
+  - Mark 7:15
+  matt_span_refs:
+  - Matt 15:10
+  - Matt 15:11
+  matched_pairs:
+  - mark_ref: Mark 7:14
+    matt_ref: Matt 15:10
+    score: 0.622002
+  - mark_ref: Mark 7:15
+    matt_ref: Matt 15:11
+    score: 0.322891
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 35
+  matt_token_count: 28
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 4
+    present_indicative: 3
+    present_indicative_ratio: 0.75
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 3
+    present_indicative: 2
+    present_indicative_ratio: 0.6667
+  aggregate_diff:
+    lemma_insertions: 10
+    lemma_deletions: 9
+    lemma_replacements: 11
+    moved_tokens_top:
+    - - αλλα
+      - 1
+    - - ανθρωπος
+      - 1
+    - - εκ
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - κοινοω
+      - 1
+    - - ο
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 2
+    - - ακουω
+      - 1
+    - - αυτος
+      - 1
+    - - και
+      - 1
+    - - λεγω
+      - 1
+    - - οχλος
+      - 1
+    - - προσκαλεομαι
+      - 1
+    - - συνιημι
+      - 1
+    - - αλλα
+      - 1
+    - - ανθρωπος
+      - 1
+    - - εις
+      - 1
+    - - εκ
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - κοινοω
+      - 1
+    mark_only_lemmas_top:
+    - - εγω
+      - 1
+    - - παλιν
+      - 1
+    - - πας
+      - 1
+    - - αυτος
+      - 1
+    - - δυναμαι
+      - 1
+    - - ειμι
+      - 1
+    - - εισπορευομαι
+      - 1
+    - - εξωθεν
+      - 1
+    - - ος
+      - 1
+    - - ουδεις
+      - 1
+    matt_only_lemmas_top:
+    - - εισερχομαι
+      - 1
+    - - ου
+      - 1
+    - - ουτος
+      - 1
+    - - στομα
+      - 1
+  variant_mark_refs:
+  - Mark 7:14
+  - Mark 7:15
+  variant_matt_refs: []
+  variant_mark_count: 6
+  variant_matt_count: 0
+  span_density: 1.0
+- id: 24
+  level: micro
+  pair_count: 6
+  confidence: medium
+  avg_score: 0.250793
+  mark_start_ref: Mark 7:18
+  mark_end_ref: Mark 7:24
+  matt_start_ref: Matt 15:16
+  matt_end_ref: Matt 15:21
+  mark_span_refs:
+  - Mark 7:18
+  - Mark 7:19
+  - Mark 7:20
+  - Mark 7:21
+  - Mark 7:22
+  - Mark 7:23
+  - Mark 7:24
+  matt_span_refs:
+  - Matt 15:16
+  - Matt 15:17
+  - Matt 15:18
+  - Matt 15:19
+  - Matt 15:20
+  - Matt 15:21
+  matched_pairs:
+  - mark_ref: Mark 7:18
+    matt_ref: Matt 15:16
+    score: 0.244424
+  - mark_ref: Mark 7:19
+    matt_ref: Matt 15:17
+    score: 0.251821
+  - mark_ref: Mark 7:20
+    matt_ref: Matt 15:18
+    score: 0.392252
+  - mark_ref: Mark 7:21
+    matt_ref: Matt 15:19
+    score: 0.319161
+  - mark_ref: Mark 7:23
+    matt_ref: Matt 15:20
+    score: 0.181074
+  - mark_ref: Mark 7:24
+    matt_ref: Matt 15:21
+    score: 0.116027
+  unmatched_mark_refs:
+  - Mark 7:22
+  unmatched_matt_refs: []
+  mark_token_count: 108
+  matt_token_count: 79
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 14
+    present_indicative: 10
+    present_indicative_ratio: 0.7143
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 11
+    present_indicative: 9
+    present_indicative_ratio: 0.8182
+  aggregate_diff:
+    lemma_insertions: 15
+    lemma_deletions: 22
+    lemma_replacements: 45
+    moved_tokens_top:
+    - - ο
+      - 3
+    - - ου
+      - 1
+    - - πας
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - εκ
+      - 1
+    - - φονος
+      - 1
+    - - και
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 6
+    - - και
+      - 3
+    - - εις
+      - 2
+    - - ανθρωπος
+      - 2
+    - - εκ
+      - 2
+    - - κοινοω
+      - 2
+    - - ασυνετος
+      - 1
+    - - ειμι
+      - 1
+    - - λεγω
+      - 1
+    - - συ
+      - 1
+    - - αφεδρων
+      - 1
+    - - εισπορευομαι
+      - 1
+    - - κοιλια
+      - 1
+    - - οτι
+      - 1
+    - - ου
+      - 1
+    - - πας
+      - 1
+    - - δε
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - γαρ
+      - 1
+    - - διαλογισμος
+      - 1
+    mark_only_lemmas_top:
+    - - εκπορευομαι
+      - 3
+    - - ανθρωπος
+      - 2
+    - - αυτος
+      - 2
+    - - δυναμαι
+      - 2
+    - - οτι
+      - 2
+    - - ου
+      - 2
+    - - πας
+      - 2
+    - - εσωθεν
+      - 2
+    - - εις
+      - 1
+    - - εισπορευομαι
+      - 1
+    - - εξωθεν
+      - 1
+    - - κοινοω
+      - 1
+    - - νοεω
+      - 1
+    - - ουτως
+      - 1
+    - - αλλα
+      - 1
+    - - βρωμα
+      - 1
+    - - καθαριζω
+      - 1
+    - - καρδια
+      - 1
+    - - εκεινος
+      - 1
+    - - λεγω
+      - 1
+    matt_only_lemmas_top:
+    - - εξερχομαι
+      - 3
+    - - δε
+      - 2
+    - - στομα
+      - 2
+    - - ακμην
+      - 1
+    - - εκβαλλω
+      - 1
+    - - νοεω
+      - 1
+    - - χωρεω
+      - 1
+    - - κακεινος
+      - 1
+    - - καρδια
+      - 1
+    - - βλασφημια
+      - 1
+    - - μοιχεια
+      - 1
+    - - πονηρος
+      - 1
+    - - ψευδομαρτυρια
+      - 1
+    - - ανιπτος
+      - 1
+    - - ειμι
+      - 1
+    - - εσθιω
+      - 1
+    - - ου
+      - 1
+    - - χειρ
+      - 1
+    - - αναχωρεω
+      - 1
+    - - ιησους
+      - 1
+  variant_mark_refs:
+  - Mark 7:19
+  - Mark 7:21
+  - Mark 7:24
+  variant_matt_refs:
+  - Matt 15:16
+  - Matt 15:17
+  variant_mark_count: 5
+  variant_matt_count: 2
+  span_density: 0.857143
+- id: 25
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.401564
+  mark_start_ref: Mark 7:27
+  mark_end_ref: Mark 7:29
+  matt_start_ref: Matt 15:26
+  matt_end_ref: Matt 15:28
+  mark_span_refs:
+  - Mark 7:27
+  - Mark 7:28
+  - Mark 7:29
+  matt_span_refs:
+  - Matt 15:26
+  - Matt 15:27
+  - Matt 15:28
+  matched_pairs:
+  - mark_ref: Mark 7:27
+    matt_ref: Matt 15:26
+    score: 0.50852
+  - mark_ref: Mark 7:28
+    matt_ref: Matt 15:27
+    score: 0.590154
+  - mark_ref: Mark 7:29
+    matt_ref: Matt 15:28
+    score: 0.106018
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 55
+  matt_token_count: 62
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 3
+    present_indicative_ratio: 0.4286
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 3
+    present_indicative_ratio: 0.4286
+  aggregate_diff:
+    lemma_insertions: 2
+    lemma_deletions: 13
+    lemma_replacements: 31
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - βαλλω
+      - 1
+    - - ειμι
+      - 1
+    - - αυτος
+      - 1
+    - - τραπεζα
+      - 1
+    - - και
+      - 1
+    - - συ
+      - 1
+    common_lemmas_top:
+    - - και
+      - 3
+    - - λεγω
+      - 3
+    - - ο
+      - 3
+    - - κυναριον
+      - 2
+    - - αυτος
+      - 2
+    - - αρτος
+      - 1
+    - - βαλλω
+      - 1
+    - - ειμι
+      - 1
+    - - καλος
+      - 1
+    - - λαμβανω
+      - 1
+    - - ου
+      - 1
+    - - τεκνον
+      - 1
+    - - απο
+      - 1
+    - - δε
+      - 1
+    - - εσθιω
+      - 1
+    - - κυριος
+      - 1
+    - - τραπεζα
+      - 1
+    - - ψιξ
+      - 1
+    - - θυγατηρ
+      - 1
+    - - συ
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 1
+    - - αφιημι
+      - 1
+    - - γαρ
+      - 1
+    - - πρωτος
+      - 1
+    - - χορταζω
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - παιδιον
+      - 1
+    - - υποκατω
+      - 1
+    - - δαιμονιον
+      - 1
+    - - δια
+      - 1
+    - - εκ
+      - 1
+    - - εξερχομαι
+      - 1
+    - - λογος
+      - 1
+    - - ουτος
+      - 1
+    - - υπαγω
+      - 1
+    matt_only_lemmas_top:
+    - - αποκρινομαι
+      - 2
+    - - δε
+      - 1
+    - - γαρ
+      - 1
+    - - ναι
+      - 1
+    - - πιπτω
+      - 1
+    - - απο
+      - 1
+    - - γινομαι
+      - 1
+    - - γυνη
+      - 1
+    - - εκεινος
+      - 1
+    - - θελω
+      - 1
+    - - ιαομαι
+      - 1
+    - - ιησους
+      - 1
+    - - μεγας
+      - 1
+    - - πιστις
+      - 1
+    - - τοτε
+      - 1
+    - - ω
+      - 1
+    - - ωρα
+      - 1
+    - - ως
+      - 1
+  variant_mark_refs:
+  - Mark 7:27
+  - Mark 7:28
+  - Mark 7:29
+  variant_matt_refs: []
+  variant_mark_count: 7
+  variant_matt_count: 0
+  span_density: 1.0
+- id: 26
+  level: micro
+  pair_count: 15
+  confidence: medium
+  avg_score: 0.341707
+  mark_start_ref: Mark 8:2
+  mark_end_ref: Mark 8:20
+  matt_start_ref: Matt 15:32
+  matt_end_ref: Matt 16:10
+  mark_span_refs:
+  - Mark 8:2
+  - Mark 8:3
+  - Mark 8:4
+  - Mark 8:5
+  - Mark 8:6
+  - Mark 8:7
+  - Mark 8:8
+  - Mark 8:9
+  - Mark 8:10
+  - Mark 8:11
+  - Mark 8:12
+  - Mark 8:13
+  - Mark 8:14
+  - Mark 8:15
+  - Mark 8:16
+  - Mark 8:17
+  - Mark 8:18
+  - Mark 8:19
+  - Mark 8:20
+  matt_span_refs:
+  - Matt 15:32
+  - Matt 15:33
+  - Matt 15:34
+  - Matt 15:35
+  - Matt 15:36
+  - Matt 15:37
+  - Matt 15:38
+  - Matt 15:39
+  - Matt 16:1
+  - Matt 16:2
+  - Matt 16:3
+  - Matt 16:4
+  - Matt 16:5
+  - Matt 16:6
+  - Matt 16:7
+  - Matt 16:8
+  - Matt 16:9
+  - Matt 16:10
+  matched_pairs:
+  - mark_ref: Mark 8:2
+    matt_ref: Matt 15:32
+    score: 0.518682
+  - mark_ref: Mark 8:4
+    matt_ref: Matt 15:33
+    score: 0.405907
+  - mark_ref: Mark 8:5
+    matt_ref: Matt 15:34
+    score: 0.356258
+  - mark_ref: Mark 8:6
+    matt_ref: Matt 15:36
+    score: 0.505625
+  - mark_ref: Mark 8:8
+    matt_ref: Matt 15:37
+    score: 0.468615
+  - mark_ref: Mark 8:9
+    matt_ref: Matt 15:38
+    score: 0.204347
+  - mark_ref: Mark 8:10
+    matt_ref: Matt 15:39
+    score: 0.240436
+  - mark_ref: Mark 8:11
+    matt_ref: Matt 16:1
+    score: 0.268986
+  - mark_ref: Mark 8:12
+    matt_ref: Matt 16:4
+    score: 0.181758
+  - mark_ref: Mark 8:14
+    matt_ref: Matt 16:5
+    score: 0.239258
+  - mark_ref: Mark 8:15
+    matt_ref: Matt 16:6
+    score: 0.345592
+  - mark_ref: Mark 8:16
+    matt_ref: Matt 16:7
+    score: 0.471932
+  - mark_ref: Mark 8:17
+    matt_ref: Matt 16:8
+    score: 0.293747
+  - mark_ref: Mark 8:19
+    matt_ref: Matt 16:9
+    score: 0.289446
+  - mark_ref: Mark 8:20
+    matt_ref: Matt 16:10
+    score: 0.335021
+  unmatched_mark_refs:
+  - Mark 8:3
+  - Mark 8:7
+  - Mark 8:13
+  - Mark 8:18
+  unmatched_matt_refs:
+  - Matt 15:35
+  - Matt 16:2
+  - Matt 16:3
+  mark_token_count: 277
+  matt_token_count: 272
+  mark_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 48
+    present_indicative: 20
+    present_indicative_ratio: 0.4167
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 39
+    present_indicative: 16
+    present_indicative_ratio: 0.4103
+  aggregate_diff:
+    lemma_insertions: 64
+    lemma_deletions: 33
+    lemma_replacements: 109
+    moved_tokens_top:
+    - - ο
+      - 5
+    - - αρτος
+      - 3
+    - - και
+      - 2
+    - - ερημια
+      - 1
+    - - κλασμα
+      - 1
+    - - δε
+      - 1
+    - - πειραζω
+      - 1
+    - - γενεα
+      - 1
+    - - διδωμι
+      - 1
+    - - ει
+      - 1
+    - - σημειον
+      - 1
+    - - εις
+      - 1
+    - - αυτος
+      - 1
+    - - λεγω
+      - 1
+    - - οραω
+      - 1
+    common_lemmas_top:
+    - - και
+      - 12
+    - - ο
+      - 12
+    - - αρτος
+      - 7
+    - - αυτος
+      - 5
+    - - επτα
+      - 4
+    - - οτι
+      - 3
+    - - ου
+      - 3
+    - - λεγω
+      - 3
+    - - ποσος
+      - 3
+    - - εσθιω
+      - 2
+    - - εχω
+      - 2
+    - - οχλος
+      - 2
+    - - τις
+      - 2
+    - - μαθητης
+      - 2
+    - - χορταζω
+      - 2
+    - - δε
+      - 2
+    - - διδωμι
+      - 2
+    - - λαμβανω
+      - 2
+    - - σπυρις
+      - 2
+    - - τετρακισχιλιοι
+      - 2
+    mark_only_lemmas_top:
+    - - αυτος
+      - 6
+    - - λεγω
+      - 3
+    - - εχω
+      - 3
+    - - επι
+      - 2
+    - - ουτος
+      - 2
+    - - τις
+      - 2
+    - - μετα
+      - 2
+    - - ζητεω
+      - 2
+    - - συ
+      - 2
+    - - και
+      - 2
+    - - αιρω
+      - 2
+    - - εις
+      - 2
+    - - κλασμα
+      - 2
+    - - οτε
+      - 2
+    - - αποκρινομαι
+      - 1
+    - - δυναμαι
+      - 1
+    - - οτι
+      - 1
+    - - ωδε
+      - 1
+    - - ερωταω
+      - 1
+    - - αναπιπτω
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 5
+    - - εν
+      - 4
+    - - ιησους
+      - 4
+    - - λαμβανω
+      - 4
+    - - λεγω
+      - 3
+    - - ο
+      - 3
+    - - απολυω
+      - 2
+    - - μαθητης
+      - 2
+    - - οχλος
+      - 2
+    - - σαδδουκαιος
+      - 2
+    - - εαυτου
+      - 2
+    - - ουδε
+      - 2
+    - - αυτος
+      - 1
+    - - εκλυομαι
+      - 1
+    - - θελω
+      - 1
+    - - μηποτε
+      - 1
+    - - νηστις
+      - 1
+    - - οδος
+      - 1
+    - - προσκαλεομαι
+      - 1
+    - - εγω
+      - 1
+  variant_mark_refs:
+  - Mark 8:3
+  - Mark 8:4
+  - Mark 8:5
+  - Mark 8:6
+  - Mark 8:7
+  - Mark 8:8
+  - Mark 8:9
+  - Mark 8:10
+  - Mark 8:12
+  - Mark 8:13
+  - Mark 8:16
+  - Mark 8:17
+  - Mark 8:19
+  - Mark 8:20
+  variant_matt_refs:
+  - Matt 15:33
+  - Matt 15:35
+  - Matt 15:36
+  - Matt 15:37
+  - Matt 15:39
+  - Matt 16:2
+  - Matt 16:4
+  - Matt 16:5
+  - Matt 16:8
+  variant_mark_count: 22
+  variant_matt_count: 16
+  span_density: 0.789474
+- id: 27
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.486972
+  mark_start_ref: Mark 8:27
+  mark_end_ref: Mark 8:29
+  matt_start_ref: Matt 16:13
+  matt_end_ref: Matt 16:16
+  mark_span_refs:
+  - Mark 8:27
+  - Mark 8:28
+  - Mark 8:29
+  matt_span_refs:
+  - Matt 16:13
+  - Matt 16:14
+  - Matt 16:15
+  - Matt 16:16
+  matched_pairs:
+  - mark_ref: Mark 8:27
+    matt_ref: Matt 16:13
+    score: 0.41195
+  - mark_ref: Mark 8:28
+    matt_ref: Matt 16:14
+    score: 0.636512
+  - mark_ref: Mark 8:29
+    matt_ref: Matt 16:16
+    score: 0.412455
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 16:15
+  mark_token_count: 67
+  matt_token_count: 65
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 4
+    present_indicative_ratio: 0.5
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 4
+    present_indicative_ratio: 0.5714
+  aggregate_diff:
+    lemma_insertions: 10
+    lemma_deletions: 10
+    lemma_replacements: 27
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - ηλιας
+      - 1
+    - - αποκρινομαι
+      - 1
+    common_lemmas_top:
+    - - λεγω
+      - 3
+    - - ο
+      - 3
+    - - ειμι
+      - 2
+    - - εις
+      - 2
+    - - δε
+      - 2
+    - - ανθρωπος
+      - 1
+    - - αυτος
+      - 1
+    - - ιησους
+      - 1
+    - - καισαρεια
+      - 1
+    - - μαθητης
+      - 1
+    - - τις
+      - 1
+    - - φιλιππος
+      - 1
+    - - αλλος
+      - 1
+    - - βαπτιστης
+      - 1
+    - - ηλιας
+      - 1
+    - - ιωαννης
+      - 1
+    - - προφητης
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - πετρος
+      - 1
+    - - συ
+      - 1
+    mark_only_lemmas_top:
+    - - και
+      - 3
+    - - εγω
+      - 2
+    - - επερωταω
+      - 2
+    - - αυτος
+      - 2
+    - - εν
+      - 1
+    - - εξερχομαι
+      - 1
+    - - κωμη
+      - 1
+    - - οδος
+      - 1
+    - - οτι
+      - 1
+    - - τις
+      - 1
+    matt_only_lemmas_top:
+    - - υιος
+      - 2
+    - - δε
+      - 1
+    - - ερχομαι
+      - 1
+    - - ερωταω
+      - 1
+    - - μερος
+      - 1
+    - - ετερος
+      - 1
+    - - η
+      - 1
+    - - ιερεμιας
+      - 1
+    - - μεν
+      - 1
+    - - ζαω
+      - 1
+    - - θεος
+      - 1
+    - - σιμων
+      - 1
+  variant_mark_refs:
+  - Mark 8:28
+  - Mark 8:29
+  variant_matt_refs:
+  - Matt 16:13
+  variant_mark_count: 5
+  variant_matt_count: 1
+  span_density: 0.75
+- id: 28
+  level: micro
+  pair_count: 20
+  confidence: high
+  avg_score: 0.451033
+  mark_start_ref: Mark 8:30
+  mark_end_ref: Mark 9:14
+  matt_start_ref: Matt 16:20
+  matt_end_ref: Matt 17:14
+  mark_span_refs:
+  - Mark 8:30
+  - Mark 8:31
+  - Mark 8:32
+  - Mark 8:33
+  - Mark 8:34
+  - Mark 8:35
+  - Mark 8:36
+  - Mark 8:37
+  - Mark 8:38
+  - Mark 9:1
+  - Mark 9:2
+  - Mark 9:3
+  - Mark 9:4
+  - Mark 9:5
+  - Mark 9:6
+  - Mark 9:7
+  - Mark 9:8
+  - Mark 9:9
+  - Mark 9:10
+  - Mark 9:11
+  - Mark 9:12
+  - Mark 9:13
+  - Mark 9:14
+  matt_span_refs:
+  - Matt 16:20
+  - Matt 16:21
+  - Matt 16:22
+  - Matt 16:23
+  - Matt 16:24
+  - Matt 16:25
+  - Matt 16:26
+  - Matt 16:27
+  - Matt 16:28
+  - Matt 17:1
+  - Matt 17:2
+  - Matt 17:3
+  - Matt 17:4
+  - Matt 17:5
+  - Matt 17:6
+  - Matt 17:7
+  - Matt 17:8
+  - Matt 17:9
+  - Matt 17:10
+  - Matt 17:11
+  - Matt 17:12
+  - Matt 17:13
+  - Matt 17:14
+  matched_pairs:
+  - mark_ref: Mark 8:30
+    matt_ref: Matt 16:20
+    score: 0.237866
+  - mark_ref: Mark 8:31
+    matt_ref: Matt 16:21
+    score: 0.364998
+  - mark_ref: Mark 8:32
+    matt_ref: Matt 16:22
+    score: 0.358496
+  - mark_ref: Mark 8:33
+    matt_ref: Matt 16:23
+    score: 0.465462
+  - mark_ref: Mark 8:34
+    matt_ref: Matt 16:24
+    score: 0.621725
+  - mark_ref: Mark 8:35
+    matt_ref: Matt 16:25
+    score: 0.685587
+  - mark_ref: Mark 8:36
+    matt_ref: Matt 16:26
+    score: 0.586961
+  - mark_ref: Mark 8:38
+    matt_ref: Matt 16:27
+    score: 0.279543
+  - mark_ref: Mark 9:1
+    matt_ref: Matt 16:28
+    score: 0.676578
+  - mark_ref: Mark 9:2
+    matt_ref: Matt 17:1
+    score: 0.75824
+  - mark_ref: Mark 9:3
+    matt_ref: Matt 17:2
+    score: 0.168773
+  - mark_ref: Mark 9:4
+    matt_ref: Matt 17:3
+    score: 0.536608
+  - mark_ref: Mark 9:5
+    matt_ref: Matt 17:4
+    score: 0.743463
+  - mark_ref: Mark 9:7
+    matt_ref: Matt 17:5
+    score: 0.475734
+  - mark_ref: Mark 9:8
+    matt_ref: Matt 17:8
+    score: 0.328557
+  - mark_ref: Mark 9:9
+    matt_ref: Matt 17:9
+    score: 0.344895
+  - mark_ref: Mark 9:11
+    matt_ref: Matt 17:10
+    score: 0.653787
+  - mark_ref: Mark 9:12
+    matt_ref: Matt 17:11
+    score: 0.269283
+  - mark_ref: Mark 9:13
+    matt_ref: Matt 17:12
+    score: 0.297533
+  - mark_ref: Mark 9:14
+    matt_ref: Matt 17:14
+    score: 0.166572
+  unmatched_mark_refs:
+  - Mark 8:37
+  - Mark 9:6
+  - Mark 9:10
+  unmatched_matt_refs:
+  - Matt 17:6
+  - Matt 17:7
+  - Matt 17:13
+  mark_token_count: 435
+  matt_token_count: 443
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 2
+    indicative_total: 49
+    present_indicative: 18
+    present_indicative_ratio: 0.3673
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 53
+    present_indicative: 18
+    present_indicative_ratio: 0.3396
+  aggregate_diff:
+    lemma_insertions: 64
+    lemma_deletions: 71
+    lemma_replacements: 101
+    moved_tokens_top:
+    - - και
+      - 4
+    - - αυτος
+      - 4
+    - - ο
+      - 3
+    - - λεγω
+      - 3
+    - - κερδαινω
+      - 1
+    - - βασιλεια
+      - 1
+    - - ηλιας
+      - 1
+    - - αλλα
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 17
+    - - αυτος
+      - 16
+    - - και
+      - 14
+    - - λεγω
+      - 7
+    - - ερχομαι
+      - 7
+    - - οτι
+      - 5
+    - - εγω
+      - 5
+    - - ηλιας
+      - 5
+    - - πετρος
+      - 4
+    - - ανθρωπος
+      - 4
+    - - δε
+      - 3
+    - - θελω
+      - 3
+    - - τις
+      - 3
+    - - γαρ
+      - 3
+    - - υιος
+      - 3
+    - - ειμι
+      - 3
+    - - οραω
+      - 3
+    - - συ
+      - 3
+    - - ιησους
+      - 3
+    - - μηδεις
+      - 2
+    mark_only_lemmas_top:
+    - - και
+      - 6
+    - - οραω
+      - 3
+    - - επι
+      - 3
+    - - επιτιμαω
+      - 2
+    - - περι
+      - 2
+    - - ανθρωπος
+      - 2
+    - - ανιστημι
+      - 2
+    - - μετα
+      - 2
+    - - υιος
+      - 2
+    - - λογος
+      - 2
+    - - αυτος
+      - 2
+    - - μαθητης
+      - 2
+    - - συν
+      - 2
+    - - οταν
+      - 2
+    - - ινα
+      - 2
+    - - γραφω
+      - 2
+    - - πολυς
+      - 2
+    - - αποδοκιμαζω
+      - 1
+    - - διδασκω
+      - 1
+    - - τρεις
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 5
+    - - τοτε
+      - 4
+    - - λεγω
+      - 4
+    - - ειμι
+      - 3
+    - - μαθητης
+      - 3
+    - - ιησους
+      - 3
+    - - ανθρωπος
+      - 3
+    - - ο
+      - 2
+    - - εγειρω
+      - 2
+    - - κυριος
+      - 2
+    - - μη
+      - 2
+    - - ου
+      - 2
+    - - μελλω
+      - 2
+    - - υιος
+      - 2
+    - - ιδου
+      - 2
+    - - ει
+      - 2
+    - - εν
+      - 2
+    - - διαστελλομαι
+      - 1
+    - - οτι
+      - 1
+    - - χριστος
+      - 1
+  variant_mark_refs:
+  - Mark 8:31
+  - Mark 8:32
+  - Mark 8:33
+  - Mark 8:34
+  - Mark 8:35
+  - Mark 8:36
+  - Mark 8:37
+  - Mark 9:1
+  - Mark 9:2
+  - Mark 9:3
+  - Mark 9:5
+  - Mark 9:6
+  - Mark 9:7
+  - Mark 9:8
+  - Mark 9:9
+  - Mark 9:12
+  - Mark 9:13
+  - Mark 9:14
+  variant_matt_refs:
+  - Matt 16:20
+  - Matt 16:21
+  - Matt 16:23
+  - Matt 16:25
+  - Matt 16:26
+  - Matt 16:28
+  - Matt 17:2
+  - Matt 17:3
+  - Matt 17:4
+  - Matt 17:5
+  - Matt 17:7
+  - Matt 17:8
+  - Matt 17:9
+  - Matt 17:10
+  - Matt 17:11
+  - Matt 17:14
+  variant_mark_count: 36
+  variant_matt_count: 24
+  span_density: 0.869565
+- id: 29
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.39473
+  mark_start_ref: Mark 9:18
+  mark_end_ref: Mark 9:19
+  matt_start_ref: Matt 17:16
+  matt_end_ref: Matt 17:17
+  mark_span_refs:
+  - Mark 9:18
+  - Mark 9:19
+  matt_span_refs:
+  - Matt 17:16
+  - Matt 17:17
+  matched_pairs:
+  - mark_ref: Mark 9:18
+    matt_ref: Matt 17:16
+    score: 0.102066
+  - mark_ref: Mark 9:19
+    matt_ref: Matt 17:17
+    score: 0.687394
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 47
+  matt_token_count: 34
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 9
+    present_indicative: 5
+    present_indicative_ratio: 0.5556
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 5
+    lemma_deletions: 16
+    lemma_replacements: 11
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - δε
+      - 1
+    - - εγω
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 2
+    - - ο
+      - 2
+    - - συ
+      - 2
+    - - και
+      - 1
+    - - μαθητης
+      - 1
+    - - ου
+      - 1
+    - - ανεχομαι
+      - 1
+    - - απιστος
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - γενεα
+      - 1
+    - - δε
+      - 1
+    - - εγω
+      - 1
+    - - ειμι
+      - 1
+    - - εως
+      - 1
+    - - λεγω
+      - 1
+    - - ποτε
+      - 1
+    - - φερω
+      - 1
+    - - ω
+      - 1
+    mark_only_lemmas_top:
+    - - αφριζω
+      - 1
+    - - εαν
+      - 1
+    - - εκβαλλω
+      - 1
+    - - ινα
+      - 1
+    - - ισχυω
+      - 1
+    - - καταλαμβανω
+      - 1
+    - - λεγω
+      - 1
+    - - ξηραινω
+      - 1
+    - - οδους
+      - 1
+    - - οπου
+      - 1
+    - - ρηγνυμι
+      - 1
+    - - τριζω
+      - 1
+    - - προς
+      - 1
+    matt_only_lemmas_top:
+    - - δυναμαι
+      - 1
+    - - θεραπευω
+      - 1
+    - - προσφερω
+      - 1
+    - - διαστρεφω
+      - 1
+    - - ιησους
+      - 1
+    - - και
+      - 1
+    - - μετα
+      - 1
+    - - ωδε
+      - 1
+  variant_mark_refs:
+  - Mark 9:18
+  - Mark 9:19
+  variant_matt_refs:
+  - Matt 17:17
+  variant_mark_count: 3
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 30
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.509813
+  mark_start_ref: Mark 9:42
+  mark_end_ref: Mark 9:47
+  matt_start_ref: Matt 18:6
+  matt_end_ref: Matt 18:9
+  mark_span_refs:
+  - Mark 9:42
+  - Mark 9:43
+  - Mark 9:45
+  - Mark 9:47
+  matt_span_refs:
+  - Matt 18:6
+  - Matt 18:7
+  - Matt 18:8
+  - Matt 18:9
+  matched_pairs:
+  - mark_ref: Mark 9:42
+    matt_ref: Matt 18:6
+    score: 0.449998
+  - mark_ref: Mark 9:45
+    matt_ref: Matt 18:8
+    score: 0.512546
+  - mark_ref: Mark 9:47
+    matt_ref: Matt 18:9
+    score: 0.566896
+  unmatched_mark_refs:
+  - Mark 9:43
+  unmatched_matt_refs:
+  - Matt 18:7
+  mark_token_count: 113
+  matt_token_count: 120
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 5
+    present_indicative_ratio: 0.8333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 6
+    present_indicative_ratio: 1.0
+  aggregate_diff:
+    lemma_insertions: 14
+    lemma_deletions: 3
+    lemma_replacements: 28
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - εις
+      - 1
+    - - και
+      - 1
+    - - συ
+      - 1
+    - - εισερχομαι
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 3
+    - - εις
+      - 3
+    - - και
+      - 3
+    - - ο
+      - 3
+    - - σκανδαλιζω
+      - 3
+    - - βαλλω
+      - 2
+    - - δυο
+      - 2
+    - - ειμι
+      - 2
+    - - εισερχομαι
+      - 2
+    - - εχω
+      - 2
+    - - η
+      - 2
+    - - καλος
+      - 2
+    - - συ
+      - 2
+    - - αν
+      - 1
+    - - εγω
+      - 1
+    - - θαλασσα
+      - 1
+    - - μικρος
+      - 1
+    - - μυλος
+      - 1
+    - - ονικος
+      - 1
+    - - ος
+      - 1
+    mark_only_lemmas_top:
+    - - εαν
+      - 2
+    - - βαλλω
+      - 1
+    - - ει
+      - 1
+    - - ειμι
+      - 1
+    - - καλος
+      - 1
+    - - μαλλον
+      - 1
+    - - περι
+      - 1
+    - - περικειμαι
+      - 1
+    - - αποκοπτω
+      - 1
+    - - γεεννα
+      - 1
+    - - βασιλεια
+      - 1
+    - - εκβαλλω
+      - 1
+    - - θεος
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 2
+    - - απο
+      - 2
+    - - ει
+      - 2
+    - - πυρ
+      - 2
+    - - εν
+      - 1
+    - - ινα
+      - 1
+    - - καταποντιζομαι
+      - 1
+    - - κρεμαννυμι
+      - 1
+    - - πελαγος
+      - 1
+    - - συμφερω
+      - 1
+    - - αιωνιος
+      - 1
+    - - εκκοπτω
+      - 1
+    - - κυλλος
+      - 1
+    - - χειρ
+      - 1
+    - - εξαιρεω
+      - 1
+    - - ζωη
+      - 1
+  variant_mark_refs:
+  - Mark 9:42
+  - Mark 9:43
+  - Mark 9:45
+  - Mark 9:47
+  variant_matt_refs:
+  - Matt 18:6
+  - Matt 18:7
+  - Matt 18:8
+  variant_mark_count: 13
+  variant_matt_count: 5
+  span_density: 0.75
+- id: 31
+  level: micro
+  pair_count: 4
+  confidence: high
+  avg_score: 0.501612
+  mark_start_ref: Mark 10:6
+  mark_end_ref: Mark 10:11
+  matt_start_ref: Matt 19:4
+  matt_end_ref: Matt 19:9
+  mark_span_refs:
+  - Mark 10:6
+  - Mark 10:7
+  - Mark 10:8
+  - Mark 10:9
+  - Mark 10:10
+  - Mark 10:11
+  matt_span_refs:
+  - Matt 19:4
+  - Matt 19:5
+  - Matt 19:6
+  - Matt 19:7
+  - Matt 19:8
+  - Matt 19:9
+  matched_pairs:
+  - mark_ref: Mark 10:6
+    matt_ref: Matt 19:4
+    score: 0.446631
+  - mark_ref: Mark 10:7
+    matt_ref: Matt 19:5
+    score: 0.393585
+  - mark_ref: Mark 10:9
+    matt_ref: Matt 19:6
+    score: 0.534298
+  - mark_ref: Mark 10:11
+    matt_ref: Matt 19:9
+    score: 0.631934
+  unmatched_mark_refs:
+  - Mark 10:8
+  - Mark 10:10
+  unmatched_matt_refs:
+  - Matt 19:7
+  - Matt 19:8
+  mark_token_count: 73
+  matt_token_count: 108
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 9
+    present_indicative: 3
+    present_indicative_ratio: 0.3333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 17
+    present_indicative: 6
+    present_indicative_ratio: 0.3529
+  aggregate_diff:
+    lemma_insertions: 26
+    lemma_deletions: 4
+    lemma_replacements: 13
+    moved_tokens_top:
+    - - δε
+      - 1
+    - - επι
+      - 1
+    - - και
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 3
+    - - και
+      - 3
+    - - ο
+      - 3
+    - - ανθρωπος
+      - 2
+    - - γυνη
+      - 2
+    - - ος
+      - 2
+    - - απο
+      - 1
+    - - αρσην
+      - 1
+    - - αρχη
+      - 1
+    - - δε
+      - 1
+    - - θηλυς
+      - 1
+    - - ποιεω
+      - 1
+    - - καταλειπω
+      - 1
+    - - μητηρ
+      - 1
+    - - ουτος
+      - 1
+    - - πατηρ
+      - 1
+    - - θεος
+      - 1
+    - - μη
+      - 1
+    - - ουν
+      - 1
+    - - συζευγνυμι
+      - 1
+    mark_only_lemmas_top:
+    - - κτισις
+      - 1
+    - - ενεκεν
+      - 1
+    - - προς
+      - 1
+    - - προσκολλαομαι
+      - 1
+    matt_only_lemmas_top:
+    - - λεγω
+      - 2
+    - - οτι
+      - 2
+    - - δυο
+      - 2
+    - - ειμι
+      - 2
+    - - εις
+      - 2
+    - - σαρξ
+      - 2
+    - - αναγινωσκω
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - κτιζω
+      - 1
+    - - ο
+      - 1
+    - - ου
+      - 1
+    - - ενεκα
+      - 1
+    - - κολλαομαι
+      - 1
+    - - αλλα
+      - 1
+    - - ουκετι
+      - 1
+    - - ωστε
+      - 1
+    - - δε
+      - 1
+    - - μη
+      - 1
+    - - πορνεια
+      - 1
+    - - συ
+      - 1
+  variant_mark_refs:
+  - Mark 10:6
+  - Mark 10:7
+  - Mark 10:10
+  - Mark 10:11
+  variant_matt_refs:
+  - Matt 19:4
+  - Matt 19:5
+  - Matt 19:7
+  - Matt 19:9
+  variant_mark_count: 6
+  variant_matt_count: 7
+  span_density: 0.666667
+- id: 32
+  level: micro
+  pair_count: 16
+  confidence: high
+  avg_score: 0.451391
+  mark_start_ref: Mark 10:13
+  mark_end_ref: Mark 10:31
+  matt_start_ref: Matt 19:13
+  matt_end_ref: Matt 19:30
+  mark_span_refs:
+  - Mark 10:13
+  - Mark 10:14
+  - Mark 10:15
+  - Mark 10:16
+  - Mark 10:17
+  - Mark 10:18
+  - Mark 10:19
+  - Mark 10:20
+  - Mark 10:21
+  - Mark 10:22
+  - Mark 10:23
+  - Mark 10:24
+  - Mark 10:25
+  - Mark 10:26
+  - Mark 10:27
+  - Mark 10:28
+  - Mark 10:29
+  - Mark 10:30
+  - Mark 10:31
+  matt_span_refs:
+  - Matt 19:13
+  - Matt 19:14
+  - Matt 19:15
+  - Matt 19:16
+  - Matt 19:17
+  - Matt 19:18
+  - Matt 19:19
+  - Matt 19:20
+  - Matt 19:21
+  - Matt 19:22
+  - Matt 19:23
+  - Matt 19:24
+  - Matt 19:25
+  - Matt 19:26
+  - Matt 19:27
+  - Matt 19:28
+  - Matt 19:29
+  - Matt 19:30
+  matched_pairs:
+  - mark_ref: Mark 10:13
+    matt_ref: Matt 19:13
+    score: 0.430938
+  - mark_ref: Mark 10:14
+    matt_ref: Matt 19:14
+    score: 0.575292
+  - mark_ref: Mark 10:16
+    matt_ref: Matt 19:15
+    score: 0.117479
+  - mark_ref: Mark 10:17
+    matt_ref: Matt 19:16
+    score: 0.381656
+  - mark_ref: Mark 10:18
+    matt_ref: Matt 19:17
+    score: 0.175227
+  - mark_ref: Mark 10:19
+    matt_ref: Matt 19:18
+    score: 0.262333
+  - mark_ref: Mark 10:20
+    matt_ref: Matt 19:20
+    score: 0.220162
+  - mark_ref: Mark 10:21
+    matt_ref: Matt 19:21
+    score: 0.462222
+  - mark_ref: Mark 10:22
+    matt_ref: Matt 19:22
+    score: 0.681203
+  - mark_ref: Mark 10:23
+    matt_ref: Matt 19:23
+    score: 0.336256
+  - mark_ref: Mark 10:25
+    matt_ref: Matt 19:24
+    score: 0.52323
+  - mark_ref: Mark 10:26
+    matt_ref: Matt 19:25
+    score: 0.437028
+  - mark_ref: Mark 10:27
+    matt_ref: Matt 19:26
+    score: 0.759327
+  - mark_ref: Mark 10:28
+    matt_ref: Matt 19:27
+    score: 0.47504
+  - mark_ref: Mark 10:30
+    matt_ref: Matt 19:29
+    score: 0.390061
+  - mark_ref: Mark 10:31
+    matt_ref: Matt 19:30
+    score: 0.994802
+  unmatched_mark_refs:
+  - Mark 10:15
+  - Mark 10:24
+  - Mark 10:29
+  unmatched_matt_refs:
+  - Matt 19:19
+  - Matt 19:28
+  mark_token_count: 345
+  matt_token_count: 316
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 5
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 37
+    present_indicative: 13
+    present_indicative_ratio: 0.3514
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 1
+    kingdom_heaven: 2
+    pleroo: 0
+    grapho: 0
+    indicative_total: 45
+    present_indicative: 14
+    present_indicative_ratio: 0.3111
+  aggregate_diff:
+    lemma_insertions: 38
+    lemma_deletions: 58
+    lemma_replacements: 111
+    moved_tokens_top:
+    - - αυτος
+      - 4
+    - - ο
+      - 4
+    - - και
+      - 3
+    - - δε
+      - 2
+    - - εισερχομαι
+      - 2
+    - - κωλυω
+      - 1
+    - - μη
+      - 1
+    - - εις
+      - 1
+    - - τις
+      - 1
+    - - πας
+      - 1
+    - - πωλεω
+      - 1
+    - - υπαγω
+      - 1
+    - - λεγω
+      - 1
+    - - αγρος
+      - 1
+    - - αδελφη
+      - 1
+    - - αδελφος
+      - 1
+    - - εκατονταπλασιων
+      - 1
+    - - μητηρ
+      - 1
+    - - οικια
+      - 1
+    - - τεκνον
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 14
+    - - αυτος
+      - 10
+    - - και
+      - 8
+    - - δε
+      - 6
+    - - λεγω
+      - 6
+    - - εγω
+      - 4
+    - - ειμι
+      - 4
+    - - ιησους
+      - 4
+    - - εις
+      - 4
+    - - βασιλεια
+      - 3
+    - - τις
+      - 3
+    - - πας
+      - 3
+    - - ινα
+      - 2
+    - - μαθητης
+      - 2
+    - - παιδιον
+      - 2
+    - - αφιημι
+      - 2
+    - - γαρ
+      - 2
+    - - αγαθος
+      - 2
+    - - αιωνιος
+      - 2
+    - - ζωη
+      - 2
+    mark_only_lemmas_top:
+    - - θεος
+      - 3
+    - - μη
+      - 3
+    - - και
+      - 3
+    - - επι
+      - 2
+    - - δε
+      - 2
+    - - απτω
+      - 1
+    - - αγανακτεω
+      - 1
+    - - οραω
+      - 1
+    - - εναγκαλιζομαι
+      - 1
+    - - κατευλογεω
+      - 1
+    - - τιθημι
+      - 1
+    - - γονυπετεω
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - επερωταω
+      - 1
+    - - κληρονομεω
+      - 1
+    - - οδος
+      - 1
+    - - προστρεχω
+      - 1
+    - - ιησους
+      - 1
+    - - ουδεις
+      - 1
+    - - αποστερεω
+      - 1
+    matt_only_lemmas_top:
+    - - λεγω
+      - 4
+    - - ειμι
+      - 4
+    - - δε
+      - 4
+    - - επιτιθημι
+      - 2
+    - - τοτε
+      - 2
+    - - ουρανος
+      - 2
+    - - θελω
+      - 2
+    - - νεανισκος
+      - 2
+    - - τις
+      - 2
+    - - ακουω
+      - 2
+    - - συ
+      - 2
+    - - αρα
+      - 2
+    - - προσευχομαι
+      - 1
+    - - χειρ
+      - 1
+    - - εκειθεν
+      - 1
+    - - πορευομαι
+      - 1
+    - - εχω
+      - 1
+    - - ιδου
+      - 1
+    - - προσερχομαι
+      - 1
+    - - εισερχομαι
+      - 1
+  variant_mark_refs:
+  - Mark 10:13
+  - Mark 10:15
+  - Mark 10:16
+  - Mark 10:19
+  - Mark 10:20
+  - Mark 10:21
+  - Mark 10:24
+  - Mark 10:25
+  - Mark 10:26
+  - Mark 10:27
+  - Mark 10:28
+  - Mark 10:29
+  - Mark 10:30
+  - Mark 10:31
+  variant_matt_refs:
+  - Matt 19:13
+  - Matt 19:15
+  - Matt 19:16
+  - Matt 19:17
+  - Matt 19:18
+  - Matt 19:20
+  - Matt 19:21
+  - Matt 19:22
+  - Matt 19:23
+  - Matt 19:24
+  - Matt 19:25
+  - Matt 19:28
+  - Matt 19:29
+  variant_mark_count: 21
+  variant_matt_count: 27
+  span_density: 0.842105
+- id: 33
+  level: micro
+  pair_count: 16
+  confidence: high
+  avg_score: 0.498055
+  mark_start_ref: Mark 10:32
+  mark_end_ref: Mark 10:49
+  matt_start_ref: Matt 20:17
+  matt_end_ref: Matt 20:32
+  mark_span_refs:
+  - Mark 10:32
+  - Mark 10:33
+  - Mark 10:34
+  - Mark 10:35
+  - Mark 10:36
+  - Mark 10:37
+  - Mark 10:38
+  - Mark 10:39
+  - Mark 10:40
+  - Mark 10:41
+  - Mark 10:42
+  - Mark 10:43
+  - Mark 10:44
+  - Mark 10:45
+  - Mark 10:46
+  - Mark 10:47
+  - Mark 10:48
+  - Mark 10:49
+  matt_span_refs:
+  - Matt 20:17
+  - Matt 20:18
+  - Matt 20:19
+  - Matt 20:20
+  - Matt 20:21
+  - Matt 20:22
+  - Matt 20:23
+  - Matt 20:24
+  - Matt 20:25
+  - Matt 20:26
+  - Matt 20:27
+  - Matt 20:28
+  - Matt 20:29
+  - Matt 20:30
+  - Matt 20:31
+  - Matt 20:32
+  matched_pairs:
+  - mark_ref: Mark 10:32
+    matt_ref: Matt 20:17
+    score: 0.226991
+  - mark_ref: Mark 10:33
+    matt_ref: Matt 20:18
+    score: 0.787443
+  - mark_ref: Mark 10:34
+    matt_ref: Matt 20:19
+    score: 0.224006
+  - mark_ref: Mark 10:35
+    matt_ref: Matt 20:20
+    score: 0.203635
+  - mark_ref: Mark 10:37
+    matt_ref: Matt 20:21
+    score: 0.286716
+  - mark_ref: Mark 10:38
+    matt_ref: Matt 20:22
+    score: 0.582217
+  - mark_ref: Mark 10:40
+    matt_ref: Matt 20:23
+    score: 0.687536
+  - mark_ref: Mark 10:41
+    matt_ref: Matt 20:24
+    score: 0.379279
+  - mark_ref: Mark 10:42
+    matt_ref: Matt 20:25
+    score: 0.60992
+  - mark_ref: Mark 10:43
+    matt_ref: Matt 20:26
+    score: 0.995642
+  - mark_ref: Mark 10:44
+    matt_ref: Matt 20:27
+    score: 0.768817
+  - mark_ref: Mark 10:45
+    matt_ref: Matt 20:28
+    score: 0.908783
+  - mark_ref: Mark 10:46
+    matt_ref: Matt 20:29
+    score: 0.19691
+  - mark_ref: Mark 10:47
+    matt_ref: Matt 20:30
+    score: 0.354315
+  - mark_ref: Mark 10:48
+    matt_ref: Matt 20:31
+    score: 0.439743
+  - mark_ref: Mark 10:49
+    matt_ref: Matt 20:32
+    score: 0.316928
+  unmatched_mark_refs:
+  - Mark 10:36
+  - Mark 10:39
+  unmatched_matt_refs: []
+  mark_token_count: 336
+  matt_token_count: 277
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 52
+    present_indicative: 20
+    present_indicative_ratio: 0.3846
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 39
+    present_indicative: 14
+    present_indicative_ratio: 0.359
+  aggregate_diff:
+    lemma_insertions: 37
+    lemma_deletions: 60
+    lemma_replacements: 99
+    moved_tokens_top:
+    - - ο
+      - 3
+    - - ιησους
+      - 2
+    - - και
+      - 2
+    - - αυτος
+      - 2
+    - - συ
+      - 2
+    - - εγω
+      - 2
+    - - ελεαω
+      - 2
+    - - αναβαινω
+      - 1
+    - - δωδεκα
+      - 1
+    - - εις
+      - 1
+    - - ιεροσολυμα
+      - 1
+    - - λεγω
+      - 1
+    - - παραλαμβανω
+      - 1
+    - - ινα
+      - 1
+    - - καθιζω
+      - 1
+    - - δε
+      - 1
+    - - εν
+      - 1
+    common_lemmas_top:
+    - - και
+      - 12
+    - - ο
+      - 12
+    - - αυτος
+      - 11
+    - - λεγω
+      - 6
+    - - ιησους
+      - 5
+    - - υιος
+      - 5
+    - - εγω
+      - 5
+    - - εν
+      - 4
+    - - δε
+      - 4
+    - - συ
+      - 4
+    - - ος
+      - 4
+    - - ου
+      - 4
+    - - εις
+      - 3
+    - - αλλα
+      - 3
+    - - ειμι
+      - 3
+    - - αναβαινω
+      - 2
+    - - ιεροσολυμα
+      - 2
+    - - ανθρωπος
+      - 2
+    - - αιτεω
+      - 2
+    - - δεξιος
+      - 2
+    mark_only_lemmas_top:
+    - - αρχω
+      - 4
+    - - δε
+      - 2
+    - - ειμι
+      - 2
+    - - ιακωβος
+      - 2
+    - - ιωαννης
+      - 2
+    - - η
+      - 2
+    - - τυφλος
+      - 2
+    - - ακολουθεω
+      - 1
+    - - θαμβεομαι
+      - 1
+    - - μελλω
+      - 1
+    - - παλιν
+      - 1
+    - - προαγω
+      - 1
+    - - συμβαινω
+      - 1
+    - - φοβεομαι
+      - 1
+    - - εθνος
+      - 1
+    - - οτι
+      - 1
+    - - ανιστημι
+      - 1
+    - - αποκτεινω
+      - 1
+    - - εμπτυω
+      - 1
+    - - μετα
+      - 1
+    matt_only_lemmas_top:
+    - - τις
+      - 3
+    - - δυο
+      - 3
+    - - παρα
+      - 2
+    - - θελω
+      - 2
+    - - λεγω
+      - 2
+    - - κυριος
+      - 2
+    - - ιδιος
+      - 1
+    - - κατα
+      - 1
+    - - μαθητης
+      - 1
+    - - εγειρω
+      - 1
+    - - εθνος
+      - 1
+    - - εις
+      - 1
+    - - ο
+      - 1
+    - - παραδιδωμι
+      - 1
+    - - σταυροω
+      - 1
+    - - τριτος
+      - 1
+    - - μετα
+      - 1
+    - - μητηρ
+      - 1
+    - - προσερχομαι
+      - 1
+    - - προσκυνεω
+      - 1
+  variant_mark_refs:
+  - Mark 10:32
+  - Mark 10:33
+  - Mark 10:34
+  - Mark 10:35
+  - Mark 10:36
+  - Mark 10:37
+  - Mark 10:38
+  - Mark 10:39
+  - Mark 10:40
+  - Mark 10:42
+  - Mark 10:43
+  - Mark 10:44
+  - Mark 10:46
+  - Mark 10:47
+  - Mark 10:49
+  variant_matt_refs:
+  - Matt 20:17
+  - Matt 20:19
+  - Matt 20:20
+  - Matt 20:21
+  - Matt 20:22
+  - Matt 20:23
+  - Matt 20:26
+  - Matt 20:27
+  - Matt 20:30
+  - Matt 20:31
+  variant_mark_count: 27
+  variant_matt_count: 20
+  span_density: 0.888889
+- id: 34
+  level: micro
+  pair_count: 10
+  confidence: medium
+  avg_score: 0.335306
+  mark_start_ref: Mark 10:52
+  mark_end_ref: Mark 11:11
+  matt_start_ref: Matt 20:34
+  matt_end_ref: Matt 21:10
+  mark_span_refs:
+  - Mark 10:52
+  - Mark 11:1
+  - Mark 11:2
+  - Mark 11:3
+  - Mark 11:4
+  - Mark 11:5
+  - Mark 11:6
+  - Mark 11:7
+  - Mark 11:8
+  - Mark 11:9
+  - Mark 11:10
+  - Mark 11:11
+  matt_span_refs:
+  - Matt 20:34
+  - Matt 21:1
+  - Matt 21:2
+  - Matt 21:3
+  - Matt 21:4
+  - Matt 21:5
+  - Matt 21:6
+  - Matt 21:7
+  - Matt 21:8
+  - Matt 21:9
+  - Matt 21:10
+  matched_pairs:
+  - mark_ref: Mark 10:52
+    matt_ref: Matt 20:34
+    score: 0.212401
+  - mark_ref: Mark 11:1
+    matt_ref: Matt 21:1
+    score: 0.622686
+  - mark_ref: Mark 11:2
+    matt_ref: Matt 21:2
+    score: 0.262626
+  - mark_ref: Mark 11:3
+    matt_ref: Matt 21:3
+    score: 0.647275
+  - mark_ref: Mark 11:5
+    matt_ref: Matt 21:5
+    score: 0.102987
+  - mark_ref: Mark 11:6
+    matt_ref: Matt 21:6
+    score: 0.12886
+  - mark_ref: Mark 11:7
+    matt_ref: Matt 21:7
+    score: 0.17963
+  - mark_ref: Mark 11:8
+    matt_ref: Matt 21:8
+    score: 0.393421
+  - mark_ref: Mark 11:9
+    matt_ref: Matt 21:9
+    score: 0.589081
+  - mark_ref: Mark 11:11
+    matt_ref: Matt 21:10
+    score: 0.21409
+  unmatched_mark_refs:
+  - Mark 11:4
+  - Mark 11:10
+  unmatched_matt_refs:
+  - Matt 21:4
+  mark_token_count: 206
+  matt_token_count: 190
+  mark_marker_counts:
+    euthys: 3
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 27
+    present_indicative: 10
+    present_indicative_ratio: 0.3704
+  matt_marker_counts:
+    euthys: 3
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 1
+    grapho: 0
+    indicative_total: 22
+    present_indicative: 3
+    present_indicative_ratio: 0.1364
+  aggregate_diff:
+    lemma_insertions: 40
+    lemma_deletions: 41
+    lemma_replacements: 69
+    moved_tokens_top:
+    - - και
+      - 5
+    - - ο
+      - 3
+    - - δεω
+      - 1
+    - - ευρισκω
+      - 1
+    - - πωλος
+      - 1
+    - - αποστελλω
+      - 1
+    - - λεγω
+      - 1
+    - - δε
+      - 1
+    - - καθως
+      - 1
+    - - επι
+      - 1
+    - - στρωννυμι
+      - 1
+    - - πας
+      - 1
+    common_lemmas_top:
+    - - και
+      - 10
+    - - ο
+      - 10
+    - - αυτος
+      - 5
+    - - εις
+      - 3
+    - - λεγω
+      - 3
+    - - πωλος
+      - 3
+    - - ακολουθεω
+      - 2
+    - - ιησους
+      - 2
+    - - αποστελλω
+      - 2
+    - - ιεροσολυμα
+      - 2
+    - - συ
+      - 2
+    - - κυριος
+      - 2
+    - - δε
+      - 2
+    - - ιματιον
+      - 2
+    - - αναβλεπω
+      - 1
+    - - βηθφαγη
+      - 1
+    - - δυο
+      - 1
+    - - εγγιζω
+      - 1
+    - - ελαια
+      - 1
+    - - μαθητης
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 3
+    - - ευθυς
+      - 2
+    - - λεγω
+      - 2
+    - - υπαγω
+      - 2
+    - - βηθανια
+      - 2
+    - - προς
+      - 2
+    - - καθιζω
+      - 2
+    - - φερω
+      - 2
+    - - ποιεω
+      - 2
+    - - εν
+      - 1
+    - - οδος
+      - 1
+    - - πιστις
+      - 1
+    - - συ
+      - 1
+    - - σωζω
+      - 1
+    - - ανθρωπος
+      - 1
+    - - εισπορευομαι
+      - 1
+    - - επι
+      - 1
+    - - ος
+      - 1
+    - - ουδεις
+      - 1
+    - - ουπω
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 3
+    - - ονος
+      - 3
+    - - ευθεως
+      - 2
+    - - ερχομαι
+      - 2
+    - - αγω
+      - 2
+    - - πορευομαι
+      - 2
+    - - υιος
+      - 2
+    - - οχλος
+      - 2
+    - - αυτος
+      - 2
+    - - λεγω
+      - 2
+    - - απτω
+      - 1
+    - - ομμα
+      - 1
+    - - σπλαγχνιζομαι
+      - 1
+    - - ιησους
+      - 1
+    - - τοτε
+      - 1
+    - - εγω
+      - 1
+    - - μετα
+      - 1
+    - - βασιλευς
+      - 1
+    - - επι
+      - 1
+    - - επιβαινω
+      - 1
+  variant_mark_refs:
+  - Mark 10:52
+  - Mark 11:2
+  - Mark 11:3
+  - Mark 11:4
+  - Mark 11:6
+  - Mark 11:7
+  - Mark 11:8
+  - Mark 11:9
+  - Mark 11:10
+  - Mark 11:11
+  variant_matt_refs:
+  - Matt 20:34
+  - Matt 21:1
+  - Matt 21:2
+  - Matt 21:3
+  - Matt 21:4
+  - Matt 21:5
+  - Matt 21:6
+  - Matt 21:7
+  - Matt 21:9
+  variant_mark_count: 22
+  variant_matt_count: 16
+  span_density: 0.833333
+- id: 35
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.685294
+  mark_start_ref: Mark 11:15
+  mark_end_ref: Mark 11:17
+  matt_start_ref: Matt 21:12
+  matt_end_ref: Matt 21:13
+  mark_span_refs:
+  - Mark 11:15
+  - Mark 11:16
+  - Mark 11:17
+  matt_span_refs:
+  - Matt 21:12
+  - Matt 21:13
+  matched_pairs:
+  - mark_ref: Mark 11:15
+    matt_ref: Matt 21:12
+    score: 0.64079
+  - mark_ref: Mark 11:17
+    matt_ref: Matt 21:13
+    score: 0.729798
+  unmatched_mark_refs:
+  - Mark 11:16
+  unmatched_matt_refs: []
+  mark_token_count: 65
+  matt_token_count: 45
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 1
+    indicative_total: 9
+    present_indicative: 1
+    present_indicative_ratio: 0.1111
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 1
+    indicative_total: 7
+    present_indicative: 2
+    present_indicative_ratio: 0.2857
+  aggregate_diff:
+    lemma_insertions: 4
+    lemma_deletions: 14
+    lemma_replacements: 1
+    moved_tokens_top:
+    - - και
+      - 1
+    - - καταστρεφω
+      - 1
+    - - αυτος
+      - 1
+    common_lemmas_top:
+    - - και
+      - 2
+    - - ο
+      - 2
+    - - αγοραζω
+      - 1
+    - - εις
+      - 1
+    - - εισερχομαι
+      - 1
+    - - εκβαλλω
+      - 1
+    - - εν
+      - 1
+    - - ιερος
+      - 1
+    - - καθεδρα
+      - 1
+    - - καταστρεφω
+      - 1
+    - - κολλυβιστης
+      - 1
+    - - περιστερα
+      - 1
+    - - πωλεω
+      - 1
+    - - τραπεζα
+      - 1
+    - - αυτος
+      - 1
+    - - γραφω
+      - 1
+    - - δε
+      - 1
+    - - εγω
+      - 1
+    - - καλεω
+      - 1
+    - - λεγω
+      - 1
+    mark_only_lemmas_top:
+    - - αρχω
+      - 1
+    - - ερχομαι
+      - 1
+    - - ιεροσολυμα
+      - 1
+    - - διδασκω
+      - 1
+    - - εθνος
+      - 1
+    - - οτι
+      - 1
+    - - ου
+      - 1
+    - - πας
+      - 1
+    matt_only_lemmas_top:
+    - - ιησους
+      - 1
+    - - πας
+      - 1
+  variant_mark_refs:
+  - Mark 11:15
+  - Mark 11:17
+  variant_matt_refs:
+  - Matt 21:12
+  - Matt 21:13
+  variant_mark_count: 5
+  variant_matt_count: 3
+  span_density: 0.666667
+- id: 36
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.313912
+  mark_start_ref: Mark 11:21
+  mark_end_ref: Mark 11:24
+  matt_start_ref: Matt 21:20
+  matt_end_ref: Matt 21:22
+  mark_span_refs:
+  - Mark 11:21
+  - Mark 11:22
+  - Mark 11:23
+  - Mark 11:24
+  matt_span_refs:
+  - Matt 21:20
+  - Matt 21:21
+  - Matt 21:22
+  matched_pairs:
+  - mark_ref: Mark 11:21
+    matt_ref: Matt 21:20
+    score: 0.172562
+  - mark_ref: Mark 11:23
+    matt_ref: Matt 21:21
+    score: 0.333573
+  - mark_ref: Mark 11:24
+    matt_ref: Matt 21:22
+    score: 0.4356
+  unmatched_mark_refs:
+  - Mark 11:22
+  unmatched_matt_refs: []
+  mark_token_count: 68
+  matt_token_count: 55
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 8
+    present_indicative_ratio: 0.6154
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 7
+    present_indicative: 1
+    present_indicative_ratio: 0.1429
+  aggregate_diff:
+    lemma_insertions: 10
+    lemma_deletions: 21
+    lemma_replacements: 26
+    moved_tokens_top:
+    - - και
+      - 2
+    - - ξηραινω
+      - 1
+    - - αλλα
+      - 1
+    - - αυτος
+      - 1
+    - - διακρινω
+      - 1
+    - - λεγω
+      - 1
+    - - μη
+      - 1
+    - - ο
+      - 1
+    common_lemmas_top:
+    - - και
+      - 3
+    - - λεγω
+      - 2
+    - - ο
+      - 2
+    - - ξηραινω
+      - 1
+    - - συκη
+      - 1
+    - - αιρω
+      - 1
+    - - αλλα
+      - 1
+    - - αμην
+      - 1
+    - - αυτος
+      - 1
+    - - βαλλω
+      - 1
+    - - γινομαι
+      - 1
+    - - διακρινω
+      - 1
+    - - εις
+      - 1
+    - - θαλασσα
+      - 1
+    - - μη
+      - 1
+    - - ορος
+      - 1
+    - - ουτος
+      - 1
+    - - συ
+      - 1
+    - - αιτεω
+      - 1
+    - - λαμβανω
+      - 1
+    mark_only_lemmas_top:
+    - - ος
+      - 2
+    - - ειμι
+      - 2
+    - - οτι
+      - 2
+    - - αναμιμνησκω
+      - 1
+    - - αυτος
+      - 1
+    - - ιδε
+      - 1
+    - - καταραομαι
+      - 1
+    - - πετρος
+      - 1
+    - - ραββι
+      - 1
+    - - αν
+      - 1
+    - - εν
+      - 1
+    - - καρδια
+      - 1
+    - - λαλεω
+      - 1
+    - - πιστευω
+      - 1
+    - - δια
+      - 1
+    - - λεγω
+      - 1
+    - - ουτος
+      - 1
+    - - προσευχομαι
+      - 1
+    - - συ
+      - 1
+    matt_only_lemmas_top:
+    - - θαυμαζω
+      - 1
+    - - μαθητης
+      - 1
+    - - οραω
+      - 1
+    - - παραχρημα
+      - 1
+    - - πως
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - δε
+      - 1
+    - - εαν
+      - 1
+    - - εχω
+      - 1
+    - - ιησους
+      - 1
+    - - καν
+      - 1
+    - - μονος
+      - 1
+    - - ου
+      - 1
+    - - πιστις
+      - 1
+    - - ποιεω
+      - 1
+    - - συκη
+      - 1
+    - - αν
+      - 1
+    - - εν
+      - 1
+    - - ο
+      - 1
+    - - προσευχη
+      - 1
+  variant_mark_refs:
+  - Mark 11:23
+  - Mark 11:24
+  variant_matt_refs:
+  - Matt 21:22
+  variant_mark_count: 5
+  variant_matt_count: 1
+  span_density: 0.75
+- id: 37
+  level: micro
+  pair_count: 5
+  confidence: high
+  avg_score: 0.53922
+  mark_start_ref: Mark 11:28
+  mark_end_ref: Mark 11:33
+  matt_start_ref: Matt 21:23
+  matt_end_ref: Matt 21:27
+  mark_span_refs:
+  - Mark 11:28
+  - Mark 11:29
+  - Mark 11:30
+  - Mark 11:31
+  - Mark 11:32
+  - Mark 11:33
+  matt_span_refs:
+  - Matt 21:23
+  - Matt 21:24
+  - Matt 21:25
+  - Matt 21:26
+  - Matt 21:27
+  matched_pairs:
+  - mark_ref: Mark 11:28
+    matt_ref: Matt 21:23
+    score: 0.381257
+  - mark_ref: Mark 11:29
+    matt_ref: Matt 21:24
+    score: 0.552237
+  - mark_ref: Mark 11:31
+    matt_ref: Matt 21:25
+    score: 0.511503
+  - mark_ref: Mark 11:32
+    matt_ref: Matt 21:26
+    score: 0.520381
+  - mark_ref: Mark 11:33
+    matt_ref: Matt 21:27
+    score: 0.73072
+  unmatched_mark_refs:
+  - Mark 11:30
+  unmatched_matt_refs: []
+  mark_token_count: 105
+  matt_token_count: 116
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 19
+    present_indicative: 6
+    present_indicative_ratio: 0.3158
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 18
+    present_indicative: 6
+    present_indicative_ratio: 0.3333
+  aggregate_diff:
+    lemma_insertions: 24
+    lemma_deletions: 15
+    lemma_replacements: 24
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - δε
+      - 1
+    - - λογος
+      - 1
+    - - συ
+      - 1
+    - - προφητης
+      - 1
+    common_lemmas_top:
+    - - λεγω
+      - 5
+    - - αυτος
+      - 4
+    - - ο
+      - 4
+    - - εν
+      - 3
+    - - εξουσια
+      - 3
+    - - ουτος
+      - 3
+    - - ποιεω
+      - 3
+    - - ποιος
+      - 3
+    - - συ
+      - 3
+    - - και
+      - 2
+    - - τις
+      - 2
+    - - αποκρινομαι
+      - 2
+    - - εγω
+      - 2
+    - - ιησους
+      - 2
+    - - εκ
+      - 2
+    - - ου
+      - 2
+    - - διδωμι
+      - 1
+    - - δε
+      - 1
+    - - εις
+      - 1
+    - - λογος
+      - 1
+    mark_only_lemmas_top:
+    - - και
+      - 2
+    - - η
+      - 1
+    - - ινα
+      - 1
+    - - επερωταω
+      - 1
+    - - προς
+      - 1
+    - - αλλα
+      - 1
+    - - απας
+      - 1
+    - - ειμι
+      - 1
+    - - οντως
+      - 1
+    - - οτι
+      - 1
+    matt_only_lemmas_top:
+    - - εαν
+      - 2
+    - - δε
+      - 2
+    - - αρχιερευς
+      - 1
+    - - διδασκω
+      - 1
+    - - εις
+      - 1
+    - - ερχομαι
+      - 1
+    - - ιερος
+      - 1
+    - - λαος
+      - 1
+    - - πρεσβυτερος
+      - 1
+    - - προσερχομαι
+      - 1
+    - - ερωταω
+      - 1
+    - - καγω
+      - 1
+    - - ος
+      - 1
+    - - ανθρωπος
+      - 1
+    - - βαπτισμα
+      - 1
+    - - εγω
+      - 1
+    - - ειμι
+      - 1
+    - - εν
+      - 1
+    - - η
+      - 1
+    - - ιωαννης
+      - 1
+  variant_mark_refs:
+  - Mark 11:28
+  - Mark 11:29
+  - Mark 11:30
+  - Mark 11:31
+  - Mark 11:32
+  - Mark 11:33
+  variant_matt_refs:
+  - Matt 21:23
+  - Matt 21:25
+  - Matt 21:26
+  variant_mark_count: 13
+  variant_matt_count: 4
+  span_density: 0.833333
+- id: 38
+  level: micro
+  pair_count: 9
+  confidence: high
+  avg_score: 0.48053
+  mark_start_ref: Mark 12:1
+  mark_end_ref: Mark 12:10
+  matt_start_ref: Matt 21:33
+  matt_end_ref: Matt 21:42
+  mark_span_refs:
+  - Mark 12:1
+  - Mark 12:2
+  - Mark 12:3
+  - Mark 12:4
+  - Mark 12:5
+  - Mark 12:6
+  - Mark 12:7
+  - Mark 12:8
+  - Mark 12:9
+  - Mark 12:10
+  matt_span_refs:
+  - Matt 21:33
+  - Matt 21:34
+  - Matt 21:35
+  - Matt 21:36
+  - Matt 21:37
+  - Matt 21:38
+  - Matt 21:39
+  - Matt 21:40
+  - Matt 21:41
+  - Matt 21:42
+  matched_pairs:
+  - mark_ref: Mark 12:1
+    matt_ref: Matt 21:33
+    score: 0.501801
+  - mark_ref: Mark 12:2
+    matt_ref: Matt 21:34
+    score: 0.567929
+  - mark_ref: Mark 12:3
+    matt_ref: Matt 21:35
+    score: 0.207974
+  - mark_ref: Mark 12:4
+    matt_ref: Matt 21:36
+    score: 0.384706
+  - mark_ref: Mark 12:6
+    matt_ref: Matt 21:37
+    score: 0.3439
+  - mark_ref: Mark 12:7
+    matt_ref: Matt 21:38
+    score: 0.644235
+  - mark_ref: Mark 12:8
+    matt_ref: Matt 21:39
+    score: 0.747891
+  - mark_ref: Mark 12:9
+    matt_ref: Matt 21:40
+    score: 0.436102
+  - mark_ref: Mark 12:10
+    matt_ref: Matt 21:42
+    score: 0.49023
+  unmatched_mark_refs:
+  - Mark 12:5
+  unmatched_matt_refs:
+  - Matt 21:41
+  mark_token_count: 151
+  matt_token_count: 177
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 30
+    present_indicative: 1
+    present_indicative_ratio: 0.0333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 31
+    present_indicative: 4
+    present_indicative_ratio: 0.129
+  aggregate_diff:
+    lemma_insertions: 36
+    lemma_deletions: 29
+    lemma_replacements: 54
+    moved_tokens_top:
+    - - αυτος
+      - 2
+    - - αμπελων
+      - 1
+    - - ανθρωπος
+      - 1
+    - - εν
+      - 1
+    - - παραβολη
+      - 1
+    - - φραγμος
+      - 1
+    - - φυτευω
+      - 1
+    - - δουλος
+      - 1
+    - - καιρος
+      - 1
+    - - ο
+      - 1
+    - - υιος
+      - 1
+    - - γεωργος
+      - 1
+    - - λεγω
+      - 1
+    - - αποκτεινω
+      - 1
+    - - και
+      - 1
+    - - ερχομαι
+      - 1
+    - - ποιεω
+      - 1
+    - - τις
+      - 1
+    - - αναγινωσκω
+      - 1
+    - - ουτος
+      - 1
+    common_lemmas_top:
+    - - αυτος
+      - 6
+    - - ο
+      - 6
+    - - και
+      - 5
+    - - γεωργος
+      - 4
+    - - αμπελων
+      - 3
+    - - αποστελλω
+      - 3
+    - - λαμβανω
+      - 3
+    - - οικοδομεω
+      - 2
+    - - δουλος
+      - 2
+    - - προς
+      - 2
+    - - λεγω
+      - 2
+    - - αποκτεινω
+      - 2
+    - - ουτος
+      - 2
+    - - ανθρωπος
+      - 1
+    - - αποδημεω
+      - 1
+    - - εκδιδωμι
+      - 1
+    - - εν
+      - 1
+    - - ορυσσω
+      - 1
+    - - παραβολη
+      - 1
+    - - περιτιθημι
+      - 1
+    mark_only_lemmas_top:
+    - - και
+      - 2
+    - - προς
+      - 2
+    - - οτι
+      - 2
+    - - αρχω
+      - 1
+    - - λαλεω
+      - 1
+    - - υποληνιον
+      - 1
+    - - αμπελων
+      - 1
+    - - απο
+      - 1
+    - - ινα
+      - 1
+    - - παρα
+      - 1
+    - - αποστελλω
+      - 1
+    - - κενος
+      - 1
+    - - ατιμαζω
+      - 1
+    - - κακεινος
+      - 1
+    - - κεφαλιοω
+      - 1
+    - - αγαπητος
+      - 1
+    - - εις
+      - 1
+    - - εσχατος
+      - 1
+    - - ετι
+      - 1
+    - - εχω
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 3
+    - - ειμι
+      - 2
+    - - αυτος
+      - 2
+    - - ο
+      - 2
+    - - εν
+      - 2
+    - - ακουω
+      - 1
+    - - αλλος
+      - 1
+    - - ληνος
+      - 1
+    - - οικοδεσποτης
+      - 1
+    - - οστις
+      - 1
+    - - εγγιζω
+      - 1
+    - - οτε
+      - 1
+    - - αποκτεινω
+      - 1
+    - - γεωργος
+      - 1
+    - - δουλος
+      - 1
+    - - λιθοβολεω
+      - 1
+    - - μεν
+      - 1
+    - - ος
+      - 1
+    - - ποιεω
+      - 1
+    - - πολυς
+      - 1
+  variant_mark_refs:
+  - Mark 12:1
+  - Mark 12:2
+  - Mark 12:3
+  - Mark 12:4
+  - Mark 12:5
+  - Mark 12:6
+  - Mark 12:7
+  - Mark 12:8
+  - Mark 12:9
+  variant_matt_refs:
+  - Matt 21:33
+  - Matt 21:38
+  variant_mark_count: 14
+  variant_matt_count: 2
+  span_density: 0.9
+- id: 39
+  level: micro
+  pair_count: 15
+  confidence: medium
+  avg_score: 0.392415
+  mark_start_ref: Mark 12:13
+  mark_end_ref: Mark 12:27
+  matt_start_ref: Matt 22:15
+  matt_end_ref: Matt 22:32
+  mark_span_refs:
+  - Mark 12:13
+  - Mark 12:14
+  - Mark 12:15
+  - Mark 12:16
+  - Mark 12:17
+  - Mark 12:18
+  - Mark 12:19
+  - Mark 12:20
+  - Mark 12:21
+  - Mark 12:22
+  - Mark 12:23
+  - Mark 12:24
+  - Mark 12:25
+  - Mark 12:26
+  - Mark 12:27
+  matt_span_refs:
+  - Matt 22:15
+  - Matt 22:16
+  - Matt 22:17
+  - Matt 22:18
+  - Matt 22:19
+  - Matt 22:20
+  - Matt 22:21
+  - Matt 22:22
+  - Matt 22:23
+  - Matt 22:24
+  - Matt 22:25
+  - Matt 22:26
+  - Matt 22:27
+  - Matt 22:28
+  - Matt 22:29
+  - Matt 22:30
+  - Matt 22:31
+  - Matt 22:32
+  matched_pairs:
+  - mark_ref: Mark 12:13
+    matt_ref: Matt 22:15
+    score: 0.155763
+  - mark_ref: Mark 12:14
+    matt_ref: Matt 22:16
+    score: 0.530643
+  - mark_ref: Mark 12:15
+    matt_ref: Matt 22:18
+    score: 0.183433
+  - mark_ref: Mark 12:16
+    matt_ref: Matt 22:20
+    score: 0.555213
+  - mark_ref: Mark 12:17
+    matt_ref: Matt 22:21
+    score: 0.530638
+  - mark_ref: Mark 12:18
+    matt_ref: Matt 22:23
+    score: 0.520409
+  - mark_ref: Mark 12:19
+    matt_ref: Matt 22:24
+    score: 0.407291
+  - mark_ref: Mark 12:20
+    matt_ref: Matt 22:25
+    score: 0.353711
+  - mark_ref: Mark 12:21
+    matt_ref: Matt 22:26
+    score: 0.188358
+  - mark_ref: Mark 12:22
+    matt_ref: Matt 22:27
+    score: 0.218752
+  - mark_ref: Mark 12:23
+    matt_ref: Matt 22:28
+    score: 0.471561
+  - mark_ref: Mark 12:24
+    matt_ref: Matt 22:29
+    score: 0.6972
+  - mark_ref: Mark 12:25
+    matt_ref: Matt 22:30
+    score: 0.409121
+  - mark_ref: Mark 12:26
+    matt_ref: Matt 22:31
+    score: 0.253813
+  - mark_ref: Mark 12:27
+    matt_ref: Matt 22:32
+    score: 0.410323
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 22:17
+  - Matt 22:19
+  - Matt 22:22
+  mark_token_count: 277
+  matt_token_count: 270
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 1
+    indicative_total: 38
+    present_indicative: 18
+    present_indicative_ratio: 0.4737
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 36
+    present_indicative: 17
+    present_indicative_ratio: 0.4722
+  aggregate_diff:
+    lemma_insertions: 42
+    lemma_deletions: 83
+    lemma_replacements: 80
+    moved_tokens_top:
+    - - αυτος
+      - 4
+    - - ο
+      - 4
+    - - ειμι
+      - 2
+    - - αληθεια
+      - 1
+    - - διδασκω
+      - 1
+    - - θεος
+      - 1
+    - - οδος
+      - 1
+    - - δε
+      - 1
+    - - αποδιδωμι
+      - 1
+    - - αναστασις
+      - 1
+    - - αφιημι
+      - 1
+    - - και
+      - 1
+    - - σπερμα
+      - 1
+    - - αποθνησκω
+      - 1
+    - - επτα
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 13
+    - - αυτος
+      - 9
+    - - και
+      - 7
+    - - ειμι
+      - 6
+    - - λεγω
+      - 6
+    - - θεος
+      - 5
+    - - τις
+      - 4
+    - - γυνη
+      - 4
+    - - γαρ
+      - 3
+    - - ου
+      - 3
+    - - μη
+      - 3
+    - - διδασκαλος
+      - 2
+    - - οιδα
+      - 2
+    - - περι
+      - 2
+    - - δε
+      - 2
+    - - αναστασις
+      - 2
+    - - αδελφος
+      - 2
+    - - αποθνησκω
+      - 2
+    - - σπερμα
+      - 2
+    - - επτα
+      - 2
+    mark_only_lemmas_top:
+    - - ινα
+      - 3
+    - - και
+      - 3
+    - - επι
+      - 3
+    - - λαμβανω
+      - 3
+    - - ου
+      - 3
+    - - προς
+      - 2
+    - - ερχομαι
+      - 2
+    - - καισαρ
+      - 2
+    - - μη
+      - 2
+    - - φερω
+      - 2
+    - - δε
+      - 2
+    - - αφιημι
+      - 2
+    - - εγω
+      - 2
+    - - καταλειπω
+      - 2
+    - - οτι
+      - 2
+    - - αποθνησκω
+      - 2
+    - - αυτος
+      - 2
+    - - σπερμα
+      - 2
+    - - ανιστημι
+      - 2
+    - - οταν
+      - 2
+    matt_only_lemmas_top:
+    - - εν
+      - 3
+    - - δε
+      - 3
+    - - τοτε
+      - 2
+    - - ουν
+      - 2
+    - - ο
+      - 2
+    - - εχω
+      - 2
+    - - λεγω
+      - 2
+    - - εγω
+      - 2
+    - - αναστασις
+      - 2
+    - - λαμβανω
+      - 1
+    - - οπως
+      - 1
+    - - παγιδευω
+      - 1
+    - - πορευομαι
+      - 1
+    - - συμβουλιον
+      - 1
+    - - αποστελλω
+      - 1
+    - - ηρωδιανοι
+      - 1
+    - - μαθητης
+      - 1
+    - - μετα
+      - 1
+    - - γινωσκω
+      - 1
+    - - ιησους
+      - 1
+  variant_mark_refs:
+  - Mark 12:14
+  - Mark 12:17
+  - Mark 12:18
+  - Mark 12:19
+  - Mark 12:21
+  - Mark 12:22
+  - Mark 12:23
+  - Mark 12:24
+  - Mark 12:25
+  - Mark 12:26
+  - Mark 12:27
+  variant_matt_refs:
+  - Matt 22:16
+  - Matt 22:21
+  - Matt 22:23
+  - Matt 22:25
+  - Matt 22:27
+  - Matt 22:28
+  - Matt 22:30
+  - Matt 22:32
+  variant_mark_count: 22
+  variant_matt_count: 10
+  span_density: 0.833333
+- id: 40
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.556749
+  mark_start_ref: Mark 12:30
+  mark_end_ref: Mark 12:31
+  matt_start_ref: Matt 22:37
+  matt_end_ref: Matt 22:39
+  mark_span_refs:
+  - Mark 12:30
+  - Mark 12:31
+  matt_span_refs:
+  - Matt 22:37
+  - Matt 22:38
+  - Matt 22:39
+  matched_pairs:
+  - mark_ref: Mark 12:30
+    matt_ref: Matt 22:37
+    score: 0.750299
+  - mark_ref: Mark 12:31
+    matt_ref: Matt 22:39
+    score: 0.363199
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 22:38
+  mark_token_count: 43
+  matt_token_count: 43
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 3
+    present_indicative: 1
+    present_indicative_ratio: 0.3333
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 4
+    present_indicative: 1
+    present_indicative_ratio: 0.25
+  aggregate_diff:
+    lemma_insertions: 0
+    lemma_deletions: 12
+    lemma_replacements: 10
+    moved_tokens_top:
+    - - ο
+      - 1
+    common_lemmas_top:
+    - - αγαπαω
+      - 2
+    - - ο
+      - 2
+    - - συ
+      - 2
+    - - διανοια
+      - 1
+    - - θεος
+      - 1
+    - - και
+      - 1
+    - - καρδια
+      - 1
+    - - κυριος
+      - 1
+    - - ολος
+      - 1
+    - - ψυχη
+      - 1
+    - - δευτερος
+      - 1
+    - - πλησιον
+      - 1
+    - - σεαυτου
+      - 1
+    - - ως
+      - 1
+    mark_only_lemmas_top:
+    - - εκ
+      - 1
+    - - ισχυς
+      - 1
+    - - αλλος
+      - 1
+    - - ειμι
+      - 1
+    - - εντολη
+      - 1
+    - - μεγας
+      - 1
+    - - ου
+      - 1
+    - - ουτος
+      - 1
+    matt_only_lemmas_top:
+    - - αυτος
+      - 2
+    - - δε
+      - 2
+    - - εν
+      - 1
+    - - φημι
+      - 1
+    - - ομοιος
+      - 1
+  variant_mark_refs:
+  - Mark 12:30
+  - Mark 12:31
+  variant_matt_refs:
+  - Matt 22:37
+  - Matt 22:38
+  - Matt 22:39
+  variant_mark_count: 3
+  variant_matt_count: 6
+  span_density: 0.666667
+- id: 41
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.406909
+  mark_start_ref: Mark 12:35
+  mark_end_ref: Mark 12:37
+  matt_start_ref: Matt 22:42
+  matt_end_ref: Matt 22:45
+  mark_span_refs:
+  - Mark 12:35
+  - Mark 12:36
+  - Mark 12:37
+  matt_span_refs:
+  - Matt 22:42
+  - Matt 22:43
+  - Matt 22:44
+  - Matt 22:45
+  matched_pairs:
+  - mark_ref: Mark 12:35
+    matt_ref: Matt 22:42
+    score: 0.288249
+  - mark_ref: Mark 12:36
+    matt_ref: Matt 22:44
+    score: 0.700581
+  - mark_ref: Mark 12:37
+    matt_ref: Matt 22:45
+    score: 0.231896
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 22:43
+  mark_token_count: 63
+  matt_token_count: 54
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 4
+    present_indicative_ratio: 0.5
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 7
+    present_indicative_ratio: 0.875
+  aggregate_diff:
+    lemma_insertions: 5
+    lemma_deletions: 21
+    lemma_replacements: 14
+    moved_tokens_top:
+    - - ειμι
+      - 1
+    - - λεγω
+      - 1
+    - - ο
+      - 1
+    - - υιος
+      - 1
+    common_lemmas_top:
+    - - δαυιδ
+      - 2
+    - - ειμι
+      - 2
+    - - λεγω
+      - 2
+    - - ο
+      - 2
+    - - υιος
+      - 2
+    - - κυριος
+      - 2
+    - - χριστος
+      - 1
+    - - αν
+      - 1
+    - - δεξιος
+      - 1
+    - - εγω
+      - 1
+    - - εκ
+      - 1
+    - - εχθρος
+      - 1
+    - - εως
+      - 1
+    - - καθημαι
+      - 1
+    - - πους
+      - 1
+    - - συ
+      - 1
+    - - τιθημι
+      - 1
+    - - υποκατω
+      - 1
+    - - αυτος
+      - 1
+    mark_only_lemmas_top:
+    - - εν
+      - 2
+    - - και
+      - 2
+    - - αποκρινομαι
+      - 1
+    - - γραμματευς
+      - 1
+    - - διδασκω
+      - 1
+    - - ιερος
+      - 1
+    - - ιησους
+      - 1
+    - - οτι
+      - 1
+    - - πως
+      - 1
+    - - αγιος
+      - 1
+    - - αυτος
+      - 1
+    - - δαυιδ
+      - 1
+    - - πνευμα
+      - 1
+    - - ακουω
+      - 1
+    - - ηδεως
+      - 1
+    - - λεγω
+      - 1
+    - - ο
+      - 1
+    - - οχλος
+      - 1
+    - - ποθεν
+      - 1
+    - - πολυς
+      - 1
+    matt_only_lemmas_top:
+    - - αυτος
+      - 1
+    - - δοκεω
+      - 1
+    - - περι
+      - 1
+    - - συ
+      - 1
+    - - τις
+      - 1
+    - - ει
+      - 1
+    - - καλεω
+      - 1
+    - - ουν
+      - 1
+    - - πως
+      - 1
+  variant_mark_refs:
+  - Mark 12:35
+  - Mark 12:36
+  - Mark 12:37
+  variant_matt_refs:
+  - Matt 22:43
+  - Matt 22:44
+  variant_mark_count: 9
+  variant_matt_count: 3
+  span_density: 0.75
+- id: 42
+  level: micro
+  pair_count: 8
+  confidence: high
+  avg_score: 0.497862
+  mark_start_ref: Mark 13:1
+  mark_end_ref: Mark 13:10
+  matt_start_ref: Matt 24:1
+  matt_end_ref: Matt 24:9
+  mark_span_refs:
+  - Mark 13:1
+  - Mark 13:2
+  - Mark 13:3
+  - Mark 13:4
+  - Mark 13:5
+  - Mark 13:6
+  - Mark 13:7
+  - Mark 13:8
+  - Mark 13:9
+  - Mark 13:10
+  matt_span_refs:
+  - Matt 24:1
+  - Matt 24:2
+  - Matt 24:3
+  - Matt 24:4
+  - Matt 24:5
+  - Matt 24:6
+  - Matt 24:7
+  - Matt 24:8
+  - Matt 24:9
+  matched_pairs:
+  - mark_ref: Mark 13:1
+    matt_ref: Matt 24:1
+    score: 0.212407
+  - mark_ref: Mark 13:2
+    matt_ref: Matt 24:2
+    score: 0.585439
+  - mark_ref: Mark 13:4
+    matt_ref: Matt 24:3
+    score: 0.222068
+  - mark_ref: Mark 13:5
+    matt_ref: Matt 24:4
+    score: 0.610139
+  - mark_ref: Mark 13:6
+    matt_ref: Matt 24:5
+    score: 0.773993
+  - mark_ref: Mark 13:7
+    matt_ref: Matt 24:6
+    score: 0.732003
+  - mark_ref: Mark 13:8
+    matt_ref: Matt 24:7
+    score: 0.697462
+  - mark_ref: Mark 13:10
+    matt_ref: Matt 24:9
+    score: 0.149384
+  unmatched_mark_refs:
+  - Mark 13:3
+  - Mark 13:9
+  unmatched_matt_refs:
+  - Matt 24:8
+  mark_token_count: 166
+  matt_token_count: 156
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 17
+    present_indicative: 5
+    present_indicative_ratio: 0.2941
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 20
+    present_indicative: 5
+    present_indicative_ratio: 0.25
+  aggregate_diff:
+    lemma_insertions: 34
+    lemma_deletions: 10
+    lemma_replacements: 38
+    moved_tokens_top:
+    - - αυτος
+      - 1
+    - - και
+      - 1
+    - - λιμος
+      - 1
+    - - εις
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 7
+    - - και
+      - 6
+    - - λεγω
+      - 4
+    - - αυτος
+      - 3
+    - - επι
+      - 3
+    - - μη
+      - 3
+    - - ειμι
+      - 3
+    - - βλεπω
+      - 2
+    - - ουτος
+      - 2
+    - - εγω
+      - 2
+    - - τις
+      - 2
+    - - πλαναω
+      - 2
+    - - εθνος
+      - 2
+    - - ιερος
+      - 1
+    - - μαθητης
+      - 1
+    - - οικοδομη
+      - 1
+    - - αφιημι
+      - 1
+    - - καταλυω
+      - 1
+    - - λιθος
+      - 1
+    - - ος
+      - 1
+    mark_only_lemmas_top:
+    - - οταν
+      - 2
+    - - διδασκαλος
+      - 1
+    - - εις
+      - 1
+    - - εκ
+      - 1
+    - - εκπορευομαι
+      - 1
+    - - ιδε
+      - 1
+    - - λεγω
+      - 1
+    - - λιθος
+      - 1
+    - - ποταπος
+      - 1
+    - - ιησους
+      - 1
+    - - και
+      - 1
+    - - μεγας
+      - 1
+    - - οικοδομη
+      - 1
+    - - μελλω
+      - 1
+    - - πας
+      - 1
+    - - συντελεω
+      - 1
+    - - αρχω
+      - 1
+    - - δε
+      - 1
+    - - οτι
+      - 1
+    - - αρχη
+      - 1
+    matt_only_lemmas_top:
+    - - προσερχομαι
+      - 2
+    - - αποκρινομαι
+      - 2
+    - - δε
+      - 2
+    - - συ
+      - 2
+    - - γαρ
+      - 2
+    - - ειμι
+      - 2
+    - - απο
+      - 1
+    - - εξερχομαι
+      - 1
+    - - επιδεικνυμι
+      - 1
+    - - ιησους
+      - 1
+    - - πορευομαι
+      - 1
+    - - αμην
+      - 1
+    - - πας
+      - 1
+    - - αιων
+      - 1
+    - - αυτος
+      - 1
+    - - ελαια
+      - 1
+    - - επι
+      - 1
+    - - ιδιος
+      - 1
+    - - καθημαι
+      - 1
+    - - κατα
+      - 1
+  variant_mark_refs:
+  - Mark 13:2
+  - Mark 13:3
+  - Mark 13:4
+  - Mark 13:5
+  - Mark 13:6
+  - Mark 13:7
+  - Mark 13:8
+  - Mark 13:9
+  - Mark 13:10
+  variant_matt_refs:
+  - Matt 24:1
+  - Matt 24:2
+  - Matt 24:3
+  - Matt 24:6
+  - Matt 24:7
+  variant_mark_count: 15
+  variant_matt_count: 6
+  span_density: 0.8
+- id: 43
+  level: micro
+  pair_count: 11
+  confidence: high
+  avg_score: 0.639255
+  mark_start_ref: Mark 13:13
+  mark_end_ref: Mark 13:23
+  matt_start_ref: Matt 24:13
+  matt_end_ref: Matt 24:25
+  mark_span_refs:
+  - Mark 13:13
+  - Mark 13:14
+  - Mark 13:15
+  - Mark 13:16
+  - Mark 13:17
+  - Mark 13:18
+  - Mark 13:19
+  - Mark 13:20
+  - Mark 13:21
+  - Mark 13:22
+  - Mark 13:23
+  matt_span_refs:
+  - Matt 24:13
+  - Matt 24:14
+  - Matt 24:15
+  - Matt 24:16
+  - Matt 24:17
+  - Matt 24:18
+  - Matt 24:19
+  - Matt 24:20
+  - Matt 24:21
+  - Matt 24:22
+  - Matt 24:23
+  - Matt 24:24
+  - Matt 24:25
+  matched_pairs:
+  - mark_ref: Mark 13:13
+    matt_ref: Matt 24:13
+    score: 0.483052
+  - mark_ref: Mark 13:14
+    matt_ref: Matt 24:15
+    score: 0.361576
+  - mark_ref: Mark 13:15
+    matt_ref: Matt 24:17
+    score: 0.760709
+  - mark_ref: Mark 13:16
+    matt_ref: Matt 24:18
+    score: 0.987262
+  - mark_ref: Mark 13:17
+    matt_ref: Matt 24:19
+    score: 1.0
+  - mark_ref: Mark 13:18
+    matt_ref: Matt 24:20
+    score: 0.555341
+  - mark_ref: Mark 13:19
+    matt_ref: Matt 24:21
+    score: 0.45972
+  - mark_ref: Mark 13:20
+    matt_ref: Matt 24:22
+    score: 0.737493
+  - mark_ref: Mark 13:21
+    matt_ref: Matt 24:23
+    score: 0.73048
+  - mark_ref: Mark 13:22
+    matt_ref: Matt 24:24
+    score: 0.603589
+  - mark_ref: Mark 13:23
+    matt_ref: Matt 24:25
+    score: 0.352582
+  unmatched_mark_refs: []
+  unmatched_matt_refs:
+  - Matt 24:14
+  - Matt 24:16
+  mark_token_count: 168
+  matt_token_count: 177
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 1
+    present_indicative_ratio: 0.0769
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 11
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 18
+    lemma_deletions: 30
+    lemma_replacements: 23
+    moved_tokens_top:
+    - - εν
+      - 1
+    - - ο
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 9
+    - - μη
+      - 6
+    - - και
+      - 4
+    - - δε
+      - 3
+    - - σωζω
+      - 2
+    - - εν
+      - 2
+    - - αιρω
+      - 2
+    - - αυτος
+      - 2
+    - - ημερα
+      - 2
+    - - γινομαι
+      - 2
+    - - γαρ
+      - 2
+    - - ου
+      - 2
+    - - ει
+      - 2
+    - - εκλεκτος
+      - 2
+    - - συ
+      - 2
+    - - εις
+      - 1
+    - - ουτος
+      - 1
+    - - τελος
+      - 1
+    - - υπομενω
+      - 1
+    - - αναγινωσκω
+      - 1
+    mark_only_lemmas_top:
+    - - και
+      - 3
+    - - πας
+      - 2
+    - - δε
+      - 2
+    - - εις
+      - 2
+    - - ος
+      - 2
+    - - δια
+      - 1
+    - - εγω
+      - 1
+    - - ειμι
+      - 1
+    - - μισεω
+      - 1
+    - - ονομα
+      - 1
+    - - υπο
+      - 1
+    - - δεω
+      - 1
+    - - ιουδαια
+      - 1
+    - - οπου
+      - 1
+    - - ορος
+      - 1
+    - - ου
+      - 1
+    - - τοτε
+      - 1
+    - - φευγω
+      - 1
+    - - εισερχομαι
+      - 1
+    - - μηδε
+      - 1
+    matt_only_lemmas_top:
+    - - μεγας
+      - 2
+    - - ιδου
+      - 2
+    - - αγιος
+      - 1
+    - - δανιηλ
+      - 1
+    - - δια
+      - 1
+    - - λεγω
+      - 1
+    - - ουν
+      - 1
+    - - προφητης
+      - 1
+    - - τοπος
+      - 1
+    - - εν
+      - 1
+    - - μηδε
+      - 1
+    - - ο
+      - 1
+    - - σαββατον
+      - 1
+    - - συ
+      - 1
+    - - φυγη
+      - 1
+    - - κοσμος
+      - 1
+    - - ουδε
+      - 1
+    - - τοτε
+      - 1
+    - - δε
+      - 1
+    - - εκεινος
+      - 1
+  variant_mark_refs:
+  - Mark 13:14
+  - Mark 13:15
+  - Mark 13:16
+  - Mark 13:18
+  - Mark 13:19
+  - Mark 13:20
+  - Mark 13:21
+  - Mark 13:22
+  - Mark 13:23
+  variant_matt_refs:
+  - Matt 24:15
+  - Matt 24:16
+  - Matt 24:17
+  - Matt 24:18
+  - Matt 24:24
+  variant_mark_count: 14
+  variant_matt_count: 5
+  span_density: 0.846154
+- id: 44
+  level: micro
+  pair_count: 8
+  confidence: high
+  avg_score: 0.748186
+  mark_start_ref: Mark 13:24
+  mark_end_ref: Mark 13:32
+  matt_start_ref: Matt 24:29
+  matt_end_ref: Matt 24:36
+  mark_span_refs:
+  - Mark 13:24
+  - Mark 13:25
+  - Mark 13:26
+  - Mark 13:27
+  - Mark 13:28
+  - Mark 13:29
+  - Mark 13:30
+  - Mark 13:31
+  - Mark 13:32
+  matt_span_refs:
+  - Matt 24:29
+  - Matt 24:30
+  - Matt 24:31
+  - Matt 24:32
+  - Matt 24:33
+  - Matt 24:34
+  - Matt 24:35
+  - Matt 24:36
+  matched_pairs:
+  - mark_ref: Mark 13:24
+    matt_ref: Matt 24:29
+    score: 0.510387
+  - mark_ref: Mark 13:26
+    matt_ref: Matt 24:30
+    score: 0.435011
+  - mark_ref: Mark 13:27
+    matt_ref: Matt 24:31
+    score: 0.631725
+  - mark_ref: Mark 13:28
+    matt_ref: Matt 24:32
+    score: 0.77801
+  - mark_ref: Mark 13:29
+    matt_ref: Matt 24:33
+    score: 0.76578
+  - mark_ref: Mark 13:30
+    matt_ref: Matt 24:34
+    score: 0.96835
+  - mark_ref: Mark 13:31
+    matt_ref: Matt 24:35
+    score: 1.0
+  - mark_ref: Mark 13:32
+    matt_ref: Matt 24:36
+    score: 0.896228
+  unmatched_mark_refs:
+  - Mark 13:25
+  unmatched_matt_refs: []
+  mark_token_count: 157
+  matt_token_count: 179
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 14
+    present_indicative: 4
+    present_indicative_ratio: 0.2857
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 15
+    present_indicative: 4
+    present_indicative_ratio: 0.2667
+  aggregate_diff:
+    lemma_insertions: 47
+    lemma_deletions: 7
+    lemma_replacements: 15
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - ημερα
+      - 1
+    - - εν
+      - 1
+    - - πολυς
+      - 1
+    - - ουρανος
+      - 1
+    - - γινομαι
+      - 1
+    - - εκφυω
+      - 1
+    - - πας
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 7
+    - - και
+      - 6
+    - - ου
+      - 3
+    - - ουρανος
+      - 3
+    - - δε
+      - 3
+    - - οτι
+      - 3
+    - - μη
+      - 3
+    - - αυτος
+      - 2
+    - - εκεινος
+      - 2
+    - - ημερα
+      - 2
+    - - μετα
+      - 2
+    - - οραω
+      - 2
+    - - υιος
+      - 2
+    - - αγγελος
+      - 2
+    - - απο
+      - 2
+    - - γινομαι
+      - 2
+    - - γινωσκω
+      - 2
+    - - εγγυς
+      - 2
+    - - οταν
+      - 2
+    - - ουτος
+      - 2
+    mark_only_lemmas_top:
+    - - εν
+      - 2
+    - - αλλα
+      - 1
+    - - γη
+      - 1
+    - - τοτε
+      - 1
+    - - ειμι
+      - 1
+    - - γινομαι
+      - 1
+    - - μεχρις
+      - 1
+    - - ος
+      - 1
+    - - η
+      - 1
+    matt_only_lemmas_top:
+    - - ουρανος
+      - 2
+    - - πας
+      - 2
+    - - απο
+      - 1
+    - - αστηρ
+      - 1
+    - - δε
+      - 1
+    - - δυναμις
+      - 1
+    - - ευθεως
+      - 1
+    - - πιπτω
+      - 1
+    - - σαλευω
+      - 1
+    - - γη
+      - 1
+    - - επι
+      - 1
+    - - κοπτω
+      - 1
+    - - σημειον
+      - 1
+    - - φαινω
+      - 1
+    - - φυλη
+      - 1
+    - - αυτος
+      - 1
+    - - μεγας
+      - 1
+    - - μετα
+      - 1
+    - - σαλπιγξ
+      - 1
+    - - αν
+      - 1
+  variant_mark_refs:
+  - Mark 13:25
+  - Mark 13:27
+  - Mark 13:28
+  - Mark 13:29
+  - Mark 13:30
+  - Mark 13:31
+  - Mark 13:32
+  variant_matt_refs:
+  - Matt 24:30
+  - Matt 24:31
+  - Matt 24:33
+  - Matt 24:34
+  - Matt 24:35
+  - Matt 24:36
+  variant_mark_count: 11
+  variant_matt_count: 8
+  span_density: 0.888889
+- id: 45
+  level: micro
+  pair_count: 47
+  confidence: high
+  avg_score: 0.485987
+  mark_start_ref: Mark 14:1
+  mark_end_ref: Mark 14:50
+  matt_start_ref: Matt 26:4
+  matt_end_ref: Matt 26:56
+  mark_span_refs:
+  - Mark 14:1
+  - Mark 14:2
+  - Mark 14:3
+  - Mark 14:4
+  - Mark 14:5
+  - Mark 14:6
+  - Mark 14:7
+  - Mark 14:8
+  - Mark 14:9
+  - Mark 14:10
+  - Mark 14:11
+  - Mark 14:12
+  - Mark 14:13
+  - Mark 14:14
+  - Mark 14:15
+  - Mark 14:16
+  - Mark 14:17
+  - Mark 14:18
+  - Mark 14:19
+  - Mark 14:20
+  - Mark 14:21
+  - Mark 14:22
+  - Mark 14:23
+  - Mark 14:24
+  - Mark 14:25
+  - Mark 14:26
+  - Mark 14:27
+  - Mark 14:28
+  - Mark 14:29
+  - Mark 14:30
+  - Mark 14:31
+  - Mark 14:32
+  - Mark 14:33
+  - Mark 14:34
+  - Mark 14:35
+  - Mark 14:36
+  - Mark 14:37
+  - Mark 14:38
+  - Mark 14:39
+  - Mark 14:40
+  - Mark 14:41
+  - Mark 14:42
+  - Mark 14:43
+  - Mark 14:44
+  - Mark 14:45
+  - Mark 14:46
+  - Mark 14:47
+  - Mark 14:48
+  - Mark 14:49
+  - Mark 14:50
+  matt_span_refs:
+  - Matt 26:4
+  - Matt 26:5
+  - Matt 26:6
+  - Matt 26:7
+  - Matt 26:8
+  - Matt 26:9
+  - Matt 26:10
+  - Matt 26:11
+  - Matt 26:12
+  - Matt 26:13
+  - Matt 26:14
+  - Matt 26:15
+  - Matt 26:16
+  - Matt 26:17
+  - Matt 26:18
+  - Matt 26:19
+  - Matt 26:20
+  - Matt 26:21
+  - Matt 26:22
+  - Matt 26:23
+  - Matt 26:24
+  - Matt 26:25
+  - Matt 26:26
+  - Matt 26:27
+  - Matt 26:28
+  - Matt 26:29
+  - Matt 26:30
+  - Matt 26:31
+  - Matt 26:32
+  - Matt 26:33
+  - Matt 26:34
+  - Matt 26:35
+  - Matt 26:36
+  - Matt 26:37
+  - Matt 26:38
+  - Matt 26:39
+  - Matt 26:40
+  - Matt 26:41
+  - Matt 26:42
+  - Matt 26:43
+  - Matt 26:44
+  - Matt 26:45
+  - Matt 26:46
+  - Matt 26:47
+  - Matt 26:48
+  - Matt 26:49
+  - Matt 26:50
+  - Matt 26:51
+  - Matt 26:52
+  - Matt 26:53
+  - Matt 26:54
+  - Matt 26:55
+  - Matt 26:56
+  matched_pairs:
+  - mark_ref: Mark 14:1
+    matt_ref: Matt 26:4
+    score: 0.239572
+  - mark_ref: Mark 14:2
+    matt_ref: Matt 26:5
+    score: 0.621402
+  - mark_ref: Mark 14:3
+    matt_ref: Matt 26:6
+    score: 0.223974
+  - mark_ref: Mark 14:4
+    matt_ref: Matt 26:8
+    score: 0.297155
+  - mark_ref: Mark 14:5
+    matt_ref: Matt 26:9
+    score: 0.368972
+  - mark_ref: Mark 14:6
+    matt_ref: Matt 26:10
+    score: 0.570155
+  - mark_ref: Mark 14:7
+    matt_ref: Matt 26:11
+    score: 0.534219
+  - mark_ref: Mark 14:8
+    matt_ref: Matt 26:12
+    score: 0.129603
+  - mark_ref: Mark 14:9
+    matt_ref: Matt 26:13
+    score: 0.829363
+  - mark_ref: Mark 14:10
+    matt_ref: Matt 26:14
+    score: 0.296864
+  - mark_ref: Mark 14:11
+    matt_ref: Matt 26:16
+    score: 0.148737
+  - mark_ref: Mark 14:12
+    matt_ref: Matt 26:17
+    score: 0.488103
+  - mark_ref: Mark 14:14
+    matt_ref: Matt 26:18
+    score: 0.243747
+  - mark_ref: Mark 14:16
+    matt_ref: Matt 26:19
+    score: 0.285057
+  - mark_ref: Mark 14:17
+    matt_ref: Matt 26:20
+    score: 0.458714
+  - mark_ref: Mark 14:18
+    matt_ref: Matt 26:21
+    score: 0.589282
+  - mark_ref: Mark 14:19
+    matt_ref: Matt 26:22
+    score: 0.377484
+  - mark_ref: Mark 14:20
+    matt_ref: Matt 26:23
+    score: 0.350551
+  - mark_ref: Mark 14:21
+    matt_ref: Matt 26:24
+    score: 0.895321
+  - mark_ref: Mark 14:22
+    matt_ref: Matt 26:26
+    score: 0.744902
+  - mark_ref: Mark 14:23
+    matt_ref: Matt 26:27
+    score: 0.843287
+  - mark_ref: Mark 14:24
+    matt_ref: Matt 26:28
+    score: 0.514659
+  - mark_ref: Mark 14:25
+    matt_ref: Matt 26:29
+    score: 0.672431
+  - mark_ref: Mark 14:26
+    matt_ref: Matt 26:30
+    score: 1.0
+  - mark_ref: Mark 14:27
+    matt_ref: Matt 26:31
+    score: 0.618237
+  - mark_ref: Mark 14:28
+    matt_ref: Matt 26:32
+    score: 0.981902
+  - mark_ref: Mark 14:29
+    matt_ref: Matt 26:33
+    score: 0.318858
+  - mark_ref: Mark 14:30
+    matt_ref: Matt 26:34
+    score: 0.549376
+  - mark_ref: Mark 14:31
+    matt_ref: Matt 26:35
+    score: 0.330859
+  - mark_ref: Mark 14:32
+    matt_ref: Matt 26:36
+    score: 0.450378
+  - mark_ref: Mark 14:33
+    matt_ref: Matt 26:37
+    score: 0.330912
+  - mark_ref: Mark 14:34
+    matt_ref: Matt 26:38
+    score: 0.911364
+  - mark_ref: Mark 14:35
+    matt_ref: Matt 26:39
+    score: 0.472349
+  - mark_ref: Mark 14:37
+    matt_ref: Matt 26:40
+    score: 0.688193
+  - mark_ref: Mark 14:38
+    matt_ref: Matt 26:41
+    score: 0.802674
+  - mark_ref: Mark 14:39
+    matt_ref: Matt 26:42
+    score: 0.22593
+  - mark_ref: Mark 14:40
+    matt_ref: Matt 26:43
+    score: 0.451763
+  - mark_ref: Mark 14:41
+    matt_ref: Matt 26:45
+    score: 0.565567
+  - mark_ref: Mark 14:42
+    matt_ref: Matt 26:46
+    score: 0.748401
+  - mark_ref: Mark 14:43
+    matt_ref: Matt 26:47
+    score: 0.56809
+  - mark_ref: Mark 14:44
+    matt_ref: Matt 26:48
+    score: 0.460806
+  - mark_ref: Mark 14:45
+    matt_ref: Matt 26:49
+    score: 0.408535
+  - mark_ref: Mark 14:46
+    matt_ref: Matt 26:50
+    score: 0.321981
+  - mark_ref: Mark 14:47
+    matt_ref: Matt 26:51
+    score: 0.288391
+  - mark_ref: Mark 14:48
+    matt_ref: Matt 26:52
+    score: 0.129303
+  - mark_ref: Mark 14:49
+    matt_ref: Matt 26:55
+    score: 0.253332
+  - mark_ref: Mark 14:50
+    matt_ref: Matt 26:56
+    score: 0.240637
+  unmatched_mark_refs:
+  - Mark 14:13
+  - Mark 14:15
+  - Mark 14:36
+  unmatched_matt_refs:
+  - Matt 26:7
+  - Matt 26:15
+  - Matt 26:25
+  - Matt 26:44
+  - Matt 26:53
+  - Matt 26:54
+  mark_token_count: 826
+  matt_token_count: 880
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 1
+    grapho: 2
+    indicative_total: 116
+    present_indicative: 41
+    present_indicative_ratio: 0.3534
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 2
+    grapho: 2
+    indicative_total: 115
+    present_indicative: 42
+    present_indicative_ratio: 0.3652
+  aggregate_diff:
+    lemma_insertions: 131
+    lemma_deletions: 114
+    lemma_replacements: 239
+    moved_tokens_top:
+    - - ο
+      - 9
+    - - και
+      - 6
+    - - αυτος
+      - 6
+    - - λεγω
+      - 3
+    - - δε
+      - 2
+    - - εργον
+      - 1
+    - - ποιεω
+      - 1
+    - - λαλεω
+      - 1
+    - - ιουδας
+      - 1
+    - - ζητεω
+      - 1
+    - - εγω
+      - 1
+    - - λυπεω
+      - 1
+    - - πολυς
+      - 1
+    - - διασκορπιζω
+      - 1
+    - - απαρνεομαι
+      - 1
+    - - ος
+      - 1
+    - - προσευχομαι
+      - 1
+    - - ερχομαι
+      - 1
+    - - ιδου
+      - 1
+    - - παραδιδωμι
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 40
+    - - αυτος
+      - 27
+    - - και
+      - 26
+    - - λεγω
+      - 21
+    - - εγω
+      - 16
+    - - εις
+      - 13
+    - - δε
+      - 9
+    - - ειμι
+      - 7
+    - - ουτος
+      - 6
+    - - μετα
+      - 6
+    - - ου
+      - 6
+    - - συ
+      - 6
+    - - παραδιδωμι
+      - 6
+    - - πας
+      - 5
+    - - κρατεω
+      - 4
+    - - εν
+      - 4
+    - - μη
+      - 4
+    - - διδωμι
+      - 4
+    - - ιησους
+      - 4
+    - - ος
+      - 4
+    mark_only_lemmas_top:
+    - - και
+      - 12
+    - - αυτος
+      - 9
+    - - δε
+      - 5
+    - - ειμι
+      - 5
+    - - ερχομαι
+      - 5
+    - - μετα
+      - 4
+    - - ινα
+      - 4
+    - - οτι
+      - 4
+    - - μυρον
+      - 3
+    - - ο
+      - 3
+    - - εις
+      - 3
+    - - αλλα
+      - 3
+    - - γραμματευς
+      - 2
+    - - εν
+      - 2
+    - - ημερα
+      - 2
+    - - πως
+      - 2
+    - - εχω
+      - 2
+    - - προς
+      - 2
+    - - απερχομαι
+      - 2
+    - - εαν
+      - 2
+    matt_only_lemmas_top:
+    - - ιησους
+      - 10
+    - - δε
+      - 9
+    - - τοτε
+      - 9
+    - - λεγω
+      - 7
+    - - μαθητης
+      - 7
+    - - ουτος
+      - 7
+    - - συ
+      - 7
+    - - εν
+      - 6
+    - - μετα
+      - 6
+    - - γαρ
+      - 5
+    - - εγω
+      - 5
+    - - ινα
+      - 4
+    - - γινομαι
+      - 4
+    - - εις
+      - 4
+    - - προς
+      - 4
+    - - επι
+      - 3
+    - - απο
+      - 3
+    - - ως
+      - 3
+    - - πατηρ
+      - 3
+    - - πολυς
+      - 2
+  variant_mark_refs:
+  - Mark 14:2
+  - Mark 14:3
+  - Mark 14:4
+  - Mark 14:5
+  - Mark 14:7
+  - Mark 14:8
+  - Mark 14:9
+  - Mark 14:10
+  - Mark 14:11
+  - Mark 14:14
+  - Mark 14:15
+  - Mark 14:16
+  - Mark 14:18
+  - Mark 14:19
+  - Mark 14:20
+  - Mark 14:21
+  - Mark 14:22
+  - Mark 14:23
+  - Mark 14:24
+  - Mark 14:27
+  - Mark 14:29
+  - Mark 14:30
+  - Mark 14:31
+  - Mark 14:33
+  - Mark 14:35
+  - Mark 14:36
+  - Mark 14:38
+  - Mark 14:40
+  - Mark 14:41
+  - Mark 14:43
+  - Mark 14:44
+  - Mark 14:45
+  - Mark 14:46
+  - Mark 14:47
+  - Mark 14:50
+  variant_matt_refs:
+  - Matt 26:7
+  - Matt 26:8
+  - Matt 26:9
+  - Matt 26:17
+  - Matt 26:20
+  - Matt 26:22
+  - Matt 26:23
+  - Matt 26:26
+  - Matt 26:27
+  - Matt 26:28
+  - Matt 26:29
+  - Matt 26:31
+  - Matt 26:33
+  - Matt 26:35
+  - Matt 26:36
+  - Matt 26:38
+  - Matt 26:39
+  - Matt 26:42
+  - Matt 26:43
+  - Matt 26:44
+  - Matt 26:45
+  - Matt 26:50
+  - Matt 26:52
+  - Matt 26:53
+  - Matt 26:55
+  variant_mark_count: 64
+  variant_matt_count: 37
+  span_density: 0.886792
+- id: 46
+  level: micro
+  pair_count: 3
+  confidence: medium
+  avg_score: 0.374774
+  mark_start_ref: Mark 14:53
+  mark_end_ref: Mark 14:55
+  matt_start_ref: Matt 26:57
+  matt_end_ref: Matt 26:59
+  mark_span_refs:
+  - Mark 14:53
+  - Mark 14:54
+  - Mark 14:55
+  matt_span_refs:
+  - Matt 26:57
+  - Matt 26:58
+  - Matt 26:59
+  matched_pairs:
+  - mark_ref: Mark 14:53
+    matt_ref: Matt 26:57
+    score: 0.303856
+  - mark_ref: Mark 14:54
+    matt_ref: Matt 26:58
+    score: 0.375056
+  - mark_ref: Mark 14:55
+    matt_ref: Matt 26:59
+    score: 0.445409
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 62
+  matt_token_count: 54
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 1
+    present_indicative_ratio: 0.1667
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 5
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 7
+    lemma_deletions: 10
+    lemma_replacements: 20
+    moved_tokens_top:
+    - - αυτος
+      - 2
+    - - απαγω
+      - 1
+    - - γραμματευς
+      - 1
+    - - ο
+      - 1
+    - - ακολουθεω
+      - 1
+    - - εσω
+      - 1
+    - - ολος
+      - 1
+    common_lemmas_top:
+    - - αρχιερευς
+      - 3
+    - - και
+      - 3
+    - - ο
+      - 3
+    - - ιησους
+      - 2
+    - - αυτος
+      - 2
+    - - απαγω
+      - 1
+    - - γραμματευς
+      - 1
+    - - πρεσβυτερος
+      - 1
+    - - προς
+      - 1
+    - - ακολουθεω
+      - 1
+    - - απο
+      - 1
+    - - αυλη
+      - 1
+    - - εσω
+      - 1
+    - - εως
+      - 1
+    - - μακροθεν
+      - 1
+    - - μετα
+      - 1
+    - - πετρος
+      - 1
+    - - υπηρετης
+      - 1
+    - - δε
+      - 1
+    - - ζητεω
+      - 1
+    mark_only_lemmas_top:
+    - - εις
+      - 2
+    - - πας
+      - 1
+    - - συνερχομαι
+      - 1
+    - - ειμι
+      - 1
+    - - θερμαινομαι
+      - 1
+    - - προς
+      - 1
+    - - συγκαθημαι
+      - 1
+    - - φως
+      - 1
+    - - ευρισκω
+      - 1
+    - - μαρτυρια
+      - 1
+    - - ου
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 2
+    - - καιαφας
+      - 1
+    - - κρατεω
+      - 1
+    - - οπου
+      - 1
+    - - συναγω
+      - 1
+    - - εισερχομαι
+      - 1
+    - - καθημαι
+      - 1
+    - - οραω
+      - 1
+    - - τελος
+      - 1
+    - - οπως
+      - 1
+    - - ψευδομαρτυρια
+      - 1
+  variant_mark_refs:
+  - Mark 14:53
+  variant_matt_refs:
+  - Matt 26:59
+  variant_mark_count: 1
+  variant_matt_count: 2
+  span_density: 1.0
+- id: 47
+  level: micro
+  pair_count: 14
+  confidence: medium
+  avg_score: 0.343502
+  mark_start_ref: Mark 14:58
+  mark_end_ref: Mark 15:1
+  matt_start_ref: Matt 26:61
+  matt_end_ref: Matt 27:1
+  mark_span_refs:
+  - Mark 14:58
+  - Mark 14:59
+  - Mark 14:60
+  - Mark 14:61
+  - Mark 14:62
+  - Mark 14:63
+  - Mark 14:64
+  - Mark 14:65
+  - Mark 14:66
+  - Mark 14:67
+  - Mark 14:68
+  - Mark 14:69
+  - Mark 14:70
+  - Mark 14:71
+  - Mark 14:72
+  - Mark 15:1
+  matt_span_refs:
+  - Matt 26:61
+  - Matt 26:62
+  - Matt 26:63
+  - Matt 26:64
+  - Matt 26:65
+  - Matt 26:66
+  - Matt 26:67
+  - Matt 26:68
+  - Matt 26:69
+  - Matt 26:70
+  - Matt 26:71
+  - Matt 26:72
+  - Matt 26:73
+  - Matt 26:74
+  - Matt 26:75
+  - Matt 27:1
+  matched_pairs:
+  - mark_ref: Mark 14:58
+    matt_ref: Matt 26:61
+    score: 0.401986
+  - mark_ref: Mark 14:60
+    matt_ref: Matt 26:62
+    score: 0.491463
+  - mark_ref: Mark 14:61
+    matt_ref: Matt 26:63
+    score: 0.314267
+  - mark_ref: Mark 14:62
+    matt_ref: Matt 26:64
+    score: 0.666963
+  - mark_ref: Mark 14:63
+    matt_ref: Matt 26:65
+    score: 0.460808
+  - mark_ref: Mark 14:64
+    matt_ref: Matt 26:66
+    score: 0.222699
+  - mark_ref: Mark 14:65
+    matt_ref: Matt 26:67
+    score: 0.254649
+  - mark_ref: Mark 14:66
+    matt_ref: Matt 26:69
+    score: 0.285425
+  - mark_ref: Mark 14:68
+    matt_ref: Matt 26:70
+    score: 0.228794
+  - mark_ref: Mark 14:69
+    matt_ref: Matt 26:71
+    score: 0.150621
+  - mark_ref: Mark 14:70
+    matt_ref: Matt 26:73
+    score: 0.356972
+  - mark_ref: Mark 14:71
+    matt_ref: Matt 26:74
+    score: 0.370374
+  - mark_ref: Mark 14:72
+    matt_ref: Matt 26:75
+    score: 0.425416
+  - mark_ref: Mark 15:1
+    matt_ref: Matt 27:1
+    score: 0.178589
+  unmatched_mark_refs:
+  - Mark 14:59
+  - Mark 14:67
+  unmatched_matt_refs:
+  - Matt 26:68
+  - Matt 26:72
+  mark_token_count: 298
+  matt_token_count: 267
+  mark_marker_counts:
+    euthys: 2
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 48
+    present_indicative: 17
+    present_indicative_ratio: 0.3542
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 46
+    present_indicative: 15
+    present_indicative_ratio: 0.3261
+  aggregate_diff:
+    lemma_insertions: 43
+    lemma_deletions: 65
+    lemma_replacements: 81
+    moved_tokens_top:
+    - - και
+      - 4
+    - - ουτος
+      - 1
+    - - ουδεις
+      - 1
+    - - καθημαι
+      - 1
+    - - θανατος
+      - 1
+    - - αυτος
+      - 1
+    - - ειμι
+      - 1
+    - - παιδισκη
+      - 1
+    - - δε
+      - 1
+    - - απαρνεομαι
+      - 1
+    - - ιησους
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 14
+    - - και
+      - 11
+    - - λεγω
+      - 9
+    - - αυτος
+      - 5
+    - - ειμι
+      - 5
+    - - αρχιερευς
+      - 4
+    - - συ
+      - 4
+    - - τις
+      - 4
+    - - δε
+      - 4
+    - - ουτος
+      - 3
+    - - ιησους
+      - 3
+    - - πετρος
+      - 3
+    - - υιος
+      - 2
+    - - ανθρωπος
+      - 2
+    - - εκ
+      - 2
+    - - οραω
+      - 2
+    - - οιδα
+      - 2
+    - - οτι
+      - 2
+    - - δια
+      - 1
+    - - ημερα
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 3
+    - - παλιν
+      - 3
+    - - δε
+      - 3
+    - - ακουω
+      - 2
+    - - εγω
+      - 2
+    - - οτι
+      - 2
+    - - εις
+      - 2
+    - - επερωταω
+      - 2
+    - - ου
+      - 2
+    - - μετα
+      - 2
+    - - αρχω
+      - 2
+    - - λεγω
+      - 2
+    - - εκ
+      - 2
+    - - παριστημι
+      - 2
+    - - ευθυς
+      - 2
+    - - αλλος
+      - 1
+    - - αχειροποιητος
+      - 1
+    - - χειροποιητος
+      - 1
+    - - ιησους
+      - 1
+    - - μεσος
+      - 1
+    matt_only_lemmas_top:
+    - - αυτος
+      - 4
+    - - δε
+      - 4
+    - - ιησους
+      - 3
+    - - τοτε
+      - 3
+    - - θεος
+      - 2
+    - - κατα
+      - 2
+    - - συ
+      - 2
+    - - λεγω
+      - 2
+    - - εις
+      - 2
+    - - εξω
+      - 2
+    - - μετα
+      - 2
+    - - προσερχομαι
+      - 2
+    - - πας
+      - 2
+    - - εξερχομαι
+      - 2
+    - - δυναμαι
+      - 1
+    - - φημι
+      - 1
+    - - εγω
+      - 1
+    - - ει
+      - 1
+    - - εξορκιζω
+      - 1
+    - - ζαω
+      - 1
+  variant_mark_refs:
+  - Mark 14:61
+  - Mark 14:64
+  - Mark 14:65
+  - Mark 14:66
+  - Mark 14:67
+  - Mark 14:68
+  - Mark 14:69
+  - Mark 14:70
+  - Mark 14:72
+  - Mark 15:1
+  variant_matt_refs:
+  - Matt 26:63
+  - Matt 26:65
+  - Matt 26:69
+  - Matt 26:70
+  - Matt 26:71
+  - Matt 26:74
+  - Matt 26:75
+  variant_mark_count: 16
+  variant_matt_count: 11
+  span_density: 0.875
+- id: 48
+  level: micro
+  pair_count: 6
+  confidence: medium
+  avg_score: 0.26173
+  mark_start_ref: Mark 15:2
+  mark_end_ref: Mark 15:7
+  matt_start_ref: Matt 27:11
+  matt_end_ref: Matt 27:16
+  mark_span_refs:
+  - Mark 15:2
+  - Mark 15:3
+  - Mark 15:4
+  - Mark 15:5
+  - Mark 15:6
+  - Mark 15:7
+  matt_span_refs:
+  - Matt 27:11
+  - Matt 27:12
+  - Matt 27:13
+  - Matt 27:14
+  - Matt 27:15
+  - Matt 27:16
+  matched_pairs:
+  - mark_ref: Mark 15:2
+    matt_ref: Matt 27:11
+    score: 0.359823
+  - mark_ref: Mark 15:3
+    matt_ref: Matt 27:12
+    score: 0.362594
+  - mark_ref: Mark 15:4
+    matt_ref: Matt 27:13
+    score: 0.180727
+  - mark_ref: Mark 15:5
+    matt_ref: Matt 27:14
+    score: 0.15331
+  - mark_ref: Mark 15:6
+    matt_ref: Matt 27:15
+    score: 0.392977
+  - mark_ref: Mark 15:7
+    matt_ref: Matt 27:16
+    score: 0.120948
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 72
+  matt_token_count: 81
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 5
+    present_indicative_ratio: 0.3846
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 13
+    present_indicative: 5
+    present_indicative_ratio: 0.3846
+  aggregate_diff:
+    lemma_insertions: 24
+    lemma_deletions: 16
+    lemma_replacements: 25
+    moved_tokens_top:
+    - - λεγω
+      - 2
+    - - αυτος
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 4
+    - - αυτος
+      - 3
+    - - δε
+      - 3
+    - - λεγω
+      - 3
+    - - και
+      - 2
+    - - συ
+      - 2
+    - - βασιλευς
+      - 1
+    - - ειμι
+      - 1
+    - - επερωταω
+      - 1
+    - - ιουδαιος
+      - 1
+    - - αρχιερευς
+      - 1
+    - - κατηγορεω
+      - 1
+    - - ου
+      - 1
+    - - πιλατος
+      - 1
+    - - ποσος
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - θαυμαζω
+      - 1
+    - - ωστε
+      - 1
+    - - απολυω
+      - 1
+    - - δεσμιος
+      - 1
+    mark_only_lemmas_top:
+    - - αποκρινομαι
+      - 2
+    - - πιλατος
+      - 2
+    - - δε
+      - 2
+    - - ουδεις
+      - 2
+    - - πολυς
+      - 1
+    - - επερωταω
+      - 1
+    - - ιδε
+      - 1
+    - - κατηγορεω
+      - 1
+    - - παλιν
+      - 1
+    - - ιησους
+      - 1
+    - - ουκετι
+      - 1
+    - - αυτος
+      - 1
+    - - παραιτεομαι
+      - 1
+    - - δεω
+      - 1
+    - - ειμι
+      - 1
+    - - εν
+      - 1
+    - - μετα
+      - 1
+    - - ο
+      - 1
+    - - οστις
+      - 1
+    - - ποιεω
+      - 1
+    matt_only_lemmas_top:
+    - - ηγεμων
+      - 3
+    - - ιησους
+      - 2
+    - - τοτε
+      - 2
+    - - εμπροσθεν
+      - 1
+    - - ιστημι
+      - 1
+    - - φημι
+      - 1
+    - - αποκρινομαι
+      - 1
+    - - εν
+      - 1
+    - - ουδεις
+      - 1
+    - - πρεσβυτερος
+      - 1
+    - - υπο
+      - 1
+    - - ακουω
+      - 1
+    - - καταμαρτυρεω
+      - 1
+    - - αυτος
+      - 1
+    - - εις
+      - 1
+    - - και
+      - 1
+    - - λιαν
+      - 1
+    - - ου
+      - 1
+    - - ουδε
+      - 1
+    - - προς
+      - 1
+  variant_mark_refs:
+  - Mark 15:2
+  - Mark 15:4
+  - Mark 15:6
+  - Mark 15:7
+  variant_matt_refs:
+  - Matt 27:11
+  - Matt 27:12
+  - Matt 27:16
+  variant_mark_count: 5
+  variant_matt_count: 4
+  span_density: 1.0
+- id: 49
+  level: micro
+  pair_count: 29
+  confidence: medium
+  avg_score: 0.389292
+  mark_start_ref: Mark 15:11
+  mark_end_ref: Mark 15:43
+  matt_start_ref: Matt 27:20
+  matt_end_ref: Matt 27:58
+  mark_span_refs:
+  - Mark 15:11
+  - Mark 15:12
+  - Mark 15:13
+  - Mark 15:14
+  - Mark 15:15
+  - Mark 15:16
+  - Mark 15:17
+  - Mark 15:18
+  - Mark 15:19
+  - Mark 15:20
+  - Mark 15:21
+  - Mark 15:22
+  - Mark 15:23
+  - Mark 15:24
+  - Mark 15:25
+  - Mark 15:26
+  - Mark 15:27
+  - Mark 15:29
+  - Mark 15:30
+  - Mark 15:31
+  - Mark 15:32
+  - Mark 15:33
+  - Mark 15:34
+  - Mark 15:35
+  - Mark 15:36
+  - Mark 15:37
+  - Mark 15:38
+  - Mark 15:39
+  - Mark 15:40
+  - Mark 15:41
+  - Mark 15:42
+  - Mark 15:43
+  matt_span_refs:
+  - Matt 27:20
+  - Matt 27:21
+  - Matt 27:22
+  - Matt 27:23
+  - Matt 27:24
+  - Matt 27:25
+  - Matt 27:26
+  - Matt 27:27
+  - Matt 27:28
+  - Matt 27:29
+  - Matt 27:30
+  - Matt 27:31
+  - Matt 27:32
+  - Matt 27:33
+  - Matt 27:34
+  - Matt 27:35
+  - Matt 27:36
+  - Matt 27:37
+  - Matt 27:38
+  - Matt 27:39
+  - Matt 27:40
+  - Matt 27:41
+  - Matt 27:42
+  - Matt 27:43
+  - Matt 27:44
+  - Matt 27:45
+  - Matt 27:46
+  - Matt 27:47
+  - Matt 27:48
+  - Matt 27:49
+  - Matt 27:50
+  - Matt 27:51
+  - Matt 27:52
+  - Matt 27:53
+  - Matt 27:54
+  - Matt 27:55
+  - Matt 27:56
+  - Matt 27:57
+  - Matt 27:58
+  matched_pairs:
+  - mark_ref: Mark 15:11
+    matt_ref: Matt 27:20
+    score: 0.230349
+  - mark_ref: Mark 15:12
+    matt_ref: Matt 27:21
+    score: 0.212655
+  - mark_ref: Mark 15:13
+    matt_ref: Matt 27:22
+    score: 0.11426
+  - mark_ref: Mark 15:14
+    matt_ref: Matt 27:23
+    score: 0.544493
+  - mark_ref: Mark 15:15
+    matt_ref: Matt 27:26
+    score: 0.429911
+  - mark_ref: Mark 15:16
+    matt_ref: Matt 27:27
+    score: 0.305688
+  - mark_ref: Mark 15:18
+    matt_ref: Matt 27:29
+    score: 0.206213
+  - mark_ref: Mark 15:19
+    matt_ref: Matt 27:30
+    score: 0.381666
+  - mark_ref: Mark 15:20
+    matt_ref: Matt 27:31
+    score: 0.438845
+  - mark_ref: Mark 15:21
+    matt_ref: Matt 27:32
+    score: 0.277317
+  - mark_ref: Mark 15:22
+    matt_ref: Matt 27:33
+    score: 0.433624
+  - mark_ref: Mark 15:23
+    matt_ref: Matt 27:34
+    score: 0.215161
+  - mark_ref: Mark 15:24
+    matt_ref: Matt 27:35
+    score: 0.837233
+  - mark_ref: Mark 15:26
+    matt_ref: Matt 27:37
+    score: 0.306075
+  - mark_ref: Mark 15:27
+    matt_ref: Matt 27:38
+    score: 0.891463
+  - mark_ref: Mark 15:29
+    matt_ref: Matt 27:39
+    score: 0.444302
+  - mark_ref: Mark 15:30
+    matt_ref: Matt 27:40
+    score: 0.271082
+  - mark_ref: Mark 15:31
+    matt_ref: Matt 27:41
+    score: 0.514374
+  - mark_ref: Mark 15:32
+    matt_ref: Matt 27:42
+    score: 0.394028
+  - mark_ref: Mark 15:33
+    matt_ref: Matt 27:45
+    score: 0.636182
+  - mark_ref: Mark 15:34
+    matt_ref: Matt 27:46
+    score: 0.491249
+  - mark_ref: Mark 15:35
+    matt_ref: Matt 27:47
+    score: 0.533947
+  - mark_ref: Mark 15:36
+    matt_ref: Matt 27:48
+    score: 0.375298
+  - mark_ref: Mark 15:37
+    matt_ref: Matt 27:50
+    score: 0.371993
+  - mark_ref: Mark 15:38
+    matt_ref: Matt 27:51
+    score: 0.568782
+  - mark_ref: Mark 15:39
+    matt_ref: Matt 27:54
+    score: 0.221427
+  - mark_ref: Mark 15:40
+    matt_ref: Matt 27:56
+    score: 0.315623
+  - mark_ref: Mark 15:42
+    matt_ref: Matt 27:57
+    score: 0.125112
+  - mark_ref: Mark 15:43
+    matt_ref: Matt 27:58
+    score: 0.201109
+  unmatched_mark_refs:
+  - Mark 15:17
+  - Mark 15:25
+  - Mark 15:41
+  unmatched_matt_refs:
+  - Matt 27:24
+  - Matt 27:25
+  - Matt 27:28
+  - Matt 27:36
+  - Matt 27:43
+  - Matt 27:44
+  - Matt 27:49
+  - Matt 27:52
+  - Matt 27:53
+  - Matt 27:55
+  mark_token_count: 479
+  matt_token_count: 596
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 1
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 62
+    present_indicative: 18
+    present_indicative_ratio: 0.2903
+  matt_marker_counts:
+    euthys: 1
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 1
+    indicative_total: 76
+    present_indicative: 17
+    present_indicative_ratio: 0.2237
+  aggregate_diff:
+    lemma_insertions: 104
+    lemma_deletions: 111
+    lemma_replacements: 174
+    moved_tokens_top:
+    - - ο
+      - 6
+    - - αυτος
+      - 5
+    - - δε
+      - 3
+    - - και
+      - 3
+    - - ειμι
+      - 3
+    - - αποκρινομαι
+      - 1
+    - - κακος
+      - 1
+    - - λεγω
+      - 1
+    - - παραδιδωμι
+      - 1
+    - - πραιτωριον
+      - 1
+    - - εμπτυω
+      - 1
+    - - καλαμος
+      - 1
+    - - κυρηναιος
+      - 1
+    - - σιμων
+      - 1
+    - - τοπος
+      - 1
+    - - σταυροω
+      - 1
+    - - εκτος
+      - 1
+    - - εγω
+      - 1
+    - - αφιημι
+      - 1
+    - - δυο
+      - 1
+    common_lemmas_top:
+    - - ο
+      - 24
+    - - αυτος
+      - 16
+    - - και
+      - 13
+    - - δε
+      - 6
+    - - σταυροω
+      - 6
+    - - λεγω
+      - 5
+    - - ειμι
+      - 5
+    - - ιησους
+      - 4
+    - - ινα
+      - 3
+    - - τις
+      - 3
+    - - βασιλευς
+      - 3
+    - - σταυρος
+      - 3
+    - - ος
+      - 3
+    - - απο
+      - 3
+    - - αρχιερευς
+      - 2
+    - - βαραββας
+      - 2
+    - - ιουδαιος
+      - 2
+    - - καλαμος
+      - 2
+    - - κεφαλη
+      - 2
+    - - εμπαιζω
+      - 2
+    mark_only_lemmas_top:
+    - - και
+      - 9
+    - - ος
+      - 5
+    - - δε
+      - 5
+    - - αυτος
+      - 4
+    - - τις
+      - 4
+    - - πιλατος
+      - 3
+    - - ειμι
+      - 3
+    - - απο
+      - 3
+    - - ερχομαι
+      - 3
+    - - παλιν
+      - 2
+    - - ποιεω
+      - 2
+    - - ινα
+      - 2
+    - - επι
+      - 2
+    - - μεθερμηνευω
+      - 2
+    - - λεγω
+      - 2
+    - - προς
+      - 2
+    - - οραω
+      - 2
+    - - παριστημι
+      - 2
+    - - εκπνεω
+      - 2
+    - - ανασειω
+      - 1
+    matt_only_lemmas_top:
+    - - δε
+      - 7
+    - - ιησους
+      - 6
+    - - λεγω
+      - 5
+    - - εις
+      - 5
+    - - ουτος
+      - 5
+    - - τοτε
+      - 4
+    - - και
+      - 3
+    - - απο
+      - 3
+    - - επι
+      - 3
+    - - πρεσβυτερος
+      - 2
+    - - ηγεμων
+      - 2
+    - - πας
+      - 2
+    - - εκ
+      - 2
+    - - εν
+      - 2
+    - - επιτιθημι
+      - 2
+    - - κεφαλη
+      - 2
+    - - λαμβανω
+      - 2
+    - - ανθρωπος
+      - 2
+    - - ερχομαι
+      - 2
+    - - μετα
+      - 2
+  variant_mark_refs:
+  - Mark 15:12
+  - Mark 15:14
+  - Mark 15:17
+  - Mark 15:18
+  - Mark 15:20
+  - Mark 15:22
+  - Mark 15:23
+  - Mark 15:24
+  - Mark 15:27
+  - Mark 15:29
+  - Mark 15:30
+  - Mark 15:32
+  - Mark 15:33
+  - Mark 15:34
+  - Mark 15:35
+  - Mark 15:36
+  - Mark 15:39
+  - Mark 15:40
+  - Mark 15:41
+  - Mark 15:42
+  - Mark 15:43
+  variant_matt_refs:
+  - Matt 27:21
+  - Matt 27:22
+  - Matt 27:23
+  - Matt 27:24
+  - Matt 27:28
+  - Matt 27:29
+  - Matt 27:33
+  - Matt 27:34
+  - Matt 27:40
+  - Matt 27:41
+  - Matt 27:42
+  - Matt 27:43
+  - Matt 27:44
+  - Matt 27:46
+  - Matt 27:47
+  - Matt 27:49
+  - Matt 27:51
+  - Matt 27:52
+  - Matt 27:54
+  - Matt 27:56
+  - Matt 27:57
+  - Matt 27:58
+  variant_mark_count: 42
+  variant_matt_count: 32
+  span_density: 0.74359
+- id: 50
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.290258
+  mark_start_ref: Mark 15:46
+  mark_end_ref: Mark 15:47
+  matt_start_ref: Matt 27:60
+  matt_end_ref: Matt 27:61
+  mark_span_refs:
+  - Mark 15:46
+  - Mark 15:47
+  matt_span_refs:
+  - Matt 27:60
+  - Matt 27:61
+  matched_pairs:
+  - mark_ref: Mark 15:46
+    matt_ref: Matt 27:60
+    score: 0.451559
+  - mark_ref: Mark 15:47
+    matt_ref: Matt 27:61
+    score: 0.128958
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 38
+  matt_token_count: 36
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 6
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 4
+    present_indicative: 0
+    present_indicative_ratio: 0.0
+  aggregate_diff:
+    lemma_insertions: 8
+    lemma_deletions: 9
+    lemma_replacements: 10
+    moved_tokens_top:
+    - - ο
+      - 2
+    - - αυτος
+      - 1
+    common_lemmas_top:
+    - - και
+      - 2
+    - - ο
+      - 2
+    - - αυτος
+      - 1
+    - - εν
+      - 1
+    - - θυρα
+      - 1
+    - - λατομεω
+      - 1
+    - - λιθος
+      - 1
+    - - μνημειον
+      - 1
+    - - ος
+      - 1
+    - - πετρα
+      - 1
+    - - προσκυλιω
+      - 1
+    - - τιθημι
+      - 1
+    - - δε
+      - 1
+    - - μαγδαληνη
+      - 1
+    - - μαρια
+      - 1
+    mark_only_lemmas_top:
+    - - αγοραζω
+      - 1
+    - - ειμι
+      - 1
+    - - εκ
+      - 1
+    - - ενειλεω
+      - 1
+    - - επι
+      - 1
+    - - καθαιρεω
+      - 1
+    - - σινδων
+      - 1
+    - - θεωρεω
+      - 1
+    - - ιωσης
+      - 1
+    - - που
+      - 1
+    - - τιθημι
+      - 1
+    matt_only_lemmas_top:
+    - - απερχομαι
+      - 1
+    - - καινος
+      - 1
+    - - μεγας
+      - 1
+    - - αλλος
+      - 1
+    - - απεναντι
+      - 1
+    - - ειμι
+      - 1
+    - - εκει
+      - 1
+    - - καθημαι
+      - 1
+    - - μαριαμ
+      - 1
+    - - ταφος
+      - 1
+  variant_mark_refs:
+  - Mark 15:46
+  - Mark 15:47
+  variant_matt_refs:
+  - Matt 27:61
+  variant_mark_count: 5
+  variant_matt_count: 1
+  span_density: 1.0
+- id: 51
+  level: micro
+  pair_count: 2
+  confidence: medium
+  avg_score: 0.386416
+  mark_start_ref: Mark 16:6
+  mark_end_ref: Mark 16:7
+  matt_start_ref: Matt 28:6
+  matt_end_ref: Matt 28:7
+  mark_span_refs:
+  - Mark 16:6
+  - Mark 16:7
+  matt_span_refs:
+  - Matt 28:6
+  - Matt 28:7
+  matched_pairs:
+  - mark_ref: Mark 16:6
+    matt_ref: Matt 28:6
+    score: 0.301712
+  - mark_ref: Mark 16:7
+    matt_ref: Matt 28:7
+    score: 0.471119
+  unmatched_mark_refs: []
+  unmatched_matt_refs: []
+  mark_token_count: 43
+  matt_token_count: 38
+  mark_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 4
+    present_indicative_ratio: 0.5
+  matt_marker_counts:
+    euthys: 0
+    kingdom_god: 0
+    kingdom_heaven: 0
+    pleroo: 0
+    grapho: 0
+    indicative_total: 8
+    present_indicative: 2
+    present_indicative_ratio: 0.25
+  aggregate_diff:
+    lemma_insertions: 5
+    lemma_deletions: 13
+    lemma_replacements: 15
+    moved_tokens_top:
+    - - εγειρω
+      - 1
+    - - λεγω
+      - 1
+    - - ο
+      - 1
+    - - οτι
+      - 1
+    common_lemmas_top:
+    - - λεγω
+      - 2
+    - - ο
+      - 2
+    - - εγειρω
+      - 1
+    - - ειμι
+      - 1
+    - - οπου
+      - 1
+    - - ου
+      - 1
+    - - τοπος
+      - 1
+    - - ωδε
+      - 1
+    - - αυτος
+      - 1
+    - - γαλιλαια
+      - 1
+    - - εις
+      - 1
+    - - εκει
+      - 1
+    - - και
+      - 1
+    - - μαθητης
+      - 1
+    - - οραω
+      - 1
+    - - οτι
+      - 1
+    - - προαγω
+      - 1
+    - - συ
+      - 1
+    mark_only_lemmas_top:
+    - - αυτος
+      - 1
+    - - δε
+      - 1
+    - - εκθαμβεομαι
+      - 1
+    - - ζητεω
+      - 1
+    - - ιδε
+      - 1
+    - - ιησους
+      - 1
+    - - μη
+      - 1
+    - - ναζαρηνος
+      - 1
+    - - σταυροω
+      - 1
+    - - τιθημι
+      - 1
+    - - αλλα
+      - 1
+    - - καθως
+      - 1
+    - - πετρος
+      - 1
+    - - υπαγω
+      - 1
+    matt_only_lemmas_top:
+    - - γαρ
+      - 1
+    - - δευτε
+      - 1
+    - - καθως
+      - 1
+    - - κειμαι
+      - 1
+    - - οραω
+      - 1
+    - - απο
+      - 1
+    - - εγειρω
+      - 1
+    - - ιδου
+      - 1
+    - - νεκρος
+      - 1
+    - - πορευομαι
+      - 1
+    - - ταχυ
+      - 1
+  variant_mark_refs: []
+  variant_matt_refs:
+  - Matt 28:6
+  variant_mark_count: 0
+  variant_matt_count: 1
+  span_density: 1.0

@@ -1,0 +1,911 @@
+- block_id: 1
+  mark_range: Mark 1:3 – Mark 1:6
+  matt_range: Matt 3:3 – Matt 3:4
+  pair_count: 2
+  avg_score: 0.661667
+  confidence: medium
+  gap_before_block:
+    before_block: 1
+    mark_gap:
+      start_ref: Mark 1:1
+      end_ref: Mark 1:2
+      verse_count: 2
+    matt_gap:
+      start_ref: Matt 1:1
+      end_ref: Matt 3:2
+      verse_count: 50
+    interpretation:
+    - Matthew has 48 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_omissions
+  - verbal_vividization
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is shorter (51 vs 71); this requires abbreviation, omission, or simplification.
+  - Within the span Mark has more unmatched verses (2 vs Matthew 0), which requires Matthew to compress, omit, or redistribute more material.
+  - Matthew has a higher present-indicative ratio in the span (0.3333 vs 0.0); Mark→Matthew would require added present-tense vividness.
+  - Before this block Matthew has an inserted/repositioned interval of 50 verses (Matt 1:1–Matt 3:2) compared with 2 in Mark.
+  matt_prior_operations:
+  - expansion
+  - mark_additions
+  - verbal_smoothing
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is longer (71 vs 51); this requires expansion, vividization, or added detail.
+  - Within the span Mark preserves more unmatched material (2 vs 0), which fits Markan expansion, retention, or de-grouping.
+  - Matthew→Mark would fit smoothing away from present-tense vividness (0.3333→0.0).
+  - Before this block Mark lacks a Matthean interval of 50 verses (Matt 1:1–Matt 3:2); Matthew→Mark requires omission or non-use of that material.
+- block_id: 2
+  mark_range: Mark 1:8 – Mark 1:13
+  matt_range: Matt 3:11 – Matt 4:2
+  pair_count: 6
+  avg_score: 0.348189
+  confidence: medium
+  gap_before_block:
+    before_block: 2
+    mark_gap:
+      start_ref: Mark 1:7
+      end_ref: Mark 1:7
+      verse_count: 1
+    matt_gap:
+      start_ref: Matt 3:5
+      end_ref: Matt 3:10
+      verse_count: 6
+    interpretation:
+    - Matthew has 5 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - expansion
+  - matt_additions
+  - tempo_smoothing
+  - scripturalization
+  - verbal_vividization
+  mark_prior_notes:
+  - Matthew span is longer (175 tokens vs 94); this requires expansion, insertion, or fuller retelling.
+  - Within the span Matthew has more unmatched verses (3 vs Mark 0), which fits added material or redistribution into the Matthean span.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (2 vs 1); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Matthew has more explicit scriptural markers in-span (1 vs 0); Mark→Matthew implies scripturalization or explicit citation.
+  - Matthew has a higher present-indicative ratio in the span (0.4286 vs 0.1538); Mark→Matthew would require added present-tense vividness.
+  matt_prior_operations:
+  - abbreviation
+  - mark_omissions
+  - tempo_intensification
+  - descripturalization
+  - verbal_smoothing
+  matt_prior_notes:
+  - Mark span is shorter (94 vs 175); this requires abbreviation, omission, or condensation.
+  - Within the span Mark lacks 3 relative Matthean verses, which requires omission or stronger compression.
+  - Mark has more tempo markers (2 vs 1); Matthew→Mark implies intensification or vividization.
+  - Matthew→Mark would require de-scripturalization or removal of explicit citation markers (1→0).
+  - Matthew→Mark would fit smoothing away from present-tense vividness (0.4286→0.1538).
+- block_id: 3
+  mark_range: Mark 1:15 – Mark 1:21
+  matt_range: Matt 4:17 – Matt 4:23
+  pair_count: 7
+  avg_score: 0.398465
+  confidence: medium
+  gap_before_block:
+    before_block: 3
+    mark_gap:
+      start_ref: Mark 1:14
+      end_ref: Mark 1:14
+      verse_count: 1
+    matt_gap:
+      start_ref: Matt 4:3
+      end_ref: Matt 4:16
+      verse_count: 14
+    interpretation:
+    - Matthew has 13 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - expansion
+  - tempo_smoothing
+  - terminology_shift
+  - descripturalization
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is longer (131 tokens vs 112); this requires expansion, insertion, or fuller retelling.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (3 vs 2); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Mark uses βασιλεία τοῦ θεοῦ (1) while Matthew uses βασιλεία τῶν οὐρανῶν (1); Mark→Matthew implies terminology substitution.
+  - Mark has more scriptural markers in-span (1 vs 0); Mark→Matthew would require their reduction.
+  - Before this block Matthew has an inserted/repositioned interval of 14 verses (Matt 4:3–Matt 4:16) compared with 1 in Mark.
+  matt_prior_operations:
+  - abbreviation
+  - tempo_intensification
+  - terminology_shift
+  - scripturalization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is shorter (112 vs 131); this requires abbreviation, omission, or condensation.
+  - Mark has more tempo markers (3 vs 2); Matthew→Mark implies intensification or vividization.
+  - The same contrast requires Matthew→Mark to replace βασιλεία τῶν οὐρανῶν with βασιλεία τοῦ θεοῦ.
+  - Matthew→Mark would require added explicit citation markers (0→1).
+  - Before this block Mark lacks a Matthean interval of 14 verses (Matt 4:3–Matt 4:16); Matthew→Mark requires omission or non-use of that material.
+- block_id: 4
+  mark_range: Mark 1:22 – Mark 1:22
+  matt_range: Matt 7:29 – Matt 7:29
+  pair_count: 1
+  avg_score: 0.714092
+  confidence: low
+  gap_before_block:
+    before_block: 4
+    mark_gap: null
+    matt_gap:
+      start_ref: Matt 4:24
+      end_ref: Matt 7:28
+      verse_count: 112
+    interpretation:
+    - Matthew has 112 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - redistribution
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is shorter (13 vs 18); this requires abbreviation, omission, or simplification.
+  - Alignment confidence is low; either direction would require more thematic redistribution or partial reuse assumptions.
+  - Before this block Matthew has an inserted/repositioned interval of 112 verses (Matt 4:24–Matt 7:28) compared with 0 in Mark.
+  matt_prior_operations:
+  - expansion
+  - redistribution
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is longer (18 vs 13); this requires expansion, vividization, or added detail.
+  - Alignment confidence is low; either direction would require more thematic redistribution or partial reuse assumptions.
+  - Before this block Mark lacks a Matthean interval of 112 verses (Matt 4:24–Matt 7:28); Matthew→Mark requires omission or non-use of that material.
+- block_id: 5
+  mark_range: Mark 1:40 – Mark 2:1
+  matt_range: Matt 8:2 – Matt 8:5
+  pair_count: 4
+  avg_score: 0.478942
+  confidence: high
+  gap_before_block:
+    before_block: 5
+    mark_gap:
+      start_ref: Mark 1:23
+      end_ref: Mark 1:39
+      verse_count: 17
+    matt_gap:
+      start_ref: Matt 8:1
+      end_ref: Matt 8:1
+      verse_count: 1
+    interpretation:
+    - Mark has 16 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_omissions
+  - tempo_smoothing
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Matthew span is shorter (62 vs 110); this requires abbreviation, omission, or simplification.
+  - Within the span Mark has more unmatched verses (3 vs Matthew 0), which requires Matthew to compress, omit, or redistribute more material.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (2 vs 1); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Mark has an unmatched interval of 17 verses (Mark 1:23–Mark 1:39) compared with 1 in Matthew.
+  matt_prior_operations:
+  - expansion
+  - mark_additions
+  - tempo_intensification
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Mark span is longer (110 vs 62); this requires expansion, vividization, or added detail.
+  - Within the span Mark preserves more unmatched material (3 vs 0), which fits Markan expansion, retention, or de-grouping.
+  - Mark has more tempo markers (2 vs 1); Matthew→Mark implies intensification or vividization.
+  - Before this block Matthew lacks a Markan interval of 17 verses (Mark 1:23–Mark 1:39); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 6
+  mark_range: Mark 2:5 – Mark 2:22
+  matt_range: Matt 9:2 – Matt 9:17
+  pair_count: 15
+  avg_score: 0.458111
+  confidence: high
+  gap_before_block:
+    before_block: 6
+    mark_gap:
+      start_ref: Mark 2:2
+      end_ref: Mark 2:4
+      verse_count: 3
+    matt_gap:
+      start_ref: Matt 8:6
+      end_ref: Matt 9:1
+      verse_count: 30
+    interpretation:
+    - Matthew has 27 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_omissions
+  - tempo_smoothing
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is shorter (313 vs 375); this requires abbreviation, omission, or simplification.
+  - Within the span Mark has more unmatched verses (3 vs Matthew 1), which requires Matthew to compress, omit, or redistribute more material.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (2 vs 0); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Matthew has an inserted/repositioned interval of 30 verses (Matt 8:6–Matt 9:1) compared with 3 in Mark.
+  matt_prior_operations:
+  - expansion
+  - mark_additions
+  - tempo_intensification
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is longer (375 vs 313); this requires expansion, vividization, or added detail.
+  - Within the span Mark preserves more unmatched material (3 vs 1), which fits Markan expansion, retention, or de-grouping.
+  - Mark has more tempo markers (2 vs 0); Matthew→Mark implies intensification or vividization.
+  - Before this block Mark lacks a Matthean interval of 30 verses (Matt 8:6–Matt 9:1); Matthew→Mark requires omission or non-use of that material.
+- block_id: 7
+  mark_range: Mark 2:23 – Mark 3:7
+  matt_range: Matt 12:1 – Matt 12:15
+  pair_count: 12
+  avg_score: 0.377841
+  confidence: medium
+  gap_before_block:
+    before_block: 7
+    mark_gap: null
+    matt_gap:
+      start_ref: Matt 9:18
+      end_ref: Matt 11:30
+      verse_count: 93
+    interpretation:
+    - Matthew has 93 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_additions
+  - tempo_smoothing
+  - matt_interposition
+  mark_prior_notes:
+  - Span lengths are close (223 vs 240); neither direction is decided by block length alone.
+  - Within the span Matthew has more unmatched verses (3 vs Mark 1), which fits added material or redistribution into the Matthean span.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (1 vs 0); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Matthew has an inserted/repositioned interval of 93 verses (Matt 9:18–Matt 11:30) compared with 0 in Mark.
+  matt_prior_operations:
+  - length_neutral
+  - mark_omissions
+  - tempo_intensification
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Span lengths are close (223 vs 240); neither direction is decided by block length alone.
+  - Within the span Mark lacks 2 relative Matthean verses, which requires omission or stronger compression.
+  - Mark has more tempo markers (1 vs 0); Matthew→Mark implies intensification or vividization.
+  - Before this block Mark lacks a Matthean interval of 93 verses (Matt 9:18–Matt 11:30); Matthew→Mark requires omission or non-use of that material.
+- block_id: 8
+  mark_range: Mark 3:21 – Mark 3:29
+  matt_range: Matt 12:23 – Matt 12:32
+  pair_count: 7
+  avg_score: 0.313823
+  confidence: medium
+  gap_before_block:
+    before_block: 8
+    mark_gap:
+      start_ref: Mark 3:8
+      end_ref: Mark 3:20
+      verse_count: 13
+    matt_gap:
+      start_ref: Matt 12:16
+      end_ref: Matt 12:22
+      verse_count: 7
+    interpretation:
+    - Mark has 6 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - expansion
+  - matt_additions
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Matthew span is longer (200 tokens vs 147); this requires expansion, insertion, or fuller retelling.
+  - Within the span Matthew has more unmatched verses (3 vs Mark 2), which fits added material or redistribution into the Matthean span.
+  - Before this block Mark has an unmatched interval of 13 verses (Mark 3:8–Mark 3:20) compared with 7 in Matthew.
+  matt_prior_operations:
+  - abbreviation
+  - mark_omissions
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Mark span is shorter (147 vs 200); this requires abbreviation, omission, or condensation.
+  - Within the span Mark lacks 1 relative Matthean verses, which requires omission or stronger compression.
+  - Before this block Matthew lacks a Markan interval of 13 verses (Mark 3:8–Mark 3:20); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 9
+  mark_range: Mark 3:31 – Mark 4:11
+  matt_range: Matt 12:46 – Matt 13:11
+  pair_count: 15
+  avg_score: 0.531866
+  confidence: high
+  gap_before_block:
+    before_block: 9
+    mark_gap:
+      start_ref: Mark 3:30
+      end_ref: Mark 3:30
+      verse_count: 1
+    matt_gap:
+      start_ref: Matt 12:33
+      end_ref: Matt 12:45
+      verse_count: 13
+    interpretation:
+    - Matthew has 12 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - terminology_shift
+  - verbal_smoothing
+  - matt_interposition
+  mark_prior_notes:
+  - Span lengths are close (267 vs 253); neither direction is decided by block length alone.
+  - Mark uses βασιλεία τοῦ θεοῦ (1) while Matthew uses βασιλεία τῶν οὐρανῶν (1); Mark→Matthew implies terminology substitution.
+  - Mark has a higher present-indicative ratio in the span (0.2564 vs 0.1333); Mark→Matthew fits verbal smoothing away from present-tense vividness.
+  - Before this block Matthew has an inserted/repositioned interval of 13 verses (Matt 12:33–Matt 12:45) compared with 1 in Mark.
+  matt_prior_operations:
+  - length_neutral
+  - terminology_shift
+  - verbal_vividization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Span lengths are close (267 vs 253); neither direction is decided by block length alone.
+  - The same contrast requires Matthew→Mark to replace βασιλεία τῶν οὐρανῶν with βασιλεία τοῦ θεοῦ.
+  - Matthew→Mark would require present-tense vividization (0.1333→0.2564).
+  - Before this block Mark lacks a Matthean interval of 13 verses (Matt 12:33–Matt 12:45); Matthew→Mark requires omission or non-use of that material.
+- block_id: 10
+  mark_range: Mark 4:14 – Mark 4:20
+  matt_range: Matt 13:18 – Matt 13:23
+  pair_count: 6
+  avg_score: 0.489696
+  confidence: high
+  gap_before_block:
+    before_block: 10
+    mark_gap:
+      start_ref: Mark 4:12
+      end_ref: Mark 4:13
+      verse_count: 2
+    matt_gap:
+      start_ref: Matt 13:12
+      end_ref: Matt 13:17
+      verse_count: 6
+    interpretation:
+    - Matthew has 4 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_omissions
+  - tempo_smoothing
+  mark_prior_notes:
+  - Span lengths are close (132 vs 129); neither direction is decided by block length alone.
+  - Within the span Mark has more unmatched verses (1 vs Matthew 0), which requires Matthew to compress, omit, or redistribute more material.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (3 vs 2); Mark→Matthew implies tempo smoothing or de-intensification.
+  matt_prior_operations:
+  - length_neutral
+  - mark_additions
+  - tempo_intensification
+  matt_prior_notes:
+  - Span lengths are close (132 vs 129); neither direction is decided by block length alone.
+  - Within the span Mark preserves more unmatched material (1 vs 0), which fits Markan expansion, retention, or de-grouping.
+  - Mark has more tempo markers (3 vs 2); Matthew→Mark implies intensification or vividization.
+- block_id: 11
+  mark_range: Mark 4:31 – Mark 4:34
+  matt_range: Matt 13:31 – Matt 13:34
+  pair_count: 3
+  avg_score: 0.242945
+  confidence: low
+  gap_before_block:
+    before_block: 11
+    mark_gap:
+      start_ref: Mark 4:21
+      end_ref: Mark 4:30
+      verse_count: 10
+    matt_gap:
+      start_ref: Matt 13:24
+      end_ref: Matt 13:30
+      verse_count: 7
+    interpretation:
+    - Mark has 3 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - expansion
+  - redistribution
+  mark_prior_notes:
+  - Matthew span is longer (88 tokens vs 68); this requires expansion, insertion, or fuller retelling.
+  - Alignment confidence is low; either direction would require more thematic redistribution or partial reuse assumptions.
+  matt_prior_operations:
+  - abbreviation
+  - redistribution
+  matt_prior_notes:
+  - Mark span is shorter (68 vs 88); this requires abbreviation, omission, or condensation.
+  - Alignment confidence is low; either direction would require more thematic redistribution or partial reuse assumptions.
+- block_id: 12
+  mark_range: Mark 6:2 – Mark 6:5
+  matt_range: Matt 13:54 – Matt 13:58
+  pair_count: 4
+  avg_score: 0.414693
+  confidence: high
+  gap_before_block:
+    before_block: 12
+    mark_gap:
+      start_ref: Mark 4:35
+      end_ref: Mark 6:1
+      verse_count: 51
+    matt_gap:
+      start_ref: Matt 13:35
+      end_ref: Matt 13:53
+      verse_count: 19
+    interpretation:
+    - Mark has 32 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_additions
+  - verbal_vividization
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Span lengths are close (105 vs 96); neither direction is decided by block length alone.
+  - Within the span Matthew has more unmatched verses (1 vs Mark 0), which fits added material or redistribution into the Matthean span.
+  - Matthew has a higher present-indicative ratio in the span (0.5 vs 0.3333); Mark→Matthew would require added present-tense vividness.
+  - Before this block Mark has an unmatched interval of 51 verses (Mark 4:35–Mark 6:1) compared with 19 in Matthew.
+  matt_prior_operations:
+  - length_neutral
+  - mark_omissions
+  - verbal_smoothing
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Span lengths are close (105 vs 96); neither direction is decided by block length alone.
+  - Within the span Mark lacks 1 relative Matthean verses, which requires omission or stronger compression.
+  - Matthew→Mark would fit smoothing away from present-tense vividness (0.5→0.3333).
+  - Before this block Matthew lacks a Markan interval of 51 verses (Mark 4:35–Mark 6:1); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 13
+  mark_range: Mark 6:14 – Mark 7:3
+  matt_range: Matt 14:2 – Matt 15:2
+  pair_count: 30
+  avg_score: 0.376474
+  confidence: medium
+  gap_before_block:
+    before_block: 13
+    mark_gap:
+      start_ref: Mark 6:6
+      end_ref: Mark 6:13
+      verse_count: 8
+    matt_gap:
+      start_ref: Matt 14:1
+      end_ref: Matt 14:1
+      verse_count: 1
+    interpretation:
+    - Mark has 7 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_omissions
+  - tempo_smoothing
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Matthew span is shorter (577 vs 799); this requires abbreviation, omission, or simplification.
+  - Within the span Mark has more unmatched verses (16 vs Matthew 7), which requires Matthew to compress, omit, or redistribute more material.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (5 vs 3); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Mark has an unmatched interval of 8 verses (Mark 6:6–Mark 6:13) compared with 1 in Matthew.
+  matt_prior_operations:
+  - expansion
+  - mark_additions
+  - tempo_intensification
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Mark span is longer (799 vs 577); this requires expansion, vividization, or added detail.
+  - Within the span Mark preserves more unmatched material (16 vs 7), which fits Markan expansion, retention, or de-grouping.
+  - Mark has more tempo markers (5 vs 3); Matthew→Mark implies intensification or vividization.
+  - Before this block Matthew lacks a Markan interval of 8 verses (Mark 6:6–Mark 6:13); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 14
+  mark_range: Mark 7:9 – Mark 7:29
+  matt_range: Matt 15:3 – Matt 15:28
+  pair_count: 15
+  avg_score: 0.384772
+  confidence: medium
+  gap_before_block:
+    before_block: 14
+    mark_gap:
+      start_ref: Mark 7:4
+      end_ref: Mark 7:8
+      verse_count: 5
+    matt_gap: null
+    interpretation:
+    - Mark has 5 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - expansion
+  - matt_additions
+  - tempo_smoothing
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Matthew span is longer (388 tokens vs 329); this requires expansion, insertion, or fuller retelling.
+  - Within the span Matthew has more unmatched verses (11 vs Mark 5), which fits added material or redistribution into the Matthean span.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (1 vs 0); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Mark has an unmatched interval of 5 verses (Mark 7:4–Mark 7:8) compared with 0 in Matthew.
+  matt_prior_operations:
+  - abbreviation
+  - mark_omissions
+  - tempo_intensification
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Mark span is shorter (329 vs 388); this requires abbreviation, omission, or condensation.
+  - Within the span Mark lacks 6 relative Matthean verses, which requires omission or stronger compression.
+  - Mark has more tempo markers (1 vs 0); Matthew→Mark implies intensification or vividization.
+  - Before this block Matthew lacks a Markan interval of 5 verses (Mark 7:4–Mark 7:8); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 15
+  mark_range: Mark 8:2 – Mark 8:20
+  matt_range: Matt 15:32 – Matt 16:10
+  pair_count: 15
+  avg_score: 0.341707
+  confidence: medium
+  gap_before_block:
+    before_block: 15
+    mark_gap:
+      start_ref: Mark 7:30
+      end_ref: Mark 8:1
+      verse_count: 9
+    matt_gap:
+      start_ref: Matt 15:29
+      end_ref: Matt 15:31
+      verse_count: 3
+    interpretation:
+    - Mark has 6 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_omissions
+  - tempo_smoothing
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Span lengths are close (277 vs 272); neither direction is decided by block length alone.
+  - Within the span Mark has more unmatched verses (4 vs Matthew 3), which requires Matthew to compress, omit, or redistribute more material.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (1 vs 0); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Before this block Mark has an unmatched interval of 9 verses (Mark 7:30–Mark 8:1) compared with 3 in Matthew.
+  matt_prior_operations:
+  - length_neutral
+  - mark_additions
+  - tempo_intensification
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Span lengths are close (277 vs 272); neither direction is decided by block length alone.
+  - Within the span Mark preserves more unmatched material (4 vs 3), which fits Markan expansion, retention, or de-grouping.
+  - Mark has more tempo markers (1 vs 0); Matthew→Mark implies intensification or vividization.
+  - Before this block Matthew lacks a Markan interval of 9 verses (Mark 7:30–Mark 8:1); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 16
+  mark_range: Mark 8:27 – Mark 9:19
+  matt_range: Matt 16:13 – Matt 17:17
+  pair_count: 25
+  avg_score: 0.450842
+  confidence: high
+  gap_before_block:
+    before_block: 16
+    mark_gap:
+      start_ref: Mark 8:21
+      end_ref: Mark 8:26
+      verse_count: 6
+    matt_gap:
+      start_ref: Matt 16:11
+      end_ref: Matt 16:12
+      verse_count: 2
+    interpretation:
+    - Mark has 4 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_additions
+  - tempo_smoothing
+  - terminology_shift
+  - descripturalization
+  mark_prior_notes:
+  - Span lengths are close (585 vs 645); neither direction is decided by block length alone.
+  - Within the span Matthew has more unmatched verses (8 vs Mark 6), which fits added material or redistribution into the Matthean span.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (1 vs 0); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Mark uses βασιλεία τοῦ θεοῦ (1) while Matthew uses βασιλεία τῶν οὐρανῶν (1); Mark→Matthew implies terminology substitution.
+  - Mark has more scriptural markers in-span (2 vs 0); Mark→Matthew would require their reduction.
+  matt_prior_operations:
+  - length_neutral
+  - mark_omissions
+  - tempo_intensification
+  - terminology_shift
+  - scripturalization
+  matt_prior_notes:
+  - Span lengths are close (585 vs 645); neither direction is decided by block length alone.
+  - Within the span Mark lacks 2 relative Matthean verses, which requires omission or stronger compression.
+  - Mark has more tempo markers (1 vs 0); Matthew→Mark implies intensification or vividization.
+  - The same contrast requires Matthew→Mark to replace βασιλεία τῶν οὐρανῶν with βασιλεία τοῦ θεοῦ.
+  - Matthew→Mark would require added explicit citation markers (0→2).
+- block_id: 17
+  mark_range: Mark 9:42 – Mark 9:47
+  matt_range: Matt 18:6 – Matt 18:9
+  pair_count: 3
+  avg_score: 0.509813
+  confidence: medium
+  gap_before_block:
+    before_block: 17
+    mark_gap:
+      start_ref: Mark 9:20
+      end_ref: Mark 9:41
+      verse_count: 22
+    matt_gap:
+      start_ref: Matt 17:18
+      end_ref: Matt 18:5
+      verse_count: 14
+    interpretation:
+    - Mark has 8 more gap verses than Matthew at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - verbal_vividization
+  - matt_nonuse_of_mark_gap
+  mark_prior_notes:
+  - Span lengths are close (113 vs 120); neither direction is decided by block length alone.
+  - Matthew has a higher present-indicative ratio in the span (1.0 vs 0.8333); Mark→Matthew would require added present-tense vividness.
+  - Before this block Mark has an unmatched interval of 22 verses (Mark 9:20–Mark 9:41) compared with 14 in Matthew.
+  matt_prior_operations:
+  - length_neutral
+  - verbal_smoothing
+  - mark_preserves_extra_material
+  matt_prior_notes:
+  - Span lengths are close (113 vs 120); neither direction is decided by block length alone.
+  - Matthew→Mark would fit smoothing away from present-tense vividness (1.0→0.8333).
+  - Before this block Matthew lacks a Markan interval of 22 verses (Mark 9:20–Mark 9:41); Matthew→Mark fits Markan expansion, preservation, or non-Matthean material.
+- block_id: 18
+  mark_range: Mark 10:6 – Mark 10:31
+  matt_range: Matt 19:4 – Matt 19:30
+  pair_count: 20
+  avg_score: 0.461435
+  confidence: high
+  gap_before_block:
+    before_block: 18
+    mark_gap:
+      start_ref: Mark 9:48
+      end_ref: Mark 10:5
+      verse_count: 8
+    matt_gap:
+      start_ref: Matt 18:10
+      end_ref: Matt 19:3
+      verse_count: 28
+    interpretation:
+    - Matthew has 20 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_additions
+  - terminology_shift
+  - matt_interposition
+  mark_prior_notes:
+  - Span lengths are close (428 vs 486); neither direction is decided by block length alone.
+  - Within the span Matthew has more unmatched verses (7 vs Mark 6), which fits added material or redistribution into the Matthean span.
+  - Mark uses βασιλεία τοῦ θεοῦ (5) while Matthew uses βασιλεία τῶν οὐρανῶν (3); Mark→Matthew implies terminology substitution.
+  - Before this block Matthew has an inserted/repositioned interval of 28 verses (Matt 18:10–Matt 19:3) compared with 8 in Mark.
+  matt_prior_operations:
+  - length_neutral
+  - mark_omissions
+  - terminology_shift
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Span lengths are close (428 vs 486); neither direction is decided by block length alone.
+  - Within the span Mark lacks 1 relative Matthean verses, which requires omission or stronger compression.
+  - The same contrast requires Matthew→Mark to replace βασιλεία τῶν οὐρανῶν with βασιλεία τοῦ θεοῦ.
+  - Before this block Mark lacks a Matthean interval of 28 verses (Matt 18:10–Matt 19:3); Matthew→Mark requires omission or non-use of that material.
+- block_id: 19
+  mark_range: Mark 10:32 – Mark 11:17
+  matt_range: Matt 20:17 – Matt 21:13
+  pair_count: 28
+  avg_score: 0.453304
+  confidence: high
+  gap_before_block:
+    before_block: 19
+    mark_gap: null
+    matt_gap:
+      start_ref: Matt 20:1
+      end_ref: Matt 20:16
+      verse_count: 16
+    interpretation:
+    - Matthew has 16 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_omissions
+  - scripturalization
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is shorter (534 vs 691); this requires abbreviation, omission, or simplification.
+  - Within the span Mark has more unmatched verses (10 vs Matthew 3), which requires Matthew to compress, omit, or redistribute more material.
+  - Matthew has more explicit scriptural markers in-span (2 vs 1); Mark→Matthew implies scripturalization or explicit citation.
+  - Before this block Matthew has an inserted/repositioned interval of 16 verses (Matt 20:1–Matt 20:16) compared with 0 in Mark.
+  matt_prior_operations:
+  - expansion
+  - mark_additions
+  - descripturalization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is longer (691 vs 534); this requires expansion, vividization, or added detail.
+  - Within the span Mark preserves more unmatched material (10 vs 3), which fits Markan expansion, retention, or de-grouping.
+  - Matthew→Mark would require de-scripturalization or removal of explicit citation markers (2→1).
+  - Before this block Mark lacks a Matthean interval of 16 verses (Matt 20:1–Matt 20:16); Matthew→Mark requires omission or non-use of that material.
+- block_id: 20
+  mark_range: Mark 11:21 – Mark 12:10
+  matt_range: Matt 21:20 – Matt 21:42
+  pair_count: 17
+  avg_score: 0.468388
+  confidence: high
+  gap_before_block:
+    before_block: 20
+    mark_gap:
+      start_ref: Mark 11:18
+      end_ref: Mark 11:20
+      verse_count: 3
+    matt_gap:
+      start_ref: Matt 21:14
+      end_ref: Matt 21:19
+      verse_count: 6
+    interpretation:
+    - Matthew has 3 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - expansion
+  - matt_additions
+  mark_prior_notes:
+  - Matthew span is longer (453 tokens vs 370); this requires expansion, insertion, or fuller retelling.
+  - Within the span Matthew has more unmatched verses (6 vs Mark 5), which fits added material or redistribution into the Matthean span.
+  matt_prior_operations:
+  - abbreviation
+  - mark_omissions
+  matt_prior_notes:
+  - Mark span is shorter (370 vs 453); this requires abbreviation, omission, or condensation.
+  - Within the span Mark lacks 1 relative Matthean verses, which requires omission or stronger compression.
+- block_id: 21
+  mark_range: Mark 12:13 – Mark 12:37
+  matt_range: Matt 22:15 – Matt 22:45
+  pair_count: 20
+  avg_score: 0.411023
+  confidence: high
+  gap_before_block:
+    before_block: 21
+    mark_gap:
+      start_ref: Mark 12:11
+      end_ref: Mark 12:12
+      verse_count: 2
+    matt_gap:
+      start_ref: Matt 21:43
+      end_ref: Matt 22:14
+      verse_count: 18
+    interpretation:
+    - Matthew has 16 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - abbreviation
+  - matt_additions
+  - descripturalization
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is shorter (423 vs 493); this requires abbreviation, omission, or simplification.
+  - Within the span Matthew has more unmatched verses (11 vs Mark 5), which fits added material or redistribution into the Matthean span.
+  - Mark has more scriptural markers in-span (1 vs 0); Mark→Matthew would require their reduction.
+  - Before this block Matthew has an inserted/repositioned interval of 18 verses (Matt 21:43–Matt 22:14) compared with 2 in Mark.
+  matt_prior_operations:
+  - expansion
+  - mark_omissions
+  - scripturalization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is longer (493 vs 423); this requires expansion, vividization, or added detail.
+  - Within the span Mark lacks 6 relative Matthean verses, which requires omission or stronger compression.
+  - Matthew→Mark would require added explicit citation markers (0→1).
+  - Before this block Mark lacks a Matthean interval of 18 verses (Matt 21:43–Matt 22:14); Matthew→Mark requires omission or non-use of that material.
+- block_id: 22
+  mark_range: Mark 13:1 – Mark 13:32
+  matt_range: Matt 24:1 – Matt 24:36
+  pair_count: 27
+  avg_score: 0.629637
+  confidence: high
+  gap_before_block:
+    before_block: 22
+    mark_gap:
+      start_ref: Mark 12:38
+      end_ref: Mark 12:44
+      verse_count: 7
+    matt_gap:
+      start_ref: Matt 22:46
+      end_ref: Matt 23:39
+      verse_count: 39
+    interpretation:
+    - Matthew has 32 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - matt_additions
+  - tempo_intensification
+  - matt_interposition
+  mark_prior_notes:
+  - Span lengths are close (539 vs 585); neither direction is decided by block length alone.
+  - Within the span Matthew has more unmatched verses (9 vs Mark 5), which fits added material or redistribution into the Matthean span.
+  - Matthew has more tempo markers (1 vs 0); Mark→Matthew implies added pacing markers.
+  - Before this block Matthew has an inserted/repositioned interval of 39 verses (Matt 22:46–Matt 23:39) compared with 7 in Mark.
+  matt_prior_operations:
+  - length_neutral
+  - mark_omissions
+  - tempo_smoothing
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Span lengths are close (539 vs 585); neither direction is decided by block length alone.
+  - Within the span Mark lacks 4 relative Matthean verses, which requires omission or stronger compression.
+  - Matthew has more tempo markers (1 vs 0); Matthew→Mark implies smoothing or removal of pacing markers.
+  - Before this block Mark lacks a Matthean interval of 39 verses (Matt 22:46–Matt 23:39); Matthew→Mark requires omission or non-use of that material.
+- block_id: 23
+  mark_range: Mark 14:1 – Mark 15:1
+  matt_range: Matt 26:4 – Matt 27:1
+  pair_count: 64
+  avg_score: 0.449605
+  confidence: high
+  gap_before_block:
+    before_block: 23
+    mark_gap:
+      start_ref: Mark 13:33
+      end_ref: Mark 13:37
+      verse_count: 5
+    matt_gap:
+      start_ref: Matt 24:37
+      end_ref: Matt 26:3
+      verse_count: 64
+    interpretation:
+    - Matthew has 59 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - tempo_smoothing
+  - scripturalization
+  - matt_interposition
+  mark_prior_notes:
+  - Span lengths are close (1223 vs 1211); neither direction is decided by block length alone.
+  - Mark has more tempo markers εὐθύς/εὐθέως in this span (4 vs 2); Mark→Matthew implies tempo smoothing or de-intensification.
+  - Matthew has more explicit scriptural markers in-span (4 vs 3); Mark→Matthew implies scripturalization or explicit citation.
+  - Before this block Matthew has an inserted/repositioned interval of 64 verses (Matt 24:37–Matt 26:3) compared with 5 in Mark.
+  matt_prior_operations:
+  - length_neutral
+  - tempo_intensification
+  - descripturalization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Span lengths are close (1223 vs 1211); neither direction is decided by block length alone.
+  - Mark has more tempo markers (4 vs 2); Matthew→Mark implies intensification or vividization.
+  - Matthew→Mark would require de-scripturalization or removal of explicit citation markers (4→3).
+  - Before this block Mark lacks a Matthean interval of 64 verses (Matt 24:37–Matt 26:3); Matthew→Mark requires omission or non-use of that material.
+- block_id: 24
+  mark_range: Mark 15:2 – Mark 15:47
+  matt_range: Matt 27:11 – Matt 27:61
+  pair_count: 37
+  avg_score: 0.363253
+  confidence: medium
+  gap_before_block:
+    before_block: 24
+    mark_gap: null
+    matt_gap:
+      start_ref: Matt 27:2
+      end_ref: Matt 27:10
+      verse_count: 9
+    interpretation:
+    - Matthew has 9 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - expansion
+  - matt_additions
+  - tempo_intensification
+  - scripturalization
+  - matt_interposition
+  mark_prior_notes:
+  - Matthew span is longer (776 tokens vs 646); this requires expansion, insertion, or fuller retelling.
+  - Within the span Matthew has more unmatched verses (14 vs Mark 8), which fits added material or redistribution into the Matthean span.
+  - Matthew has more tempo markers (1 vs 0); Mark→Matthew implies added pacing markers.
+  - Matthew has more explicit scriptural markers in-span (1 vs 0); Mark→Matthew implies scripturalization or explicit citation.
+  - Before this block Matthew has an inserted/repositioned interval of 9 verses (Matt 27:2–Matt 27:10) compared with 0 in Mark.
+  matt_prior_operations:
+  - abbreviation
+  - mark_omissions
+  - tempo_smoothing
+  - descripturalization
+  - mark_nonuse_of_matt_gap
+  matt_prior_notes:
+  - Mark span is shorter (646 vs 776); this requires abbreviation, omission, or condensation.
+  - Within the span Mark lacks 6 relative Matthean verses, which requires omission or stronger compression.
+  - Matthew has more tempo markers (1 vs 0); Matthew→Mark implies smoothing or removal of pacing markers.
+  - Matthew→Mark would require de-scripturalization or removal of explicit citation markers (1→0).
+  - Before this block Mark lacks a Matthean interval of 9 verses (Matt 27:2–Matt 27:10); Matthew→Mark requires omission or non-use of that material.
+- block_id: 25
+  mark_range: Mark 16:6 – Mark 16:7
+  matt_range: Matt 28:6 – Matt 28:7
+  pair_count: 2
+  avg_score: 0.386416
+  confidence: medium
+  gap_before_block:
+    before_block: 25
+    mark_gap:
+      start_ref: Mark 16:1
+      end_ref: Mark 16:5
+      verse_count: 5
+    matt_gap:
+      start_ref: Matt 27:62
+      end_ref: Matt 28:5
+      verse_count: 10
+    interpretation:
+    - Matthew has 5 more gap verses than Mark at this boundary.
+  mark_prior_operations:
+  - length_neutral
+  - verbal_smoothing
+  mark_prior_notes:
+  - Span lengths are close (43 vs 38); neither direction is decided by block length alone.
+  - Mark has a higher present-indicative ratio in the span (0.5 vs 0.25); Mark→Matthew fits verbal smoothing away from present-tense vividness.
+  matt_prior_operations:
+  - length_neutral
+  - verbal_vividization
+  matt_prior_notes:
+  - Span lengths are close (43 vs 38); neither direction is decided by block length alone.
+  - Matthew→Mark would require present-tense vividization (0.25→0.5).

@@ -1,0 +1,162 @@
+pair_score_bands:
+  ge_0.80: 23
+  ge_0.70: 47
+  ge_0.60: 90
+  ge_0.50: 142
+  lt_0.40: 186
+gap_verse_totals:
+  total_mark_gap_verses_across_boundaries: 194
+  total_matt_gap_verses_across_boundaries: 581
+  extra_matt_gap_verses_over_mark: 474
+  extra_mark_gap_verses_over_matt: 87
+aligned_span_token_totals:
+  mark_tokens_in_loose_blocks: 8258
+  matt_tokens_in_loose_blocks: 8259
+  delta_matt_minus_mark: 1
+  block_level_deltas:
+  - block_id: 1
+    mark_range: Mark 1:3 – Mark 1:6
+    matt_range: Matt 3:3 – Matt 3:4
+    delta_matt_minus_mark: -20
+  - block_id: 2
+    mark_range: Mark 1:8 – Mark 1:13
+    matt_range: Matt 3:11 – Matt 4:2
+    delta_matt_minus_mark: 81
+  - block_id: 3
+    mark_range: Mark 1:15 – Mark 1:21
+    matt_range: Matt 4:17 – Matt 4:23
+    delta_matt_minus_mark: 19
+  - block_id: 4
+    mark_range: Mark 1:22 – Mark 1:22
+    matt_range: Matt 7:29 – Matt 7:29
+    delta_matt_minus_mark: -5
+  - block_id: 5
+    mark_range: Mark 1:40 – Mark 2:1
+    matt_range: Matt 8:2 – Matt 8:5
+    delta_matt_minus_mark: -48
+  - block_id: 6
+    mark_range: Mark 2:5 – Mark 2:22
+    matt_range: Matt 9:2 – Matt 9:17
+    delta_matt_minus_mark: -62
+  - block_id: 7
+    mark_range: Mark 2:23 – Mark 3:7
+    matt_range: Matt 12:1 – Matt 12:15
+    delta_matt_minus_mark: 17
+  - block_id: 8
+    mark_range: Mark 3:21 – Mark 3:29
+    matt_range: Matt 12:23 – Matt 12:32
+    delta_matt_minus_mark: 53
+  - block_id: 9
+    mark_range: Mark 3:31 – Mark 4:11
+    matt_range: Matt 12:46 – Matt 13:11
+    delta_matt_minus_mark: -14
+  - block_id: 10
+    mark_range: Mark 4:14 – Mark 4:20
+    matt_range: Matt 13:18 – Matt 13:23
+    delta_matt_minus_mark: -3
+  - block_id: 11
+    mark_range: Mark 4:31 – Mark 4:34
+    matt_range: Matt 13:31 – Matt 13:34
+    delta_matt_minus_mark: 20
+  - block_id: 12
+    mark_range: Mark 6:2 – Mark 6:5
+    matt_range: Matt 13:54 – Matt 13:58
+    delta_matt_minus_mark: -9
+  - block_id: 13
+    mark_range: Mark 6:14 – Mark 7:3
+    matt_range: Matt 14:2 – Matt 15:2
+    delta_matt_minus_mark: -222
+  - block_id: 14
+    mark_range: Mark 7:9 – Mark 7:29
+    matt_range: Matt 15:3 – Matt 15:28
+    delta_matt_minus_mark: 59
+  - block_id: 15
+    mark_range: Mark 8:2 – Mark 8:20
+    matt_range: Matt 15:32 – Matt 16:10
+    delta_matt_minus_mark: -5
+  - block_id: 16
+    mark_range: Mark 8:27 – Mark 9:19
+    matt_range: Matt 16:13 – Matt 17:17
+    delta_matt_minus_mark: 60
+  - block_id: 17
+    mark_range: Mark 9:42 – Mark 9:47
+    matt_range: Matt 18:6 – Matt 18:9
+    delta_matt_minus_mark: 7
+  - block_id: 18
+    mark_range: Mark 10:6 – Mark 10:31
+    matt_range: Matt 19:4 – Matt 19:30
+    delta_matt_minus_mark: 58
+  - block_id: 19
+    mark_range: Mark 10:32 – Mark 11:17
+    matt_range: Matt 20:17 – Matt 21:13
+    delta_matt_minus_mark: -157
+  - block_id: 20
+    mark_range: Mark 11:21 – Mark 12:10
+    matt_range: Matt 21:20 – Matt 21:42
+    delta_matt_minus_mark: 83
+  - block_id: 21
+    mark_range: Mark 12:13 – Mark 12:37
+    matt_range: Matt 22:15 – Matt 22:45
+    delta_matt_minus_mark: -70
+  - block_id: 22
+    mark_range: Mark 13:1 – Mark 13:32
+    matt_range: Matt 24:1 – Matt 24:36
+    delta_matt_minus_mark: 46
+  - block_id: 23
+    mark_range: Mark 14:1 – Mark 15:1
+    matt_range: Matt 26:4 – Matt 27:1
+    delta_matt_minus_mark: -12
+  - block_id: 24
+    mark_range: Mark 15:2 – Mark 15:47
+    matt_range: Matt 27:11 – Matt 27:61
+    delta_matt_minus_mark: 130
+  - block_id: 25
+    mark_range: Mark 16:6 – Mark 16:7
+    matt_range: Matt 28:6 – Matt 28:7
+    delta_matt_minus_mark: -5
+pair_level_diff_totals:
+  lemma_insertions_total: 1306
+  lemma_deletions_total: 1363
+  lemma_replacements_total: 2241
+direction_operation_counts:
+  mark_prior:
+    abbreviation: 7
+    matt_omissions: 7
+    verbal_vividization: 4
+    matt_interposition: 12
+    expansion: 7
+    matt_additions: 11
+    tempo_smoothing: 11
+    scripturalization: 4
+    terminology_shift: 4
+    descripturalization: 3
+    redistribution: 2
+    matt_nonuse_of_mark_gap: 7
+    length_neutral: 11
+    verbal_smoothing: 2
+    tempo_intensification: 2
+  matt_prior:
+    expansion: 7
+    mark_additions: 7
+    verbal_smoothing: 4
+    mark_nonuse_of_matt_gap: 12
+    abbreviation: 7
+    mark_omissions: 11
+    tempo_intensification: 11
+    descripturalization: 4
+    terminology_shift: 4
+    scripturalization: 3
+    redistribution: 2
+    mark_preserves_extra_material: 7
+    length_neutral: 11
+    verbal_vividization: 2
+    tempo_smoothing: 2
+marker_block_summary:
+  mark_more_euthys_blocks: 11
+  matt_more_euthys_blocks: 2
+  mark_more_present_ratio_blocks: 13
+  matt_more_present_ratio_blocks: 10
+  matt_more_scripture_blocks: 4
+  mark_more_scripture_blocks: 3
+  matt_more_kingdom_heaven_blocks: 5
+  mark_more_kingdom_god_blocks: 8

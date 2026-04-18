@@ -1,0 +1,77 @@
+project: Mark-Matthew literary dependence case study
+generated_on: '2026-04-18'
+source_texts:
+- name: SBLGNT Mark
+  local_file: sources/Mark.txt
+  upstream_url: https://raw.githubusercontent.com/Faithlife/SBLGNT/master/data/sblgnt/text/Mark.txt
+  notes: SBL Greek New Testament, Faithlife GitHub repository.
+- name: SBLGNT Matthew
+  local_file: sources/Matt.txt
+  upstream_url: https://raw.githubusercontent.com/Faithlife/SBLGNT/master/data/sblgnt/text/Matt.txt
+  notes: SBL Greek New Testament, Faithlife GitHub repository.
+- name: SBLGNT apparatus Mark
+  local_file: sources/Mark_app.xml
+  upstream_url: https://raw.githubusercontent.com/Faithlife/SBLGNT/master/data/sblgntapp/xml/Mark.xml
+  notes: Faithlife SBLGNT apparatus XML.
+- name: SBLGNT apparatus Matthew
+  local_file: sources/Matt_app.xml
+  upstream_url: https://raw.githubusercontent.com/Faithlife/SBLGNT/master/data/sblgntapp/xml/Matt.xml
+  notes: Faithlife SBLGNT apparatus XML.
+- name: MorphGNT Matthew
+  local_file: sources/61-Mt-morphgnt.txt
+  upstream_url: https://raw.githubusercontent.com/morphgnt/sblgnt/master/61-Mt-morphgnt.txt
+  notes: Morphological tagging and lemmatization for Matthew.
+- name: MorphGNT Mark
+  local_file: sources/62-Mk-morphgnt.txt
+  upstream_url: https://raw.githubusercontent.com/morphgnt/sblgnt/master/62-Mk-morphgnt.txt
+  notes: Morphological tagging and lemmatization for Mark.
+alignment_design:
+  negative_space_filtering:
+  - IDF weighting downweights cheap/common overlap.
+  - Closed-class parts of speech are excluded from content-lemma similarity.
+  - Three-verse windows are used to suppress isolated lexical echoes and favor local
+    continuity.
+  - Citation-formula and short-saying flags are recorded for later inspection rather
+    than silently removed.
+  verse_similarity:
+    metrics:
+    - weighted_jaccard_content_lemmas
+    - weighted_jaccard_all_lemmas
+    - weighted_jaccard_content_bigrams
+    - sequence_ratio_content_lemmas
+    - rare_lemma_intersection_weight
+    combined_formula: 0.45*wj_content + 0.25*wj_bigram + 0.20*seq_ratio + 0.10*wj_all
+  window_similarity:
+    window_size: 3
+    combined_formula: 0.45*wj_content + 0.30*wj_bigram + 0.25*seq_ratio
+  primary_chain:
+    candidate_source: verse candidates drawn from window-supported intervals
+    optimization: monotonic weighted chain (one-to-one verse pairing preserving order)
+    loose_block_segmentation:
+      max_mark_gap: 4
+      max_matt_gap: 6
+    tight_block_segmentation:
+      max_mark_gap: 2
+      max_matt_gap: 3
+  directional_notes:
+    type: heuristic, adversarial, symmetric
+    inputs:
+    - token span length
+    - unmatched verses inside span
+    - tempo markers (ευθυς/eutheos)
+    - kingdom terminology
+    - citation/fulfillment markers
+    - present-indicative ratio
+    - large gaps before blocks
+    warning: These notes do not prove direction by themselves; they expose the operations
+      each direction would require.
+global_metrics:
+  matched_pair_count: 385
+  mark_matched_verse_count: 385
+  matt_matched_verse_count: 385
+  mark_total_verse_count: 673
+  matt_total_verse_count: 1068
+  mark_matched_pct: 0.5721
+  matt_matched_pct: 0.3605
+  loose_block_count: 25
+  tight_block_count: 51
