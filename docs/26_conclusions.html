@@ -484,13 +484,13 @@
   // ---- confidence table ----
   const confRows = [
     ['Mark–Matthew', 'Matthew most likely used Mark or a Mark-like written text as a major narrative source.', 'High', 'high'],
-    ['Mark–Luke (18b direct)', 'Luke shows a Mark-like narrative backbone of 183 primary pairs (Mark 16:9–20 excluded). Between directed hypotheses, Mark-prior (254.6) is lighter than Luke-prior (303.2); but the shared-tradition model (164.1) is lighter than either — so the directed conclusion is "Mark-prior is the lighter direction," not "Mark-prior is overall lowest-cost."', 'Medium-high', 'mhigh'],
+    ['Mark–Luke (18b direct + 18c reassessment)', 'Luke shows a Mark-like narrative backbone of 183 primary pairs (Mark 16:9–20 excluded). Between directed hypotheses Mark-prior (254.6) is lighter than Luke-prior (303.2). The unpenalized shared-tradition figure (164.1) is lower than either direction, but unpenalized shared tradition does not pay for the narrative order, cluster density, and bridging sequences it still has to explain. Under 18c\'s moderate order-retention weights (0.75/1.0/1.0) the adjusted shared-tradition burden rises to 385.6, and Mark-prior becomes the lowest-burden model overall (winning in 211 of 245 grid cells). The integrated claim: Mark-prior over Luke-prior among direct-use alternatives, and Mark-prior over a fairly-costed shared-tradition model, not proof that Luke used canonical Mark.', 'Medium-high for Mark-prior over Luke-prior; medium for direct-use over shared-tradition alone', 'mhigh'],
     ['1 Timothy 5:18 / Luke 10:7', 'Strongest case for a Luke-like written Jesus saying known to 1 Timothy.', 'High', 'high'],
-    ['Matthew–Luke double tradition', 'Better explained by common written/oral Jesus tradition than by simple one-way dependence.', 'Medium-high', 'mhigh'],
+    ['Matthew–Luke double tradition', 'Better explained by common written/oral Jesus tradition than by simple one-way dependence. 18c mask-regime robustness: qualitative reading stable across strict/medium/broad (pair counts 60–76 / 58–71 / 57–69); retained material remains a sayings/echo problem, not a stable narrative chain.', 'Medium-high', 'mhigh'],
     ['James / Gospel sayings', 'Likely draws on Jesus tradition; direct Matthew/Luke use not demonstrated.', 'Medium-high', 'mhigh'],
-    ['The Q question', 'Supports a shared sayings/tradition layer; does not prove one discrete Q document.', 'Medium', 'medium'],
-    ['John ↔ Synoptics (18b pairwise)', 'Anchor traditions shared with each Synoptic (~30 per pair ≥0.25); continuous copying chain is not supported by the global signal.', 'Medium', 'medium'],
-    ['Thomas ↔ canonical', 'Logion-network witness: 46/116 logia have curated canonical parallels; corpus-level dependence claim is weaker than logion-level dossiers.', 'Medium', 'medium'],
+    ['The Q question', 'Supports a shared sayings/tradition layer; does not prove one discrete Q document.', 'Medium-high for shared non-Markan sayings; medium for any discrete Q-document claim', 'medium'],
+    ['John ↔ Synoptics (18b pairwise + 18c anchor ledgers)', 'Anchor traditions shared with each Synoptic (~30 per pair ≥0.25). 18c\'s per-anchor burden ledgers (replacing the 18b templated version) show shared_anchor_tradition as the lowest-burden model at every anchor on every pair (9/9, 10/10, 10/10). Aggregate totals favor shared anchor/passion/sign tradition over simple Gospel-to-Gospel copying.', 'Medium', 'medium'],
+    ['Thomas ↔ canonical (18b + 18c curation)', 'Logion-network witness: 46/116 logia have curated canonical parallels, but 18c\'s certainty augmentation shows only 3 are directional-claim-ready; remainder are "overlapping Jesus tradition, uncertain direction" (28) or "shared sayings/parable tradition" (14). Corpus-level direction claim is weaker than logion-level dossiers.', 'Medium for overlapping sayings tradition; low for global direction', 'medium'],
     ['1 Cor 11 / Luke 22 Lord\u2019s Supper', 'Shared liturgical formula (high formula risk); not direct Gospel dependence.', 'Cautionary', 'cautionary'],
     ['1 John 3:13 / John 15:18–19', 'Shared Johannine school/idiolect; not one-verse proof of direction.', 'Medium', 'medium'],
     ['Other apocrypha beyond Thomas', 'Inventory only; not enough data yet for firm conclusions.', 'Low', 'low'],
@@ -514,7 +514,7 @@
   // is not directional (Q as layer vs. document).
   const dimRows = [
     ['Mark–Matthew',                          'high',   'high',    'mhigh', 'Mark→Matt backbone + 474:87 gap asymmetry.'],
-    ['Mark–Luke (18b direct)',                'mhigh',  'medium',  'low',   'Mark-like backbone of 183 pairs; directed: Mark-prior 254.6 < Luke-prior 303.2; but shared-tradition 164.1 is cheaper than either direction.'],
+    ['Mark–Luke (18b direct + 18c)',          'mhigh',  'medium',  'medium','Mark-like backbone of 183 pairs; direct-use: Mark-prior 254.6 < Luke-prior 303.2; under 18c moderate order-retention penalty shared-tradition adjusts 164.1 → 385.6 and Mark-prior wins overall (211 of 245 grid cells).'],
     ['1 Timothy 5:18 / Luke 10:7',            'high',   'high',    'medium','5-token exact run + γραφή citation; Luke vs pre-Lukan saying hard to separate.'],
     ['Matthew–Luke double tradition',         'high',   'mhigh',   'low',   'Many strong echoes; symmetric burden after Markan masking → direction not resolvable.'],
     ['James / Gospel sayings',                'medium', 'mhigh',   'low',   'Semantic convergence outruns lexical; direction indeterminate.'],

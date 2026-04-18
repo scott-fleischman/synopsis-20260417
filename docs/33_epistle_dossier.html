@@ -132,7 +132,7 @@
   <div class="intro">
     <p>Epistle-to-Gospel evidence is assessed <b>case by case</b>, not corpus-wide. Each dossier separates three confidence axes: <em>formula risk</em> (how much of the match is liturgical/scriptural/proverbial), <em>automatic retrieval support</em> (how strong the lexical signal is), and <em>philological case strength</em> (what a qualitative reading of the pair concludes).</p>
     <div class="note method">
-      <b>Why three axes, not one score.</b> A high retrieval score on 1&nbsp;Cor 11:24 ~ Luke 22:19 (six-token Greek run) is not evidence of direct Gospel dependence — it reflects the shared Eucharistic formula, which is why its <em>formula risk</em> is high. The 1&nbsp;Tim 5:18 ~ Luke 10:7 parallel has a shorter five-token run but low formula risk, so its <em>philological case strength</em> rises to high and the best-current-model takes the direct-copying hypothesis seriously. The ranked-candidate top 500 also reports these axes: 317 low-risk, 166 high-risk, 17 medium-risk candidates.
+      <b>Why three axes, not one score.</b> A high retrieval score on 1&nbsp;Cor 11:24 ~ Luke 22:19 (six-token Greek run) is not evidence of direct Gospel dependence — it reflects the shared Eucharistic formula, which is why its <em>formula risk</em> is high. The 1&nbsp;Tim 5:18 ~ Luke 10:7 parallel has a shorter five-token run but low formula risk, so its <em>philological case strength</em> rises to high and the best-current-model takes the direct-copying hypothesis seriously. The ranked-candidate top 500 also reports these axes: 317 low-risk, 166 high-risk, 17 medium-risk candidates. A 160-row stratified sample (see panel below) adds a machine-audit class to each candidate: 41 strong low-formula, 18 moderate, 59 uncertain, 26 scriptural-formula shared-source, 13 targeted known, 3 high-formula needing manual review — triage that flags which cases are worth philological reading first.
     </div>
     <div class="note">
       For surface-string matches without the dossier layer, use <a href="23_exact_hits.html">23 exact hits</a>. For the heatmap view see <a href="24_epistle_gospel_heatmap.html">24 epistle × Gospel heatmap</a>. For the evidence-ladder view of each case's confidence, use <a href="29_jtea_claim_evidence.html">29 JTEA claim-evidence</a>.
@@ -140,6 +140,15 @@
   </div>
 
   <div class="summary-bar" id="summaryBar"></div>
+
+  <section class="card" id="validationStrata" style="padding:12px 16px;margin-bottom:14px;background:#fff;border:1px solid var(--rule);border-radius:3px;">
+    <h2 style="margin:0 0 6px;font-family:var(--serif);font-size:15px;">Machine validation · 160-row stratified sample</h2>
+    <div class="caption" style="margin:0 0 10px;font-size:12px;color:var(--ink-soft);line-height:1.5;">
+      A 160-row audit stratifies the full top-500 candidate pool into deterministic buckets (low-formula-high-score, long exact runs, high-formula, random low-formula, weak low-score random, and targeted dossier cases present / absent in the top-500). Each row receives a <em>machine audit class</em>. The audit is triage, not human philological review.
+    </div>
+    <div id="validationStrataBody"></div>
+  </section>
+
   <div class="strongest-bar" id="strongestBar"></div>
 
   <div class="layout">
@@ -179,7 +188,10 @@
     <code>analysis_update_20260418b/data/60_epistle_gospel_case_dossiers.yaml</code> (60 cases: 10 targeted + 50 screening),
     <code>61_epistle_gospel_targeted_case_table.csv</code>,
     <code>62_epistle_gospel_ranked_candidate_cases_top500.csv</code>,
-    <code>63_epistle_gospel_global_summary.yaml</code>.
+    <code>63_epistle_gospel_global_summary.yaml</code> ·
+    <code>analysis_update_20260418c/data/50_epistle_candidate_validation_sample.csv</code>,
+    <code>51_epistle_candidate_validation_summary.yaml</code>,
+    <code>53_epistle_formula_risk_model.yaml</code>.
   </div>
 </div>
 
@@ -247,6 +259,68 @@
   const strongest = document.getElementById('strongestBar');
   strongest.appendChild(el('b', { style: 'font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);margin-right:8px;' }, 'Strongest targeted case:'));
   strongest.appendChild(document.createTextNode(summary.strongest_high_value_case || '1Tim 5:18 ~ Luke 10:7 is the strongest targeted saying case.'));
+
+  // Validation strata panel (18c stratified 160-row audit)
+  const val = (B.h18c && B.h18c.epistle_validation_summary) || {};
+  const vb = document.getElementById('validationStrataBody');
+  if (val && val.machine_audit_class_counts) {
+    const sampleRows = val.sample_rows || 0;
+    const strata = val.stratum_counts || {};
+    const classes = val.machine_audit_class_counts || {};
+    const totalRow = el('div', { style: 'display:flex;gap:16px;margin-bottom:10px;font-size:12px;align-items:baseline;flex-wrap:wrap;' },
+      el('span', { style: 'font-family:var(--serif);font-size:18px;' }, String(sampleRows)),
+      el('span', { style: 'color:var(--ink-mute);text-transform:uppercase;letter-spacing:0.06em;font-size:10px;' }, 'sample rows · 7 strata'));
+    vb.appendChild(totalRow);
+
+    const grid = el('div', { style: 'display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:4px;' });
+    const strataCol = el('div');
+    strataCol.appendChild(el('div', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);font-weight:600;margin-bottom:6px;' }, 'stratum · count'));
+    const strataOrder = [
+      ['low_formula_high_score_top30', 'low formula · high score (top 30)'],
+      ['low_formula_exact_run_ge4_top30', 'low formula · exact run ≥4 (top 30)'],
+      ['high_formula_top30', 'high formula (top 30)'],
+      ['low_formula_random30_seed42', 'low formula · random 30'],
+      ['weak_low_score_random30_seed43', 'weak low-score · random 30'],
+      ['targeted_dossier_not_in_top500', 'targeted dossier · not in top-500'],
+      ['targeted_dossier_present_in_top500', 'targeted dossier · present in top-500'],
+    ];
+    strataOrder.forEach(([k, label]) => {
+      const c = strata[k];
+      if (c == null) return;
+      strataCol.appendChild(el('div', { style: 'display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px solid var(--rule-soft);' },
+        el('span', { style: 'color:var(--ink-soft);' }, label),
+        el('span', { style: 'font-family:var(--serif);color:var(--ink);font-variant-numeric:tabular-nums;' }, String(c))));
+    });
+    grid.appendChild(strataCol);
+
+    const classCol = el('div');
+    classCol.appendChild(el('div', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);font-weight:600;margin-bottom:6px;' }, 'machine audit class · count'));
+    const classOrder = [
+      ['strong_low_formula_candidate', 'strong · low-formula', '#dbe8d5', '#2a5a1a'],
+      ['moderate_low_formula_candidate', 'moderate · low-formula', '#eae7d9', '#6a5a2f'],
+      ['uncertain_candidate', 'uncertain', '#f1ebdc', '#6a5a2f'],
+      ['scriptural_formula_shared_source', 'scriptural formula · shared source', '#f3e2ce', '#a8551a'],
+      ['high_formula_risk_needs_manual_review', 'high-formula · manual review', '#f0d0c8', '#8b2e2e'],
+      ['targeted_known_case', 'targeted known case', '#d4e3df', '#0f766e'],
+    ];
+    classOrder.forEach(([k, label, bg, fg]) => {
+      const c = classes[k];
+      if (c == null) return;
+      classCol.appendChild(el('div', { style: 'display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px solid var(--rule-soft);align-items:baseline;' },
+        el('span', { style: 'color:var(--ink-soft);' },
+          el('span', { style: 'display:inline-block;width:10px;height:10px;background:' + bg + ';border-radius:2px;margin-right:6px;vertical-align:middle;' }),
+          label),
+        el('span', { style: 'font-family:var(--serif);color:' + fg + ';font-variant-numeric:tabular-nums;' }, String(c))));
+    });
+    grid.appendChild(classCol);
+    vb.appendChild(grid);
+
+    if (val.warning) {
+      vb.appendChild(el('div', { style: 'margin-top:10px;font-size:11px;color:var(--ink-mute);font-style:italic;' }, '— ' + val.warning));
+    }
+  } else {
+    vb.appendChild(el('div', { style: 'font-size:12px;color:var(--ink-mute);font-style:italic;' }, 'Validation sample not yet loaded.'));
+  }
 
   // Source-book filter buttons (from targeted cases)
   const books = [];

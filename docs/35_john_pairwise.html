@@ -90,8 +90,8 @@
   <nav id="topnav" class="topnav"></nav>
 
   <div class="page-intro">
-    <p>Three first-class pairwise dashboards — John↔Mark, John↔Matthew, John↔Luke. The supplement's core methodological point is on display here: <em>you cannot run a Synoptic-style narrative-alignment chain on John and one other Gospel and expect it to work</em>. John is too transformational for a monotonic lexical backbone. The right model is <b>anchor plus low-verbatim pairwise</b>: shared narrative episodes are curated as anchors, the full verse-matrix is computed anyway (580K–1M rows per pair) so local lexical candidates are visible, and the four-way burden ledger (John-uses-Syn, Syn-uses-John, shared tradition, independent convergence) is the primary interpretive tool.</p>
-    <div class="note"><b>What the headline numbers are not.</b> Don't read "33 candidate pairs" as "33 instances of dependence." Many are brief/formulaic agreements that the chain models would dismiss. The interpretive weight sits on the <em>anchor episodes</em> — 10 per pair for Mark/Matt, 9 for Luke — where narrative content overlaps even when wording does not. <b>The strongest single lexical case</b> across all three pairs is John 12:8 ~ Matt 26:11 at score 0.8571 (6-token exact run) — Matthew's anointing-at-Bethany passage matches John's almost verbatim, a result that would be indistinguishable from direct dependence if we did not also see the same saying echoed in Mark.</div>
+    <p>Three first-class pairwise dashboards — John↔Mark, John↔Matthew, John↔Luke. The supplement's core methodological point is on display here: <em>you cannot run a Synoptic-style narrative-alignment chain on John and one other Gospel and expect it to work</em>. John is too transformational for a monotonic lexical backbone. The right model is <b>anchor plus low-verbatim pairwise</b>: shared narrative episodes are curated as anchors, the full verse-matrix is computed anyway (580K–1M rows per pair) so local lexical candidates are visible, and the four-way burden ledger (John-uses-Syn, Syn-uses-John, shared tradition, independent convergence) is the primary interpretive tool. Each anchor is then scored independently and the burdens summed per pair, so no single anchor can carry the ranking.</p>
+    <div class="note"><b>What the headline numbers are not.</b> Don't read "33 candidate pairs" as "33 instances of dependence." Many are brief/formulaic agreements that the chain models would dismiss. The interpretive weight sits on the <em>anchor episodes</em> — 10 per pair for Mark/Matt, 9 for Luke — where narrative content overlaps even when wording does not. <b>The strongest single lexical case</b> across all three pairs is John 12:8 ~ Matt 26:11 at score 0.8571 (6-token exact run) — Matthew's anointing-at-Bethany passage matches John's almost verbatim, a result that would be indistinguishable from direct dependence if we did not also see the same saying echoed in Mark. <b>Per-anchor aggregate</b>: shared-anchor-tradition wins at 9 of 9 Luke anchors, 10 of 10 Mark anchors, and 10 of 10 Matt anchors — the ranking holds anchor by anchor, not only at the global level.</div>
   </div>
 
   <div class="pair-tabs" id="pairTabs"></div>
@@ -106,7 +106,7 @@
   </div>
 
   <div class="footer">
-    Source data · <code>analysis_update_20260418b/data/37_john_synoptic_pairwise_anchor_registry.yaml</code> · <code>38_john_synoptic_pairwise_global_summary.yaml</code> · <code>39_john_synoptic_pairwise_support_contra.yaml</code>. Window candidates: <code>33–36_*_window_candidates*.csv</code>. Full verse-matrix rows per pair: <code>30_john_mark</code> (580,358), <code>31_john_matthew</code> (937,704), <code>32_john_luke</code> (1,008,822).
+    Source data · <code>analysis_update_20260418b/data/37_john_synoptic_pairwise_anchor_registry.yaml</code> · <code>38_john_synoptic_pairwise_global_summary.yaml</code> · <code>39_john_synoptic_pairwise_support_contra.yaml</code> · <code>analysis_update_20260418c/data/30_john_anchor_specific_burden_ledgers.yaml</code> · <code>32_john_anchor_specific_aggregate_summary.yaml</code>. Window candidates: <code>18b/33–36_*_window_candidates*.csv</code>. Full verse-matrix rows per pair: <code>30_john_mark</code> (580,358), <code>31_john_matthew</code> (937,704), <code>32_john_luke</code> (1,008,822).
   </div>
 </div>
 
@@ -267,6 +267,54 @@
           style: 'background:#faf6ec;border-left:3px solid var(--accent);padding:10px 14px;font-size:12px;line-height:1.55;color:var(--ink-soft);',
         }, sum.interpretive_reading));
       }
+
+      // --- Anchor-specific aggregate view (from per-anchor ledger) ---
+      const aggList = (B.h18c && B.h18c.john_anchor_aggregate) || [];
+      const aggTarget = pairId === 'JohnMatt' ? 'John↔Matt' : (pairId === 'JohnMark' ? 'John↔Mark' : 'John↔Luke');
+      const agg = aggList.find(a => a.pair === aggTarget);
+      if (agg && agg.total_burdens) {
+        burdSec.appendChild(el('div', { style: 'margin-top:20px;padding-top:16px;border-top:1px solid var(--rule-soft);' },
+          el('div', { style: 'font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-mute);font-weight:600;margin-bottom:4px;' },
+            'Per-anchor aggregate · ' + (agg.anchor_count || '—') + ' anchors summed'),
+          el('div', { class: 'caption', style: 'margin:0 0 10px;' },
+            document.createTextNode('The templated ledger above is a global per-pair score. The same four hypotheses can also be scored '),
+            el('em', null, 'per anchor'),
+            document.createTextNode(' and summed — a stress-test that lets no single anchor carry the ranking. Winner-of-anchor counts are the tiebreaker if the totals were close.'))));
+        const aggQuad = el('div', { class: 'burden-quad' });
+        const aggKeyOrder = ['shared_anchor_tradition', 'john_uses_synoptic_or_synoptic_like_source', 'synoptic_uses_john_or_john_like_source', 'independent_convergence'];
+        const bestCounts = agg.anchors_best_model_counts || {};
+        const sortedAggKeys = aggKeyOrder.slice().sort((a, b) => (agg.total_burdens[a] || 0) - (agg.total_burdens[b] || 0));
+        for (const k of sortedAggKeys) {
+          let cls = 'shared';
+          if (k.indexOf('john_uses_') === 0) cls = 'john';
+          else if (k.indexOf('independent') >= 0) cls = 'indep';
+          else if (k.indexOf('synoptic_uses_john') >= 0 || k.indexOf('uses_john') >= 0) cls = 'syn';
+          else if (k.indexOf('shared') >= 0) cls = 'shared';
+          const card = el('div', { class: 'bq-card ' + cls });
+          card.appendChild(el('div', { class: 'kicker' },
+            cls === 'shared' ? 'lightest · ' + (bestCounts[k] || 0) + ' of ' + (agg.anchor_count || 0) + ' anchors' :
+            (cls === 'indep' ? 'heaviest (implausible)' : 'live hypothesis')));
+          card.appendChild(el('div', { class: 'lbl' }, k.replace(/_/g, ' ')));
+          card.appendChild(el('div', { class: 'num' }, Number(agg.total_burdens[k] || 0).toFixed(2)));
+          if (bestCounts[k] && cls !== 'shared') {
+            card.appendChild(el('div', { style: 'font-size:11px;color:var(--ink-soft);' }, 'best model at ' + bestCounts[k] + ' anchors'));
+          }
+          aggQuad.appendChild(card);
+        }
+        burdSec.appendChild(aggQuad);
+        const sharedBest = bestCounts.shared_anchor_tradition || 0;
+        const totalAnchors = agg.anchor_count || 0;
+        if (sharedBest > 0 && totalAnchors > 0) {
+          burdSec.appendChild(el('div', {
+            style: 'background:#eef5ec;border-left:3px solid #4a6b3a;padding:10px 14px;font-size:12px;line-height:1.55;color:var(--ink-soft);margin-top:8px;',
+          },
+            document.createTextNode('Shared-anchor-tradition is the lowest-burden model at '),
+            el('b', null, sharedBest + ' of ' + totalAnchors + ' registered anchors'),
+            document.createTextNode('. The per-anchor view confirms the templated ranking: no single anchor rescues a direct-use or independent-convergence reading.')));
+        }
+
+      }
+
       pane.appendChild(burdSec);
     }
 

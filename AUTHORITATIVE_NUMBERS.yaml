@@ -9,8 +9,14 @@
 #   - If a rerun exists (analysis_update_20260418/), it supersedes the prior
 #     package for that pair.
 #   - The 18b supplement (analysis_update_20260418b/) is authoritative for
-#     Mark-Luke direct, John pairwise, Gospel square, Thomas matrix, epistle
-#     dossiers, and conclusion navigation.
+#     Mark-Luke direct chain counts, John pairwise candidate pools, Gospel
+#     square, Thomas matrix, epistle dossiers, and conclusion navigation.
+#   - The 18c data-analysis patch (analysis_update_20260418c/) is
+#     authoritative for interpretive burdens and robustness — the Mark-Luke
+#     order-retention-penalty model, John *anchor-specific* (not templated)
+#     burdens, Matt-Luke mask-regime robustness, Thomas curation-status
+#     annotations, epistle validation-sample strata, and the MorphGNT
+#     lemma audit.
 #   - Prior packages remain authoritative only where no rerun or supplement
 #     has been produced (currently: apocrypha inventory).
 #
@@ -19,7 +25,7 @@
 # below, or explicitly label the figure as "prior package" with a cross-link.
 
 generated_by: Claude Opus 4.7 (as repo governance artifact; no new computation)
-last_updated: 2026-04-18
+last_updated: 2026-04-18 (refreshed with 18c)
 
 version:
   schema: 1
@@ -50,8 +56,9 @@ pairs:
     note: If prose cites 385, label it "(prior package, superseded)".
 
   mark_luke:
-    description: Mark-Luke direct alignment (same pipeline; new 18b control).
+    description: Mark-Luke direct alignment (18b chain; 18c burden reassessment).
     headline_source: analysis_update_20260418b
+    burden_reassessment_source: analysis_update_20260418c/data/12_mark_luke_direct_burden_reassessment.yaml
     prior_source: null
     headline_claims:
       primary_chain_pairs: { authoritative_value: 183 }
@@ -60,14 +67,34 @@ pairs:
       secondary_echoes_ge_0_22: { authoritative_value: 140 }
       burden_mark_prior:   { authoritative_value: 254.6466 }
       burden_luke_prior:   { authoritative_value: 303.1966 }
-      burden_shared_tradition: { authoritative_value: 164.1468 }
+      burden_shared_tradition_unpenalized:      { authoritative_value: 164.1468 }
+      burden_shared_tradition_moderate_penalty: { authoritative_value: 385.6134 }
+      penalty_model_moderate_weights:
+        order_retention_weight:   0.75
+        cluster_density_weight:   1.0
+        narrative_bridge_weight:  1.0
+        added_shared_tradition_penalty: 221.4666
+      lowest_burden_model_under_moderate_weights: Mark_prior_Luke_uses_Mark_or_Mark_like_source
+      penalty_grid_outcome_counts:
+        Mark_prior_Luke_uses_Mark_or_Mark_like_source: 211
+        shared_tradition_adjusted_for_order_retention: 34
+      morphgnt_lemma_audit:
+        pairs_audited: 183
+        surface_score_mean: 0.4042
+        lemma_score_mean: 0.4836
+        lemma_improves_or_retains_count: 153
+        lemma_worse_count: 30
+        note: Audit layer, not a replacement pipeline. Lemma signal generally retains/improves the primary chain.
     interpretive_caveat: >
-      The three-way burden ledger gives the *lowest* score to shared narrative/oral
-      tradition (164.1), not to either directed model (254.6 Mark-prior / 303.2 Luke-prior).
-      The safe claim is: "Mark-prior is the lighter directed-use hypothesis." The unsafe
-      claim (without a separate shared-tradition penalty model) is: "Mark-prior is the
-      lowest-burden hypothesis overall." See 34_mark_luke.html and the interpretive
-      caution section in 26_conclusions.html.
+      18b's three-way ledger gave the lowest raw burden to shared narrative/oral
+      tradition (164.1) — but that baseline did not charge shared tradition for the
+      narrative order, cluster density, and bridging sequences it must still explain.
+      18c's order-retention penalty model shows that under moderate weights
+      (0.75/1.0/1.0) the adjusted shared-tradition burden is 385.6, and Mark-prior
+      (254.6) becomes the lowest-burden model. Mark-prior wins in 211 of 245 grid
+      combinations. Public wording should be: "Mark-prior is the lighter direct-use
+      hypothesis; Mark-prior also wins once shared tradition is charged a fair
+      order-retention cost." See analysis_update_20260418c/data/13_mark_luke_revised_interpretive_claim.yaml.
 
   matt_luke_full:
     description: Matthew-Luke full corpus (prior to Markan masking).
@@ -80,51 +107,118 @@ pairs:
   matt_luke_masked:
     description: Matthew-Luke with likely-Markan verses masked (Q-core view).
     headline_source: analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust
+    robustness_source: analysis_update_20260418c/data/22_matt_luke_double_tradition_robustness.yaml
     prior_source: matt_luke_double_masked_analysis
     headline_claims:
       primary_chain_pairs_medium_regime: { authoritative_value: 64 }
       loose_blocks_medium:                { authoritative_value: 24 }
       tight_blocks_medium:                { authoritative_value: 30 }
       selected_secondary_echoes:          { authoritative_value: 54 }
-    regime_note: Strict/medium/broad mask regimes and score-threshold sweeps live in the rerun's sensitivity grid.
+      mask_regime_robustness_18c:
+        broad:  { pair_count_min: 57, pair_count_max: 69, loose_block_range: [23, 25] }
+        medium: { pair_count_min: 58, pair_count_max: 71, loose_block_range: [23, 25] }
+        strict: { pair_count_min: 60, pair_count_max: 76, loose_block_range: [25, 29] }
+        qualitative_reading: Pair counts move with mask strictness, but the retained material remains a sayings/echo problem rather than a stable narrative-chain relationship across all three regimes.
+    regime_note: Strict/medium/broad mask regimes and score-threshold sweeps live in the rerun's sensitivity grid; 18c adds the cross-regime robustness summary table.
 
   john_synoptics:
     description: John vs. each Synoptic (anchor-plus-low-verbatim pairwise).
     headline_source: analysis_update_20260418b
+    burden_source: analysis_update_20260418c/data/32_john_anchor_specific_aggregate_summary.yaml
     prior_source: john_thomas_epistles_apocrypha_analysis
     headline_claims:
       john_mark_candidates_ge_0_25:    { authoritative_value: 33, anchors_registered: 10 }
       john_matthew_candidates_ge_0_25: { authoritative_value: 33, anchors_registered: 10 }
       john_luke_candidates_ge_0_25:    { authoritative_value: 34, anchors_registered: 9 }
+      anchor_specific_aggregate_burdens_18c:
+        john_mark:
+          john_uses_synoptic: 59.741
+          synoptic_uses_john: 64.041
+          shared_anchor_tradition: 23.5
+          independent_convergence: 111.003
+          lowest: shared_anchor_tradition
+          anchor_count_best_model_shared_anchor_tradition: 10 of 10
+        john_matt:
+          john_uses_synoptic: 55.862
+          synoptic_uses_john: 60.162
+          shared_anchor_tradition: 24.8
+          independent_convergence: 119.481
+          lowest: shared_anchor_tradition
+          anchor_count_best_model_shared_anchor_tradition: 10 of 10
+        john_luke:
+          john_uses_synoptic: 58.598
+          synoptic_uses_john: 61.698
+          shared_anchor_tradition: 20.8
+          independent_convergence: 91.602
+          lowest: shared_anchor_tradition
+          anchor_count_best_model_shared_anchor_tradition: 9 of 9
     interpretive_caveat: >
-      The burden scores across the three John pairs are templated (same three-way
-      model applied uniformly). They express methodological framing more than
-      anchor-specific evidence weight. Per-anchor ledgers are future work; until
-      then, the per-pair global ledger should not be read as dispositive on
-      direction.
+      18b's per-pair ledger was templated (same three-way model applied uniformly,
+      expressing methodology rather than per-anchor evidence weight). 18c replaces
+      that with per-anchor burden ledgers and their aggregate: every anchor on every
+      pair favors shared_anchor_tradition, and the per-pair totals agree. The
+      resulting claim — "aggregate anchor ledgers favor shared anchor/passion/sign
+      tradition over simple Gospel-to-Gospel copying" — is anchor-specific, not
+      templated. Confidence: medium (see 18c updated_data_analysis_conclusions.yaml).
 
   thomas_canonical:
     description: Thomas logia vs. the four Gospels (curated logion matrix).
     headline_source: analysis_update_20260418b
+    curation_status_source: analysis_update_20260418c/data/41_thomas_curation_status_summary.yaml
     prior_source: john_thomas_epistles_apocrypha_analysis
     headline_claims:
       logia_total:                { authoritative_value: 116 }
       logia_with_curated_parallel: { authoritative_value: 46 }
       matrix_rows:                { authoritative_value: 116 }
+      parallel_certainty_counts_18c:
+        high:        8
+        medium_high: 3
+        medium:      35
+        not_assessed: 70
+      directional_claim_ready_count: 3
+      relation_type_counts_18c:
+        no_curated_canonical_parallel_in_prior_registry: 70
+        overlapping_jesus_tradition_uncertain_direction: 28
+        shared_sayings_or_parable_tradition:             14
+        possible_synoptic_influence_or_harmonization:     4
     method_caveat: >
       Thomas matrix is curated from a prior registry, not a computationally
       independent discovery layer. Coptic-to-Greek automatic dependence scoring
-      is not implemented; relation type, matrix strength, and direct-dependence
-      burden are the three grading axes shown.
+      is not implemented; relation type, matrix strength, parallel certainty,
+      and direct-dependence burden are the four grading axes shown. Only 3 of
+      116 logia are directional-claim-ready under the 18c certainty framing.
 
   epistle_gospel:
     description: Canonical epistles vs. the four Gospels (case-dossier layer).
     headline_source: analysis_update_20260418b
+    validation_source: analysis_update_20260418c/data/51_epistle_candidate_validation_summary.yaml
     prior_source: john_thomas_epistles_apocrypha_analysis
     headline_claims:
       total_dossiers:     { authoritative_value: 60 }
       targeted_dossiers:  { authoritative_value: 10 }
       ranked_candidates_top500: { authoritative_value: 500, prior_pool: 12036 }
+      validation_sample_18c:
+        sample_rows: 160
+        stratum_counts:
+          low_formula_high_score_top30: 30
+          low_formula_exact_run_ge4_top30: 30
+          high_formula_top30: 30
+          low_formula_random30_seed42: 30
+          weak_low_score_random30_seed43: 30
+          targeted_dossier_not_in_top500: 7
+          targeted_dossier_present_in_top500: 3
+        machine_audit_class_counts:
+          uncertain_candidate: 59
+          strong_low_formula_candidate: 41
+          scriptural_formula_shared_source: 26
+          moderate_low_formula_candidate: 18
+          targeted_known_case: 13
+          high_formula_risk_needs_manual_review: 3
+        formula_risk_counts_in_top500:
+          low: 317
+          medium: 17
+          high: 166
+        warning: machine triage; not human philological validation
     strongest_direct_case:
       ref: 1 Tim 5:18 / Luke 10:7
       saying_form: Luke
@@ -140,6 +234,30 @@ pairs:
     headline_claims:
       inventory_entries: { authoritative_value: 22 }
     roadmap: analysis_update_20260418b/data/73_apocrypha_next_packages.yaml
+    analysis_status_18c: analysis_update_20260418c/data/60_apocrypha_analysis_status_and_ingestion_roadmap.yaml
+    analysis_status_note: 18c reconfirms "not a completed primary-text analysis layer"; next priorities (high → medium) are Gospel of Peter, Protevangelium of James, Infancy Gospel of Thomas, Gospel of Nicodemus / Acts of Pilate.
+
+  morphology_audit:
+    description: MorphGNT lemma audit of the Mark-Luke primary chain (18c).
+    headline_source: analysis_update_20260418c/data/84_morphology_rerun_summary.yaml
+    prior_source: null
+    headline_claims:
+      token_layer_rows:   { authoritative_value: 85364 }
+      verse_unit_rows:    { authoritative_value: 5060  }
+      pairs_audited:      { authoritative_value: 183   }
+      surface_score_mean: { authoritative_value: 0.4042 }
+      lemma_score_mean:   { authoritative_value: 0.4836 }
+      lemma_improves_or_retains_count: { authoritative_value: 153 }
+      lemma_worse_count:               { authoritative_value: 30  }
+      candidate_pairs_score_ge_0_25:
+        surface: 216
+        lemma:   416
+        overlap: 185
+    method_caveat: >
+      Audit metric only. Lemma score is a sanity check on the surface-form primary
+      chain, not a full replacement pipeline. The main retrieval layer still uses
+      normalized surface forms + heuristic stemmer; a morphology-based rerun that
+      recomputes chains end-to-end is future work.
 
 # Layers that do NOT supply headline numbers — they only annotate or synthesize:
 synthesis_only:
@@ -152,8 +270,18 @@ bundle_sources:
   mm:  bundle.mm        # (mark_matthew rerun via build/loaders_rerun.py)
   ml:  bundle.ml        # (matt_luke rerun)
   mld: bundle.mld       # (matt_luke masked rerun)
-  mkl: bundle.h18b.mkl  # (18b direct Mark-Luke)
+  mkl: bundle.h18b.mkl  # (18b direct Mark-Luke chain)
   john_pairwise: bundle.h18b.john_pairwise
   gospel_square: bundle.h18b.gospel_square
   thomas:        bundle.h18b.thomas
   epistle:       bundle.h18b.epistle_dossiers
+  # 18c data-analysis patch — interpretive burden and robustness layers:
+  mark_luke_reassessment:    bundle.h18c.mark_luke_reassessment
+  mark_luke_penalty_grid:    bundle.h18c.mark_luke_penalty_sensitivity
+  matt_luke_robustness:      bundle.h18c.matt_luke_robustness
+  john_anchor_ledgers:       bundle.h18c.john_anchor_ledgers
+  john_anchor_aggregate:     bundle.h18c.john_anchor_aggregate
+  thomas_curation:           bundle.h18c.thomas_curation
+  epistle_validation:        bundle.h18c.epistle_validation_summary
+  morphology_audit:          bundle.h18c.morphology_rerun_summary
+  updated_conclusions_18c:   bundle.h18c.updated_conclusions

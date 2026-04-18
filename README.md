@@ -2,7 +2,7 @@
 
 **Live visualizations: <https://scott-fleischman.github.io/synopsis-20260417/>** · Source: <https://github.com/scott-fleischman/synopsis-20260417>
 
-A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha.
+A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha. Eight analysis packages feed a single browser-native visualization site with 35 views; every headline number is traceable to a specific `data/*.yaml` line in its package.
 
 The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized around the `analysis_update_20260418b` supplement's eight-rank priority-of-interpretation schedule — Conclusions · Canonical Gospel square · Mark↔Luke direct · John pairwise · Matt↔Luke masked Q core · Thomas matrix · Epistle case dossiers · Audit and sensitivity — rather than as a flat list of pages. Supporting Synoptic narrative views live under the Audit and reproducibility umbrella.
 
@@ -28,6 +28,7 @@ All content in this repository was produced by LLMs under human direction. The h
 - **Analysis packages** — the CSV/YAML artifacts, pipeline logic, and per-package documentation in `mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, and `john_thomas_epistles_apocrypha_analysis/` — produced by **GPT-5.4 Pro**.
 - **Reproducibility-patch rerun** — `analysis_update_20260418/` (multi-regime masking, sensitivity grids, claim/evidence linkage, three-axis confidence scoring) — produced by **GPT-5.4 Pro**.
 - **High-priority supplement** — `analysis_update_20260418b/` (direct Mark↔Luke, three John pairwise layers, canonical Gospel relationship square, Thomas logion matrix, 60 epistle case dossiers, conclusion → evidence → contrary navigation) — produced by **GPT-5.4 Pro**.
+- **Data-analysis patch** — `analysis_update_20260418c/` (Mark↔Luke order-retention penalty model, Matthew↔Luke mask-regime robustness, John anchor-specific burden ledgers, Thomas curation status, epistle validation sample, MorphGNT lemma audit, revised data-only conclusions with nuanced confidence) — produced by **GPT-5.4 Pro**.
 - **Interpretive conclusions** — the prose argument in `conclusions/CONCLUSIONS.md` — produced by **GPT-5.4 Pro**.
 - **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `docs/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
 
@@ -41,6 +42,7 @@ synopsis-20260417/
 ├── john_thomas_epistles_apocrypha_analysis/   # Low-verbatim network: John, Thomas, NT letters, apocrypha
 ├── analysis_update_20260418/            # Reproducibility-patch rerun — the authoritative headline numbers
 ├── analysis_update_20260418b/           # High-priority supplement — direct Mark↔Luke, John pairwise, Gospel square, Thomas matrix, epistle dossiers, conclusion nav
+├── analysis_update_20260418c/           # Data-analysis patch — order-retention penalty, mask-regime robustness, anchor-specific John ledgers, Thomas curation status, epistle validation, MorphGNT lemma audit
 ├── conclusions/                         # Author-authored synthesis across all packages
 ├── visualizations/                      # 35 browser views, organised by the 18b 8-rank priority schedule + Python build step + tests
 └── docs/                                # Committed deployment snapshot (the GitHub Pages output dir)
@@ -48,7 +50,7 @@ synopsis-20260417/
 
 All three layers — data, code, and rendered output — are committed, and a fourth layer (interpretive conclusions) sits alongside them in its own directory. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
 
-## The six data packages
+## The seven data packages
 
 ### 1. `mark_matthew_analysis/` — triple-tradition backbone
 
@@ -87,7 +89,7 @@ Under the default medium regime the rerun reports:
 
 Fills the eight gaps identified after the repo review. Every layer is surfaced in the visualization bundle under the `h18b` key and integrated into the landing page, conclusions page, Gospel square, Thomas matrix, epistle dossier, and two new dedicated views.
 
-- **Direct Mark ↔ Luke** (`mkl`): 183 primary-chain pairs, 35 loose / 76 tight blocks, 140 secondary echoes at score ≥ 0.22. Mark 16:9–20 is excluded from the default chain and retained as a sensitivity condition. Burden totals: **254.6** Mark-prior (Luke uses Mark or Mark-like source) vs. **303.2** Luke-prior vs. **164.1** shared narrative/oral tradition without direct use. This closes the missing Markan-source control for Luke that the prior packages did not model directly.
+- **Direct Mark ↔ Luke** (`mkl`): 183 primary-chain pairs, 35 loose / 76 tight blocks, 140 secondary echoes at score ≥ 0.22. Mark 16:9–20 is excluded from the default chain and retained as a sensitivity condition. Burden totals: **254.6** Mark-prior (Luke uses Mark or Mark-like source) vs. **303.2** Luke-prior vs. **164.1** shared narrative/oral tradition (unpenalized). 18c adds the order-retention penalty (see §7 below) that adjusts shared tradition to **385.6** under moderate weights, making Mark-prior the lowest-burden model overall. This closes the missing Markan-source control for Luke that the prior packages did not model directly.
 - **John pairwise dashboards**: three layers — John↔Mark (33 candidates ≥ 0.25, 10 anchors), John↔Matthew (33 candidates, 10 anchors), John↔Luke (34 candidates, 9 anchors). Anchor-level transformation analysis, not a continuous chain; supports shared-tradition readings rather than a linear copy model.
 - **Canonical Gospel relationship square** (`gospel_square`): 4×4 cells with the evidence shape each pair actually supports (aligned pair counts, burden totals, anchor episodes, retrieval-only).
 - **Thomas × Gospel logion matrix**: 116 logia, 46 with curated canonical parallels; relation type × matrix strength × direct-dependence burden separated as three distinct axes; per-logion dossiers. Honest about the Coptic-Greek boundary (no automatic Greek score).
@@ -96,6 +98,20 @@ Fills the eight gaps identified after the repo review. Every layer is surfaced i
 - **Priority-of-interpretation schedule** (`42_visualization_priority_order.yaml`): the eight-rank ordering used throughout the site.
 
 See `analysis_update_20260418b/README.md` and `analysis_update_20260418b/EXECUTIVE_SUMMARY.md` for the full specification and method notes on why each corpus uses a different transmission model rather than being forced into a single Synoptic chain.
+
+### 7. `analysis_update_20260418c/` — data-analysis patch (interpretive burden + robustness)
+
+Addresses the interpretive-burden issues flagged after 18b. It does not reshape the visualization layer (that work lives in `visualizations/`); instead, it delivers the corrected numbers and sensitivity layers that the visualization layer now reads.
+
+- **Mark↔Luke burden reassessment with order-retention penalty**: 18b's three-way ledger gave the lowest raw burden to *shared narrative/oral tradition* (164.1), but that baseline did not charge shared tradition for the narrative order, cluster density, and bridging sequences it must still explain. 18c's sensitivity grid adds an order-retention/cluster-density/narrative-bridge penalty. Under moderate weights (0.75 / 1.0 / 1.0) shared tradition adjusts to **385.6** — and Mark-prior (254.6) becomes the lowest-burden model. Mark-prior wins in **211 of 245** grid combinations.
+- **Matt↔Luke mask-regime robustness**: the strict/medium/broad mask sweep shows pair counts of 60–76 / 58–71 / 57–69 and loose-block counts of 25–29 / 23–25 / 23–25. Counts move with mask strictness, but the qualitative reading — retained material as a sayings/echo problem, not a stable narrative-chain relationship — is stable across regimes.
+- **John anchor-specific burden ledgers**: replaces 18b's templated per-pair framing with per-anchor × per-pair × four-model ledgers. Aggregate totals: John↔Mark 59.7 / 64.0 / **23.5** / 111.0 ; John↔Matt 55.9 / 60.2 / **24.8** / 119.5 ; John↔Luke 58.6 / 61.7 / **20.8** / 91.6 (John-uses-synoptic / synoptic-uses-John / **shared anchor tradition** / independent convergence). Shared anchor tradition wins at *every* anchor on *every* pair (10/10, 10/10, 9/9).
+- **Thomas curation status**: augments the 116-logion matrix with parallel-certainty labels. Of 46 curated parallels, only **3 are directional-claim-ready**; the remaining 43 are sayings-network witnesses (28 "overlapping tradition, uncertain direction", 14 "shared sayings or parable tradition", 4 "possible synoptic influence or harmonization").
+- **Epistle validation sample**: 160 rows stratified across 7 strata with machine-audit classifier. The top-500 candidate pool contains **317 low / 17 medium / 166 high** formula-risk rows; machine classes are **59 uncertain / 41 strong-low-formula / 26 scriptural-formula / 18 moderate / 13 targeted-known / 3 high-formula-needs-review**.
+- **MorphGNT lemma audit layer**: re-scores the 183 Mark-Luke primary pairs on lemmas (surface mean 0.4042 → lemma mean 0.4836; lemma improves/retains on 153/183, worse on 30). Audit metric only — not a replacement pipeline.
+- **Revised data-only conclusions**: `reports/updated_data_analysis_conclusions.yaml` restates six headline claims with nuanced confidence (e.g., Mark-Luke: "medium-high for Mark-prior over Luke-prior among direct-use models; medium for direct-use over shared-tradition alone").
+
+See `analysis_update_20260418c/README.md` and `EXECUTIVE_SUMMARY.yaml` for the full patch specification, and `AUTHORITATIVE_NUMBERS.yaml` at the repo root for which number supersedes which.
 
 ## Methodological note on burden
 
@@ -108,14 +124,14 @@ No layer in this repository claims to compute posterior probability of a given d
 | Question | Conclusion | Confidence |
 | - | - | - |
 | Mark–Matthew | Matthew most likely used Mark or a Mark-like written source. | High |
-| Mark–Luke (direct, 18b) | Luke likely used Mark or a Mark-like source; 183 primary pairs, Mark-prior direction markedly lighter burden (254.6 vs. 303.2). | Medium-high |
-| 1 Timothy 5:18 / Luke 10:7 | Strongest case for a Luke-like written Jesus saying known to 1 Timothy. | High |
-| Matthew–Luke double tradition | Shared tradition layer, not simple one-way dependence. | Medium-high |
+| Mark–Luke (direct, 18b + 18c) | Mark-prior is the lighter *direct-use* hypothesis (254.6 vs. 303.2); once shared tradition is charged a fair order-retention cost, Mark-prior also becomes the lowest-burden model overall (Mark-prior 254.6 vs. shared-tradition-adjusted 385.6, moderate weights). | Medium-high for Mark-prior over Luke-prior among direct-use; medium for direct-use over shared-tradition alone |
+| 1 Timothy 5:18 / Luke 10:7 | Strongest case for a Luke-like written Jesus saying known to 1 Timothy. | High (targeted case); exploratory for the top-500 pool, where 166 of 500 are already flagged high formula-risk |
+| Matthew–Luke double tradition | Shared tradition layer, not simple one-way dependence; stable across strict/medium/broad mask regimes (18c). | Medium-high |
 | James / Gospel sayings | Jesus-tradition dependence likely; direct Matthew/Luke use not demonstrated. | Medium-high |
-| Q | Supports a shared sayings/tradition layer; doesn't prove one discrete Q document. | Medium |
-| John–Synoptics (18b pairwise) | Shared tradition, especially passion/sign; pairwise anchors against Mark/Matthew/Luke, not a simple copy model. | Medium |
-| Thomas–Synoptics (18b matrix) | Sayings-network witness; 46 of 116 logia carry curated canonical parallels; not cleanly dependent on one canonical Gospel. | Medium |
-| Other apocrypha | Inventory only; not enough data yet for firm conclusions. | Low |
+| Q | Supports a shared sayings/tradition layer; doesn't prove one discrete Q document. | Medium-high for shared non-Markan sayings; medium for any discrete Q-document claim |
+| John–Synoptics (18b pairwise + 18c anchor ledgers) | Shared passion/sign/anchor tradition rather than simple Gospel-to-Gospel copying; `shared_anchor_tradition` is the lowest-burden model at every anchor on every pair (9/9, 10/10, 10/10). | Medium |
+| Thomas–Synoptics (18b matrix + 18c curation) | Sayings-network witness; 46 of 116 logia carry curated canonical parallels, of which only 3 are directional-claim-ready; Coptic–Greek automatic dependence scoring not implemented. | Medium for overlapping sayings tradition, low for global direction |
+| Other apocrypha | Inventory only; not enough data yet for firm conclusions. 18c's analysis-status note confirms "not a completed primary-text analysis layer". | Low |
 
 See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
 
@@ -273,9 +289,10 @@ Each package records its source hashes in `MANIFEST.yaml` (or `manifest.yaml`) a
 
 ## Limitations
 
-- The Greek lexical layer uses normalized surface forms and a heuristic stemmer, not a full morphological parser.
-- Coptic Thomas is parsed from Coptic Scriptorium; Greek-to-Coptic direct literary dependence is not automatically scored.
-- The apocrypha file is an inventory layer, not a full primary-language comparison.
+- The Greek lexical layer uses normalized surface forms and a heuristic stemmer, not a full morphological parser. 18c adds a **lemma audit layer** for the Mark-Luke primary chain (surface mean 0.4042 vs. lemma mean 0.4836, lemma improves/retains on 153 of 183 pairs) — but this is an audit, not a full morphology-based rerun of the retrieval pipeline.
+- Coptic Thomas is parsed from Coptic Scriptorium; Greek-to-Coptic direct literary dependence is not automatically scored. 18c's curation-status annotations make the consequences explicit — only 3 of 116 logia are directional-claim-ready.
+- The apocrypha file is an inventory layer, not a full primary-language comparison. 18c's analysis-status note reconfirms this and lists the next-ingestion priorities.
 - Candidate scores are retrieval scores, not probabilities.
-- Scriptural and liturgical formulas can create long exact matches without proving Gospel dependence — those are flagged separately.
-- The default medium mask regime is one auditable choice among several; page 28 lets you inspect the strict and broad alternatives side by side.
+- Scriptural and liturgical formulas can create long exact matches without proving Gospel dependence — those are flagged separately. Across the 500-row top epistle-Gospel pool, 18c reports **166 high / 17 medium / 317 low** formula-risk rows.
+- The default medium mask regime is one auditable choice among several; page 28 lets you inspect the strict and broad alternatives side by side. 18c's mask-regime robustness table shows the qualitative reading is stable across all three regimes even though pair counts vary.
+- The shared-tradition penalty model in the Mark-Luke ledger is structurally under-penalized unless an explicit order-retention penalty is applied. 18c's sensitivity grid is the current best calibration — a proven posterior would require a prior model that this repository does not supply.

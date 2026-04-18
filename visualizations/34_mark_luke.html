@@ -118,7 +118,7 @@
 
   <div class="page-intro">
     <p>The missing Synoptic control. If Mark is Matthew's narrative source, the same test has to work for Luke, or the Markan-priority claim is only half-supported. This dataset supplies it. The pipeline is the <em>same</em> as Mark↔Matthew — full verse-matrix, dynamic-programming chain, loose/tight block segmentation, direction-burden ledger, threshold sensitivity — but with one text-critical default: Mark 16:9–20 is excluded from the primary chain by default and retained as a sensitivity condition. That choice matters because including the long ending adds exactly one chain pair, which would otherwise become evidence for a textual artifact.</p>
-    <div class="note"><b>What this page answers.</b> Does Luke's relationship to Mark look like Matthew's? <em>Partly.</em> Luke has <b>183 primary-chain pairs</b> versus Matthew's 385 — still a monotonic backbone, but narrower. The three-way burden ledger shows <b>Mark-prior</b> (254.6) lighter than <b>Luke-prior</b> (303.2), but neither is crushing — and a <b>shared-tradition</b> model (164.1) is genuinely cheaper than either single-direction hypothesis. Read that as: Luke plausibly uses Mark or Mark-like material for the common backbone, but Lukan expansions (travel narrative, infancy, resurrection) sit outside Markan sequence and leave real headroom for additional sources.</div>
+    <div class="note"><b>What this page answers.</b> Does Luke's relationship to Mark look like Matthew's? <em>Partly.</em> Luke has <b>183 primary-chain pairs</b> versus Matthew's 385 — still a monotonic backbone, but narrower. Between the two direct-use models, <b>Mark-prior</b> (254.6) is lighter than <b>Luke-prior</b> (303.2). The unpenalized <b>shared-tradition</b> figure (164.1) looks cheaper than either direction — but shared tradition still has to account for the narrative <em>order</em>, <em>cluster density</em>, and <em>bridge sequences</em> it produces, which the unpenalized baseline does not charge it for. Under the 18c order-retention penalty (moderate weights 0.75/1.0/1.0) shared tradition adjusts to <b>385.6</b>, and <b>Mark-prior becomes the lowest-burden model overall</b> (Mark-prior wins in 211 of 245 grid cells). Read that as: Luke plausibly uses Mark or a Mark-like source for the common backbone; Lukan expansions (travel narrative, infancy, resurrection) sit outside Markan sequence and leave real headroom for additional sources, but shared tradition is not by itself cheaper than Mark-prior once order-retention is priced.</div>
   </div>
 
   <section class="card">
@@ -133,8 +133,10 @@
     <div class="burden-cards" id="burdenCards"></div>
     <div style="margin-top:14px;border-left:4px solid var(--focus);background:#f0f6ee;padding:10px 14px;border-radius:3px;font-size:13px;line-height:1.55;color:var(--ink-soft);max-width:960px;">
       <b style="color:var(--ink);">Read the ledger honestly.</b>
-      The lowest burden belongs to the <em>shared-tradition</em> model (164.1), not to either directed hypothesis (Mark-prior 254.6; Luke-prior 303.2). The <em>directed</em> conclusion this page supports is therefore narrow: between the two single-source directions, Mark-prior is the lighter-burden model. The broader claim that Mark-prior is the overall lowest-cost explanation of Mark↔Luke is <b>not</b> supported by these numbers — shared oral/narrative tradition is cheaper than either direction alone. See <a href="../AUTHORITATIVE_NUMBERS.yaml" style="color:var(--ink);"><code>AUTHORITATIVE_NUMBERS.yaml</code></a> for the registry entry and <a href="../METHODS.md" style="color:var(--ink);">§7 of METHODS.md</a> for the ledger convention.
+      The unpenalized three-way ledger above shows shared tradition (164.1) cheapest. But an unpenalized shared-tradition model is not a like-for-like comparison: it is not charged for the narrative <em>order</em> and <em>cluster density</em> that the shared material must still produce in Luke. The 18c patch (<a href="../analysis_update_20260418c/data/12_mark_luke_direct_burden_reassessment.yaml" style="color:var(--ink);"><code>12_mark_luke_direct_burden_reassessment.yaml</code></a>) sweeps an explicit order-retention/cluster-density/narrative-bridge penalty across a 245-cell weight grid. At <b>moderate weights (0.75 / 1.0 / 1.0)</b> the added shared-tradition penalty is 221.47, adjusting shared tradition to <b>385.6</b>, and <b>Mark-prior (254.6) becomes the lowest-burden model</b>. Mark-prior wins in <b>211 of 245</b> grid combinations; shared-tradition-adjusted wins in 34. The honest public wording is therefore: <em>Mark-prior is the lighter direct-use hypothesis, and — once shared tradition is charged a fair order-retention cost — Mark-prior is also the lowest-burden model overall. The Mark-Luke data alone still does not prove that Luke used <b>canonical</b> Mark rather than a Mark-like written source.</em> See <a href="../AUTHORITATIVE_NUMBERS.yaml" style="color:var(--ink);"><code>AUTHORITATIVE_NUMBERS.yaml</code></a>#mark_luke and <a href="../METHODS.md" style="color:var(--ink);">§7 of METHODS.md</a>.
     </div>
+    <div class="caption" style="margin-top:10px;">Penalty sensitivity — moderate weights (18c):</div>
+    <div id="penaltyPanel" style="margin-top:6px;max-width:960px;"></div>
   </section>
 
   <div class="ending-banner" id="endingBanner"></div>
@@ -181,6 +183,12 @@
     </div>
   </section>
 
+  <section class="card">
+    <h2>MorphGNT lemma audit (18c)</h2>
+    <div class="caption" style="margin:0 0 10px;">The primary chain above is built from normalized surface forms plus a heuristic stemmer. The 18c patch re-scores the same 183 primary-chain pairs on <em>MorphGNT lemmas</em> to check that the surface-form retrieval is not systematically missing lemma-visible alignment. This is an audit, not a replacement pipeline.</div>
+    <div id="morphAuditPanel" style="max-width:960px;"></div>
+  </section>
+
   <div class="drill-links">
     <a href="31_gospel_square.html">← 31 Gospel Square (Mark↔Luke cell)</a>
     <a href="26_conclusions.html">26 Conclusions</a>
@@ -190,7 +198,7 @@
   </div>
 
   <div class="footer">
-    Source data · <code>analysis_update_20260418b/data/11_mark_luke_primary_chain_pairs.csv</code> · <code>12_mark_luke_loose_blocks.yaml</code> · <code>15_mark_luke_secondary_echoes.yaml</code> · <code>17_mark_luke_direction_ledger_by_loose_block.yaml</code> · <code>18_mark_luke_burden_totals.yaml</code> · <code>19_mark_luke_global_summary.yaml</code> · <code>20_mark_luke_sensitivity_score_grid.csv</code> · <code>21_mark_luke_mark_ending_sensitivity.yaml</code>. Full verse-matrix (773,277 rows) regenerable from the package's <code>scripts/build_high_priority_supplement.py</code>.
+    Source data · <code>analysis_update_20260418b/data/11_mark_luke_primary_chain_pairs.csv</code> · <code>12_mark_luke_loose_blocks.yaml</code> · <code>15_mark_luke_secondary_echoes.yaml</code> · <code>17_mark_luke_direction_ledger_by_loose_block.yaml</code> · <code>18_mark_luke_burden_totals.yaml</code> · <code>19_mark_luke_global_summary.yaml</code> · <code>20_mark_luke_sensitivity_score_grid.csv</code> · <code>21_mark_luke_mark_ending_sensitivity.yaml</code>. Full verse-matrix (773,277 rows) regenerable from the package's <code>scripts/build_high_priority_supplement.py</code>. 18c interpretive layer · <code>analysis_update_20260418c/data/12_mark_luke_direct_burden_reassessment.yaml</code> · <code>11_mark_luke_shared_tradition_penalty_sensitivity.csv</code> · <code>84_morphology_rerun_summary.yaml</code> · <code>82_mark_luke_primary_chain_morphology_audit.csv</code>.
   </div>
 </div>
 
@@ -266,6 +274,42 @@
     card.appendChild(scale);
     card.appendChild(el('div', { class: 'x', style: 'font-size:11px;color:var(--ink-mute);line-height:1.45;margin-top:4px;' }, b.desc));
     burdenCards.appendChild(card);
+  }
+
+  // ---- 18c order-retention penalty panel ----
+  const reassess = (B.h18c && B.h18c.mark_luke_reassessment) || {};
+  const modWeights = (reassess.order_retention_penalty_model && reassess.order_retention_penalty_model.moderate_weights) || {};
+  const modResult = (reassess.order_retention_penalty_model && reassess.order_retention_penalty_model.moderate_weight_result) || {};
+  const gridOutcome = (reassess.order_retention_penalty_model && reassess.order_retention_penalty_model.grid_outcome_counts) || {};
+  const pPanel = document.getElementById('penaltyPanel');
+  if (pPanel) {
+    const bar = el('div', { style: 'display:grid;grid-template-columns:auto 1fr auto;gap:6px 14px;font-size:12px;align-items:center;' });
+    const rows = [
+      ['Mark-prior', modResult.mark_prior_burden != null ? modResult.mark_prior_burden : 254.6466, 'var(--mark)', 'lowest-burden model under moderate weights'],
+      ['Luke-prior', modResult.luke_prior_burden != null ? modResult.luke_prior_burden : 303.1966, 'var(--luke)', 'unchanged by the penalty'],
+      ['Shared tradition · adjusted', modResult.adjusted_shared_tradition_burden != null ? modResult.adjusted_shared_tradition_burden : 385.6134, '#8c6a3d', 'added penalty: +' + ((modResult.added_shared_tradition_penalty != null ? modResult.added_shared_tradition_penalty : 221.4666).toFixed(2)) + ' for order retention · cluster density · narrative bridges'],
+    ];
+    const maxB = Math.max.apply(null, rows.map(r => r[1]));
+    for (const [lbl, num, col, note] of rows) {
+      const labelCell = el('div', { style: 'font-weight:600;color:var(--ink);' }, lbl);
+      const scaleCell = el('div', { style: 'height:14px;background:#f4eddb;border-radius:2px;overflow:hidden;position:relative;' });
+      const fill = el('div', { style: 'height:100%;width:' + ((num / maxB) * 100).toFixed(1) + '%;background:' + col + ';' });
+      scaleCell.appendChild(fill);
+      const numCell = el('div', { style: 'font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;min-width:62px;text-align:right;' }, num.toFixed(2));
+      bar.appendChild(labelCell);
+      bar.appendChild(scaleCell);
+      bar.appendChild(numCell);
+      const spacer = el('div', null);
+      const noteCell = el('div', { style: 'font-size:11px;color:var(--ink-mute);grid-column:2 / span 2;margin-top:-2px;margin-bottom:2px;' }, note);
+      bar.appendChild(spacer);
+      bar.appendChild(noteCell);
+    }
+    pPanel.appendChild(bar);
+    const gridLine = el('div', { style: 'margin-top:8px;font-size:11px;color:var(--ink-mute);line-height:1.5;' });
+    const mkWin = gridOutcome.Mark_prior_Luke_uses_Mark_or_Mark_like_source != null ? gridOutcome.Mark_prior_Luke_uses_Mark_or_Mark_like_source : 211;
+    const shWin = gridOutcome.shared_tradition_adjusted_for_order_retention != null ? gridOutcome.shared_tradition_adjusted_for_order_retention : 34;
+    gridLine.appendChild(document.createTextNode('Full weight grid (245 cells): Mark-prior wins ' + mkWin + ', shared-tradition-adjusted wins ' + shWin + '. Weights swept: order-retention ' + (modWeights.order_retention_weight != null ? modWeights.order_retention_weight : 0.75) + ' · cluster-density ' + (modWeights.cluster_density_weight != null ? modWeights.cluster_density_weight : 1.0) + ' · narrative-bridge ' + (modWeights.narrative_bridge_weight != null ? modWeights.narrative_bridge_weight : 1.0) + ' (moderate case shown above).'));
+    pPanel.appendChild(gridLine);
   }
 
   // ---- Mark 16:9-20 ending banner ----
@@ -531,6 +575,40 @@
     stb.appendChild(tr);
   }
   sensTable.appendChild(stb);
+
+  // ---- MorphGNT lemma audit panel (18c) ----
+  const morphSummary = (B.h18c && B.h18c.morphology_rerun_summary) || {};
+  const mChain = morphSummary.mark_luke_primary_chain || {};
+  const mCand = morphSummary.mark_luke_candidate_threshold_comparison_score_ge_0_25 || {};
+  const mPanel = document.getElementById('morphAuditPanel');
+  if (mPanel) {
+    const grid = el('div', { style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;' });
+    const cards = [
+      [String(mChain.pairs_audited != null ? mChain.pairs_audited : 183), 'pairs audited', 'primary-chain pairs re-scored on lemmas'],
+      [(mChain.surface_score_mean != null ? mChain.surface_score_mean : 0.4042).toFixed(4), 'surface mean', 'baseline retrieval score'],
+      [(mChain.lemma_score_mean != null ? mChain.lemma_score_mean : 0.4836).toFixed(4), 'lemma mean', '+' + (((mChain.mean_lemma_minus_surface_score != null ? mChain.mean_lemma_minus_surface_score : 0.0795)).toFixed(4)) + ' vs surface'],
+      [String(mChain.lemma_improves_or_retains_count != null ? mChain.lemma_improves_or_retains_count : 153), 'lemma ≥ surface', 'of ' + (mChain.pairs_audited != null ? mChain.pairs_audited : 183) + ' audited pairs'],
+      [String(mChain.lemma_worse_count != null ? mChain.lemma_worse_count : 30), 'lemma < surface', 'audit pairs where surface wins'],
+    ];
+    for (const [n, l, x] of cards) {
+      const c = el('div', { class: 'hg-card' });
+      c.appendChild(el('div', { class: 'n' }, n));
+      c.appendChild(el('div', { class: 'l' }, l));
+      c.appendChild(el('div', { class: 'x' }, x));
+      grid.appendChild(c);
+    }
+    mPanel.appendChild(grid);
+
+    const candBox = el('div', { style: 'margin-top:12px;padding:10px 14px;background:#f7efe0;border-left:3px solid var(--focus);border-radius:3px;font-size:12px;line-height:1.55;color:var(--ink-soft);' });
+    const candTitle = el('b', { style: 'color:var(--ink);' }, 'Candidate pool at score ≥ 0.25.');
+    candBox.appendChild(candTitle);
+    candBox.appendChild(document.createTextNode(' Surface retrieval yields ' + (mCand.surface_high_pairs != null ? mCand.surface_high_pairs : 216) + ' high pairs; lemma retrieval yields ' + (mCand.lemma_high_pairs != null ? mCand.lemma_high_pairs : 416) + '; ' + (mCand.overlap_pairs != null ? mCand.overlap_pairs : 185) + ' are in overlap. Surface-only ' + (mCand.surface_only_pairs != null ? mCand.surface_only_pairs : 31) + ', lemma-only ' + (mCand.lemma_only_pairs != null ? mCand.lemma_only_pairs : 231) + '. Lemma signal picks up additional candidates that the heuristic stemmer does not collapse (e.g. stem-distant inflections), but the primary-chain ranking holds.'));
+    mPanel.appendChild(candBox);
+
+    const caveat = el('div', { style: 'margin-top:10px;font-size:11px;color:var(--ink-mute);line-height:1.5;' });
+    caveat.appendChild(document.createTextNode('Audit metric only — the main retrieval pipeline still uses normalized surface forms + heuristic stemmer. Full morphology-based chain recomputation is future work (18c note: "lemma score is audit metric, not replacement pipeline"). Token layer: ' + (morphSummary.token_layer_rows != null ? morphSummary.token_layer_rows : 85364).toLocaleString() + ' token rows across ' + (morphSummary.verse_unit_rows != null ? morphSummary.verse_unit_rows : 5060).toLocaleString() + ' verse-unit rows for Matt/Mark/Luke/John + selected epistles.'));
+    mPanel.appendChild(caveat);
+  }
 
   // ---- ?hi= routing ----
   const hiRef = SH.getHighlightRef && SH.getHighlightRef();

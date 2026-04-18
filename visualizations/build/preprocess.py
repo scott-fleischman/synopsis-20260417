@@ -95,6 +95,7 @@ if __package__ in (None, ""):
         load_mm_rerun,
     )
     from build.loaders_h18b import build_h18b  # type: ignore[no-redef]
+    from build.loaders_h18c import build_h18c  # type: ignore[no-redef]
     from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
     from build.loaders_morph import load_morph_for_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
@@ -159,6 +160,7 @@ else:  # imported as a package member
         load_mm_rerun,
     )
     from .loaders_h18b import build_h18b
+    from .loaders_h18c import build_h18c
     from .loaders_reader import load_reader_books
     from .loaders_morph import load_morph_for_books
     from .preprocess_paths import OUT, ROOT
@@ -412,6 +414,20 @@ def main() -> None:
             f"{len(conclusions.get('case_snippets') or [])} case snippets"
         )
 
+    print("Building h18c (2026-04-18c data-analysis patch)...")
+    h18c = build_h18c()
+    _mkr = h18c.get("mark_luke_reassessment") or {}
+    _mwm = _mkr.get("order_retention_penalty_model", {}).get("moderate_weight_result", {}) if isinstance(_mkr, dict) else {}
+    _jaa = h18c.get("john_anchor_aggregate") or []
+    _mrs = h18c.get("morphology_rerun_summary") or {}
+    print(
+        f"  mark-luke lowest model: {_mwm.get('lowest_burden_model', 'n/a')}; "
+        f"john anchor aggregate {len(_jaa)} pairs; "
+        f"morph audit {(_mrs.get('mark_luke_primary_chain') or {}).get('pairs_audited', 0)} pairs; "
+        f"thomas certainty {(h18c.get('thomas_curation') or {}).get('directional_claim_ready_count', 0)} claim-ready; "
+        f"epistle validation sample {(h18c.get('epistle_validation_summary') or {}).get('sample_rows', 0)} rows"
+    )
+
     print("Building h18b (2026-04-18b high-priority supplement)...")
     h18b = build_h18b()
     _mkl = h18b.get("mkl") or {}
@@ -452,6 +468,7 @@ def main() -> None:
         "mld": mld,
         "jtea": jtea,
         "h18b": h18b,
+        "h18c": h18c,
         "conclusions": conclusions,
         "reader": reader,
         "morph": morph,

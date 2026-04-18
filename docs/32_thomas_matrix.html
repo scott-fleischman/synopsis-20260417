@@ -99,9 +99,9 @@
   <nav id="topnav" class="topnav"></nav>
 
   <div class="intro">
-    <p>All 116 Thomas units from NHC II,2 plotted against the four canonical gospels. The <b>logion-by-Gospel matrix</b> is the authoritative view in the 2026-04-18b supplement: dependence is assessed <em>per saying</em>, not as a corpus-level yes/no claim. Each row shows relation type, matrix strength, and direct-dependence burden. 46 of the 116 logia have a curated canonical parallel; the remaining 70 rows remain visible to show the corpus-level sparsity of Thomas's contact with the canon.</p>
+    <p>All 116 Thomas units from NHC II,2 plotted against the four canonical gospels. The <b>logion-by-Gospel matrix</b> is the authoritative view: dependence is assessed <em>per saying</em>, not as a corpus-level yes/no claim. Each row shows relation type, matrix strength, and direct-dependence burden. 46 of the 116 logia have a curated canonical parallel; the remaining 70 rows remain visible to show the corpus-level sparsity of Thomas's contact with the canon.</p>
     <div class="note method">
-      <b>Methodological note (h18b method).</b> Thomas is treated logion-by-logion, not as a single corpus that either does or does not depend on the Synoptics. Automatic Coptic→Greek dependence scoring is not implemented, so the matrix is curated evidence augmented by lemma/motif signal — long exact Coptic-Greek runs do not exist by construction. Relation types separate <em>possible Synoptic influence</em> (4 logia) from <em>shared sayings tradition</em> (14) from <em>overlapping Jesus tradition of uncertain direction</em> (28).
+      <b>Methodological note.</b> Thomas is treated logion-by-logion, not as a single corpus that either does or does not depend on the Synoptics. Automatic Coptic→Greek dependence scoring is not implemented, so the matrix is curated evidence augmented by lemma/motif signal — long exact Coptic-Greek runs do not exist by construction. Relation types separate <em>possible Synoptic influence</em> (4 logia) from <em>shared sayings tradition</em> (14) from <em>overlapping Jesus tradition of uncertain direction</em> (28). Of the 46 curated parallels, parallel-certainty breaks down to 8 high · 3 medium-high · 35 medium — and only <b>3 logia are directional-claim-ready</b> (all of them in the possible-synoptic-influence class). That is the ceiling on what this corpus can support as a global directional claim.
     </div>
     <div class="note">
       For single-logion reading alongside Greek canonical text, use <a href="21_thomas_parallels.html">21 Thomas parallels</a>. For the role of Thomas within the evidence network, use <a href="18_intertext_network.html">18 intertext network</a> and <a href="31_gospel_square.html">31 canonical Gospel square</a>.
@@ -109,6 +109,8 @@
   </div>
 
   <div class="summary-bar" id="summaryBar"></div>
+
+  <div class="relation-bar" id="certaintyBar"></div>
 
   <div class="relation-bar" id="relationBar"></div>
 
@@ -156,7 +158,10 @@
   <div class="footer">
     Data sources: <code>analysis_update_20260418b/data/50_thomas_gospel_logion_matrix.csv</code> (116 logia),
     <code>51_thomas_logion_dossiers.yaml</code> (46 dossiers, Coptic Scriptorium CC&nbsp;BY 4.0 text),
-    <code>52_thomas_global_summary.yaml</code>.
+    <code>52_thomas_global_summary.yaml</code> ·
+    <code>analysis_update_20260418c/data/40_thomas_logion_matrix_with_curation_status.csv</code>,
+    <code>41_thomas_curation_status_summary.yaml</code>,
+    <code>42_thomas_relation_counts.csv</code>.
     Coptic-to-Greek automatic dependence scoring is not implemented; scores are curated at logion level.
   </div>
 </div>
@@ -235,6 +240,33 @@
       el('div', { class: 'l' }, l),
     ));
   });
+
+  // ---- Certainty bar (parallel-certainty curation) ---------------------
+  const cb = document.getElementById('certaintyBar');
+  const curation = (B.h18c && B.h18c.thomas_curation) || {};
+  const certCounts = curation.parallel_certainty_counts || {};
+  const directionalReady = curation.directional_claim_ready_count;
+  cb.appendChild(el('span', { class: 'rb-lbl' }, 'Parallel certainty (curated):'));
+  const certOrder = [
+    ['high', 'high', 'syn'],
+    ['medium_high', 'medium-high', 'sayings'],
+    ['medium', 'medium', 'overlap'],
+    ['not_assessed', 'not assessed', 'nopar'],
+  ];
+  certOrder.forEach(([k, label, cls]) => {
+    const c = certCounts[k];
+    if (c == null) return;
+    cb.appendChild(el('span', { class: 'rel-pill ' + cls },
+      el('span', { class: 'c' }, String(c)),
+      el('span', null, label),
+    ));
+  });
+  if (directionalReady != null) {
+    cb.appendChild(el('span', { class: 'rel-pill syn', style: 'margin-left:auto;' },
+      el('span', { class: 'c' }, String(directionalReady)),
+      el('span', null, 'directional-claim-ready (of 46)'),
+    ));
+  }
 
   // ---- Relation bar ----------------------------------------------------
   const rb = document.getElementById('relationBar');
