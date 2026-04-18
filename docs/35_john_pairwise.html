@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>John ↔ Synoptic pairwise · anchor-level shared tradition</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1060px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 14px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .pair-tabs { display: flex; gap: 2px; margin-bottom: 0; border-bottom: 2px solid var(--rule); }
+  .pair-tabs .t { padding: 12px 22px; cursor: pointer; font-family: var(--serif); font-size: 15px; color: var(--ink-soft); border-radius: 3px 3px 0 0; margin-bottom: -2px; border: 2px solid transparent; border-bottom: 0; }
+  .pair-tabs .t:hover { background: #fafaf7; }
+  .pair-tabs .t.active { background: #fff; color: var(--ink); border-color: var(--rule); border-bottom: 2px solid #fff; font-weight: 600; }
+  .pair-tabs .t .sm { font-size: 11px; color: var(--ink-mute); display: block; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
+
+  .headline-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 16px 0 20px; }
+  .hg-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 12px 14px; }
+  .hg-card .n { font-family: var(--serif); font-size: 22px; color: var(--ink); line-height: 1.05; }
+  .hg-card .l { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-top: 3px; }
+  .hg-card .x { font-size: 11px; color: var(--ink-soft); margin-top: 4px; line-height: 1.4; }
+
+  .top-case { border: 1px solid var(--rule); border-left: 4px solid var(--focus); border-radius: 3px; background: #fff; padding: 14px 18px; margin-bottom: 18px; }
+  .top-case h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 15px; }
+  .top-case .row { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: baseline; font-size: 13px; }
+  .top-case .row .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; }
+  .top-case .row .val { color: var(--ink); }
+  .top-case .greek { font-family: var(--greek); font-size: 15px; color: var(--ink); background: #fafaf7; padding: 8px 12px; border-radius: 2px; margin-top: 10px; line-height: 1.5; }
+  .top-case .note { font-size: 12px; color: var(--ink-soft); margin-top: 8px; font-style: italic; }
+
+  .burden-quad { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin: 10px 0 18px; }
+  .bq-card { padding: 12px 14px; border-radius: 3px; font-size: 12px; line-height: 1.5; }
+  .bq-card.john { background: #ecf1f5; border-left: 3px solid var(--matt); }
+  .bq-card.syn { background: #f9efe6; border-left: 3px solid var(--mark); }
+  .bq-card.shared { background: #eef5ec; border-left: 3px solid #4a6b3a; }
+  .bq-card.indep { background: #f6ecec; border-left: 3px solid #8b2e2e; }
+  .bq-card .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; margin-bottom: 4px; }
+  .bq-card .lbl { font-family: var(--serif); font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+  .bq-card .num { font-family: var(--serif); font-size: 22px; color: var(--ink); line-height: 1.05; margin-bottom: 6px; }
+  .bq-card ul { margin: 4px 0 0; padding-left: 15px; font-size: 11px; color: var(--ink-soft); }
+  .bq-card li { margin-bottom: 2px; line-height: 1.35; }
+
+  .anchors-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .anc-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 14px 16px; display: grid; grid-template-columns: 1fr auto; gap: 10px 20px; align-items: baseline; }
+  .anc-card .left { display: flex; flex-direction: column; gap: 4px; }
+  .anc-card .title { font-family: var(--serif); font-size: 14px; color: var(--ink); }
+  .anc-card .refs { font-size: 11px; color: var(--ink-mute); }
+  .anc-card .features { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0 4px; }
+  .anc-card .features .f { font-size: 10px; padding: 1px 7px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 10px; color: var(--ink-soft); }
+  .anc-card .best { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+  .anc-card .best b { color: var(--ink); }
+  .anc-card .metrics { text-align: right; font-family: var(--serif); font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .anc-card .metrics .score { color: var(--ink); font-size: 18px; line-height: 1.05; }
+  .anc-card .metrics .rlab { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .anc-card .hyp { margin-top: 6px; padding: 8px 10px; background: #fafaf7; border-left: 3px solid var(--rule); font-size: 12px; line-height: 1.45; color: var(--ink-soft); grid-column: 1 / -1; }
+  .anc-card .hyp.if-syn { border-left-color: var(--mark); }
+  .anc-card .hyp.if-john { border-left-color: var(--matt); }
+  .anc-card .hyp.best { border-left-color: var(--accent); background: #faf6ec; }
+  .anc-card .hyp b { color: var(--ink); }
+  .anc-card.no-signal .score { color: var(--ink-mute); }
+
+  .cand-wrap { border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; background: #fff; }
+  .cand-wrap .hd { display: grid; grid-template-columns: 110px 110px 70px 60px 1fr; gap: 10px; padding: 8px 12px; background: #fafaf7; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule); }
+  .cand-wrap .cr { display: grid; grid-template-columns: 110px 110px 70px 60px 1fr; gap: 10px; padding: 7px 12px; border-bottom: 1px solid var(--rule-soft); font-size: 12px; align-items: baseline; }
+  .cand-wrap .cr:last-child { border-bottom: 0; }
+  .cand-wrap .cr:hover { background: #fbf7ea; }
+  .cand-wrap .cr .s { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .cand-wrap .cr .run { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .cand-wrap .cr .gr { font-family: var(--greek); font-size: 13px; color: var(--ink); }
+
+  .contra-list { background: #faf1f0; border-left: 3px solid #8b2e2e; padding: 12px 16px; margin-top: 14px; font-size: 12px; line-height: 1.55; color: var(--ink-soft); border-radius: 0 3px 3px 0; }
+  .contra-list h4 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #8b2e2e; font-weight: 600; }
+  .contra-list ul { margin: 0; padding-left: 18px; }
+  .contra-list li { margin-bottom: 3px; }
+
+  .drill-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
+  .drill-links a { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .drill-links a:hover { border-color: var(--accent); background: #fbf7ea; color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>John ↔ Synoptic pairwise</h1>
+    <span class="sub">anchor-level shared tradition · not a continuous chain</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>Three first-class pairwise dashboards — John↔Mark, John↔Matthew, John↔Luke. The supplement's core methodological point is on display here: <em>you cannot run a Synoptic-style narrative-alignment chain on John and one other Gospel and expect it to work</em>. John is too transformational for a monotonic lexical backbone. The right model is <b>anchor plus low-verbatim pairwise</b>: shared narrative episodes are curated as anchors, the full verse-matrix is computed anyway (580K–1M rows per pair) so local lexical candidates are visible, and the four-way burden ledger (John-uses-Syn, Syn-uses-John, shared tradition, independent convergence) is the primary interpretive tool.</p>
+    <div class="note"><b>What the headline numbers are not.</b> Don't read "33 candidate pairs" as "33 instances of dependence." Many are brief/formulaic agreements that the chain models would dismiss. The interpretive weight sits on the <em>anchor episodes</em> — 10 per pair for Mark/Matt, 9 for Luke — where narrative content overlaps even when wording does not. <b>The strongest single lexical case</b> across all three pairs is John 12:8 ~ Matt 26:11 at score 0.8571 (6-token exact run) — Matthew's anointing-at-Bethany passage matches John's almost verbatim, a result that would be indistinguishable from direct dependence if we did not also see the same saying echoed in Mark.</div>
+  </div>
+
+  <div class="pair-tabs" id="pairTabs"></div>
+
+  <div id="pane"></div>
+
+  <div class="drill-links">
+    <a href="31_gospel_square.html">← 31 Gospel Square</a>
+    <a href="20_john_anchors.html">20 John anchors (earlier summary view)</a>
+    <a href="18_intertext_network.html">18 Intertext network</a>
+    <a href="30_reader.html">30 Reader</a>
+  </div>
+
+  <div class="footer">
+    Source data · <code>analysis_update_20260418b/data/37_john_synoptic_pairwise_anchor_registry.yaml</code> · <code>38_john_synoptic_pairwise_global_summary.yaml</code> · <code>39_john_synoptic_pairwise_support_contra.yaml</code>. Window candidates: <code>33–36_*_window_candidates*.csv</code>. Full verse-matrix rows per pair: <code>30_john_mark</code> (580,358), <code>31_john_matthew</code> (937,704), <code>32_john_luke</code> (1,008,822).
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('35_john_pairwise.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const JP = (B.h18b && B.h18b.john_pairwise) || {};
+  const anchors = JP.anchors || [];
+  const summaries = JP.summary || [];
+  const supportContra = JP.support_contra || {};
+
+  // ---- Pair meta ----
+  const PAIRS = [
+    { id: 'JohnMark', syn: 'Mark', label: 'John ↔ Mark', tabLabel: 'Mark', arrow: '↔' },
+    { id: 'JohnMatt', syn: 'Matt', label: 'John ↔ Matthew', tabLabel: 'Matthew', arrow: '↔' },
+    { id: 'JohnLuke', syn: 'Luke', label: 'John ↔ Luke', tabLabel: 'Luke', arrow: '↔' },
+  ];
+  // Summary rows are keyed by "pair": "John↔Mark", "John↔Matthew", "John↔Luke"
+  function summaryFor(pairId) {
+    const target = pairId === 'JohnMatt' ? 'John↔Matthew' : (pairId === 'JohnMark' ? 'John↔Mark' : 'John↔Luke');
+    return summaries.find(s => s.pair === target) || {};
+  }
+  // support_contra keyed by same long form
+  function supContraFor(pairId) {
+    const target = pairId === 'JohnMatt' ? 'John↔Matthew' : (pairId === 'JohnMark' ? 'John↔Mark' : 'John↔Luke');
+    return supportContra[target] || {};
+  }
+  // Anchors for this pair — anchor.pair == "John↔Mark"/"John↔Matt"/"John↔Luke" (note: Matt not Matthew in anchor registry)
+  function anchorsFor(pairId) {
+    const target = pairId === 'JohnMatt' ? 'John↔Matt' : (pairId === 'JohnMark' ? 'John↔Mark' : 'John↔Luke');
+    return anchors.filter(a => a.pair === target);
+  }
+
+  // ---- Tabs ----
+  const tabBar = document.getElementById('pairTabs');
+  const tabs = {};
+  PAIRS.forEach(p => {
+    const t = el('div', { class: 't' },
+      el('span', { class: 'sm' }, 'John ' + p.arrow),
+      document.createTextNode(p.tabLabel));
+    t.addEventListener('click', () => selectPair(p.id));
+    tabs[p.id] = t;
+    tabBar.appendChild(t);
+  });
+
+  // ---- Initial pair from ?pair= query param ----
+  function initialPair() {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      const v = p.get('pair');
+      if (v === 'JohnMark' || v === 'JohnMatt' || v === 'JohnLuke') return v;
+    } catch (e) { /* ignore */ }
+    return 'JohnMark';
+  }
+
+  const pane = document.getElementById('pane');
+  function selectPair(id) {
+    Object.keys(tabs).forEach(k => tabs[k].classList.toggle('active', k === id));
+    // Update URL without reload
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set('pair', id);
+      window.history.replaceState({}, '', u);
+    } catch (e) { /* ignore */ }
+    renderPane(id);
+  }
+
+  function renderPane(pairId) {
+    const meta = PAIRS.find(p => p.id === pairId);
+    const sum = summaryFor(pairId);
+    const sc = supContraFor(pairId);
+    const ancs = anchorsFor(pairId);
+    while (pane.firstChild) pane.removeChild(pane.firstChild);
+
+    // --- Headline cards ---
+    const hg = el('div', { class: 'headline-row' });
+    const hcards = [
+      [String(sum.anchors_registered || ancs.length || 10), 'anchor episodes', 'shared narrative units'],
+      [String(sum.candidate_pairs_score_ge_0_25 || '—'), 'candidate pairs', 'score ≥ 0.25'],
+      [String(sum.candidate_pairs_score_ge_0_35 || '—'), 'stronger candidates', 'score ≥ 0.35'],
+      [String(sum.exact_run_pairs_ge_4 || '—'), 'long exact runs', '≥ 4 content tokens'],
+      [(sum.verse_matrix_rows || '—').toLocaleString ? Number(sum.verse_matrix_rows).toLocaleString() : String(sum.verse_matrix_rows || '—'),
+        'verse-matrix rows', 'full 1-to-1 scored'],
+      [String(sum.anchors_with_local_matrix_signal != null ? sum.anchors_with_local_matrix_signal : '—'),
+        'anchors with lexical signal', 'max score ≥ 0.25 in window'],
+    ];
+    for (const [n, l, x] of hcards) {
+      hg.appendChild(el('div', { class: 'hg-card' },
+        el('div', { class: 'n' }, n),
+        el('div', { class: 'l' }, l),
+        el('div', { class: 'x' }, x)));
+    }
+    pane.appendChild(el('section', { class: 'card' },
+      el('h2', null, meta.label + ' · headline numbers'),
+      el('div', { class: 'caption', style: 'margin:0 0 6px;' },
+        'Verse-matrix rows are the full John × ' + meta.syn + ' scored grid. The "candidate pair" threshold (≥ 0.25) filters brief-formulaic hits; above that, pairs are worth a human look even if they are not on any chain.'),
+      hg));
+
+    // --- Top local case ---
+    if (sum.top_pair) {
+      const tp = sum.top_pair;
+      const topCase = el('section', { class: 'card' });
+      topCase.appendChild(el('h2', null, 'Top local lexical case'));
+      const box = el('div', { class: 'top-case' });
+      box.appendChild(el('h3', null, 'Highest-scoring pair in the verse matrix'));
+      const tbl = el('div', { class: 'row' });
+      const mk = (lbl, val) => { tbl.appendChild(el('div', { class: 'lbl' }, lbl)); tbl.appendChild(el('div', { class: 'val' }, val)); };
+      const refsRow = el('div', { class: 'val' });
+      refsRow.appendChild(SH.refChip(tp.john_ref, { fontSize: '13px' }));
+      refsRow.appendChild(document.createTextNode('  ↔  '));
+      refsRow.appendChild(SH.refChip(tp.synoptic_ref, { fontSize: '13px' }));
+      tbl.appendChild(el('div', { class: 'lbl' }, 'pair'));
+      tbl.appendChild(refsRow);
+      mk('score', tp.score != null ? Number(tp.score).toFixed(4) : '—');
+      mk('exact run len', String(tp.max_exact_run_len || 0));
+      mk('shared tokens', tp.shared_content_tokens || '');
+      box.appendChild(tbl);
+      if (tp.max_exact_run) box.appendChild(el('div', { class: 'greek' }, tp.max_exact_run));
+      box.appendChild(el('div', { class: 'note' }, tp.evidence_value || ''));
+      topCase.appendChild(box);
+      pane.appendChild(topCase);
+    }
+
+    // --- Four-way burden ---
+    if (sum.burden_ledger) {
+      const burdSec = el('section', { class: 'card' });
+      burdSec.appendChild(el('h2', null, 'Four-way direction burden'));
+      burdSec.appendChild(el('div', { class: 'caption', style: 'margin:0 0 10px;' },
+        'Unlike Synoptic pairs, John material needs a fourth hypothesis: independent convergence. That single hypothesis always carries the heaviest burden for John-Synoptic — the anchor episodes are too specific to be coincidence. The three live hypotheses are John-uses-Synoptic, Synoptic-uses-John, and shared-tradition. Lower strain = cheaper.'));
+      const quad = el('div', { class: 'burden-quad' });
+      const keys = Object.keys(sum.burden_ledger);
+      // Sort: shared first (lightest), then two directions, then independent (heaviest)
+      const orderedKeys = keys.sort((a, b) => (sum.burden_ledger[a].burden_score || 0) - (sum.burden_ledger[b].burden_score || 0));
+      for (const k of orderedKeys) {
+        const h = sum.burden_ledger[k];
+        let cls = 'shared';
+        if (k.indexOf('John_uses_') === 0) cls = 'john';
+        else if (k.indexOf('independent') >= 0) cls = 'indep';
+        else if (k.indexOf('uses_John') >= 0) cls = 'syn';
+        else if (k.indexOf('shared') >= 0) cls = 'shared';
+        const card = el('div', { class: 'bq-card ' + cls });
+        const labelText = k.replace(/_/g, ' ');
+        card.appendChild(el('div', { class: 'kicker' }, cls === 'shared' ? 'lightest' : (cls === 'indep' ? 'heaviest (implausible)' : 'live hypothesis')));
+        card.appendChild(el('div', { class: 'lbl' }, labelText));
+        card.appendChild(el('div', { class: 'num' }, (h.burden_score || 0).toFixed(2)));
+        const ul = el('ul');
+        (h.must_explain || []).forEach(me => ul.appendChild(el('li', null, me)));
+        card.appendChild(ul);
+        quad.appendChild(card);
+      }
+      burdSec.appendChild(quad);
+      if (sum.interpretive_reading) {
+        burdSec.appendChild(el('div', {
+          style: 'background:#faf6ec;border-left:3px solid var(--accent);padding:10px 14px;font-size:12px;line-height:1.55;color:var(--ink-soft);',
+        }, sum.interpretive_reading));
+      }
+      pane.appendChild(burdSec);
+    }
+
+    // --- Anchor episodes ---
+    const ancSec = el('section', { class: 'card' });
+    ancSec.appendChild(el('h2', null, 'Anchor episodes · narrative-level shared tradition'));
+    ancSec.appendChild(el('div', { class: 'caption', style: 'margin:0 0 10px;' },
+      ancs.length + ' registered anchors for ' + meta.label + '. Each is a shared narrative unit where John and ' + meta.syn + ' describe the same episode. Max-score is the strongest single verse-to-verse lexical agreement inside the episode window — a proxy for how much <em>wording</em> (not just content) the two Gospels share. Low max-scores with real anchors — as in Baptist/temple/feeding — are exactly what the model predicts: shared tradition survives even when diction does not.'));
+    const al = el('div', { class: 'anchors-list' });
+    // Sort anchors by max_score descending
+    const sortedAnchors = ancs.slice().sort((a, b) => ((b.metrics_from_verse_matrix || {}).max_score || 0) - ((a.metrics_from_verse_matrix || {}).max_score || 0));
+    for (const a of sortedAnchors) {
+      const m = a.metrics_from_verse_matrix || {};
+      const card = el('div', { class: 'anc-card' });
+      if ((m.max_score || 0) < 0.1) card.classList.add('no-signal');
+      const left = el('div', { class: 'left' });
+      left.appendChild(el('div', { class: 'title' }, (a.anchor_id || '').replace(/_/g, ' ')));
+      const refsRow = el('div', { class: 'refs' });
+      refsRow.appendChild(document.createTextNode('John '));
+      (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean).forEach((j, i) => {
+        if (i > 0) refsRow.appendChild(document.createTextNode(' · '));
+        refsRow.appendChild(SH.refChip(j, { fontSize: '11px', plain: true }));
+      });
+      refsRow.appendChild(document.createTextNode('  ·  ' + meta.syn + ' '));
+      const sRefsRaw = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+      sRefsRaw.forEach((s, i) => {
+        if (i > 0) refsRow.appendChild(document.createTextNode(' · '));
+        refsRow.appendChild(SH.refChip(s, { fontSize: '11px', plain: true }));
+      });
+      left.appendChild(refsRow);
+      const feats = el('div', { class: 'features' });
+      (a.shared_features || []).forEach(f => feats.appendChild(el('span', { class: 'f' }, f)));
+      left.appendChild(feats);
+      const bestPair = m.best_pair || {};
+      const bestEl = el('div', { class: 'best' });
+      bestEl.appendChild(el('b', null, 'Top lexical pair in window: '));
+      bestEl.appendChild(SH.refChip(bestPair.john_ref || '', { fontSize: '12px' }));
+      bestEl.appendChild(document.createTextNode(' ↔ '));
+      bestEl.appendChild(SH.refChip(bestPair.synoptic_ref || '', { fontSize: '12px' }));
+      if (bestPair.max_exact_run) {
+        bestEl.appendChild(document.createTextNode('  — "'));
+        bestEl.appendChild(el('span', { style: 'font-family:var(--greek);' }, bestPair.max_exact_run));
+        bestEl.appendChild(document.createTextNode('"'));
+      }
+      left.appendChild(bestEl);
+      card.appendChild(left);
+      const metrics = el('div', { class: 'metrics' });
+      metrics.appendChild(el('div', { class: 'score' }, (m.max_score || 0).toFixed(3)));
+      metrics.appendChild(el('div', { class: 'rlab' }, 'max score'));
+      metrics.appendChild(el('div', null, (m.max_exact_run_len || 0) + '-tok run'));
+      metrics.appendChild(el('div', { class: 'rlab' }, (m.john_ref_count || 0) + '×' + (m.synoptic_ref_count || 0) + ' cells'));
+      card.appendChild(metrics);
+
+      if (a.john_transformation_if_synoptics_prior) {
+        const h1 = el('div', { class: 'hyp if-syn' });
+        h1.appendChild(el('b', null, 'If Synoptic prior: '));
+        h1.appendChild(document.createTextNode(a.john_transformation_if_synoptics_prior));
+        card.appendChild(h1);
+      }
+      if (a.synoptic_transformation_if_john_prior) {
+        const h2 = el('div', { class: 'hyp if-john' });
+        h2.appendChild(el('b', null, 'If John prior: '));
+        h2.appendChild(document.createTextNode(a.synoptic_transformation_if_john_prior));
+        card.appendChild(h2);
+      }
+      if (a.provisional_best_explanation) {
+        const h3 = el('div', { class: 'hyp best' });
+        h3.appendChild(el('b', null, 'Best explanation: '));
+        h3.appendChild(document.createTextNode(a.provisional_best_explanation));
+        if (a.common_tradition_assessment) {
+          h3.appendChild(document.createTextNode('  ·  '));
+          h3.appendChild(el('span', { style: 'font-style:italic;' }, a.common_tradition_assessment));
+        }
+        card.appendChild(h3);
+      }
+      al.appendChild(card);
+    }
+    ancSec.appendChild(al);
+    pane.appendChild(ancSec);
+
+    // --- Top local lexical candidates ---
+    const topCases = (sc.top_supporting_local_cases || []);
+    if (topCases.length) {
+      const cSec = el('section', { class: 'card' });
+      cSec.appendChild(el('h2', null, 'Top local lexical candidates (verse-matrix top 15)'));
+      cSec.appendChild(el('div', { class: 'caption', style: 'margin:0 0 10px;' },
+        'Highest-scoring single-verse-to-single-verse pairs from the full John × ' + meta.syn + ' matrix. Each is a candidate — not evidence of direct dependence — until the exact-run content and context are read. Many of these fall inside anchor episodes above; others are lexical cousins across very different episodes (e.g. "Mount of Olives" appearing in unrelated passages).'));
+      const cw = el('div', { class: 'cand-wrap' });
+      const hd = el('div', { class: 'hd' });
+      ['John', meta.syn, 'Score', 'Run', 'Exact run'].forEach(c => hd.appendChild(el('div', null, c)));
+      cw.appendChild(hd);
+      topCases.slice(0, 15).forEach(tc => {
+        const cr = el('div', { class: 'cr' });
+        cr.appendChild(SH.refChip(tc.john_ref || '', { fontSize: '12px', plain: true }));
+        cr.appendChild(SH.refChip(tc.synoptic_ref || '', { fontSize: '12px', plain: true }));
+        cr.appendChild(el('div', { class: 's' }, (tc.score || 0).toFixed(3)));
+        cr.appendChild(el('div', { class: 'run' }, String(tc.max_exact_run_len || 0)));
+        cr.appendChild(el('div', { class: 'gr' }, tc.max_exact_run || '—'));
+        cw.appendChild(cr);
+      });
+      cSec.appendChild(cw);
+      pane.appendChild(cSec);
+    }
+
+    // --- Limiting / contrary observations ---
+    const limObs = sc.limiting_or_contrary_observations || [];
+    if (limObs.length) {
+      const cl = el('div', { class: 'contra-list' });
+      cl.appendChild(el('h4', null, 'Limiting or contrary evidence'));
+      const ul = el('ul');
+      limObs.forEach(o => ul.appendChild(el('li', null, o)));
+      cl.appendChild(ul);
+      pane.appendChild(cl);
+    }
+  }
+
+  // Boot.
+  const startPair = initialPair();
+  selectPair(startPair);
+
+  // ?hi= routing — if a John or Synoptic ref is given, keep default pair but note we could pre-scroll.
+  // For simplicity, the chosen pair is already URL-driven; we don't swap based on highlight.
+})();
+</script>
+</body>
+</html>

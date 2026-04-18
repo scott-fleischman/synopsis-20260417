@@ -94,6 +94,7 @@ if __package__ in (None, ""):
         load_mld_rerun,
         load_mm_rerun,
     )
+    from build.loaders_h18b import build_h18b  # type: ignore[no-redef]
     from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
     from build.loaders_morph import load_morph_for_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
@@ -157,6 +158,7 @@ else:  # imported as a package member
         load_mld_rerun,
         load_mm_rerun,
     )
+    from .loaders_h18b import build_h18b
     from .loaders_reader import load_reader_books
     from .loaders_morph import load_morph_for_books
     from .preprocess_paths import OUT, ROOT
@@ -410,6 +412,24 @@ def main() -> None:
             f"{len(conclusions.get('case_snippets') or [])} case snippets"
         )
 
+    print("Building h18b (2026-04-18b high-priority supplement)...")
+    h18b = build_h18b()
+    _mkl = h18b.get("mkl") or {}
+    _jp = h18b.get("john_pairwise") or {}
+    _ep = h18b.get("epistle_dossiers") or {}
+    _th = h18b.get("thomas") or {}
+    print(
+        f"  mkl {len(_mkl.get('pairs') or [])} pairs / {len(_mkl.get('loose_blocks') or [])} loose blocks; "
+        f"john pairwise {len(_jp.get('anchors') or [])} anchor rows / "
+        f"{len(_jp.get('summary') or [])} pair summaries; "
+        f"thomas {len(_th.get('matrix') or [])} logia / "
+        f"{len(_th.get('dossiers') or [])} dossiers; "
+        f"epistle {len(_ep.get('cases') or [])} cases / "
+        f"{len(_ep.get('ranked_top500') or [])} ranked candidates; "
+        f"square {len((h18b.get('gospel_square') or {}).get('rows') or [])} cells; "
+        f"conclusion nav {len(h18b.get('conclusion_nav') or [])} claims"
+    )
+
     print("Loading full SBLGNT text for reader view...")
     reader = load_reader_books(["Matt", "Mark", "Luke", "John"])
     _reader_verse_ct = sum(
@@ -431,6 +451,7 @@ def main() -> None:
         "ml": ml,
         "mld": mld,
         "jtea": jtea,
+        "h18b": h18b,
         "conclusions": conclusions,
         "reader": reader,
         "morph": morph,

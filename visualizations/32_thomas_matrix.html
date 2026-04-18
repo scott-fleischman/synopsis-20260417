@@ -2,20 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Thomas × canonical matrix · 116 logia</title>
+<title>Thomas × canonical matrix · 116 logia · logion-level dossiers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/style.css" />
 <style>
   .intro { max-width: 1040px; font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
   .intro .note { border-left: 3px solid var(--focus); padding: 8px 12px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .intro .note.method { border-left-color: #6a7a49; background: #f4f8ee; }
 
   .summary-bar { display: flex; gap: 20px; flex-wrap: wrap; background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 16px; margin-bottom: 14px; font-size: 12px; }
   .summary-bar .s { display: flex; flex-direction: column; gap: 2px; }
   .summary-bar .s .n { font-family: var(--serif); font-size: 20px; color: var(--ink); line-height: 1; }
   .summary-bar .s .l { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); }
 
+  .relation-bar { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 8px 12px; margin-bottom: 14px; font-size: 11px; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+  .relation-bar .rb-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin-right: 6px; }
+  .relation-bar .rel-pill { display: inline-flex; gap: 6px; align-items: baseline; padding: 3px 8px; border-radius: 2px; background: #f4efdf; }
+  .relation-bar .rel-pill .c { font-family: var(--serif); font-size: 14px; color: var(--ink); line-height: 1; }
+  .relation-bar .rel-pill.syn { background: #f0d0c8; color: #8b2e2e; }
+  .relation-bar .rel-pill.sayings { background: #f3e2ce; color: #a8551a; }
+  .relation-bar .rel-pill.overlap { background: #eee7c5; color: #7a5c1a; }
+  .relation-bar .rel-pill.nopar { background: #e5e3db; color: var(--ink-mute); }
+
   .controls { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; font-size: 12px; }
-  .controls input[type=text] { padding: 5px 8px; border: 1px solid var(--rule); border-radius: 3px; font-size: 12px; min-width: 220px; }
+  .controls input[type=text] { padding: 5px 8px; border: 1px solid var(--rule); border-radius: 3px; font-size: 12px; min-width: 240px; }
   .controls .group { display: inline-flex; gap: 0; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
   .controls .group button { border: 0; padding: 5px 10px; background: #fff; color: var(--ink); font-size: 11px; cursor: pointer; border-right: 1px solid var(--rule); }
   .controls .group button:last-child { border-right: 0; }
@@ -23,33 +33,34 @@
   .controls label { display: inline-flex; gap: 4px; align-items: center; color: var(--ink-soft); }
   .controls .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin-right: 2px; }
 
-  .matrix-wrap { display: grid; grid-template-columns: 1fr 380px; gap: 14px; align-items: start; }
+  .matrix-wrap { display: grid; grid-template-columns: 1fr 400px; gap: 14px; align-items: start; }
   .matrix-wrap.full { grid-template-columns: 1fr; }
-  .matrix-table { background: #fff; border: 1px solid var(--rule); border-radius: 3px; max-height: calc(100vh - 220px); overflow: auto; }
+  .matrix-table { background: #fff; border: 1px solid var(--rule); border-radius: 3px; max-height: calc(100vh - 260px); overflow: auto; }
   .mt { width: 100%; border-collapse: collapse; font-size: 12px; }
   .mt thead th { position: sticky; top: 0; background: #f6f3e8; border-bottom: 2px solid var(--rule); padding: 8px 10px; font-family: var(--serif); font-weight: 500; text-align: left; z-index: 2; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.08em; font-size: 10px; }
   .mt tbody tr { border-bottom: 1px solid var(--rule-soft); cursor: pointer; transition: background 0.08s; }
   .mt tbody tr:hover { background: #fbf7ea; }
   .mt tbody tr.active { background: #f4efdf; }
-  .mt tbody tr.registered { }
   .mt tbody tr.no-parallel td.logion-cell { color: var(--ink-mute); }
   .mt td { padding: 6px 10px; vertical-align: top; }
-  .mt td.logion-cell { width: 240px; max-width: 240px; border-right: 1px solid var(--rule-soft); }
+  .mt td.logion-cell { width: 260px; max-width: 260px; border-right: 1px solid var(--rule-soft); }
   .mt td.logion-cell .num { font-family: var(--serif); font-size: 16px; color: var(--ink); line-height: 1.1; display: inline-block; min-width: 30px; }
   .mt td.logion-cell .motif { font-size: 11px; color: var(--ink-soft); margin-top: 2px; line-height: 1.3; }
   .mt td.logion-cell .motif.none { font-style: italic; color: var(--ink-mute); }
-  .mt td.logion-cell .burden-pill { display: inline-block; font-size: 9px; padding: 1px 6px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 4px; vertical-align: middle; }
-  .mt td.book-cell { width: 150px; border-right: 1px solid var(--rule-soft); font-family: var(--mono); font-size: 11px; line-height: 1.5; }
+  .mt td.logion-cell .chip-row { margin-top: 3px; display: flex; gap: 4px; flex-wrap: wrap; }
+  .mt td.book-cell { width: 140px; border-right: 1px solid var(--rule-soft); font-family: var(--mono); font-size: 11px; line-height: 1.5; }
   .mt td.book-cell.empty { color: var(--rule); text-align: center; }
-  .mt td.book-cell .ref-in-cell { display: inline-block; padding: 1px 5px; margin: 1px 2px 1px 0; background: #efe8d4; color: var(--matt); border-radius: 2px; font-size: 10px; }
-  .mt td.book-cell .edge-count { display: inline-block; font-size: 9px; color: var(--ink-mute); margin-left: 3px; }
 
+  .str-pill { display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.04em; vertical-align: middle; }
+  .str-pill.high { background: #f0d0c8; color: #8b2e2e; }
+  .str-pill.medium { background: #f3e2ce; color: #a8551a; }
+  .str-pill.none { background: var(--rule-soft); color: var(--ink-mute); }
+  .burden-pill { display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.04em; vertical-align: middle; }
   .burden-pill.high { background: #f0d0c8; color: #8b2e2e; }
   .burden-pill.moderate { background: #f3e2ce; color: #a8551a; }
   .burden-pill.low { background: #dbe8d5; color: #2a5a1a; }
   .burden-pill.na { background: var(--rule-soft); color: var(--ink-mute); }
 
-  /* Book columns get a subtle tint so the matrix reads left-to-right */
   .mt td.book-cell.matt { background: rgba(153, 122, 61, 0.04); }
   .mt td.book-cell.mark { background: rgba(78, 102, 88, 0.04); }
   .mt td.book-cell.luke { background: rgba(110, 74, 115, 0.04); }
@@ -57,46 +68,69 @@
 
   .detail-panel { position: sticky; top: 14px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px; max-height: calc(100vh - 40px); overflow-y: auto; }
   .detail-panel.empty { background: #fafaf7; color: var(--ink-mute); font-style: italic; padding: 30px; text-align: center; }
-  .detail-panel h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 17px; }
+  .detail-panel h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 17px; }
   .detail-panel .sub { font-size: 11px; color: var(--ink-mute); margin-bottom: 10px; }
-  .detail-panel .coptic-text { font-family: var(--greek); font-size: 16px; line-height: 1.65; background: #fbfaf6; border: 1px solid var(--rule-soft); padding: 10px 12px; border-radius: 3px; margin-bottom: 12px; }
+  .detail-panel .pill-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .detail-panel .coptic-text { font-family: var(--greek); font-size: 16px; line-height: 1.65; background: #fbfaf6; border: 1px solid var(--rule-soft); padding: 10px 12px; border-radius: 3px; margin-bottom: 8px; }
   .detail-panel .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin-top: 12px; margin-bottom: 4px; font-weight: 600; }
   .detail-panel .model-text { font-size: 13px; line-height: 1.5; color: var(--ink); }
-  .detail-panel .lemmas { font-size: 10px; color: var(--ink-mute); font-family: var(--mono); margin-top: 4px; line-height: 1.4; word-break: break-all; }
+  .detail-panel .lemmas { font-size: 10px; color: var(--ink-mute); font-family: var(--mono); margin-top: 4px; line-height: 1.4; word-break: break-word; }
   .detail-panel .ref-row { margin: 4px 0; font-size: 12px; }
   .detail-panel .ref-row .bk { display: inline-block; width: 46px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); }
+  .detail-panel ul.obs { margin: 4px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); }
+  .detail-panel ul.obs li { margin-bottom: 3px; }
+  .detail-panel .rel-tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 2px; background: #f4efdf; color: var(--ink-soft); }
+  .detail-panel .rel-tag.syn { background: #f0d0c8; color: #8b2e2e; }
+  .detail-panel .rel-tag.sayings { background: #f3e2ce; color: #a8551a; }
+  .detail-panel .rel-tag.overlap { background: #eee7c5; color: #7a5c1a; }
+  .detail-panel .rel-tag.nopar { background: #e5e3db; color: var(--ink-mute); }
+
+  .detail-panel .drill { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule-soft); font-size: 11px; }
+  .detail-panel .drill a { display: inline-block; margin: 2px 8px 2px 0; padding: 3px 8px; background: var(--ink); color: #fff; border-radius: 2px; text-decoration: none; font-size: 11px; }
+  .detail-panel .drill a:hover { background: var(--focus); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="page-head">
     <h1>Thomas × canonical matrix</h1>
-    <span class="sub">every Thomas logion against Matt / Mark / Luke / John</span>
+    <span class="sub">116 Coptic logia vs Matt / Mark / Luke / John · 46 curated parallels · logion-level dossiers</span>
   </header>
   <nav id="topnav" class="topnav"></nav>
 
   <div class="intro">
-    <p>All 116 Thomas units (Coptic Scriptorium parse of NHC II,2) plotted against the four canonical gospels. Cells are populated from the <b>curated Thomas parallel registry</b> (47 entries); rows without registered parallels are shown too, to make visible that most of Thomas has no canonical convergence recorded in this workbench.</p>
+    <p>All 116 Thomas units from NHC II,2 plotted against the four canonical gospels. The <b>logion-by-Gospel matrix</b> is the authoritative view in the 2026-04-18b supplement: dependence is assessed <em>per saying</em>, not as a corpus-level yes/no claim. Each row shows relation type, matrix strength, and direct-dependence burden. 46 of the 116 logia have a curated canonical parallel; the remaining 70 rows remain visible to show the corpus-level sparsity of Thomas's contact with the canon.</p>
+    <div class="note method">
+      <b>Methodological note (h18b method).</b> Thomas is treated logion-by-logion, not as a single corpus that either does or does not depend on the Synoptics. Automatic Coptic→Greek dependence scoring is not implemented, so the matrix is curated evidence augmented by lemma/motif signal — long exact Coptic-Greek runs do not exist by construction. Relation types separate <em>possible Synoptic influence</em> (4 logia) from <em>shared sayings tradition</em> (14) from <em>overlapping Jesus tradition of uncertain direction</em> (28).
+    </div>
     <div class="note">
-      <b>Why the scores are all zero in the automatic layer:</b> the Thomas parse is Coptic and the canonical parse is Greek. Cross-lingual surface-string retrieval is not meaningful, so every <code>thomas_to_canonical</code> edge is flagged <code>cross_lingual_no_auto_greek_score</code>. The canonical-ref links you see in the matrix are <em>curated semantic/sayings parallels</em> with an assessed direct-dependence burden, not lexical matches. For one logion at a time, use <a href="21_thomas_parallels.html">21 Thomas parallels</a>; for the cross-corpus view, stay here.
+      For single-logion reading alongside Greek canonical text, use <a href="21_thomas_parallels.html">21 Thomas parallels</a>. For the role of Thomas within the evidence network, use <a href="18_intertext_network.html">18 intertext network</a> and <a href="31_gospel_square.html">31 canonical Gospel square</a>.
     </div>
   </div>
 
   <div class="summary-bar" id="summaryBar"></div>
 
+  <div class="relation-bar" id="relationBar"></div>
+
   <div class="controls">
-    <input id="q" type="text" placeholder="Filter by motif, canonical ref, logion number…" />
+    <input id="q" type="text" placeholder="Filter by motif, canonical ref, logion number, best-first model…" />
     <span class="label">show</span>
     <div class="group" id="showGroup">
-      <button data-show="registered" class="on">registered (47)</button>
+      <button data-show="registered" class="on">registered (46)</button>
       <button data-show="all">all (116)</button>
     </div>
-    <span class="label">burden</span>
-    <div class="group" id="burdenGroup">
-      <button data-b="high" class="on">high</button>
-      <button data-b="moderate" class="on">moderate</button>
-      <button data-b="low" class="on">low</button>
-      <button data-b="na" class="on">other/na</button>
+    <span class="label">strength</span>
+    <div class="group" id="strengthGroup">
+      <button data-s="high" class="on">high</button>
+      <button data-s="medium" class="on">medium</button>
+      <button data-s="none" class="on">none</button>
+    </div>
+    <span class="label">relation</span>
+    <div class="group" id="relGroup">
+      <button data-r="possible_synoptic_influence_or_harmonization" class="on">syn-infl</button>
+      <button data-r="shared_sayings_or_parable_tradition" class="on">shared</button>
+      <button data-r="overlapping_jesus_tradition_uncertain_direction" class="on">overlap</button>
+      <button data-r="no_curated_canonical_parallel_in_prior_registry" class="on">nopar</button>
     </div>
     <span class="small" id="counter" style="color:var(--ink-mute);margin-left:auto;"></span>
   </div>
@@ -106,7 +140,7 @@
       <table class="mt">
         <thead>
           <tr>
-            <th>Logion &middot; motif</th>
+            <th>Logion &middot; motif &middot; strength/burden</th>
             <th>Matt</th>
             <th>Mark</th>
             <th>Luke</th>
@@ -116,13 +150,14 @@
         <tbody id="mtBody"></tbody>
       </table>
     </div>
-    <aside class="detail-panel empty" id="detail">Click any row to read the Coptic text and the direct-dependence assessment.</aside>
+    <aside class="detail-panel empty" id="detail">Click any row to read the Coptic text, the per-Gospel parallel set, the best-first transmission model, and the supporting / limiting observations from the curated dossier.</aside>
   </div>
 
   <div class="footer">
-    Data sources: <code>john_thomas_epistles_apocrypha_analysis/data/03_thomas_units.csv</code> (Coptic Scriptorium TEI parse, CC BY 4.0),
-    <code>data/09_thomas_parallel_registry.yaml</code> (curated),
-    <code>data/13_intertext_network_edges.csv</code> filtered to <code>layer = thomas_to_canonical</code>.
+    Data sources: <code>analysis_update_20260418b/data/50_thomas_gospel_logion_matrix.csv</code> (116 logia),
+    <code>51_thomas_logion_dossiers.yaml</code> (46 dossiers, Coptic Scriptorium CC&nbsp;BY 4.0 text),
+    <code>52_thomas_global_summary.yaml</code>.
+    Coptic-to-Greek automatic dependence scoring is not implemented; scores are curated at logion level.
   </div>
 </div>
 
@@ -132,177 +167,174 @@
 (function () {
   SH.buildNav('32_thomas_matrix.html');
   const el = SH.el;
-  const J = SH.BUNDLE.jtea;
-  const registry = J.thomas_registry || [];
-  const units = J.thomas_units || [];
-  const edges = (J.network_edges || []).filter(e => e.layer === 'thomas_to_canonical');
+  const B = SH.BUNDLE;
+  const H = B.h18b || {};
+  const T = H.thomas || {};
+  const matrix = T.matrix || [];
+  const dossiers = T.dossiers || [];
+  const summary = T.summary || {};
 
-  // ---- Index data by logion number --------------------------------------
-  // thomas_units.idx is numeric; we treat the string form as the logion key.
-  // thomas_registry.thomas_logion is a string — sometimes plain numbers,
-  // occasionally compound like "65-66". We canonicalize to the leading number
-  // for the primary row key and also remember any compound spans.
   const BOOKS = ['Matt', 'Mark', 'Luke', 'John'];
 
-  function parseLogionKey(s) {
-    const m = (s || '').match(/^(\d+)/);
-    return m ? m[1] : String(s || '').trim();
+  // Index dossiers by logion id for fast lookup.
+  const dossierById = {};
+  dossiers.forEach(d => { dossierById[String(d.thomas_logion)] = d; });
+
+  // Parse refs string from matrix CSV (semicolon-separated if multiple; a few
+  // cells use plain comma lists — handle both).
+  function parseRefs(s) {
+    if (!s) return [];
+    return String(s).split(/[;,]/).map(x => x.trim()).filter(Boolean);
   }
 
-  function refBook(r) {
-    const m = (r || '').match(/^([1-3]?[A-Za-z]+)\s+\d/);
-    return m ? m[1] : null;
+  function strengthClass(s) {
+    const v = (s || '').toLowerCase();
+    if (v === 'high') return 'high';
+    if (v === 'medium') return 'medium';
+    return 'none';
   }
 
-  // rows: one per unit (all 116), keyed by idx as the logion number.
-  const rowByLogion = {};
-  units.forEach(u => {
-    const k = String(u.idx);
-    rowByLogion[k] = {
-      logion: k,
-      idx: u.idx,
-      unit: u,
-      registryEntries: [],
-      refsByBook: { Matt: [], Mark: [], Luke: [], John: [] },
-      burden: null,
-    };
-  });
-
-  // Attach registry entries to their row(s). A registry entry with compound
-  // id ("65-66") attaches to both rows so users can find it from either.
-  registry.forEach(r => {
-    const rawId = String(r.thomas_logion || '').trim();
-    const ids = rawId.indexOf('-') >= 0
-      ? rawId.split('-').map(s => s.trim()).filter(Boolean)
-      : [rawId];
-    ids.forEach(id => {
-      const row = rowByLogion[id];
-      if (!row) return; // registry entry references an unknown logion
-      row.registryEntries.push(r);
-      (r.canonical_refs || []).forEach(ref => {
-        const bk = refBook(ref);
-        if (bk && row.refsByBook[bk]) row.refsByBook[bk].push({ ref, source: r });
-      });
-      if (!row.burden) row.burden = r.direct_dependence_burden || null;
-    });
-  });
-
-  // Also index network edges per (logion, book) for edge-count display.
-  const edgesByLogion = {};
-  edges.forEach(e => {
-    const src = e.source_ref || '';
-    const m = src.match(/^Thomas\s+(\d+)/);
-    if (!m) return;
-    const lg = m[1];
-    if (!edgesByLogion[lg]) edgesByLogion[lg] = { Matt: [], Mark: [], Luke: [], John: [] };
-    const bk = refBook(e.target_ref);
-    if (bk && edgesByLogion[lg][bk]) edgesByLogion[lg][bk].push(e);
-  });
-
-  function burdenClass(v) {
-    const s = String(v || '').toLowerCase();
-    if (s.indexOf('high') >= 0 && s.indexOf('low') < 0) return 'high';
-    if (s.indexOf('moderate') >= 0) return 'moderate';
-    if (s.indexOf('low') >= 0) return 'low';
+  function burdenClass(s) {
+    const v = (s || '').toLowerCase();
+    if (v.indexOf('high') >= 0) return 'high';
+    if (v.indexOf('moderate') >= 0 && v.indexOf('low') < 0) return 'moderate';
+    if (v.indexOf('low') >= 0) return 'low';
     return 'na';
   }
 
-  // ---- Summary counts ---------------------------------------------------
-  const summary = { total_logia: units.length, registered: 0, by_book: { Matt: 0, Mark: 0, Luke: 0, John: 0 } };
-  Object.values(rowByLogion).forEach(row => {
-    if (row.registryEntries.length) summary.registered++;
-    BOOKS.forEach(bk => { if (row.refsByBook[bk].length) summary.by_book[bk]++; });
-  });
+  function relClass(rel) {
+    if (!rel) return 'nopar';
+    if (rel.indexOf('synoptic_influence') >= 0) return 'syn';
+    if (rel.indexOf('sayings_or_parable') >= 0) return 'sayings';
+    if (rel.indexOf('overlapping') >= 0) return 'overlap';
+    return 'nopar';
+  }
+
+  function relLabel(rel) {
+    if (!rel) return '(no parallel)';
+    if (rel === 'possible_synoptic_influence_or_harmonization') return 'possible synoptic influence';
+    if (rel === 'shared_sayings_or_parable_tradition') return 'shared sayings tradition';
+    if (rel === 'overlapping_jesus_tradition_uncertain_direction') return 'overlapping tradition, direction unclear';
+    if (rel === 'no_curated_canonical_parallel_in_prior_registry') return 'no curated canonical parallel';
+    return rel.replace(/_/g, ' ');
+  }
+
+  // ---- Summary bar -----------------------------------------------------
   const sb = document.getElementById('summaryBar');
   [
-    [summary.total_logia, 'Coptic units parsed'],
-    [summary.registered, 'logia with curated parallel'],
-    [units.length - summary.registered, 'logia with no registered parallel'],
-    [summary.by_book.Matt, 'logia → Matt'],
-    [summary.by_book.Mark, 'logia → Mark'],
-    [summary.by_book.Luke, 'logia → Luke'],
-    [summary.by_book.John, 'logia → John'],
+    [summary.thomas_units_total || matrix.length, 'Coptic logia parsed'],
+    [summary.registered_parallel_logia || dossiers.length, 'logia with curated parallel'],
+    [(summary.thomas_units_total || matrix.length) - (summary.registered_parallel_logia || dossiers.length), 'logia with no parallel'],
+    [summary.matthew_parallel_logia, 'logia ↔ Matt'],
+    [summary.mark_parallel_logia, 'logia ↔ Mark'],
+    [summary.luke_parallel_logia, 'logia ↔ Luke'],
+    [summary.john_parallel_logia, 'logia ↔ John'],
   ].forEach(([n, l]) => {
-    sb.appendChild(el('div', { class: 's' }, el('div', { class: 'n' }, String(n)), el('div', { class: 'l' }, l)));
+    sb.appendChild(el('div', { class: 's' },
+      el('div', { class: 'n' }, String(n ?? '—')),
+      el('div', { class: 'l' }, l),
+    ));
   });
 
-  // ---- Controls / state -------------------------------------------------
+  // ---- Relation bar ----------------------------------------------------
+  const rb = document.getElementById('relationBar');
+  rb.appendChild(el('span', { class: 'rb-lbl' }, 'Relation types (all 116 logia):'));
+  const relCounts = summary.relation_type_counts || {};
+  const relOrder = [
+    ['possible_synoptic_influence_or_harmonization', 'possible synoptic influence', 'syn'],
+    ['shared_sayings_or_parable_tradition', 'shared sayings tradition', 'sayings'],
+    ['overlapping_jesus_tradition_uncertain_direction', 'overlapping tradition', 'overlap'],
+    ['no_curated_canonical_parallel_in_prior_registry', 'no curated parallel', 'nopar'],
+  ];
+  relOrder.forEach(([k, label, cls]) => {
+    const c = relCounts[k] ?? 0;
+    rb.appendChild(el('span', { class: 'rel-pill ' + cls },
+      el('span', { class: 'c' }, String(c)),
+      el('span', null, label),
+    ));
+  });
+
+  // ---- State -----------------------------------------------------------
+  const relKeys = relOrder.map(r => r[0]);
   let state = {
     q: '',
     show: 'registered',
-    burdenOn: { high: true, moderate: true, low: true, na: true },
+    strengthOn: { high: true, medium: true, none: true },
+    relOn: Object.fromEntries(relKeys.map(k => [k, true])),
     active: null,
   };
 
-  function allRows() {
-    const keys = Object.keys(rowByLogion).map(k => parseInt(k, 10)).sort((a, b) => a - b).map(String);
-    return keys.map(k => rowByLogion[k]);
-  }
-
   function filtered() {
     const q = state.q.toLowerCase();
-    return allRows().filter(row => {
-      const hasRegistry = row.registryEntries.length > 0;
-      if (state.show === 'registered' && !hasRegistry) return false;
-      if (hasRegistry) {
-        const bc = burdenClass(row.burden);
-        if (!state.burdenOn[bc]) return false;
-      } else {
-        // "no registered parallel" rows fall under the 'na' bucket
-        if (!state.burdenOn.na) return false;
-      }
+    return matrix.filter(row => {
+      const hasReg = row.registered_parallel_count > 0;
+      if (state.show === 'registered' && !hasReg) return false;
+      const sc = strengthClass(row.matrix_strength);
+      if (!state.strengthOn[sc]) return false;
+      const rel = row.relation_type || 'no_curated_canonical_parallel_in_prior_registry';
+      if (!state.relOn[rel]) return false;
       if (q) {
-        const motifs = row.registryEntries.map(r => r.motif || '').join(' ');
-        const refs = row.registryEntries.flatMap(r => r.canonical_refs || []).join(' ');
-        const copt = (row.unit && (row.unit.coptic_text || '')) || '';
-        const hay = (row.logion + ' ' + motifs + ' ' + refs + ' ' + copt).toLowerCase();
+        const hay = [
+          row.logion, row.motifs, row.matthew_refs, row.mark_refs, row.luke_refs, row.john_refs,
+          row.best_first_model, row.relation_type,
+        ].join(' ').toLowerCase();
         if (hay.indexOf(q) < 0) return false;
       }
       return true;
     });
   }
 
-  // ---- Render matrix rows -----------------------------------------------
+  // ---- Render matrix ---------------------------------------------------
   const bodyEl = document.getElementById('mtBody');
+  const counterEl = document.getElementById('counter');
 
   function renderMatrix() {
     while (bodyEl.firstChild) bodyEl.removeChild(bodyEl.firstChild);
     const rows = filtered();
     rows.forEach(row => {
-      const hasRegistry = row.registryEntries.length > 0;
-      const bc = burdenClass(row.burden);
+      const hasReg = row.registered_parallel_count > 0;
+      const sc = strengthClass(row.matrix_strength);
+      const bc = burdenClass(row.direct_dependence_burden_labels);
+      const rc = relClass(row.relation_type);
       const tr = el('tr', {
-        class: (hasRegistry ? 'registered' : 'no-parallel') + (state.active === row.logion ? ' active' : ''),
+        class: (hasReg ? 'registered' : 'no-parallel') + (state.active === row.logion ? ' active' : ''),
       });
-      tr.addEventListener('click', () => { state.active = row.logion; renderMatrix(); renderDetail(row); });
+      tr.addEventListener('click', () => {
+        state.active = row.logion;
+        renderMatrix();
+        renderDetail(row);
+      });
 
       // Logion cell
-      const motif = hasRegistry
-        ? (row.registryEntries.map(r => r.motif).filter(Boolean).join(' · ') || '(no motif)')
-        : '(no registered parallel)';
-      const motifCls = hasRegistry ? 'motif' : 'motif none';
+      const motif = row.motifs || (hasReg ? '(no motif)' : '(no registered parallel)');
+      const motifCls = hasReg ? 'motif' : 'motif none';
       const logCell = el('td', { class: 'logion-cell' },
         el('span', { class: 'num' }, row.logion),
-        hasRegistry ? el('span', { class: 'burden-pill ' + bc }, row.burden || 'n/a') : null,
+        el('span', { class: 'rel-tag ' + rc, style: 'margin-left:6px;font-size:9px;padding:1px 5px;' }, relLabel(row.relation_type).split(';')[0]),
         el('div', { class: motifCls }, motif),
+        el('div', { class: 'chip-row' },
+          el('span', { class: 'str-pill ' + sc }, 'str: ' + (row.matrix_strength || 'none')),
+          row.direct_dependence_burden_labels
+            ? el('span', { class: 'burden-pill ' + bc }, 'burden: ' + row.direct_dependence_burden_labels)
+            : null,
+        ),
       );
       tr.appendChild(logCell);
 
       // Book cells
       BOOKS.forEach(bk => {
-        const refs = row.refsByBook[bk];
-        const edgeList = (edgesByLogion[row.logion] && edgesByLogion[row.logion][bk]) || [];
+        const fieldKey = bk.toLowerCase() + '_refs';
+        // Matt → matthew_refs, Mark → mark_refs, Luke → luke_refs, John → john_refs
+        const key = bk === 'Matt' ? 'matthew_refs' : fieldKey;
+        const refs = parseRefs(row[key]);
         const cellCls = 'book-cell ' + bk.toLowerCase() + (refs.length ? '' : ' empty');
         const cell = el('td', { class: cellCls });
         if (refs.length) {
-          refs.forEach(r => {
-            const chip = SH.refChip(r.ref, { plain: true, fontSize: '10px', style: 'background:#efe8d4;color:var(--matt);padding:1px 5px;border-radius:2px;margin:1px 2px 1px 0;display:inline-block;' });
+          refs.forEach(ref => {
+            const chip = SH.refChip(ref, { plain: true, fontSize: '10px', style: 'background:#efe8d4;color:var(--matt);padding:1px 5px;border-radius:2px;margin:1px 2px 1px 0;display:inline-block;' });
             chip.addEventListener('click', ev => ev.stopPropagation());
             cell.appendChild(chip);
           });
-        } else if (edgeList.length) {
-          cell.appendChild(document.createTextNode('—'));
-          cell.appendChild(el('span', { class: 'edge-count' }, '(' + edgeList.length + ' edge' + (edgeList.length > 1 ? 's' : '') + ')'));
         } else {
           cell.appendChild(document.createTextNode('—'));
         }
@@ -311,58 +343,103 @@
 
       bodyEl.appendChild(tr);
     });
-    document.getElementById('counter').textContent = rows.length + ' rows shown · ' + summary.total_logia + ' total';
+    counterEl.textContent = rows.length + ' rows shown · ' + matrix.length + ' total';
   }
 
-  // ---- Detail panel -----------------------------------------------------
+  // ---- Detail panel ----------------------------------------------------
   function renderDetail(row) {
     const d = document.getElementById('detail');
     while (d.firstChild) d.removeChild(d.firstChild);
     d.classList.remove('empty');
 
-    d.appendChild(el('h3', null, 'Logion ' + row.logion));
-    const motifSummary = row.registryEntries.map(r => r.motif).filter(Boolean).join(' · ') || '(no registered canonical parallel)';
-    d.appendChild(el('div', { class: 'sub' }, motifSummary));
+    const dossier = dossierById[row.logion];
+    const sc = strengthClass(row.matrix_strength);
+    const bc = burdenClass(row.direct_dependence_burden_labels);
+    const rc = relClass(row.relation_type);
 
-    // Coptic text
-    if (row.unit && row.unit.coptic_text) {
+    d.appendChild(el('h3', null, 'Logion ' + row.logion));
+    d.appendChild(el('div', { class: 'sub' },
+      row.word_count + ' words · ' + row.lemma_count + ' lemmas' + (row.motifs ? ' · ' + row.motifs : '')));
+
+    // Relation + strength pill row
+    const pillRow = el('div', { class: 'pill-row' });
+    pillRow.appendChild(el('span', { class: 'rel-tag ' + rc }, relLabel(row.relation_type)));
+    pillRow.appendChild(el('span', { class: 'str-pill ' + sc }, 'strength: ' + (row.matrix_strength || 'none')));
+    if (row.direct_dependence_burden_labels) {
+      pillRow.appendChild(el('span', { class: 'burden-pill ' + bc }, 'burden: ' + row.direct_dependence_burden_labels));
+    }
+    d.appendChild(pillRow);
+
+    // Coptic text (from dossier if available)
+    if (dossier && dossier.coptic_text) {
       d.appendChild(el('div', { class: 'section-label' }, 'Coptic · Coptic Scriptorium'));
-      d.appendChild(el('div', { class: 'coptic-text' }, row.unit.coptic_text));
-      if (row.unit.lemmas) {
+      d.appendChild(el('div', { class: 'coptic-text' }, dossier.coptic_text));
+      if (dossier.coptic_lemmas) {
         d.appendChild(el('div', { class: 'section-label' }, 'Lemmas'));
-        d.appendChild(el('div', { class: 'lemmas' }, row.unit.lemmas));
+        d.appendChild(el('div', { class: 'lemmas' }, dossier.coptic_lemmas));
       }
     }
 
-    // Canonical parallels by book
-    if (row.registryEntries.length) {
+    // Canonical parallels by book (from matrix cells)
+    const anyRefs = BOOKS.some(bk => {
+      const key = bk === 'Matt' ? 'matthew_refs' : bk.toLowerCase() + '_refs';
+      return parseRefs(row[key]).length > 0;
+    });
+    if (anyRefs) {
       d.appendChild(el('div', { class: 'section-label' }, 'Canonical parallels (curated)'));
       BOOKS.forEach(bk => {
-        const refs = row.refsByBook[bk];
+        const key = bk === 'Matt' ? 'matthew_refs' : bk.toLowerCase() + '_refs';
+        const refs = parseRefs(row[key]);
         if (!refs.length) return;
         const rr = el('div', { class: 'ref-row' });
         rr.appendChild(el('span', { class: 'bk' }, bk));
         refs.forEach((r, i) => {
           if (i > 0) rr.appendChild(document.createTextNode(' · '));
-          rr.appendChild(SH.refChip(r.ref, { plain: true, fontSize: '12px' }));
+          rr.appendChild(SH.refChip(r, { plain: true, fontSize: '12px' }));
         });
         d.appendChild(rr);
       });
-
-      d.appendChild(el('div', { class: 'section-label' }, 'Direct-dependence burden'));
-      row.registryEntries.forEach((r, i) => {
-        if (i > 0) d.appendChild(el('hr', { style: 'border:0;border-top:1px solid var(--rule-soft);margin:6px 0;' }));
-        const bc = burdenClass(r.direct_dependence_burden);
-        d.appendChild(el('div', null, el('span', { class: 'burden-pill ' + bc }, r.direct_dependence_burden || 'n/a')));
-        if (r.best_first_model) {
-          d.appendChild(el('div', { class: 'section-label' }, 'Best-first transmission model'));
-          d.appendChild(el('div', { class: 'model-text' }, r.best_first_model));
-        }
-      });
-    } else {
-      d.appendChild(el('div', { class: 'section-label' }, 'No curated canonical parallel'));
-      d.appendChild(el('div', { class: 'model-text' }, 'This Coptic unit has no registered parallel in the Thomas parallel registry. Cross-lingual surface matching is not done; a logion that does not appear in the curated registry is simply not claimed as a canonical parallel here. It may still be a shared saying tradition — presence here is a function of which parallels the registry includes.'));
     }
+
+    // Best-first model
+    if (row.best_first_model && row.best_first_model !== 'not assessed') {
+      d.appendChild(el('div', { class: 'section-label' }, 'Best-first transmission model'));
+      d.appendChild(el('div', { class: 'model-text' }, row.best_first_model));
+    }
+
+    // Supporting & limiting observations (from dossier)
+    if (dossier && (dossier.supporting_observations || dossier.limiting_observations)) {
+      if ((dossier.supporting_observations || []).length) {
+        d.appendChild(el('div', { class: 'section-label' }, 'Supporting observations'));
+        const ul = el('ul', { class: 'obs' });
+        dossier.supporting_observations.forEach(o => ul.appendChild(el('li', null, o)));
+        d.appendChild(ul);
+      }
+      if ((dossier.limiting_observations || []).length) {
+        d.appendChild(el('div', { class: 'section-label' }, 'Limiting observations'));
+        const ul = el('ul', { class: 'obs' });
+        dossier.limiting_observations.forEach(o => ul.appendChild(el('li', null, o)));
+        d.appendChild(ul);
+      }
+    } else if (!dossier) {
+      d.appendChild(el('div', { class: 'section-label' }, 'No curated dossier'));
+      d.appendChild(el('div', { class: 'model-text' },
+        'This logion has no curated canonical parallel in the 18b dossier set. Cross-lingual (Coptic→Greek) automatic matching is not performed, so absence here is a function of the registry, not lexical distance. It may still be a shared saying tradition; it is simply not claimed as a canonical parallel at the logion level.'));
+    }
+
+    // Coptic-Greek caveat (always shown)
+    d.appendChild(el('div', { class: 'section-label' }, 'Automatic scoring caveat'));
+    d.appendChild(el('div', { class: 'model-text', style: 'font-size:12px;color:var(--ink-soft);' },
+      row.coptic_greek_caveat || 'Coptic Thomas is not automatically Greek-to-Greek scored; evidence is curated/logion-level.'));
+
+    // Drill links
+    const drill = el('div', { class: 'drill' });
+    drill.appendChild(el('span', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);margin-right:6px;' }, 'Drill into:'));
+    drill.appendChild(el('a', { href: 'assets/highlight.html?hi=' + encodeURIComponent('Thomas ' + row.logion) + '&target=21_thomas_parallels.html' }, 'Thomas parallels 21'));
+    drill.appendChild(el('a', { href: '18_intertext_network.html' }, 'network 18'));
+    drill.appendChild(el('a', { href: '31_gospel_square.html' }, 'gospel square 31'));
+    drill.appendChild(el('a', { href: '26_conclusions.html' }, 'conclusions 26'));
+    d.appendChild(drill);
   }
 
   // ---- Controls wiring --------------------------------------------------
@@ -375,10 +452,18 @@
       renderMatrix();
     });
   });
-  document.querySelectorAll('#burdenGroup button').forEach(b => {
+  document.querySelectorAll('#strengthGroup button').forEach(b => {
     b.addEventListener('click', () => {
-      const k = b.getAttribute('data-b');
-      state.burdenOn[k] = !state.burdenOn[k];
+      const k = b.getAttribute('data-s');
+      state.strengthOn[k] = !state.strengthOn[k];
+      b.classList.toggle('on');
+      renderMatrix();
+    });
+  });
+  document.querySelectorAll('#relGroup button').forEach(b => {
+    b.addEventListener('click', () => {
+      const k = b.getAttribute('data-r');
+      state.relOn[k] = !state.relOn[k];
       b.classList.toggle('on');
       renderMatrix();
     });
@@ -386,18 +471,18 @@
 
   renderMatrix();
 
-  // If arrived with ?hi=<ref> targeting a canonical ref or Thomas N, try to
-  // select the matching row.
+  // ?hi= routing: Thomas N selects row; canonical ref finds first logion citing it.
   const hi = SH.getHighlightRef && SH.getHighlightRef();
   if (hi) {
     const tm = hi.match(/^Thomas\s+(\d+)/i);
     if (tm) {
-      const row = rowByLogion[tm[1]];
+      const row = matrix.find(r => r.logion === tm[1]);
       if (row) { state.active = row.logion; renderMatrix(); renderDetail(row); }
     } else {
-      // Find first logion whose registry entries cite this ref
-      const hit = allRows().find(row =>
-        row.registryEntries.some(r => (r.canonical_refs || []).indexOf(hi) >= 0));
+      const hit = matrix.find(row => {
+        const all = [row.matthew_refs, row.mark_refs, row.luke_refs, row.john_refs].join(' ');
+        return all.indexOf(hi) >= 0;
+      });
       if (hit) { state.active = hit.logion; renderMatrix(); renderDetail(hit); }
     }
   }

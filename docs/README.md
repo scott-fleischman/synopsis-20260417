@@ -1,6 +1,6 @@
 # docs/ — deployment snapshot (GitHub Pages output directory)
 
-> *Snapshot of a site produced by **Claude Opus 4.7** (visualizations + build infrastructure) from data produced by **GPT-5.4 Pro** (the four analysis packages). Human role: prompting only. See the repo-level README for the full authorship breakdown.*
+> *Snapshot of a site produced by **Claude Opus 4.7** (visualizations + build infrastructure) from data produced by **GPT-5.4 Pro** (the five analysis packages + the 18b high-priority supplement). Human role: prompting only. See the repo-level README for the full authorship breakdown.*
 
 This directory is a committed build artifact: everything a static host needs to serve the visualizations, with no build step required. It is named `docs/` because GitHub Pages can serve a repo's `docs/` directory directly from the default branch — the name is structural, not documentary.
 
@@ -10,8 +10,8 @@ This directory is a committed build artifact: everything a static host needs to 
 
 ```
 docs/
-├── index.html              # research-question landing page (8 sections)
-├── 01_*.html … 33_*.html   # 33 visualization pages (incl. reader, conclusions, claim/evidence, gospel square, thomas matrix, epistle dossier)
+├── index.html              # priority-ranked landing page (18b 8-rank schedule)
+├── 01_*.html … 35_*.html   # 35 visualization pages — incl. reader, conclusions, claim/evidence, gospel square, thomas matrix, epistle dossier, Mark↔Luke direct (34), John pairwise (35)
 ├── assets/
 │   ├── shared.js           # DOM helpers, nav, dataset switcher
 │   └── style.css           # site stylesheet
@@ -20,7 +20,7 @@ docs/
     └── bundle.json         # same payload, fetch-friendly
 ```
 
-The 33 pages are grouped on the landing page into 8 research-question sections: Start here · Synoptic narrative · Q and double tradition · John and Synoptics · Thomas · Epistles and sayings · Apocrypha · Audit and reproducibility. See the repo-level README for the full per-page listing.
+The 35 pages are grouped on the landing page by the 18b **priority-of-interpretation** schedule: (1) Conclusions with evidence and contrary evidence · (2) Canonical Gospel relationship square · (3) Mark↔Luke direct alignment · (4) John↔Mark/Matthew/Luke pairwise anchors · (5) Matt↔Luke masked double tradition / Q-core · (6) Thomas × Gospel logion matrix · (7) Epistle → Gospel case dossiers · (8) Audit and sensitivity. See the repo-level README for the full per-page listing.
 
 No external runtime dependencies. All data is embedded in `data/bundle.js`.
 
@@ -56,7 +56,7 @@ The preprocess step is deterministic — re-running on unchanged data produces a
 
 So the repository, as a single frozen artifact, contains all three layers end-to-end:
 
-1. **Raw data** — the four analysis packages (`mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, `john_thomas_epistles_apocrypha_analysis/`).
+1. **Raw data** — the five analysis packages (`mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, `mark_luke_analysis/`, `john_thomas_epistles_apocrypha_analysis/`) plus the `analysis_update_20260418b/` high-priority supplement that adds direct Mark↔Luke, John pairwise, canonical Gospel relationship square, Thomas logion matrix, epistle case dossiers, and the conclusion → evidence → contrary-evidence navigation layer.
 2. **Code** — the visualization pages and the Python build script (`visualizations/`).
 3. **Output** — this directory (`docs/`).
 

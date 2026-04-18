@@ -96,6 +96,28 @@
   .falsify-band .label .icon { width: 14px; height: 14px; border-radius: 2px; background: #22506c; color: #fff; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
   .falsify-band ul { margin: 0; padding-left: 18px; color: var(--ink); font-size: 12px; line-height: 1.6; }
   .falsify-band li { margin: 3px 0; }
+
+  /* h18b claim navigation */
+  .nav-claim { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 14px 18px; margin-bottom: 12px; }
+  .nav-claim .nc-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .nav-claim .nc-head .num { font-family: var(--serif); font-size: 20px; color: var(--ink-mute); font-weight: 300; min-width: 24px; }
+  .nav-claim .nc-head h3 { font-family: var(--serif); font-size: 16px; margin: 0; flex: 1; color: var(--ink); font-weight: 500; }
+  .nav-claim .nc-claim { background: #faf6ec; border-left: 3px solid var(--accent); padding: 8px 12px; font-size: 13px; line-height: 1.55; font-style: italic; margin: 6px 0 10px; }
+  .nav-claim .nc-conf { font-size: 11px; color: var(--ink-soft); margin-bottom: 10px; font-family: var(--serif); }
+  .nav-claim .nc-conf b { font-family: var(--sans); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-right: 6px; }
+  .nav-claim .nc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+  .nav-claim .nc-col h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin: 0 0 5px; font-weight: 600; }
+  .nav-claim .nc-col.support h4 { color: #0f766e; }
+  .nav-claim .nc-col.contrary h4 { color: #8b2e2e; }
+  .nav-claim .nc-col ul { margin: 0; padding-left: 16px; font-size: 12px; line-height: 1.5; color: var(--ink-soft); }
+  .nav-claim .nc-col ul li { margin-bottom: 3px; }
+  .nav-claim .nc-change { margin-top: 10px; padding: 8px 12px; background: #eef1f7; border-left: 3px solid #22506c; font-size: 12px; line-height: 1.5; color: var(--ink); border-radius: 2px; }
+  .nav-claim .nc-change b { font-family: var(--sans); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: #22506c; display: block; margin-bottom: 2px; }
+  .nav-claim .nc-viz { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule-soft); display: flex; flex-wrap: wrap; gap: 5px; align-items: baseline; }
+  .nav-claim .nc-viz .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-right: 6px; font-weight: 600; }
+  .nav-claim .nc-viz a { display: inline-block; padding: 2px 8px; background: var(--ink); color: #fff; border-radius: 2px; text-decoration: none; font-size: 11px; }
+  .nav-claim .nc-viz a:hover { background: var(--focus); }
+  .nav-claim .nc-files { margin-top: 8px; font-size: 10px; color: var(--ink-mute); font-family: var(--mono); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -107,8 +129,8 @@
   <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
 
   <div class="intro">
-    <p>These are <b>author-authored</b> conclusions drawn from the four analysis packages. They are not pipeline output. Every claim cites a specific artifact, and every section links back into the visualizations where a reader can verify the evidence.</p>
-    <div class="warn">The underlying packages are deliberately neutral (retrieval scores, burden ledgers, no winners). This page is where the inference lives. A reader who wants the data without the inference should use the other 25 pages.</div>
+    <p>These are <b>author-authored</b> conclusions drawn from the five analysis packages (mm, ml, mld, jtea, and the 2026-04-18b high-priority supplement). They are not pipeline output. Every claim cites a specific artifact, and every section links back into the visualizations where a reader can verify the evidence.</p>
+    <div class="warn">The underlying packages are deliberately neutral (retrieval scores, burden ledgers, no winners). This page is where the inference lives. A reader who wants the data without the inference should use the other visualization pages.</div>
     <div class="conf-legend">
       <div class="item"><span class="conf-pill high">High</span> alternative explanations require materially heavier burdens</div>
       <div class="item"><span class="conf-pill mhigh">Medium-high</span> most economical reading, but sibling hypotheses remain live</div>
@@ -119,10 +141,16 @@
       <b>Signal origin.</b> Within each conclusion card:
       <span class="origin-tag curated">curated</span> marks the authorial claim, "why" paragraph, and confidence grade — they are <em>not</em> pipeline output.
       <span class="origin-tag auto">auto</span> marks the stat cards (counts and totals derived directly from the analysis packages).
-      <span class="origin-tag package">package</span> marks the raw-data dropdown ("Inspect the underlying data") — verbatim from <code>mm/ml/mld/jtea</code> YAML &amp; CSV.
+      <span class="origin-tag package">package</span> marks the raw-data dropdown ("Inspect the underlying data") — verbatim from <code>mm/ml/mld/jtea/h18b</code> YAML &amp; CSV.
       Verify-band links route to the visualizations where the evidence can be audited in place.
     </p>
   </div>
+
+  <section class="card" style="margin-top:8px;">
+    <h2>Claim navigation · h18b supplement</h2>
+    <p class="caption" style="margin-top:0;">Five organizing claims with structured <em>support</em> / <em>contrary</em> / <em>what would revise</em> fields from <code>analysis_update_20260418b/data/70_conclusion_evidence_contrary_navigation.yaml</code>. This is the rank-1 view in the 18b priority order: start with claims, not heatmaps.</p>
+    <div id="navClaims"></div>
+  </section>
 
   <section class="card" style="margin-top:8px;">
     <h2>Headline confidence table</h2>
@@ -165,6 +193,89 @@
   const el = SH.el;
   const B = SH.BUNDLE;
   const MM = B.mm, ML = B.ml, MLD = B.mld, J = B.jtea;
+  const H = B.h18b || {};
+
+  // ---- h18b nav-claims (rank-1 priority view) ------------------------------
+  const navClaims = H.conclusion_nav || [];
+  const claimTitle = {
+    markan_source_for_matthew_and_luke: 'Markan (or Mark-like) source for Matthew and Luke',
+    matthew_luke_double_tradition_not_simple_one_way: 'Matthew–Luke double tradition: not a simple one-way copy',
+    john_synoptics_shared_tradition_not_continuous_chain: 'John ↔ Synoptics: shared tradition, not a continuous chain',
+    thomas_logion_network: 'Thomas: logion-level sayings-network witness',
+    epistle_gospel_high_value_cases: 'Epistle ↔ Gospel: case-first, three-axis dossiers',
+  };
+  const vizMap = {
+    canonical_gospel_square: { href: '31_gospel_square.html', label: '31 Gospel square' },
+    mark_luke_direct: { href: '34_mark_luke.html', label: '34 Mark↔Luke' },
+    'Mark-Luke burden ledger': { href: '34_mark_luke.html#blocks', label: '34 Mark↔Luke blocks' },
+    'Mark-Matthew Synoptic map from prior package': { href: '01_synoptic_map.html#mm', label: '01 Synoptic map (mm)' },
+    'Q core from prior masked package': { href: '15_q_core.html#mld', label: '15 Q-core reader' },
+    'displacement/echo gallery from prior package': { href: '11_echo_gallery.html#ml', label: '11 Echo gallery' },
+    john_pairwise: { href: '35_john_pairwise.html', label: '35 John pairwise' },
+    'Greek reader overlays': { href: '30_reader.html', label: '30 Greek reader' },
+    thomas_logion_matrix: { href: '32_thomas_matrix.html', label: '32 Thomas matrix' },
+    'Thomas parallel dossiers': { href: '21_thomas_parallels.html', label: '21 Thomas parallels' },
+    epistle_case_dossiers: { href: '33_epistle_dossier.html', label: '33 Epistle dossier' },
+    'case-first targeted table': { href: '33_epistle_dossier.html', label: '33 targeted table' },
+    'ranked candidate list': { href: '33_epistle_dossier.html', label: '33 ranked candidates' },
+  };
+  const navClaimsContainer = document.getElementById('navClaims');
+  navClaims.forEach((cl, idx) => {
+    const card = el('div', { class: 'nav-claim' });
+    const head = el('div', { class: 'nc-head' });
+    head.appendChild(el('span', { class: 'num' }, String(idx + 1) + '.'));
+    head.appendChild(el('h3', null, claimTitle[cl.claim_id] || cl.claim_id.replace(/_/g, ' ')));
+    card.appendChild(head);
+    card.appendChild(el('div', { class: 'nc-claim' }, cl.claim || ''));
+    if (cl.confidence) {
+      card.appendChild(el('div', { class: 'nc-conf' },
+        el('b', null, 'confidence:'),
+        document.createTextNode(cl.confidence)));
+    }
+    const cols = el('div', { class: 'nc-cols' });
+    const sCol = el('div', { class: 'nc-col support' }, el('h4', null, 'Top supporting observations'));
+    const sUl = el('ul');
+    (cl.top_supporting_observations || []).forEach(o => sUl.appendChild(el('li', null, o)));
+    if (!(cl.top_supporting_observations || []).length) sUl.appendChild(el('li', { style: 'color:var(--ink-mute);font-style:italic;' }, 'None recorded.'));
+    sCol.appendChild(sUl);
+    const cCol = el('div', { class: 'nc-col contrary' }, el('h4', null, 'Contrary / limiting observations'));
+    const cUl = el('ul');
+    (cl.contrary_or_limiting_observations || []).forEach(o => cUl.appendChild(el('li', null, o)));
+    if (!(cl.contrary_or_limiting_observations || []).length) cUl.appendChild(el('li', { style: 'color:var(--ink-mute);font-style:italic;' }, 'None recorded.'));
+    cCol.appendChild(cUl);
+    cols.appendChild(sCol);
+    cols.appendChild(cCol);
+    card.appendChild(cols);
+
+    if (cl.what_would_change_the_conclusion) {
+      const wc = el('div', { class: 'nc-change' },
+        el('b', null, 'What would revise this conclusion'),
+        document.createTextNode(cl.what_would_change_the_conclusion));
+      card.appendChild(wc);
+    }
+
+    if ((cl.top_supporting_visualizations || []).length) {
+      const vz = el('div', { class: 'nc-viz' });
+      vz.appendChild(el('span', { class: 'lbl' }, 'Drill into:'));
+      (cl.top_supporting_visualizations || []).forEach(v => {
+        const m = vizMap[v];
+        if (m) vz.appendChild(el('a', { href: m.href }, m.label));
+        else vz.appendChild(el('span', { class: 'lbl', style: 'color:var(--ink-soft);font-family:var(--mono);text-transform:none;letter-spacing:0;' }, v));
+      });
+      card.appendChild(vz);
+    }
+
+    if ((cl.top_supporting_data_files || []).length || (cl.contrary_or_limiting_data || []).length) {
+      const files = el('div', { class: 'nc-files' });
+      const sup = (cl.top_supporting_data_files || []).slice(0, 4).join(' · ');
+      const con = (cl.contrary_or_limiting_data || []).slice(0, 3).join(' · ');
+      if (sup) files.appendChild(el('div', null, 'supports: ' + sup));
+      if (con) files.appendChild(el('div', null, 'contrary: ' + con));
+      card.appendChild(files);
+    }
+
+    navClaimsContainer.appendChild(card);
+  });
 
   // ---- helpers ----
   function pill(text, cls) { return el('span', {class: 'conf-pill ' + cls}, text); }
@@ -338,13 +449,14 @@
   // ---- confidence table ----
   const confRows = [
     ['Mark–Matthew', 'Matthew most likely used Mark or a Mark-like written text as a major narrative source.', 'High', 'high'],
+    ['Mark–Luke (18b direct)', 'Luke shows a Mark-like narrative backbone of 183 primary pairs after excluding Mark 16:9–20; Luke-prior burden is heavier than Mark-prior.', 'Medium-high', 'mhigh'],
     ['1 Timothy 5:18 / Luke 10:7', 'Strongest case for a Luke-like written Jesus saying known to 1 Timothy.', 'High', 'high'],
     ['Matthew–Luke double tradition', 'Better explained by common written/oral Jesus tradition than by simple one-way dependence.', 'Medium-high', 'mhigh'],
     ['James / Gospel sayings', 'Likely draws on Jesus tradition; direct Matthew/Luke use not demonstrated.', 'Medium-high', 'mhigh'],
     ['The Q question', 'Supports a shared sayings/tradition layer; does not prove one discrete Q document.', 'Medium', 'medium'],
-    ['John ↔ Synoptics', 'Substantial shared tradition; data does not justify a simple copy model.', 'Medium', 'medium'],
-    ['Thomas ↔ canonical', 'Sayings-network witness, not cleanly dependent on one canonical Gospel.', 'Medium', 'medium'],
-    ['1 Cor 11 / Luke 22 Lord\u2019s Supper', 'Shared liturgical formula; not direct Gospel dependence.', 'Cautionary', 'cautionary'],
+    ['John ↔ Synoptics (18b pairwise)', 'Anchor traditions shared with each Synoptic (~30 per pair ≥0.25); continuous copying chain is not supported by the global signal.', 'Medium', 'medium'],
+    ['Thomas ↔ canonical', 'Logion-network witness: 46/116 logia have curated canonical parallels; corpus-level dependence claim is weaker than logion-level dossiers.', 'Medium', 'medium'],
+    ['1 Cor 11 / Luke 22 Lord\u2019s Supper', 'Shared liturgical formula (high formula risk); not direct Gospel dependence.', 'Cautionary', 'cautionary'],
     ['1 John 3:13 / John 15:18–19', 'Shared Johannine school/idiolect; not one-verse proof of direction.', 'Medium', 'medium'],
     ['Other apocrypha beyond Thomas', 'Inventory only; not enough data yet for firm conclusions.', 'Low', 'low'],
   ];

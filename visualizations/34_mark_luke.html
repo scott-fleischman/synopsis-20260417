@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mark ↔ Luke direct · the missing Synoptic control</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1060px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 14px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .headline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 10px 0 24px; }
+  .hg-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 12px 14px; }
+  .hg-card .n { font-family: var(--serif); font-size: 22px; color: var(--ink); line-height: 1.05; }
+  .hg-card .l { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-top: 3px; }
+  .hg-card .x { font-size: 11px; color: var(--ink-soft); margin-top: 4px; line-height: 1.4; }
+
+  .burden-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 10px 0 0; }
+  .bd-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .bd-card.mark { border-left: 4px solid var(--mark); }
+  .bd-card.luke { border-left: 4px solid var(--matt); }
+  .bd-card.shared { border-left: 4px solid var(--focus); }
+  .bd-card .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; }
+  .bd-card .num { font-family: var(--serif); font-size: 28px; color: var(--ink); line-height: 1.05; }
+  .bd-card .label { font-size: 13px; color: var(--ink-soft); line-height: 1.45; }
+  .bd-card .scale { height: 8px; background: #fafaf7; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+  .bd-card .scale .fill { height: 100%; }
+  .bd-card.mark .scale .fill { background: var(--mark); }
+  .bd-card.luke .scale .fill { background: var(--matt); }
+  .bd-card.shared .scale .fill { background: var(--focus); }
+
+  .ending-banner { border: 1px solid var(--rule); border-left: 4px solid var(--warn); border-radius: 3px; background: #fdf6ea; padding: 14px 18px; margin: 18px 0; }
+  .ending-banner h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 15px; }
+  .ending-banner p { margin: 0 0 8px; font-size: 13px; line-height: 1.55; color: var(--ink-soft); }
+  .ending-banner .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+  .ending-banner .row .col { font-size: 12px; line-height: 1.5; color: var(--ink-soft); background: #fff; padding: 8px 12px; border: 1px solid var(--rule-soft); border-radius: 2px; }
+  .ending-banner .row .col b { color: var(--ink); font-size: 13px; font-family: var(--serif); }
+  .ending-banner .row .col .r { display: block; font-size: 11px; color: var(--ink-mute); margin-top: 3px; }
+
+  .block-wrap { display: flex; gap: 16px; margin-top: 12px; min-height: 600px; }
+  .block-list { flex: 0 0 340px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; overflow: auto; max-height: 720px; }
+  .block-list .filter { padding: 8px 10px; border-bottom: 1px solid var(--rule-soft); background: #fafaf7; display: flex; gap: 6px; align-items: center; font-size: 11px; }
+  .block-list .filter input { flex: 1; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 2px; font-size: 12px; }
+  .block-list .filter select { font-size: 11px; border: 1px solid var(--rule); border-radius: 2px; padding: 4px 6px; background: #fff; }
+  .block-list .b-row { display: grid; grid-template-columns: 60px 1fr auto; gap: 8px; padding: 8px 10px; border-bottom: 1px solid var(--rule-soft); cursor: pointer; font-size: 12px; align-items: baseline; }
+  .block-list .b-row:hover { background: #fbf7ea; }
+  .block-list .b-row.active { background: #fdf6ea; box-shadow: inset 3px 0 0 var(--accent); }
+  .block-list .b-row .bid { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); }
+  .block-list .b-row .span { font-family: var(--serif); color: var(--ink); font-size: 12px; line-height: 1.35; }
+  .block-list .b-row .score { font-family: var(--serif); font-size: 12px; color: var(--ink-soft); text-align: right; font-variant-numeric: tabular-nums; }
+
+  .block-detail { flex: 1; border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 16px 20px; }
+  .block-detail.empty { color: var(--ink-mute); font-style: italic; text-align: center; padding: 80px 20px; }
+  .block-detail h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 16px; }
+  .block-detail .span-line { font-size: 12px; color: var(--ink-mute); margin-bottom: 10px; }
+  .block-detail .feat-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 6px 0 12px; }
+  .block-detail .feat-row .f { font-size: 10px; padding: 2px 7px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 11px; color: var(--ink-soft); }
+  .block-detail .hyp-tri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  .block-detail .hyp-tri .h { padding: 10px 12px; border-radius: 3px; font-size: 12px; line-height: 1.45; }
+  .block-detail .hyp-tri .h.mark { background: #f9efe6; border-left: 3px solid var(--mark); }
+  .block-detail .hyp-tri .h.luke { background: #ecf1f5; border-left: 3px solid var(--matt); }
+  .block-detail .hyp-tri .h.shared { background: #eef5ec; border-left: 3px solid #4a6b3a; }
+  .block-detail .hyp-tri .h .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .block-detail .hyp-tri .h .n { font-family: var(--serif); font-size: 20px; color: var(--ink); line-height: 1.1; }
+  .block-detail .hyp-tri .h .bl { font-size: 10px; color: var(--ink-mute); margin-bottom: 4px; }
+  .block-detail .hyp-tri .h ul { margin: 4px 0 0; padding-left: 16px; font-size: 11px; color: var(--ink-soft); }
+  .block-detail .hyp-tri .h li { margin-bottom: 2px; line-height: 1.35; }
+  .block-detail .pairs { border: 1px solid var(--rule-soft); border-radius: 3px; margin-top: 10px; overflow: hidden; }
+  .block-detail .pairs .hd { display: grid; grid-template-columns: 1fr 1fr 60px 70px; gap: 10px; padding: 6px 10px; background: #fafaf7; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule-soft); }
+  .block-detail .pairs .pair-row { display: grid; grid-template-columns: 1fr 1fr 60px 70px; gap: 10px; padding: 7px 10px; border-bottom: 1px solid var(--rule-soft); font-size: 12px; align-items: center; }
+  .block-detail .pairs .pair-row:last-child { border-bottom: 0; }
+  .block-detail .pairs .pair-row .score { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .block-detail .pairs .pair-row .run { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: right; }
+
+  .pair-table-wrap { overflow: auto; max-height: 540px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; }
+  .pair-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .pair-table thead th { position: sticky; top: 0; background: #fafaf7; padding: 6px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule); text-align: left; cursor: pointer; white-space: nowrap; user-select: none; }
+  .pair-table thead th .sort-arrow { display: inline-block; margin-left: 3px; font-size: 9px; color: var(--ink-mute); opacity: 0.5; }
+  .pair-table thead th.sorted .sort-arrow { opacity: 1; color: var(--ink); }
+  .pair-table tbody td { padding: 5px 10px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .pair-table tbody tr:hover { background: #fbf7ea; }
+  .pair-table tbody td.n { font-variant-numeric: tabular-nums; text-align: right; color: var(--ink-soft); }
+  .pair-table tbody td.r { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+  .pair-table tbody tr.flagged { background: #fdf6ea; }
+  .pair-table tbody tr.flagged:hover { background: #fbf7ea; }
+
+  .echoes-wrap { margin-top: 12px; }
+  .echo-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--rule-soft); background: #fff; font-size: 12px; align-items: baseline; }
+  .echo-row:hover { background: #fbf7ea; }
+  .echo-row .run { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); text-align: right; white-space: nowrap; }
+  .echo-row .gr { font-family: var(--greek); font-size: 13px; color: var(--ink); margin-top: 3px; grid-column: 1 / -1; padding-left: 4px; }
+
+  .sens-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
+  .sens-table th, .sens-table td { padding: 5px 8px; border-bottom: 1px solid var(--rule-soft); text-align: right; font-variant-numeric: tabular-nums; }
+  .sens-table thead th { background: #fafaf7; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; }
+  .sens-table tbody tr.default { background: #fdf6ea; font-weight: 600; }
+  .sens-table td.lead { text-align: left; color: var(--ink); font-family: var(--serif); }
+
+  .tabbar { display: flex; gap: 2px; margin-top: 14px; border-bottom: 1px solid var(--rule); }
+  .tabbar .tab { padding: 8px 14px; border: 1px solid var(--rule); border-bottom: 0; background: #fafaf7; cursor: pointer; font-size: 12px; color: var(--ink-soft); border-radius: 3px 3px 0 0; margin-bottom: -1px; }
+  .tabbar .tab.active { background: #fff; color: var(--ink); border-bottom: 1px solid #fff; font-weight: 600; }
+  .tabpane { border: 1px solid var(--rule); border-top: 0; background: #fff; padding: 14px 18px; border-radius: 0 0 3px 3px; }
+
+  .drill-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
+  .drill-links a { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .drill-links a:hover { border-color: var(--accent); background: #fbf7ea; color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Mark ↔ Luke direct</h1>
+    <span class="sub" id="sub"></span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>The missing Synoptic control. If Mark is Matthew's narrative source, the same test has to work for Luke, or the Markan-priority claim is only half-supported. This dataset supplies it. The pipeline is the <em>same</em> as Mark↔Matthew — full verse-matrix, dynamic-programming chain, loose/tight block segmentation, direction-burden ledger, threshold sensitivity — but with one text-critical default: Mark 16:9–20 is excluded from the primary chain by default and retained as a sensitivity condition. That choice matters because including the long ending adds exactly one chain pair, which would otherwise become evidence for a textual artifact.</p>
+    <div class="note"><b>What this page answers.</b> Does Luke's relationship to Mark look like Matthew's? <em>Partly.</em> Luke has <b>183 primary-chain pairs</b> versus Matthew's 385 — still a monotonic backbone, but narrower. The three-way burden ledger shows <b>Mark-prior</b> (254.6) lighter than <b>Luke-prior</b> (303.2), but neither is crushing — and a <b>shared-tradition</b> model (164.1) is genuinely cheaper than either single-direction hypothesis. Read that as: Luke plausibly uses Mark or Mark-like material for the common backbone, but Lukan expansions (travel narrative, infancy, resurrection) sit outside Markan sequence and leave real headroom for additional sources.</div>
+  </div>
+
+  <section class="card">
+    <h2>Direct counts</h2>
+    <div class="caption" style="margin:0 0 10px;">Six numbers that frame the entire Mark↔Luke relationship. All computed from the full 773,277-row verse matrix after excluding Mark 16:9–20 by default.</div>
+    <div class="headline-grid" id="headlineGrid"></div>
+  </section>
+
+  <section class="card">
+    <h2>Three-way direction burden</h2>
+    <div class="caption" style="margin:0 0 10px;">Mark↔Luke does not collapse neatly onto two hypotheses — a shared-tradition model is a live third option. The bars show the total operational strain each hypothesis must explain, summed across all 35 loose blocks. Lower is cheaper. A single lowest does not decide the direction; the asymmetry and the <em>shape</em> of the burden across blocks does.</div>
+    <div class="burden-cards" id="burdenCards"></div>
+  </section>
+
+  <div class="ending-banner" id="endingBanner"></div>
+
+  <section class="card">
+    <h2>Block-by-block direction ledger</h2>
+    <div class="caption" style="margin:0 0 10px;">35 loose blocks. Each one is a stretch of Mark-Luke verses where the chain produces at least one local agreement. For every block the ledger tallies what each direction-hypothesis would have to explain: Luke-gap verses (Mark→Luke expansions), Mark-gap verses (Lukan omissions under Mark-prior), close local agreements under shared tradition. Select a block on the left to see its three-way fingerprint.</div>
+    <div class="block-wrap">
+      <div class="block-list">
+        <div class="filter">
+          <input id="blockFilter" placeholder="Filter blocks (e.g. 'Mark 1', 'passion')…" />
+          <select id="blockSort">
+            <option value="id">Order</option>
+            <option value="score">Score</option>
+            <option value="pairs">Pairs</option>
+            <option value="burden">Strain</option>
+          </select>
+        </div>
+        <div id="blockRows"></div>
+      </div>
+      <div id="blockDetail" class="block-detail empty">Select a block on the left.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Primary chain pair explorer</h2>
+    <div class="caption" style="margin:0 0 10px;">183 Mark↔Luke pairs that form the monotonic backbone. Click any column header to sort. <em>Score</em> is the project's weighted-Jaccard + exact-run composite; <em>run</em> is the longest exact content-token sequence both verses share; <em>LCS</em> is the longest common content-token subsequence as a fraction of the shorter verse. Rows with Mark 16:9–20 are flagged but excluded from the default chain.</div>
+    <div class="pair-table-wrap">
+      <table class="pair-table" id="pairTable"></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Secondary echoes</h2>
+    <div class="caption" style="margin:0 0 10px;">140 non-chain verse pairs with score ≥ 0.22. These are local near-matches the chain declined to bind (usually because a better match exists elsewhere for one side). Treat them as displaced or reused material, not as chain evidence. The strongest — <em>Mark 1:2 ~ Luke 7:27</em> ("Behold I send my messenger") — sits far off the backbone because Luke places the quotation in the John-the-Baptist discourse rather than the prologue.</div>
+    <div class="echoes-wrap" id="echoesWrap"></div>
+  </section>
+
+  <section class="card">
+    <h2>Threshold &amp; gap-allowance sensitivity</h2>
+    <div class="caption" style="margin:0 0 10px;">Does the 183-pair backbone depend on threshold choices? The grid sweeps primary-chain threshold ∈ {0.15, 0.18, 0.20, 0.22, 0.25, 0.30} × gap-allowance triples {(2,4), (4,6), (6,8)}. The default row (threshold 0.18, gap 4/6) is highlighted. Pairs drop from 210 down to 117 as threshold rises; block count stays in a 28–59 band.</div>
+    <div class="scrollx">
+      <table class="sens-table" id="sensTable"></table>
+    </div>
+  </section>
+
+  <div class="drill-links">
+    <a href="31_gospel_square.html">← 31 Gospel Square (Mark↔Luke cell)</a>
+    <a href="26_conclusions.html">26 Conclusions</a>
+    <a href="01_synoptic_map.html#mm">01 Synoptic map · compare to Mark↔Matthew</a>
+    <a href="27_mm_sensitivity.html#mm">27 Sensitivity · Mark↔Matthew</a>
+    <a href="30_reader.html">30 Reader</a>
+  </div>
+
+  <div class="footer">
+    Source data · <code>analysis_update_20260418b/data/11_mark_luke_primary_chain_pairs.csv</code> · <code>12_mark_luke_loose_blocks.yaml</code> · <code>15_mark_luke_secondary_echoes.yaml</code> · <code>17_mark_luke_direction_ledger_by_loose_block.yaml</code> · <code>18_mark_luke_burden_totals.yaml</code> · <code>19_mark_luke_global_summary.yaml</code> · <code>20_mark_luke_sensitivity_score_grid.csv</code> · <code>21_mark_luke_mark_ending_sensitivity.yaml</code>. Full verse-matrix (773,277 rows) regenerable from the package's <code>scripts/build_high_priority_supplement.py</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('34_mark_luke.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const MKL = (B.h18b && B.h18b.mkl) || {};
+  const summary = MKL.summary || {};
+  const burden = MKL.burden_totals || {};
+  const pairs = MKL.pairs || [];
+  const looseBlocks = MKL.loose_blocks || [];
+  const ledger = MKL.direction_ledger || [];
+  const echoes = MKL.echoes || [];
+  const grid = MKL.sensitivity_grid || [];
+  const ending = MKL.mark_ending_sensitivity || {};
+
+  document.getElementById('sub').textContent =
+    (MKL.label || 'Mark ↔ Luke (direct)') + ' — ' + (pairs.length || summary.primary_chain_pairs || 183) + ' primary pairs · ' +
+    (summary.loose_blocks || 35) + ' loose blocks · text-critical default: exclude Mark 16:9–20';
+
+  // ---- Headline grid ----
+  const headlineGrid = document.getElementById('headlineGrid');
+  const headlineCards = [
+    [String(summary.primary_chain_pairs != null ? summary.primary_chain_pairs : pairs.length), 'primary chain pairs',
+      'monotonic Mark→Luke backbone at threshold ' + (summary.primary_chain_threshold || 0.18)],
+    [String(summary.loose_blocks != null ? summary.loose_blocks : 35), 'loose blocks', 'coarse segmentation'],
+    [String(summary.tight_blocks != null ? summary.tight_blocks : 76), 'tight blocks', 'fine segmentation'],
+    [String(summary.secondary_echoes_score_ge_0_22 != null ? summary.secondary_echoes_score_ge_0_22 : echoes.length),
+      'secondary echoes', 'score ≥ 0.22, outside chain'],
+    [((summary.primary_chain_mean_score != null ? summary.primary_chain_mean_score : 0.4042).toFixed(3)),
+      'mean chain score', 'sum ' + ((summary.primary_chain_score_sum != null ? summary.primary_chain_score_sum : 73.96).toFixed(2))],
+    [String(summary.gap_intervals != null ? summary.gap_intervals : 113), 'gap intervals', 'between-block Luke/Mark runs'],
+  ];
+  for (const [n, l, x] of headlineCards) {
+    headlineGrid.appendChild(el('div', { class: 'hg-card' },
+      el('div', { class: 'n' }, n),
+      el('div', { class: 'l' }, l),
+      el('div', { class: 'x' }, x)));
+  }
+
+  // ---- Burden cards ----
+  const burdenCards = document.getElementById('burdenCards');
+  const bMark = burden.Mark_prior_Luke_uses_Mark_or_Mark_like_source != null
+    ? burden.Mark_prior_Luke_uses_Mark_or_Mark_like_source
+    : (summary.burden_totals && summary.burden_totals.Mark_prior_Luke_uses_Mark_or_Mark_like_source) || 254.6466;
+  const bLuke = burden.Luke_prior_Mark_uses_Luke_or_Luke_like_source != null
+    ? burden.Luke_prior_Mark_uses_Luke_or_Luke_like_source
+    : (summary.burden_totals && summary.burden_totals.Luke_prior_Mark_uses_Luke_or_Luke_like_source) || 303.1966;
+  const bShared = burden.shared_narrative_or_oral_tradition_without_direct_use != null
+    ? burden.shared_narrative_or_oral_tradition_without_direct_use
+    : (summary.burden_totals && summary.burden_totals.shared_narrative_or_oral_tradition_without_direct_use) || 164.1468;
+  const bMax = Math.max(bMark, bLuke, bShared);
+  const bdData = [
+    { key: 'mark', num: bMark, label: 'Mark prior · Luke uses Mark or Mark-like source', kicker: 'cheapest direction',
+      desc: 'Luke accounts for expansions, reorderings, and Q-like non-Markan material.' },
+    { key: 'luke', num: bLuke, label: 'Luke prior · Mark uses Luke or Luke-like source', kicker: 'heaviest direction',
+      desc: 'Mark would have to omit or compress substantial Lukan discourse and narrative.' },
+    { key: 'shared', num: bShared, label: 'Shared narrative or oral tradition · no direct use', kicker: 'lightest overall',
+      desc: 'Both Gospels draw on a common narrative stream; local exact agreements are the residue.' },
+  ];
+  for (const b of bdData) {
+    const pct = (b.num / bMax) * 100;
+    const card = el('div', { class: 'bd-card ' + b.key });
+    card.appendChild(el('div', { class: 'kicker' }, b.kicker));
+    card.appendChild(el('div', { class: 'num' }, b.num.toFixed(2)));
+    card.appendChild(el('div', { class: 'label' }, b.label));
+    const scale = el('div', { class: 'scale' });
+    scale.appendChild(el('div', { class: 'fill', style: 'width:' + pct.toFixed(1) + '%' }));
+    card.appendChild(scale);
+    card.appendChild(el('div', { class: 'x', style: 'font-size:11px;color:var(--ink-mute);line-height:1.45;margin-top:4px;' }, b.desc));
+    burdenCards.appendChild(card);
+  }
+
+  // ---- Mark 16:9-20 ending banner ----
+  const eb = document.getElementById('endingBanner');
+  eb.appendChild(el('h3', null, 'Mark 16:9–20 · text-critical sensitivity'));
+  eb.appendChild(el('p', null, ending.interpretive_note || ending.default_policy || 'Default excludes Mark 16:9–20 from the primary chain; inclusion is reported as a sensitivity condition.'));
+  const endingRow = el('div', { class: 'row' });
+  const exc = (ending.exclude_mark_16_9_20 || {});
+  const inc = (ending.include_mark_16_9_20 || {});
+  const excLast = exc.last_primary_pair || {};
+  const incLast = inc.last_primary_pair || {};
+  const excCol = el('div', { class: 'col' });
+  excCol.appendChild(el('b', null, 'Default · exclude 16:9–20'));
+  excCol.appendChild(document.createTextNode(' '));
+  excCol.appendChild(document.createTextNode((exc.primary_chain_pair_count != null ? exc.primary_chain_pair_count : 183) + ' pairs · ' + (exc.source_verse_count != null ? exc.source_verse_count : 661) + ' Mark verses · score sum ' + ((exc.chain_score_sum != null ? exc.chain_score_sum : 73.96).toFixed(2))));
+  const excLastRef = el('span', { class: 'r' });
+  excLastRef.appendChild(document.createTextNode('chain ends at '));
+  excLastRef.appendChild(SH.refChip(excLast.source_ref || 'Mark 15:43', { fontSize: '11px' }));
+  excLastRef.appendChild(document.createTextNode(' ↔ '));
+  excLastRef.appendChild(SH.refChip(excLast.target_ref || 'Luke 23:52', { fontSize: '11px' }));
+  excCol.appendChild(excLastRef);
+  const incCol = el('div', { class: 'col' });
+  incCol.appendChild(el('b', null, 'Sensitivity · include 16:9–20'));
+  incCol.appendChild(document.createTextNode(' '));
+  incCol.appendChild(document.createTextNode((inc.primary_chain_pair_count != null ? inc.primary_chain_pair_count : 184) + ' pairs (Δ +' + (inc.long_ending_pairs_in_chain != null ? inc.long_ending_pairs_in_chain : 1) + ') · ' + (inc.source_verse_count != null ? inc.source_verse_count : 673) + ' Mark verses · score sum ' + ((inc.chain_score_sum != null ? inc.chain_score_sum : 74.17).toFixed(2))));
+  const incLastRef = el('span', { class: 'r' });
+  incLastRef.appendChild(document.createTextNode('chain ends at '));
+  incLastRef.appendChild(SH.refChip(incLast.source_ref || 'Mark 16:13', { fontSize: '11px' }));
+  incLastRef.appendChild(document.createTextNode(' ↔ '));
+  incLastRef.appendChild(SH.refChip(incLast.target_ref || 'Luke 24:9', { fontSize: '11px' }));
+  incCol.appendChild(incLastRef);
+  endingRow.appendChild(excCol);
+  endingRow.appendChild(incCol);
+  eb.appendChild(endingRow);
+
+  // ---- Block list + detail ----
+  // Cross-reference: the loose_blocks carry the span + pair data; ledger carries the hypothesis
+  // burdens keyed by block_id. Join them for the detail panel.
+  const ledgerById = {};
+  for (const lg of ledger) ledgerById[lg.block_id] = lg;
+
+  const blockRows = document.getElementById('blockRows');
+  const blockDetail = document.getElementById('blockDetail');
+  let activeBlock = null;
+
+  function blockSummaryScore(b) {
+    // A proxy for "how much evidence is in this block": mean score × pair count.
+    return (b.mean_score || 0) * (b.pair_count || 0);
+  }
+  function blockMinBurden(b) {
+    const lg = ledgerById[b.block_id];
+    if (!lg || !lg.hypotheses) return 0;
+    const vals = Object.keys(lg.hypotheses).map(k => lg.hypotheses[k].burden_score || 0);
+    return Math.min.apply(null, vals);
+  }
+
+  function renderBlockList(blocks) {
+    while (blockRows.firstChild) blockRows.removeChild(blockRows.firstChild);
+    for (const b of blocks) {
+      const r = el('div', { class: 'b-row', 'data-bid': b.block_id });
+      r.appendChild(el('div', { class: 'bid' }, b.block_id.replace('loose_', 'L')));
+      const span = el('div', { class: 'span' });
+      span.appendChild(document.createTextNode(b.source_start_ref + '–' + (b.source_end_ref === b.source_start_ref ? b.source_end_ref.split(' ').pop() : b.source_end_ref.replace(/^[^\s]+\s/, ''))));
+      span.appendChild(el('div', { style: 'font-size:10px;color:var(--ink-mute);margin-top:2px;' }, b.target_start_ref + '–' + (b.target_end_ref === b.target_start_ref ? b.target_end_ref.split(' ').pop() : b.target_end_ref.replace(/^[^\s]+\s/, ''))));
+      r.appendChild(span);
+      r.appendChild(el('div', { class: 'score' }, (b.mean_score || 0).toFixed(3) + '\n' + (b.pair_count || 0) + 'p'));
+      r.addEventListener('click', () => selectBlock(b.block_id));
+      if (b.block_id === activeBlock) r.classList.add('active');
+      blockRows.appendChild(r);
+    }
+  }
+
+  function selectBlock(bid) {
+    activeBlock = bid;
+    blockRows.querySelectorAll('.b-row.active').forEach(n => n.classList.remove('active'));
+    const row = blockRows.querySelector('[data-bid="' + bid + '"]');
+    if (row) row.classList.add('active');
+    const b = looseBlocks.find(x => x.block_id === bid);
+    const lg = ledgerById[bid];
+    if (!b) return;
+    while (blockDetail.firstChild) blockDetail.removeChild(blockDetail.firstChild);
+    blockDetail.classList.remove('empty');
+    blockDetail.appendChild(el('h3', null, bid.replace('loose_', 'Block ')));
+    const spanLine = el('div', { class: 'span-line' });
+    spanLine.appendChild(SH.refChip(b.source_start_ref, { fontSize: '11px', plain: true }));
+    spanLine.appendChild(document.createTextNode(' – '));
+    spanLine.appendChild(SH.refChip(b.source_end_ref, { fontSize: '11px', plain: true }));
+    spanLine.appendChild(document.createTextNode('  ·  '));
+    spanLine.appendChild(SH.refChip(b.target_start_ref, { fontSize: '11px', plain: true }));
+    spanLine.appendChild(document.createTextNode(' – '));
+    spanLine.appendChild(SH.refChip(b.target_end_ref, { fontSize: '11px', plain: true }));
+    blockDetail.appendChild(spanLine);
+    // Feature chips
+    const feats = el('div', { class: 'feat-row' });
+    feats.appendChild(el('span', { class: 'f' }, b.pair_count + ' pair' + (b.pair_count === 1 ? '' : 's')));
+    feats.appendChild(el('span', { class: 'f' }, 'mean ' + (b.mean_score || 0).toFixed(3)));
+    if (b.source_gap_verses_inside_block > 0) feats.appendChild(el('span', { class: 'f' }, b.source_gap_verses_inside_block + ' Mark gap'));
+    if (b.target_gap_verses_inside_block > 0) feats.appendChild(el('span', { class: 'f' }, b.target_gap_verses_inside_block + ' Luke gap'));
+    if (lg && lg.coded_features) {
+      const cf = lg.coded_features;
+      if (cf.close_pairs_score_ge_0_45_or_run_ge_4) feats.appendChild(el('span', { class: 'f' }, cf.close_pairs_score_ge_0_45_or_run_ge_4 + ' close'));
+      if (cf.low_score_primary_pairs_under_0_25) feats.appendChild(el('span', { class: 'f' }, cf.low_score_primary_pairs_under_0_25 + ' low-score'));
+    }
+    blockDetail.appendChild(feats);
+
+    // Three-hypothesis fingerprint
+    if (lg && lg.hypotheses) {
+      const hRow = el('div', { class: 'hyp-tri' });
+      const hypOrder = [
+        ['Mark_prior_Luke_uses_Mark_or_Mark_like_source', 'mark', 'Mark prior'],
+        ['Luke_prior_Mark_uses_Luke_or_Luke_like_source', 'luke', 'Luke prior'],
+        ['shared_narrative_or_oral_tradition_without_direct_use', 'shared', 'Shared tradition'],
+      ];
+      for (const [key, cls, lbl] of hypOrder) {
+        const h = lg.hypotheses[key];
+        if (!h) continue;
+        const box = el('div', { class: 'h ' + cls });
+        box.appendChild(el('div', { class: 'k' }, lbl));
+        box.appendChild(el('div', { class: 'n' }, (h.burden_score || 0).toFixed(3)));
+        box.appendChild(el('div', { class: 'bl' }, 'local strain'));
+        const ul = el('ul');
+        (h.must_explain || []).forEach(me => ul.appendChild(el('li', null, me)));
+        box.appendChild(ul);
+        hRow.appendChild(box);
+      }
+      blockDetail.appendChild(hRow);
+    }
+
+    // Primary pairs in block
+    const pp = (b.primary_pairs || []);
+    if (pp.length) {
+      const pwrap = el('div', { class: 'pairs' });
+      const hd = el('div', { class: 'hd' });
+      ['Mark', 'Luke', 'Score', 'Run'].forEach(c => hd.appendChild(el('div', null, c)));
+      pwrap.appendChild(hd);
+      for (const p of pp) {
+        const pr = el('div', { class: 'pair-row' });
+        pr.appendChild(SH.refChip(p.source_ref, { fontSize: '12px' }));
+        pr.appendChild(SH.refChip(p.target_ref, { fontSize: '12px' }));
+        pr.appendChild(el('div', { class: 'score' }, (p.score || 0).toFixed(3)));
+        pr.appendChild(el('div', { class: 'run' }, String(p.max_exact_run_len || 0)));
+        pwrap.appendChild(pr);
+      }
+      blockDetail.appendChild(pwrap);
+    }
+  }
+
+  // Filter + sort
+  function currentBlocks() {
+    const q = (document.getElementById('blockFilter').value || '').toLowerCase();
+    const sortBy = document.getElementById('blockSort').value;
+    let bs = looseBlocks.slice();
+    if (q) {
+      bs = bs.filter(b => (b.source_start_ref + ' ' + b.source_end_ref + ' ' + b.target_start_ref + ' ' + b.target_end_ref + ' ' + b.block_id).toLowerCase().indexOf(q) >= 0);
+    }
+    if (sortBy === 'score') bs.sort((a, b) => (b.mean_score || 0) - (a.mean_score || 0));
+    else if (sortBy === 'pairs') bs.sort((a, b) => (b.pair_count || 0) - (a.pair_count || 0));
+    else if (sortBy === 'burden') bs.sort((a, b) => blockSummaryScore(b) - blockSummaryScore(a));
+    return bs;
+  }
+  function refreshBlockList() {
+    renderBlockList(currentBlocks());
+  }
+  document.getElementById('blockFilter').addEventListener('input', refreshBlockList);
+  document.getElementById('blockSort').addEventListener('change', refreshBlockList);
+  refreshBlockList();
+  if (looseBlocks.length) selectBlock(looseBlocks[0].block_id);
+
+  // ---- Primary pair explorer ----
+  const pairTable = document.getElementById('pairTable');
+  const cols = [
+    { key: 'rank', label: '#', num: true },
+    { key: 'a_ref', label: 'Mark' },
+    { key: 'b_ref', label: 'Luke' },
+    { key: 'score', label: 'Score', num: true, fmt: v => v.toFixed(3) },
+    { key: 'max_exact_run_len', label: 'Run', num: true },
+    { key: 'lcs_ratio', label: 'LCS', num: true, fmt: v => v.toFixed(2) },
+    { key: 'max_exact_run', label: 'Longest exact run' },
+  ];
+  let sortKey = 'rank';
+  let sortDir = 1;
+  function renderPairTable() {
+    while (pairTable.firstChild) pairTable.removeChild(pairTable.firstChild);
+    const thead = el('thead');
+    const tr = el('tr');
+    for (const c of cols) {
+      const th = el('th', { 'data-key': c.key });
+      th.appendChild(document.createTextNode(c.label));
+      th.appendChild(el('span', { class: 'sort-arrow' }, sortKey === c.key ? (sortDir === 1 ? '▲' : '▼') : '↕'));
+      if (sortKey === c.key) th.classList.add('sorted');
+      th.addEventListener('click', () => {
+        if (sortKey === c.key) sortDir *= -1;
+        else { sortKey = c.key; sortDir = c.num ? -1 : 1; }
+        renderPairTable();
+      });
+      tr.appendChild(th);
+    }
+    thead.appendChild(tr);
+    pairTable.appendChild(thead);
+    const tbody = el('tbody');
+    const sorted = pairs.slice().sort((a, b) => {
+      const av = a[sortKey]; const bv = b[sortKey];
+      if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * sortDir;
+      return String(av || '').localeCompare(String(bv || '')) * sortDir;
+    });
+    for (const p of sorted) {
+      const row = el('tr');
+      const isFlagged = (p.text_critical_status || '').toLowerCase().indexOf('long') >= 0 || (p.text_critical_status || '').toLowerCase().indexOf('16:9') >= 0 || (p.a_ref || '').match(/^Mark 16:(9|1[0-9])/);
+      if (isFlagged) row.classList.add('flagged');
+      for (const c of cols) {
+        const v = p[c.key];
+        if (c.key === 'a_ref' || c.key === 'b_ref') {
+          const td = el('td');
+          td.appendChild(SH.refChip(v || '', { fontSize: '12px', plain: true }));
+          row.appendChild(td);
+        } else if (c.key === 'max_exact_run') {
+          row.appendChild(el('td', { class: 'r' }, v || ''));
+        } else {
+          row.appendChild(el('td', { class: c.num ? 'n' : '' }, c.fmt && typeof v === 'number' ? c.fmt(v) : String(v == null ? '' : v)));
+        }
+      }
+      tbody.appendChild(row);
+    }
+    pairTable.appendChild(tbody);
+  }
+  renderPairTable();
+
+  // ---- Secondary echoes ----
+  const echoesWrap = document.getElementById('echoesWrap');
+  const sortedEchoes = echoes.slice().sort((a, b) => (b.score || 0) - (a.score || 0)).slice(0, 30);
+  for (const e of sortedEchoes) {
+    const r = el('div', { class: 'echo-row' });
+    r.appendChild(SH.refChip(e.source_ref, { fontSize: '12px' }));
+    r.appendChild(SH.refChip(e.target_ref, { fontSize: '12px' }));
+    r.appendChild(el('div', { class: 'run' }, 'score ' + (e.score || 0).toFixed(3) + ' · run ' + (e.max_exact_run_len || 0)));
+    if (e.max_exact_run) r.appendChild(el('div', { class: 'gr' }, e.max_exact_run));
+    echoesWrap.appendChild(r);
+  }
+  if (echoes.length > 30) {
+    echoesWrap.appendChild(el('div', { class: 'small', style: 'margin:10px 0 0;color:var(--ink-mute);font-style:italic;' },
+      '+ ' + (echoes.length - 30) + ' more echoes in 15_mark_luke_secondary_echoes.yaml'));
+  }
+
+  // ---- Sensitivity grid ----
+  const sensTable = document.getElementById('sensTable');
+  const shead = el('thead');
+  const shr = el('tr');
+  ['Threshold', 'Mark-gap', 'Luke-gap', 'Chain pairs', 'Score sum', 'Blocks', 'Pairs/block'].forEach(c => shr.appendChild(el('th', null, c)));
+  shead.appendChild(shr);
+  sensTable.appendChild(shead);
+  const stb = el('tbody');
+  for (const g of grid) {
+    const tr = el('tr');
+    const isDefault = g.threshold === 0.18 && g.source_gap_allowance === 4 && g.target_gap_allowance === 6;
+    if (isDefault) tr.classList.add('default');
+    tr.appendChild(el('td', { class: 'lead' }, g.threshold.toFixed(2)));
+    tr.appendChild(el('td', null, String(g.source_gap_allowance)));
+    tr.appendChild(el('td', null, String(g.target_gap_allowance)));
+    tr.appendChild(el('td', null, String(g.chain_pair_count)));
+    tr.appendChild(el('td', null, g.chain_score_sum.toFixed(3)));
+    tr.appendChild(el('td', null, String(g.block_count)));
+    tr.appendChild(el('td', null, g.avg_pairs_per_block.toFixed(2)));
+    stb.appendChild(tr);
+  }
+  sensTable.appendChild(stb);
+
+  // ---- ?hi= routing ----
+  const hiRef = SH.getHighlightRef && SH.getHighlightRef();
+  if (hiRef) {
+    // Find the block whose span contains the ref; select it.
+    const book = SH.refBook(hiRef);
+    for (const b of looseBlocks) {
+      const spanBook = SH.refBook(b.source_start_ref);
+      if (spanBook === book && hiRef >= b.source_start_ref && hiRef <= b.source_end_ref) {
+        selectBlock(b.block_id);
+        break;
+      }
+      const spanBookB = SH.refBook(b.target_start_ref);
+      if (spanBookB === book && hiRef >= b.target_start_ref && hiRef <= b.target_end_ref) {
+        selectBlock(b.block_id);
+        break;
+      }
+    }
+  }
+})();
+</script>
+</body>
+</html>

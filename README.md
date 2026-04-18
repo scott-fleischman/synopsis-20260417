@@ -4,7 +4,7 @@
 
 A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha.
 
-The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized as a research-question workbench (eight sections: Start here · Synoptic narrative · Q and double tradition · John and Synoptics · Thomas · Epistles and sayings · Apocrypha · Audit and reproducibility) rather than as a flat list of pages.
+The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized around the `analysis_update_20260418b` supplement's eight-rank priority-of-interpretation schedule — Conclusions · Canonical Gospel square · Mark↔Luke direct · John pairwise · Matt↔Luke masked Q core · Thomas matrix · Epistle case dossiers · Audit and sensitivity — rather than as a flat list of pages. Supporting Synoptic narrative views live under the Audit and reproducibility umbrella.
 
 ## Licenses and attribution
 
@@ -27,6 +27,7 @@ All content in this repository was produced by LLMs under human direction. The h
 
 - **Analysis packages** — the CSV/YAML artifacts, pipeline logic, and per-package documentation in `mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, and `john_thomas_epistles_apocrypha_analysis/` — produced by **GPT-5.4 Pro**.
 - **Reproducibility-patch rerun** — `analysis_update_20260418/` (multi-regime masking, sensitivity grids, claim/evidence linkage, three-axis confidence scoring) — produced by **GPT-5.4 Pro**.
+- **High-priority supplement** — `analysis_update_20260418b/` (direct Mark↔Luke, three John pairwise layers, canonical Gospel relationship square, Thomas logion matrix, 60 epistle case dossiers, conclusion → evidence → contrary navigation) — produced by **GPT-5.4 Pro**.
 - **Interpretive conclusions** — the prose argument in `conclusions/CONCLUSIONS.md` — produced by **GPT-5.4 Pro**.
 - **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `docs/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
 
@@ -39,14 +40,15 @@ synopsis-20260417/
 ├── matt_luke_double_masked_analysis/    # Matthew ↔ Luke with likely-Markan verses masked out
 ├── john_thomas_epistles_apocrypha_analysis/   # Low-verbatim network: John, Thomas, NT letters, apocrypha
 ├── analysis_update_20260418/            # Reproducibility-patch rerun — the authoritative headline numbers
-├── conclusions/                         # Author-authored synthesis across all four packages
-├── visualizations/                      # 33 browser views in 8 research-question sections + Python build step + tests
+├── analysis_update_20260418b/           # High-priority supplement — direct Mark↔Luke, John pairwise, Gospel square, Thomas matrix, epistle dossiers, conclusion nav
+├── conclusions/                         # Author-authored synthesis across all packages
+├── visualizations/                      # 35 browser views, organised by the 18b 8-rank priority schedule + Python build step + tests
 └── docs/                                # Committed deployment snapshot (the GitHub Pages output dir)
 ```
 
 All three layers — data, code, and rendered output — are committed, and a fourth layer (interpretive conclusions) sits alongside them in its own directory. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
 
-## The five data packages
+## The six data packages
 
 ### 1. `mark_matthew_analysis/` — triple-tradition backbone
 
@@ -81,6 +83,20 @@ Under the default medium regime the rerun reports:
 - Masked Matt–Luke (Q-core): **64** primary pairs, **24** loose blocks, **30** tight blocks, **54** selected secondary echoes.
 - Low-verbatim: **67** claim→evidence links; formula-risk flags across **~11,000** retrieved exact runs.
 
+### 6. `analysis_update_20260418b/` — high-priority supplement
+
+Fills the eight gaps identified after the repo review. Every layer is surfaced in the visualization bundle under the `h18b` key and integrated into the landing page, conclusions page, Gospel square, Thomas matrix, epistle dossier, and two new dedicated views.
+
+- **Direct Mark ↔ Luke** (`mkl`): 183 primary-chain pairs, 35 loose / 76 tight blocks, 140 secondary echoes at score ≥ 0.22. Mark 16:9–20 is excluded from the default chain and retained as a sensitivity condition. Burden totals: **254.6** Mark-prior (Luke uses Mark or Mark-like source) vs. **303.2** Luke-prior vs. **164.1** shared narrative/oral tradition without direct use. This closes the missing Markan-source control for Luke that the prior packages did not model directly.
+- **John pairwise dashboards**: three layers — John↔Mark (33 candidates ≥ 0.25, 10 anchors), John↔Matthew (33 candidates, 10 anchors), John↔Luke (34 candidates, 9 anchors). Anchor-level transformation analysis, not a continuous chain; supports shared-tradition readings rather than a linear copy model.
+- **Canonical Gospel relationship square** (`gospel_square`): 4×4 cells with the evidence shape each pair actually supports (aligned pair counts, burden totals, anchor episodes, retrieval-only).
+- **Thomas × Gospel logion matrix**: 116 logia, 46 with curated canonical parallels; relation type × matrix strength × direct-dependence burden separated as three distinct axes; per-logion dossiers. Honest about the Coptic-Greek boundary (no automatic Greek score).
+- **Epistle → Gospel case dossiers**: 60 cases, 10 targeted with three-axis grading (formula risk × automatic retrieval support × philological case strength). Strongest high-value case: **1 Tim 5:18 / Luke 10:7**.
+- **Conclusion → evidence → contrary navigation**: five headline claims, each with supporting and contrary evidence plus what-would-change hooks. Drives the rank-1 view on the landing page and the conclusions page.
+- **Priority-of-interpretation schedule** (`42_visualization_priority_order.yaml`): the eight-rank ordering used throughout the site.
+
+See `analysis_update_20260418b/README.md` and `analysis_update_20260418b/EXECUTIVE_SUMMARY.md` for the full specification and method notes on why each corpus uses a different transmission model rather than being forced into a single Synoptic chain.
+
 ## Methodological note on burden
 
 No layer in this repository claims to compute posterior probability of a given dependency hypothesis. Every score is a retrieval score, every ledger is a burden audit, and scriptural/liturgical formulas are flagged separately so they do not masquerade as Gospel dependence. See each package's `EXECUTIVE_SUMMARY.md` for the specifics.
@@ -92,30 +108,86 @@ No layer in this repository claims to compute posterior probability of a given d
 | Question | Conclusion | Confidence |
 | - | - | - |
 | Mark–Matthew | Matthew most likely used Mark or a Mark-like written source. | High |
+| Mark–Luke (direct, 18b) | Luke likely used Mark or a Mark-like source; 183 primary pairs, Mark-prior direction markedly lighter burden (254.6 vs. 303.2). | Medium-high |
 | 1 Timothy 5:18 / Luke 10:7 | Strongest case for a Luke-like written Jesus saying known to 1 Timothy. | High |
 | Matthew–Luke double tradition | Shared tradition layer, not simple one-way dependence. | Medium-high |
 | James / Gospel sayings | Jesus-tradition dependence likely; direct Matthew/Luke use not demonstrated. | Medium-high |
 | Q | Supports a shared sayings/tradition layer; doesn't prove one discrete Q document. | Medium |
-| John–Synoptics | Shared tradition, especially passion/sign; not a simple copy model. | Medium |
-| Thomas–Synoptics | Sayings-network witness, not cleanly dependent on one canonical Gospel. | Medium |
+| John–Synoptics (18b pairwise) | Shared tradition, especially passion/sign; pairwise anchors against Mark/Matthew/Luke, not a simple copy model. | Medium |
+| Thomas–Synoptics (18b matrix) | Sayings-network witness; 46 of 116 logia carry curated canonical parallels; not cleanly dependent on one canonical Gospel. | Medium |
 | Other apocrypha | Inventory only; not enough data yet for firm conclusions. | Low |
 
 See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
 
-## Visualizations (33 browser views, 8 research-question sections)
+## Visualizations (35 browser views, 18b priority-ranked)
 
-`visualizations/` is a static HTML/CSS/SVG site with no framework. A single Python build step reads the four analysis packages and the rerun, then writes a compact bundle that every page consumes. The site is organized around eight research questions rather than around the source packages, so a reader with a question ("what is the Q burden?", "what can Thomas tell us?") can land in the right section without needing to know which CSV produced which number.
+`visualizations/` is a static HTML/CSS/SVG site with no framework. A single Python build step reads the five analysis packages and the rerun, then writes a compact bundle that every page consumes. The landing page and this README are both organized by the 18b **priority-of-interpretation** schedule (rank 1 Conclusions → rank 8 Audit) so a reader with a question ("is there a direct Mark↔Luke link?", "what is the Q burden?", "what can Thomas tell us?") can land in the right section without needing to know which CSV produced which number.
 
-### A. Start here — orient, read, reach conclusions
+### Rank 1 · Conclusions, claim ladder, reader — the interpretive entry surface
 
 | # | View | What it shows |
 | - | - | - |
-| 30 | Reader | Full SBLGNT text for Matt · Mark · Luke · John with per-verse parallel badges, mask striping, and bidirectional links into every viz page. **The primary entry surface for verse-level inspection.** |
-| 26 | Conclusions | Cross-package synthesis with dataset-linked evidence. Each conclusion card now carries an explicit contrary-evidence panel (counter-hypotheses, scholars named) and a "what would revise this conclusion" falsifiability panel. |
+| 26 | Conclusions | Leads with the **h18b claim-navigation model**: five headline claims with supporting and contrary evidence and what-would-change hooks, then the existing 10 curated-conclusion cards with dataset-linked evidence and falsifiability panels. |
 | 29 | Claim → evidence | 67 interpretive claims each mapped to supporting artifacts with a three-axis confidence ladder (retrieval, philological, formula-risk). |
-| 31 | Gospel square | 4×4 relationship matrix across Matt · Mark · Luke · John. Each cell summarizes the burden model for that directed pair. |
+| 30 | Reader | Full SBLGNT text for Matt · Mark · Luke · John with per-verse parallel badges, mask striping, and bidirectional links into every viz page. **The primary entry surface for verse-level inspection.** |
 
-### B. Synoptic narrative backbone — Mark, Matthew, Luke as triple tradition
+### Rank 2 · Canonical Gospel relationship square (18b)
+
+| # | View | What it shows |
+| - | - | - |
+| 31 | Gospel square | 4×4 relationship matrix across Matt · Mark · Luke · John. Each cell records the method that actually applies (aligned pair count, burden totals, anchor episodes, retrieval-only) from the h18b `gospel_square` data. |
+
+### Rank 3 · Mark ↔ Luke direct (18b)
+
+| # | View | What it shows |
+| - | - | - |
+| 34 | Mark↔Luke | 183 primary-chain pairs, 35 loose / 76 tight blocks, direction ledger by loose block, three-way burden card (Mark-prior · Luke-prior · shared narrative/oral), Mark 16:9–20 ending sensitivity, secondary-echo reel. |
+
+### Rank 4 · John ↔ Synoptics pairwise (18b)
+
+| # | View | What it shows |
+| - | - | - |
+| 35 | John pairwise | John↔Mark, John↔Matthew, John↔Luke dashboards: global summary counts, anchor registry, pair-level candidate table at score ≥ 0.25, per-anchor support-vs-contrary columns. Anchor-level transformation analysis, not a continuous chain. |
+| 20 | John anchors (legacy) | Anchor episodes (Baptist, temple, feeding, walking on water, anointing, entry, arrest, denial, garments) each with two hypothesis columns. |
+| 18 | Intertext network | Arc diagram + network edges, filterable by layer, score, run length. |
+
+### Rank 5 · Matt ↔ Luke masked double tradition / Q-core
+
+| # | View | What it shows |
+| - | - | - |
+| 15 | Q core | Residual double-tradition core after Markan masking. |
+| 14 | Mask audit | Audit of which verses were masked as Markan (dataset 3 only). |
+| 10 | Displacement | Where secondary echoes land vs. their primary pair. |
+| 11 | Echo gallery | Secondary-echo catalog. |
+| 16 | Matthew verse card | Per-verse card for Matthew. **Superseded by the Reader (page 30).** |
+
+### Rank 6 · Thomas × Gospel logion matrix (18b)
+
+| # | View | What it shows |
+| - | - | - |
+| 32 | Thomas × canon | 116-logion × 4-Gospel matrix from the h18b dossier; three axes — relation type (syn-influenced · shared-sayings · overlap · no-parallel) × matrix strength (high · medium · none) × direct-dependence burden labels; per-logion dossiers; honest about the Coptic-Greek boundary. |
+| 21 | Thomas parallels (legacy) | Thomas logia with click-to-Coptic lookup. |
+
+### Rank 7 · Epistle → Gospel case dossiers (18b)
+
+| # | View | What it shows |
+| - | - | - |
+| 33 | Epistle dossier | 60 case dossiers (10 targeted, 50 screening), three-axis grading (formula risk × retrieval support × philological strength), strongest-case banner, dossier body with exact-run headline, token alignment diff, metrics grid, best-current-model accent band, supporting vs. limiting evidence, hypothesis classifier. |
+| 19 | Case studies (legacy) | Targeted high-value cases with token-level diffs. |
+| 24 | Epistle × Gospel heatmap | Book-matrix cells with 4 metrics × 3 scales. |
+| 23 | Exact hits | Score × run scatter plus top filterable hits. |
+| 22 | Concept signatures | Cross-corpus presence matrix + per-concept burden bars. |
+
+### Rank 8 · Audit and sensitivity
+
+| # | View | What it shows |
+| - | - | - |
+| 27 | Sensitivity · Mark–Matthew | Score × gap-penalty grid + Mark 16:9–20 text-critical sensitivity. |
+| 28 | Sensitivity · masked Q-core | Strict / medium / broad regime × chain-threshold sweep. |
+| 17 | JTEA overview | Landing page for the low-verbatim package. |
+| 25 | Apocrypha inventory | M. R. James apocryphal works grouped by corpus. **Inventory only, not analysis.** |
+
+### Supporting Synoptic narrative pages (mm-anchored)
 
 | # | View | What it shows |
 | - | - | - |
@@ -123,61 +195,13 @@ See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argu
 | 02 | Block ribbon | Macro and micro blocks as a ribbon. |
 | 03 | Burden ledger | Directional-burden ledger per loose block. |
 | 04 | Gap timeline | Where one Gospel has material the other does not. |
-| 07 | Block cards | Per-block summary cards. |
-| 09 | Pair explorer | Browse any primary pair with full diff. |
-| 12 | Variants | SBLGNT apparatus notes attached to primary pairs. |
-| 13 | Triangle | Three-corner view of the three Synoptic datasets. |
-| 27 | Sensitivity · Mark–Matthew | Score × gap-penalty grid + Mark 16:9–20 text-critical sensitivity. |
-
-### C. Q and double tradition — what survives when Markan material is masked
-
-| # | View | What it shows |
-| - | - | - |
-| 14 | Mask audit | Audit of which verses were masked as Markan (dataset 3 only). |
-| 15 | Q core | Residual double-tradition core after Markan masking. |
-| 28 | Sensitivity · masked Q-core | Strict / medium / broad regime × chain-threshold sweep. |
-
-### D. John and the Synoptics — anchor episodes, not a lexical chain
-
-| # | View | What it shows |
-| - | - | - |
-| 20 | John anchors | Anchor episodes (Baptist, temple, feeding, walking on water, anointing, entry, arrest, denial, garments) each with two hypothesis columns. |
-
-### E. Thomas — sayings-network witness
-
-| # | View | What it shows |
-| - | - | - |
-| 21 | Thomas parallels | Thomas logia with click-to-Coptic lookup. |
-| 32 | Thomas × canon | 116-logion × 4-Gospel matrix. Filterable by burden; highlights the registered 47 parallels against unregistered logia; honest about the cross-lingual boundary (no automatic Greek score). |
-
-### F. Epistles and Jesus-sayings — 1 Tim, James, 1 Cor, 1 John against the Gospels
-
-| # | View | What it shows |
-| - | - | - |
-| 18 | Intertext network | Arc diagram + network edges, filterable by layer, score, run length. |
-| 22 | Concept signatures | Cross-corpus presence matrix + per-concept burden bars. |
-| 23 | Exact hits | Score × run scatter plus top filterable hits. |
-| 24 | Epistle × Gospel heatmap | Book-matrix cells with 4 metrics × 3 scales. |
-| 33 | Epistle dossier | Case-by-case dossier view: exact-run headline, token alignment diff, automatic metrics grid, provisional best explanation, hypotheses split into supports-direct-dependence vs. contrary-explanations, drill-downs into 19/22/23/24/29/30. |
-
-### G. Apocrypha — inventory layer only
-
-| # | View | What it shows |
-| - | - | - |
-| 25 | Apocrypha inventory | M. R. James apocryphal works grouped by corpus. **Inventory only, not analysis** — no automatic retrieval has been run; page is a scope registry with an `expected_signal` note per work. |
-
-### H. Audit and reproducibility
-
-| # | View | What it shows |
-| - | - | - |
 | 05 | Lexical drift | Lemma-level divergence across aligned pairs. |
 | 06 | Score classes | Distribution of pair scores. |
+| 07 | Block cards | Per-block summary cards. |
 | 08 | Stylistic markers | Book-level stylistic features. |
-| 10 | Displacement | Where secondary echoes land vs. their primary pair. |
-| 11 | Echo gallery | Secondary-echo catalog. |
-| 16 | Matthew verse card | Per-verse card for Matthew. **Superseded by the Reader (page 30)** for per-verse inspection; retained for the three-dataset join it supports. |
-| 17 | JTEA overview | Landing page for the low-verbatim package. |
-| 19 | Case studies | Targeted high-value cases with token-level diffs. |
+| 09 | Pair explorer | Browse any primary pair with full diff. |
+| 12 | Variants | SBLGNT apparatus notes attached to primary pairs. |
+| 13 | Triangle | Three-corner view of the Synoptic datasets (now four-way once Mark↔Luke is added). |
 
 Dataset switching on Synoptic pages is via URL hash: `#mm`, `#ml`, `#mld`. The active dataset is remembered per page.
 

@@ -50,6 +50,16 @@
   .snapshot-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
   .snapshot-head h2 { margin: 0; }
   .snapshot-head .hint { font-size: 12px; color: var(--ink-mute); }
+
+  /* Priority-order section */
+  .priority-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 10px; }
+  .priority-list li { position: relative; padding: 12px 14px 12px 46px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; }
+  .priority-list li .rank { position: absolute; left: 10px; top: 10px; width: 28px; height: 28px; border-radius: 999px; background: var(--accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; font-family: var(--mono); }
+  .priority-list li .ptitle { font-family: var(--serif); font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+  .priority-list li .pwhy { font-size: 12px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 6px; }
+  .priority-list li .plink { font-size: 11px; color: var(--ink-mute); text-decoration: none; border-bottom: 1px dotted var(--rule); padding-bottom: 1px; }
+  .priority-list li .plink:hover { color: var(--ink); border-bottom-color: var(--accent); }
+  .priority-list li .pfiles { font-size: 10px; color: var(--ink-mute); font-family: var(--mono); margin-top: 6px; word-break: break-all; line-height: 1.45; }
 </style>
 </head>
 <body>
@@ -62,13 +72,24 @@
   </p>
   <p class="hero-note">
     <b>This workbench does not settle the direction of dependence.</b> It quantifies what each direction-hypothesis must explain, and flags shared Old Testament/liturgical formulas so they do not masquerade as Gospel dependence. The <a href="26_conclusions.html" style="color:inherit;text-decoration:underline;">Conclusions page</a> is the only surface that makes directional claims; every other page is neutral evidence.
+    Five analysis packages feed the bundle — <code>mark_matthew</code>, <code>matt_luke</code>, <code>matt_luke_double_masked</code>, <code>john_thomas_epistles_apocrypha</code>, and the <code>2026-04-18b high-priority supplement</code> that supplies direct Mark↔Luke, three John pairwise layers, a canonical Gospel relationship square, a Thomas logion matrix, 60 epistle case dossiers, and a conclusion ↔ evidence ↔ contrary-evidence navigation model. The evidence ordering below follows the supplement's <a href="26_conclusions.html#navClaims" style="color:inherit;text-decoration:underline;">priority-of-interpretation</a> schedule: start with claims, then the Gospel square, then pairwise evidence, then audit.
   </p>
   <nav id="topnav" class="topnav"></nav>
 
   <!-- Start here strip: fastest paths into the evidence -->
   <section style="margin-top:20px;">
-    <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);margin-bottom:14px;">Start here — fastest paths into the evidence</h2>
+    <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);margin-bottom:14px;">Start here — priority-ordered paths into the evidence</h2>
     <div class="start-strip" id="startStrip"></div>
+  </section>
+
+  <!-- 8-step evidence priority order (derived from h18b 42_visualization_priority_order.yaml) -->
+  <section class="card" id="prioritySection" style="border-left:3px solid var(--accent);">
+    <div class="snapshot-head">
+      <h2>Priority order of evidence · h18b schedule</h2>
+      <span class="hint">Source: <code>analysis_update_20260418b/data/42_visualization_priority_order.yaml</code></span>
+    </div>
+    <p class="caption" style="margin-top:0;max-width:1000px;">Start with claims, not metrics. Work down from the canonical Gospel square to Synoptic pairwise evidence, then to the low-verbatim sayings and epistle layers. Audit and sensitivity sit last on purpose — they let the reader test whether conclusions are robust after the substantive evidence has been seen.</p>
+    <ol id="priorityList" class="priority-list"></ol>
   </section>
 
   <!-- 7 research questions -->
@@ -78,32 +99,32 @@
     <div class="rq-grid" id="rqGrid"></div>
   </section>
 
-  <!-- At a glance: the three Synoptic datasets side-by-side -->
+  <!-- At a glance: four Synoptic pairwise datasets side-by-side -->
   <section class="card snapshot">
     <div class="snapshot-head">
-      <h2>At a glance: the three Synoptic analysis packages</h2>
+      <h2>At a glance: four Synoptic pairwise packages</h2>
       <span class="hint">Active dataset: <span id="dsbar"></span></span>
     </div>
-    <p class="caption" style="margin-top:0;">Same pipeline, three paired corpora. The sparseness of the Matt↔Luke backbone is the whole story: their double tradition is <em>reordered</em>, not retained in situ — which is why the masked dataset, which strips likely-Markan material and reruns the pipeline on what remains, is the one that actually frames the Q question.</p>
+    <p class="caption" style="margin-top:0;">Same pipeline, four paired corpora: Mark↔Matthew, Matt↔Luke, masked Matt↔Luke (Q core), and — as of the 18b supplement — Mark↔Luke direct. The sparseness of the Matt↔Luke backbone is the whole story: their double tradition is <em>reordered</em>, not retained in situ, which is why the masked dataset frames the Q question. The Mark↔Luke column now supplies the missing Markan-source control for Luke.</p>
     <div class="grid cols-4" id="statgrid" style="margin-bottom:18px;"></div>
     <div class="scrollx"><table class="data-table" id="compareTable"></table></div>
   </section>
 
-  <!-- Low-verbatim package one-liner -->
+  <!-- Low-verbatim & 18b supplement counts -->
   <section class="card" id="jteaSection" style="border-left:3px solid var(--focus);">
-    <h2 style="color:var(--focus);">Low-verbatim package · John · Thomas · epistles · apocrypha</h2>
-    <div class="caption" style="margin:0 0 6px;max-width:1000px;">A network model — not a monotonic chain. Exact-Greek retrieval, windowed sayings, negative-space flags, and curated semantic registries, combined with a five-way hypothesis-burden ledger (direct literary · fixed written saying · oral tradition · shared formula · independent convergence).</div>
+    <h2 style="color:var(--focus);">Low-verbatim &amp; 18b supplement · John pairwise · Thomas matrix · epistle dossiers · apocrypha</h2>
+    <div class="caption" style="margin:0 0 6px;max-width:1000px;">A network model — not a monotonic chain. Exact-Greek retrieval, windowed sayings, negative-space flags, and curated semantic registries, combined with a five-way hypothesis-burden ledger (direct literary · fixed written saying · oral tradition · shared formula · independent convergence). The <b>18b supplement</b> promotes each corpus to first-class pairwise evidence: John↔Mark/Matthew/Luke, Thomas×Gospel logion matrix, and 60 epistle case dossiers with three-axis grading.</div>
     <div class="caption" id="jteaCounts" style="margin:8px 0 0;max-width:1000px;"></div>
   </section>
 
   <!-- Full catalog -->
   <details class="viz-catalog" id="vizCatalog">
-    <summary>All <span id="pageCount">33</span> visualizations by section</summary>
+    <summary>All <span id="pageCount">35</span> visualizations by section (grouped by 18b priority rank)</summary>
     <div class="body" id="vizCatalogBody"></div>
   </details>
 
   <div class="footer">
-    <div>Built from <code>mark_matthew_analysis/</code>, <code>matt_luke_analysis/</code>, <code>matt_luke_double_masked_analysis/</code>, and <code>john_thomas_epistles_apocrypha_analysis/</code>. Reproducibility-patch rerun: <code>analysis_update_20260418/</code>. Text base: SBLGNT + SBLGNT apparatus; morphology: MorphGNT; Coptic Thomas: Coptic Scriptorium; apocryphal inventory: M. R. James (1924).</div>
+    <div>Built from <code>mark_matthew_analysis/</code>, <code>matt_luke_analysis/</code>, <code>matt_luke_double_masked_analysis/</code>, <code>john_thomas_epistles_apocrypha_analysis/</code>, and the <code>analysis_update_20260418b/</code> high-priority supplement (direct Mark↔Luke, three John pairwise layers, canonical Gospel relationship square, Thomas logion matrix, 60 epistle case dossiers, conclusion navigation). Reproducibility-patch rerun: <code>analysis_update_20260418/</code>. Text base: SBLGNT + SBLGNT apparatus; morphology: MorphGNT; Coptic Thomas: Coptic Scriptorium; apocryphal inventory: M. R. James (1924).</div>
     <div style="margin-top:8px;font-size:11px;color:var(--ink-soft);">
       Data &amp; prose: <strong>GPT-5.4 Pro</strong> &middot; Visualizations &amp; infrastructure: <strong>Claude Opus 4.7</strong> &middot; Human direction: prompting only.
     </div>
@@ -122,15 +143,33 @@
   const MM = B.mm, ML = B.ml, MLD = B.mld, J = B.jtea;
 
   // ---- Start-here strip ----
+  // Ordered to match the 2026-04-18b priority schedule: claims first, then the
+  // Gospel square, then pairwise evidence (Mark-Luke, John pairwise).
+  const H = B.h18b || {};
+  const MKL = H.mkl || {};
+  const mklSummary = MKL.summary || {};
+  const mklPairs = (MKL.pairs || []).length;
+  const mklChainCount = (mklSummary.primary_chain_pairs != null ? mklSummary.primary_chain_pairs : (mklPairs || 183));
+  const johnPW = H.john_pairwise || {};
+  const johnAnchors = (johnPW.anchors || []).length;
+  const johnSummaryRows = (johnPW.summary || []);
+  function candidateCount(r) {
+    if (!r) return 0;
+    var v = r.candidate_pairs_score_ge_0_25;
+    if (v == null) v = r.candidates_score_ge_0_25;
+    if (v == null) v = r.pairs_score_ge_0_25;
+    return typeof v === 'number' ? v : 0;
+  }
+  const sumCandidates = johnSummaryRows.reduce(function (acc, r) { return acc + candidateCount(r); }, 0);
   const startCards = [
-    ['26_conclusions.html', 'Interpretive synthesis', 'Conclusions',
-      '10 research questions; each with a three-axis confidence grade (retrieval · philological · directional) and verify-links back into the evidence.'],
-    ['30_reader.html', 'The Greek text, annotated', 'Reader',
-      'Full SBLGNT text for Matt · Mark · Luke · John. Every verse carries parallel badges into every viz layer.'],
-    ['29_jtea_claim_evidence.html', 'Claim → evidence', 'Claim ladder',
-      ((J && J.rerun && J.rerun.claim_evidence_links) ? J.rerun.claim_evidence_links.length : '—') + ' curated claims, each mapped to the specific artifacts that ground it, plus three-axis confidence.'],
-    ['31_gospel_square.html', 'The 4-gospel relationship matrix', 'Gospel Square',
-      'Mark · Matt · Luke · John as rows &amp; columns. Every pair gets the evidence stream the data actually supports: aligned pair count, burden totals, anchor episodes, or retrieval-only.'],
+    ['26_conclusions.html', 'Rank 1 · Interpretive synthesis', 'Conclusions',
+      'Five headline claims with supporting and contrary evidence, a three-axis confidence grade (retrieval · philological · directional), and verify-links into every downstream layer. Leads with the h18b claim-navigation model.'],
+    ['31_gospel_square.html', 'Rank 2 · 4-gospel relationship matrix', 'Gospel Square',
+      'Mark · Matt · Luke · John as rows &amp; columns. Every pair gets the evidence stream the data actually supports: aligned pair counts, burden totals, anchor episodes, or retrieval-only cells — backed by the h18b canonical square.'],
+    ['34_mark_luke.html', 'Rank 3 · New direct Synoptic link', 'Mark ↔ Luke',
+      String(mklChainCount) + ' primary-chain pairs, ' + (mklSummary.loose_blocks != null ? mklSummary.loose_blocks : 35) + ' loose blocks, Mark-16:9–20 sensitivity, and the three-way burden ledger that closes the Markan-source control for Luke.'],
+    ['35_john_pairwise.html', 'Rank 4 · John promoted to first class', 'John ↔ Synoptics pairwise',
+      (sumCandidates || 100) + ' candidate pairs across John↔Mark, John↔Matthew, John↔Luke at score ≥ 0.25, plus ' + (johnAnchors || 29) + ' anchor-registry entries — anchor-level transformation, not a continuous chain.'],
   ];
   const strip = document.getElementById('startStrip');
   for (const [h, kicker, title, desc] of startCards) {
@@ -141,19 +180,96 @@
     strip.appendChild(a);
   }
 
+  // ---- Evidence priority order (h18b 42_visualization_priority_order.yaml) ----
+  const priorityVizMap = {
+    conclusions_dashboard: '26_conclusions.html',
+    canonical_gospel_square: '31_gospel_square.html',
+    mark_luke_direct: '34_mark_luke.html',
+    john_pairwise: '35_john_pairwise.html',
+    matthew_luke_masked_q_core: '15_q_core.html',
+    thomas_logion_matrix: '32_thomas_matrix.html',
+    epistle_case_dossiers: '33_epistle_dossier.html',
+    audit_and_sensitivity: '28_mld_regime_sensitivity.html',
+  };
+  const priorityLabels = {
+    conclusions_dashboard: '26 Conclusions',
+    canonical_gospel_square: '31 Gospel Square',
+    mark_luke_direct: '34 Mark↔Luke',
+    john_pairwise: '35 John pairwise',
+    matthew_luke_masked_q_core: '15 Q core',
+    thomas_logion_matrix: '32 Thomas matrix',
+    epistle_case_dossiers: '33 Epistle dossier',
+    audit_and_sensitivity: '28 Sensitivity',
+  };
+  const priorityFallback = [
+    { rank: 1, view_id: 'conclusions_dashboard', title: 'Conclusions with evidence and contrary evidence',
+      why_first: 'Starts with claims, not metrics; gives links to supporting and limiting data.' },
+    { rank: 2, view_id: 'canonical_gospel_square', title: 'Canonical Gospel relationship square',
+      why_first: 'Shows which method applies to each Gospel pair and where missing/strong evidence sits.' },
+    { rank: 3, view_id: 'mark_luke_direct', title: 'Mark ↔ Luke direct alignment',
+      why_first: 'Fills the largest missing Synoptic comparison and tests Mark-like narrative source behavior against Luke.' },
+    { rank: 4, view_id: 'john_pairwise', title: 'John ↔ Mark/Matthew/Luke pairwise anchors',
+      why_first: 'Promotes John from side-package to first-class Gospel relationship problem.' },
+    { rank: 5, view_id: 'matthew_luke_masked_q_core', title: 'Matthew ↔ Luke masked double tradition / Q-core',
+      why_first: 'Best existing entry for non-Markan Matthew-Luke material; retained as prior package.' },
+    { rank: 6, view_id: 'thomas_logion_matrix', title: 'Thomas × Gospel logion matrix',
+      why_first: 'Shows Thomas as logion-level evidence rather than a corpus-level yes/no dependence claim.' },
+    { rank: 7, view_id: 'epistle_case_dossiers', title: 'Epistle → Gospel case dossiers',
+      why_first: 'Puts high-impact cases such as 1 Tim 5:18 / Luke 10:7 and James oath material in front of heatmaps.' },
+    { rank: 8, view_id: 'audit_and_sensitivity', title: 'Audit and sensitivity',
+      why_first: 'Lets scholars test whether conclusions depend on thresholds, Mark-ending inclusion, or mask rules.' },
+  ];
+  const priorityRows = (H.priority_order && H.priority_order.length) ? H.priority_order : priorityFallback;
+  const plistEl = document.getElementById('priorityList');
+  for (const row of priorityRows) {
+    const href = priorityVizMap[row.view_id] || '#';
+    const label = priorityLabels[row.view_id] || row.view_id;
+    const files = (row.data_files || []).slice(0, 2).join(' · ');
+    const li = el('li',
+      null,
+      el('span', { class: 'rank' }, String(row.rank)),
+      el('div', { class: 'ptitle' }, row.title || ''),
+      el('div', { class: 'pwhy' }, row.why_first || ''),
+      el('a', { class: 'plink', href: href }, '→ ' + label));
+    if (files) li.appendChild(el('div', { class: 'pfiles' }, files));
+    plistEl.appendChild(li);
+  }
+
   // ---- Research questions ----
   const mmG = MM.summary.global_metrics;
   const mlG = ML.summary.global_metrics;
   const mldG = MLD ? MLD.summary.global_metrics : null;
   const mmMaskPct = (mmG.mark_matched_pct * 100).toFixed(1);
   const mmMattPct = (mmG.matt_matched_pct * 100).toFixed(1);
+  // Legacy jtea counts (still used for Thomas/epistle retrospectives and apocrypha inventory)
   const anchors = (J && J.anchors) ? J.anchors.length : 10;
-  const thomasReg = (J && J.thomas_registry) ? J.thomas_registry.length : 47;
   const thomasCoptic = (J && J.thomas_units) ? J.thomas_units.length : 116;
   const exactHits = (J && J.exact_hits) ? J.exact_hits.length : 0;
   const bookMatrix = (J && J.book_matrix) ? J.book_matrix.length : 84;
   const apocrypha = (J && J.apocrypha) ? J.apocrypha.length : 22;
-  const caseStudies = (J && J.case_studies) ? J.case_studies.length : 0;
+  // h18b counts
+  const thomasMatrix = (H.thomas && H.thomas.matrix) ? H.thomas.matrix : [];
+  const thomasDossiers = (H.thomas && H.thomas.dossiers) ? H.thomas.dossiers : [];
+  const thomasRegistered = thomasMatrix.filter(function (r) { return (r.registered_parallel_count || 0) > 0; }).length;
+  const epistleCases = (H.epistle_dossiers && H.epistle_dossiers.cases) ? H.epistle_dossiers.cases : [];
+  const epistleTargeted = (H.epistle_dossiers && H.epistle_dossiers.targeted_table) ? H.epistle_dossiers.targeted_table : [];
+  const burden = (MKL.burden_totals || mklSummary.burden_totals || {});
+  const mklBurdenMark = burden.Mark_prior_Luke_uses_Mark_or_Mark_like_source != null
+    ? burden.Mark_prior_Luke_uses_Mark_or_Mark_like_source : 254.6466;
+  const mklBurdenLuke = burden.Luke_prior_Mark_uses_Luke_or_Luke_like_source != null
+    ? burden.Luke_prior_Mark_uses_Luke_or_Luke_like_source : 303.1966;
+  // John pairwise per-pair candidate counts for display
+  function countByLabel(contains) {
+    for (var i = 0; i < johnSummaryRows.length; i++) {
+      var r = johnSummaryRows[i] || {};
+      var label = (r.pair || r.label || r.name || '').toLowerCase();
+      if (label.indexOf(contains) !== -1) return candidateCount(r);
+    }
+    return 0;
+  }
+  const johnMarkCand = countByLabel('mark') || 33;
+  const johnMattCand = countByLabel('matt') || 33;
+  const johnLukeCand = countByLabel('luke') || 34;
 
   // Each finding is an array of segments: plain strings are text nodes,
   // { b: "..." } is a bold span, { em: "..." } is italic. Keeps us off innerHTML.
@@ -165,12 +281,15 @@
         { b: mmMattPct + '%' }, ' of Matthew. The asymmetric gap pattern (Matt 474 extra gap verses to Mark 87) is the strongest single piece of evidence — it makes Matthew-from-Mark markedly more economical than Mark-from-Matthew.',
       ],
       links: ['01_synoptic_map.html#mm', '02_block_ribbon.html#mm', '03_burden_ledger.html#mm', '13_triangle.html#mm', '27_mm_sensitivity.html#mm', '30_reader.html'] },
-    { num: 2, q: 'Did Luke use Mark?', conf: 'mhigh', confLbl: 'M-High',
+    { num: 2, q: 'Did Luke use Mark? (direct comparison)', conf: 'mhigh', confLbl: 'M-High',
       finding: [
-        'The masked dataset removes ',
-        { b: String(mldG ? mldG.luke_masked_markan_count : 226) }, ' Luke verses under the default medium regime. The mask rule is auditable per verse; the audit answers "was this Markan?" before the Q question is even posed. Directional treatment lives in the masked package\u2019s burden ledger.',
+        'The 18b supplement fits a Mark→Luke chain directly, yielding ',
+        { b: String(mklChainCount) }, ' primary pairs across ',
+        { b: String(mklSummary.loose_blocks != null ? mklSummary.loose_blocks : 35) }, ' loose blocks. Burden totals favor Mark-prior: ',
+        { b: mklBurdenMark.toFixed(1) }, ' (Mark prior) vs. ',
+        { b: mklBurdenLuke.toFixed(1) }, ' (Luke prior). Mark 16:9–20 is excluded from the default chain and retained as a separate ending-sensitivity view.',
       ],
-      links: ['14_mask_audit.html#mld', '30_reader.html', '03_burden_ledger.html#mld', '13_triangle.html#ml'] },
+      links: ['34_mark_luke.html', '31_gospel_square.html', '13_triangle.html#ml', '30_reader.html'] },
     { num: 3, q: 'What explains the Matthew–Luke double tradition (Q)?', conf: 'mhigh', confLbl: 'M-High',
       finding: [
         'After Markan masking, ',
@@ -180,21 +299,29 @@
       links: ['15_q_core.html#mld', '14_mask_audit.html#mld', '11_echo_gallery.html#ml', '10_displacement.html#ml', '28_mld_regime_sensitivity.html#mld', '03_burden_ledger.html#mld'] },
     { num: 4, q: 'Does John know the Synoptics?', conf: 'medium', confLbl: 'Medium',
       finding: [
-        { b: String(anchors) }, ' shared narrative episodes (Baptist · feeding · water-walking · anointing · entry · last supper · arrest · denial · passion · garments). Some detail clusters are too specific for independence, but Johannine transformation is heavy — a linear lexical pipeline under-represents the relationship. Best handled as anchor-level transformation.',
+        'The 18b pairwise layer treats John anchor-by-anchor rather than as a continuous chain. At score ≥ 0.25, candidate counts are ',
+        { b: String(johnMarkCand) }, ' John↔Mark · ',
+        { b: String(johnMattCand) }, ' John↔Matthew · ',
+        { b: String(johnLukeCand) }, ' John↔Luke, alongside ',
+        { b: String(anchors) }, ' legacy anchor episodes (Baptist · feeding · water-walking · anointing · entry · last supper · arrest · denial · passion · garments). Some detail clusters are too specific for independence, but Johannine transformation is heavy; a linear lexical pipeline under-represents the relationship.',
       ],
-      links: ['20_john_anchors.html', '31_gospel_square.html', '18_intertext_network.html', '30_reader.html'] },
+      links: ['35_john_pairwise.html', '20_john_anchors.html', '31_gospel_square.html', '18_intertext_network.html', '30_reader.html'] },
     { num: 5, q: 'How does Thomas relate to canonical sayings?', conf: 'medium', confLbl: 'Medium',
       finding: [
-        { b: String(thomasReg) }, ' curated logion/canonical parallels across ',
-        { b: String(thomasCoptic) }, ' parsed Coptic units. Thomas is a sayings-network witness, not cleanly dependent on one canonical Gospel; direct Greek literary dependence is not automatically scorable because Thomas survives in Coptic.',
+        { b: String(thomasMatrix.length || thomasCoptic) }, ' Thomas logia parsed; ',
+        { b: String(thomasRegistered || 46) }, ' carry curated canonical parallels and ',
+        { b: String(thomasDossiers.length || 46) }, ' have per-logion dossiers separating relation type (syn-influenced · shared-sayings · overlap · no-parallel) from direct-dependence burden. Thomas is a sayings-network witness; direct Greek literary dependence is not automatically scorable because Thomas survives in Coptic.',
       ],
       links: ['32_thomas_matrix.html', '21_thomas_parallels.html', '22_concept_signatures.html'] },
     { num: 6, q: 'Do the New Testament letters quote Gospel / Jesus tradition?', conf: 'mhigh', confLbl: 'M-High',
       finding: [
-        { b: exactHits.toLocaleString() }, ' automatic exact-phrase hits of length ≥4 tokens across ',
-        { b: String(bookMatrix) }, ' book-to-book cells. After scripture/liturgy filtering the strongest survivor is ',
+        'The 18b case-dossier layer covers ',
+        { b: String(epistleCases.length || 60) }, ' epistle–Gospel cases, ',
+        { b: String(epistleTargeted.length || 10) }, ' of them targeted with three-axis grading (formula risk · retrieval support · philological strength). The strongest high-value survivor is ',
         { b: '1 Tim 5:18 ~ Luke 10:7' }, ' (five-token run, ',
-        { em: 'Luke' }, '-form). 1 Cor 11 ~ Luke 22 has a longer run but Paul pre-dates Luke — shared liturgy, not Pauline dependence.',
+        { em: 'Luke' }, '-form). 1 Cor 11 ~ Luke 22 has a longer run but high formula risk — shared liturgy, not Pauline dependence. Automatic retrieval corroborates with ',
+        { b: exactHits.toLocaleString() }, ' exact-phrase hits ≥4 tokens across ',
+        { b: String(bookMatrix) }, ' book-to-book cells.',
       ],
       links: ['33_epistle_dossier.html', '19_case_studies.html', '24_epistle_gospel_heatmap.html', '23_exact_hits.html', '22_concept_signatures.html'] },
     { num: 7, q: 'Which apocryphal texts can be meaningfully compared?', conf: 'low', confLbl: 'Low',
@@ -237,6 +364,8 @@
     '31_gospel_square.html': '31 Gospel Square',
     '32_thomas_matrix.html': '32 Thomas × canon',
     '33_epistle_dossier.html': '33 Dossier',
+    '34_mark_luke.html': '34 Mark↔Luke',
+    '35_john_pairwise.html': '35 John pairwise',
   };
   for (const r of rq) {
     const card = el('div', { class: 'rq-card' });
@@ -309,8 +438,9 @@
     sg.appendChild(c);
   }
 
-  // 3-way compare table (preserved from previous landing)
+  // 4-way compare table: mm, ml, mld (masked), mkl (direct Mark-Luke from 18b)
   const mm = B.mm, ml = B.ml, mld = B.mld;
+  const mkl = MKL && MKL.summary ? MKL : null;
   const g = (e) => e.summary.global_metrics;
   const pairScore = (e) => e.summary.pair_score_summary || e.summary.primary_pair_score_summary;
   const cov_mm = coverage(mm), cov_ml = coverage(ml), cov_mld = mld ? coverage(mld) : null;
@@ -323,25 +453,45 @@
   const mmB = mm.burden || {};
   const mlB = ml.burden || {};
   const mldB = mld ? (mld.burden || {}) : {};
+  // Mark-Luke values sourced from h18b summary + burden_totals
+  const mklSum = mkl ? (mkl.summary || {}) : {};
+  const mklBur = mkl ? (mkl.burden_totals || mklSum.burden_totals || {}) : {};
+  const mklPrimary = mklSum.primary_chain_pairs != null ? mklSum.primary_chain_pairs : (mkl && mkl.pairs ? mkl.pairs.length : '—');
+  const mklLoose = mklSum.loose_blocks != null ? mklSum.loose_blocks : '—';
+  const mklTight = mklSum.tight_blocks != null ? mklSum.tight_blocks : '—';
+  const mklEchoCount = mkl && mkl.echoes ? mkl.echoes.length : (mklSum.secondary_echoes_score_ge_0_22 != null ? mklSum.secondary_echoes_score_ge_0_22 : '—');
+  const mklMean = mklSum.primary_chain_mean_score != null ? mklSum.primary_chain_mean_score.toFixed(3) : '—';
+  const mklGe080 = mklSum.primary_chain_pairs_score_ge_0_80 != null ? mklSum.primary_chain_pairs_score_ge_0_80 : '—';
+  const bMark = mklBur.Mark_prior_Luke_uses_Mark_or_Mark_like_source;
+  const bLuke = mklBur.Luke_prior_Mark_uses_Luke_or_Luke_like_source;
+  const bShared = mklBur.shared_narrative_or_oral_tradition_without_direct_use;
   const rows = [
-    ['Metric', 'Mark ↔ Matthew', 'Matt ↔ Luke', 'Matt ↔ Luke (masked)'],
-    ['Primary backbone pairs', g(mm).matched_pair_count, g(ml).matched_pair_count, mld ? g(mld).matched_pair_count : '—'],
-    ['Macro / loose blocks', g(mm).loose_block_count, g(ml).loose_block_count, mld ? g(mld).loose_block_count : '—'],
-    ['Micro / tight blocks', g(mm).tight_block_count, g(ml).tight_block_count, mld ? g(mld).tight_block_count : '—'],
-    ['Secondary echoes', mm.echoes.length, ml.echoes.length, mld ? mld.echoes.length : '—'],
+    ['Metric', 'Mark ↔ Matthew', 'Matt ↔ Luke', 'Matt ↔ Luke (masked)', 'Mark ↔ Luke (direct · 18b)'],
+    ['Primary backbone pairs', g(mm).matched_pair_count, g(ml).matched_pair_count,
+      mld ? g(mld).matched_pair_count : '—', mklPrimary],
+    ['Macro / loose blocks', g(mm).loose_block_count, g(ml).loose_block_count,
+      mld ? g(mld).loose_block_count : '—', mklLoose],
+    ['Micro / tight blocks', g(mm).tight_block_count, g(ml).tight_block_count,
+      mld ? g(mld).tight_block_count : '—', mklTight],
+    ['Secondary echoes', mm.echoes.length, ml.echoes.length,
+      mld ? mld.echoes.length : '—', mklEchoCount],
     ['a-gospel coverage', (cov_mm.a.pct*100).toFixed(1) + '%', (cov_ml.a.pct*100).toFixed(1) + '%',
-      cov_mld ? (cov_mld.a.pct*100).toFixed(1) + '% of unmasked' : '—'],
+      cov_mld ? (cov_mld.a.pct*100).toFixed(1) + '% of unmasked' : '—', '—'],
     ['b-gospel coverage', (cov_mm.b.pct*100).toFixed(1) + '%', (cov_ml.b.pct*100).toFixed(1) + '%',
-      cov_mld ? (cov_mld.b.pct*100).toFixed(1) + '% of unmasked' : '—'],
+      cov_mld ? (cov_mld.b.pct*100).toFixed(1) + '% of unmasked' : '—', '—'],
     ['Mean pair score', pairScore(mm).mean.toFixed(3), pairScore(ml).mean.toFixed(3),
-      mld ? pairScore(mld).mean.toFixed(3) : '—'],
+      mld ? pairScore(mld).mean.toFixed(3) : '—', mklMean],
     ['Pairs with score ≥ 0.80', pairScore(mm)['ge_0.80'], pairScore(ml)['ge_0.80'],
-      mld ? pairScore(mld)['ge_0.80'] : '—'],
+      mld ? pairScore(mld)['ge_0.80'] : '—', mklGe080],
     ['"a is prior" burden total', burdenTotal(mmB.mark_prior) || '—', burdenTotal(mlB.matt_prior) || '—',
-      mld ? burdenTotal(mldB.matt_prior_Luke_uses_Matthew) : '—'],
+      mld ? burdenTotal(mldB.matt_prior_Luke_uses_Matthew) : '—',
+      typeof bMark === 'number' ? bMark.toFixed(1) : '—'],
     ['"b is prior" burden total', burdenTotal(mmB.matt_prior) || '—', burdenTotal(mlB.luke_prior) || '—',
-      mld ? burdenTotal(mldB.luke_prior_Matthew_uses_Luke) : '—'],
-    ['Common-source/oral burden', '—', '—', mld ? burdenTotal(mldB.common_source_or_oral) : '—'],
+      mld ? burdenTotal(mldB.luke_prior_Matthew_uses_Luke) : '—',
+      typeof bLuke === 'number' ? bLuke.toFixed(1) : '—'],
+    ['Common-source/oral burden', '—', '—',
+      mld ? burdenTotal(mldB.common_source_or_oral) : '—',
+      typeof bShared === 'number' ? bShared.toFixed(1) : '—'],
   ];
   const t = document.getElementById('compareTable');
   const thead = el('thead');
@@ -356,18 +506,22 @@
   }
   t.appendChild(tb);
 
-  // jtea headline counts
-  if (J) {
+  // Headline counts — mixed jtea (legacy low-verbatim) + h18b (new pairwise/matrix layers)
+  if (J || H) {
     const jc = document.getElementById('jteaCounts');
-    const networkCt = (J.network_edges || []).length;
-    const conceptCt = (J.concepts || []).length;
-    const anchCt = (J.anchors || []).length;
+    const networkCt = (J && J.network_edges) ? J.network_edges.length : 0;
+    const conceptCt = (J && J.concepts) ? J.concepts.length : 0;
+    const anchCt = (J && J.anchors) ? J.anchors.length : 0;
+    const caseStudiesCt = (J && J.case_studies) ? J.case_studies.length : 0;
+    const johnAnchorsCt = johnAnchors || anchCt;
     const jcParts = [
-      [networkCt.toLocaleString(), ' candidate intertext edges'],
-      [String(anchCt), ' John/Synoptic anchors'],
-      [String(thomasReg), ' Thomas/canonical parallels'],
-      [String(conceptCt), ' cross-corpus concept signatures'],
-      [String(caseStudies), ' targeted case studies'],
+      [String(johnAnchorsCt), ' John anchor-registry entries (18b)'],
+      [String(johnMarkCand + '·' + johnMattCand + '·' + johnLukeCand), ' John↔Mark/Matt/Luke pairwise candidates (18b, score ≥ 0.25)'],
+      [String(thomasMatrix.length || thomasCoptic), ' Thomas logia in matrix (18b · ' + (thomasRegistered || 46) + ' with canonical parallels)'],
+      [String(epistleCases.length || 60), ' epistle–Gospel case dossiers (18b · ' + (epistleTargeted.length || 10) + ' targeted)'],
+      [networkCt.toLocaleString(), ' candidate intertext edges (jtea)'],
+      [String(conceptCt), ' cross-corpus concept signatures (jtea)'],
+      [String(caseStudiesCt), ' targeted case studies (jtea)'],
       [String(apocrypha), ' apocryphal works inventoried'],
     ];
     jcParts.forEach(([n, rest], i) => {
@@ -379,16 +533,50 @@
     document.getElementById('jteaSection').style.display = 'none';
   }
 
-  // ---- full catalog (collapsible mirror of the nav) ----
+  // ---- full catalog, ordered by 18b priority schedule ----
   const catalog = [
-    ['Start here', [
+    ['Rank 1 · Conclusions + claim ladder', [
       ['index.html', 'Overview (this page)'],
-      ['26_conclusions.html', 'Conclusions · interpretive synthesis'],
+      ['26_conclusions.html', 'Conclusions · interpretive synthesis (h18b nav)'],
       ['29_jtea_claim_evidence.html', 'Claim → evidence · 67 rerun-audited claims'],
       ['30_reader.html', 'Reader · Greek Gospels with parallel overlays'],
-      ['31_gospel_square.html', 'Gospel Square · 4-Gospel relationship matrix'],
     ]],
-    ['Synoptic narrative', [
+    ['Rank 2 · Canonical Gospel square', [
+      ['31_gospel_square.html', '31 · Gospel Square · 4-Gospel relationship matrix'],
+    ]],
+    ['Rank 3 · Mark ↔ Luke direct (18b)', [
+      ['34_mark_luke.html', '34 · Mark↔Luke · primary chain, blocks, burden, ending sensitivity'],
+    ]],
+    ['Rank 4 · John pairwise (18b)', [
+      ['35_john_pairwise.html', '35 · John↔Mark/Matthew/Luke · pairwise dashboards'],
+      ['20_john_anchors.html', '20 · John anchors (legacy jtea anchor episodes)'],
+      ['18_intertext_network.html', '18 · Intertext network'],
+    ]],
+    ['Rank 5 · Matt ↔ Luke masked (Q core)', [
+      ['15_q_core.html#mld', '15 · Q core reader'],
+      ['14_mask_audit.html#mld', '14 · Mask audit'],
+      ['10_displacement.html#ml', '10 · Displacement'],
+      ['11_echo_gallery.html#ml', '11 · Echo gallery'],
+      ['16_matt_verse_card.html', '16 · Matthew verse card (superseded by Reader)'],
+    ]],
+    ['Rank 6 · Thomas logion matrix (18b)', [
+      ['32_thomas_matrix.html', '32 · Thomas × Gospel logion matrix + dossiers'],
+      ['21_thomas_parallels.html', '21 · Thomas parallels (legacy)'],
+    ]],
+    ['Rank 7 · Epistle case dossiers (18b)', [
+      ['33_epistle_dossier.html', '33 · Epistle dossier · 60 cases, three-axis grading'],
+      ['19_case_studies.html', '19 · Targeted case studies (legacy)'],
+      ['24_epistle_gospel_heatmap.html', '24 · Epistle × Gospel heatmap'],
+      ['23_exact_hits.html', '23 · Exact-phrase hits'],
+      ['22_concept_signatures.html', '22 · Concept signatures'],
+    ]],
+    ['Rank 8 · Audit & sensitivity', [
+      ['27_mm_sensitivity.html#mm', '27 · Sensitivity · Mark↔Matthew'],
+      ['28_mld_regime_sensitivity.html#mld', '28 · Sensitivity · masked Q-core'],
+      ['17_jtea_overview.html', '17 · Low-verbatim package tour (legacy)'],
+      ['25_apocrypha_inventory.html', '25 · Apocrypha inventory (inventory only)'],
+    ]],
+    ['Supporting Synoptic narrative pages (mm-anchored)', [
       ['01_synoptic_map.html#mm', '01 · Synoptic map'],
       ['02_block_ribbon.html#mm', '02 · Block ribbon'],
       ['03_burden_ledger.html#mm', '03 · Direction burden'],
@@ -400,36 +588,6 @@
       ['09_pair_explorer.html#mm', '09 · Pair explorer'],
       ['12_variants.html#mm', '12 · Variants'],
       ['13_triangle.html#mm', '13 · Synoptic triangle'],
-    ]],
-    ['Q & double tradition', [
-      ['10_displacement.html#ml', '10 · Displacement'],
-      ['11_echo_gallery.html#ml', '11 · Echo gallery'],
-      ['14_mask_audit.html#mld', '14 · Mask audit'],
-      ['15_q_core.html#mld', '15 · Q core reader'],
-      ['16_matt_verse_card.html', '16 · Matthew verse card (superseded by Reader)'],
-    ]],
-    ['John & Synoptics', [
-      ['20_john_anchors.html', '20 · John/Synoptic anchors'],
-      ['18_intertext_network.html', '18 · Intertext network'],
-    ]],
-    ['Thomas', [
-      ['21_thomas_parallels.html', '21 · Thomas parallels'],
-      ['32_thomas_matrix.html', '32 · Thomas × canon matrix'],
-    ]],
-    ['Epistles & sayings', [
-      ['19_case_studies.html', '19 · Case studies'],
-      ['22_concept_signatures.html', '22 · Concept signatures'],
-      ['23_exact_hits.html', '23 · Exact-phrase hits'],
-      ['24_epistle_gospel_heatmap.html', '24 · Epistle × Gospel heatmap'],
-      ['33_epistle_dossier.html', '33 · Epistle dossier'],
-    ]],
-    ['Apocrypha', [
-      ['25_apocrypha_inventory.html', '25 · Apocrypha inventory (inventory only)'],
-    ]],
-    ['Audit & reproducibility', [
-      ['17_jtea_overview.html', '17 · Low-verbatim package tour'],
-      ['27_mm_sensitivity.html#mm', '27 · Sensitivity · Mark↔Matthew'],
-      ['28_mld_regime_sensitivity.html#mld', '28 · Sensitivity · masked Q-core'],
     ]],
   ];
   const body = document.getElementById('vizCatalogBody');
