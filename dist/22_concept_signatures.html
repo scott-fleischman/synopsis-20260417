@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Concept signatures · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .concept-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .concept-card { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 14px 18px; }
+  .concept-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--rule-soft); padding-bottom: 8px; margin-bottom: 10px; }
+  .concept-head h3 { margin: 0; font-family: var(--serif); font-size: 16px; }
+  .concept-head .signal { font-size: 11px; color: var(--ink-mute); font-family: var(--sans); }
+  .corpus-row { display: grid; grid-template-columns: 80px 1fr; gap: 8px; margin-bottom: 4px; font-size: 13px; align-items: baseline; }
+  .corpus-row .label { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .04em; font-family: var(--sans); }
+  .corpus-row .refs .ref-chip { display: inline-block; font-family: var(--mono); font-size: 11px; padding: 1px 7px; border-radius: 2px; margin: 2px 3px 2px 0; }
+  .corpus-row.canon .ref-chip { background: #dee8f0; color: var(--matt); }
+  .corpus-row.epistle .ref-chip { background: #efe8d4; color: var(--accent); }
+  .corpus-row.thomas .ref-chip { background: #f5e2e2; color: var(--mark); }
+  .corpus-row .refs .empty { color: var(--ink-mute); font-style: italic; font-size: 11px; }
+  .burden-bars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+  .burden-bar { border: 1px solid var(--rule); border-radius: 2px; padding: 6px 8px; background: #fbfaf6; }
+  .burden-bar .label { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .04em; }
+  .burden-bar .level { font-family: var(--serif); font-size: 13px; margin-top: 3px; }
+  .level.very-high { color: #6a1a1a; }
+  .level.high { color: #8b2e2e; }
+  .level.medium-high { color: #a8551a; }
+  .level.medium { color: #a6741c; }
+  .level.low-medium { color: #7a6e1a; }
+  .level.low { color: #2a5a1a; }
+  .level.other { color: var(--ink-mute); }
+  .summary-stat { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+  .summary-stat .cell { text-align: center; }
+  .summary-stat .cell .n { font-family: var(--serif); font-size: 20px; color: var(--mark); }
+  .summary-stat .cell .k { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; }
+  .matrix { width: 100%; border-collapse: collapse; margin-bottom: 16px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .matrix th, .matrix td { padding: 6px 10px; text-align: center; border-bottom: 1px solid var(--rule-soft); font-size: 11px; }
+  .matrix th { background: #fbfaf6; color: var(--ink-soft); font-family: var(--sans); text-transform: uppercase; letter-spacing: .04em; font-size: 10px; }
+  .matrix td.concept-name { text-align: left; font-family: var(--serif); font-size: 13px; color: var(--ink); }
+  .matrix td.burden { font-family: var(--mono); }
+  .matrix tbody tr:hover { background: var(--rule-soft); cursor: pointer; }
+  .matrix td.presence-dot { color: var(--mark); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Concept signatures</h1>
+    <span class="sub">Cross-corpus motif clusters spanning Gospels, epistles, and Thomas</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    A <em>concept signature</em> is a thematic cluster that appears across two or more corpus layers without necessarily showing strong verbal agreement — the kind of case where the automatic retrieval layer scores poorly but a reader immediately recognizes the saying. Each signature below carries four burden scores: <b>independence</b> (how hard it is to argue these cases arose independently), <b>direct literary</b> (dependence on a specific written text), <b>oral tradition</b> (stable gist transmitted orally), and <b>common written source</b> (shared lost written tradition). The relative weighting of these four is itself the diagnostic — e.g. <code>worker_wages</code> shows <em>very_high</em> independence burden because the verbal match (<span class="g" style="font-family:var(--greek);">ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ</span>) is too specific to arise twice by accident.
+  </p>
+
+  <div class="summary-stat" id="summary_stat"></div>
+
+  <h2>Cross-corpus presence matrix</h2>
+  <div class="caption">Concepts listed by presence across corpora. <span style="color:var(--mark);">●</span> = present in that corpus layer. Burden cells show direct-literary / oral / common-source / independence in compact form.</div>
+  <div style="overflow-x:auto;">
+    <table class="matrix" id="matrix">
+      <thead><tr>
+        <th style="text-align:left;">Concept</th>
+        <th>Signal type</th>
+        <th>Canon</th><th>Epistle</th><th>Thomas</th>
+        <th>Direct lit.</th><th>Oral</th><th>Common src.</th><th>Independence</th>
+      </tr></thead>
+      <tbody id="matrix_tbody"></tbody>
+    </table>
+  </div>
+
+  <h2>Concept cards</h2>
+  <div class="caption">Same data, card form — click any row in the matrix to jump to its card.</div>
+  <div class="concept-grid" id="cards"></div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('22_concept_signatures.html');
+  const J = SH.BUNDLE.jtea;
+  const concepts = J.concepts || [];
+
+  function lvlClass(v) {
+    const s = String(v || '').toLowerCase().replace(/\s+/g, '-').replace(/_/g, '-');
+    if (s.indexOf('very') >= 0) return 'very-high';
+    if (s === 'high') return 'high';
+    if (s.indexOf('medium-to-high') >= 0) return 'medium-high';
+    if (s === 'medium') return 'medium';
+    if (s.indexOf('low-to-medium') >= 0) return 'low-medium';
+    if (s.indexOf('low') >= 0) return 'low';
+    return 'other';
+  }
+
+  // --- Summary stats
+  const ss = document.getElementById('summary_stat');
+  const n = concepts.length;
+  const inCanon = concepts.filter(c => (c.canonical_refs || []).length).length;
+  const inEp = concepts.filter(c => (c.epistle_refs || []).length).length;
+  const inTh = concepts.filter(c => (c.thomas_logia || []).length).length;
+  [
+    ['Concepts', n, ''],
+    ['With canonical', inCanon, ''],
+    ['With epistle', inEp, ''],
+    ['With Thomas', inTh, ''],
+  ].forEach(([k, v, extra]) => {
+    ss.appendChild(SH.el('div', { class: 'cell' },
+      SH.el('div', { class: 'n' }, String(v)),
+      SH.el('div', { class: 'k' }, k)));
+  });
+
+  // --- Matrix
+  const mt = document.getElementById('matrix_tbody');
+  concepts.forEach((c, i) => {
+    const tr = document.createElement('tr');
+    tr.addEventListener('click', () => {
+      const el = document.getElementById('c_' + i);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    tr.appendChild(SH.el('td', { class: 'concept-name' }, (c.concept_id || '').replace(/_/g, ' ')));
+    tr.appendChild(SH.el('td', { class: 'small', style: 'text-align:left;' }, c.signal_type || ''));
+    tr.appendChild(SH.el('td', { class: 'presence-dot' }, (c.canonical_refs || []).length ? '●' : ''));
+    tr.appendChild(SH.el('td', { class: 'presence-dot' }, (c.epistle_refs || []).length ? '●' : ''));
+    tr.appendChild(SH.el('td', { class: 'presence-dot' }, (c.thomas_logia || []).length ? '●' : ''));
+    tr.appendChild(SH.el('td', { class: 'burden' },
+      SH.el('span', { class: 'level ' + lvlClass(c.direct_literary_burden) }, c.direct_literary_burden || '—')));
+    tr.appendChild(SH.el('td', { class: 'burden' },
+      SH.el('span', { class: 'level ' + lvlClass(c.oral_tradition_burden) }, c.oral_tradition_burden || '—')));
+    tr.appendChild(SH.el('td', { class: 'burden' },
+      SH.el('span', { class: 'level ' + lvlClass(c.common_written_source_burden) }, c.common_written_source_burden || '—')));
+    tr.appendChild(SH.el('td', { class: 'burden' },
+      SH.el('span', { class: 'level ' + lvlClass(c.independence_burden) }, c.independence_burden || '—')));
+    mt.appendChild(tr);
+  });
+
+  // --- Cards
+  const cards = document.getElementById('cards');
+  concepts.forEach((c, i) => {
+    const card = document.createElement('div');
+    card.className = 'concept-card';
+    card.id = 'c_' + i;
+
+    const head = SH.el('div', { class: 'concept-head' },
+      SH.el('h3', null, (c.concept_id || '').replace(/_/g, ' ')),
+      SH.el('div', { class: 'signal' }, c.signal_type || ''));
+    card.appendChild(head);
+
+    // Corpus rows
+    const mkRow = (cls, label, refs) => {
+      const row = SH.el('div', { class: 'corpus-row ' + cls },
+        SH.el('span', { class: 'label' }, label));
+      const refsDiv = document.createElement('div');
+      refsDiv.className = 'refs';
+      if (refs && refs.length) {
+        refs.forEach(r => refsDiv.appendChild(SH.el('span', { class: 'ref-chip' }, String(r))));
+      } else {
+        refsDiv.appendChild(SH.el('span', { class: 'empty' }, '—'));
+      }
+      row.appendChild(refsDiv);
+      return row;
+    };
+    card.appendChild(mkRow('canon', 'Canonical', c.canonical_refs || []));
+    card.appendChild(mkRow('epistle', 'Epistle', c.epistle_refs || []));
+    card.appendChild(mkRow('thomas', 'Thomas', (c.thomas_logia || []).map(t => 'Th ' + t)));
+
+    // Burden bars
+    const bb = SH.el('div', { class: 'burden-bars' });
+    const burdens = [
+      ['Direct literary', c.direct_literary_burden],
+      ['Oral tradition', c.oral_tradition_burden],
+      ['Common source', c.common_written_source_burden],
+      ['Independence', c.independence_burden],
+    ];
+    burdens.forEach(([k, v]) => {
+      bb.appendChild(SH.el('div', { class: 'burden-bar' },
+        SH.el('div', { class: 'label' }, k),
+        SH.el('div', { class: 'level ' + lvlClass(v) }, v || '—')));
+    });
+    card.appendChild(bb);
+
+    cards.appendChild(card);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Q core reader — Markan-masked primary pairs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .qc-layout { display: grid; grid-template-columns: 320px 1fr; gap: 22px; align-items: flex-start; }
+  .qc-list { max-height: 78vh; overflow-y: auto; border: 1px solid var(--rule); border-radius: 4px; background: #fff; }
+  .qc-list .item {
+    display: block; padding: 10px 12px; border-bottom: 1px solid var(--rule-soft);
+    cursor: pointer; color: var(--ink); font-size: 13px;
+  }
+  .qc-list .item:hover { background: var(--rule-soft); }
+  .qc-list .item.active { background: #f3e2ce; }
+  .qc-list .item .refs { font-family: var(--serif); color: var(--matt); font-size: 13px; }
+  .qc-list .item .refs b { color: var(--mark); font-weight: 500; }
+  .qc-list .item .meta { display: flex; gap: 8px; margin-top: 3px; font-size: 10px; color: var(--ink-mute); }
+  .qc-list .item .sc { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+  .qc-detail { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 22px 26px; }
+  .qc-detail h2 { margin-bottom: 4px; }
+  .qc-detail .pair-refs {
+    font-family: var(--serif); font-size: 18px; color: var(--ink);
+    display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap;
+  }
+  .qc-detail .pair-refs .mt { color: var(--mark); }
+  .qc-detail .pair-refs .lk { color: var(--matt); }
+  .qc-detail .stat-bar { display: flex; gap: 20px; flex-wrap: wrap; margin: 14px 0 18px; font-size: 12px; color: var(--ink-mute); }
+  .qc-detail .stat-bar b { font-family: var(--serif); color: var(--ink); font-size: 14px; }
+  .qc-texts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .qc-texts .side { border-top: 2px solid; padding-top: 10px; }
+  .qc-texts .side.a { border-top-color: var(--mark); }
+  .qc-texts .side.b { border-top-color: var(--matt); }
+  .qc-texts .side .lab {
+    font-family: var(--serif); font-size: 13px; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .qc-texts .side .text {
+    font-family: var(--greek); font-size: 17px; line-height: 1.62; color: var(--ink);
+  }
+  .qc-texts .side .text .sh { background: #e8ebd7; padding: 0 2px; border-radius: 2px; }
+  .qc-texts .side .text .only { background: #fbe7d3; padding: 0 2px; border-radius: 2px; color: var(--warn); font-weight: 500; }
+
+  .lemma-partitions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .lemma-partitions .lp {
+    border: 1px solid var(--rule); border-radius: 4px; padding: 12px 14px; background: var(--bg-card);
+  }
+  .lemma-partitions .lp .lab {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+    color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .lemma-partitions .lp .g {
+    font-family: var(--greek); font-size: 15px; line-height: 1.7; color: var(--ink);
+  }
+  .lemma-partitions .lp.shared { border-left: 3px solid #6b8e23; }
+  .lemma-partitions .lp.matt { border-left: 3px solid var(--mark); }
+  .lemma-partitions .lp.luke { border-left: 3px solid var(--matt); }
+
+  .diff-section { margin: 16px 0; }
+  .diff-section h3 { margin-bottom: 6px; font-size: 13px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+  .diff-section .g { font-family: var(--greek); font-size: 16px; line-height: 1.55; background: #fdf5eb; padding: 10px 14px; border-radius: 3px; border-left: 3px solid var(--warn); }
+  .diff-section .g .arrow { color: var(--warn); font-weight: 700; padding: 0 4px; }
+
+  .chip.tag { background: #eaddca; color: var(--accent); }
+  .chip.cat { background: #dce8dc; color: #3c6a3c; }
+  .variant-notes { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); background: #faf8ed; padding: 8px 10px; border-radius: 3px; border-left: 2px solid var(--accent); white-space: pre-wrap; }
+  .filters { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 8px 10px; border-bottom: 1px solid var(--rule-soft); }
+  .filters input, .filters select { font-size: 12px; padding: 4px 6px; }
+  .sort-btns { display: flex; gap: 4px; margin-left: auto; }
+  .sort-btns button { font-size: 10px; padding: 3px 8px; }
+  .sort-btns button.active { background: var(--ink); color: #fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Q core reader</h1>
+    <span class="sub">The 49 primary pairs that survive Markan masking, laid out for close Greek reading.</span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    This is the masked double-tradition backbone: Matthew–Luke pairs that remain after removing verses likely owed to Mark. Each card shows both Greek texts side-by-side with <em>shared lemmas</em> highlighted, lists the shared / Matt-only / Luke-only lemma partition (the common-source signal and each side's residual), the rendered lemma and surface diffs, and any SBLGNT apparatus notes on either verse. This is what a Greek-reading expert should read when evaluating the Q hypothesis at the token level.
+  </p>
+
+  <div class="qc-layout">
+    <div class="qc-list-wrap">
+      <div class="filters">
+        <input id="fSearch" type="search" placeholder="search ref or lemma" style="flex:1;min-width:120px;" />
+        <div class="sort-btns">
+          <button data-sort="chain" class="active">chain</button>
+          <button data-sort="score">score</button>
+          <button data-sort="shared">shared</button>
+        </div>
+      </div>
+      <div class="qc-list" id="qcList"></div>
+    </div>
+    <div class="qc-detail" id="qcDetail"></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('15_q_core.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'), { only: ['mld'] });
+  const D = SH.D;
+  if (D.name !== 'mld') {
+    const host = document.querySelector('.qc-layout');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    host.appendChild(SH.el('div', { class: 'card' },
+      SH.el('div', null, 'This view only applies to the Markan-masked dataset.'),
+      SH.el('a', { href: '15_q_core.html#mld' }, 'Switch to masked dataset')));
+    return;
+  }
+
+  const pairs = D.pairs;
+  const detailed = D.detailed || {};
+  const variantsByPair = new Map();
+  for (const v of (D.variants || [])) variantsByPair.set(v.pair_id, v);
+
+  const listHost = document.getElementById('qcList');
+  const detailHost = document.getElementById('qcDetail');
+
+  let currentKey = null;
+  let sortBy = 'chain';
+
+  // Build the search haystack once per pair for fast filter.
+  for (const p of pairs) {
+    p._hay = [p.a_ref, p.b_ref, ...(p.common || []), ...(p.a_only_lemmas || []), ...(p.b_only_lemmas || [])]
+      .join(' ').toLowerCase();
+  }
+
+  function sorted(list) {
+    const l = list.slice();
+    if (sortBy === 'score') l.sort((a, b) => b.score - a.score);
+    else if (sortBy === 'shared') l.sort((a, b) => (b.common?.length || 0) - (a.common?.length || 0));
+    else l.sort((a, b) => a.pair_id - b.pair_id);
+    return l;
+  }
+
+  function renderList() {
+    while (listHost.firstChild) listHost.removeChild(listHost.firstChild);
+    const q = document.getElementById('fSearch').value.trim().toLowerCase();
+    const rows = sorted(pairs.filter(p => !q || p._hay.indexOf(q) >= 0));
+    for (const p of rows) {
+      const key = p.a_ref + '|' + p.b_ref;
+      const item = SH.el('div', { class: 'item' + (currentKey === key ? ' active' : '') });
+      item.addEventListener('click', () => {
+        currentKey = key;
+        window.location.hash = D.name + '/' + key;
+        renderList();
+        renderDetail(p);
+      });
+      const refs = SH.el('div', { class: 'refs' },
+        SH.el('b', null, p.a_ref),
+        ' ≈ ',
+        p.b_ref);
+      const meta = SH.el('div', { class: 'meta' },
+        SH.el('span', { class: 'sc' }, 'score ' + p.score.toFixed(3)),
+        SH.el('span', null, 'shared ' + (p.common?.length || 0)));
+      const tags = (p.tags || []).slice(0, 2).map(t => t.replace(/_/g, ' '));
+      if (tags.length) meta.appendChild(SH.el('span', { style: 'color:var(--accent)' }, tags.join(' · ')));
+      item.appendChild(refs);
+      item.appendChild(meta);
+      listHost.appendChild(item);
+    }
+  }
+
+  // Highlight shared content lemmas inside a Greek text by simple surface-form match.
+  // The match is best-effort — shared_lemmas is a lemma list, not a surface list —
+  // but the dictionary form is very often a substring of the inflected form. Failures
+  // just mean no highlight, which is an acceptable degradation for a reader aid.
+  function renderHighlighted(text, sharedLemmas) {
+    if (!text) return SH.el('span', null, '');
+    const root = SH.el('span');
+    let remaining = text;
+    const sl = (sharedLemmas || []).slice().sort((a, b) => b.length - a.length);
+    // Walk surface tokens; highlight any token whose lemma form prefix (>=3 chars) appears.
+    const tokens = text.split(/(\s+)/);
+    for (const tok of tokens) {
+      if (/^\s+$/.test(tok)) { root.appendChild(document.createTextNode(tok)); continue; }
+      let matched = null;
+      for (const lemma of sl) {
+        if (!lemma || lemma.length < 2) continue;
+        const prefix = lemma.slice(0, Math.max(3, Math.min(lemma.length, 4)));
+        // Normalize away a trailing diacritic like final sigma
+        if (tok.length >= prefix.length && tok.normalize('NFD').toLowerCase().includes(prefix.normalize('NFD').toLowerCase())) {
+          matched = lemma; break;
+        }
+      }
+      if (matched) root.appendChild(SH.el('span', { class: 'sh', title: 'shared lemma: ' + matched }, tok));
+      else root.appendChild(document.createTextNode(tok));
+    }
+    return root;
+  }
+
+  function renderDetail(p) {
+    while (detailHost.firstChild) detailHost.removeChild(detailHost.firstChild);
+    const det = detailed[p.a_ref + '|' + p.b_ref] || {};
+    const vnotes = variantsByPair.get(p.pair_id) || {};
+
+    const header = SH.el('div', { class: 'pair-refs' },
+      SH.el('span', { class: 'mt' }, p.a_ref),
+      SH.el('span', { style: 'color:var(--ink-mute)' }, '↔'),
+      SH.el('span', { class: 'lk' }, p.b_ref),
+      SH.el('span', { class: 'small', style: 'margin-left:12px;font-family:var(--sans);color:var(--ink-mute);' },
+        'pair #' + p.pair_id));
+    detailHost.appendChild(header);
+
+    const stats = SH.el('div', { class: 'stat-bar' },
+      SH.el('span', null, 'score ', SH.el('b', null, p.score.toFixed(3))),
+      SH.el('span', null, 'LCS ', SH.el('b', null, p.lcs.toFixed(3))),
+      SH.el('span', null, 'shared lemmas ', SH.el('b', null, String(p.common?.length || 0))),
+      SH.el('span', null, 'Matt-only ', SH.el('b', null, String(p.a_only_lemmas?.length || 0))),
+      SH.el('span', null, 'Luke-only ', SH.el('b', null, String(p.b_only_lemmas?.length || 0))),
+      SH.el('span', null, 'Matt tokens ', SH.el('b', null, String(p.a_tokens))),
+      SH.el('span', null, 'Luke tokens ', SH.el('b', null, String(p.b_tokens))));
+    detailHost.appendChild(stats);
+
+    // Tag chips
+    if (p.tags?.length) {
+      const tr = SH.el('div', { style: 'margin-bottom:14px;' });
+      for (const t of p.tags) tr.appendChild(SH.el('span', { class: 'chip tag' }, t.replace(/_/g, ' ')));
+      detailHost.appendChild(tr);
+    }
+
+    // Greek side-by-side
+    const texts = SH.el('div', { class: 'qc-texts' });
+    const a = SH.el('div', { class: 'side a' },
+      SH.el('div', { class: 'lab' }, 'Matthew · ' + p.a_ref),
+      SH.el('div', { class: 'text' }, renderHighlighted(p.a_text, p.common)));
+    const b = SH.el('div', { class: 'side b' },
+      SH.el('div', { class: 'lab' }, 'Luke · ' + p.b_ref),
+      SH.el('div', { class: 'text' }, renderHighlighted(p.b_text, p.common)));
+    texts.appendChild(a);
+    texts.appendChild(b);
+    detailHost.appendChild(texts);
+
+    // Lemma partitions
+    const lp = SH.el('div', { class: 'lemma-partitions' });
+    lp.appendChild(SH.el('div', { class: 'lp shared' },
+      SH.el('div', { class: 'lab' }, 'Shared content lemmas (' + (p.common?.length || 0) + ')'),
+      SH.el('div', { class: 'g' }, (p.common || []).join(' · ') || '—')));
+    lp.appendChild(SH.el('div', { class: 'lp matt' },
+      SH.el('div', { class: 'lab' }, 'Matthew-only (' + (p.a_only_lemmas?.length || 0) + ')'),
+      SH.el('div', { class: 'g' }, (p.a_only_lemmas || []).join(' · ') || '—')));
+    lp.appendChild(SH.el('div', { class: 'lp luke' },
+      SH.el('div', { class: 'lab' }, 'Luke-only (' + (p.b_only_lemmas?.length || 0) + ')'),
+      SH.el('div', { class: 'g' }, (p.b_only_lemmas || []).join(' · ') || '—')));
+    detailHost.appendChild(lp);
+
+    // Rendered diffs
+    const fmtArrowString = (s) => {
+      const node = SH.el('div', { class: 'g' });
+      let remainder = s;
+      while (remainder.length) {
+        const idx = remainder.indexOf('→');
+        if (idx < 0) { node.appendChild(document.createTextNode(remainder)); break; }
+        node.appendChild(document.createTextNode(remainder.slice(0, idx)));
+        node.appendChild(SH.el('span', { class: 'arrow' }, '→'));
+        remainder = remainder.slice(idx + 1);
+      }
+      return node;
+    };
+
+    if (p.lemma_diff) {
+      const ds = SH.el('div', { class: 'diff-section' },
+        SH.el('h3', null, 'Lemma diff'),
+        fmtArrowString(p.lemma_diff));
+      detailHost.appendChild(ds);
+    }
+    if (p.surface_diff) {
+      const ds = SH.el('div', { class: 'diff-section' },
+        SH.el('h3', null, 'Surface diff'),
+        fmtArrowString(p.surface_diff));
+      detailHost.appendChild(ds);
+    }
+
+    // Variant notes
+    if ((vnotes.matt_variant_notes?.length || 0) + (vnotes.luke_variant_notes?.length || 0) > 0) {
+      const vn = SH.el('div', { class: 'diff-section' },
+        SH.el('h3', null, 'SBLGNT apparatus'));
+      if (vnotes.matt_variant_notes?.length) {
+        vn.appendChild(SH.el('div', { class: 'small', style: 'color:var(--mark);margin:4px 0 2px;' },
+          'Matthew — ' + p.a_ref));
+        vn.appendChild(SH.el('pre', { class: 'variant-notes' },
+          vnotes.matt_variant_notes.join('\n')));
+      }
+      if (vnotes.luke_variant_notes?.length) {
+        vn.appendChild(SH.el('div', { class: 'small', style: 'color:var(--matt);margin:10px 0 2px;' },
+          'Luke — ' + p.b_ref));
+        vn.appendChild(SH.el('pre', { class: 'variant-notes' },
+          vnotes.luke_variant_notes.join('\n')));
+      }
+      detailHost.appendChild(vn);
+    }
+
+    // Cross-link to ML pair explorer for the non-masked variant, when it exists.
+    if (SH.BUNDLE.ml) {
+      const mlPair = SH.BUNDLE.ml.pairs.find(x => x.a_ref === p.a_ref && x.b_ref === p.b_ref);
+      if (mlPair) {
+        const link = SH.el('div', { class: 'small', style: 'margin-top:16px;color:var(--ink-mute);' },
+          'Also present in the unmasked Matt↔Luke analysis: ',
+          SH.el('a', { href: '09_pair_explorer.html#ml/' + encodeURIComponent(p.a_ref + '|' + p.b_ref) },
+            'open in pair explorer'));
+        detailHost.appendChild(link);
+      } else {
+        detailHost.appendChild(SH.el('div', { class: 'small', style: 'margin-top:16px;color:var(--ink-mute);' },
+          'Not on the unmasked Matt↔Luke primary chain (secondary in that dataset, or dropped).'));
+      }
+    }
+  }
+
+  // Sort buttons
+  document.querySelectorAll('.sort-btns button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sort-btns button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      sortBy = btn.getAttribute('data-sort');
+      renderList();
+    });
+  });
+  document.getElementById('fSearch').addEventListener('input', renderList);
+
+  // Pick initial pair from URL hash or default to first
+  const hash = (window.location.hash || '').replace('#', '');
+  const parts = hash.split('/');
+  let initial = null;
+  if (parts.length === 2 && parts[0] === 'mld' && parts[1]) {
+    const pk = decodeURIComponent(parts[1]);
+    initial = pairs.find(p => (p.a_ref + '|' + p.b_ref) === pk);
+  }
+  if (!initial) initial = pairs[0];
+  if (initial) {
+    currentKey = initial.a_ref + '|' + initial.b_ref;
+    renderList();
+    renderDetail(initial);
+  }
+})();
+</script>
+</body>
+</html>

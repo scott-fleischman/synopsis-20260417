@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Apocrypha inventory · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .corpus-section { margin-bottom: 22px; }
+  .corpus-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid var(--rule); margin-bottom: 12px; }
+  .corpus-head h2 { margin: 0; }
+  .corpus-head .sub { font-size: 12px; color: var(--ink-mute); font-style: italic; }
+  .work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+  .work-card { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+  .work-card h4 { margin: 0; font-family: var(--serif); font-size: 14px; font-weight: 500; }
+  .work-card .layer-tag { font-size: 10px; padding: 2px 7px; border-radius: 2px; background: var(--rule-soft); color: var(--ink-mute); align-self: flex-start; font-family: var(--sans); }
+  .work-card .layer-tag.inventory { background: #f3e2ce; color: var(--warn); }
+  .work-card .layer-tag.partial { background: #efe8d4; color: var(--accent); }
+  .work-card .signal { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+  .intro-stat { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .intro-stat .cell { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 12px 14px; }
+  .intro-stat .cell .n { font-family: var(--serif); font-size: 22px; color: var(--mark); }
+  .intro-stat .cell .k { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+  .future-note { background: #fbfaf6; border: 1px dashed var(--rule); border-radius: 3px; padding: 12px 16px; margin-top: 24px; font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Apocrypha inventory</h1>
+    <span class="sub">M. R. James corpus — inventory layer, not full primary-language comparison</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    This is the <em>scope</em> layer only, not a lexical analysis. The analyses elsewhere in this package work on Greek (SBLGNT) and Coptic (Coptic Scriptorium Thomas), which are the texts we have in forms amenable to automatic retrieval. The broader apocryphal corpus — infancy gospels, apocryphal acts, passion and resurrection accounts, Gnostic tractates — is enumerated here as a registry of what <em>would</em> require primary-language alignment work in a follow-up pass. Each entry carries an <code>analysis_layer</code> flag marking how deep the current pipeline reaches, and an <code>expected_signal</code> note describing what intertext would plausibly surface with proper alignment.
+  </p>
+
+  <div class="intro-stat" id="intro_stat"></div>
+
+  <div id="groups"></div>
+
+  <div class="future-note">
+    <b>Future-analysis pointers.</b> To carry the methodology from the canonical pipeline into the apocryphal corpus, three layers are needed: (1) a primary-language text base for each work (Greek fragments for <i>Protoevangelium</i>, <i>Acts of Paul and Thecla</i>, etc.; Coptic NHC tractates; Latin <i>Acts of Pilate</i>); (2) a stable reference/segmentation scheme, since apocryphal works lack the verse numbering that makes Gospel/epistle retrieval windowable; (3) alignment of sayings to the Thomas/canonical registry so that verbal or thematic overlap can be scored against a shared substrate. The present package stops at (0) — inventory — because going further without proper primary-language preparation would produce noise, not evidence.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('25_apocrypha_inventory.html');
+  const J = SH.BUNDLE.jtea;
+  const rows = J.apocrypha || [];
+
+  // --- Intro stats
+  const byGroup = {};
+  const byLayer = {};
+  rows.forEach(r => {
+    byGroup[r.corpus_group] = (byGroup[r.corpus_group] || 0) + 1;
+    const lk = (r.analysis_layer || '').split(';')[0].trim() || 'inventory_only';
+    byLayer[lk] = (byLayer[lk] || 0) + 1;
+  });
+  const s = document.getElementById('intro_stat');
+  [
+    ['Works inventoried', rows.length, ''],
+    ['Corpus groups', Object.keys(byGroup).length, ''],
+    ['Inventory-only', byLayer['inventory_only'] || 0, 'primary-language work pending'],
+    ['Primary-Greek partial', rows.filter(r => (r.analysis_layer || '').toLowerCase().indexOf('greek') >= 0 && (r.analysis_layer || '').toLowerCase().indexOf('partial') >= 0).length, ''],
+  ].forEach(([k, v, extra]) => {
+    s.appendChild(SH.el('div', { class: 'cell' },
+      SH.el('div', { class: 'n' }, String(v)),
+      SH.el('div', { class: 'k' }, k),
+      SH.el('div', { class: 'small' }, extra)));
+  });
+
+  // --- Group sections
+  const groupOrder = Array.from(new Set(rows.map(r => r.corpus_group)));
+  const groupLabels = {
+    early_gospel_fragments: 'Early gospel fragments',
+    infancy_gospels: 'Infancy gospels',
+    passion_resurrection_cycle: 'Passion and resurrection cycle',
+    apocryphal_acts: 'Apocryphal acts',
+    dialogues_revelations: 'Dialogues and revelations',
+    gnostic_nhc: 'Gnostic / Nag Hammadi',
+    ascension_lateral: 'Later / lateral traditions',
+  };
+
+  const root = document.getElementById('groups');
+  groupOrder.forEach(g => {
+    const items = rows.filter(r => r.corpus_group === g);
+    const sec = SH.el('div', { class: 'corpus-section' });
+    const head = SH.el('div', { class: 'corpus-head' },
+      SH.el('h2', null, groupLabels[g] || g.replace(/_/g, ' ')),
+      SH.el('div', { class: 'sub' }, items.length + ' work' + (items.length === 1 ? '' : 's')));
+    sec.appendChild(head);
+
+    const grid = SH.el('div', { class: 'work-grid' });
+    items.forEach(r => {
+      const al = (r.analysis_layer || '').toLowerCase();
+      const tagClass = al.indexOf('partial') >= 0 ? 'partial' : (al.indexOf('inventory') >= 0 ? 'inventory' : '');
+      const card = SH.el('div', { class: 'work-card' },
+        SH.el('h4', null, r.work_or_section || ''),
+        SH.el('span', { class: 'layer-tag ' + tagClass, title: r.analysis_layer || '' }, (r.analysis_layer || '').split(';')[0]),
+        SH.el('div', { class: 'signal' }, r.expected_signal || ''));
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>

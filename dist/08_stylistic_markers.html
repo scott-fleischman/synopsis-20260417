@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Stylistic markers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Stylistic markers</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <h2>Marker inventory by block</h2>
+    <div class="caption" style="margin:0 0 10px;">Per-block counts of six classic stylistic tokens, side-by-side for the two gospels. Width encodes occurrences-per-100-tokens; raw counts appear in tooltips. Each row is one macro block; the left column is <b id="aLabel"></b>, the right column is <b id="bLabel"></b>.</div>
+    <div id="markergrid"></div>
+  </div>
+
+  <div class="card">
+    <h2>Global totals</h2>
+    <div class="caption" style="margin:0 0 10px;">Same six markers summed over every matched block. The classic fingerprint: <span class="greek">εὐθύς</span> belongs to Mark; <span class="greek">τότε</span>, <span class="greek">βασιλεία τῶν οὐρανῶν</span>, and fulfillment vocabulary (<span class="greek">πληρόω</span>, <span class="greek">γράφω</span>) tilt toward Matthew.</div>
+    <div id="globaltot"></div>
+  </div>
+
+  <div class="card">
+    <h2>Present-indicative ratio — Markan "historical present"</h2>
+    <div class="caption" style="margin:0 0 10px;">Ratio of present-indicative verbs to total indicatives within each block. Mark\'s narrative is famous for the historical present; Matthew usually smooths it to aorist. A block where the a-line is high and the b-line low is a classic Markan-priority datum.</div>
+    <div id="presind"></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('08_stylistic_markers.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — redactional fingerprint by block';
+  document.getElementById('aLabel').textContent = D.a_book;
+  document.getElementById('bLabel').textContent = D.b_book;
+
+  const captions = {
+    mm: 'Each macro block is a small Greek-language lab. Mark\'s diagnostic markers here: εὐθύς (19 occurrences in matched material), high present-indicative ratio, βασιλεία τοῦ θεοῦ. Matthew\'s: βασιλεία τῶν οὐρανῶν, πληρόω-γράφω formulas. (τότε is Matthean but isn\'t tagged by the MM pipeline — see the Matt↔Luke dataset for tote counts.) The per-block grid tells you where each signal lives.',
+    ml: 'Matthew-vs-Luke stylistic contrasts are subtler because both evangelists edit heavily. But present-indicative ratio still separates them: Matthew keeps more Markan historical presents than Luke does. The kingdom formulas are diagnostic — Matthew "heaven," Luke "God" — with only a handful of crossovers.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  const blocks = D.loose_full || [];
+
+  // Marker grid — MM corpora don't tag τότε (it's a Matthean connective the
+  // MM pipeline doesn't emit), and the ML/MLD pipelines don't emit εὐθύς.
+  // Don't render zero-filled rows that look like signal but are really absence.
+  const ALL_MARKERS = [
+    { k: 'euthys',            label: 'εὐθύς', tip: 'Markan "immediately"' },
+    { k: 'tote',              label: 'τότε',  tip: 'Matthean connective "then"' },
+    { k: 'kingdom_god',       label: 'βασ. θεοῦ', tip: 'kingdom of God' },
+    { k: 'kingdom_heaven',    label: 'βασ. οὐρανῶν', tip: 'kingdom of heaven' },
+    { k: 'pleroo',            label: 'πληρόω', tip: 'fulfillment verb (Matt)' },
+    { k: 'grapho',            label: 'γράφω', tip: 'citation verb (both, but distinctive)' },
+  ];
+  const markers = ALL_MARKERS.filter(m => {
+    if (D.name === 'mm' && m.k === 'tote') return false;
+    if (D.name !== 'mm' && m.k === 'euthys') return false;
+    return true;
+  });
+
+  (function () {
+    const aKey = 'mark_marker_counts' in (blocks[0] || {}) ? 'mark_marker_counts' : 'matt_marker_counts';
+    const bKey = 'matt_marker_counts' in (blocks[0] || {}) ? 'matt_marker_counts' : 'luke_marker_counts';
+    const aTok = 'mark_token_count' in (blocks[0] || {}) ? 'mark_token_count' : 'matt_token_count';
+    const bTok = 'matt_token_count' in (blocks[0] || {}) ? 'matt_token_count' : 'luke_token_count';
+
+    // Compute max rate per marker across blocks for normalization
+    const maxRate = {};
+    for (const m of markers) {
+      maxRate[m.k] = 0;
+      for (const b of blocks) {
+        const ca = ((b[aKey] || {})[m.k] || 0) / Math.max(1, b[aTok] || 1) * 100;
+        const cb = ((b[bKey] || {})[m.k] || 0) / Math.max(1, b[bTok] || 1) * 100;
+        if (ca > maxRate[m.k]) maxRate[m.k] = ca;
+        if (cb > maxRate[m.k]) maxRate[m.k] = cb;
+      }
+      if (maxRate[m.k] === 0) maxRate[m.k] = 1;
+    }
+
+    const cont = document.getElementById('markergrid');
+    const cell = 18;
+    const rowH = 22;
+    const blockLabW = 140;
+    const colW = cell * markers.length + 6;
+    const midGap = 40;
+    const W = blockLabW + colW + midGap + colW + blockLabW;
+    const H = 44 + rowH * blocks.length;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+
+    // Column headers
+    markers.forEach((m, j) => {
+      const x1 = blockLabW + j * cell + cell / 2;
+      const t = SH.svgEl('text', { x: x1, y: 28, 'font-size': 11, 'text-anchor': 'middle', fill: '#8b2e2e', 'font-family': 'Cardo, Gentium Plus, serif',
+        transform: `rotate(-45 ${x1} 28)` });
+      t.textContent = m.label;
+      svg.appendChild(t);
+      const x2 = blockLabW + colW + midGap + j * cell + cell / 2;
+      const t2 = SH.svgEl('text', { x: x2, y: 28, 'font-size': 11, 'text-anchor': 'middle', fill: '#22506c', 'font-family': 'Cardo, Gentium Plus, serif',
+        transform: `rotate(-45 ${x2} 28)` });
+      t2.textContent = m.label;
+      svg.appendChild(t2);
+    });
+
+    // Side labels
+    const aLab = SH.svgEl('text', { x: blockLabW + colW / 2, y: 12, 'font-size': 11, 'text-anchor': 'middle', fill: '#8b2e2e', 'font-weight': 'bold' });
+    aLab.textContent = D.a_book;
+    svg.appendChild(aLab);
+    const bLab = SH.svgEl('text', { x: blockLabW + colW + midGap + colW / 2, y: 12, 'font-size': 11, 'text-anchor': 'middle', fill: '#22506c', 'font-weight': 'bold' });
+    bLab.textContent = D.b_book;
+    svg.appendChild(bLab);
+
+    // Rows
+    blocks.forEach((b, i) => {
+      const y = 44 + i * rowH;
+      // Block id and range
+      const aStart = (D.name === 'mm') ? b.mark_start_ref : b.matt_start_ref;
+      const labT = SH.svgEl('text', { x: blockLabW - 8, y: y + 14, 'font-size': 10, 'text-anchor': 'end', fill: '#1f1e1a' });
+      labT.textContent = '#' + b.id + ' ' + aStart.replace(/^[A-Za-z]+ /, '');
+      svg.appendChild(labT);
+
+      const aMC = b[aKey] || {};
+      const bMC = b[bKey] || {};
+      markers.forEach((m, j) => {
+        const aV = aMC[m.k] || 0;
+        const bV = bMC[m.k] || 0;
+        const aR = aV / Math.max(1, b[aTok] || 1) * 100;
+        const bR = bV / Math.max(1, b[bTok] || 1) * 100;
+        // a side
+        {
+          const x = blockLabW + j * cell;
+          const cBox = SH.svgEl('rect', { x: x + 1, y: y + 1, width: cell - 2, height: rowH - 4, fill: aR === 0 ? '#eeeae0' : SH.scoreColor(Math.min(1, aR / maxRate[m.k])) });
+          cBox.addEventListener('mousemove', ev => SH.showTip([
+            SH.tipRow('block', '#' + b.id + ' · ' + aStart),
+            SH.tipRow(D.a_book + ' ' + m.label, aV + ' (' + aR.toFixed(2) + ' / 100 tokens)'),
+            SH.tipLine(m.tip),
+          ], ev.clientX, ev.clientY));
+          cBox.addEventListener('mouseleave', SH.hideTip);
+          svg.appendChild(cBox);
+          if (aV > 0) {
+            const t = SH.svgEl('text', { x: x + cell / 2, y: y + 14, 'font-size': 9, 'text-anchor': 'middle', fill: aR / maxRate[m.k] > 0.55 ? '#fff' : '#1f1e1a' });
+            t.textContent = aV;
+            svg.appendChild(t);
+          }
+        }
+        // b side
+        {
+          const x = blockLabW + colW + midGap + j * cell;
+          const cBox = SH.svgEl('rect', { x: x + 1, y: y + 1, width: cell - 2, height: rowH - 4, fill: bR === 0 ? '#eeeae0' : SH.scoreColor(Math.min(1, bR / maxRate[m.k])) });
+          cBox.addEventListener('mousemove', ev => SH.showTip([
+            SH.tipRow('block', '#' + b.id + ' · ' + aStart),
+            SH.tipRow(D.b_book + ' ' + m.label, bV + ' (' + bR.toFixed(2) + ' / 100 tokens)'),
+            SH.tipLine(m.tip),
+          ], ev.clientX, ev.clientY));
+          cBox.addEventListener('mouseleave', SH.hideTip);
+          svg.appendChild(cBox);
+          if (bV > 0) {
+            const t = SH.svgEl('text', { x: x + cell / 2, y: y + 14, 'font-size': 9, 'text-anchor': 'middle', fill: bR / maxRate[m.k] > 0.55 ? '#fff' : '#1f1e1a' });
+            t.textContent = bV;
+            svg.appendChild(t);
+          }
+        }
+      });
+    });
+
+    cont.appendChild(svg);
+  })();
+
+  // Global totals
+  (function () {
+    const aKey = 'mark_marker_counts' in (blocks[0] || {}) ? 'mark_marker_counts' : 'matt_marker_counts';
+    const bKey = 'matt_marker_counts' in (blocks[0] || {}) ? 'matt_marker_counts' : 'luke_marker_counts';
+    const totals = { a: {}, b: {} };
+    for (const m of markers) { totals.a[m.k] = 0; totals.b[m.k] = 0; }
+    for (const b of blocks) {
+      for (const m of markers) {
+        totals.a[m.k] += (b[aKey] || {})[m.k] || 0;
+        totals.b[m.k] += (b[bKey] || {})[m.k] || 0;
+      }
+    }
+    const W = 820, H = 260;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+    const labelW = 140;
+    const barMax = (W - labelW * 2 - 40) / 2;
+    const maxV = Math.max(1, ...markers.flatMap(m => [totals.a[m.k], totals.b[m.k]]));
+    markers.forEach((m, i) => {
+      const y = 20 + i * 32;
+      const labCenter = W / 2;
+      const lt = SH.svgEl('text', { x: labCenter, y: y + 16, 'font-size': 13, 'text-anchor': 'middle', fill: '#1f1e1a', 'font-family': 'Cardo, Gentium Plus, serif' });
+      lt.textContent = m.label;
+      svg.appendChild(lt);
+
+      // a bar (left, grows leftward)
+      const aW = (totals.a[m.k] / maxV) * barMax;
+      svg.appendChild(SH.svgEl('rect', { x: labCenter - 24 - aW, y, width: aW, height: 22, fill: '#8b2e2e', 'fill-opacity': 0.82 }));
+      const at = SH.svgEl('text', { x: labCenter - 24 - aW - 6, y: y + 16, 'font-size': 11, 'text-anchor': 'end', fill: '#8b2e2e', 'font-weight': 'bold' });
+      at.textContent = totals.a[m.k];
+      svg.appendChild(at);
+
+      // b bar (right)
+      const bW = (totals.b[m.k] / maxV) * barMax;
+      svg.appendChild(SH.svgEl('rect', { x: labCenter + 24, y, width: bW, height: 22, fill: '#22506c', 'fill-opacity': 0.82 }));
+      const bt = SH.svgEl('text', { x: labCenter + 24 + bW + 6, y: y + 16, 'font-size': 11, 'text-anchor': 'start', fill: '#22506c', 'font-weight': 'bold' });
+      bt.textContent = totals.b[m.k];
+      svg.appendChild(bt);
+    });
+    document.getElementById('globaltot').appendChild(svg);
+  })();
+
+  // Present-indicative ratio line chart
+  (function () {
+    const aKey = 'mark_marker_counts' in (blocks[0] || {}) ? 'mark_marker_counts' : 'matt_marker_counts';
+    const bKey = 'matt_marker_counts' in (blocks[0] || {}) ? 'matt_marker_counts' : 'luke_marker_counts';
+    const W = 1160, H = 230, pad = { l: 44, r: 20, t: 18, b: 32 };
+    const iw = W - pad.l - pad.r;
+    const ih = H - pad.t - pad.b;
+    const fx = SH.scale(0, blocks.length - 1, pad.l, pad.l + iw);
+    const fy = SH.scale(0, 1, pad.t + ih, pad.t);
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l + iw, y1: fy(0), y2: fy(0), stroke: '#c7b787' }));
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l, y1: pad.t, y2: pad.t + ih, stroke: '#c7b787' }));
+    for (let v = 0; v <= 1.0001; v += 0.2) {
+      const y = fy(v);
+      svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l + iw, y1: y, y2: y, stroke: '#e8e2c8' }));
+      const t = SH.svgEl('text', { x: pad.l - 6, y: y + 3, 'font-size': 10, 'text-anchor': 'end', fill: '#7a7a7a' });
+      t.textContent = v.toFixed(1);
+      svg.appendChild(t);
+    }
+
+    function plotSide(key, color) {
+      let prev = null;
+      blocks.forEach((b, i) => {
+        const r = (b[key] || {}).present_indicative_ratio || 0;
+        const ind = (b[key] || {}).indicative_total || 0;
+        const x = fx(i), y = fy(r);
+        if (prev && ind > 0) {
+          svg.appendChild(SH.svgEl('line', { x1: prev.x, x2: x, y1: prev.y, y2: y, stroke: color, 'stroke-width': 1.2, 'stroke-opacity': 0.8 }));
+        }
+        if (ind > 0) {
+          const c = SH.svgEl('circle', { cx: x, cy: y, r: 3, fill: color });
+          c.addEventListener('mousemove', ev => SH.showTip([
+            SH.tipRow('block', '#' + b.id),
+            SH.tipRow('ratio', r.toFixed(3) + ' (' + ind + ' indicatives)'),
+          ], ev.clientX, ev.clientY));
+          c.addEventListener('mouseleave', SH.hideTip);
+          svg.appendChild(c);
+          prev = { x, y };
+        } else {
+          prev = null;
+        }
+      });
+    }
+    plotSide(aKey, '#8b2e2e');
+    plotSide(bKey, '#22506c');
+
+    // x ticks
+    blocks.forEach((b, i) => {
+      if (i % 2 !== 0 && blocks.length > 12) return;
+      const x = fx(i);
+      const t = SH.svgEl('text', { x, y: H - 8, 'font-size': 9, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      t.textContent = '#' + b.id;
+      svg.appendChild(t);
+    });
+
+    const leg = SH.svgEl('text', { x: pad.l + iw - 150, y: pad.t + 14, 'font-size': 11, fill: '#8b2e2e', 'font-weight': 'bold' });
+    leg.textContent = D.a_book;
+    svg.appendChild(leg);
+    const leg2 = SH.svgEl('text', { x: pad.l + iw - 80, y: pad.t + 14, 'font-size': 11, fill: '#22506c', 'font-weight': 'bold' });
+    leg2.textContent = D.b_book;
+    svg.appendChild(leg2);
+
+    document.getElementById('presind').appendChild(svg);
+  })();
+})();
+</script>
+</body>
+</html>

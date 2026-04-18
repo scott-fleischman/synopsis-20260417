@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mask audit — Markan-masked Matt↔Luke</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .mask-strip { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .mask-strip .book-row { display: flex; flex-direction: column; gap: 4px; }
+  .mask-strip .book-row .lab { font-size: 12px; color: var(--ink-mute); font-family: var(--serif); }
+  .mask-strip svg { background: #fff; border: 1px solid var(--rule); }
+  .rule-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 11px; color: var(--ink-soft); margin-top: 10px; }
+  .rule-legend .sw { display: inline-block; width: 12px; height: 12px; margin-right: 4px; vertical-align: middle; border-radius: 1px; }
+  .audit-tbl td.greek { font-family: var(--greek); font-size: 15px; line-height: 1.45; }
+  .audit-tbl td.ref { font-family: var(--serif); color: var(--matt); white-space: nowrap; }
+  .audit-tbl td.score { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .audit-tbl td.rule { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-mute); }
+  .audit-tbl tr.masked td { background: #fdf5eb; }
+  .filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Mask audit</h1>
+    <span class="sub">Which verses were removed, why, and the Markan parallel that drove the decision.</span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    The masked Matt↔Luke analysis removes verses likely owed to Mark before rerunning chain, block, echo, and diff layers on the remaining material. This audit shows the per-verse mask decisions on the Matthew and Luke baselines and lets you inspect borderline cases. <em>Strict</em> verses exceed a hard similarity threshold against a Markan parallel; <em>chain_context</em> extend a Markan chain; <em>local_cluster</em> sit inside a dense band of masked verses. Everything marked <em>unmasked_non_markan</em> is the material surviving the filter.
+  </p>
+
+  <div class="card">
+    <h2>Mask rule counts</h2>
+    <div class="scrollx"><table class="data-table" id="ruleTable"></table></div>
+    <div class="rule-legend" id="ruleLegend"></div>
+  </div>
+
+  <div class="card">
+    <h2>Coverage strip</h2>
+    <div class="caption" style="margin:0 0 6px;">Each vertical tick is one verse. Hover for the reference, rule, and nearest Markan parallel. Click a tick to filter the per-verse table below.</div>
+    <div class="mask-strip">
+      <div class="book-row">
+        <div class="lab">Matthew · 1068 verses</div>
+        <div id="stripMatt"></div>
+      </div>
+      <div class="book-row">
+        <div class="lab">Luke · 1149 verses</div>
+        <div id="stripLuke"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Per-verse audit</h2>
+    <div class="filters">
+      <label>Book
+        <select id="fBook">
+          <option value="">All</option>
+          <option value="Matt">Matthew</option>
+          <option value="Luke">Luke</option>
+        </select>
+      </label>
+      <label>Rule
+        <select id="fRule"></select>
+      </label>
+      <label>Mask status
+        <select id="fMask">
+          <option value="">All</option>
+          <option value="true">Masked only</option>
+          <option value="false">Unmasked only</option>
+        </select>
+      </label>
+      <label>Best Mark score ≥
+        <input id="fScore" type="number" step="0.05" min="0" max="1" value="0" style="width:60px;" />
+      </label>
+      <label>Search
+        <input id="fRef" type="search" placeholder="e.g. Matt 5:3" />
+      </label>
+      <span class="small" id="rowCount" style="margin-left:auto;"></span>
+    </div>
+    <div class="scrollx" style="max-height:600px;overflow-y:auto;">
+      <table class="data-table audit-tbl" id="auditTbl"></table>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('14_mask_audit.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'), { only: ['mld'] });
+  const D = SH.D;
+  if (D.name !== 'mld') {
+    const msg = SH.el('div', { class: 'card' },
+      SH.el('div', null, 'This view only applies to the Markan-masked dataset.'),
+      SH.el('a', { href: '14_mask_audit.html#mld' }, 'Switch to masked dataset'));
+    document.querySelector('.wrap').appendChild(msg);
+    return;
+  }
+
+  const RULE_COLORS = {
+    unmasked_non_markan: '#d6d2bf',
+    strict_verse: '#8b2e2e',
+    chain_context: '#a8551a',
+    local_cluster: '#b88c3a',
+  };
+  const RULE_LABELS = {
+    unmasked_non_markan: 'Unmasked (kept)',
+    strict_verse: 'Strict — own verse above threshold',
+    chain_context: 'Chain context — extends Markan chain',
+    local_cluster: 'Local cluster — in masked band',
+  };
+
+  const mask = D.mask_audit;
+  const byBook = { Matt: [], Luke: [] };
+  for (const r of mask) byBook[r.book].push(r);
+  for (const bk of ['Matt', 'Luke']) byBook[bk].sort((a, b) => a.original_idx - b.original_idx);
+
+  // Rule table
+  const ruleTable = document.getElementById('ruleTable');
+  const thead = SH.el('thead');
+  const thr = SH.el('tr');
+  ['Book', 'Total', ...Object.keys(RULE_COLORS)].forEach(h =>
+    thr.appendChild(SH.el('th', null, h.replace(/_/g, ' '))));
+  thead.appendChild(thr); ruleTable.appendChild(thead);
+  const tb = SH.el('tbody');
+  for (const bk of ['Matt', 'Luke']) {
+    const tr = SH.el('tr');
+    const rows = byBook[bk];
+    const counts = {};
+    for (const r of rows) counts[r.mask_rule] = (counts[r.mask_rule] || 0) + 1;
+    tr.appendChild(SH.el('td', { style: 'color:var(--ink-mute);' }, bk));
+    tr.appendChild(SH.el('td', null, String(rows.length)));
+    for (const k of Object.keys(RULE_COLORS)) {
+      tr.appendChild(SH.el('td', null, String(counts[k] || 0)));
+    }
+    tb.appendChild(tr);
+  }
+  ruleTable.appendChild(tb);
+
+  const leg = document.getElementById('ruleLegend');
+  for (const [k, color] of Object.entries(RULE_COLORS)) {
+    leg.appendChild(SH.el('span', null,
+      SH.el('span', { class: 'sw', style: 'background:' + color + ';' }),
+      RULE_LABELS[k] || k));
+  }
+
+  // Coverage strips with chapter boundaries
+  function drawStrip(hostId, book, verses, chaps) {
+    const host = document.getElementById(hostId);
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const pad = 10;
+    const W = Math.min(1400, Math.max(800, verses.length * 1.2 + pad * 2));
+    const strip = 22;
+    const chH = 16;
+    const H = strip + chH + pad * 2;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    const fx = SH.scale(0, verses.length, pad, W - pad);
+
+    // Chapter tick marks
+    chaps.forEach(c => {
+      const x = fx(c.offset);
+      svg.appendChild(SH.svgEl('line', {
+        x1: x, y1: pad, x2: x, y2: pad + strip + 4,
+        stroke: '#d9d4c2', 'stroke-width': 1,
+      }));
+      if (c.chapter % 5 === 0 || c.chapter === 1) {
+        const t = SH.svgEl('text', {
+          x, y: pad + strip + chH,
+          'font-size': 9, 'text-anchor': 'middle', fill: '#7a7a7a',
+        });
+        t.textContent = c.chapter;
+        svg.appendChild(t);
+      }
+    });
+
+    // Per-verse ticks
+    verses.forEach((v, i) => {
+      const x = fx(i);
+      const color = RULE_COLORS[v.mask_rule] || '#e0ddcd';
+      const r = SH.svgEl('rect', {
+        x, y: pad, width: Math.max(0.9, (W - pad * 2) / verses.length),
+        height: strip, fill: color, 'fill-opacity': v.masked_as_markan ? 0.92 : 0.7,
+      });
+      r.style.cursor = 'pointer';
+      r.addEventListener('mouseenter', (e) => {
+        const content = SH.el('div', null,
+          SH.el('div', null, SH.el('b', null, v.ref)),
+          SH.el('div', null, 'rule: ' + (v.mask_rule || '—')),
+          SH.el('div', null, v.masked_as_markan ? '• masked as Markan' : '• kept for masked analysis'),
+          SH.el('div', { class: 'small' }, v.best_mark_ref ? ('best Markan: ' + v.best_mark_ref + '  score=' + v.best_mark_score.toFixed(3)) : ''),
+          SH.el('div', { class: 'small' }, v.in_markan_chain ? ('chain: ' + v.chain_mark_ref + '  score=' + v.chain_score.toFixed(3)) : ''),
+          SH.el('div', { class: 'g', style: 'margin-top:6px;' }, v.text.slice(0, 220)));
+        SH.showTip(content, e.clientX, e.clientY);
+      });
+      r.addEventListener('mouseleave', SH.hideTip);
+      r.addEventListener('click', () => {
+        const c = v.ref.match(/^(\w+) (\d+):/);
+        if (c) {
+          document.getElementById('fBook').value = v.book;
+          document.getElementById('fRef').value = v.ref;
+          refreshTable();
+          document.getElementById('auditTbl').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+      svg.appendChild(r);
+    });
+
+    host.appendChild(svg);
+  }
+  drawStrip('stripMatt', 'Matt', byBook.Matt, D.meta.a_chapters);
+  drawStrip('stripLuke', 'Luke', byBook.Luke, D.meta.b_chapters);
+
+  // Rule filter options
+  const ruleSel = document.getElementById('fRule');
+  ruleSel.appendChild(SH.el('option', { value: '' }, 'All'));
+  for (const k of Object.keys(RULE_COLORS)) ruleSel.appendChild(SH.el('option', { value: k }, k.replace(/_/g, ' ')));
+
+  // Audit table
+  const tbl = document.getElementById('auditTbl');
+  const cnt = document.getElementById('rowCount');
+  const rowsCache = mask.slice().sort((a, b) => a.book.localeCompare(b.book) || a.original_idx - b.original_idx);
+
+  function refreshTable() {
+    const fBook = document.getElementById('fBook').value;
+    const fRule = document.getElementById('fRule').value;
+    const fMask = document.getElementById('fMask').value;
+    const fScore = parseFloat(document.getElementById('fScore').value || '0');
+    const fRef = document.getElementById('fRef').value.trim().toLowerCase();
+
+    const shown = rowsCache.filter(r =>
+      (!fBook || r.book === fBook) &&
+      (!fRule || r.mask_rule === fRule) &&
+      (fMask === '' || String(r.masked_as_markan) === fMask) &&
+      (fScore === 0 || r.best_mark_score >= fScore) &&
+      (!fRef || (r.ref.toLowerCase().includes(fRef) || (r.best_mark_ref || '').toLowerCase().includes(fRef)))
+    );
+
+    while (tbl.firstChild) tbl.removeChild(tbl.firstChild);
+    const th = SH.el('thead');
+    const thr = SH.el('tr');
+    ['Ref', 'Rule', 'Mask', 'Best Mark parallel', 'Mark score', 'Chain?', 'Cluster?', 'Tokens', 'Text (first part)']
+      .forEach(h => thr.appendChild(SH.el('th', null, h)));
+    th.appendChild(thr); tbl.appendChild(th);
+
+    const tb = SH.el('tbody');
+    const cap = 800;
+    for (let i = 0; i < Math.min(shown.length, cap); i++) {
+      const r = shown[i];
+      const tr = SH.el('tr');
+      if (r.masked_as_markan) tr.className = 'masked';
+      tr.appendChild(SH.el('td', { class: 'ref' }, r.ref));
+      tr.appendChild(SH.el('td', { class: 'rule' }, r.mask_rule || '—'));
+      tr.appendChild(SH.el('td', null, r.masked_as_markan ? '✓' : ''));
+      tr.appendChild(SH.el('td', { class: 'ref', style: 'color:var(--mark);' }, r.best_mark_ref || '—'));
+      tr.appendChild(SH.el('td', { class: 'score' }, r.best_mark_score ? r.best_mark_score.toFixed(3) : '—'));
+      tr.appendChild(SH.el('td', { class: 'small' }, r.in_markan_chain ? r.chain_mark_ref + ' (' + r.chain_score.toFixed(2) + ')' : ''));
+      tr.appendChild(SH.el('td', null, r.local_cluster ? '✓' : ''));
+      tr.appendChild(SH.el('td', { class: 'score' }, String(r.token_count)));
+      const txt = r.text || '';
+      tr.appendChild(SH.el('td', { class: 'greek' }, txt.length > 120 ? txt.slice(0, 120) + '…' : txt));
+      tb.appendChild(tr);
+    }
+    tbl.appendChild(tb);
+
+    cnt.textContent = shown.length + ' rows' + (shown.length > cap ? ' (showing first ' + cap + ')' : '');
+  }
+  ['fBook', 'fRule', 'fMask', 'fScore', 'fRef'].forEach(id => {
+    document.getElementById(id).addEventListener('input', refreshTable);
+    document.getElementById(id).addEventListener('change', refreshTable);
+  });
+  refreshTable();
+})();
+</script>
+</body>
+</html>

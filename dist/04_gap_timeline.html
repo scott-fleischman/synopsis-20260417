@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Gap timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Gap timeline</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <h2 id="h_a"></h2>
+    <div class="small" id="sa_hint"></div>
+    <div id="ts_a"></div>
+  </div>
+  <div class="card">
+    <h2 id="h_b"></h2>
+    <div class="small" id="sb_hint"></div>
+    <div id="ts_b"></div>
+  </div>
+
+  <div class="card">
+    <h2>Gap asymmetry across boundaries</h2>
+    <div class="caption" style="margin:0 0 10px;">Each boundary between blocks. Red = extra verses on the a-gospel side; Blue = extra on the b-gospel side. The overall imbalance gives the first quantitative clue to <em>which evangelist must explain more unparalleled material</em>.</div>
+    <div id="asymm"></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('04_gap_timeline.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — where non-parallel material sits';
+
+  const captions = {
+    mm: 'Each gospel laid out as a verse-by-verse timeline. Amber segments are verses inside an aligned block. Pale segments are gap verses, uncovered by the primary chain. The largest Matthean stretches (Matt 4:24–7:28 — the Sermon on the Mount, 112 verses; 9:18–11:30 — the Q/M discourses; 24:37–26:3 — the eschatological discourse) stand out on the Matthew strip. Mark\'s longest stretch (4:35–6:1 — the sea-of-Galilee cycle) is just 51 verses.',
+    ml: 'Matthew and Luke on their own timelines. Luke\'s most striking feature is the "Great Insertion" — 241 verses (9:49–15:2) with no chain-level parallel in Matthew. These are dominated by parables and travel-narrative material. Matthew\'s largest gaps (4:24–7:27 Sermon, 24:36–26:2 eschatology) are still substantial. The imbalance is not bad alignment — it reflects each evangelist\'s structural choices.',
+    mld: 'Matthew and Luke after Markan masking. Aligned segments show the 13 loose blocks built on the 49 Markan-masked primary pairs. Most of each gospel now registers as "gap": that\'s expected — everything paralleled with Mark has been removed, so only the dense double-tradition clusters remain as coloured bands. This is the geometry of the Q hypothesis if you take the masking at face value — a few discourse / John-the-Baptist / mission / temptation clusters surrounded by narrative owed to Mark.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  document.getElementById('h_a').textContent = D.a_book + ' — gaps & blocks';
+  document.getElementById('h_b').textContent = D.b_book + ' — gaps & blocks';
+  document.getElementById('sa_hint').textContent = 'Hover a gap for length and reference range.';
+  document.getElementById('sb_hint').textContent = 'Hover a gap for length and reference range.';
+
+  function drawTimeline(contId, total, chapters, blocks, book, startKey, endKey, isA) {
+    const W = 1160, H = 90;
+    const M = { l: 40, r: 20, t: 18, b: 26 };
+    const iw = W - M.l - M.r;
+    const fx = SH.scale(0, total, M.l, M.l + iw);
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+
+    // Gap baseline
+    svg.appendChild(SH.svgEl('rect', { x: M.l, y: M.t, width: iw, height: 28, fill: '#ede8d6' }));
+
+    // Aligned blocks as amber
+    for (const b of blocks) {
+      const startIdx = b[startKey];
+      let endIdx = b[endKey];
+      if (startIdx < 0) continue;
+      const x = fx(startIdx);
+      const x2 = fx(endIdx + 1);
+      const r = SH.svgEl('rect', { x, y: M.t, width: Math.max(x2 - x, 1.5), height: 28, fill: SH.scoreColor(b.avg_score), 'fill-opacity': 0.9, stroke: isA ? '#8b2e2e' : '#22506c', 'stroke-opacity': 0.3 });
+      r.style.cursor = 'pointer';
+      r.addEventListener('mousemove', ev => {
+        const sRef = isA ? b.a_start : b.b_start;
+        const eRef = isA ? b.a_end : b.b_end;
+        SH.showTip([
+          SH.tipRow('Block ' + b.id, b.avg_score.toFixed(3) + (b.confidence ? ' · ' + b.confidence : '')),
+          SH.tipLine(sRef + (sRef === eRef ? '' : ' – ' + eRef)),
+          SH.tipLine('pair count: ' + b.pair_count),
+        ], ev.clientX, ev.clientY);
+      });
+      r.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(r);
+    }
+
+    // Chapter ticks
+    for (const c of chapters) {
+      const x = fx(c.offset);
+      svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: M.t + 28, y2: M.t + 34, stroke: '#c7b787' }));
+      if (c.chapter === 1 || c.chapter % 2 === 1) {
+        const t = SH.svgEl('text', { x, y: M.t + 46, 'font-size': 9, 'text-anchor': 'middle', fill: isA ? '#8b2e2e' : '#22506c' });
+        t.textContent = c.chapter;
+        svg.appendChild(t);
+      }
+    }
+
+    // Largest gap annotations (mm uses *_gap_intervals, ml uses *_only_gap_stretches, mld exports none)
+    let topGaps = [];
+    if (D.name === 'mm') {
+      topGaps = isA ? D.summary.top_mark_gap_intervals : D.summary.top_matt_gap_intervals;
+    } else if (D.name === 'ml') {
+      topGaps = D.summary[(isA ? 'top_matt_only' : 'top_luke_only') + '_gap_stretches'] || [];
+    }
+    const markable = (topGaps || []).slice(0, 8);
+    markable.forEach((g, i) => {
+      if (!g.start_ref) return;
+      // Parse to idx using block's a/b lookup — approximate by scanning chapters
+      const parts = g.start_ref.match(/(\w+)\s+(\d+):(\d+)/);
+      const parts2 = g.end_ref.match(/(\w+)\s+(\d+):(\d+)/);
+      if (!parts || !parts2) return;
+      const chap1 = parseInt(parts[2]), v1 = parseInt(parts[3]);
+      const chap2 = parseInt(parts2[2]), v2 = parseInt(parts2[3]);
+      const cmap = Object.fromEntries(chapters.map(c => [c.chapter, c]));
+      if (!cmap[chap1] || !cmap[chap2]) return;
+      const s = cmap[chap1].offset + (v1 - 1);
+      const e = cmap[chap2].offset + (v2 - 1);
+      const x = fx(s);
+      const x2 = fx(e + 1);
+      const r = SH.svgEl('rect', { x, y: M.t, width: Math.max(x2 - x, 1), height: 28, fill: 'none', stroke: '#a8551a', 'stroke-width': 1.2, 'stroke-dasharray': '2,2' });
+      r.addEventListener('mousemove', ev => {
+        SH.showTip([
+          SH.tipLine('gap · ' + g.verse_count + ' verses', 'small'),
+          SH.tipLine(g.start_ref + ' – ' + g.end_ref),
+        ], ev.clientX, ev.clientY);
+      });
+      r.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(r);
+
+      const xmid = (x + x2) / 2;
+      const labY = H - 3 - (i % 2) * 10;
+      const t = SH.svgEl('text', { x: xmid, y: labY, 'font-size': 9, 'text-anchor': 'middle', fill: '#a8551a' });
+      t.textContent = g.start_ref.split(' ')[1] + '–' + g.end_ref.split(' ')[1] + ' · ' + g.verse_count + 'v';
+      svg.appendChild(t);
+    });
+
+    // Book label
+    const t = SH.svgEl('text', { x: 6, y: M.t + 18, 'font-size': 11, 'font-weight': 'bold', fill: isA ? '#8b2e2e' : '#22506c' });
+    t.textContent = book;
+    svg.appendChild(t);
+
+    document.getElementById(contId).appendChild(svg);
+  }
+
+  drawTimeline('ts_a', D.meta.a_total_verses, D.meta.a_chapters, D.macro, D.a_book, 'a_start_idx', 'a_end_idx', true);
+  drawTimeline('ts_b', D.meta.b_total_verses, D.meta.b_chapters, D.macro, D.b_book, 'b_start_idx', 'b_end_idx', false);
+
+  // Asymmetry chart
+  const gaps = D.gaps.filter(g => g.a_gap || g.b_gap);
+  const W2 = 1160, H2 = 260, pad = 30;
+  const bw = (W2 - pad * 2) / gaps.length;
+  const maxG = Math.max(1, ...gaps.map(g => Math.max((g.a_gap?.verse_count || 0), (g.b_gap?.verse_count || 0))));
+  const svg = SH.svgEl('svg', { viewBox: `0 0 ${W2} ${H2}`, width: W2, height: H2 });
+  svg.style.background = '#fbfaf6';
+
+  const yMid = H2 / 2;
+  svg.appendChild(SH.svgEl('line', { x1: pad, x2: W2 - pad, y1: yMid, y2: yMid, stroke: '#d9d4c2' }));
+
+  gaps.forEach((g, i) => {
+    const x = pad + i * bw;
+    const aV = g.a_gap?.verse_count || 0;
+    const bV = g.b_gap?.verse_count || 0;
+    const ha = (aV / maxG) * (H2 / 2 - 20);
+    const hb = (bV / maxG) * (H2 / 2 - 20);
+    svg.appendChild(SH.svgEl('rect', { x: x + 2, y: yMid - ha, width: Math.max(bw - 4, 1), height: ha, fill: '#8b2e2e', 'fill-opacity': 0.8 }));
+    svg.appendChild(SH.svgEl('rect', { x: x + 2, y: yMid, width: Math.max(bw - 4, 1), height: hb, fill: '#22506c', 'fill-opacity': 0.8 }));
+
+    const hit = SH.svgEl('rect', { x, y: 0, width: bw, height: H2, fill: 'transparent' });
+    hit.addEventListener('mousemove', ev => {
+      SH.showTip([
+        SH.tipRow('Before block ' + (g.before_block || '—'), ''),
+        SH.tipLine(D.a_book + ': ' + (g.a_gap ? aV + ' · ' + g.a_gap.start_ref + '–' + g.a_gap.end_ref : '—')),
+        SH.tipLine(D.b_book + ': ' + (g.b_gap ? bV + ' · ' + g.b_gap.start_ref + '–' + g.b_gap.end_ref : '—')),
+        SH.tipLine((g.interpretation || []).join(' | ')),
+      ], ev.clientX, ev.clientY);
+    });
+    hit.addEventListener('mouseleave', SH.hideTip);
+    svg.appendChild(hit);
+
+    if (bw > 18) {
+      const t = SH.svgEl('text', { x: x + bw/2, y: yMid + (bV > aV ? 12 : -4), 'font-size': 8, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      t.textContent = g.before_block || '—';
+      svg.appendChild(t);
+    }
+  });
+
+  // Y labels
+  svg.appendChild((() => {
+    const t = SH.svgEl('text', { x: 4, y: 16, 'font-size': 11, fill: '#8b2e2e', 'font-weight': 'bold' });
+    t.textContent = D.a_book + ' gap ↑';
+    return t;
+  })());
+  svg.appendChild((() => {
+    const t = SH.svgEl('text', { x: 4, y: H2 - 6, 'font-size': 11, fill: '#22506c', 'font-weight': 'bold' });
+    t.textContent = D.b_book + ' gap ↓';
+    return t;
+  })());
+
+  document.getElementById('asymm').appendChild(svg);
+})();
+</script>
+</body>
+</html>

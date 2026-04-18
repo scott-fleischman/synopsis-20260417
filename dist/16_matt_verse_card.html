@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Matthew verse card · cross-dataset</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .v-strip { font-family: var(--mono); font-size: 11px; line-height: 1.2; white-space: nowrap; }
+  .v-grid { display:grid; grid-template-columns: 1.1fr 1fr 1fr 1fr; gap: 16px; }
+  .v-col { border:1px solid var(--rule); border-radius:4px; padding:10px 14px; background:#fff; }
+  .v-col.matt { border-top:4px solid #a8551a; }
+  .v-col.mark { border-top:4px solid #8b2e2e; }
+  .v-col.luke { border-top:4px solid #22506c; }
+  .v-col.mask { border-top:4px solid #0f766e; }
+  .v-head { font-weight:700; font-size:14px; margin-bottom:4px; }
+  .v-score { font-family: var(--mono); font-size:12px; color:var(--ink-soft); margin-bottom:8px; }
+  .v-greek { font-family: Cardo, "Gentium Plus", serif; font-size:14.5px; line-height:1.5; color:#1a1a1a; }
+  .v-chip { display:inline-block; padding:2px 8px; margin:2px 3px 2px 0; border-radius:10px; font-size:11px; font-family: var(--mono); }
+  .cat-triple    { background: rgba(168,85,26,0.16); color:#6b3912; }
+  .cat-q         { background: rgba(34,80,108,0.16); color:#183a50; }
+  .cat-mark-only { background: rgba(139,46,46,0.16); color:#5a1f1f; }
+  .cat-m         { background: rgba(0,0,0,0.06); color:#3a3a3a; }
+  .cat-survives  { background: rgba(15,118,110,0.18); color:#053b37; }
+  .cat-stripped  { background: rgba(181,0,0,0.12); color:#6b1818; }
+  .cat-unmasked-bare { background: rgba(201,172,89,0.24); color:#5a4512; }
+  .cat-masked    { background: #efe9d1; color:#5a4512; }
+  .v-none { color:var(--ink-mute); font-style:italic; font-size:12px; }
+  .tbl-row { cursor:pointer; }
+  .tbl-row:hover { background:#f7f3e4; }
+  .legend-sw { display:inline-block; width:12px; height:12px; border-radius:2px; vertical-align:middle; margin-right:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Matthew verse card · cross-dataset</h1>
+    <span class="sub">For any Matt verse: Mark parallel, Luke parallel, and Markan-mask status — three datasets at once</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    This page is the one place that joins all three paired corpora at the <em>verse</em> level. For every verse of Matthew (1,071 in SBLGNT, 1,068 used by the masking pipeline), we look up the best parallel in Mark (from <code>mm</code>), the best parallel in Luke (from <code>ml</code>), and the Markan-mask status from <code>mld</code>. The mask is where things get interesting: if Matthew has a Luke parallel but the masking algorithm removes the Matthew verse from the Q-core, that tells you the pipeline judges Mark a more plausible source than Q for that verse — and lets you interrogate that judgment verse-by-verse.
+  </p>
+
+  <section class="card">
+    <h2>Category overview</h2>
+    <div class="caption" style="margin:0 0 10px;">Each cell is one Matthean verse (in canonical order, chapter boundaries marked). Hover for details. Click to open the verse below.</div>
+    <div id="overviewStrip"></div>
+    <div class="legend small" id="legend" style="margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;"></div>
+  </section>
+
+  <section class="card">
+    <h2>Aggregate category counts</h2>
+    <div class="caption" style="margin:0 0 10px;">Counts across all Matthew verses in the SBLGNT (the "unmasked, no pair" bucket absorbs the 3-verse slack between the 1,068-verse masking denominator and the 1,071-verse text). Threshold for "strong parallel": score ≥ 0.40.</div>
+    <div class="grid cols-4" id="statgrid"></div>
+  </section>
+
+  <section class="card">
+    <h2>Inspect a verse</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:10px;">
+      <label>Matt ref <input id="q" type="text" placeholder="e.g. Matt 5:3" size="12" /></label>
+      <label>Chapter <input id="chap" type="number" min="1" max="28" placeholder="(any)" style="width:70px;" /></label>
+      <label>Category <select id="cat"></select></label>
+      <label>Min max-score <input id="minsc" type="range" min="0" max="1" step="0.05" value="0" /> <span id="minscv">0.00</span></label>
+      <label><input id="onlyDisagree" type="checkbox" /> only mask/Q disagreements</label>
+      <span class="small" id="matchct" style="margin-left:auto;"></span>
+    </div>
+    <div id="selected"></div>
+    <div class="scrollx" style="margin-top:14px;">
+      <table class="data-table" id="lookupTbl"></table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>What this view reveals</h2>
+    <div class="grid cols-2">
+      <div>
+        <h3>The "masked-but-Q" set</h3>
+        <div class="small" style="line-height:1.65;">
+          Matt verses that have a strong Luke parallel <em>and</em> were removed by the Markan-mask.
+          These are the verses where the three-way pipeline is implicitly saying: "this isn't Q, this is
+          a Markan echo that Matthew and Luke both preserved." For these verses you can read all three
+          Greek texts side by side and form your own view.
+        </div>
+      </div>
+      <div>
+        <h3>The "Q-core surviving" set</h3>
+        <div class="small" style="line-height:1.65;">
+          Matt verses that are unmasked and paired in the masked primary chain (<code>mld</code>).
+          These 49 pairs are the narrowest possible Q core by construction — the double-tradition
+          remainder after subtracting Markan-looking material from both sides.
+        </div>
+      </div>
+      <div>
+        <h3>The "pure Q candidate" set</h3>
+        <div class="small" style="line-height:1.65;">
+          Strong Luke parallel, no Mark parallel, unmasked. Traditional Q territory — the Sermon on the
+          Mount, Beatitudes, Lord's Prayer, mission discourse, woes on the Pharisees, eschatological
+          discourse. Counts depend on threshold; the default (0.40) is generous.
+        </div>
+      </div>
+      <div>
+        <h3>The "unmasked-but-unpaired" set</h3>
+        <div class="small" style="line-height:1.65;">
+          Verses the mask did <em>not</em> remove, but the masked primary chain does <em>not</em> pair —
+          either because nothing in Luke is close enough, or because the closest match conflicts with
+          chain monotonicity. Often these are the hardest edge cases: sayings with minor Matthean
+          expansion that leaves a high surface-divergence.
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('16_matt_verse_card.html');
+  const BUNDLE = SH.BUNDLE;
+  const mm = BUNDLE.mm, ml = BUNDLE.ml, mld = BUNDLE.mld;
+
+  // Matt total verses. mm has Matt as b, ml has Matt as a. Both use same denom.
+  const mattTotal = mm.meta.b_total_verses;
+  const mattChapters = mm.meta.b_chapters;
+
+  function mattIdxToRef(idx) {
+    for (let i = mattChapters.length - 1; i >= 0; i--) {
+      if (idx >= mattChapters[i].offset) {
+        const chap = mattChapters[i].chapter;
+        const verse = idx - mattChapters[i].offset + 1;
+        return { chap, verse, ref: `Matt ${chap}:${verse}` };
+      }
+    }
+    return { chap: 1, verse: idx + 1, ref: `Matt 1:${idx + 1}` };
+  }
+
+  // Build best-parallel index for each Matt verse from each dataset.
+  // Each slot: { ref, score, kind: 'primary'|'echo', text, classes? }
+  function buildBest(ds, mattIsA, others) {
+    const best = new Array(mattTotal).fill(null);
+    const push = (mIdx, rec) => {
+      if (mIdx == null || mIdx < 0 || mIdx >= mattTotal) return;
+      if (!best[mIdx] || rec.score > best[mIdx].score) best[mIdx] = rec;
+    };
+    for (const p of ds.pairs) {
+      const mIdx = mattIsA ? p.a_idx : p.b_idx;
+      push(mIdx, {
+        ref: mattIsA ? p.b_ref : p.a_ref,
+        idx: mattIsA ? p.b_idx : p.a_idx,
+        score: p.score,
+        kind: 'primary',
+        text: mattIsA ? p.b_text : p.a_text,
+        classes: p.classes || [],
+        ins: p.ins, del: p.del, rep: p.rep,
+        own_text: mattIsA ? p.a_text : p.b_text,
+      });
+    }
+    for (const e of (ds.echoes || [])) {
+      const mIdx = mattIsA ? e.a_idx : e.b_idx;
+      push(mIdx, {
+        ref: mattIsA ? e.b_ref : e.a_ref,
+        idx: mattIsA ? e.b_idx : e.a_idx,
+        score: e.score,
+        kind: 'echo',
+        text: mattIsA ? e.b_text : e.a_text,
+        classes: [],
+        own_text: mattIsA ? e.a_text : e.b_text,
+      });
+    }
+    return best;
+  }
+  const markBest = buildBest(mm, /*mattIsA=*/false);   // mm: Matt = b
+  const lukeBest = buildBest(ml, /*mattIsA=*/true);    // ml: Matt = a
+
+  // Matt text: pull from any available pair on either side (pairs and echoes carry own text)
+  const mattText = new Array(mattTotal).fill('');
+  function absorb(src, mattIsA) {
+    for (const p of src) {
+      const idx = mattIsA ? p.a_idx : p.b_idx;
+      const text = mattIsA ? p.a_text : p.b_text;
+      if (idx >= 0 && idx < mattTotal && text && !mattText[idx]) mattText[idx] = text;
+    }
+  }
+  absorb(mm.pairs, false); absorb(ml.pairs, true);
+  absorb(mm.echoes || [], false); absorb(ml.echoes || [], true);
+  // mld mask_audit rows for Matt also carry the verse text
+  if (mld) {
+    for (const r of mld.mask_audit) {
+      if (r.book === 'Matt' && r.text && !mattText[r.idx]) mattText[r.idx] = r.text;
+    }
+  }
+
+  // Build mld mask + pair lookups per Matt verse
+  const mldMask = new Array(mattTotal).fill(null);
+  const mldPair = new Array(mattTotal).fill(null);
+  if (mld) {
+    for (const r of mld.mask_audit) {
+      if (r.book !== 'Matt') continue;
+      mldMask[r.idx] = r;
+    }
+    for (const p of mld.pairs) {
+      if (p.a_idx >= 0 && p.a_idx < mattTotal) {
+        mldPair[p.a_idx] = p;
+      }
+    }
+  }
+
+  // Category classifier — these are the main narrative insights the tripled view enables.
+  const TH = 0.40;
+  const CATS = {
+    triple:          { label: 'Triple tradition',         color: '#a8551a', cls: 'cat-triple',
+                       help: 'Matt has strong parallels in both Mark and Luke (both ≥ 0.40)' },
+    masked_but_q:    { label: 'Masked but Q-like',        color: '#b51818', cls: 'cat-stripped',
+                       help: 'Has a strong Luke parallel AND the Markan mask removed it (pipeline judged it Markan, not Q)' },
+    survives:        { label: 'Q core — survives masking', color: '#0f766e', cls: 'cat-survives',
+                       help: 'Paired in the masked primary chain: a double-tradition verse the pipeline judges is NOT Markan' },
+    pure_q:          { label: 'Pure Q candidate',          color: '#22506c', cls: 'cat-q',
+                       help: 'Strong Luke parallel, no Mark parallel, unmasked in mld' },
+    mark_only:       { label: 'Mark-only parallel',        color: '#8b2e2e', cls: 'cat-mark-only',
+                       help: 'Strong Mark parallel, no Luke parallel' },
+    unmasked_bare:   { label: 'Unmasked, no pair',         color: '#b08c2f', cls: 'cat-unmasked-bare',
+                       help: 'mld did not mask this verse, but did not find a strong Luke pair either' },
+    masked:          { label: 'Masked (Markan)',           color: '#8a7a3a', cls: 'cat-masked',
+                       help: 'Masked as Markan; no strong Luke parallel either' },
+    m:               { label: 'Matt-exclusive (M)',        color: '#5a5a5a', cls: 'cat-m',
+                       help: 'No strong parallel anywhere' },
+  };
+
+  function classify(i) {
+    const mk = markBest[i];
+    const lk = lukeBest[i];
+    const mkS = mk ? mk.score : 0;
+    const lkS = lk ? lk.score : 0;
+    const m = mldMask[i];
+    const p = mldPair[i];
+
+    // A paired mld verse always wins the "survives" banner — strongest signal
+    if (p) return 'survives';
+    // Mask disagreements — strong Luke parallel but masked out
+    if (m && m.masked_as_markan && lkS >= TH) return 'masked_but_q';
+    if (mkS >= TH && lkS >= TH) return 'triple';
+    if (lkS >= TH && mkS < TH) return 'pure_q';
+    if (mkS >= TH && lkS < TH) return 'mark_only';
+    if (m && m.masked_as_markan) return 'masked';
+    if (m && !m.masked_as_markan) return 'unmasked_bare';
+    return 'm';
+  }
+
+  const cats = new Array(mattTotal);
+  for (let i = 0; i < mattTotal; i++) cats[i] = classify(i);
+
+  // --- Overview strip
+  (function () {
+    const cols = 104;
+    const rows = Math.ceil(mattTotal / cols);
+    const W = 1200, pad = 18;
+    const cellW = (W - pad * 2) / cols;
+    const cellH = 11;
+    const H = pad * 2 + rows * cellH + 26;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+
+    for (let i = 0; i < mattTotal; i++) {
+      const r = Math.floor(i / cols);
+      const c = i % cols;
+      const x = pad + c * cellW;
+      const y = pad + r * cellH;
+      const cat = CATS[cats[i]];
+      const ref = mattIdxToRef(i);
+      const rect = SH.svgEl('rect', {
+        x: x + 0.25, y: y + 0.25, width: cellW - 0.5, height: cellH - 0.5,
+        fill: cat.color, 'fill-opacity': cats[i] === 'm' ? 0.25 : 0.78,
+      });
+      rect.style.cursor = 'pointer';
+      rect.addEventListener('mousemove', ev => SH.showTip([
+        SH.tipRow(ref.ref, cat.label),
+        markBest[i] ? SH.tipRow('best Mark', markBest[i].score.toFixed(3) + ' · ' + markBest[i].ref) : SH.tipLine('no Mark parallel', 'small'),
+        lukeBest[i] ? SH.tipRow('best Luke', lukeBest[i].score.toFixed(3) + ' · ' + lukeBest[i].ref) : SH.tipLine('no Luke parallel', 'small'),
+        mldMask[i] ? SH.tipRow('mld', mldMask[i].masked_as_markan ? 'masked (' + mldMask[i].mask_rule + ')' : 'unmasked') : null,
+        mldPair[i] ? SH.tipRow('mld pair', mldPair[i].b_ref + ' · ' + mldPair[i].score.toFixed(3)) : null,
+      ].filter(Boolean), ev.clientX, ev.clientY));
+      rect.addEventListener('mouseleave', SH.hideTip);
+      rect.addEventListener('click', () => { showDetail(i); window.scrollTo({ top: document.getElementById('selected').getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' }); });
+      svg.appendChild(rect);
+      if (ref.verse === 1) {
+        svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: y, y2: y + cellH, stroke: '#1a1a1a', 'stroke-width': 0.8 }));
+        if (ref.chap % 4 === 1) {
+          const t = SH.svgElText(ref.chap, { x, y: H - 8, 'font-size': 10, fill: '#1a1a1a' });
+          svg.appendChild(t);
+        }
+      }
+    }
+    document.getElementById('overviewStrip').appendChild(svg);
+
+    const leg = document.getElementById('legend');
+    for (const k of Object.keys(CATS)) {
+      const c = CATS[k];
+      const span = SH.el('span', { title: c.help, style: 'display:inline-flex;align-items:center;gap:5px;' },
+        SH.el('span', { class: 'legend-sw', style: 'background:' + c.color }),
+        SH.el('span', null, c.label));
+      leg.appendChild(span);
+    }
+  })();
+
+  // --- Stat grid
+  const catCounts = {};
+  for (const k of Object.keys(CATS)) catCounts[k] = 0;
+  for (const c of cats) catCounts[c] = (catCounts[c] || 0) + 1;
+  (function () {
+    const host = document.getElementById('statgrid');
+    const order = ['triple', 'masked_but_q', 'survives', 'pure_q', 'mark_only', 'masked', 'unmasked_bare', 'm'];
+    for (const k of order) {
+      const c = CATS[k];
+      host.appendChild(SH.el('div', { class: 'card' },
+        SH.el('div', { class: 'stat' },
+          SH.el('div', { class: 'n', style: 'color:' + c.color }, String(catCounts[k] || 0)),
+          SH.el('div', { class: 'k' }, c.label),
+          SH.el('div', { class: 'small' }, c.help))));
+    }
+  })();
+
+  // --- Selector dropdown
+  (function () {
+    const sel = document.getElementById('cat');
+    sel.appendChild(SH.el('option', { value: '' }, '(all)'));
+    for (const k of Object.keys(CATS)) sel.appendChild(SH.el('option', { value: k }, CATS[k].label + ' (' + (catCounts[k] || 0) + ')'));
+  })();
+
+  // --- Detail card for a single Matt verse
+  function showDetail(i) {
+    const host = document.getElementById('selected');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const ref = mattIdxToRef(i);
+    const cat = CATS[cats[i]];
+    const m = mldMask[i];
+    const p = mldPair[i];
+
+    const head = SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;margin-bottom:10px;' },
+      SH.el('span', { style: 'font-size:22px;font-weight:700;color:#a8551a;' }, ref.ref),
+      SH.el('span', { class: 'v-chip ' + cat.cls, title: cat.help }, cat.label),
+      mldPair[i] ? SH.el('a', {
+        href: '09_pair_explorer.html#mld/' + encodeURIComponent(mldPair[i].a_ref + '|' + mldPair[i].b_ref),
+        style: 'font-size:12px;color:#22506c;',
+      }, 'open in masked pair explorer →') : null,
+      mldPair[i] ? SH.el('a', {
+        href: '15_q_core.html#mld/' + encodeURIComponent(mldPair[i].a_ref + '|' + mldPair[i].b_ref),
+        style: 'font-size:12px;color:#0f766e;',
+      }, 'Q core reader →') : null,
+    );
+    host.appendChild(head);
+
+    const grid = SH.el('div', { class: 'v-grid' });
+
+    // Matt column
+    const mattBox = SH.el('div', { class: 'v-col matt' });
+    mattBox.appendChild(SH.el('div', { class: 'v-head', style: 'color:#a8551a' }, 'Matthew'));
+    mattBox.appendChild(SH.el('div', { class: 'v-score' }, ref.ref));
+    mattBox.appendChild(SH.el('div', { class: 'v-greek' }, mattText[i] || SH.el('span', { class: 'v-none' }, '(no Greek text available for this verse)')));
+    grid.appendChild(mattBox);
+
+    // Mark column
+    const mk = markBest[i];
+    const markBox = SH.el('div', { class: 'v-col mark' });
+    markBox.appendChild(SH.el('div', { class: 'v-head', style: 'color:#8b2e2e' }, 'Mark — best parallel'));
+    if (mk) {
+      const openLink = mk.kind === 'primary' ? SH.el('a', {
+        href: '09_pair_explorer.html#mm/' + encodeURIComponent(mk.ref + '|' + ref.ref),
+        style: 'font-size:11px;margin-left:8px;color:#8b2e2e;',
+      }, 'open →') : null;
+      const head = SH.el('div', { class: 'v-score', style: 'display:flex;gap:6px;align-items:baseline;' },
+        SH.el('span', null, mk.ref),
+        SH.el('span', { style: 'color:#8b2e2e;font-weight:700;' }, '· ' + mk.score.toFixed(3) + ' ' + (mk.kind === 'primary' ? '(chain)' : '(echo)')));
+      if (openLink) head.appendChild(openLink);
+      markBox.appendChild(head);
+      if (mk.classes && mk.classes.length) {
+        const cr = SH.el('div', { class: 'small', style: 'margin-bottom:6px;' });
+        for (const c of mk.classes) cr.appendChild(SH.el('span', { class: 'chip', style: 'margin-right:3px;' }, c));
+        markBox.appendChild(cr);
+      }
+      markBox.appendChild(SH.el('div', { class: 'v-greek' }, mk.text || ''));
+    } else {
+      markBox.appendChild(SH.el('div', { class: 'v-none' }, 'No Mark parallel in the mm primary chain or secondary echoes.'));
+    }
+    grid.appendChild(markBox);
+
+    // Luke column
+    const lk = lukeBest[i];
+    const lukeBox = SH.el('div', { class: 'v-col luke' });
+    lukeBox.appendChild(SH.el('div', { class: 'v-head', style: 'color:#22506c' }, 'Luke — best parallel'));
+    if (lk) {
+      const openLink = lk.kind === 'primary' ? SH.el('a', {
+        href: '09_pair_explorer.html#ml/' + encodeURIComponent(ref.ref + '|' + lk.ref),
+        style: 'font-size:11px;margin-left:8px;color:#22506c;',
+      }, 'open →') : null;
+      const head = SH.el('div', { class: 'v-score', style: 'display:flex;gap:6px;align-items:baseline;' },
+        SH.el('span', null, lk.ref),
+        SH.el('span', { style: 'color:#22506c;font-weight:700;' }, '· ' + lk.score.toFixed(3) + ' ' + (lk.kind === 'primary' ? '(chain)' : '(echo)')));
+      if (openLink) head.appendChild(openLink);
+      lukeBox.appendChild(head);
+      if (lk.classes && lk.classes.length) {
+        const cr = SH.el('div', { class: 'small', style: 'margin-bottom:6px;' });
+        for (const c of lk.classes) cr.appendChild(SH.el('span', { class: 'chip', style: 'margin-right:3px;' }, c));
+        lukeBox.appendChild(cr);
+      }
+      lukeBox.appendChild(SH.el('div', { class: 'v-greek' }, lk.text || ''));
+    } else {
+      lukeBox.appendChild(SH.el('div', { class: 'v-none' }, 'No Luke parallel in the ml primary chain or secondary echoes.'));
+    }
+    grid.appendChild(lukeBox);
+
+    // mld mask column
+    const maskBox = SH.el('div', { class: 'v-col mask' });
+    maskBox.appendChild(SH.el('div', { class: 'v-head', style: 'color:#0f766e' }, 'mld — Markan-mask status'));
+    if (m) {
+      maskBox.appendChild(SH.el('div', { class: 'v-score' },
+        m.masked_as_markan
+          ? 'MASKED · rule: ' + m.mask_rule
+          : 'UNMASKED · (no mask rule triggered)'));
+      if (m.best_mark_ref) {
+        maskBox.appendChild(SH.el('div', { class: 'small' },
+          'best Mark parallel for masking: ', SH.el('b', null, m.best_mark_ref), ' · ', SH.el('b', null, m.best_mark_score.toFixed(3))));
+      }
+      if (m.in_markan_chain) {
+        maskBox.appendChild(SH.el('div', { class: 'small' }, 'in Markan chain at ', m.chain_mark_ref, ' (', m.chain_score.toFixed(3), ')'));
+      }
+      if (m.local_cluster) {
+        maskBox.appendChild(SH.el('div', { class: 'small' }, 'in local cluster of masked verses'));
+      }
+      if (p) {
+        maskBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:6px;color:#0f766e;font-weight:bold;' },
+          'SURVIVES as masked primary pair ↔ ' + p.b_ref + ' · ' + p.score.toFixed(3)));
+        if (p.tags && p.tags.length) {
+          const cr = SH.el('div', { class: 'small' });
+          for (const c of p.tags) cr.appendChild(SH.el('span', { class: 'chip', style: 'margin-right:3px;' }, c.replace(/_/g, ' ')));
+          maskBox.appendChild(cr);
+        }
+      }
+    } else {
+      maskBox.appendChild(SH.el('div', { class: 'v-none' }, 'No mask-audit row (unexpected for Matthew).'));
+    }
+    grid.appendChild(maskBox);
+
+    host.appendChild(grid);
+
+    // Cross-page links row
+    const xRow = SH.el('div', { class: 'small', style: 'margin-top:12px;color:var(--ink-mute);display:flex;gap:14px;flex-wrap:wrap;' });
+    if (mk && mk.kind === 'primary') {
+      xRow.appendChild(SH.el('a', { href: '09_pair_explorer.html#mm/' + encodeURIComponent(mk.ref + '|' + ref.ref) }, 'mm pair explorer →'));
+    }
+    if (lk && lk.kind === 'primary') {
+      xRow.appendChild(SH.el('a', { href: '09_pair_explorer.html#ml/' + encodeURIComponent(ref.ref + '|' + lk.ref) }, 'ml pair explorer →'));
+    }
+    xRow.appendChild(SH.el('a', { href: '13_triangle.html#' + SH.currentDataset() }, 'three-way triangle view →'));
+    if (m && m.masked_as_markan) xRow.appendChild(SH.el('a', { href: '14_mask_audit.html#mld' }, 'full mask audit →'));
+    if (xRow.children.length) host.appendChild(xRow);
+  }
+
+  // --- Lookup table
+  function renderLookup() {
+    const qText = (document.getElementById('q').value || '').trim().toLowerCase();
+    const chap = parseInt(document.getElementById('chap').value) || 0;
+    const catFilter = document.getElementById('cat').value;
+    const ms = parseFloat(document.getElementById('minsc').value || '0');
+    document.getElementById('minscv').textContent = ms.toFixed(2);
+    const onlyDisagree = document.getElementById('onlyDisagree').checked;
+
+    const tbl = document.getElementById('lookupTbl');
+    while (tbl.firstChild) tbl.removeChild(tbl.firstChild);
+    const th = SH.el('thead', null, SH.el('tr', null,
+      SH.el('th', null, 'Matt'),
+      SH.el('th', null, 'category'),
+      SH.el('th', null, 'best Mark'),
+      SH.el('th', null, 'score'),
+      SH.el('th', null, 'best Luke'),
+      SH.el('th', null, 'score'),
+      SH.el('th', null, 'mld'),
+    ));
+    tbl.appendChild(th);
+    const tb = SH.el('tbody');
+    let shown = 0;
+    for (let i = 0; i < mattTotal; i++) {
+      const ref = mattIdxToRef(i);
+      if (qText && !ref.ref.toLowerCase().includes(qText)) continue;
+      if (chap && ref.chap !== chap) continue;
+      if (catFilter && cats[i] !== catFilter) continue;
+      const mk = markBest[i];
+      const lk = lukeBest[i];
+      const maxS = Math.max(mk ? mk.score : 0, lk ? lk.score : 0);
+      if (maxS < ms) continue;
+      const m = mldMask[i];
+      const isDisagree = m && m.masked_as_markan && lk && lk.score >= TH;
+      if (onlyDisagree && !isDisagree) continue;
+      if (shown > 400) break;
+      shown += 1;
+
+      const tr = SH.el('tr', { class: 'tbl-row' });
+      tr.addEventListener('click', () => {
+        showDetail(i);
+        window.scrollTo({ top: document.getElementById('selected').getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' });
+      });
+      const cat = CATS[cats[i]];
+      tr.appendChild(SH.el('td', { style: 'color:#a8551a;font-weight:600;' }, ref.ref));
+      tr.appendChild(SH.el('td', null, SH.el('span', { class: 'v-chip ' + cat.cls }, cat.label)));
+      tr.appendChild(SH.el('td', { style: 'color:#8b2e2e;' }, mk ? mk.ref : '—'));
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, mk ? mk.score.toFixed(3) : ''));
+      tr.appendChild(SH.el('td', { style: 'color:#22506c;' }, lk ? lk.ref : '—'));
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, lk ? lk.score.toFixed(3) : ''));
+      let mldCell = '—';
+      if (m) mldCell = m.masked_as_markan ? ('masked · ' + m.mask_rule) : 'unmasked';
+      if (mldPair[i]) mldCell += ' · paired';
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);font-size:11px;' }, mldCell));
+      tb.appendChild(tr);
+    }
+    tbl.appendChild(tb);
+    document.getElementById('matchct').textContent = shown + (shown >= 400 ? '+' : '') + ' verses';
+  }
+
+  ['q', 'chap', 'cat', 'minsc', 'onlyDisagree'].forEach(id => {
+    const e = document.getElementById(id);
+    e.addEventListener('input', renderLookup);
+    e.addEventListener('change', renderLookup);
+  });
+  renderLookup();
+
+  // Default detail — use the hash if present, else pick the first masked_but_q verse (most interesting)
+  (function () {
+    let start = -1;
+    const hashRef = decodeURIComponent((window.location.hash || '').replace('#', ''));
+    if (hashRef) {
+      for (let i = 0; i < mattTotal; i++) {
+        if (mattIdxToRef(i).ref === hashRef) { start = i; break; }
+      }
+    }
+    if (start < 0) {
+      for (let i = 0; i < mattTotal; i++) if (cats[i] === 'masked_but_q') { start = i; break; }
+    }
+    if (start < 0) start = 0;
+    showDetail(start);
+  })();
+})();
+</script>
+</body>
+</html>

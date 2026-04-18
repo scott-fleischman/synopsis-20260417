@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Thomas parallels · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .thomas-layout { display: grid; grid-template-columns: 1fr 420px; gap: 18px; align-items: start; }
+  .burden-band { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; font-size: 12px; }
+  .burden-band .b-chip { padding: 3px 10px; border-radius: 12px; font-family: var(--sans); cursor: pointer; border: 1px solid transparent; }
+  .burden-band .b-chip.on { border-color: var(--ink); }
+  .burden-band .b-chip.high { background: #f0d0c8; color: #8b2e2e; }
+  .burden-band .b-chip.moderate { background: #f3e2ce; color: #a8551a; }
+  .burden-band .b-chip.low { background: #dbe8d5; color: #2a5a1a; }
+  .burden-band .b-chip.na { background: var(--rule-soft); color: var(--ink-mute); }
+  .logia-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .logion-card { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 12px 14px; cursor: pointer; position: relative; }
+  .logion-card:hover { border-color: var(--mark); background: #fbfaf6; }
+  .logion-card.active { border-color: var(--mark); background: #f4efdf; }
+  .logion-card .num { position: absolute; top: 10px; right: 12px; font-family: var(--serif); font-size: 22px; color: var(--rule); font-weight: 500; }
+  .logion-card.active .num { color: var(--mark); }
+  .logion-card h4 { margin: 0 0 6px; font-family: var(--serif); font-size: 14px; max-width: 80%; }
+  .logion-card .refs { font-size: 11px; color: var(--ink-mute); margin-bottom: 6px; font-family: var(--mono); }
+  .logion-card .model { font-size: 12px; color: var(--ink-soft); line-height: 1.45; }
+  .logion-card .burden-row { margin-top: 8px; display: flex; gap: 6px; font-size: 10px; }
+  .logion-card .burden-row .b-chip { padding: 1px 7px; border-radius: 8px; }
+  .detail-panel { position: sticky; top: 14px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px; max-height: calc(100vh - 40px); overflow-y: auto; }
+  .detail-panel h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 17px; }
+  .detail-panel .sub { font-size: 11px; color: var(--ink-mute); margin-bottom: 12px; font-family: var(--mono); }
+  .coptic-text { font-family: var(--greek); font-size: 16px; line-height: 1.7; background: #fbfaf6; border: 1px solid var(--rule-soft); padding: 10px 12px; border-radius: 3px; direction: ltr; margin-bottom: 12px; }
+  .coptic-text .g { color: var(--ink); }
+  .controls-row { display: flex; gap: 10px; margin-bottom: 10px; font-size: 12px; align-items: center; }
+  .controls-row input[type=text] { flex: 1; padding: 5px 8px; }
+  .canonical-refs-list { font-size: 12px; line-height: 1.6; margin-top: 8px; }
+  .canonical-refs-list a { display: inline-block; padding: 1px 6px; background: #efe8d4; color: var(--matt); border-radius: 2px; margin: 2px 3px 2px 0; font-family: var(--mono); font-size: 11px; }
+  .no-coptic { font-style: italic; color: var(--ink-mute); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Thomas parallels</h1>
+    <span class="sub">47 Thomas logia with canonical motifs · Coptic text from Coptic Scriptorium TEI</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    The Gospel of Thomas survives in Coptic (NHC II,2) with three Greek fragments (P.Oxy. 1, 654, 655). Because this package parses the Coptic, direct <em>Greek-to-Greek</em> dependence is not automatically scored. Instead the registry is a hand-curated mapping: a Thomas logion → canonical motif → direct-dependence burden → best-fit transmission model. The honest default for most logia is <em>shared sayings tradition with independent crystallization</em>; Thomas frequently sharpens toward revelatory/esoteric framing while Matthew/Luke frame the same saying for broader paraenesis. Click any card to read the Coptic text alongside the canonical parallels.
+  </p>
+
+  <div class="controls-row">
+    <input id="q" type="text" placeholder="Filter by motif, canonical ref, logion number…" />
+    <span class="small" id="counter"></span>
+  </div>
+
+  <div class="burden-band">
+    <b style="color:var(--ink-soft);">Direct-dependence burden filter:</b>
+    <span class="b-chip high on" data-b="high">high</span>
+    <span class="b-chip moderate on" data-b="moderate">moderate</span>
+    <span class="b-chip low on" data-b="low">low</span>
+    <span class="b-chip na on" data-b="na">other/absent</span>
+  </div>
+
+  <div class="thomas-layout">
+    <div id="cards" class="logia-grid"></div>
+    <aside class="detail-panel" id="detail">
+      <div class="small" style="color:var(--ink-mute);">Click a logion to see its Coptic text and canonical parallels.</div>
+    </aside>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('21_thomas_parallels.html');
+  const J = SH.BUNDLE.jtea;
+  const registry = J.thomas_registry || [];
+  const units = J.thomas_units || [];
+
+  // Index coptic units by logion id (string)
+  const unitByLogion = {};
+  units.forEach(u => {
+    const k = String(u.idx || '').trim();
+    if (!unitByLogion[k]) unitByLogion[k] = [];
+    unitByLogion[k].push(u);
+  });
+
+  function burdenClass(v) {
+    const s = String(v || '').toLowerCase();
+    if (s.indexOf('high') >= 0 && s.indexOf('low') < 0) return 'high';
+    if (s.indexOf('moderate') >= 0) return 'moderate';
+    if (s.indexOf('low') >= 0) return 'low';
+    return 'na';
+  }
+
+  let state = { q: '', burdenOn: { high: true, moderate: true, low: true, na: true }, active: null };
+
+  function filtered() {
+    const q = state.q.toLowerCase();
+    return registry.filter(r => {
+      const bc = burdenClass(r.direct_dependence_burden);
+      if (!state.burdenOn[bc]) return false;
+      if (q) {
+        const refs = (r.canonical_refs || []).join(' ');
+        const hay = (r.thomas_logion + ' ' + (r.motif || '') + ' ' + refs + ' ' + (r.best_first_model || '')).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderCards() {
+    const f = filtered();
+    const root = document.getElementById('cards');
+    while (root.firstChild) root.removeChild(root.firstChild);
+    f.forEach(r => {
+      const bc = burdenClass(r.direct_dependence_burden);
+      const card = SH.el('div', { class: 'logion-card' + (state.active === r.thomas_logion ? ' active' : ''),
+        onclick: () => { state.active = r.thomas_logion; renderCards(); renderDetail(r); } },
+        SH.el('div', { class: 'num' }, String(r.thomas_logion)),
+        SH.el('h4', null, r.motif || '(no motif)'),
+        SH.el('div', { class: 'refs' }, (r.canonical_refs || []).join(' · ')),
+        SH.el('div', { class: 'model' }, r.best_first_model || ''),
+        SH.el('div', { class: 'burden-row' },
+          SH.el('span', { class: 'b-chip ' + bc }, 'burden: ' + (r.direct_dependence_burden || 'n/a'))));
+      root.appendChild(card);
+    });
+    document.getElementById('counter').textContent = f.length + ' / ' + registry.length;
+  }
+
+  function renderDetail(r) {
+    const d = document.getElementById('detail');
+    while (d.firstChild) d.removeChild(d.firstChild);
+    d.appendChild(SH.el('h3', null, 'Logion ' + r.thomas_logion + ' · ' + (r.motif || '')));
+    d.appendChild(SH.el('div', { class: 'sub' }, 'Direct-dependence burden: ' + (r.direct_dependence_burden || 'n/a')));
+
+    const logKey = String(r.thomas_logion).trim();
+    const us = unitByLogion[logKey] || [];
+    if (us.length) {
+      const box = SH.el('div', { class: 'coptic-text' });
+      us.forEach(u => {
+        const line = SH.el('div', { class: 'g', style: 'margin-bottom:4px;' }, u.text_coptic || u.text || '');
+        box.appendChild(line);
+        if (u.lemmas) {
+          const lem = SH.el('div', { style: 'font-size:10px;color:var(--ink-mute);font-family:var(--mono);margin-bottom:6px;' }, 'lemmas: ' + u.lemmas);
+          box.appendChild(lem);
+        }
+      });
+      d.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:var(--ink-mute);' }, 'Coptic text (Coptic Scriptorium)'));
+      d.appendChild(box);
+    } else {
+      d.appendChild(SH.el('div', { class: 'no-coptic' }, 'No Coptic unit text for this logion in the current parse.'));
+    }
+
+    d.appendChild(SH.el('div', { class: 'small', style: 'margin-top:8px;color:var(--ink-mute);' }, 'Canonical parallels'));
+    const refsDiv = SH.el('div', { class: 'canonical-refs-list' });
+    (r.canonical_refs || []).forEach(ref => {
+      refsDiv.appendChild(SH.el('span', { class: '', style: 'display:inline-block;padding:1px 6px;background:#efe8d4;color:var(--matt);border-radius:2px;margin:2px 3px 2px 0;font-family:var(--mono);font-size:11px;' }, ref));
+    });
+    d.appendChild(refsDiv);
+
+    d.appendChild(SH.el('div', { class: 'small', style: 'margin-top:12px;color:var(--ink-mute);' }, 'Best-first transmission model'));
+    d.appendChild(SH.el('div', { style: 'font-size:13px;line-height:1.5;margin-top:3px;' }, r.best_first_model || '—'));
+  }
+
+  document.getElementById('q').addEventListener('input', (e) => { state.q = e.target.value; renderCards(); });
+  document.querySelectorAll('.burden-band .b-chip').forEach(ch => {
+    ch.addEventListener('click', () => {
+      const b = ch.getAttribute('data-b');
+      state.burdenOn[b] = !state.burdenOn[b];
+      ch.classList.toggle('on');
+      renderCards();
+    });
+  });
+
+  renderCards();
+})();
+</script>
+</body>
+</html>

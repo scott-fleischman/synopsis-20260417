@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pair classes &amp; score distribution</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Pair classes &amp; score distribution</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <h2>Score histogram, stratified by class</h2>
+    <div class="caption" style="margin:0 0 10px;">Every primary pair is tagged with one or more edit classes. Bars stack the 0.05-wide score bins; hover a segment for the class counts in that bin.</div>
+    <div id="hist"></div>
+    <div id="legend" style="margin-top:10px;"></div>
+  </div>
+
+  <div class="card">
+    <h2>Class co-occurrence</h2>
+    <div class="caption" style="margin:0 0 10px;">How often two classes appear together on the same pair. A substitution + reordering pair is typical; a close_match + expansion pair is structurally impossible. Diagonal = single-class counts.</div>
+    <div id="heat"></div>
+  </div>
+
+  <div class="card">
+    <h2>Score vs token delta, colored by class</h2>
+    <div class="caption" style="margin:0 0 10px;">X: similarity score; Y: <span class="greek">|b_tokens − a_tokens|</span>. The right-hand high-score column with low delta is the "close match" zone; the upper cloud is "expands" on one side; the lower-left is the reorder/substitution body.</div>
+    <div id="scatter"></div>
+  </div>
+
+  <div class="card">
+    <h2>Class counts &amp; score quantiles</h2>
+    <div class="scrollx"><table class="data-table" id="qt"></table></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('06_score_classes.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — how primary pairs distribute';
+
+  const captions = {
+    mm: 'Every Matt↔Mark primary pair carries one or more edit classes (close_match, matt_expands, mark_expands, substitution, reordering). The histogram shows that "substitution" and "reordering" dominate the middle of the score range — Matthew rewrites Mark constantly, but at a surface-word level, not a structural one. "close_match" (a pair where the Greek is nearly identical) is the rarest class — 12 out of 385.',
+    ml: 'Matt↔Luke has fewer pairs (233) and more classes per pair — the average pair carries ~2 tags. "matt_expands" is the largest bucket (93 pairs), followed by "substitution" (113). The right-hand tail is thin: only 9 pairs score ≥0.80, confirming that the Q backbone is heavily paraphrased. Note "partial_overlap" (24) — a category MM doesn\'t have; it captures Q-pairs where the overlap is weaker than a match but stronger than noise.',
+    mld: 'Just 49 pairs survive Markan masking. Classes here are derived from the mld pipeline\'s tag vocabulary (close_match + strong_parallel collapse into close_match; moderate/weak_parallel → partial_overlap; matt_expands_or_luke_abbreviates → matt_expands; etc). Three mld-only classes appear: rare_shared (signals shared uncommon vocabulary — the classical Q fingerprint), multi_overlap (multiple content lemmas aligning, a strong double-tradition indicator), and formulaic (high-frequency shared vocabulary only, a weaker signal). The histogram\'s body sits lower than ml because masking removes the easy-match Markan residue.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  const classColors = {
+    close_match:       '#0f766e',
+    matt_expands:      '#22506c',
+    mark_expands:      '#8b2e2e',
+    luke_expands:      '#22506c',
+    substitution:      '#a8551a',
+    reordering:        '#8a5a3c',
+    reordering_absent: '#b8b392',
+    partial_overlap:   '#6a3a8a',
+    rare_shared:       '#058476',
+    multi_overlap:     '#1f3d5a',
+    formulaic:         '#8f7a3a',
+  };
+
+  const allClasses = Array.from(new Set(D.pairs.flatMap(p => p.classes || [])));
+  allClasses.sort();
+
+  // Histogram binned by score at 0.05
+  (function () {
+    const W = 1160, H = 310, pad = { l: 50, r: 30, t: 20, b: 40 };
+    const iw = W - pad.l - pad.r;
+    const ih = H - pad.t - pad.b;
+    const step = 0.05;
+    const bins = [];
+    for (let b = 0; b <= 1.0001; b += step) bins.push({ lo: b, hi: Math.min(1, b + step), counts: {} });
+    for (const p of D.pairs) {
+      const s = p.score;
+      let idx = Math.min(bins.length - 1, Math.floor(s / step));
+      for (const cls of p.classes || ['(none)']) {
+        bins[idx].counts[cls] = (bins[idx].counts[cls] || 0) + 1;
+      }
+    }
+    const maxCount = Math.max(1, ...bins.map(b => Object.values(b.counts).reduce((a, c) => a + c, 0)));
+    const fx = SH.scale(0, 1, pad.l, pad.l + iw);
+    const fy = SH.scale(0, maxCount, pad.t + ih, pad.t);
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+
+    // X axis
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l + iw, y1: pad.t + ih, y2: pad.t + ih, stroke: '#c7b787' }));
+    for (let s = 0; s <= 1.0001; s += 0.1) {
+      const x = fx(s);
+      svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: pad.t + ih, y2: pad.t + ih + 4, stroke: '#c7b787' }));
+      const t = SH.svgEl('text', { x, y: pad.t + ih + 16, 'font-size': 10, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      t.textContent = s.toFixed(1);
+      svg.appendChild(t);
+    }
+    // Y axis
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l, y1: pad.t, y2: pad.t + ih, stroke: '#c7b787' }));
+    for (let i = 0; i <= 5; i++) {
+      const v = (maxCount / 5) * i;
+      const y = fy(v);
+      svg.appendChild(SH.svgEl('line', { x1: pad.l - 4, x2: pad.l, y1: y, y2: y, stroke: '#c7b787' }));
+      const t = SH.svgEl('text', { x: pad.l - 6, y: y + 3, 'font-size': 10, 'text-anchor': 'end', fill: '#7a7a7a' });
+      t.textContent = Math.round(v);
+      svg.appendChild(t);
+    }
+
+    // Bars
+    const binW = iw / bins.length;
+    bins.forEach((b, i) => {
+      const x = pad.l + i * binW;
+      let y0 = pad.t + ih;
+      const entries = Object.entries(b.counts);
+      entries.sort((a, c) => c[1] - a[1]);
+      for (const pair of entries) {
+        const cls = pair[0], n = pair[1];
+        const h = (n / maxCount) * ih;
+        const y = y0 - h;
+        const rect = SH.svgEl('rect', {
+          x: x + 1, y, width: binW - 2, height: h,
+          fill: classColors[cls] || '#7a7a7a', 'fill-opacity': 0.88,
+        });
+        rect.addEventListener('mousemove', ev => {
+          SH.showTip([
+            SH.tipRow('bin', b.lo.toFixed(2) + '–' + b.hi.toFixed(2)),
+            ...entries.map(e => SH.tipRow(e[0], e[1])),
+          ], ev.clientX, ev.clientY);
+        });
+        rect.addEventListener('mouseleave', SH.hideTip);
+        svg.appendChild(rect);
+        y0 = y;
+      }
+    });
+    // Axis labels
+    const xl = SH.svgEl('text', { x: pad.l + iw / 2, y: H - 6, 'font-size': 11, 'text-anchor': 'middle', fill: '#5a5a5a' });
+    xl.textContent = 'similarity score (0 = no overlap, 1 = identical)';
+    svg.appendChild(xl);
+    const yl = SH.svgEl('text', { x: 12, y: pad.t + ih / 2, 'font-size': 11, 'text-anchor': 'middle', fill: '#5a5a5a', transform: `rotate(-90 12 ${pad.t + ih / 2})` });
+    yl.textContent = 'pair count (stacked by class)';
+    svg.appendChild(yl);
+
+    document.getElementById('hist').appendChild(svg);
+
+    const leg = document.getElementById('legend');
+    const box = SH.el('div', { style: 'display:flex;flex-wrap:wrap;gap:14px;font-size:12px;align-items:center;' });
+    for (const cls of allClasses) {
+      const swatch = SH.el('span', { style: `display:inline-block;width:12px;height:12px;background:${classColors[cls] || '#7a7a7a'};margin-right:6px;border-radius:2px;vertical-align:-2px;` });
+      const row = SH.el('span', null, swatch, cls);
+      box.appendChild(row);
+    }
+    leg.appendChild(box);
+  })();
+
+  // Co-occurrence heatmap
+  (function () {
+    const n = allClasses.length;
+    const mat = Array.from({ length: n }, () => new Array(n).fill(0));
+    for (const p of D.pairs) {
+      const cs = p.classes || [];
+      for (let i = 0; i < cs.length; i++) {
+        for (let j = 0; j < cs.length; j++) {
+          const ii = allClasses.indexOf(cs[i]);
+          const jj = allClasses.indexOf(cs[j]);
+          if (ii >= 0 && jj >= 0) mat[ii][jj] += 1;
+        }
+      }
+    }
+    const max = Math.max(1, ...mat.flat());
+    const W = 620, H = 420;
+    const cell = 64, left = 180, top = 60;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+    for (let i = 0; i < n; i++) {
+      const lt = SH.svgEl('text', { x: left - 6, y: top + cell * i + cell / 2 + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#1f1e1a' });
+      lt.textContent = allClasses[i];
+      svg.appendChild(lt);
+      const ct = SH.svgEl('text', { x: left + cell * i + cell / 2, y: top - 8, 'font-size': 11, 'text-anchor': 'middle', fill: '#1f1e1a',
+        transform: `rotate(-30 ${left + cell * i + cell / 2} ${top - 8})` });
+      ct.textContent = allClasses[i];
+      svg.appendChild(ct);
+    }
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        const v = mat[i][j];
+        const col = SH.scoreColor(v / max);
+        const r = SH.svgEl('rect', { x: left + cell * j, y: top + cell * i, width: cell - 2, height: cell - 2, fill: col });
+        r.addEventListener('mousemove', ev => SH.showTip([
+          SH.tipRow(allClasses[i] + ' × ' + allClasses[j], v),
+        ], ev.clientX, ev.clientY));
+        r.addEventListener('mouseleave', SH.hideTip);
+        svg.appendChild(r);
+        const t = SH.svgEl('text', { x: left + cell * j + cell / 2, y: top + cell * i + cell / 2 + 4, 'font-size': 11, 'text-anchor': 'middle', fill: v / max > 0.55 ? '#fff' : '#1f1e1a' });
+        t.textContent = v;
+        svg.appendChild(t);
+      }
+    }
+    document.getElementById('heat').appendChild(svg);
+  })();
+
+  // Scatter: score vs |tokens delta|
+  (function () {
+    const W = 1160, H = 380, pad = { l: 56, r: 30, t: 20, b: 40 };
+    const iw = W - pad.l - pad.r;
+    const ih = H - pad.t - pad.b;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+
+    const points = D.pairs.map(p => {
+      const aT = (p.a_text || '').split(/\s+/).filter(Boolean).length;
+      const bT = (p.b_text || '').split(/\s+/).filter(Boolean).length;
+      return { s: p.score, d: Math.abs(bT - aT), p };
+    });
+    const maxD = Math.max(1, ...points.map(pt => pt.d));
+    const fx = SH.scale(0, 1, pad.l, pad.l + iw);
+    const fy = SH.scale(0, maxD, pad.t + ih, pad.t);
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l + iw, y1: pad.t + ih, y2: pad.t + ih, stroke: '#c7b787' }));
+    svg.appendChild(SH.svgEl('line', { x1: pad.l, x2: pad.l, y1: pad.t, y2: pad.t + ih, stroke: '#c7b787' }));
+    for (let s = 0; s <= 1.0001; s += 0.1) {
+      const x = fx(s);
+      svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: pad.t + ih, y2: pad.t + ih + 4, stroke: '#c7b787' }));
+      const t = SH.svgEl('text', { x, y: pad.t + ih + 16, 'font-size': 10, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      t.textContent = s.toFixed(1);
+      svg.appendChild(t);
+    }
+    for (let i = 0; i <= 5; i++) {
+      const v = Math.round((maxD / 5) * i);
+      const y = fy(v);
+      svg.appendChild(SH.svgEl('line', { x1: pad.l - 4, x2: pad.l, y1: y, y2: y, stroke: '#c7b787' }));
+      const t = SH.svgEl('text', { x: pad.l - 6, y: y + 3, 'font-size': 10, 'text-anchor': 'end', fill: '#7a7a7a' });
+      t.textContent = v;
+      svg.appendChild(t);
+    }
+    for (const pt of points) {
+      const cls = (pt.p.classes || [])[0] || '(none)';
+      const fill = classColors[cls] || '#7a7a7a';
+      const x = fx(pt.s), y = fy(pt.d);
+      const c = SH.svgEl('circle', { cx: x, cy: y, r: 2.6, fill, 'fill-opacity': 0.7 });
+      c.addEventListener('mousemove', ev => SH.showTip([
+        SH.tipRow('pair', pt.p.a_ref + ' ↔ ' + pt.p.b_ref),
+        SH.tipRow('score', pt.p.score.toFixed(3)),
+        SH.tipRow('|Δ tokens|', pt.d),
+        SH.tipRow('classes', (pt.p.classes || []).join(', ')),
+      ], ev.clientX, ev.clientY));
+      c.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(c);
+    }
+    const xl = SH.svgEl('text', { x: pad.l + iw / 2, y: H - 6, 'font-size': 11, 'text-anchor': 'middle', fill: '#5a5a5a' });
+    xl.textContent = 'similarity score →';
+    svg.appendChild(xl);
+    const yl = SH.svgEl('text', { x: 14, y: pad.t + ih / 2, 'font-size': 11, 'text-anchor': 'middle', fill: '#5a5a5a', transform: `rotate(-90 14 ${pad.t + ih / 2})` });
+    yl.textContent = '|a_tokens − b_tokens|';
+    svg.appendChild(yl);
+    document.getElementById('scatter').appendChild(svg);
+  })();
+
+  // Quantile table by class
+  (function () {
+    const rows = [['class', 'pairs', 'median', 'p25', 'p75', 'min', 'max']];
+    function q(arr, p) {
+      if (!arr.length) return 0;
+      const i = Math.min(arr.length - 1, Math.max(0, Math.floor(arr.length * p)));
+      return arr[i];
+    }
+    for (const cls of allClasses) {
+      const scs = D.pairs.filter(p => (p.classes || []).includes(cls)).map(p => p.score).sort((a, b) => a - b);
+      rows.push([cls, scs.length, q(scs, 0.5).toFixed(3), q(scs, 0.25).toFixed(3), q(scs, 0.75).toFixed(3), scs[0] ? scs[0].toFixed(3) : '—', scs.length ? scs[scs.length - 1].toFixed(3) : '—']);
+    }
+    const tbl = document.getElementById('qt');
+    const thead = SH.el('thead');
+    const thr = SH.el('tr');
+    rows[0].forEach(h => thr.appendChild(SH.el('th', null, h)));
+    thead.appendChild(thr); tbl.appendChild(thead);
+    const tb = SH.el('tbody');
+    for (let i = 1; i < rows.length; i++) {
+      const tr = SH.el('tr');
+      rows[i].forEach((v, idx) => {
+        const td = SH.el('td', idx === 0 ? { style: 'font-weight:600;color:' + (classColors[v] || '#1f1e1a') } : null, v);
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    }
+    tbl.appendChild(tb);
+  })();
+})();
+</script>
+</body>
+</html>
