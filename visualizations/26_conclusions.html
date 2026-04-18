@@ -57,6 +57,31 @@
   .verify-link .ds-tag.mld { background: #5c7a8b; }
   .verify-link .ds-tag.jtea { background: #0f766e; }
   .verify-link .why { color: var(--ink-mute); font-size: 11px; font-style: italic; margin-left: 2px; }
+
+  .artifact-band { margin: 8px 0 12px; padding: 8px 12px; background: #faf8f1; border: 1px dashed var(--rule); border-radius: 3px; font-size: 12px; }
+  .artifact-band .label { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 4px; }
+  .artifact-band ul { margin: 0; padding-left: 18px; color: var(--ink-soft); line-height: 1.55; }
+  .artifact-band li { margin: 2px 0; }
+  .artifact-band code { font-size: 11px; background: #fff; padding: 1px 5px; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink); font-family: var(--mono); }
+  .artifact-band .row { color: var(--accent); font-family: var(--mono); font-size: 11px; }
+
+  .origin-tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 2px; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; vertical-align: middle; }
+  .origin-tag.auto { background: #dee8f0; color: #22506c; }
+  .origin-tag.curated { background: #efe8d4; color: #7a5a12; }
+  .origin-tag.package { background: #eeece4; color: #4a4538; }
+  .origin-caption { background: #fbf7ea; border-left: 3px solid #b88e2a; padding: 8px 12px; font-size: 12px; color: var(--ink-soft); margin: 4px 0 14px 0; line-height: 1.55; max-width: 960px; }
+  .origin-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.4px; margin: 2px 0 4px; font-weight: 600; }
+
+  .dim-key { display: flex; gap: 18px; flex-wrap: wrap; margin: 6px 0 10px; font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+  .dim-key b { color: var(--ink); }
+  #dim_table td, #dim_table th { vertical-align: top; }
+  #dim_table td.q { font-weight: 600; white-space: nowrap; }
+  .dim-pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #fff; min-width: 50px; text-align: center; }
+  .dim-pill.high { background: #6b1f0a; }
+  .dim-pill.mhigh { background: #a8551a; }
+  .dim-pill.medium { background: #5c7a8b; }
+  .dim-pill.low { background: #8a8a8a; }
+  .dim-pill.na { background: #c9c2b0; color: #6b6454; }
 </style>
 </head>
 <body>
@@ -76,11 +101,31 @@
       <div class="item"><span class="conf-pill medium">Medium</span> best current model, several competing models remain credible</div>
       <div class="item"><span class="conf-pill low">Low</span> package doesn't yet support a firm conclusion</div>
     </div>
+    <p class="origin-caption">
+      <b>Signal origin.</b> Within each conclusion card:
+      <span class="origin-tag curated">curated</span> marks the authorial claim, "why" paragraph, and confidence grade — they are <em>not</em> pipeline output.
+      <span class="origin-tag auto">auto</span> marks the stat cards (counts and totals derived directly from the analysis packages).
+      <span class="origin-tag package">package</span> marks the raw-data dropdown ("Inspect the underlying data") — verbatim from <code>mm/ml/mld/jtea</code> YAML &amp; CSV.
+      Verify-band links route to the visualizations where the evidence can be audited in place.
+    </p>
   </div>
 
   <section class="card" style="margin-top:8px;">
     <h2>Headline confidence table</h2>
     <div class="scrollx"><table class="data-table" id="conf_table"></table></div>
+  </section>
+
+  <section class="card" style="margin-top:8px;">
+    <h2>Three-way confidence</h2>
+    <p class="caption" style="margin-top:0;">
+      A single confidence grade smuggles three very different questions into one column. This table splits them out — a case can be lexically strong but directionally uncertain (e.g. 1&nbsp;Cor&nbsp;11 / Luke&nbsp;22 has the longest exact run in the package but Paul pre-dates Luke, so direction runs the opposite way of any naïve read).
+    </p>
+    <div class="dim-key">
+      <div><b>Retrieval</b> — does the automatic pipeline (score, exact-run, n-gram) see a signal at all?</div>
+      <div><b>Interpretive</b> — once a signal is seen, how confident is the reading we built on top of it?</div>
+      <div><b>Directional</b> — can we tell which way any dependence runs (A→B, B→A, shared source)?</div>
+    </div>
+    <div class="scrollx"><table class="data-table" id="dim_table"></table></div>
   </section>
 
   <div id="conclusions"></div>
@@ -175,6 +220,30 @@
     band.appendChild(lw);
     return band;
   }
+
+  function artifactBand(refs) {
+    // refs: array of {file: "...csv/yaml", row: "...key/ref", note: "..."}
+    const band = el('div', {class: 'artifact-band'});
+    band.appendChild(el('div', {class: 'label'}, 'Claim-to-evidence bindings · specific artifact rows that ground this claim'));
+    const ul = el('ul');
+    refs.forEach(r => {
+      const li = el('li');
+      li.appendChild(el('code', null, r.file));
+      if (r.row) {
+        li.appendChild(document.createTextNode(' · '));
+        li.appendChild(el('span', {class: 'row'}, r.row));
+      }
+      if (r.note) {
+        li.appendChild(document.createTextNode(' — ' + r.note));
+      }
+      ul.appendChild(li);
+    });
+    band.appendChild(ul);
+    return band;
+  }
+  function originTag(cls, label, title) {
+    return el('span', {class: 'origin-tag ' + cls, title: title || ''}, label);
+  }
   function section(opts) {
     const s = el('section', {class: 'concl'});
     const h = el('div', {class: 'concl-head'});
@@ -182,16 +251,29 @@
     h.appendChild(el('h2', null, opts.title));
     h.appendChild(pill(opts.confLabel, opts.conf));
     s.appendChild(h);
-    s.appendChild(el('div', {class: 'concl-claim'}, opts.claim));
-    if (opts.why) s.appendChild(el('div', {class: 'concl-why'}, opts.why));
+    const claim = el('div', {class: 'concl-claim'});
+    claim.appendChild(originTag('curated', 'curated', 'Authorial claim, not pipeline output'));
+    claim.appendChild(document.createTextNode(' ' + opts.claim));
+    s.appendChild(claim);
+    if (opts.why) {
+      const why = el('div', {class: 'concl-why'});
+      why.appendChild(originTag('curated', 'curated', 'Authorial reasoning, not pipeline output'));
+      why.appendChild(document.createTextNode(' ' + opts.why));
+      s.appendChild(why);
+    }
     if (opts.stats && opts.stats.length) {
+      s.appendChild(el('div', {class: 'origin-row'}, originTag('auto', 'auto', 'Derived from the analysis packages'), el('span', null, 'Package-derived stats')));
       const sr = el('div', {class: 'stats-row'});
       opts.stats.forEach(([v, l]) => sr.appendChild(stat(v, l)));
       s.appendChild(sr);
     }
+    if (opts.evidence && opts.evidence.length) s.appendChild(artifactBand(opts.evidence));
     if (opts.raw) {
       const d = el('details', {class: 'raw'});
-      d.appendChild(el('summary', null, opts.rawLabel || 'Inspect the underlying data'));
+      const summary = el('summary', null);
+      summary.appendChild(originTag('package', 'package', 'Raw data from mm/ml/mld/jtea'));
+      summary.appendChild(document.createTextNode(' ' + (opts.rawLabel || 'Inspect the underlying data')));
+      d.appendChild(summary);
       const body = el('div', {class: 'raw-body'});
       (opts.raw instanceof Node ? [opts.raw] : opts.raw).forEach(n => body.appendChild(n));
       d.appendChild(body);
@@ -225,6 +307,44 @@
       el('td', null, pill(clab, ccls))));
   });
   tbl.appendChild(tbody);
+
+  // ---- three-way confidence table ----
+  // Each dimension is scored independently: retrieval (automatic pipeline),
+  // interpretive (analyst reading on top of the signal), directional
+  // (can we tell which way any dependence runs). "na" means the question
+  // is not directional (Q as layer vs. document).
+  const dimRows = [
+    ['Mark–Matthew',                          'high',   'high',    'mhigh', 'Mark→Matt backbone + 474:87 gap asymmetry.'],
+    ['1 Timothy 5:18 / Luke 10:7',            'high',   'high',    'medium','5-token exact run + γραφή citation; Luke vs pre-Lukan saying hard to separate.'],
+    ['Matthew–Luke double tradition',         'high',   'mhigh',   'low',   'Many strong echoes; symmetric burden after Markan masking → direction not resolvable.'],
+    ['James / Gospel sayings',                'medium', 'mhigh',   'low',   'Semantic convergence outruns lexical; direction indeterminate.'],
+    ['The Q question',                        'medium', 'medium',  'na',    'Supports a sayings layer; a single discrete Q document is not required.'],
+    ['John ↔ Synoptics',                      'medium', 'medium',  'low',   'Heavy Johannine transformation; anchor episodes shared but direction unresolved.'],
+    ['Thomas ↔ canonical',                    'medium', 'medium',  'low',   'Sayings network; must be assessed logion by logion.'],
+    ['1 Cor 11 / Luke 22 Lord\u2019s Supper', 'high',   'medium',  'high',  '6-token exact run, but Paul pre-dates Luke → direction runs opposite of naïve reading.'],
+    ['1 John 3:13 / John 15:18–19',           'medium', 'medium',  'low',   'Intra-Johannine idiolect; one motif cannot settle direction within the school.'],
+    ['Other apocrypha beyond Thomas',         'low',    'low',     'low',   'Inventory only; no directional test yet.'],
+  ];
+  const dimTbl = document.getElementById('dim_table');
+  const dimHead = el('thead', null, el('tr', null,
+    el('th', null, 'Question'),
+    el('th', null, 'Retrieval'),
+    el('th', null, 'Interpretive'),
+    el('th', null, 'Directional'),
+    el('th', null, 'Note')));
+  dimTbl.appendChild(dimHead);
+  const dimBody = el('tbody');
+  const dimLabel = {high: 'High', mhigh: 'M-High', medium: 'Medium', low: 'Low', na: 'N/A'};
+  function dimPill(cls) { return el('span', {class: 'dim-pill ' + cls, title: dimLabel[cls]}, dimLabel[cls]); }
+  dimRows.forEach(([q, r, i, d, note]) => {
+    dimBody.appendChild(el('tr', null,
+      el('td', {class: 'q'}, q),
+      el('td', null, dimPill(r)),
+      el('td', null, dimPill(i)),
+      el('td', null, dimPill(d)),
+      el('td', {style: 'color:var(--ink-soft);font-size:12px;'}, note)));
+  });
+  dimTbl.appendChild(dimBody);
 
   // ---- build 10 sections ----
   const container = document.getElementById('conclusions');
@@ -274,6 +394,12 @@
       [mmG.loose_block_count, 'loose blocks'],
     ],
     raw: mmRaw,
+    evidence: [
+      {file: 'mark_matthew_analysis/data/12_global_summary.yaml', row: 'global_metrics', note: '474 Matt-only gap verses vs 87 Mark-only — the asymmetry on which the claim rests.'},
+      {file: 'mark_matthew_analysis/data/01_primary_alignment_chain.csv', row: '1189 rows', note: 'the aligned pair spine; 99.52% of Mark is in-chain.'},
+      {file: 'mark_matthew_analysis/data/04_loose_blocks.csv', row: '25 blocks', note: 'coherent narrative stretches; within these, Mark/Matt token counts match closely (8258/8259).'},
+      {file: 'mark_matthew_analysis/data/08_direction_burden_ledger.yaml', row: 'per-block', note: 'Matthew-from-Mark expansion is cheaper than Mark-from-Matthew deletion across the sample.'},
+    ],
     verify: [
       verifyLink('01_synoptic_map.html#mm', '01', 'Synoptic map', 'mm', 'see every aligned pair'),
       verifyLink('02_block_ribbon.html#mm', '02', 'Block ribbon', 'mm', 'see the 25 loose blocks'),
@@ -312,6 +438,11 @@
       ['γραφή', 'citation formula'],
     ],
     raw: tim_raw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: epistle_1tim_5_18_worker_wages_luke_10_7', note: 'full Greek, 5-token exact run, per-hypothesis burden.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_id: worker_wages', note: 'independence_burden: very_high → direct_literary_burden: medium.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/15_filtered_high_value_exact_hits.csv', row: '1Tim 5:18 → Luke 10:7', note: 'survives the scripture/liturgy filter; 5-token normalized run.'},
+    ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'full case with Greek + burden'),
       verifyLink('23_exact_hits.html', '23', 'Exact hits', 'jtea', 'the 5-token run in top hits'),
@@ -369,6 +500,12 @@
       ['26.4 = 26.4', 'symmetric masked burden'],
     ],
     raw: mlRaw,
+    evidence: [
+      {file: 'matt_luke_analysis/data/08_direction_burden_ledger.yaml', row: 'full totals', note: 'Luke-prior: 142.559 vs Matt-prior: 75.477 — but includes Markan confounds.'},
+      {file: 'matt_luke_double_masked_analysis/data/08_direction_burden_ledger.yaml', row: 'masked totals', note: 'after masking Markan material: Luke-uses-Matt = Matt-uses-Luke = 26.446 (perfectly symmetric).'},
+      {file: 'matt_luke_analysis/data/05_secondary_echoes.csv', row: '1033 rows', note: 'echoes with extensive nonlocal reordering — inconsistent with a stable linear written source.'},
+      {file: 'matt_luke_double_masked_analysis/data/13_mask_audit.csv', row: 'per-verse rule trace', note: 'reproducible masking decisions; each verse records why it was or wasn\u2019t treated as Markan.'},
+    ],
     verify: [
       verifyLink('01_synoptic_map.html#ml', '01', 'Synoptic map', 'ml', 'see sparse backbone'),
       verifyLink('01_synoptic_map.html#mld', '01', 'Synoptic map (masked)', 'mld', 'see Q-core only'),
@@ -419,6 +556,10 @@
       ['high', 'independence burden'],
     ],
     raw: jamesRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_ids: james_5_12_*, james_1_*, james_2_*', note: 'Jas 5:12 / Matt 5:34-37 is semantically tight but lexically compressed.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_ids: oaths_yes_no, poor_kingdom, ask_seek_find, hear_do_words, humble_exalt, judge_not_mercy, treasure_moth_rust', note: 'seven James-adjacent concept clusters with independence_burden annotations.'},
+    ],
     verify: [
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'cross-corpus saying motifs'),
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'James cases with Greek'),
@@ -454,6 +595,11 @@
       ['shared layer', 'best current model'],
     ],
     raw: qRaw,
+    evidence: [
+      {file: 'matt_luke_double_masked_analysis/data/08_direction_burden_ledger.yaml', row: 'residual double-tradition', note: 'masking Markan material collapses direction asymmetry to 26.446 = 26.446.'},
+      {file: 'matt_luke_analysis/data/05_secondary_echoes.csv', row: 'nonlocal rows', note: 'strong echoes scattered across positions — portable, not linear.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_ids spanning Matt/Luke/Thomas', note: 'same motifs surface in canonical pairs and in Thomas, supporting a shared saying layer.'},
+    ],
     verify: [
       verifyLink('15_q_core.html#mld', '15', 'Q core reader', 'mld', 'residual double-tradition backbone'),
       verifyLink('10_displacement.html#ml', '10', 'Displacement', 'ml', 'nonlocal top-echo placement'),
@@ -491,6 +637,11 @@
       ['network', 'not tree model'],
     ],
     raw: anchorRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/08_john_synoptic_anchor_registry.yaml', row: '10 anchor episodes', note: 'Baptist · feeding · water-walking · anointing · entry · last supper · arrest · denial · passion · garments.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/05_john_to_synoptics_candidates.csv.gz', row: '12,831 candidate rows', note: 'automatic lexical retrieval — heavy but mostly under-4-token runs because of Johannine transformation.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/14_burden_ledger.yaml', row: 'john_synoptic_relation', note: 'package explicitly records "possible locally, not globally demonstrated."'},
+    ],
     verify: [
       verifyLink('20_john_anchors.html', '20', 'John/Synoptic anchors', 'jtea', '10 anchors with two-hypothesis columns'),
       verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'filter to john_to_synoptics layer'),
@@ -531,6 +682,10 @@
       ['logion-by-logion', 'assessment required'],
     ],
     raw: thomasRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/09_thomas_parallel_registry.yaml', row: '47 curated parallels', note: 'each entry: motif, canonical refs, best_first_model, and direct_dependence_burden.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/03_thomas_units.csv', row: '116 Coptic logia', note: 'lemma_count and pos_types per logion — Coptic, not Greek, so lexical dependence is not automatically scorable.'},
+    ],
     verify: [
       verifyLink('21_thomas_parallels.html', '21', 'Thomas parallels', 'jtea', 'click any logion to see Coptic'),
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'concepts present in Thomas + canon'),
@@ -565,6 +720,10 @@
       ['liturgy', 'best model'],
     ],
     raw: corRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: epistle_1cor_11_24_lord_supper_luke_22', note: 'the longest exact run in the package — 6 tokens.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/10_negative_space_flags_for_exact_hits.csv', row: 'flag: lord_supper_remembrance, cup_new_covenant', note: 'rows flagged as eucharistic formula (formula-risk = high in the exact-hits view).'},
+    ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the full Eucharistic case'),
       verifyLink('23_exact_hits.html', '23', 'Exact hits', 'jtea', 'the 6-token run by score'),
@@ -598,6 +757,10 @@
       ['intra-corpus', 'continuity'],
     ],
     raw: jnRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: johannine_1john_3_13_world_hates_you', note: 'single-motif Johannine idiolect case.'},
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_id: world_hates_disciples', note: 'signal_type: "Johannine idiom/concept"; oral_tradition_burden: not_primary.'},
+    ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the Johannine case'),
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'world_hates_disciples concept'),
@@ -632,6 +795,9 @@
       ['Gospel of Peter', 'highest-value next case'],
     ],
     raw: apocRaw,
+    evidence: [
+      {file: 'john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv', row: apoc.length + ' works', note: 'M. R. James\u2019 catalogue as inventory — no retrieval pass yet across these corpora.'},
+    ],
     verify: [
       verifyLink('25_apocrypha_inventory.html', '25', 'Apocrypha inventory', 'jtea', '18 works grouped'),
     ],

@@ -53,6 +53,17 @@ def test_no_inner_html_assignments(html_files):
         assert not matches, f"{p.name} has innerHTML assignment(s); use DOM composition instead"
 
 
+def test_no_insert_adjacent_html(html_files):
+    # insertAdjacentHTML bypasses the innerHTML ban but has the same XSS
+    # surface when data carries markup. Review item #12 asks for it banned too.
+    pattern = re.compile(r"\.insertAdjacentHTML\s*\(")
+    for p in html_files:
+        s = _read(p)
+        assert not pattern.search(s), (
+            f"{p.name} uses insertAdjacentHTML; use DOM composition (SH.el / appendChild) instead"
+        )
+
+
 def test_nav_targets_exist(html_files):
     all_names = {p.name for p in html_files}
     all_names.add("index.html")

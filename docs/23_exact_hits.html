@@ -31,6 +31,12 @@
   .layer-tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 2px; }
   .layer-tag.ets { background: #dee8f0; color: var(--matt); }
   .layer-tag.jts { background: #f5e2e2; color: var(--mark); }
+  .risk-tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 2px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+  .risk-tag.high { background: #f4d6d6; color: #7a1717; }
+  .risk-tag.medium { background: #f3e4c5; color: #6f4a10; }
+  .risk-tag.low { background: #e3ecd9; color: #335222; }
+  .risk-tag.none { background: #eeeeee; color: #777777; }
+  .risk-caption { background: #faf6eb; border-left: 3px solid #b88e2a; padding: 8px 12px; font-size: 12px; color: var(--ink-soft); margin: 10px 0 0 0; line-height: 1.55; }
 </style>
 </head>
 <body>
@@ -47,12 +53,30 @@
 
   <div class="tally-grid" id="tally"></div>
 
+  <p class="risk-caption">
+    <b>Formula-risk tag.</b> Each row is tagged against <code>10_negative_space_flags_for_exact_hits.csv</code>.
+    <span class="risk-tag high">high</span> means the exact run is a shared OT quotation (Gen 2, Ps 110, Ps 118, Lev 19, Exod 20, Isa 40) or a eucharistic/liturgical formula — long agreement here is not evidence of direct Gospel dependence on its own.
+    <span class="risk-tag low">low</span> means the row was flagged only with soft markers (<code>nonfungible_phrase_candidate</code>, <code>thin_lexical_basis</code>) — agreement is either genuinely distinctive or genuinely thin; read the Greek column.
+    <span class="risk-tag none">no&nbsp;flag</span> means no negative-space flag fired and no scripture/liturgy noise was detected.
+  </p>
+
   <div class="hit-filter">
     <label>Layer:
       <select id="layer_sel">
         <option value="">all</option>
         <option value="epistle_to_gospel">epistles → Gospels</option>
         <option value="john_to_synoptic">John → Synoptics</option>
+      </select>
+    </label>
+    <label>Risk:
+      <select id="risk_sel">
+        <option value="">all</option>
+        <option value="none">no flag</option>
+        <option value="low">low</option>
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        <option value="any">any flag</option>
+        <option value="suppress_high">hide high risk</option>
       </select>
     </label>
     <label>Min score:
@@ -93,7 +117,7 @@
     <div style="overflow-x:auto;">
       <table class="data-table">
         <thead><tr>
-          <th>Layer</th><th>Source</th><th>Target</th><th>Score</th><th>Run</th><th>Max exact run (Greek)</th><th>Shared content tokens</th>
+          <th>Layer</th><th>Risk</th><th>Source</th><th>Target</th><th>Score</th><th>Run</th><th>Max exact run (Greek)</th><th>Shared content tokens</th>
         </tr></thead>
         <tbody id="tbody"></tbody>
       </table>
@@ -108,14 +132,26 @@
   SH.buildJteaNav('23_exact_hits.html');
   const J = SH.BUNDLE.jtea;
   const hits = J.exact_hits || [];
+  const flagsByRef = J.exact_hit_flags_by_ref || {};
   const total = hits.length;
+
+  function riskOf(h) {
+    const rec = flagsByRef[h.source_ref + '|' + h.target_ref];
+    return rec ? (rec.risk || 'none') : 'none';
+  }
+  function flagsOf(h) {
+    const rec = flagsByRef[h.source_ref + '|' + h.target_ref];
+    return rec ? (rec.flags || []) : [];
+  }
 
   // --- Tally
   const byLayer = {};
+  const byRisk = { high: 0, medium: 0, low: 0, none: 0 };
   let maxRun = 0, maxScore = 0;
   let strongN = 0;
   hits.forEach(h => {
     byLayer[h.layer] = (byLayer[h.layer] || 0) + 1;
+    byRisk[riskOf(h)] = (byRisk[riskOf(h)] || 0) + 1;
     if (h.max_exact_run_len > maxRun) maxRun = h.max_exact_run_len;
     if (h.score > maxScore) maxScore = h.score;
     if (h.score >= 0.5 && h.max_exact_run_len >= 4) strongN++;
@@ -126,7 +162,7 @@
     ['Epistles→Gospels', byLayer['epistle_to_gospel'] || 0, ''],
     ['John→Synoptics', byLayer['john_to_synoptic'] || 0, ''],
     ['Max run length', maxRun, 'tokens'],
-    ['Score ≥ 0.5 & run ≥ 4', strongN, 'strong overlap'],
+    ['High formula-risk', byRisk.high, 'OT / liturgy noise'],
   ].forEach(([k, v, s]) => {
     ty.appendChild(SH.el('div', { class: 'cell' },
       SH.el('div', { class: 'n' }, String(v)),
@@ -135,9 +171,10 @@
   });
 
   // --- State
-  const state = { layer: '', score: 0.35, run: 1, q: '', sort: 'score' };
+  const state = { layer: '', risk: '', score: 0.35, run: 1, q: '', sort: 'score' };
   const bind = () => {
     state.layer = document.getElementById('layer_sel').value;
+    state.risk = document.getElementById('risk_sel').value;
     state.score = parseInt(document.getElementById('score_slider').value, 10) / 100;
     state.run = parseInt(document.getElementById('run_input').value, 10) || 1;
     state.q = document.getElementById('q').value.toLowerCase();
@@ -145,14 +182,23 @@
     document.getElementById('score_meter').textContent = state.score.toFixed(2);
     renderAll();
   };
-  ['layer_sel', 'score_slider', 'run_input', 'q', 'sort_sel'].forEach(id => {
+  ['layer_sel', 'risk_sel', 'score_slider', 'run_input', 'q', 'sort_sel'].forEach(id => {
     document.getElementById(id).addEventListener('input', bind);
     document.getElementById(id).addEventListener('change', bind);
   });
 
+  function matchesRisk(h) {
+    if (!state.risk) return true;
+    const r = riskOf(h);
+    if (state.risk === 'any') return r !== 'none';
+    if (state.risk === 'suppress_high') return r !== 'high';
+    return r === state.risk;
+  }
+
   function filtered() {
     return hits.filter(h => {
       if (state.layer && h.layer !== state.layer) return false;
+      if (!matchesRisk(h)) return false;
       if (h.score < state.score) return false;
       if (h.max_exact_run_len < state.run) return false;
       if (state.q) {
@@ -221,12 +267,16 @@
       const c = SH.svgEl('circle', { class: 'dot', cx: x, cy: y, r: r, fill: color, opacity: 0.55 });
       c.addEventListener('mouseenter', (ev) => {
         const rect = svg.getBoundingClientRect();
-        SH.showTip([
+        const r_risk = riskOf(h);
+        const r_flags = flagsOf(h);
+        const tipRows = [
           SH.tipLine(h.source_ref + ' → ' + h.target_ref),
           SH.tipRow('Score', h.score.toFixed(3)),
           SH.tipRow('Run', h.max_exact_run_len + ' tokens'),
+          SH.tipRow('Risk', r_risk === 'none' ? 'no flag' : r_risk + (r_flags.length ? ' (' + r_flags.join(', ') + ')' : '')),
           SH.tipGreek(h.max_exact_run || ''),
-        ], rect.left + x, rect.top + y);
+        ];
+        SH.showTip(tipRows, rect.left + x, rect.top + y);
       });
       c.addEventListener('mouseleave', SH.hideTip);
       svg.appendChild(c);
@@ -240,6 +290,12 @@
     slice.forEach(h => {
       const tr = document.createElement('tr');
       tr.appendChild(SH.el('td', null, SH.el('span', { class: 'layer-tag ' + (h.layer === 'john_to_synoptic' ? 'jts' : 'ets') }, h.layer === 'john_to_synoptic' ? 'J→Syn' : 'Ep→Gsp')));
+      const risk = riskOf(h);
+      const flags = flagsOf(h);
+      const riskCell = SH.el('td', null,
+        SH.el('span', { class: 'risk-tag ' + risk, title: flags.join(', ') },
+          risk === 'none' ? '—' : risk));
+      tr.appendChild(riskCell);
       tr.appendChild(SH.el('td', null, h.source_ref));
       tr.appendChild(SH.el('td', null, h.target_ref));
       tr.appendChild(SH.el('td', { class: 'n' }, h.score.toFixed(3)));

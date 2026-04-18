@@ -39,6 +39,13 @@
   .best-expl { background: #efe8d4; border-left: 4px solid var(--accent); padding: 10px 14px; font-family: var(--serif); font-size: 15px; color: var(--ink); border-radius: 0 3px 3px 0; }
   .filter-bar { display: flex; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--rule); background: #fbfaf6; align-items: center; }
   .filter-bar input { padding: 4px 8px; font-size: 13px; border: 1px solid var(--rule); border-radius: 2px; flex: 1; }
+  .origin-tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 2px; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+  .origin-tag.auto { background: #dee8f0; color: #22506c; }
+  .origin-tag.curated { background: #efe8d4; color: #7a5a12; }
+  .origin-tag.text { background: #eeece4; color: #4a4538; }
+  .origin-caption { background: #fbf7ea; border-left: 3px solid #b88e2a; padding: 8px 12px; font-size: 12px; color: var(--ink-soft); margin: 0 0 12px 0; line-height: 1.55; max-width: 900px; }
+  .section.auto { border-left: 3px solid #22506c; }
+  .section.curated { border-left: 3px solid #b88e2a; }
 </style>
 </head>
 <body>
@@ -51,6 +58,12 @@
 
   <p class="caption" style="max-width:900px;">
     Each case pairs a source (usually an epistle or John) with a target (usually a Synoptic Gospel). The full Greek texts are shown with <span style="color:var(--mark);">source</span> and <span style="color:var(--matt);">target</span> colored; the token alignment below renders the same texts as an edit script (<span class="op equal" style="padding:1px 4px;">equal</span>, <span class="op insert" style="padding:1px 4px;">insert</span>, <span class="op delete" style="padding:1px 4px;">delete</span>, <span class="op replace-a" style="padding:1px 4px;">replace-a</span> / <span class="op replace-b" style="padding:1px 4px;">replace-b</span>) so you can see exactly how the two differ. Each hypothesis card carries the analyst's narrative estimate of its burden. The <em>provisional best explanation</em> is the model the case most strongly supports — not a final verdict.
+  </p>
+
+  <p class="origin-caption">
+    <b>Signal origin.</b> Each section carries a tag that shows where the content comes from.
+    <span class="origin-tag auto">auto</span> means deterministic retrieval output (score, n-gram counts, exact run, token alignment) — byte-reproducible from <code>04/05/15_*.csv</code>.
+    <span class="origin-tag curated">curated</span> means analyst judgment (why-high-value, hypothesis weighting, provisional best explanation) — written in the YAML registry, not computed. Retrieval and curation agree on most high-value rows, but they can diverge — and when they do, both are shown.
   </p>
 
   <div class="case-layout">
@@ -144,20 +157,32 @@
     return el;
   }
 
+  function titleWithTag(text, tagClass, tagLabel) {
+    const h3 = SH.el('h3', null, text);
+    h3.appendChild(SH.el('span', { class: 'origin-tag ' + tagClass, title: tagLabelTooltip(tagClass) }, tagLabel));
+    return h3;
+  }
+
+  function tagLabelTooltip(cls) {
+    if (cls === 'auto') return 'Computed automatically from the retrieval pipeline (byte-reproducible).';
+    if (cls === 'curated') return 'Analyst judgment written in the YAML registry, not computed.';
+    return 'SBLGNT Greek text (from Project-based canonical source).';
+  }
+
   function renderDetail() {
     const c = cases[activeIdx];
     const d = document.getElementById('detail');
     while (d.firstChild) d.removeChild(d.firstChild);
 
-    const h = SH.el('section', { class: 'section' });
-    h.appendChild(SH.el('h3', null, c.source_ref + ' ~ ' + c.target_ref + (c.feature ? ' — ' + c.feature : '')));
+    const h = SH.el('section', { class: 'section curated' });
+    h.appendChild(titleWithTag(c.source_ref + ' ~ ' + c.target_ref + (c.feature ? ' — ' + c.feature : ''), 'curated', 'curated'));
     h.appendChild(SH.el('div', { class: 'sub' }, c.case_id));
     if (c.why_high_value) h.appendChild(SH.el('div', null, c.why_high_value));
     if (c.prima_facie_signal) h.appendChild(boldLabel('Prima facie:', c.prima_facie_signal));
     d.appendChild(h);
 
     const tx = SH.el('section', { class: 'section' });
-    tx.appendChild(SH.el('h3', null, 'Full Greek'));
+    tx.appendChild(titleWithTag('Full Greek', 'text', 'source text'));
     if (c.source_text) {
       const r = SH.el('div', { style: 'margin-bottom:8px;' });
       r.appendChild(SH.el('div', { class: 'sub' }, c.source_ref));
@@ -174,8 +199,8 @@
 
     if (c.automatic_metrics) {
       const m = c.automatic_metrics;
-      const mx = SH.el('section', { class: 'section' });
-      mx.appendChild(SH.el('h3', null, 'Automatic metrics'));
+      const mx = SH.el('section', { class: 'section auto' });
+      mx.appendChild(titleWithTag('Retrieval metrics', 'auto', 'auto'));
       const grid = SH.el('div', { class: 'metrics' });
       const cells = [
         ['Score', (m.score || 0).toFixed(3)],
@@ -209,16 +234,17 @@
     }
 
     if (c.token_alignment_ops && c.token_alignment_ops.length) {
-      const tk = SH.el('section', { class: 'section' });
-      tk.appendChild(SH.el('h3', null, 'Token alignment'));
-      tk.appendChild(SH.el('div', { class: 'sub' }, 'Each row shows one side of the edit script. Green chips are insertions (on target only); red struck chips are deletions (on source only); colored replace pairs show substitutions.'));
+      const tk = SH.el('section', { class: 'section auto' });
+      tk.appendChild(titleWithTag('Token alignment', 'auto', 'auto'));
+      tk.appendChild(SH.el('div', { class: 'sub' }, 'Each row shows one side of the edit script. Green chips are insertions (on target only); red struck chips are deletions (on source only); colored replace pairs show substitutions. Deterministic Needleman-Wunsch-style output.'));
       tk.appendChild(renderAlignment(c.token_alignment_ops));
       d.appendChild(tk);
     }
 
     if (c.hypotheses) {
-      const hp = SH.el('section', { class: 'section' });
-      hp.appendChild(SH.el('h3', null, 'Hypothesis burdens'));
+      const hp = SH.el('section', { class: 'section curated' });
+      hp.appendChild(titleWithTag('Hypothesis burdens', 'curated', 'curated'));
+      hp.appendChild(SH.el('div', { class: 'sub' }, 'Narrative burden written in 07_targeted_case_studies.yaml — no numeric scoring under the hood.'));
       hp.appendChild(renderHypotheses(c.hypotheses));
       d.appendChild(hp);
     }
@@ -226,6 +252,7 @@
     if (c.provisional_best_explanation) {
       const bx = SH.el('div', { class: 'best-expl' });
       bx.appendChild(SH.el('b', null, 'Provisional best explanation:'));
+      bx.appendChild(SH.el('span', { class: 'origin-tag curated', style: 'margin-left: 6px;' }, 'curated'));
       bx.appendChild(document.createTextNode(' ' + c.provisional_best_explanation));
       d.appendChild(bx);
     }
