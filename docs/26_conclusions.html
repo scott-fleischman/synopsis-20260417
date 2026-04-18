@@ -82,6 +82,20 @@
   .dim-pill.medium { background: #5c7a8b; }
   .dim-pill.low { background: #8a8a8a; }
   .dim-pill.na { background: #c9c2b0; color: #6b6454; }
+
+  /* Contrary evidence + falsifiability panels */
+  .contrary-band { margin: 8px 0 12px; padding: 10px 14px; background: #f8ecea; border-left: 3px solid #8b2e2e; border-radius: 3px; }
+  .contrary-band .label { font-size: 10px; color: #8b2e2e; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .contrary-band .label .icon { width: 14px; height: 14px; border-radius: 50%; background: #8b2e2e; color: #fff; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+  .contrary-band ul { margin: 0; padding-left: 18px; color: var(--ink); font-size: 12px; line-height: 1.6; }
+  .contrary-band li { margin: 3px 0; }
+  .contrary-band li b { font-family: var(--sans); font-size: 11px; text-transform: none; letter-spacing: 0; color: #6b1f0a; }
+
+  .falsify-band { margin: 8px 0 12px; padding: 10px 14px; background: #eef1f7; border-left: 3px solid #22506c; border-radius: 3px; }
+  .falsify-band .label { font-size: 10px; color: #22506c; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .falsify-band .label .icon { width: 14px; height: 14px; border-radius: 2px; background: #22506c; color: #fff; font-size: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+  .falsify-band ul { margin: 0; padding-left: 18px; color: var(--ink); font-size: 12px; line-height: 1.6; }
+  .falsify-band li { margin: 3px 0; }
 </style>
 </head>
 <body>
@@ -244,6 +258,42 @@
   function originTag(cls, label, title) {
     return el('span', {class: 'origin-tag ' + cls, title: title || ''}, label);
   }
+  // Contrary / limiting evidence: explicit alternative explanations, methodological
+  // limits, or countervailing signals that a reader should weigh against the
+  // main claim. Items are {point: "short label", note: "reasoning"} — rendered
+  // as a bulleted list inside a red-accented band.
+  function contraryBand(items) {
+    const band = el('div', {class: 'contrary-band'});
+    const label = el('div', {class: 'label'});
+    label.appendChild(el('span', {class: 'icon'}, '!'));
+    label.appendChild(document.createTextNode('Contrary evidence & limiting factors'));
+    band.appendChild(label);
+    const ul = el('ul');
+    items.forEach(it => {
+      const li = el('li');
+      if (it.point) {
+        li.appendChild(el('b', null, it.point));
+        li.appendChild(document.createTextNode(' — '));
+      }
+      li.appendChild(document.createTextNode(it.note || ''));
+      ul.appendChild(li);
+    });
+    band.appendChild(ul);
+    return band;
+  }
+  // What would change this conclusion: a short falsifiability list. Gives the
+  // reader a concrete test the claim is not immune to.
+  function falsifyBand(items) {
+    const band = el('div', {class: 'falsify-band'});
+    const label = el('div', {class: 'label'});
+    label.appendChild(el('span', {class: 'icon'}, '?'));
+    label.appendChild(document.createTextNode('What would revise this conclusion'));
+    band.appendChild(label);
+    const ul = el('ul');
+    items.forEach(t => ul.appendChild(el('li', null, t)));
+    band.appendChild(ul);
+    return band;
+  }
   function section(opts) {
     const s = el('section', {class: 'concl'});
     const h = el('div', {class: 'concl-head'});
@@ -268,6 +318,8 @@
       s.appendChild(sr);
     }
     if (opts.evidence && opts.evidence.length) s.appendChild(artifactBand(opts.evidence));
+    if (opts.contrary && opts.contrary.length) s.appendChild(contraryBand(opts.contrary));
+    if (opts.whatWouldChange && opts.whatWouldChange.length) s.appendChild(falsifyBand(opts.whatWouldChange));
     if (opts.raw) {
       const d = el('details', {class: 'raw'});
       const summary = el('summary', null);
@@ -400,6 +452,18 @@
       {file: 'mark_matthew_analysis/data/04_loose_blocks.csv', row: (mmG.loose_block_count || 25) + ' blocks', note: 'coherent narrative stretches; within these, Mark/Matt token counts match closely (8258/8259).'},
       {file: 'mark_matthew_analysis/data/08_direction_burden_ledger.yaml', row: 'per-block', note: 'Matthew-from-Mark expansion is cheaper than Mark-from-Matthew deletion across the sample.'},
     ],
+    contrary: [
+      {point: 'Griesbach (Matthean priority)', note: 'Mark-from-Matthew is logically possible: Mark could have deliberately abbreviated Matthew + Luke. The 474:87 gap asymmetry is compatible with Mark systematically cutting the Sermon on the Mount, the infancy narrative, and most discourse clusters. The package records this model as not excluded in isolated blocks.'},
+      {point: 'Mark-from-a-pre-Mark source', note: 'Both Gospels could depend on an earlier common narrative, with Matthew expanding and a pre-Mark tradition behind canonical Mark. "Mark-like source" wording in the claim is precisely to accommodate this.'},
+      {point: 'Aligned-core token parity', note: 'Inside loose blocks Mark and Matt have near-identical token counts (8258 vs 8259). That parity by itself does not settle direction — it shows close lexical preservation either way.'},
+      {point: 'Alignment-pipeline priors', note: 'The chain uses a greedy pairwise aligner; its pair-selection heuristics implicitly favor Mark as a backbone. A reader who distrusts that choice will want to re-run with Matt as the pivot.'},
+    ],
+    whatWouldChange: [
+      'Discovery that Matt\u2019s "extras" (Sermon on the Mount, infancy narratives) are systematically derivable from a pre-Markan source that Mark deliberately trimmed.',
+      'A consistent pattern of Mark preferring distinctively Matthean lexical variants over its own, inside aligned pairs.',
+      'External evidence (patristic, manuscript) that reverses the standard chronology of the two gospels.',
+      'Re-running with Matt-as-pivot producing a tighter chain than Mark-as-pivot — currently not observed.',
+    ],
     verify: [
       verifyLink('01_synoptic_map.html#mm', '01', 'Synoptic map', 'mm', 'see every aligned pair'),
       verifyLink('02_block_ribbon.html#mm', '02', 'Block ribbon', 'mm', 'see the ' + (mmG.loose_block_count || 25) + ' loose blocks'),
@@ -442,6 +506,18 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: epistle_1tim_5_18_worker_wages_luke_10_7', note: 'full Greek, 5-token exact run, per-hypothesis burden.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_id: worker_wages', note: 'independence_burden: very_high → direct_literary_burden: medium.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/15_filtered_high_value_exact_hits.csv', row: '1Tim 5:18 → Luke 10:7', note: 'survives the scripture/liturgy filter; 5-token normalized run.'},
+    ],
+    contrary: [
+      {point: 'Pre-Lukan fixed saying', note: 'The wording could be a fixed Jesus-saying in catechetical circulation before Luke\u2019s Gospel was written. 1 Tim would then witness the tradition, not the Gospel. The claim deliberately says "Luke-like form" to leave this open.'},
+      {point: '1 Timothy dating', note: 'If 1 Timothy is late enough to post-date Luke\u2019s canonical form, direct Gospel use becomes more natural. If 1 Timothy is Pauline, it likely pre-dates Luke, which forces the pre-Lukan-tradition reading.'},
+      {point: 'γραφή ambiguity', note: 'The citation formula λέγει γὰρ ἡ γραφή introduces a Deut 25:4 + Jesus saying. It\u2019s unclear whether "γραφή" here refers to Luke as a written text or to the saying as authoritative tradition — the word alone does not fix direction.'},
+      {point: 'Selection effect', note: 'This case is in the curated targeted-case registry precisely because it stands out. Rereading at 1Tim\u2019s other verses would not reproduce this signal; the strength is local, not systemic.'},
+    ],
+    whatWouldChange: [
+      'Discovery of a non-Lukan source (early sayings collection, agraphon list) containing the exact 5-token μισθός form.',
+      'A redating of 1 Timothy that makes direct Luke-use chronologically implausible.',
+      'A variant tradition showing the "εργατης του μισθου" wording clearly pre-dating canonical Luke.',
+      'Evidence that the 5-token run is a translation-technique artifact rather than lexical inheritance.',
     ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'full case with Greek + burden'),
@@ -517,6 +593,19 @@
       {file: 'matt_luke_analysis/data/12_secondary_echoes.yaml', row: mlEchoCt + ' rows', note: 'echoes with extensive nonlocal reordering — inconsistent with a stable linear written source.'},
       {file: 'analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust/data/01b_mask_audit_default_medium.csv', row: 'per-verse rule trace', note: 'reproducible masking decisions under default medium regime; each verse records why it was or wasn\u2019t treated as Markan.'},
     ],
+    contrary: [
+      {point: 'Farrer-Goulder (Luke uses Matt directly)', note: 'On this hypothesis, no Q document is needed; Luke had Matt in front of him. The full-ml package numerically favors Luke-priority (burden ' + mlBLP + ' < ' + mlBMP + '), which is partially compatible with this model before masking — the masking step is what evens direction. A reader who distrusts the Markan mask will weight this hypothesis higher.'},
+      {point: 'Matthean Posteriority (Matt uses Luke)', note: 'Goodacre-style reversal: Matthew reads Luke. Less common but not excluded; symmetric masked burdens do not distinguish the two copy-directions from each other.'},
+      {point: 'Masking regime dependence', note: 'The "common source is cheaper than direct dependence" finding depends on how aggressively Markan material is masked. The sensitivity panel shows how the burden-ratio shifts under strict/medium/lenient regimes.'},
+      {point: 'High nonlocality ≠ no written source', note: 'A shared written sayings source could have been consulted non-linearly by both evangelists (like a commonplace book). High nonlocal placement weakens "single linear chain" readings, not "any shared written source" readings.'},
+      {point: 'No physical Q', note: 'No manuscript of Q has ever been found. The masked data is consistent with a shared layer but does not produce its contents as a recoverable document.'},
+    ],
+    whatWouldChange: [
+      'Discovery that the nonlocal reordering is concentrated in a subset of material (would favor a written source with a known fixed order for the rest).',
+      'A sensitivity regime showing that masked Matt↔Luke burdens become directionally asymmetric once Markan masking is tightened or loosened by a known amount.',
+      'Finding a second-century sayings collection preserving the exact shape of the reconstructed Q material.',
+      'Philological evidence that Matt and Luke independently translate from a common Aramaic sayings source with preserved grammatical artifacts.',
+    ],
     verify: [
       verifyLink('01_synoptic_map.html#ml', '01', 'Synoptic map', 'ml', 'see sparse backbone'),
       verifyLink('01_synoptic_map.html#mld', '01', 'Synoptic map (masked)', 'mld', 'see Q-core only'),
@@ -571,6 +660,18 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_ids: james_5_12_*, james_1_*, james_2_*', note: 'Jas 5:12 / Matt 5:34-37 is semantically tight but lexically compressed.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_ids: oaths_yes_no, poor_kingdom, ask_seek_find, hear_do_words, humble_exalt, judge_not_mercy, treasure_moth_rust', note: 'seven James-adjacent concept clusters with independence_burden annotations.'},
     ],
+    contrary: [
+      {point: 'Direct Matthew use (compressed)', note: 'A well-attested reading is that James compresses Matthean material (Sermon on the Mount in particular) for epistolary paraenesis. The semantic density is compatible with this; the lexical looseness is argued to be stylistic, not evidentiary.'},
+      {point: 'Pipeline underfit on semantic overlap', note: 'Exact-word retrieval systematically under-scores semantic convergence. "Not demonstrated" here is partly a statement about the pipeline, not just the evidence. A reader should weigh this carefully: absence of lexical agreement is not evidence of absence of dependence.'},
+      {point: 'James\u2019 own style', note: 'James tends to rephrase rather than quote, even for clearly scriptural material. That habit makes lexical-alignment tests systematically weak for his letter specifically.'},
+      {point: 'Jas 5:12 / Matt 5:34-37 may be a strong case', note: 'If the oath-saying is counted as a tight match (on semantic and structural grounds), this single case could push the conclusion closer to direct Matthean dependence. The package records it as high-value but not high-lexical-score.'},
+    ],
+    whatWouldChange: [
+      'A systematic cross-check adding semantic-embedding retrieval (not just lexical) might raise several James-Matt scores above threshold.',
+      'Discovery of a patristic citation chain showing James using explicit Matthean wording.',
+      'Finding a tight lexical alignment on a less-common motif (where independence-via-shared-saying becomes a heavy burden).',
+      'Early dating of James (pre-70) would shift the argument — it would make direct use of written Matthew implausible and strengthen the shared-tradition reading.',
+    ],
     verify: [
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'cross-corpus saying motifs'),
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'James cases with Greek'),
@@ -613,6 +714,18 @@
       {file: 'matt_luke_analysis/data/05_secondary_echoes.csv', row: 'nonlocal rows', note: 'strong echoes scattered across positions — portable, not linear.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_ids spanning Matt/Luke/Thomas', note: 'same motifs surface in canonical pairs and in Thomas, supporting a shared saying layer.'},
     ],
+    contrary: [
+      {point: 'No-Q hypothesis (Farrer)', note: 'If Luke read Matthew directly, no sayings layer is needed to explain double tradition. The near-symmetric masked burdens cannot distinguish a shared layer from a copy-direction that is balanced for other reasons (stylistic preservation, common vocabulary, etc.).'},
+      {point: 'Classic Q reconstructions', note: 'Conversely, published Q reconstructions (IQP, Kloppenborg) do recover specific order and extent. If Q was in fact a single document with a specific order, our "portable / nonlocal" finding would be an artifact of how both evangelists redacted their source, not evidence of a fluid tradition.'},
+      {point: '"Layer" not "document"', note: 'The claim hedges. A shared sayings *layer* might be one document, many documents, catechetical oral tradition, or a mix. The data does not currently distinguish these possibilities.'},
+      {point: 'Masking-regime dependence', note: 'The near-symmetric direct burden only holds under the default medium masking regime. Under the strict or lenient regimes the picture shifts — see 28_mld_regime_sensitivity.html.'},
+    ],
+    whatWouldChange: [
+      'Physical discovery of a manuscript matching major Q-reconstruction content.',
+      'A Q-sized sayings collection emerging from Greek or Syriac textual finds with distinctive agreement to reconstructed Q order.',
+      'Evidence that the near-symmetric masked burden is a methodological artifact (e.g., masking errors, alignment ties) rather than a real symmetry.',
+      'A pattern of minor-agreements (Matt-Luke vs Mark) that can only be explained by Luke reading Matthew — which would support Farrer over Q.',
+    ],
     verify: [
       verifyLink('15_q_core.html#mld', '15', 'Q core reader', 'mld', 'residual double-tradition backbone'),
       verifyLink('10_displacement.html#ml', '10', 'Displacement', 'ml', 'nonlocal top-echo placement'),
@@ -654,6 +767,18 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/08_john_synoptic_anchor_registry.yaml', row: '10 anchor episodes', note: 'Baptist · feeding · water-walking · anointing · entry · last supper · arrest · denial · passion · garments.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/05_john_to_synoptics_candidates.csv.gz', row: '12,831 candidate rows', note: 'automatic lexical retrieval — heavy but mostly under-4-token runs because of Johannine transformation.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/14_burden_ledger.yaml', row: 'john_synoptic_relation', note: 'package explicitly records "possible locally, not globally demonstrated."'},
+    ],
+    contrary: [
+      {point: 'John-knows-Mark / John-knows-Luke', note: 'A long-running tradition (Bauckham, Moloney) reads John as presupposing at least Mark, and increasingly Luke. Specific passion-sequence agreements (sword + ear, lots-over-garments, denial structure) are argued to be too specific for independent traditions.'},
+      {point: 'Radical independence', note: 'The opposite pole (Barrett, Gardner-Smith) reads John as largely or wholly independent of the Synoptics, drawing instead on shared oral sign-source and passion-source traditions. Our "too heavily transformed" finding is compatible with both extremes.'},
+      {point: 'Retrieval under-detects', note: 'Johannine paraphrase is extreme by any standard. A lexical pipeline with high thresholds will miss most of the relationship. "Substantial shared tradition" is the conservative statement the pipeline can support; dependence models could go further.'},
+      {point: 'Anchor-level assessment is author-curated', note: 'The 10 anchor episodes are a human judgment about what counts as "shared." A different anchoring (e.g., signs-source episodes, or Passion Narrative pericopae only) would produce a different picture.'},
+    ],
+    whatWouldChange: [
+      'Concrete evidence of John using a distinctive Synoptic redactional trait (e.g., a Markan seam, a Lukan double-feature, Matthean infancy-theme vocabulary).',
+      'Discovery of a Johannine sign-source manuscript matching John\u2019s miracle sequence but not John\u2019s discourse framing.',
+      'Statistical demonstration that John\u2019s anchor-level token overlap with a specific Synoptic is significantly above baseline for its writing style.',
+      'Finding a proto-Johannine-school witness that shares John\u2019s idiolect but not its anchor episodes.',
     ],
     verify: [
       verifyLink('20_john_anchors.html', '20', 'John/Synoptic anchors', 'jtea', '10 anchors with two-hypothesis columns'),
@@ -699,6 +824,19 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/09_thomas_parallel_registry.yaml', row: '47 curated parallels', note: 'each entry: motif, canonical refs, best_first_model, and direct_dependence_burden.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/03_thomas_units.csv', row: '116 Coptic logia', note: 'lemma_count and pos_types per logion — Coptic, not Greek, so lexical dependence is not automatically scorable.'},
     ],
+    contrary: [
+      {point: 'Thomas as wholly dependent on the canonical Gospels', note: 'A sustained tradition (Meier, Perrin) argues Thomas is a secondary redaction/harmonization of Matthew and Luke, with Coptic-stage Diatessaron influence. A network-witness claim does not exclude this — it just says the network is complex. The single-direction copy model remains live for some logia.'},
+      {point: 'Thomas as wholly independent', note: 'The Crossan/Patterson line reads Thomas as an early-sayings witness drawing on tradition independent of the canonical gospels. A network claim here is hedged: it does not pick the Crossan model either.'},
+      {point: 'Coptic evidence ceiling', note: 'Direct lexical dependence cannot be tested on Coptic — only on Greek. The three Greek P.Oxy fragments provide limited Greek witness, and they do not cover most of the registered parallels. The claim rests on semantic parallelism, not Greek-to-Greek agreement.'},
+      {point: '47 of 116 logia have no registered parallel', note: 'The matrix makes visible that most Thomas material has no canonical cousin recorded in this workbench. "Sayings-network witness" describes the 47 that do; the silent majority is not part of the argument.'},
+      {point: 'Registry selection', note: 'The registry is hand-curated. It reflects its curator\u2019s reading of which logia count as "parallels" and at what confidence. Different curators would produce different rosters.'},
+    ],
+    whatWouldChange: [
+      'Discovery of additional Greek Thomas fragments covering currently-unattested logia with lexical agreement to specific canonical Greek phrasing.',
+      'Demonstration that the Coptic rendering systematically preserves translation-technique artifacts pointing to a specific Greek source (canonical vs. pre-canonical).',
+      'A pattern across logia showing consistent dependence on one specific canonical Gospel (which would argue for single-branch dependence rather than network).',
+      'Patristic evidence situating Thomas\u2019 redaction in a specific relationship to one or more canonical gospels.',
+    ],
     verify: [
       verifyLink('21_thomas_parallels.html', '21', 'Thomas parallels', 'jtea', 'click any logion to see Coptic'),
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'concepts present in Thomas + canon'),
@@ -737,6 +875,18 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: epistle_1cor_11_24_lord_supper_luke_22', note: 'the longest exact run in the package — 6 tokens.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/10_negative_space_flags_for_exact_hits.csv', row: 'flag: lord_supper_remembrance, cup_new_covenant', note: 'rows flagged as eucharistic formula (formula-risk = high in the exact-hits view).'},
     ],
+    contrary: [
+      {point: 'Paul-could-use-oral-Luke-tradition', note: 'The chronological argument holds against Paul depending on canonical Luke, but Paul could draw on an early Lukan sayings tradition that also made its way into canonical Luke. This makes the two witnesses dependent via a shared oral-textual trunk — indistinguishable from "shared liturgy" on the evidence.'},
+      {point: 'Direct non-Pauline use', note: 'If Luke post-dates Paul but uses Paul\u2019s letters, the formula could be Luke reading 1 Cor. That is textually possible though debated; the claim leaves it open by calling the direction "liturgical tradition."'},
+      {point: 'Exact-run signal is still significant', note: 'The 6-token exact run is the strongest pure lexical signal in the package. Treating it as "not direct" is an interpretive choice grounded in chronology, not lexical absence. A reader who rejects the chronology should weight lexical strength more.'},
+      {point: 'Negative-space control is itself a hypothesis', note: 'Calling this "liturgy" depends on the formula-risk registry classifying eucharistic words as formulaic. A different registry (excluding eucharistic material from the formula-risk set) would classify this as strong direct evidence.'},
+    ],
+    whatWouldChange: [
+      'A redating of 1 Corinthians or canonical Luke that eliminated the chronological asymmetry.',
+      'Discovery of a pre-Pauline eucharistic liturgy that exactly matches the 6-token formula — would solidify the liturgical reading.',
+      'A pattern showing 1 Cor and Luke agreeing on distinctive non-eucharistic material (not observed in this package) would reopen direct dependence.',
+      'Evidence that Paul\u2019s framing ("I received from the Lord") reflects a specific written source rather than a delivered tradition.',
+    ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the full Eucharistic case'),
       verifyLink('23_exact_hits.html', '23', 'Exact hits', 'jtea', 'the 6-token run by score'),
@@ -774,6 +924,18 @@
       {file: 'john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml', row: 'case_id: johannine_1john_3_13_world_hates_you', note: 'single-motif Johannine idiolect case.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_id: world_hates_disciples', note: 'signal_type: "Johannine idiom/concept"; oral_tradition_burden: not_primary.'},
     ],
+    contrary: [
+      {point: '1 John reads canonical John', note: 'The standard reading (Brown, Lieu) is that 1 John post-dates the Gospel and presupposes its farewell-discourse material. "Shared school" and "1 John reads John" are compatible; the claim does not distinguish them.'},
+      {point: 'Gospel reads 1 John', note: 'Less common but argued by some — the Gospel\u2019s farewell discourse incorporates epistolary tradition. This minority view is not excluded on a single motif.'},
+      {point: 'Parallel composition', note: 'Both texts could have been composed in close proximity, drawing on the same community\u2019s catechesis. "Shared school/idiolect" is the most parsimonious version of this, which is what the claim asserts; but it is also the least informative about authorship relations.'},
+      {point: 'One motif is too thin', note: 'The claim hedges because "world-hates-disciples" alone cannot settle direction — it could move freely within a single school\u2019s vocabulary. A systematic multi-motif analysis across all Johannine literature would be needed to push further.'},
+    ],
+    whatWouldChange: [
+      'A systematic study of multiple shared motifs (love commandment, children-of-God, truth/lie, darkness/light, new/old commandment) showing consistent direction of influence.',
+      'Discovery of a Johannine-school precursor containing this motif that clearly pre-dates both texts.',
+      'Philological evidence (redactional seam, syntactic irregularity) pointing to one text incorporating material from the other.',
+      'Patristic testimony placing 1 John\u2019s composition clearly before or after Gospel publication.',
+    ],
     verify: [
       verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the Johannine case'),
       verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'world_hates_disciples concept'),
@@ -810,6 +972,18 @@
     raw: apocRaw,
     evidence: [
       {file: 'john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv', row: apoc.length + ' works', note: 'M. R. James\u2019 catalogue as inventory — no retrieval pass yet across these corpora.'},
+    ],
+    contrary: [
+      {point: 'Inventory is not evidence', note: 'The inventory lists works, not retrieval results. "Nothing to conclude yet" is a procedural statement, not a negative finding. Any claim about apocryphal dependence made from this inventory alone would be speculative.'},
+      {point: 'Gospel of Peter case is already debated', note: 'Published scholarship (Crossan, Koester, Foster) already argues both positions on Gospel of Peter — that it depends on the canonical passion narratives and that it preserves an independent passion tradition. The workbench\u2019s future-test framing is agnostic, not neutral.'},
+      {point: 'Not-yet-analyzed ≠ low-value', note: 'Calling confidence "low" reflects *our* analysis depth, not the scholarly potential of the works. Infancy gospels, Gospel of Peter, and acts literature may yield strong signals if retrieval is run against them.'},
+      {point: 'Greek text availability constraints', note: 'Many apocrypha are preserved in Latin, Syriac, or Coptic translations with limited Greek. Direct lexical comparison with canonical Greek would be limited even with a retrieval pass.'},
+    ],
+    whatWouldChange: [
+      'Running the retrieval pipeline across Gospel of Peter and the canonical passion narratives — high priority next package.',
+      'Adding a Greek-text layer for the Protevangelium of James and comparing with canonical infancy narratives.',
+      'A systematic semantic-embedding pass (not just lexical) across M.R. James\u2019 inventory to flag high-value next cases.',
+      'Discovery of additional Greek fragments for works currently attested only in translation.',
     ],
     verify: [
       verifyLink('25_apocrypha_inventory.html', '25', 'Apocrypha inventory', 'jtea', '18 works grouped'),

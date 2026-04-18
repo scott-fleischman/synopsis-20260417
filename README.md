@@ -1,10 +1,10 @@
-# Synoptic dependence — quantitative study
+# Gospel Dependence and Early Christian Intertextuality Workbench
 
 **Live visualizations: <https://scott-fleischman.github.io/synopsis-20260417/>** · Source: <https://github.com/scott-fleischman/synopsis-20260417>
 
-A layered, auditable study of literary dependence in the New Testament Gospels and related early-Christian literature. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha.
+A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha.
 
-The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end.
+The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized as a research-question workbench (eight sections: Start here · Synoptic narrative · Q and double tradition · John and Synoptics · Thomas · Epistles and sayings · Apocrypha · Audit and reproducibility) rather than as a flat list of pages.
 
 ## Licenses and attribution
 
@@ -40,7 +40,7 @@ synopsis-20260417/
 ├── john_thomas_epistles_apocrypha_analysis/   # Low-verbatim network: John, Thomas, NT letters, apocrypha
 ├── analysis_update_20260418/            # Reproducibility-patch rerun — the authoritative headline numbers
 ├── conclusions/                         # Author-authored synthesis across all four packages
-├── visualizations/                      # 29 browser views + Python build step + tests
+├── visualizations/                      # 33 browser views in 8 research-question sections + Python build step + tests
 └── docs/                                # Committed deployment snapshot (the GitHub Pages output dir)
 ```
 
@@ -102,51 +102,84 @@ No layer in this repository claims to compute posterior probability of a given d
 
 See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
 
-## Visualizations (30 browser views)
+## Visualizations (33 browser views, 8 research-question sections)
 
-`visualizations/` is a static HTML/CSS/SVG site with no framework. A single Python build step reads the four analysis packages and the rerun, then writes a compact bundle that every page consumes.
+`visualizations/` is a static HTML/CSS/SVG site with no framework. A single Python build step reads the four analysis packages and the rerun, then writes a compact bundle that every page consumes. The site is organized around eight research questions rather than around the source packages, so a reader with a question ("what is the Q burden?", "what can Thomas tell us?") can land in the right section without needing to know which CSV produced which number.
 
-### Synoptic pages (19)
-
-| # | View | What it shows |
-| - | - | - |
-| 01 | Synoptic map | Full verse-by-verse alignment across the active dataset |
-| 02 | Block ribbon | Macro and micro blocks as a ribbon |
-| 03 | Burden ledger | Directional-burden ledger per loose block |
-| 04 | Gap timeline | Where one Gospel has material the other does not |
-| 05 | Lexical drift | Lemma-level divergence across aligned pairs |
-| 06 | Score classes | Distribution of pair scores |
-| 07 | Block cards | Per-block summary cards |
-| 08 | Stylistic markers | Book-level stylistic features |
-| 09 | Pair explorer | Browse any primary pair with full diff |
-| 10 | Displacement | Where secondary echoes land vs. their primary pair |
-| 11 | Echo gallery | Secondary-echo catalog |
-| 12 | Variants | SBLGNT apparatus notes attached to primary pairs |
-| 13 | Triangle | Three-corner view of the three Synoptic datasets |
-| 14 | Mask audit | Audit of which verses were masked as Markan (dataset 3 only) |
-| 15 | Q core | Residual double-tradition core after Markan masking |
-| 16 | Matthew verse card | Per-verse card for Matthew |
-| 27 | Sensitivity · Mark–Matthew | Score × gap-penalty grid + Mark 16:9–20 text-critical sensitivity |
-| 28 | Sensitivity · masked Q-core | Strict / medium / broad regime × chain-threshold sweep |
-| 30 | Reader | Full SBLGNT text for Matt · Mark · Luke · John, with per-verse parallel badges, mask striping, and bidirectional links into every viz page |
-
-Dataset switching is via URL hash: `#mm`, `#ml`, `#mld`. The active dataset is remembered per page.
-
-### Low-verbatim pages (11)
+### A. Start here — orient, read, reach conclusions
 
 | # | View | What it shows |
 | - | - | - |
-| 17 | JTEA overview | Landing page for the low-verbatim package |
-| 18 | Intertext network | Arc diagram + network edges, filterable by layer, score, run length |
-| 19 | Case studies | Targeted high-value cases with token-level diffs |
-| 20 | John anchors | Anchor episodes, each with two hypothesis columns |
-| 21 | Thomas parallels | Thomas logia with click-to-Coptic lookup |
-| 22 | Concept signatures | Cross-corpus presence matrix + per-concept burden bars |
-| 23 | Exact hits | Score × run scatter plus top filterable hits |
-| 24 | Epistle × Gospel heatmap | Book-matrix cells with 4 metrics × 3 scales |
-| 25 | Apocrypha inventory | M. R. James apocryphal works grouped by corpus |
-| 29 | Claim → evidence | 67 interpretive claims each mapped to supporting artifacts + 3-axis confidence |
-| 26 | Conclusions | Cross-package synthesis with dataset-linked evidence |
+| 30 | Reader | Full SBLGNT text for Matt · Mark · Luke · John with per-verse parallel badges, mask striping, and bidirectional links into every viz page. **The primary entry surface for verse-level inspection.** |
+| 26 | Conclusions | Cross-package synthesis with dataset-linked evidence. Each conclusion card now carries an explicit contrary-evidence panel (counter-hypotheses, scholars named) and a "what would revise this conclusion" falsifiability panel. |
+| 29 | Claim → evidence | 67 interpretive claims each mapped to supporting artifacts with a three-axis confidence ladder (retrieval, philological, formula-risk). |
+| 31 | Gospel square | 4×4 relationship matrix across Matt · Mark · Luke · John. Each cell summarizes the burden model for that directed pair. |
+
+### B. Synoptic narrative backbone — Mark, Matthew, Luke as triple tradition
+
+| # | View | What it shows |
+| - | - | - |
+| 01 | Synoptic map | Full verse-by-verse alignment across the active dataset (mm / ml / mld). |
+| 02 | Block ribbon | Macro and micro blocks as a ribbon. |
+| 03 | Burden ledger | Directional-burden ledger per loose block. |
+| 04 | Gap timeline | Where one Gospel has material the other does not. |
+| 07 | Block cards | Per-block summary cards. |
+| 09 | Pair explorer | Browse any primary pair with full diff. |
+| 12 | Variants | SBLGNT apparatus notes attached to primary pairs. |
+| 13 | Triangle | Three-corner view of the three Synoptic datasets. |
+| 27 | Sensitivity · Mark–Matthew | Score × gap-penalty grid + Mark 16:9–20 text-critical sensitivity. |
+
+### C. Q and double tradition — what survives when Markan material is masked
+
+| # | View | What it shows |
+| - | - | - |
+| 14 | Mask audit | Audit of which verses were masked as Markan (dataset 3 only). |
+| 15 | Q core | Residual double-tradition core after Markan masking. |
+| 28 | Sensitivity · masked Q-core | Strict / medium / broad regime × chain-threshold sweep. |
+
+### D. John and the Synoptics — anchor episodes, not a lexical chain
+
+| # | View | What it shows |
+| - | - | - |
+| 20 | John anchors | Anchor episodes (Baptist, temple, feeding, walking on water, anointing, entry, arrest, denial, garments) each with two hypothesis columns. |
+
+### E. Thomas — sayings-network witness
+
+| # | View | What it shows |
+| - | - | - |
+| 21 | Thomas parallels | Thomas logia with click-to-Coptic lookup. |
+| 32 | Thomas × canon | 116-logion × 4-Gospel matrix. Filterable by burden; highlights the registered 47 parallels against unregistered logia; honest about the cross-lingual boundary (no automatic Greek score). |
+
+### F. Epistles and Jesus-sayings — 1 Tim, James, 1 Cor, 1 John against the Gospels
+
+| # | View | What it shows |
+| - | - | - |
+| 18 | Intertext network | Arc diagram + network edges, filterable by layer, score, run length. |
+| 22 | Concept signatures | Cross-corpus presence matrix + per-concept burden bars. |
+| 23 | Exact hits | Score × run scatter plus top filterable hits. |
+| 24 | Epistle × Gospel heatmap | Book-matrix cells with 4 metrics × 3 scales. |
+| 33 | Epistle dossier | Case-by-case dossier view: exact-run headline, token alignment diff, automatic metrics grid, provisional best explanation, hypotheses split into supports-direct-dependence vs. contrary-explanations, drill-downs into 19/22/23/24/29/30. |
+
+### G. Apocrypha — inventory layer only
+
+| # | View | What it shows |
+| - | - | - |
+| 25 | Apocrypha inventory | M. R. James apocryphal works grouped by corpus. **Inventory only, not analysis** — no automatic retrieval has been run; page is a scope registry with an `expected_signal` note per work. |
+
+### H. Audit and reproducibility
+
+| # | View | What it shows |
+| - | - | - |
+| 05 | Lexical drift | Lemma-level divergence across aligned pairs. |
+| 06 | Score classes | Distribution of pair scores. |
+| 08 | Stylistic markers | Book-level stylistic features. |
+| 10 | Displacement | Where secondary echoes land vs. their primary pair. |
+| 11 | Echo gallery | Secondary-echo catalog. |
+| 16 | Matthew verse card | Per-verse card for Matthew. **Superseded by the Reader (page 30)** for per-verse inspection; retained for the three-dataset join it supports. |
+| 17 | JTEA overview | Landing page for the low-verbatim package. |
+| 19 | Case studies | Targeted high-value cases with token-level diffs. |
+
+Dataset switching on Synoptic pages is via URL hash: `#mm`, `#ml`, `#mld`. The active dataset is remembered per page.
 
 ## How to run
 

@@ -29,6 +29,11 @@
   .tbl-row { cursor:pointer; }
   .tbl-row:hover { background:#f7f3e4; }
   .legend-sw { display:inline-block; width:12px; height:12px; border-radius:2px; vertical-align:middle; margin-right:4px; }
+
+  .status-banner { background: #faf6ec; border-left: 4px solid var(--warn); padding: 12px 16px; margin: 0 0 16px; font-size: 13px; line-height: 1.55; color: var(--ink); max-width: 980px; border-radius: 3px; }
+  .status-banner .badge { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; background: var(--warn); color: #fff; padding: 2px 8px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .status-banner b { font-family: var(--serif); }
+  .status-banner a { color: var(--accent); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -38,6 +43,11 @@
     <span class="sub">For any Matt verse: Mark parallel, Luke parallel, and Markan-mask status — three datasets at once</span>
   </header>
   <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <div class="status-banner">
+    <span class="badge">Superseded by Reader</span>
+    <b>Retained for the three-dataset join only.</b> The per-verse picture (Mark parallel, Luke parallel, Q-core mask status) is now available more directly in <a href="30_reader.html">30 Reader</a>, which shows Greek text, parallels, and mask status in one scrollable per-chapter view. This page remains useful for the <em>category overview strip</em> (every Matt verse colored by its cross-dataset category) and the <em>aggregate category counts</em>, which the Reader does not compute. For per-verse inspection, prefer the Reader.
+  </div>
 
   <p class="caption">
     This page is the one place that joins all three paired corpora at the <em>verse</em> level. For every verse of Matthew (1,071 in SBLGNT, 1,068 used by the masking pipeline), we look up the best parallel in Mark (from <code>mm</code>), the best parallel in Luke (from <code>ml</code>), and the Markan-mask status from <code>mld</code>. The mask is where things get interesting: if Matthew has a Luke parallel but the masking algorithm removes the Matthew verse from the Q-core, that tells you the pipeline judges Mark a more plausible source than Q for that verse — and lets you interrogate that judgment verse-by-verse.

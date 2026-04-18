@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Gospel Square · the 4-gospel relationship matrix</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .intro { max-width: 1040px; font-size: 14px; line-height: 1.6; margin-bottom: 18px; }
+  .intro .note { border-left: 3px solid var(--focus); padding: 8px 12px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+
+  .square-wrap { display: grid; grid-template-columns: 110px repeat(4, 1fr); gap: 6px; margin: 12px 0 22px; max-width: 1200px; }
+  .col-head { font-family: var(--serif); font-size: 14px; text-align: center; padding: 6px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+  .row-head { font-family: var(--serif); font-size: 13px; text-align: right; padding: 6px 10px 6px 4px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; display: flex; align-items: center; justify-content: flex-end; }
+  .cell { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 10px 12px; min-height: 130px; cursor: pointer; transition: border-color 0.12s, background 0.12s; display: flex; flex-direction: column; gap: 6px; position: relative; }
+  .cell:hover { border-color: var(--accent); background: #fbf7ea; }
+  .cell.active { border-color: var(--accent); background: #fbf7ea; box-shadow: inset 3px 0 0 var(--accent); }
+  .cell.diag { background: #f2f0e6; cursor: default; }
+  .cell.diag:hover { border-color: var(--rule); background: #f2f0e6; }
+  .cell.unexplored { background: #fafaf7; }
+  .cell .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); font-weight: 600; }
+  .cell .primary { font-family: var(--serif); font-size: 22px; color: var(--ink); line-height: 1.1; }
+  .cell .secondary { font-size: 11px; color: var(--ink-soft); line-height: 1.4; }
+  .cell .pkg { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; background: var(--ink); color: #fff; padding: 1px 5px; border-radius: 2px; align-self: flex-start; font-weight: 600; }
+  .cell .pkg.mm { background: var(--mark); }
+  .cell .pkg.ml { background: var(--warn); }
+  .cell .pkg.mld { background: var(--matt); }
+  .cell .pkg.jtea { background: var(--focus); }
+  .cell .pkg.none { background: #9a9386; }
+
+  .detail { border: 1px solid var(--rule); border-radius: 4px; background: #fff; padding: 18px 22px; margin-top: 8px; }
+  .detail.empty { background: #fafaf7; color: var(--ink-mute); font-style: italic; text-align: center; padding: 40px; }
+  .detail h2 { font-family: var(--serif); font-size: 20px; margin: 0 0 8px; }
+  .detail .dir-note { font-size: 12px; color: var(--ink-mute); margin-bottom: 12px; line-height: 1.5; }
+  .detail .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 14px; }
+  .detail .stat-row .sc { border: 1px solid var(--rule-soft); border-radius: 3px; padding: 8px 10px; background: #fafaf7; }
+  .detail .stat-row .sc .n { font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.1; }
+  .detail .stat-row .sc .l { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); margin-top: 2px; }
+  .detail .best-pair { background: #faf6ec; border-left: 3px solid var(--accent); padding: 10px 14px; font-size: 13px; margin: 10px 0; line-height: 1.55; }
+  .detail .best-pair .greek { font-family: var(--greek); font-size: 15px; color: var(--ink); margin-top: 4px; }
+  .detail .drilldown { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
+  .detail .drilldown a { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .detail .drilldown a:hover { border-color: var(--accent); background: #fbf7ea; color: var(--ink); }
+  .detail .assess { font-size: 13px; color: var(--ink-soft); line-height: 1.6; margin: 8px 0; }
+
+  .anchor-list { margin-top: 14px; }
+  .anchor-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 12px 14px; margin-bottom: 8px; }
+  .anchor-card .title { font-family: var(--serif); font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+  .anchor-card .refs { font-size: 11px; color: var(--ink-mute); margin-bottom: 6px; }
+  .anchor-card .features { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+  .anchor-card .feat { font-size: 10px; padding: 2px 7px; border: 1px solid var(--rule); border-radius: 11px; background: #fafaf7; color: var(--ink-soft); }
+  .anchor-card .hyp { font-size: 12px; color: var(--ink-soft); line-height: 1.55; margin-top: 6px; padding: 6px 10px; background: #fafaf7; border-left: 2px solid var(--rule); }
+  .anchor-card .hyp b { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Gospel Square</h1>
+    <span class="sub">the 4-gospel relationship matrix · Mark · Matt · Luke · John</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="intro">
+    <p>A single matrix view of every pairwise Gospel relationship the workbench covers — which pairs have dedicated analysis, which have retrieval-only coverage, and which are unexplored. Each cell is clickable for drill-down to the specific evidence stream that grounds it.</p>
+    <div class="note">
+      <b>The diagonal (self-cells) is not a relationship — it carries self-stats</b> (verse counts, chapters). Off-diagonal cells carry pairwise evidence. Because our analyses are directional in some packages and symmetric in others, <em>each off-diagonal cell describes what the data shows for that ordered pair</em>; read the detail panel for what direction the underlying package actually supports.
+    </div>
+  </div>
+
+  <div class="square-wrap" id="squareWrap"></div>
+
+  <div id="detail" class="detail empty">Click a cell to see the evidence stream that grounds that pair.</div>
+
+  <section class="card" style="margin-top:22px;">
+    <h2>John &times; Synoptic anchor episodes</h2>
+    <p class="caption" style="max-width:950px;">Shared narrative episodes where John and one or more Synoptic Gospels converge. Each entry records the shared features + how <em>each direction of dependence</em> would have to transform the material if it were prior.</p>
+    <div class="anchor-list" id="anchorList"></div>
+  </section>
+
+  <div class="footer">
+    Source data · Synoptic cells: <code>mark_matthew_analysis/</code>, <code>matt_luke_analysis/</code>, <code>matt_luke_double_masked_analysis/</code>.
+    Johannine cells: <code>john_thomas_epistles_apocrypha_analysis/data/05_john_to_synoptics_candidates.csv</code>,
+    <code>data/08_john_synoptic_anchor_registry.yaml</code>,
+    and <code>data/13_intertext_network_edges.csv</code> filtered to layer=<code>john_to_synoptics</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('31_gospel_square.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const MM = B.mm, ML = B.ml, MLD = B.mld, J = B.jtea;
+
+  // Verse counts per gospel (diagonal values).
+  const verseCount = {
+    Mark: (MM.meta && MM.meta.a_total_verses) || 678,
+    Matt: (MM.meta && MM.meta.b_total_verses) || 1071,
+    Luke: (ML.meta && ML.meta.b_total_verses) || 1151,
+    John: 879,
+  };
+
+  // Synoptic pair stats (direct packages).
+  function mmStats() {
+    const g = MM.summary.global_metrics;
+    return { pairs: g.matched_pair_count, echoes: (MM.echoes || []).length,
+      blocks: g.loose_block_count, tight: g.tight_block_count,
+      cov_a: (g.mark_matched_pct * 100).toFixed(1) + '%',
+      cov_b: (g.matt_matched_pct * 100).toFixed(1) + '%' };
+  }
+  function mlStats() {
+    const g = ML.summary.global_metrics;
+    return { pairs: g.matched_pair_count, echoes: (ML.echoes || []).length,
+      blocks: g.loose_block_count, tight: g.tight_block_count,
+      cov_a: (g.matt_matched_pct * 100).toFixed(1) + '%',
+      cov_b: (g.luke_matched_pct * 100).toFixed(1) + '%' };
+  }
+  function mldStats() {
+    const g = MLD.summary.global_metrics;
+    return { pairs: g.matched_pair_count, echoes: (MLD.echoes || []).length,
+      blocks: g.loose_block_count, tight: g.tight_block_count,
+      masked_matt: g.matt_masked_markan_count, masked_luke: g.luke_masked_markan_count };
+  }
+  // Johannine cells from book_matrix (John as source) + filtered network_edges.
+  const johnBM = {};
+  for (const c of (J.book_matrix || [])) {
+    if (c.source_book === 'John') johnBM[c.target_book] = c;
+  }
+  const johnEdges = (J.network_edges || []).filter(e => e.layer === 'john_to_synoptics');
+  function anchorsFor(targetGospel) {
+    return (J.anchors || []).filter(a => (a.synoptic_refs || []).some(r => r.startsWith(targetGospel + ' ')));
+  }
+  function edgesFor(targetGospel) {
+    return johnEdges.filter(e => (e.target_ref || '').startsWith(targetGospel + ' '));
+  }
+
+  // Build cell definitions. Diagonal + directional off-diagonals.
+  const GOSPELS = ['Mark', 'Matt', 'Luke', 'John'];
+  function cellFor(src, tgt) {
+    if (src === tgt) {
+      return { type: 'diag', src, tgt, primary: verseCount[src], label: 'verses', pkg: null };
+    }
+    // Mark × Matt (either direction) → mm package. Dataset direction is source→target.
+    if ((src === 'Mark' && tgt === 'Matt') || (src === 'Matt' && tgt === 'Mark')) {
+      const s = mmStats();
+      return { type: 'mm', src, tgt, primary: s.pairs, label: 'aligned pairs',
+        secondary: s.blocks + ' blocks · ' + s.echoes + ' echoes', pkg: 'mm',
+        drilldown: ['01_synoptic_map.html#mm', '02_block_ribbon.html#mm', '03_burden_ledger.html#mm', '09_pair_explorer.html#mm', '27_mm_sensitivity.html#mm'] };
+    }
+    // Matt × Luke
+    if ((src === 'Matt' && tgt === 'Luke') || (src === 'Luke' && tgt === 'Matt')) {
+      const s = mlStats();
+      const sm = mldStats();
+      return { type: 'ml', src, tgt, primary: s.pairs, label: 'backbone pairs',
+        secondary: s.echoes + ' echoes · masked Q-core: ' + sm.pairs + ' pairs', pkg: 'ml',
+        drilldown: ['01_synoptic_map.html#ml', '10_displacement.html#ml', '11_echo_gallery.html#ml',
+          '14_mask_audit.html#mld', '15_q_core.html#mld', '28_mld_regime_sensitivity.html#mld'] };
+    }
+    // Mark × Luke (no direct package)
+    if ((src === 'Mark' && tgt === 'Luke') || (src === 'Luke' && tgt === 'Mark')) {
+      return { type: 'unexplored', src, tgt, primary: '—', label: 'no direct package',
+        secondary: 'covered indirectly via Mark↔Matt ⟶ Matt↔Luke composition', pkg: 'none',
+        drilldown: ['13_triangle.html', '30_reader.html'] };
+    }
+    // John × Synoptic (directional: John → X uses book_matrix John-as-source; X → John has no package)
+    if (src === 'John' && ['Mark', 'Matt', 'Luke'].indexOf(tgt) >= 0) {
+      const bm = johnBM[tgt] || {};
+      const anc = anchorsFor(tgt);
+      return { type: 'jtea', src, tgt, primary: bm.n_candidates || edgesFor(tgt).length,
+        label: 'candidate edges',
+        secondary: (bm.n_exact_4plus || 0) + ' exact runs ≥4 · ' + anc.length + ' shared anchors',
+        pkg: 'jtea',
+        bestScore: bm.max_score || null,
+        best: bm.best || null,
+        drilldown: ['20_john_anchors.html', '18_intertext_network.html', '30_reader.html'] };
+    }
+    if (['Mark', 'Matt', 'Luke'].indexOf(src) >= 0 && tgt === 'John') {
+      const anc = anchorsFor(src);
+      return { type: 'jtea-inv', src, tgt, primary: anc.length, label: 'anchor episodes',
+        secondary: 'X → John direction: retrieval runs John-as-source; anchors are symmetric',
+        pkg: 'jtea',
+        drilldown: ['20_john_anchors.html'] };
+    }
+    return { type: 'unexplored', src, tgt, primary: '—', label: 'unexplored', pkg: 'none', drilldown: [] };
+  }
+
+  const cells = {};
+  const square = document.getElementById('squareWrap');
+
+  // corner blank
+  square.appendChild(el('div', null));
+  // column heads
+  for (const g of GOSPELS) square.appendChild(el('div', { class: 'col-head' }, g + ' →'));
+  // body
+  for (const src of GOSPELS) {
+    square.appendChild(el('div', { class: 'row-head' }, src + ' ↓'));
+    for (const tgt of GOSPELS) {
+      const c = cellFor(src, tgt);
+      cells[src + '-' + tgt] = c;
+      const cellEl = el('div', {
+        class: 'cell ' + (c.type === 'diag' ? 'diag' : '') + (c.type === 'unexplored' ? ' unexplored' : ''),
+        'data-src': src, 'data-tgt': tgt,
+      });
+      if (c.pkg) cellEl.appendChild(el('span', { class: 'pkg ' + c.pkg }, c.pkg === 'none' ? 'no pkg' : c.pkg));
+      cellEl.appendChild(el('div', { class: 'kicker' }, c.type === 'diag' ? (src + ' self') : (src + ' → ' + tgt)));
+      cellEl.appendChild(el('div', { class: 'primary' }, String(c.primary)));
+      cellEl.appendChild(el('div', { class: 'secondary' }, c.label + (c.secondary ? '\u00a0·\u00a0' + c.secondary : '')));
+      if (c.type !== 'diag') {
+        cellEl.addEventListener('click', () => selectCell(src, tgt));
+      }
+      square.appendChild(cellEl);
+    }
+  }
+
+  const detail = document.getElementById('detail');
+  function selectCell(src, tgt) {
+    // clear prior active
+    square.querySelectorAll('.cell.active').forEach(n => n.classList.remove('active'));
+    const sel = square.querySelector('[data-src="' + src + '"][data-tgt="' + tgt + '"]');
+    if (sel) sel.classList.add('active');
+    const c = cells[src + '-' + tgt];
+    while (detail.firstChild) detail.removeChild(detail.firstChild);
+    detail.classList.remove('empty');
+    detail.appendChild(el('h2', null, src + ' → ' + tgt));
+
+    if (c.type === 'mm') {
+      const s = mmStats();
+      detail.appendChild(el('div', { class: 'dir-note' }, 'Triple-tradition backbone. mm package is direction-symmetric (both "Mark prior" and "Matt prior" burdens are computed); the interpretive Conclusions page reads Mark as the prior side. Current cell displays both coverages.'));
+      const sr = el('div', { class: 'stat-row' });
+      [[s.pairs, 'aligned primary pairs'], [s.blocks, 'macro blocks'], [s.tight, 'micro blocks'],
+        [s.echoes, 'secondary echoes'], [s.cov_a, 'Mark coverage'], [s.cov_b, 'Matt coverage']].forEach(([n, l]) => {
+        sr.appendChild(el('div', { class: 'sc' }, el('div', { class: 'n' }, n), el('div', { class: 'l' }, l)));
+      });
+      detail.appendChild(sr);
+      detail.appendChild(el('div', { class: 'assess' }, 'Matt has 474 extra gap verses to Mark\u2019s 87 — asymmetric gap pattern is the strongest single piece of evidence that Matt expanded Mark (not that Mark abbreviated Matt).'));
+    } else if (c.type === 'ml') {
+      const s = mlStats();
+      const sm = mldStats();
+      detail.appendChild(el('div', { class: 'dir-note' }, 'Full Matt↔Luke + masked-double-tradition (Q-core) view. The full ml package is confounded by Markan material both Gospels share; the mld package masks that material and reruns on what remains.'));
+      const sr = el('div', { class: 'stat-row' });
+      [[s.pairs, 'full backbone pairs'], [s.echoes, 'full echoes'],
+        [sm.pairs, 'masked Q-core pairs'], [sm.echoes, 'Q-core echoes'],
+        [sm.masked_matt, 'Matt verses masked'], [sm.masked_luke, 'Luke verses masked']].forEach(([n, l]) => {
+        sr.appendChild(el('div', { class: 'sc' }, el('div', { class: 'n' }, n), el('div', { class: 'l' }, l)));
+      });
+      detail.appendChild(sr);
+      detail.appendChild(el('div', { class: 'assess' }, 'After masking Markan material, Matt↔Luke direct-burden totals are near-symmetric and the common-source indicator is lower — consistent with a shared sayings/tradition layer over simple one-way dependence.'));
+    } else if (c.type === 'unexplored') {
+      detail.appendChild(el('div', { class: 'dir-note' }, 'No dedicated direct-pairwise analysis package.'));
+      detail.appendChild(el('div', { class: 'assess' },
+        'The Mark↔Luke pair is not analyzed directly in this workbench. The three synoptic datasets cover (Mark↔Matt) and (Matt↔Luke) directly; Mark↔Luke can be inferred by composition via Matthew (see the Synoptic triangle, 13), or by comparing masked vs. unmasked material in Luke (14, 15). A future direct-pairwise package would add a genuine Mark↔Luke backbone. The 30 Reader carries per-verse parallel badges that surface Mark↔Luke evidence verse-by-verse.'));
+    } else if (c.type === 'jtea') {
+      const bm = johnBM[tgt] || {};
+      const anc = anchorsFor(tgt);
+      detail.appendChild(el('div', { class: 'dir-note' }, 'Direction as retrieved: John verse as source, ' + tgt + ' as target. Candidate edges come from a windowed retrieval; most are below the interpretive threshold. Anchor episodes are symmetric (assessed both directions).'));
+      const sr = el('div', { class: 'stat-row' });
+      [[bm.n_candidates || 0, 'candidate edges'],
+        [bm.n_score_ge_035 || 0, 'edges score ≥ 0.35'],
+        [bm.n_exact_4plus || 0, 'exact runs ≥ 4 tokens'],
+        [(bm.max_score || 0).toFixed ? (bm.max_score || 0).toFixed(3) : bm.max_score, 'best score'],
+        [anc.length, 'shared anchor episodes']].forEach(([n, l]) => {
+        sr.appendChild(el('div', { class: 'sc' }, el('div', { class: 'n' }, n || '—'), el('div', { class: 'l' }, l)));
+      });
+      detail.appendChild(sr);
+      if (bm.best) {
+        const bp = el('div', { class: 'best-pair' });
+        bp.appendChild(el('div', null, 'Best retrieved pair · ' + (bm.best.source_ref || '—') + ' ~ ' + (bm.best.target_ref || '—') + '  · score ' + (bm.best.score != null ? Number(bm.best.score).toFixed(3) : '—') + '  · exact run ' + (bm.best.max_exact_run_len || 0) + ' tokens'));
+        if (bm.best.max_exact_run) bp.appendChild(el('div', { class: 'greek' }, bm.best.max_exact_run));
+        detail.appendChild(bp);
+      }
+      detail.appendChild(el('div', { class: 'assess' }, 'Johannine transformation of shared tradition is heavy; a linear lexical pipeline under-represents the relationship. The anchor-episode layer (20) is more appropriate than raw retrieval scores.'));
+    } else if (c.type === 'jtea-inv') {
+      const anc = anchorsFor(src);
+      detail.appendChild(el('div', { class: 'dir-note' }, src + ' → John direction: the pipeline retrieves John-as-source; anchor episodes are symmetric and apply in both directions.'));
+      const sr = el('div', { class: 'stat-row' });
+      [[anc.length, 'shared anchors with ' + src]].forEach(([n, l]) => {
+        sr.appendChild(el('div', { class: 'sc' }, el('div', { class: 'n' }, n), el('div', { class: 'l' }, l)));
+      });
+      detail.appendChild(sr);
+      detail.appendChild(el('div', { class: 'assess' }, 'See John row for retrieval-layer numbers; anchors list shares ' + anc.length + ' scenes between ' + src + ' and John.'));
+    }
+
+    if (c.drilldown && c.drilldown.length) {
+      const dd = el('div', { class: 'drilldown' });
+      dd.appendChild(el('span', { class: 'kicker', style: 'font-size:10px;color:var(--ink-mute);' }, 'drill into '));
+      for (const href of c.drilldown) dd.appendChild(el('a', { href }, href.replace(/^(\d+)_([^.]+)\.html.*/, '$1 · $2').replace(/_/g, ' ')));
+      detail.appendChild(dd);
+    }
+  }
+
+  // Anchor list (all 10 anchors summarized)
+  const anchors = J.anchors || [];
+  const anchorList = document.getElementById('anchorList');
+  for (const a of anchors) {
+    const card = el('div', { class: 'anchor-card' });
+    card.appendChild(el('div', { class: 'title' }, (a.anchor_id || '').replace(/_/g, ' ')));
+    const refs = el('div', { class: 'refs' });
+    refs.appendChild(document.createTextNode('John: '));
+    const jr = (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+    jr.forEach((r, i) => {
+      if (i > 0) refs.appendChild(document.createTextNode(' · '));
+      refs.appendChild(SH.refChip(r, { fontSize: '11px', plain: true }));
+    });
+    refs.appendChild(document.createTextNode('  ·  Synoptics: '));
+    const sr = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+    sr.forEach((r, i) => {
+      if (i > 0) refs.appendChild(document.createTextNode(' · '));
+      refs.appendChild(SH.refChip(r, { fontSize: '11px', plain: true }));
+    });
+    card.appendChild(refs);
+    if (a.shared_features && a.shared_features.length) {
+      const f = el('div', { class: 'features' });
+      a.shared_features.forEach(sf => f.appendChild(el('span', { class: 'feat' }, sf)));
+      card.appendChild(f);
+    }
+    if (a.john_transformation_if_synoptics_prior) {
+      const hyp = el('div', { class: 'hyp' });
+      hyp.appendChild(el('b', null, 'If Synoptics prior: '));
+      hyp.appendChild(document.createTextNode(a.john_transformation_if_synoptics_prior));
+      card.appendChild(hyp);
+    }
+    if (a.synoptic_transformation_if_john_prior) {
+      const hyp = el('div', { class: 'hyp' });
+      hyp.appendChild(el('b', null, 'If John prior: '));
+      hyp.appendChild(document.createTextNode(a.synoptic_transformation_if_john_prior));
+      card.appendChild(hyp);
+    }
+    if (a.provisional_best_explanation) {
+      const pe = el('div', { class: 'hyp', style: 'border-left-color:var(--accent);background:#faf6ec;' });
+      pe.appendChild(el('b', null, 'Best explanation: '));
+      pe.appendChild(document.createTextNode(a.provisional_best_explanation));
+      card.appendChild(pe);
+    }
+    anchorList.appendChild(card);
+  }
+
+  // Default selection: the triple-tradition backbone cell (most evidence-dense).
+  selectCell('Mark', 'Matt');
+
+  // If arrived via ?hi=<ref>, try to select the relevant row/col.
+  const hiRef = SH.getHighlightRef && SH.getHighlightRef();
+  if (hiRef) {
+    const bk = SH.refBook(hiRef);
+    if (bk && GOSPELS.indexOf(bk) >= 0) {
+      // pick the most informative off-diagonal involving bk
+      const priority = { Mark: 'Matt', Matt: 'Mark', Luke: 'Matt', John: 'Matt' };
+      const tgt = priority[bk] || 'Matt';
+      if (tgt !== bk) selectCell(bk, tgt);
+    }
+  }
+})();
+</script>
+</body>
+</html>

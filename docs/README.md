@@ -10,8 +10,8 @@ This directory is a committed build artifact: everything a static host needs to 
 
 ```
 docs/
-├── index.html              # landing page
-├── 01_*.html … 26_*.html   # 26 visualization pages (incl. conclusions)
+├── index.html              # research-question landing page (8 sections)
+├── 01_*.html … 33_*.html   # 33 visualization pages (incl. reader, conclusions, claim/evidence, gospel square, thomas matrix, epistle dossier)
 ├── assets/
 │   ├── shared.js           # DOM helpers, nav, dataset switcher
 │   └── style.css           # site stylesheet
@@ -19,6 +19,8 @@ docs/
     ├── bundle.js           # window.SYNOPSIS = {...} (for file:// use)
     └── bundle.json         # same payload, fetch-friendly
 ```
+
+The 33 pages are grouped on the landing page into 8 research-question sections: Start here · Synoptic narrative · Q and double tradition · John and Synoptics · Thomas · Epistles and sayings · Apocrypha · Audit and reproducibility. See the repo-level README for the full per-page listing.
 
 No external runtime dependencies. All data is embedded in `data/bundle.js`.
 

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Epistle-Gospel case dossier · 10 cases</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .intro { max-width: 1040px; font-size: 14px; line-height: 1.6; margin-bottom: 14px; }
+  .intro .note { border-left: 3px solid var(--focus); padding: 8px 12px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 10px 0; color: var(--ink-soft); }
+
+  .layout { display: grid; grid-template-columns: 360px 1fr; gap: 18px; align-items: start; }
+
+  /* Left: ranked case list */
+  .case-list { background: #fff; border: 1px solid var(--rule); border-radius: 3px; max-height: calc(100vh - 180px); overflow-y: auto; position: sticky; top: 10px; }
+  .case-filters { padding: 10px 12px; border-bottom: 1px solid var(--rule); background: #f6f3e8; position: sticky; top: 0; z-index: 5; }
+  .case-filters .label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin-bottom: 4px; display: block; font-weight: 600; }
+  .case-filters .sort-group, .case-filters .src-group { display: flex; flex-wrap: wrap; gap: 0; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+  .case-filters button { border: 0; padding: 4px 8px; background: #fff; color: var(--ink); font-size: 10px; cursor: pointer; border-right: 1px solid var(--rule); flex: 1; }
+  .case-filters button:last-child { border-right: 0; }
+  .case-filters button.on { background: var(--ink); color: #fff; }
+
+  .case-row { border-bottom: 1px solid var(--rule-soft); padding: 10px 12px; cursor: pointer; transition: background 0.08s; position: relative; }
+  .case-row:hover { background: #fbf7ea; }
+  .case-row.active { background: #f4efdf; border-left: 3px solid var(--accent); padding-left: 9px; }
+  .case-row .rank { font-family: var(--serif); font-size: 16px; color: var(--ink-mute); float: right; line-height: 1; }
+  .case-row.active .rank { color: var(--accent); }
+  .case-row .refs { font-family: var(--mono); font-size: 11px; color: var(--ink); line-height: 1.3; margin-bottom: 2px; }
+  .case-row .feature { font-size: 12px; color: var(--ink-soft); line-height: 1.4; padding-right: 24px; }
+  .case-row .strip { display: flex; gap: 6px; margin-top: 6px; align-items: center; flex-wrap: wrap; }
+  .case-row .strip .run { font-size: 10px; color: var(--ink-mute); }
+  .case-row .strip .run b { color: var(--ink); font-family: var(--serif); }
+
+  /* Right: dossier detail */
+  .dossier { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 18px 22px; }
+  .dossier.empty { background: #fafaf7; color: var(--ink-mute); font-style: italic; text-align: center; padding: 60px 20px; }
+  .dossier h2 { margin: 0 0 4px; font-family: var(--serif); font-size: 22px; line-height: 1.2; }
+  .dossier .refs-line { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); margin-bottom: 10px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .dossier .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-mute); font-weight: 600; margin: 16px 0 6px; padding-top: 10px; border-top: 1px solid var(--rule-soft); }
+  .dossier .section-label:first-of-type { border-top: 0; padding-top: 0; }
+  .dossier .prose { font-size: 13px; line-height: 1.6; color: var(--ink); }
+  .dossier .best-exp { background: #faf6ec; border-left: 3px solid var(--accent); padding: 10px 14px; font-size: 13px; line-height: 1.55; margin: 10px 0; font-family: var(--serif); }
+  .dossier .best-exp b { font-family: var(--sans); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); display: block; margin-bottom: 4px; }
+
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 6px 0; }
+  .metric-row .m { border: 1px solid var(--rule-soft); border-radius: 3px; padding: 7px 10px; background: #fafaf7; }
+  .metric-row .m .n { font-family: var(--serif); font-size: 16px; color: var(--ink); line-height: 1.1; }
+  .metric-row .m .l { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+  .exact-run-box { background: #faf6ec; border: 1px solid var(--accent); border-radius: 3px; padding: 8px 12px; margin: 6px 0 10px; }
+  .exact-run-box .label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+  .exact-run-box .run { font-family: var(--greek); font-size: 16px; color: var(--ink); }
+
+  /* Alignment diff table */
+  .align-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .align-table thead th { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); padding: 6px 10px; background: #f6f3e8; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 500; width: 50%; }
+  .align-table tbody td { padding: 4px 10px; font-family: var(--greek); font-size: 14px; vertical-align: top; line-height: 1.45; border-bottom: 1px solid var(--rule-soft); }
+  .align-table tbody tr.equal td { color: var(--ink); background: #fff; }
+  .align-table tbody tr.insert td.a { background: #fafaf7; color: var(--rule); font-style: italic; font-family: var(--sans); font-size: 10px; text-align: center; }
+  .align-table tbody tr.insert td.b { background: #e7f1ef; color: #0f766e; }
+  .align-table tbody tr.delete td.a { background: #f0d0c8; color: #8b2e2e; }
+  .align-table tbody tr.delete td.b { background: #fafaf7; color: var(--rule); font-style: italic; font-family: var(--sans); font-size: 10px; text-align: center; }
+  .align-table tbody tr.replace td { background: #f3e2ce; color: #a8551a; }
+
+  .hyp-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hyp-col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 6px; }
+  .hyp-col.supports h4 { color: #0f766e; }
+  .hyp-col.contrary h4 { color: #8b2e2e; }
+  .hyp-item { border-left: 2px solid var(--rule); padding: 6px 10px; background: #fafaf7; margin-bottom: 6px; font-size: 12px; line-height: 1.5; }
+  .hyp-col.supports .hyp-item { border-left-color: #0f766e; }
+  .hyp-col.contrary .hyp-item { border-left-color: #8b2e2e; }
+  .hyp-item b { font-family: var(--sans); text-transform: capitalize; display: block; font-size: 11px; color: var(--ink); margin-bottom: 2px; }
+
+  .drilldown { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule-soft); }
+  .drilldown a { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .drilldown a:hover { border-color: var(--accent); background: #fbf7ea; color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Epistle &times; Gospel case dossier</h1>
+    <span class="sub">10 ranked epistolary-gospel parallels · full alignment · supporting &amp; contrary evidence</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="intro">
+    <p>A dossier view of every high-value epistle-gospel parallel examined in this workbench. Each case is scored against three confidence axes (retrieval, philological, formula risk), then given a <em>supporting</em> and <em>contrary</em> evidence panel so the reader can see the interpretive alternatives that a best-explanation claim implicitly picks among.</p>
+    <div class="note">
+      <b>The ranked list is sorted by strongest direct-dependence signal, not by confidence that the dependence is direct.</b> A case with a long exact Greek run but heavy formulaic/liturgical risk (e.g., 1Cor 11:24 ~ Luke 22:19) can rank above a case whose <em>best explanation</em> favors direct dependence but with shorter overlap. The <b>best-explanation box</b> is where the burden model takes the signal seriously.
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="case-list">
+      <div class="case-filters">
+        <span class="label">Sort by</span>
+        <div class="sort-group" id="sortGroup">
+          <button data-s="run" class="on">exact run</button>
+          <button data-s="score">score</button>
+          <button data-s="ref">ref</button>
+        </div>
+        <span class="label">Source epistle</span>
+        <div class="src-group" id="srcGroup"></div>
+      </div>
+      <div id="caseRows"></div>
+    </aside>
+    <div id="dossier" class="dossier empty">Select a case on the left to read its dossier.</div>
+  </div>
+
+  <div class="footer">
+    Data sources: <code>john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml</code> (curated dossiers),
+    <code>analysis_update_20260418/out/claim_evidence_links.json</code> (rerun evidence ladder),
+    <code>data/06_exact_phrase_hits_len4plus.csv</code> (surface-form anchor),
+    <code>data/11_concept_signature_registry.yaml</code> (concept cluster for drilldown).
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('33_epistle_dossier.html');
+  const el = SH.el;
+  const J = SH.BUNDLE.jtea;
+  const cases = J.case_studies || [];
+  const rerun = J.rerun || {};
+  const claimLinks = rerun.claim_evidence_links || [];
+  const concepts = J.concepts || [];
+
+  // Index rerun links by case_id for evidence-ladder merge.
+  const linkByCase = {};
+  claimLinks.forEach(l => {
+    if (l.case_id) linkByCase[l.case_id] = l;
+  });
+
+  // Annotate each case with a ranking score + link.
+  const annotated = cases.map((c, i) => {
+    const m = c.automatic_metrics || {};
+    const link = linkByCase[c.case_id];
+    return {
+      idx: i, case: c, link,
+      src_ref: c.source_ref || '',
+      tgt_ref: c.target_ref || '',
+      src_book: (c.source_ref || '').match(/^([1-3]?[A-Za-z]+)/) ? (c.source_ref || '').match(/^([1-3]?[A-Za-z]+)/)[1] : '?',
+      max_exact_run_len: m.max_exact_run_len || 0,
+      score: m.score || 0,
+    };
+  });
+
+  // Book filter options (unique src books in order of first appearance).
+  const books = [];
+  annotated.forEach(a => { if (a.src_book && books.indexOf(a.src_book) < 0) books.push(a.src_book); });
+  const srcGroup = document.getElementById('srcGroup');
+  srcGroup.appendChild((function () {
+    const b = document.createElement('button');
+    b.textContent = 'all';
+    b.setAttribute('data-src', '');
+    b.className = 'on';
+    return b;
+  })());
+  books.forEach(bk => {
+    const b = document.createElement('button');
+    b.textContent = bk;
+    b.setAttribute('data-src', bk);
+    srcGroup.appendChild(b);
+  });
+
+  let state = { sort: 'run', src: '', active: null };
+
+  function sortCmp(a, b) {
+    if (state.sort === 'run') return (b.max_exact_run_len - a.max_exact_run_len) || (b.score - a.score);
+    if (state.sort === 'score') return (b.score - a.score) || (b.max_exact_run_len - a.max_exact_run_len);
+    if (state.sort === 'ref') return (a.src_ref || '').localeCompare(b.src_ref || '');
+    return 0;
+  }
+
+  function filtered() {
+    return annotated
+      .filter(a => !state.src || a.src_book === state.src)
+      .slice()
+      .sort(sortCmp);
+  }
+
+  // ---- Render the left-column list -------------------------------------
+  const rowsEl = document.getElementById('caseRows');
+
+  function renderList() {
+    while (rowsEl.firstChild) rowsEl.removeChild(rowsEl.firstChild);
+    const items = filtered();
+    items.forEach((a, i) => {
+      const c = a.case;
+      const row = el('div', { class: 'case-row' + (state.active === a.case.case_id ? ' active' : '') });
+      row.addEventListener('click', () => { state.active = a.case.case_id; renderList(); renderDossier(a); });
+      row.appendChild(el('span', { class: 'rank' }, '#' + (i + 1)));
+      row.appendChild(el('div', { class: 'refs' }, a.src_ref + '  ~  ' + a.tgt_ref));
+      row.appendChild(el('div', { class: 'feature' }, c.feature || ''));
+      const strip = el('div', { class: 'strip' });
+      // Evidence ladder dots
+      if (a.link && a.link.confidence) {
+        strip.appendChild(SH.evidenceBadge(a.link.confidence));
+      }
+      // Exact run pill
+      if (a.max_exact_run_len) {
+        strip.appendChild(el('span', { class: 'run' },
+          el('b', null, String(a.max_exact_run_len)), ' tok run · score ', (a.score || 0).toFixed(2)));
+      }
+      row.appendChild(strip);
+      rowsEl.appendChild(row);
+    });
+  }
+
+  // ---- Classify a hypothesis as supporting vs contrary to dependence ---
+  //
+  // Hypothesis *keys* don't share a strict schema across cases. We use a
+  // simple keyword heuristic: anything mentioning "direct_use", "luke_uses_paul",
+  // "dependence", "written_saying" → supports direct-dependence. Anything
+  // mentioning "independent", "convergence", "oral", "shared_tradition",
+  // "common_source" → contrary to direct dependence. Everything else goes to
+  // "supporting" by default so nothing is dropped on the floor.
+  function classifyHypothesis(key) {
+    const k = key.toLowerCase();
+    if (k.indexOf('independent') >= 0) return 'contrary';
+    if (k.indexOf('convergence') >= 0) return 'contrary';
+    if (k.indexOf('oral') >= 0) return 'contrary';
+    if (k.indexOf('shared') >= 0) return 'contrary';  // shared_tradition, shared_liturgical, shared_written_sayings
+    if (k.indexOf('common_') >= 0) return 'contrary';
+    if (k.indexOf('cross') >= 0) return 'contrary';
+    return 'supports';
+  }
+
+  function humanizeKey(k) {
+    return k.replace(/_/g, ' ');
+  }
+
+  // ---- Render the dossier on the right --------------------------------
+  const dossier = document.getElementById('dossier');
+
+  function renderDossier(a) {
+    const c = a.case;
+    while (dossier.firstChild) dossier.removeChild(dossier.firstChild);
+    dossier.classList.remove('empty');
+
+    // Header
+    dossier.appendChild(el('h2', null, c.feature || '(feature not stated)'));
+    const refsLine = el('div', { class: 'refs-line' });
+    refsLine.appendChild(SH.refChip(a.src_ref, { fontSize: '13px' }));
+    refsLine.appendChild(document.createTextNode('  ~  '));
+    refsLine.appendChild(SH.refChip(a.tgt_ref, { fontSize: '13px' }));
+    if (a.link && a.link.confidence) {
+      refsLine.appendChild(SH.evidenceBadge(a.link.confidence));
+    }
+    dossier.appendChild(refsLine);
+
+    // Why high value
+    if (c.why_high_value) {
+      dossier.appendChild(el('div', { class: 'section-label' }, 'Why this case is high-value'));
+      dossier.appendChild(el('div', { class: 'prose' }, c.why_high_value));
+    }
+
+    // Prima facie signal
+    if (c.prima_facie_signal) {
+      dossier.appendChild(el('div', { class: 'section-label' }, 'Prima facie signal'));
+      dossier.appendChild(el('div', { class: 'prose' }, c.prima_facie_signal));
+    }
+
+    // Exact run (headline)
+    const m = c.automatic_metrics || {};
+    if (m.max_exact_run) {
+      const box = el('div', { class: 'exact-run-box' });
+      box.appendChild(el('div', { class: 'label' }, 'longest exact normalized Greek run · ' + (m.max_exact_run_len || 0) + ' tokens'));
+      box.appendChild(el('div', { class: 'run' }, m.max_exact_run));
+      dossier.appendChild(box);
+    }
+
+    // Automatic metrics
+    dossier.appendChild(el('div', { class: 'section-label' }, 'Automatic metrics'));
+    const mr = el('div', { class: 'metric-row' });
+    [
+      [(m.score || 0).toFixed(3), 'composite score'],
+      [m.max_exact_run_len || 0, 'exact run (tokens)'],
+      [(m.lcs_ratio || 0).toFixed(3), 'LCS ratio'],
+      [m.lcs_len || 0, 'LCS length'],
+      [(m.token_weighted_jaccard || 0).toFixed(3), 'token-wt. jaccard'],
+      [m.shared_bigrams || 0, 'shared bigrams'],
+      [m.shared_trigrams || 0, 'shared trigrams'],
+      [m.shared_fourgrams || 0, 'shared 4-grams'],
+    ].forEach(([n, l]) => {
+      mr.appendChild(el('div', { class: 'm' }, el('div', { class: 'n' }, String(n)), el('div', { class: 'l' }, l)));
+    });
+    dossier.appendChild(mr);
+
+    // Greek side-by-side alignment
+    if (c.token_alignment_ops && c.token_alignment_ops.length) {
+      dossier.appendChild(el('div', { class: 'section-label' }, 'Token-level alignment · side by side'));
+      dossier.appendChild(el('div', { class: 'prose', style: 'font-size:11px;color:var(--ink-mute);margin-bottom:6px;' },
+        'Rows are aligned Greek token groups. Teal = inserted in the gospel side only. Salmon = deleted from epistle side (not in gospel). Amber = replaced (different wording). White = shared exactly.'));
+      const table = el('table', { class: 'align-table' });
+      const thead = el('thead', null, el('tr', null,
+        el('th', null, 'Epistle · ' + a.src_ref),
+        el('th', null, 'Gospel · ' + a.tgt_ref)));
+      table.appendChild(thead);
+      const tbody = el('tbody');
+      c.token_alignment_ops.forEach(op => {
+        const tr = el('tr', { class: op.op });
+        tr.appendChild(el('td', { class: 'a' }, op.a || (op.op === 'insert' ? '—' : '')));
+        tr.appendChild(el('td', { class: 'b' }, op.b || (op.op === 'delete' ? '—' : '')));
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      dossier.appendChild(table);
+    }
+
+    // Best explanation (tradition side)
+    if (c.provisional_best_explanation || (a.link && a.link.provisional_best_explanation)) {
+      const be = el('div', { class: 'best-exp' });
+      be.appendChild(el('b', null, 'Provisional best explanation'));
+      be.appendChild(document.createTextNode(c.provisional_best_explanation || a.link.provisional_best_explanation));
+      dossier.appendChild(be);
+    }
+
+    // Hypotheses split into supports/contrary for direct dependence
+    if (c.hypotheses) {
+      dossier.appendChild(el('div', { class: 'section-label' }, 'Hypotheses · supporting and contrary evidence'));
+      const layout = el('div', { class: 'hyp-layout' });
+      const supports = el('div', { class: 'hyp-col supports' },
+        el('h4', null, 'Supports direct dependence'));
+      const contrary = el('div', { class: 'hyp-col contrary' },
+        el('h4', null, 'Contrary / alternative explanations'));
+      let supCount = 0, conCount = 0;
+      Object.keys(c.hypotheses).forEach(k => {
+        const v = c.hypotheses[k];
+        const side = classifyHypothesis(k);
+        const item = el('div', { class: 'hyp-item' },
+          el('b', null, humanizeKey(k)),
+          document.createTextNode(v || ''));
+        if (side === 'supports') { supports.appendChild(item); supCount++; }
+        else { contrary.appendChild(item); conCount++; }
+      });
+      if (!supCount) supports.appendChild(el('div', { class: 'hyp-item', style: 'color:var(--ink-mute);font-style:italic;' }, 'No hypothesis favors direct dependence for this case.'));
+      if (!conCount) contrary.appendChild(el('div', { class: 'hyp-item', style: 'color:var(--ink-mute);font-style:italic;' }, 'No explicit contrary hypothesis recorded.'));
+      layout.appendChild(supports);
+      layout.appendChild(contrary);
+      dossier.appendChild(layout);
+    }
+
+    // Related concept cluster (if any)
+    const relatedConcepts = concepts.filter(cp => {
+      const refs = [].concat(cp.canonical_refs || []).concat(cp.epistle_refs || []);
+      return refs.indexOf(a.src_ref) >= 0 || refs.indexOf(a.tgt_ref) >= 0;
+    });
+    if (relatedConcepts.length) {
+      dossier.appendChild(el('div', { class: 'section-label' }, 'Related concept signature' + (relatedConcepts.length > 1 ? 's' : '')));
+      relatedConcepts.forEach(cp => {
+        const wrap = el('div', { class: 'hyp-item', style: 'border-left-color:var(--focus);background:#fafafa;' });
+        wrap.appendChild(el('b', null, cp.concept_id || '(concept)'));
+        wrap.appendChild(document.createTextNode(cp.signal_type ? cp.signal_type + ' · ' : ''));
+        wrap.appendChild(document.createTextNode('independence burden: ' + (cp.independence_burden || '—')));
+        dossier.appendChild(wrap);
+      });
+    }
+
+    // Drilldown
+    const dd = el('div', { class: 'drilldown' });
+    const readerSrc = SH.readerHref ? SH.readerHref(a.src_ref) : null;
+    const readerTgt = SH.readerHref ? SH.readerHref(a.tgt_ref) : null;
+    if (readerTgt) dd.appendChild(el('a', { href: readerTgt }, 'read ' + a.tgt_ref + ' →'));
+    dd.appendChild(el('a', { href: SH.vizHrefWithHighlight('19_case_studies.html', a.src_ref) }, 'full case-study page'));
+    dd.appendChild(el('a', { href: SH.vizHrefWithHighlight('23_exact_hits.html', a.src_ref) }, 'exact hits'));
+    dd.appendChild(el('a', { href: SH.vizHrefWithHighlight('22_concept_signatures.html', a.src_ref) }, 'concept signatures'));
+    dd.appendChild(el('a', { href: SH.vizHrefWithHighlight('24_epistle_gospel_heatmap.html', a.src_ref) }, 'epistle × gospel heatmap'));
+    dd.appendChild(el('a', { href: '29_jtea_claim_evidence.html#' + encodeURIComponent(c.case_id || '') }, 'claim → evidence'));
+    dossier.appendChild(dd);
+  }
+
+  // Controls wiring
+  document.querySelectorAll('#sortGroup button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#sortGroup button').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      state.sort = b.getAttribute('data-s');
+      renderList();
+    });
+  });
+  document.querySelectorAll('#srcGroup button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#srcGroup button').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      state.src = b.getAttribute('data-src') || '';
+      renderList();
+    });
+  });
+
+  renderList();
+
+  // Default selection: first case in sorted list
+  const first = filtered()[0];
+  if (first) {
+    state.active = first.case.case_id;
+    renderList();
+    renderDossier(first);
+  }
+
+  // Highlight handoff: ?hi=<ref> selects the case whose source or target matches
+  const hi = SH.getHighlightRef && SH.getHighlightRef();
+  if (hi) {
+    const match = annotated.find(a => a.src_ref === hi || a.tgt_ref === hi);
+    if (match) {
+      state.active = match.case.case_id;
+      renderList();
+      renderDossier(match);
+    }
+  }
+})();
+</script>
+</body>
+</html>

@@ -22,6 +22,10 @@
   .intro-stat .cell .n { font-family: var(--serif); font-size: 22px; color: var(--mark); }
   .intro-stat .cell .k { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
   .future-note { background: #fbfaf6; border: 1px dashed var(--rule); border-radius: 3px; padding: 12px 16px; margin-top: 24px; font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+
+  .status-banner { background: #faf6ec; border-left: 4px solid var(--warn); padding: 12px 16px; margin: 0 0 16px; font-size: 13px; line-height: 1.55; color: var(--ink); max-width: 980px; border-radius: 3px; }
+  .status-banner .badge { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; background: var(--warn); color: #fff; padding: 2px 8px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .status-banner b { font-family: var(--serif); }
 </style>
 </head>
 <body>
@@ -31,6 +35,11 @@
     <span class="sub">M. R. James corpus — inventory layer, not full primary-language comparison</span>
   </header>
   <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <div class="status-banner">
+    <span class="badge">Inventory only · not analysis</span>
+    <b>No retrieval has been run across these works.</b> This page is a scope registry: M.&nbsp;R. James\u2019 catalogue, grouped by corpus, with an <em>expected_signal</em> note per work describing what intertext would plausibly surface <em>if</em> primary-language alignment were done. Nothing on this page is an analytic finding about any apocryphal work. For the one exception — Thomas — see <a href="21_thomas_parallels.html">21 Thomas parallels</a> and <a href="32_thomas_matrix.html">32 Thomas × canon</a>.
+  </div>
 
   <p class="caption" style="max-width:980px;">
     This is the <em>scope</em> layer only, not a lexical analysis. The analyses elsewhere in this package work on Greek (SBLGNT) and Coptic (Coptic Scriptorium Thomas), which are the texts we have in forms amenable to automatic retrieval. The broader apocryphal corpus — infancy gospels, apocryphal acts, passion and resurrection accounts, Gnostic tractates — is enumerated here as a registry of what <em>would</em> require primary-language alignment work in a follow-up pass. Each entry carries an <code>analysis_layer</code> flag marking how deep the current pipeline reaches, and an <code>expected_signal</code> note describing what intertext would plausibly surface with proper alignment.

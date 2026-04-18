@@ -89,10 +89,20 @@ def test_jtea_pages_have_viewport_and_stylesheet(jtea_html_files):
         assert "viewport" in s, f"{p.name} missing viewport meta"
 
 
-def test_index_has_jtea_section(html_files):
+def test_index_has_research_question_layout(html_files):
+    """Index is organized around 8 research-question sections (review §§organization).
+
+    Guards the three structural anchors the landing page depends on:
+      - #startStrip  (the "Start here" fast-path card strip)
+      - #rqGrid      (the research-question card grid)
+      - #vizCatalog  (the expandable full 33-page catalog)
+    and the low-verbatim card remains on the page.
+    """
     idx = next(p for p in html_files if p.name == "index.html")
     s = _read(idx)
-    assert 'id="jteaCards"' in s, "index.html missing jtea card grid"
+    assert 'id="startStrip"' in s, "index.html missing #startStrip fast-path strip"
+    assert 'id="rqGrid"' in s, "index.html missing #rqGrid research-question grid"
+    assert 'id="vizCatalog"' in s, "index.html missing #vizCatalog full catalog"
     assert "Low-verbatim" in s, "index.html missing low-verbatim label"
 
 

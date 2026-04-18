@@ -112,84 +112,112 @@
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
-  // Some pages only make sense for one or a subset of datasets. When current
-  // dataset is not in `availableOn`, the link is disabled but still shown
-  // so users see it exists and can understand why it is inactive.
-  function buildNav(current) {
+  // Unified 8-section research-question nav. Every page renders the full
+  // map of the project grouped by the question it answers; section labels
+  // are compact small-caps on the left, page links flow to the right.
+  //
+  // `dsaware` per page: true  → link appends `#<dataset>` and can be disabled
+  //                            when the active dataset is not in availableOn.
+  //                     false → plain link (JTEA, conclusions, reader).
+  //
+  // Legacy callers buildNav/buildJteaNav both delegate here; the distinction
+  // between "Synoptic-side" and "JTEA-side" pages no longer matters for the
+  // navigation — readers should see the same map from every page.
+  const NAV_SECTIONS = [
+    { id: 'start', label: 'Start here', pages: [
+      ['index.html', 'Overview'],
+      ['26_conclusions.html', 'Conclusions'],
+      ['29_jtea_claim_evidence.html', 'Claim → evidence'],
+      ['30_reader.html', 'Reader'],
+      ['31_gospel_square.html', 'Gospel Square'],
+    ]},
+    { id: 'synoptic', label: 'Synoptic narrative', pages: [
+      ['01_synoptic_map.html', 'Map', { ds: true }],
+      ['02_block_ribbon.html', 'Ribbon', { ds: true }],
+      ['03_burden_ledger.html', 'Burden', { ds: true }],
+      ['04_gap_timeline.html', 'Gaps', { ds: true }],
+      ['05_lexical_drift.html', 'Lexical drift', { ds: true, availableOn: ['mm', 'ml'] }],
+      ['06_score_classes.html', 'Pair classes', { ds: true }],
+      ['07_block_cards.html', 'Block cards', { ds: true }],
+      ['08_stylistic_markers.html', 'Stylistic', { ds: true, availableOn: ['mm', 'ml'] }],
+      ['09_pair_explorer.html', 'Pair explorer', { ds: true }],
+      ['12_variants.html', 'Variants', { ds: true }],
+      ['13_triangle.html', 'Triangle', { ds: true }],
+    ]},
+    { id: 'q', label: 'Q & double tradition', pages: [
+      ['10_displacement.html', 'Displacement', { ds: true, availableOn: ['ml', 'mld'] }],
+      ['11_echo_gallery.html', 'Echo gallery', { ds: true }],
+      ['14_mask_audit.html', 'Mask audit', { ds: true, availableOn: ['mld'] }],
+      ['15_q_core.html', 'Q core reader', { ds: true, availableOn: ['mld'] }],
+      ['16_matt_verse_card.html', 'Matt verse card ⓘ'],
+    ]},
+    { id: 'john', label: 'John & Synoptics', pages: [
+      ['20_john_anchors.html', 'John anchors'],
+      ['18_intertext_network.html', 'Intertext network'],
+    ]},
+    { id: 'thomas', label: 'Thomas', pages: [
+      ['21_thomas_parallels.html', 'Thomas parallels'],
+      ['32_thomas_matrix.html', 'Thomas × canon'],
+    ]},
+    { id: 'epistles', label: 'Epistles & sayings', pages: [
+      ['19_case_studies.html', 'Case studies'],
+      ['22_concept_signatures.html', 'Concept signatures'],
+      ['23_exact_hits.html', 'Exact hits'],
+      ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel'],
+      ['33_epistle_dossier.html', 'Dossier'],
+    ]},
+    { id: 'apocrypha', label: 'Apocrypha', pages: [
+      ['25_apocrypha_inventory.html', 'Inventory ⓘ'],
+    ]},
+    { id: 'audit', label: 'Audit & reproducibility', pages: [
+      ['17_jtea_overview.html', 'Low-verbatim tour'],
+      ['27_mm_sensitivity.html', 'Sensitivity · mm', { ds: true, availableOn: ['mm'] }],
+      ['28_mld_regime_sensitivity.html', 'Sensitivity · mld', { ds: true, availableOn: ['mld'] }],
+    ]},
+  ];
+
+  function buildNav8(current) {
     const nav = document.getElementById('topnav');
     if (!nav) return;
-    const links = [
-      ['index.html', 'Overview', null],
-      ['01_synoptic_map.html', 'Synoptic map', null],
-      ['02_block_ribbon.html', 'Block ribbon', null],
-      ['03_burden_ledger.html', 'Direction burden', null],
-      ['04_gap_timeline.html', 'Gap timeline', null],
-      ['05_lexical_drift.html', 'Lexical drift', ['mm', 'ml']],
-      ['06_score_classes.html', 'Pair classes', null],
-      ['07_block_cards.html', 'Block cards', null],
-      ['08_stylistic_markers.html', 'Stylistic markers', ['mm', 'ml']],
-      ['09_pair_explorer.html', 'Pair explorer', null],
-      ['10_displacement.html', 'Displacement', ['ml', 'mld']],
-      ['11_echo_gallery.html', 'Echo gallery', null],
-      ['12_variants.html', 'Variants', null],
-      ['13_triangle.html', 'Synoptic triangle', null],
-      ['14_mask_audit.html', 'Mask audit', ['mld']],
-      ['15_q_core.html', 'Q core reader', ['mld']],
-      ['16_matt_verse_card.html', 'Matthew verse card', null],
-      ['27_mm_sensitivity.html', 'Sensitivity (mm)', ['mm']],
-      ['28_mld_regime_sensitivity.html', 'Sensitivity (mld)', ['mld']],
-      ['30_reader.html', 'Reader', null],
-      ['17_jtea_overview.html', 'Low-verbatim →', '__jtea'],
-      ['26_conclusions.html', 'Conclusions →', '__conclusions'],
-    ];
+    nav.classList.add('topnav-8');
     while (nav.firstChild) nav.removeChild(nav.firstChild);
-    for (const [h, t, avail] of links) {
-      const a = document.createElement('a');
-      const isSectionLink = avail === '__jtea' || avail === '__conclusions';
-      const isDisabled = !isSectionLink && avail && avail.indexOf(D.name) < 0;
-      a.href = isSectionLink ? h : (h + '#' + (isDisabled ? avail[0] : D.name));
-      a.textContent = t;
-      const classes = [];
-      if (h === current) classes.push('current');
-      if (isDisabled) {
-        classes.push('disabled');
-        a.title = 'Only available for: ' + avail.join(', ');
+    const currentDs = D ? D.name : null;
+    for (const section of NAV_SECTIONS) {
+      const wrap = document.createElement('div');
+      wrap.className = 'nav-section';
+      const lbl = document.createElement('span');
+      lbl.className = 'nav-section-label';
+      lbl.textContent = section.label;
+      wrap.appendChild(lbl);
+      for (const p of section.pages) {
+        const [h, t, opts] = p;
+        const o = opts || {};
+        const a = document.createElement('a');
+        const availableOn = o.availableOn || null;
+        const isDisabled = !!(o.ds && availableOn && currentDs && availableOn.indexOf(currentDs) < 0);
+        if (o.ds && currentDs) {
+          a.href = h + '#' + (isDisabled ? availableOn[0] : currentDs);
+        } else {
+          a.href = h;
+        }
+        a.textContent = t;
+        const classes = [];
+        if (h === current) classes.push('current');
+        if (isDisabled) {
+          classes.push('disabled');
+          a.title = 'Only available for: ' + availableOn.join(', ');
+        }
+        if (classes.length) a.className = classes.join(' ');
+        wrap.appendChild(a);
       }
-      if (isSectionLink) classes.push('section-link');
-      if (classes.length) a.className = classes.join(' ');
-      nav.appendChild(a);
+      nav.appendChild(wrap);
     }
   }
 
-  // Nav for the low-verbatim (jtea) package. Kept separate from the synoptic
-  // pages because the data model and switcher semantics are different.
-  function buildJteaNav(current) {
-    const nav = document.getElementById('topnav');
-    if (!nav) return;
-    const links = [
-      ['index.html', 'Synoptic overview'],
-      ['17_jtea_overview.html', 'Low-verbatim overview'],
-      ['18_intertext_network.html', 'Intertext network'],
-      ['19_case_studies.html', 'Case studies'],
-      ['20_john_anchors.html', 'John/Synoptic anchors'],
-      ['21_thomas_parallels.html', 'Thomas parallels'],
-      ['22_concept_signatures.html', 'Concept signatures'],
-      ['23_exact_hits.html', 'Exact-phrase hits'],
-      ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel'],
-      ['25_apocrypha_inventory.html', 'Apocrypha inventory'],
-      ['29_jtea_claim_evidence.html', 'Claim → evidence'],
-      ['30_reader.html', 'Reader'],
-      ['26_conclusions.html', 'Conclusions'],
-    ];
-    while (nav.firstChild) nav.removeChild(nav.firstChild);
-    for (const [h, t] of links) {
-      const a = document.createElement('a');
-      a.href = h;
-      a.textContent = t;
-      if (h === current) a.className = 'current';
-      nav.appendChild(a);
-    }
-  }
+  // Legacy wrappers — kept so existing pages don't need to be edited to call
+  // the new function. Both produce the same 8-section nav.
+  function buildNav(current) { buildNav8(current); }
+  function buildJteaNav(current) { buildNav8(current); }
 
   function buildDatasetSwitcher(container, opts) {
     opts = opts || {};
@@ -656,7 +684,7 @@
     setDataset,
     currentDataset,
     showTip, hideTip, tipLine, tipRow, tipGreek,
-    scoreColor, buildNav, buildJteaNav, buildDatasetSwitcher, buildFooter, svgEl, svgElText, scale, clamp,
+    scoreColor, buildNav, buildJteaNav, buildNav8, buildDatasetSwitcher, buildFooter, svgEl, svgElText, scale, clamp,
     chapterLookup,
     el,
     // Reader + morph + evidence helpers
