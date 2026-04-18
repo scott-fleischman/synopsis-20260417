@@ -1,0 +1,234 @@
+{
+  "project": "Matthew-Luke masked double-tradition literary-dependence case study",
+  "method_summary": {
+    "masking": "Likely Markan verses were removed from Matthew and Luke using the explicit Markan mask audit.",
+    "matrix": "The prior full Matthew-Luke scoring matrix was filtered to the unmasked subset, deduplicated, and then the chain/block/secondary/diff layers were rerun on that subset.",
+    "interpretive_note": "The package isolates non-Markan Matthew-Luke relations; it does not by itself decide between Luke-use-Matthew, Matthew-use-Luke, Q/common-source, or oral-tradition models."
+  },
+  "markan_mask_summary": {
+    "Matt": {
+      "total_verses": 1068,
+      "masked_markan_verses": 389,
+      "remaining_unmasked_verses": 679,
+      "mask_rule_counts": {
+        "unmasked_non_markan": 679,
+        "strict_verse": 273,
+        "local_cluster": 30,
+        "chain_context": 86
+      }
+    },
+    "Luke": {
+      "total_verses": 1149,
+      "masked_markan_verses": 226,
+      "remaining_unmasked_verses": 923,
+      "mask_rule_counts": {
+        "unmasked_non_markan": 923,
+        "strict_verse": 146,
+        "chain_context": 68,
+        "local_cluster": 12
+      }
+    }
+  },
+  "global_metrics": {
+    "matt_total_verse_count": 1068,
+    "luke_total_verse_count": 1149,
+    "matt_masked_markan_count": 389,
+    "luke_masked_markan_count": 226,
+    "matt_unmasked_count": 679,
+    "luke_unmasked_count": 923,
+    "expected_full_masked_matrix_rows": 626717,
+    "full_masked_matrix_rows": 626717,
+    "matched_pair_count": 49,
+    "loose_block_count": 13,
+    "tight_block_count": 22,
+    "secondary_echo_count": 60,
+    "primary_chain_candidate_threshold": 0.34,
+    "secondary_echo_threshold": 0.4
+  },
+  "primary_pair_score_summary": {
+    "mean": 0.621091,
+    "median": 0.583264,
+    "min": 0.346588,
+    "max": 1.0,
+    "ge_0.80": 7,
+    "ge_0.70": 16,
+    "ge_0.60": 22,
+    "ge_0.50": 35,
+    "lt_0.40": 4
+  },
+  "top_secondary_echoes": [
+    {
+      "matt_ref": "Matt 8:20",
+      "luke_ref": "Luke 9:58",
+      "score": 1.0,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 7:8",
+      "luke_ref": "Luke 11:10",
+      "score": 1.0,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 12:41",
+      "luke_ref": "Luke 11:32",
+      "score": 1.0,
+      "tags": [
+        "strong_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 12:42",
+      "luke_ref": "Luke 11:31",
+      "score": 0.942511,
+      "tags": [
+        "strong_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 6:24",
+      "luke_ref": "Luke 16:13",
+      "score": 0.935631,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 7:7",
+      "luke_ref": "Luke 11:9",
+      "score": 0.917754,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 23:12",
+      "luke_ref": "Luke 14:11",
+      "score": 0.880892,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 6:21",
+      "luke_ref": "Luke 12:34",
+      "score": 0.789321,
+      "tags": [
+        "strong_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 7:11",
+      "luke_ref": "Luke 11:13",
+      "score": 0.732157,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 6:11",
+      "luke_ref": "Luke 11:3",
+      "score": 0.730754,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 7:19",
+      "luke_ref": "Luke 3:9",
+      "score": 0.713867,
+      "tags": [
+        "moderate_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 6:22",
+      "luke_ref": "Luke 11:34",
+      "score": 0.710444,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 23:37",
+      "luke_ref": "Luke 13:34",
+      "score": 0.697825,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 7:5",
+      "luke_ref": "Luke 6:42",
+      "score": 0.685983,
+      "tags": [
+        "moderate_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 21:44",
+      "luke_ref": "Luke 20:18",
+      "score": 0.671571,
+      "tags": [
+        "moderate_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 13:33",
+      "luke_ref": "Luke 13:21",
+      "score": 0.663345,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 6:29",
+      "luke_ref": "Luke 12:27",
+      "score": 0.661733,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    },
+    {
+      "matt_ref": "Matt 24:38",
+      "luke_ref": "Luke 17:27",
+      "score": 0.648665,
+      "tags": [
+        "moderate_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 23:12",
+      "luke_ref": "Luke 18:14",
+      "score": 0.638974,
+      "tags": [
+        "moderate_verbal_echo"
+      ]
+    },
+    {
+      "matt_ref": "Matt 9:38",
+      "luke_ref": "Luke 10:2",
+      "score": 0.634448,
+      "tags": [
+        "moderate_verbal_echo",
+        "nonlocal_reorder"
+      ]
+    }
+  ]
+}

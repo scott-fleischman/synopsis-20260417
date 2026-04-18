@@ -1,0 +1,24 @@
+{
+  "Matt": {
+    "total_verses": 1068,
+    "masked_markan_verses": 389,
+    "remaining_unmasked_verses": 679,
+    "mask_rule_counts": {
+      "unmasked_non_markan": 679,
+      "strict_verse": 273,
+      "local_cluster": 30,
+      "chain_context": 86
+    }
+  },
+  "Luke": {
+    "total_verses": 1149,
+    "masked_markan_verses": 226,
+    "remaining_unmasked_verses": 923,
+    "mask_rule_counts": {
+      "unmasked_non_markan": 923,
+      "strict_verse": 146,
+      "chain_context": 68,
+      "local_cluster": 12
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "files": [
+    {
+      "path": "EXECUTIVE_SUMMARY.md",
+      "bytes": 1097,
+      "sha256": "517db4dc48fa677f279abf6543f908320186163b05ae5e2b2df45908366fb544"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1946,
+      "sha256": "75a2928edc4c306f7deed09ddec2881d5ae41b30cc85e4f71c9cc0daf225dbed"
+    },
+    {
+      "path": "data/00_source_metadata.yaml",
+      "bytes": 1220,
+      "sha256": "864957fda702e4dc27146a6e22504910b42f39b35971eb732d02283871397e69"
+    },
+    {
+      "path": "data/01_markan_mask_by_verse.csv",
+      "bytes": 720054,
+      "sha256": "2c6fee10b21203b00c4cce175d8d3d327e7094a85bafaa77328658ae9cbf59fd"
+    },
+    {
+      "path": "data/01_negative_space_flags.csv",
+      "bytes": 154938,
+      "sha256": "0ff93c4c9cc7654f5788b6afd5f63eb49782ebb842d7e35aa276c5cc3ed96efe"
+    },
+    {
+      "path": "data/01b_markan_mask_summary.yaml",
+      "bytes": 523,
+      "sha256": "f4112f49a894010f004c8adec1f02e6dee158f37a9b4875e2c2dac1242d95f42"
+    },
+    {
+      "path": "data/02_verse_similarity_full.csv",
+      "bytes": 24302249,
+      "sha256": "5e8d8833448a7109c034f838135133fa79717457d7516fea55707c731356b051"
+    },
+    {
+      "path": "data/02_verse_similarity_full.csv.gz",
+      "bytes": 5085711,
+      "sha256": "623ceddc44db2c5b8275d7420f8b0948cecb19931c51a331f77c559056ad4c5c"
+    },
+    {
+      "path": "data/03_verse_similarity_top20_matt_to_luke.csv",
+      "bytes": 6192641,
+      "sha256": "5d4a0fc2759a38770f26323173ab1662d136688d0b9fed5bd4b0a4350657f6d8"
+    },
+    {
+      "path": "data/04_verse_similarity_top20_luke_to_matt.csv",
+      "bytes": 8390532,
+      "sha256": "e46d95e3b7b56a196b024389de8971b40ac4affb270c55c32dd6481cbce8ab5f"
+    },
+    {
+      "path": "data/05_window3_similarity_top10_matt_to_luke.csv",
+      "bytes": 703276,
+      "sha256": "0428ae908f1c7773785169b501f02e65adb4da2cb4ab68aa685c8facaa33e878"
+    },
+    {
+      "path": "data/06_window3_similarity_top10_luke_to_matt.csv",
+      "bytes": 954960,
+      "sha256": "b086731ab121d6e5f7970d0f4f333662e34def26da1a173b5d9020ca15a2f436"
+    },
+    {
+      "path": "data/07_primary_chain_pairs.csv",
+      "bytes": 6094,
+      "sha256": "661900af986a62a7d080e02b317bc2183427d2f4218bb1d628d1650796ba98e4"
+    },
+    {
+      "path": "data/08_primary_chain_pairs_detailed.jsonl",
+      "bytes": 83087,
+      "sha256": "9ce59dec32dc9e530584dadda53c309ccea6b0a06c4ee7d2137cdefdbb1f2b67"
+    },
+    {
+      "path": "data/09_loose_blocks.yaml",
+      "bytes": 17161,
+      "sha256": "143a679369b0c8c1fb53c3768a377197365a57f9548357a80783f0a198be4bc2"
+    },
+    {
+      "path": "data/10_tight_blocks.yaml",
+      "bytes": 20864,
+      "sha256": "c15070d836c150609c45cbcd1244a83dc1fa1df989d635618b50c231563d62e7"
+    },
+    {
+      "path": "data/11_order_intervals.yaml",
+      "bytes": 3581,
+      "sha256": "cafe7a3aee6c800e3dd2e6d5040c144d047bc2df3cf8f92c80e9d74258eed58e"
+    },
+    {
+      "path": "data/12_secondary_echoes.yaml",
+      "bytes": 56175,
+      "sha256": "e7f9de27c0e5f3071864f629ca238f22fc3ba46d4d6d4d9b585ef6c6e7064cc2"
+    },
+    {
+      "path": "data/13_variants_by_primary_pair.yaml",
+      "bytes": 12856,
+      "sha256": "2ce754a9bc20040ced876c9b597d0449178cbaef4da61b8a520561607318fe87"
+    },
+    {
+      "path": "data/14_direction_ledger_by_loose_block.yaml",
+      "bytes": 11236,
+      "sha256": "077cef081b568be702aeb05363ca34c11b191c519f6816b4e4567bb15f440fba"
+    },
+    {
+      "path": "data/15_direction_burden_totals.yaml",
+      "bytes": 561,
+      "sha256": "5714768cae836ebf44003ca41f6ec1f008ef538b89b39d8f0e43e4750000b5ba"
+    },
+    {
+      "path": "data/16_global_summary.yaml",
+      "bytes": 5429,
+      "sha256": "704d0b8a809055439793124a4dd67eca078190032857914bf1043db205a4eea8"
+    },
+    {
+      "path": "data/17_macro_block_table.csv",
+      "bytes": 1334,
+      "sha256": "23910f3b4a776a459bbebdac30750b8b11863480557152df29d1e0a831adb73d"
+    },
+    {
+      "path": "data/18_micro_block_table.csv",
+      "bytes": 2130,
+      "sha256": "2fd74f8bca51ea7534e266fc781b34af7a4b6cddef0d1716d2b3f697c6b29d06"
+    },
+    {
+      "path": "data/19_pair_diffs_flat.tsv",
+      "bytes": 117720,
+      "sha256": "e4a1f64d5fb93fc7927c113005843f8c23284ec8abec27284f34c86195217506"
+    },
+    {
+      "path": "data/20_top_lemma_deltas.yaml",
+      "bytes": 6736,
+      "sha256": "5e17c12aecc84448606a23f55e2a9a8c51035f49c8857e8898eb389cab6f3d53"
+    },
+    {
+      "path": "data/21_selected_secondary_echoes.yaml",
+      "bytes": 56175,
+      "sha256": "e7f9de27c0e5f3071864f629ca238f22fc3ba46d4d6d4d9b585ef6c6e7064cc2"
+    }
+  ]
+}

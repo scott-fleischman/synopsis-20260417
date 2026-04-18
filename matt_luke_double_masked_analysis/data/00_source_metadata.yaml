@@ -1,0 +1,35 @@
+{
+  "project": "Matthew-Luke masked double-tradition analysis",
+  "generated_at": "2026-04-18",
+  "text_sources": {
+    "greek_text": "SBLGNT files downloaded from the Faithlife/LogosBible GitHub repository.",
+    "morphology": "MorphGNT SBLGNT token/lemma/morph files.",
+    "apparatus": "SBLGNT apparatus XML files from the Faithlife/LogosBible repository."
+  },
+  "method_note": "The Markan mask is newly generated; the Matthew-Luke scoring layer is the prior full Matthew-Luke verse-similarity matrix filtered to the unmasked subset, after which chain/block/secondary/diff layers were rerun.",
+  "mask_counts": {
+    "Matt": {
+      "total_verses": 1068,
+      "masked_markan_verses": 389,
+      "remaining_unmasked_verses": 679,
+      "mask_rule_counts": {
+        "unmasked_non_markan": 679,
+        "strict_verse": 273,
+        "local_cluster": 30,
+        "chain_context": 86
+      }
+    },
+    "Luke": {
+      "total_verses": 1149,
+      "masked_markan_verses": 226,
+      "remaining_unmasked_verses": 923,
+      "mask_rule_counts": {
+        "unmasked_non_markan": 923,
+        "strict_verse": 146,
+        "chain_context": 68,
+        "local_cluster": 12
+      }
+    }
+  },
+  "filtered_matrix_rows": 626717
+}

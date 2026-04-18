@@ -1,0 +1,20 @@
+{
+  "matt_prior_Luke_uses_Matthew": {
+    "operation_type_counts": {
+      "lukan_redistribution_or_expansion": 1,
+      "lukan_clustering_or_abbreviation": 2
+    },
+    "numeric_total": 26.446
+  },
+  "luke_prior_Matthew_uses_Luke": {
+    "operation_type_counts": {
+      "matthean_clustering_or_abbreviation": 1,
+      "matthean_redistribution_or_expansion": 2
+    },
+    "numeric_total": 26.446
+  },
+  "common_source_or_oral": {
+    "numeric_total": 8.86
+  },
+  "caution": "Heuristic totals are burden-audit prompts, not probabilistic posterior estimates."
+}

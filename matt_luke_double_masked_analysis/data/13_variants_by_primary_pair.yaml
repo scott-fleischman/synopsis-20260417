@@ -1,0 +1,434 @@
+[
+  {
+    "pair_id": 1,
+    "matt_ref": "Matt 1:25",
+    "luke_ref": "Luke 1:31",
+    "matt_variant_notes": [
+      "25 υἱόν WH Treg NA28 ] τὸν υἱὸν αὐτῆς τὸν πρωτότοκον RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 2,
+    "matt_ref": "Matt 3:7",
+    "luke_ref": "Luke 3:7",
+    "matt_variant_notes": [
+      "7 αὐτοῦ Treg NA28 RP ] – WH"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 4,
+    "matt_ref": "Matt 3:10",
+    "luke_ref": "Luke 3:9",
+    "matt_variant_notes": [
+      "10 δὲ WH Treg NA28 ] + καὶ RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 5,
+    "matt_ref": "Matt 3:12",
+    "luke_ref": "Luke 3:17",
+    "matt_variant_notes": [
+      "12 ἀποθήκην WH NA28 RP ] + αὐτοῦ Treg"
+    ],
+    "luke_variant_notes": [
+      "17 διακαθᾶραι WH NA28 ] διακαθαριεῖ Treg; καὶ διακαθαριεῖ RP",
+      "• συναγαγεῖν WH NA28 ] συναξεῖ Treg RP"
+    ]
+  },
+  {
+    "pair_id": 6,
+    "matt_ref": "Matt 4:3",
+    "luke_ref": "Luke 4:3",
+    "matt_variant_notes": [
+      "4:3 ὁ πειράζων εἶπεν αὐτῷ WH Treg NA28 ] αὐτῷ ὁ πειράζων εἶπεν RP"
+    ],
+    "luke_variant_notes": [
+      "3 εἶπεν δὲ WH Treg NA28 ] Καὶ εἶπεν RP"
+    ]
+  },
+  {
+    "pair_id": 7,
+    "matt_ref": "Matt 4:4",
+    "luke_ref": "Luke 4:4",
+    "matt_variant_notes": [
+      "4 ὁ WH Treg NA28 ] – RP",
+      "• ἐπὶ WH NA28 RP ] ἐν Treg"
+    ],
+    "luke_variant_notes": [
+      "4 πρὸς αὐτὸν ὁ Ἰησοῦς WH NA28 Treg ] Ἰησοῦς πρὸς αὐτόν λέγων RP",
+      "• ὁ WH Treg NA28 ] – RP",
+      "• ἄνθρωπος WH NA28 ] + ἀλλʼ ἐπὶ παντὶ ῥήματι θεοῦ Treg RP"
+    ]
+  },
+  {
+    "pair_id": 8,
+    "matt_ref": "Matt 4:6",
+    "luke_ref": "Luke 4:11",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "11 ὅτι WH Treg NA28 ] – RP"
+    ]
+  },
+  {
+    "pair_id": 11,
+    "matt_ref": "Matt 5:46",
+    "luke_ref": "Luke 6:32",
+    "matt_variant_notes": [
+      "46 τὸ αὐτὸ WH NA28 RP ] οὕτως Treg"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 12,
+    "matt_ref": "Matt 7:1",
+    "luke_ref": "Luke 6:37",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "37 καὶ WH NA28 ] – Treg RP"
+    ]
+  },
+  {
+    "pair_id": 14,
+    "matt_ref": "Matt 7:4",
+    "luke_ref": "Luke 6:42",
+    "matt_variant_notes": [
+      "7:4 ἐκ WH Treg NA28 ] ἀπὸ RP"
+    ],
+    "luke_variant_notes": [
+      "42 πῶς WH NA28 ] ἢ πῶς Treg RP",
+      "• τὸ κάρφος … σου ἐκβαλεῖν WH NA28 ] ἐκβαλεῖν τὸ κάρφος … σου Treg RP"
+    ]
+  },
+  {
+    "pair_id": 15,
+    "matt_ref": "Matt 7:18",
+    "luke_ref": "Luke 6:43",
+    "matt_variant_notes": [
+      "18 ποιεῖν Treg NA28 RP ] ἐνεγκεῖν WH"
+    ],
+    "luke_variant_notes": [
+      "43 πάλιν WH Treg NA28 ] – RP"
+    ]
+  },
+  {
+    "pair_id": 16,
+    "matt_ref": "Matt 8:9",
+    "luke_ref": "Luke 7:8",
+    "matt_variant_notes": [
+      "9 ἐξουσίαν Treg NA28 RP ] + τασσόμενος WH"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 17,
+    "matt_ref": "Matt 8:10",
+    "luke_ref": "Luke 7:9",
+    "matt_variant_notes": [
+      "10 παρʼ οὐδενὶ τοσαύτην πίστιν ἐν τῷ Ἰσραὴλ WH Treg NA28 ] οὐδὲ ἐν τῷ Ἰσραὴλ τοσαύτην πίστιν RP"
+    ],
+    "luke_variant_notes": [
+      "9 οὐδὲ WH Treg NA28 ] οὔτε RP"
+    ]
+  },
+  {
+    "pair_id": 18,
+    "matt_ref": "Matt 11:3",
+    "luke_ref": "Luke 7:19",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "19 κύριον WH Treg NA28 ] Ἰησοῦν RP",
+      "• ἄλλον NA28 RP ] ἕτερον WH Treg"
+    ]
+  },
+  {
+    "pair_id": 19,
+    "matt_ref": "Matt 11:5",
+    "luke_ref": "Luke 7:22",
+    "matt_variant_notes": [
+      "5 καὶ WH Treg NA28 ] – RP"
+    ],
+    "luke_variant_notes": [
+      "22 ἀποκριθεὶς WH Treg NA28 ] + ὁ Ἰησοῦς RP",
+      "• τυφλοὶ WH NA28 ] ὅτι τυφλοὶ Treg RP",
+      "• κωφοὶ Treg RP ] καὶ κωφοὶ WH NA28"
+    ]
+  },
+  {
+    "pair_id": 20,
+    "matt_ref": "Matt 11:6",
+    "luke_ref": "Luke 7:23",
+    "matt_variant_notes": [
+      "6 ἐὰν NA28 RP ] ἂν WH Treg"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 21,
+    "matt_ref": "Matt 11:7",
+    "luke_ref": "Luke 7:24",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "24 πρὸς τοὺς ὄχλους WH Treg NA28 ] τοῖς ὄχλοις RP",
+      "• ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP"
+    ]
+  },
+  {
+    "pair_id": 22,
+    "matt_ref": "Matt 11:8",
+    "luke_ref": "Luke 7:25",
+    "matt_variant_notes": [
+      "8 μαλακοῖς WH Treg NA28 ] + ἱματίοις RP",
+      "• βασιλέων WH Treg NA28 ] βασιλείων RP",
+      "• εἰσίν Treg NA28 RP ] – WH"
+    ],
+    "luke_variant_notes": [
+      "25 ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP"
+    ]
+  },
+  {
+    "pair_id": 23,
+    "matt_ref": "Matt 11:9",
+    "luke_ref": "Luke 7:26",
+    "matt_variant_notes": [
+      "9 ; προφήτην ἰδεῖν WH ] ἰδεῖν; προφήτην Treg NA28 RP"
+    ],
+    "luke_variant_notes": [
+      "26 ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP"
+    ]
+  },
+  {
+    "pair_id": 24,
+    "matt_ref": "Matt 11:11",
+    "luke_ref": "Luke 7:28",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "28 λέγω WH Treg NA28 ] + γὰρ RP",
+      "• Ἰωάννου WH NA28 ] προφήτης Ἰωάννου Treg; προφήτης Ἰωάννου τοῦ βαπτιστοῦ RP"
+    ]
+  },
+  {
+    "pair_id": 25,
+    "matt_ref": "Matt 11:17",
+    "luke_ref": "Luke 7:32",
+    "matt_variant_notes": [
+      "17 λέγουσιν WH Treg NA28 ] καὶ λέγουσιν RP",
+      "• ἐθρηνήσαμεν WH Treg NA28 ] + ὑμῖν RP"
+    ],
+    "luke_variant_notes": [
+      "32 ἃ λέγει WH NA28 ] λέγοντες Treg; καὶ λέγουσιν RP",
+      "• ἐθρηνήσαμεν WH Treg NA28 ] + ὑμῖν RP"
+    ]
+  },
+  {
+    "pair_id": 26,
+    "matt_ref": "Matt 11:18",
+    "luke_ref": "Luke 7:33",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "33 μὴ WH NA28 ] μήτε Treg RP",
+      "• ἐσθίων ἄρτον μήτε πίνων οἶνον WH Treg NA28 ] ἄρτον ἐσθίων μὴτὲ οἶνον πίνων RP"
+    ]
+  },
+  {
+    "pair_id": 27,
+    "matt_ref": "Matt 11:19",
+    "luke_ref": "Luke 7:34",
+    "matt_variant_notes": [
+      "19 ἔργων WH Treg NA28 ] τέκνων RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 28,
+    "matt_ref": "Matt 11:21",
+    "luke_ref": "Luke 10:13",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "13 ἐγενήθησαν WH Treg NA28 ] ἐγένοντο RP",
+      "• καθήμενοι WH Treg NA28 ] καθήμεναι RP"
+    ]
+  },
+  {
+    "pair_id": 30,
+    "matt_ref": "Matt 11:23",
+    "luke_ref": "Luke 10:15",
+    "matt_variant_notes": [
+      "23 μὴ ἕως οὐρανοῦ ὑψωθήσῃ WH Treg NA28 ] ἡ ἕως τοῦ οὐρανοῦ ὑψωθεῖσα RP",
+      "• καταβήσῃ WH Treg NA28 ] καταβιβασθήσῃ RP",
+      "• ἐγενήθησαν WH Treg NA28 ] ἐγένοντο RP",
+      "• ἔμεινεν WH Treg NA28 ] ἔμειναν RP"
+    ],
+    "luke_variant_notes": [
+      "15 μὴ ἕως οὐρανοῦ ὑψωθήσῃ WH Treg NA28 ] ἡ ἕως τοῦ οὐρανοῦ ὑψωθεῖσα RP",
+      "• τοῦ WH Treg NA28 ] – RP",
+      "• καταβιβασθήσῃ Treg RP ] καταβήσῃ WH NA28"
+    ]
+  },
+  {
+    "pair_id": 31,
+    "matt_ref": "Matt 11:25",
+    "luke_ref": "Luke 10:21",
+    "matt_variant_notes": [
+      "25 ἔκρυψας WH Treg NA28 ] ἀπέκρυψας RP"
+    ],
+    "luke_variant_notes": [
+      "21 τῷ WH Treg RP ] ἐν τῷ NA28",
+      "• τῷ ἁγίῳ WH Treg NA28 ] ὁ Ἰησοῦς RP",
+      "• εὐδοκία ἐγένετο WH Treg NA28 ] ἐγένετο εὐδοκία RP"
+    ]
+  },
+  {
+    "pair_id": 32,
+    "matt_ref": "Matt 11:27",
+    "luke_ref": "Luke 10:22",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "22 πάντα WH Treg NA28 ] Καὶ στραφείς πρός τούς μαθητάς εἶπεν πάντα RP",
+      "• ἐὰν NA28 RP ] ἂν WH Treg"
+    ]
+  },
+  {
+    "pair_id": 33,
+    "matt_ref": "Matt 12:28",
+    "luke_ref": "Luke 11:20",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "20 θεοῦ RP ] + ἐγὼ WH Treg NA28"
+    ]
+  },
+  {
+    "pair_id": 35,
+    "matt_ref": "Matt 12:43",
+    "luke_ref": "Luke 11:24",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "24 εὑρίσκον Treg RP ] + τότε WH NA28"
+    ]
+  },
+  {
+    "pair_id": 36,
+    "matt_ref": "Matt 12:44",
+    "luke_ref": "Luke 11:25",
+    "matt_variant_notes": [
+      "44 Εἰς τὸν οἶκόν μου ἐπιστρέψω WH Treg NA28 ] Ἐπιστρέψω εἰς τὸν οἶκόν μου RP",
+      "• εὑρίσκει WH Treg RP NA28 ] + τὸν οἶκόν NIV",
+      "• σχολάζοντα Treg NA28 RP ] + καὶ WH"
+    ],
+    "luke_variant_notes": [
+      "25 εὑρίσκει Treg NA28 RP ] + σχολάζοντα WH"
+    ]
+  },
+  {
+    "pair_id": 37,
+    "matt_ref": "Matt 12:45",
+    "luke_ref": "Luke 11:26",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "26 ἕτερα … ἑαυτοῦ ἑπτά WH Treg NA28 ] ἑπτά ἕτερα … ἑαυτοῦ RP",
+      "• εἰσελθόντα WH Treg NA28 ] ἐλθόντα RP"
+    ]
+  },
+  {
+    "pair_id": 38,
+    "matt_ref": "Matt 23:25",
+    "luke_ref": "Luke 11:39",
+    "matt_variant_notes": [
+      "25 ἀκρασίας WH Treg NA28 ] ἀδικίας RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 39,
+    "matt_ref": "Matt 23:35",
+    "luke_ref": "Luke 11:51",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "51 ἀπὸ WH Treg NA28 ] + τοῦ NIV RP",
+      "• ἕως WH Treg NA28 ] + τοῦ NIV RP"
+    ]
+  },
+  {
+    "pair_id": 40,
+    "matt_ref": "Matt 24:43",
+    "luke_ref": "Luke 12:39",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "39 οὐκ ἂν NA28 ] ἐγρηγόρησεν ἂν καὶ οὐκ WH Treg; ἐγρηγόρησεν ἂν καὶ οὐκ ἂν RP",
+      "• διορυχθῆναι WH NA28 ] διορυγῆναι Treg RP"
+    ]
+  },
+  {
+    "pair_id": 41,
+    "matt_ref": "Matt 24:44",
+    "luke_ref": "Luke 12:40",
+    "matt_variant_notes": [
+      "44 οὐ δοκεῖτε ὥρᾳ WH Treg NA28 ] ὥρᾳ οὐ δοκεῖτε RP"
+    ],
+    "luke_variant_notes": [
+      "40 ὑμεῖς WH Treg NA28 ] + οὖν RP"
+    ]
+  },
+  {
+    "pair_id": 42,
+    "matt_ref": "Matt 24:45",
+    "luke_ref": "Luke 12:42",
+    "matt_variant_notes": [
+      "45 κύριος WH Treg NA28 ] + αὐτοῦ RP",
+      "• οἰκετείας WH Treg NA28 ] θεραπείας RP",
+      "• δοῦναι WH Treg NA28 ] διδόναι RP"
+    ],
+    "luke_variant_notes": [
+      "42 καὶ εἶπεν WH Treg NA28 ] Εἶπεν δὲ RP",
+      "• ὁ WH Treg NA28 ] καὶ RP",
+      "• τὸ WH NA28 RP ] – Treg"
+    ]
+  },
+  {
+    "pair_id": 43,
+    "matt_ref": "Matt 24:46",
+    "luke_ref": "Luke 12:43",
+    "matt_variant_notes": [
+      "46 οὕτως ποιοῦντα WH Treg NA28 ] ποιοῦντα οὕτως RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 45,
+    "matt_ref": "Matt 24:48",
+    "luke_ref": "Luke 12:45",
+    "matt_variant_notes": [
+      "48 μου ὁ κύριος WH Treg NA28 ] ὁ κύριός μου ἐλθεῖν RP"
+    ],
+    "luke_variant_notes": []
+  },
+  {
+    "pair_id": 47,
+    "matt_ref": "Matt 25:30",
+    "luke_ref": "Luke 13:28",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "28 ὄψησθε WH NA28 RP ] ὄψεσθε Treg"
+    ]
+  },
+  {
+    "pair_id": 48,
+    "matt_ref": "Matt 26:16",
+    "luke_ref": "Luke 22:6",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "6 ἄτερ ὄχλου αὐτοῖς WH Treg NA28 ] αὐτοῖς ἄτερ ὄχλου RP"
+    ]
+  },
+  {
+    "pair_id": 49,
+    "matt_ref": "Matt 26:68",
+    "luke_ref": "Luke 22:64",
+    "matt_variant_notes": [],
+    "luke_variant_notes": [
+      "64 αὐτὸν ἐπηρώτων WH Treg NA28 ] αὐτόν ἔτυπτον αὐτοῦ τὸ πρόσωπον καὶ ἐπηρώτων αὐτόν RP"
+    ]
+  }
+]
