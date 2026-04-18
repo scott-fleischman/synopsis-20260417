@@ -1,0 +1,4712 @@
+- matt_index: 179
+  luke_index: 521
+  matt_ref: Matt 7:8
+  luke_ref: Luke 11:10
+  score: 1.0
+  window_support: 0.753366
+  composite_score: 0.913678
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 323.04
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πᾶς γὰρ ὁ αἰτῶν λαμβάνει καὶ ὁ ζητῶν εὑρίσκει καὶ τῷ κρούοντι ⸀ἀνοιγήσεται.
+  luke_text: πᾶς γὰρ ὁ αἰτῶν λαμβάνει, καὶ ὁ ζητῶν εὑρίσκει, καὶ τῷ κρούοντι ἀνοιγήσεται.
+- matt_index: 385
+  luke_index: 543
+  matt_ref: Matt 12:41
+  luke_ref: Luke 11:32
+  score: 1.0
+  window_support: 0.733588
+  composite_score: 0.906756
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 191.23
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ἄνδρες Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+  luke_text: ἄνδρες ⸀Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+- matt_index: 220
+  luke_index: 465
+  matt_ref: Matt 8:20
+  luke_ref: Luke 9:58
+  score: 1.0
+  window_support: 0.730356
+  composite_score: 0.905624
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 235.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ λέγει αὐτῷ ὁ Ἰησοῦς· Αἱ ἀλώπεκες φωλεοὺς ἔχουσιν καὶ τὰ πετεινὰ τοῦ οὐρανοῦ κατασκηνώσεις, ὁ δὲ υἱὸς τοῦ
+    ἀνθρώπου οὐκ ἔχει ποῦ τὴν κεφαλὴν κλίνῃ.
+  luke_text: καὶ εἶπεν αὐτῷ ὁ Ἰησοῦς· Αἱ ἀλώπεκες φωλεοὺς ἔχουσιν καὶ τὰ πετεινὰ τοῦ οὐρανοῦ κατασκηνώσεις, ὁ δὲ υἱὸς τοῦ
+    ἀνθρώπου οὐκ ἔχει ποῦ τὴν κεφαλὴν κλίνῃ.
+- matt_index: 386
+  luke_index: 542
+  matt_ref: Matt 12:42
+  luke_ref: Luke 11:31
+  score: 0.942511
+  window_support: 0.781258
+  composite_score: 0.886072
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 189.92
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: βασίλισσα νότου ἐγερθήσεται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινεῖ αὐτήν· ὅτι ἦλθεν ἐκ τῶν περάτων
+    τῆς γῆς ἀκοῦσαι τὴν σοφίαν Σολομῶνος, καὶ ἰδοὺ πλεῖον Σολομῶνος ὧδε.
+  luke_text: βασίλισσα νότου ἐγερθήσεται ἐν τῇ κρίσει μετὰ τῶν ἀνδρῶν τῆς γενεᾶς ταύτης καὶ κατακρινεῖ αὐτούς· ὅτι ἦλθεν ἐκ
+    τῶν περάτων τῆς γῆς ἀκοῦσαι τὴν σοφίαν Σολομῶνος, καὶ ἰδοὺ πλεῖον Σολομῶνος ὧδε.
+- matt_index: 371
+  luke_index: 530
+  matt_ref: Matt 12:27
+  luke_ref: Luke 11:19
+  score: 0.954386
+  window_support: 0.724517
+  composite_score: 0.873932
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 183.63
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ εἰ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο αὐτοὶ ⸂κριταὶ ἔσονται
+    ὑμῶν⸃.
+  luke_text: εἰ δὲ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο ⸂αὐτοὶ ὑμῶν κριταὶ⸃
+    ἔσονται.
+- matt_index: 335
+  luke_index: 482
+  matt_ref: Matt 11:21
+  luke_ref: Luke 10:13
+  score: 0.920229
+  window_support: 0.759635
+  composite_score: 0.864021
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 146.73
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Οὐαί σοι, Χοραζίν· οὐαί σοι, Βηθσαϊδά· ὅτι εἰ ἐν Τύρῳ καὶ Σιδῶνι ἐγένοντο αἱ δυνάμεις αἱ γενόμεναι ἐν ὑμῖν, πάλαι
+    ἂν ἐν σάκκῳ καὶ σποδῷ μετενόησαν.
+  luke_text: Οὐαί σοι, Χοραζίν· οὐαί σοι, Βηθσαϊδά· ὅτι εἰ ἐν Τύρῳ καὶ Σιδῶνι ⸀ἐγενήθησαν αἱ δυνάμεις αἱ γενόμεναι ἐν ὑμῖν,
+    πάλαι ἂν ἐν σάκκῳ καὶ σποδῷ ⸀καθήμενοι μετενόησαν.
+- matt_index: 178
+  luke_index: 520
+  matt_ref: Matt 7:7
+  luke_ref: Luke 11:9
+  score: 0.917754
+  window_support: 0.753366
+  composite_score: 0.860218
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 322.19
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Αἰτεῖτε, καὶ δοθήσεται ὑμῖν· ζητεῖτε, καὶ εὑρήσετε· κρούετε, καὶ ἀνοιγήσεται ὑμῖν.
+  luke_text: Κἀγὼ ὑμῖν λέγω, αἰτεῖτε, καὶ δοθήσεται ὑμῖν· ζητεῖτε, καὶ εὑρήσετε· κρούετε, καὶ ἀνοιγήσεται ὑμῖν·
+- matt_index: 209
+  luke_index: 309
+  matt_ref: Matt 8:9
+  luke_ref: Luke 7:8
+  score: 0.919195
+  window_support: 0.595388
+  composite_score: 0.805863
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 81.06
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ γὰρ ἐγὼ ἄνθρωπός εἰμι ὑπὸ ⸀ἐξουσίαν, ἔχων ὑπ’ ἐμαυτὸν στρατιώτας, καὶ λέγω τούτῳ· Πορεύθητι, καὶ πορεύεται,
+    καὶ ἄλλῳ· Ἔρχου, καὶ ἔρχεται, καὶ τῷ δούλῳ μου· Ποίησον τοῦτο, καὶ ποιεῖ.
+  luke_text: καὶ γὰρ ἐγὼ ἄνθρωπός εἰμι ὑπὸ ἐξουσίαν τασσόμενος, ἔχων ὑπ’ ἐμαυτὸν στρατιώτας, καὶ λέγω τούτῳ· Πορεύθητι, καὶ
+    πορεύεται, καὶ ἄλλῳ· Ἔρχου, καὶ ἔρχεται, καὶ τῷ δούλῳ μου· Ποίησον τοῦτο, καὶ ποιεῖ.
+- matt_index: 161
+  luke_index: 739
+  matt_ref: Matt 6:24
+  luke_ref: Luke 16:13
+  score: 0.935631
+  window_support: 0.455932
+  composite_score: 0.767736
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 543.77
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Οὐδεὶς δύναται δυσὶ κυρίοις δουλεύειν· ἢ γὰρ τὸν ἕνα μισήσει καὶ τὸν ἕτερον ἀγαπήσει, ἢ ἑνὸς ἀνθέξεται καὶ τοῦ
+    ἑτέρου καταφρονήσει. οὐ δύνασθε θεῷ δουλεύειν καὶ μαμωνᾷ.
+  luke_text: οὐδεὶς οἰκέτης δύναται δυσὶ κυρίοις δουλεύειν· ἢ γὰρ τὸν ἕνα μισήσει καὶ τὸν ἕτερον ἀγαπήσει, ἢ ἑνὸς ἀνθέξεται
+    καὶ τοῦ ἑτέρου καταφρονήσει. οὐ δύνασθε θεῷ δουλεύειν καὶ μαμωνᾷ.
+- matt_index: 856
+  luke_index: 609
+  matt_ref: Matt 24:47
+  luke_ref: Luke 12:44
+  score: 0.838452
+  window_support: 0.63241
+  composite_score: 0.766337
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 356.29
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἀμὴν λέγω ὑμῖν ὅτι ἐπὶ πᾶσιν τοῖς ὑπάρχουσιν αὐτοῦ καταστήσει αὐτόν.
+  luke_text: ἀληθῶς λέγω ὑμῖν ὅτι ἐπὶ πᾶσιν τοῖς ὑπάρχουσιν αὐτοῦ καταστήσει αὐτόν.
+- matt_index: 336
+  luke_index: 483
+  matt_ref: Matt 11:22
+  luke_ref: Luke 10:14
+  score: 0.752828
+  window_support: 0.759635
+  composite_score: 0.755211
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 147.6
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πλὴν λέγω ὑμῖν, Τύρῳ καὶ Σιδῶνι ἀνεκτότερον ἔσται ἐν ἡμέρᾳ κρίσεως ἢ ὑμῖν.
+  luke_text: πλὴν Τύρῳ καὶ Σιδῶνι ἀνεκτότερον ἔσται ἐν τῇ κρίσει ἢ ὑμῖν.
+- matt_index: 855
+  luke_index: 608
+  matt_ref: Matt 24:46
+  luke_ref: Luke 12:43
+  score: 0.782611
+  window_support: 0.63241
+  composite_score: 0.730041
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 357.18
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: μακάριος ὁ δοῦλος ἐκεῖνος ὃν ἐλθὼν ὁ κύριος αὐτοῦ εὑρήσει ⸂οὕτως ποιοῦντα⸃·
+  luke_text: μακάριος ὁ δοῦλος ἐκεῖνος, ὃν ἐλθὼν ὁ κύριος αὐτοῦ εὑρήσει ποιοῦντα οὕτως·
+- matt_index: 387
+  luke_index: 535
+  matt_ref: Matt 12:43
+  luke_ref: Luke 11:24
+  score: 0.723668
+  window_support: 0.738001
+  composite_score: 0.728684
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 182.62
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: Ὅταν δὲ τὸ ἀκάθαρτον πνεῦμα ἐξέλθῃ ἀπὸ τοῦ ἀνθρώπου, διέρχεται δι’ ἀνύδρων τόπων ζητοῦν ἀνάπαυσιν, καὶ οὐχ εὑρίσκει.
+  luke_text: Ὅταν τὸ ἀκάθαρτον πνεῦμα ἐξέλθῃ ἀπὸ τοῦ ἀνθρώπου, διέρχεται δι’ ἀνύδρων τόπων ζητοῦν ἀνάπαυσιν, καὶ μὴ ⸀εὑρίσκον
+    λέγει· Ὑποστρέψω εἰς τὸν οἶκόν μου ὅθεν ἐξῆλθον·
+- matt_index: 374
+  luke_index: 534
+  matt_ref: Matt 12:30
+  luke_ref: Luke 11:23
+  score: 1.0
+  window_support: 0.217003
+  composite_score: 0.725951
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 186.41
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὁ μὴ ὢν μετ’ ἐμοῦ κατ’ ἐμοῦ ἐστιν, καὶ ὁ μὴ συνάγων μετ’ ἐμοῦ σκορπίζει.
+  luke_text: ὁ μὴ ὢν μετ’ ἐμοῦ κατ’ ἐμοῦ ἐστιν, καὶ ὁ μὴ συνάγων μετ’ ἐμοῦ σκορπίζει.
+- matt_index: 174
+  luke_index: 293
+  matt_ref: Matt 7:3
+  luke_ref: Luke 6:41
+  score: 0.698098
+  window_support: 0.773257
+  composite_score: 0.724403
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 95.79
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: τί δὲ βλέπεις τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ τοῦ ἀδελφοῦ σου, τὴν δὲ ἐν τῷ σῷ ὀφθαλμῷ δοκὸν οὐ κατανοεῖς;
+  luke_text: τί δὲ βλέπεις τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ τοῦ ἀδελφοῦ σου, τὴν δὲ δοκὸν τὴν ἐν τῷ ἰδίῳ ὀφθαλμῷ οὐ κατανοεῖς;
+- matt_index: 762
+  luke_index: 496
+  matt_ref: Matt 22:37
+  luke_ref: Luke 10:27
+  score: 0.80513
+  window_support: 0.521243
+  composite_score: 0.70577
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 426.67
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 27
+  matt_text: ὁ ⸀δὲ ἔφη αὐτῷ· Ἀγαπήσεις κύριον τὸν θεόν σου ἐν ὅλῃ ⸀τῇ καρδίᾳ σου καὶ ἐν ὅλῃ ⸁τῇ ψυχῇ σου καὶ ἐν ὅλῃ τῇ διανοίᾳ
+    σου·
+  luke_text: ὁ δὲ ἀποκριθεὶς εἶπεν· Ἀγαπήσεις κύριον τὸν θεόν σου ἐξ ὅλης ⸀τῆς καρδίας σου καὶ ⸂ἐν ὅλῃ τῇ ψυχῇ⸃ σου καὶ ⸂ἐν
+    ὅλῃ τῇ ἰσχύϊ⸃ σου καὶ ⸂ἐν ὅλῃ τῇ διανοίᾳ⸃ σου, καὶ τὸν πλησίον σου ὡς σεαυτόν.
+- matt_index: 175
+  luke_index: 294
+  matt_ref: Matt 7:4
+  luke_ref: Luke 6:42
+  score: 0.690829
+  window_support: 0.731661
+  composite_score: 0.70512
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 96.64
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἢ πῶς ἐρεῖς τῷ ἀδελφῷ σου· Ἄφες ἐκβάλω τὸ κάρφος ⸀ἐκ τοῦ ὀφθαλμοῦ σου, καὶ ἰδοὺ ἡ δοκὸς ἐν τῷ ὀφθαλμῷ σοῦ;
+  luke_text: ⸀πῶς δύνασαι λέγειν τῷ ἀδελφῷ σου· Ἀδελφέ, ἄφες ἐκβάλω τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ σου, αὐτὸς τὴν ἐν τῷ ὀφθαλμῷ
+    σοῦ δοκὸν οὐ βλέπων; ὑποκριτά, ἔκβαλε πρῶτον τὴν δοκὸν ἐκ τοῦ ὀφθαλμοῦ σοῦ, καὶ τότε διαβλέψεις ⸂τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ
+    τοῦ ἀδελφοῦ σου ἐκβαλεῖν⸃.
+- matt_index: 372
+  luke_index: 531
+  matt_ref: Matt 12:28
+  luke_ref: Luke 11:20
+  score: 0.791266
+  window_support: 0.530839
+  composite_score: 0.700117
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 184.22
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: εἰ δὲ ἐν πνεύματι θεοῦ ἐγὼ ἐκβάλλω τὰ δαιμόνια, ἄρα ἔφθασεν ἐφ’ ὑμᾶς ἡ βασιλεία τοῦ θεοῦ.
+  luke_text: εἰ δὲ ἐν δακτύλῳ ⸀θεοῦ ἐκβάλλω τὰ δαιμόνια, ἄρα ἔφθασεν ἐφ’ ὑμᾶς ἡ βασιλεία τοῦ θεοῦ.
+- matt_index: 352
+  luke_index: 257
+  matt_ref: Matt 12:8
+  luke_ref: Luke 6:5
+  score: 0.874407
+  window_support: 0.347897
+  composite_score: 0.690128
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 81.63
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: κύριος γάρ ἐστιν τοῦ σαββάτου ὁ υἱὸς τοῦ ἀνθρώπου.
+  luke_text: καὶ ἔλεγεν ⸀αὐτοῖς· Κύριός ἐστιν ⸂τοῦ σαββάτου ὁ υἱὸς τοῦ ἀνθρώπου⸃.
+- matt_index: 807
+  luke_index: 658
+  matt_ref: Matt 23:37
+  luke_ref: Luke 13:34
+  score: 0.697825
+  window_support: 0.667323
+  composite_score: 0.687149
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 278.09
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ἰερουσαλὴμ Ἰερουσαλήμ, ἡ ⸀ἀποκτείνουσα τοὺς προφήτας καὶ λιθοβολοῦσα τοὺς ἀπεσταλμένους πρὸς αὐτήν— ποσάκις ἠθέλησα
+    ἐπισυναγαγεῖν τὰ τέκνα σου, ὃν τρόπον ⸂ὄρνις ἐπισυνάγει⸃ τὰ νοσσία ⸀αὐτῆς ὑπὸ τὰς πτέρυγας, καὶ οὐκ ἠθελήσατε;
+  luke_text: Ἰερουσαλὴμ Ἰερουσαλήμ, ἡ ἀποκτείνουσα τοὺς προφήτας καὶ λιθοβολοῦσα τοὺς ἀπεσταλμένους πρὸς αὐτήν— ποσάκις ἠθέλησα
+    ἐπισυνάξαι τὰ τέκνα σου ὃν τρόπον ὄρνις τὴν ἑαυτῆς νοσσιὰν ὑπὸ τὰς πτέρυγας, καὶ οὐκ ἠθελήσατε.
+- matt_index: 159
+  luke_index: 545
+  matt_ref: Matt 6:22
+  luke_ref: Luke 11:34
+  score: 0.710444
+  window_support: 0.608108
+  composite_score: 0.674626
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 350.07
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ὁ λύχνος τοῦ σώματός ἐστιν ὁ ὀφθαλμός. ἐὰν οὖν ⸂ᾖ ὁ ὀφθαλμός σου ἁπλοῦς⸃, ὅλον τὸ σῶμά σου φωτεινὸν ἔσται·
+  luke_text: ὁ λύχνος τοῦ σώματός ἐστιν ὁ ὀφθαλμός ⸀σου. ⸀ὅταν ὁ ὀφθαλμός σου ἁπλοῦς ᾖ, καὶ ὅλον τὸ σῶμά σου φωτεινόν ἐστιν·
+    ἐπὰν δὲ πονηρὸς ᾖ, καὶ τὸ σῶμά σου σκοτεινόν.
+- matt_index: 859
+  luke_index: 611
+  matt_ref: Matt 24:50
+  luke_ref: Luke 12:46
+  score: 0.777346
+  window_support: 0.47049
+  composite_score: 0.669947
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 354.62
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἥξει ὁ κύριος τοῦ δούλου ἐκείνου ἐν ἡμέρᾳ ᾗ οὐ προσδοκᾷ καὶ ἐν ὥρᾳ ᾗ οὐ γινώσκει,
+  luke_text: ἥξει ὁ κύριος τοῦ δούλου ἐκείνου ἐν ἡμέρᾳ ᾗ οὐ προσδοκᾷ καὶ ἐν ὥρᾳ ᾗ οὐ γινώσκει, καὶ διχοτομήσει αὐτὸν καὶ τὸ
+    μέρος αὐτοῦ μετὰ τῶν ἀπίστων θήσει.
+- matt_index: 389
+  luke_index: 537
+  matt_ref: Matt 12:45
+  luke_ref: Luke 11:26
+  score: 0.767182
+  window_support: 0.459632
+  composite_score: 0.659539
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 184.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: τότε πορεύεται καὶ παραλαμβάνει μεθ’ ἑαυτοῦ ἑπτὰ ἕτερα πνεύματα πονηρότερα ἑαυτοῦ, καὶ εἰσελθόντα κατοικεῖ ἐκεῖ·
+    καὶ γίνεται τὰ ἔσχατα τοῦ ἀνθρώπου ἐκείνου χείρονα τῶν πρώτων. οὕτως ἔσται καὶ τῇ γενεᾷ ταύτῃ τῇ πονηρᾷ.
+  luke_text: τότε πορεύεται καὶ παραλαμβάνει ⸂ἕτερα πνεύματα πονηρότερα ἑαυτοῦ ἑπτά⸃, καὶ ⸀εἰσελθόντα κατοικεῖ ἐκεῖ, καὶ γίνεται
+    τὰ ἔσχατα τοῦ ἀνθρώπου ἐκείνου χείρονα τῶν πρώτων.
+- matt_index: 783
+  luke_index: 670
+  matt_ref: Matt 23:12
+  luke_ref: Luke 14:11
+  score: 0.880892
+  window_support: 0.219773
+  composite_score: 0.6495
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 261.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 27
+  matt_text: ὅστις δὲ ὑψώσει ἑαυτὸν ταπεινωθήσεται, καὶ ὅστις ταπεινώσει ἑαυτὸν ⸀ὑψωθήσεται.
+  luke_text: ὅτι πᾶς ὁ ὑψῶν ἑαυτὸν ταπεινωθήσεται καὶ ὁ ταπεινῶν ἑαυτὸν ὑψωθήσεται.
+- matt_index: 166
+  luke_index: 592
+  matt_ref: Matt 6:29
+  luke_ref: Luke 12:27
+  score: 0.661733
+  window_support: 0.603281
+  composite_score: 0.641275
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 396.01
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: λέγω δὲ ὑμῖν ὅτι οὐδὲ Σολομὼν ἐν πάσῃ τῇ δόξῃ αὐτοῦ περιεβάλετο ὡς ἓν τούτων.
+  luke_text: κατανοήσατε τὰ κρίνα πῶς αὐξάνει· οὐ κοπιᾷ οὐδὲ νήθει· λέγω δὲ ὑμῖν, οὐδὲ Σολομὼν ἐν πάσῃ τῇ δόξῃ αὐτοῦ περιεβάλετο
+    ὡς ἓν τούτων.
+- matt_index: 176
+  luke_index: 294
+  matt_ref: Matt 7:5
+  luke_ref: Luke 6:42
+  score: 0.685983
+  window_support: 0.555329
+  composite_score: 0.640254
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 96.49
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὑποκριτά, ἔκβαλε πρῶτον ⸂ἐκ τοῦ ὀφθαλμοῦ σοῦ τὴν δοκόν⸃, καὶ τότε διαβλέψεις ἐκβαλεῖν τὸ κάρφος ἐκ τοῦ ὀφθαλμοῦ
+    τοῦ ἀδελφοῦ σου.
+  luke_text: ⸀πῶς δύνασαι λέγειν τῷ ἀδελφῷ σου· Ἀδελφέ, ἄφες ἐκβάλω τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ σου, αὐτὸς τὴν ἐν τῷ ὀφθαλμῷ
+    σοῦ δοκὸν οὐ βλέπων; ὑποκριτά, ἔκβαλε πρῶτον τὴν δοκὸν ἐκ τοῦ ὀφθαλμοῦ σοῦ, καὶ τότε διαβλέψεις ⸂τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ
+    τοῦ ἀδελφοῦ σου ἐκβαλεῖν⸃.
+- matt_index: 383
+  luke_index: 540
+  matt_ref: Matt 12:39
+  luke_ref: Luke 11:29
+  score: 0.588641
+  window_support: 0.718563
+  composite_score: 0.634113
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 188.85
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὁ δὲ ἀποκριθεὶς εἶπεν αὐτοῖς· Γενεὰ πονηρὰ καὶ μοιχαλὶς σημεῖον ἐπιζητεῖ, καὶ σημεῖον οὐ δοθήσεται αὐτῇ εἰ μὴ
+    τὸ σημεῖον Ἰωνᾶ τοῦ προφήτου.
+  luke_text: Τῶν δὲ ὄχλων ἐπαθροιζομένων ἤρξατο λέγειν· Ἡ γενεὰ αὕτη ⸀γενεὰ πονηρά ἐστιν· σημεῖον ⸀ζητεῖ, καὶ σημεῖον οὐ δοθήσεται
+    αὐτῇ εἰ μὴ τὸ σημεῖον ⸀Ἰωνᾶ.
+- matt_index: 164
+  luke_index: 590
+  matt_ref: Matt 6:27
+  luke_ref: Luke 12:25
+  score: 0.62854
+  window_support: 0.640243
+  composite_score: 0.632636
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 394.31
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: τίς δὲ ἐξ ὑμῶν μεριμνῶν δύναται προσθεῖναι ἐπὶ τὴν ἡλικίαν αὐτοῦ πῆχυν ἕνα;
+  luke_text: τίς δὲ ἐξ ὑμῶν μεριμνῶν δύναται ⸂ἐπὶ τὴν ἡλικίαν αὐτοῦ προσθεῖναι⸃ ⸀πῆχυν;
+- matt_index: 158
+  luke_index: 599
+  matt_ref: Matt 6:21
+  luke_ref: Luke 12:34
+  score: 0.789321
+  window_support: 0.307996
+  composite_score: 0.620857
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 404.22
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὅπου γάρ ἐστιν ὁ θησαυρός ⸀σου, ἐκεῖ ἔσται καὶ ἡ καρδία ⸁σου.
+  luke_text: ὅπου γάρ ἐστιν ὁ θησαυρὸς ὑμῶν, ἐκεῖ καὶ ἡ καρδία ὑμῶν ἔσται.
+- matt_index: 148
+  luke_index: 514
+  matt_ref: Matt 6:11
+  luke_ref: Luke 11:3
+  score: 0.730754
+  window_support: 0.402412
+  composite_score: 0.615834
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 320.74
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον·
+  luke_text: τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δίδου ἡμῖν τὸ καθ’ ἡμέραν·
+- matt_index: 178
+  luke_index: 521
+  matt_ref: Matt 7:7
+  luke_ref: Luke 11:10
+  score: 0.538197
+  window_support: 0.753366
+  composite_score: 0.613506
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 323.19
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Αἰτεῖτε, καὶ δοθήσεται ὑμῖν· ζητεῖτε, καὶ εὑρήσετε· κρούετε, καὶ ἀνοιγήσεται ὑμῖν.
+  luke_text: πᾶς γὰρ ὁ αἰτῶν λαμβάνει, καὶ ὁ ζητῶν εὑρίσκει, καὶ τῷ κρούοντι ἀνοιγήσεται.
+- matt_index: 162
+  luke_index: 588
+  matt_ref: Matt 6:25
+  luke_ref: Luke 12:23
+  score: 0.632518
+  window_support: 0.572683
+  composite_score: 0.611575
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 392.62
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Διὰ τοῦτο λέγω ὑμῖν· μὴ μεριμνᾶτε τῇ ψυχῇ ὑμῶν τί ⸀φάγητε, μηδὲ τῷ σώματι ὑμῶν τί ἐνδύσησθε· οὐχὶ ἡ ψυχὴ πλεῖόν
+    ἐστι τῆς τροφῆς καὶ τὸ σῶμα τοῦ ἐνδύματος;
+  luke_text: ἡ ⸀γὰρ ψυχὴ πλεῖόν ἐστιν τῆς τροφῆς καὶ τὸ σῶμα τοῦ ἐνδύματος.
+- matt_index: 303
+  luke_index: 572
+  matt_ref: Matt 10:31
+  luke_ref: Luke 12:7
+  score: 0.611738
+  window_support: 0.610752
+  composite_score: 0.611393
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 270.55
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: μὴ οὖν ⸀φοβεῖσθε· πολλῶν στρουθίων διαφέρετε ὑμεῖς.
+  luke_text: ἀλλὰ καὶ αἱ τρίχες τῆς κεφαλῆς ὑμῶν πᾶσαι ἠρίθμηνται· ⸀μὴ φοβεῖσθε· πολλῶν στρουθίων διαφέρετε.
+- matt_index: 182
+  luke_index: 524
+  matt_ref: Matt 7:11
+  luke_ref: Luke 11:13
+  score: 0.732157
+  window_support: 0.386837
+  composite_score: 0.611295
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 325.58
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: εἰ οὖν ὑμεῖς πονηροὶ ὄντες οἴδατε δόματα ἀγαθὰ διδόναι τοῖς τέκνοις ὑμῶν, πόσῳ μᾶλλον ὁ πατὴρ ὑμῶν ὁ ἐν τοῖς
+    οὐρανοῖς δώσει ἀγαθὰ τοῖς αἰτοῦσιν αὐτόν.
+  luke_text: εἰ οὖν ὑμεῖς πονηροὶ ὑπάρχοντες οἴδατε δόματα ἀγαθὰ διδόναι τοῖς τέκνοις ὑμῶν, πόσῳ μᾶλλον ὁ πατὴρ ὁ ἐξ οὐρανοῦ
+    δώσει πνεῦμα ἅγιον τοῖς αἰτοῦσιν αὐτόν.
+- matt_index: 339
+  luke_index: 490
+  matt_ref: Matt 11:25
+  luke_ref: Luke 10:21
+  score: 0.583264
+  window_support: 0.661179
+  composite_score: 0.610534
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 154.2
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ἐν ἐκείνῳ τῷ καιρῷ ἀποκριθεὶς ὁ Ἰησοῦς εἶπεν· Ἐξομολογοῦμαί σοι, πάτερ κύριε τοῦ οὐρανοῦ καὶ τῆς γῆς, ὅτι ⸀ἔκρυψας
+    ταῦτα ἀπὸ σοφῶν καὶ συνετῶν, καὶ ἀπεκάλυψας αὐτὰ νηπίοις·
+  luke_text: Ἐν αὐτῇ τῇ ὥρᾳ ἠγαλλιάσατο ⸀τῷ πνεύματι ⸂τῷ ἁγίῳ⸃ καὶ εἶπεν· Ἐξομολογοῦμαί σοι, πάτερ κύριε τοῦ οὐρανοῦ καὶ τῆς
+    γῆς, ὅτι ἀπέκρυψας ταῦτα ἀπὸ σοφῶν καὶ συνετῶν, καὶ ἀπεκάλυψας αὐτὰ νηπίοις· ναί, ὁ πατήρ, ὅτι οὕτως ⸂εὐδοκία ἐγένετο⸃
+    ἔμπροσθέν σου.
+- matt_index: 341
+  luke_index: 491
+  matt_ref: Matt 11:27
+  luke_ref: Luke 10:22
+  score: 0.678374
+  window_support: 0.46133
+  composite_score: 0.602409
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 154.93
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Πάντα μοι παρεδόθη ὑπὸ τοῦ πατρός μου, καὶ οὐδεὶς ἐπιγινώσκει τὸν υἱὸν εἰ μὴ ὁ πατήρ, οὐδὲ τὸν πατέρα τις ἐπιγινώσκει
+    εἰ μὴ ὁ υἱὸς καὶ ᾧ ἐὰν βούληται ὁ υἱὸς ἀποκαλύψαι.
+  luke_text: ⸀πάντα μοι παρεδόθη ὑπὸ τοῦ πατρός μου, καὶ οὐδεὶς γινώσκει τίς ἐστιν ὁ υἱὸς εἰ μὴ ὁ πατήρ, καὶ τίς ἐστιν ὁ πατὴρ
+    εἰ μὴ ὁ υἱὸς καὶ ᾧ ⸀ἐὰν βούληται ὁ υἱὸς ἀποκαλύψαι.
+- matt_index: 190
+  luke_index: 140
+  matt_ref: Matt 7:19
+  luke_ref: Luke 3:9
+  score: 0.713867
+  window_support: 0.395296
+  composite_score: 0.602367
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 59.63
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 4
+  matt_text: πᾶν δένδρον μὴ ποιοῦν καρπὸν καλὸν ἐκκόπτεται καὶ εἰς πῦρ βάλλεται.
+  luke_text: ἤδη δὲ καὶ ἡ ἀξίνη πρὸς τὴν ῥίζαν τῶν δένδρων κεῖται· πᾶν οὖν δένδρον μὴ ποιοῦν καρπὸν καλὸν ἐκκόπτεται καὶ εἰς
+    πῦρ βάλλεται.
+- matt_index: 55
+  luke_index: 139
+  matt_ref: Matt 3:8
+  luke_ref: Luke 3:8
+  score: 0.452852
+  window_support: 0.879367
+  composite_score: 0.602133
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 0.5
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 4
+  matt_text: ποιήσατε οὖν καρπὸν ἄξιον τῆς μετανοίας
+  luke_text: ποιήσατε οὖν καρποὺς ἀξίους τῆς μετανοίας· καὶ μὴ ἄρξησθε λέγειν ἐν ἑαυτοῖς· Πατέρα ἔχομεν τὸν Ἀβραάμ, λέγω γὰρ
+    ὑμῖν ὅτι δύναται ὁ θεὸς ἐκ τῶν λίθων τούτων ἐγεῖραι τέκνα τῷ Ἀβραάμ.
+- matt_index: 302
+  luke_index: 572
+  matt_ref: Matt 10:30
+  luke_ref: Luke 12:7
+  score: 0.594954
+  window_support: 0.610752
+  composite_score: 0.600483
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 271.9
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὑμῶν δὲ καὶ αἱ τρίχες τῆς κεφαλῆς πᾶσαι ἠριθμημέναι εἰσίν.
+  luke_text: ἀλλὰ καὶ αἱ τρίχες τῆς κεφαλῆς ὑμῶν πᾶσαι ἠρίθμηνται· ⸀μὴ φοβεῖσθε· πολλῶν στρουθίων διαφέρετε.
+- matt_index: 853
+  luke_index: 605
+  matt_ref: Matt 24:44
+  luke_ref: Luke 12:40
+  score: 0.679317
+  window_support: 0.449029
+  composite_score: 0.598716
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 359.97
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: διὰ τοῦτο καὶ ὑμεῖς γίνεσθε ἕτοιμοι, ὅτι ᾗ ⸂οὐ δοκεῖτε ὥρᾳ⸃ ὁ υἱὸς τοῦ ἀνθρώπου ἔρχεται.
+  luke_text: καὶ ⸀ὑμεῖς γίνεσθε ἕτοιμοι, ὅτι ᾗ ὥρᾳ οὐ δοκεῖτε ὁ υἱὸς τοῦ ἀνθρώπου ἔρχεται.
+- matt_index: 251
+  luke_index: 251
+  matt_ref: Matt 9:17
+  luke_ref: Luke 5:38
+  score: 0.586497
+  window_support: 0.597269
+  composite_score: 0.590268
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 9
+  matt_text: οὐδὲ βάλλουσιν οἶνον νέον εἰς ἀσκοὺς παλαιούς· εἰ δὲ μή γε, ῥήγνυνται οἱ ἀσκοί, καὶ ὁ οἶνος ἐκχεῖται καὶ οἱ ἀσκοὶ
+    ⸀ἀπόλλυνται· ἀλλὰ βάλλουσιν οἶνον νέον εἰς ἀσκοὺς καινούς, καὶ ἀμφότεροι συντηροῦνται.
+  luke_text: ἀλλὰ οἶνον νέον εἰς ἀσκοὺς καινοὺς ⸀βλητέον.
+- matt_index: 847
+  luke_index: 784
+  matt_ref: Matt 24:38
+  luke_ref: Luke 17:27
+  score: 0.648665
+  window_support: 0.477021
+  composite_score: 0.58859
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 180.32
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ⸀ὡς γὰρ ἦσαν ἐν ταῖς ⸀ἡμέραις ταῖς πρὸ τοῦ κατακλυσμοῦ τρώγοντες καὶ πίνοντες, γαμοῦντες καὶ ⸀γαμίζοντες, ἄχρι
+    ἧς ἡμέρας εἰσῆλθεν Νῶε εἰς τὴν κιβωτόν,
+  luke_text: ἤσθιον, ἔπινον, ἐγάμουν, ⸀ἐγαμίζοντο, ἄχρι ἧς ἡμέρας εἰσῆλθεν Νῶε εἰς τὴν κιβωτόν, καὶ ἦλθεν ὁ κατακλυσμὸς καὶ
+    ἀπώλεσεν ⸀πάντας.
+- matt_index: 179
+  luke_index: 520
+  matt_ref: Matt 7:8
+  luke_ref: Luke 11:9
+  score: 0.496599
+  window_support: 0.753366
+  composite_score: 0.586467
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 322.04
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πᾶς γὰρ ὁ αἰτῶν λαμβάνει καὶ ὁ ζητῶν εὑρίσκει καὶ τῷ κρούοντι ⸀ἀνοιγήσεται.
+  luke_text: Κἀγὼ ὑμῖν λέγω, αἰτεῖτε, καὶ δοθήσεται ὑμῖν· ζητεῖτε, καὶ εὑρήσετε· κρούετε, καὶ ἀνοιγήσεται ὑμῖν·
+- matt_index: 174
+  luke_index: 294
+  matt_ref: Matt 7:3
+  luke_ref: Luke 6:42
+  score: 0.502761
+  window_support: 0.731661
+  composite_score: 0.582876
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 96.79
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: τί δὲ βλέπεις τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ τοῦ ἀδελφοῦ σου, τὴν δὲ ἐν τῷ σῷ ὀφθαλμῷ δοκὸν οὐ κατανοεῖς;
+  luke_text: ⸀πῶς δύνασαι λέγειν τῷ ἀδελφῷ σου· Ἀδελφέ, ἄφες ἐκβάλω τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ σου, αὐτὸς τὴν ἐν τῷ ὀφθαλμῷ
+    σοῦ δοκὸν οὐ βλέπων; ὑποκριτά, ἔκβαλε πρῶτον τὴν δοκὸν ἐκ τοῦ ὀφθαλμοῦ σοῦ, καὶ τότε διαβλέψεις ⸂τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ
+    τοῦ ἀδελφοῦ σου ἐκβαλεῖν⸃.
+- matt_index: 304
+  luke_index: 573
+  matt_ref: Matt 10:32
+  luke_ref: Luke 12:8
+  score: 0.631555
+  window_support: 0.486572
+  composite_score: 0.580811
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 270.2
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Πᾶς οὖν ὅστις ὁμολογήσει ἐν ἐμοὶ ἔμπροσθεν τῶν ἀνθρώπων, ὁμολογήσω κἀγὼ ἐν αὐτῷ ἔμπροσθεν τοῦ πατρός μου τοῦ
+    ⸀ἐν οὐρανοῖς·
+  luke_text: Λέγω δὲ ὑμῖν, πᾶς ὃς ἂν ⸀ὁμολογήσῃ ἐν ἐμοὶ ἔμπροσθεν τῶν ἀνθρώπων, καὶ ὁ υἱὸς τοῦ ἀνθρώπου ὁμολογήσει ἐν αὐτῷ
+    ἔμπροσθεν τῶν ἀγγέλων τοῦ θεοῦ·
+- matt_index: 221
+  luke_index: 466
+  matt_ref: Matt 8:21
+  luke_ref: Luke 9:59
+  score: 0.491311
+  window_support: 0.730356
+  composite_score: 0.574976
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 235.81
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἕτερος δὲ τῶν ⸀μαθητῶν εἶπεν αὐτῷ· Κύριε, ἐπίτρεψόν μοι πρῶτον ἀπελθεῖν καὶ θάψαι τὸν πατέρα μου.
+  luke_text: εἶπεν δὲ πρὸς ἕτερον· Ἀκολούθει μοι. ὁ δὲ εἶπεν· ⸀Κύριε, ἐπίτρεψόν μοι ⸂ἀπελθόντι πρῶτον⸃ θάψαι τὸν πατέρα μου.
+- matt_index: 162
+  luke_index: 587
+  matt_ref: Matt 6:25
+  luke_ref: Luke 12:22
+  score: 0.57167
+  window_support: 0.572683
+  composite_score: 0.572024
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 391.62
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Διὰ τοῦτο λέγω ὑμῖν· μὴ μεριμνᾶτε τῇ ψυχῇ ὑμῶν τί ⸀φάγητε, μηδὲ τῷ σώματι ὑμῶν τί ἐνδύσησθε· οὐχὶ ἡ ψυχὴ πλεῖόν
+    ἐστι τῆς τροφῆς καὶ τὸ σῶμα τοῦ ἐνδύματος;
+  luke_text: Εἶπεν δὲ πρὸς τοὺς μαθητὰς αὐτοῦ· Διὰ τοῦτο ⸂λέγω ὑμῖν⸃, μὴ μεριμνᾶτε τῇ ⸀ψυχῇ τί φάγητε, μηδὲ τῷ ⸀σώματι τί
+    ἐνδύσησθε.
+- matt_index: 268
+  luke_index: 526
+  matt_ref: Matt 9:34
+  luke_ref: Luke 11:15
+  score: 0.660636
+  window_support: 0.39134
+  composite_score: 0.566383
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 272.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: οἱ δὲ Φαρισαῖοι ἔλεγον· Ἐν τῷ ἄρχοντι τῶν δαιμονίων ἐκβάλλει τὰ δαιμόνια.
+  luke_text: τινὲς δὲ ἐξ αὐτῶν εἶπον· Ἐν Βεελζεβοὺλ ⸀τῷ ἄρχοντι τῶν δαιμονίων ἐκβάλλει τὰ δαιμόνια·
+- matt_index: 411
+  luke_index: 493
+  matt_ref: Matt 13:17
+  luke_ref: Luke 10:24
+  score: 0.606826
+  window_support: 0.476832
+  composite_score: 0.561328
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 131.14
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ἀμὴν γὰρ λέγω ὑμῖν ὅτι πολλοὶ προφῆται καὶ δίκαιοι ἐπεθύμησαν ἰδεῖν ἃ βλέπετε καὶ οὐκ εἶδαν, καὶ ἀκοῦσαι ἃ ἀκούετε
+    καὶ οὐκ ἤκουσαν.
+  luke_text: λέγω γὰρ ὑμῖν ὅτι πολλοὶ προφῆται καὶ βασιλεῖς ἠθέλησαν ἰδεῖν ἃ ὑμεῖς βλέπετε καὶ οὐκ εἶδαν, καὶ ἀκοῦσαι ἃ ἀκούετε
+    καὶ οὐκ ἤκουσαν.
+- matt_index: 388
+  luke_index: 536
+  matt_ref: Matt 12:44
+  luke_ref: Luke 11:25
+  score: 0.46359
+  window_support: 0.738001
+  composite_score: 0.559634
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 183.31
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: τότε λέγει· ⸂Εἰς τὸν οἶκόν μου ἐπιστρέψω⸃ ὅθεν ἐξῆλθον· καὶ ἐλθὸν ⸀εὑρίσκει ⸀σχολάζοντα σεσαρωμένον καὶ κεκοσμημένον.
+  luke_text: καὶ ἐλθὸν ⸀εὑρίσκει σεσαρωμένον καὶ κεκοσμημένον.
+- matt_index: 846
+  luke_index: 783
+  matt_ref: Matt 24:37
+  luke_ref: Luke 17:26
+  score: 0.580004
+  window_support: 0.521254
+  composite_score: 0.559442
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 181.22
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὥσπερ ⸀γὰρ αἱ ἡμέραι τοῦ Νῶε, οὕτως ⸀ἔσται ἡ παρουσία τοῦ υἱοῦ τοῦ ἀνθρώπου·
+  luke_text: καὶ καθὼς ἐγένετο ἐν ταῖς ἡμέραις Νῶε, οὕτως ἔσται καὶ ἐν ταῖς ἡμέραις τοῦ υἱοῦ τοῦ ἀνθρώπου·
+- matt_index: 272
+  luke_index: 471
+  matt_ref: Matt 9:38
+  luke_ref: Luke 10:2
+  score: 0.634448
+  window_support: 0.41455
+  composite_score: 0.557484
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 209.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: δεήθητε οὖν τοῦ κυρίου τοῦ θερισμοῦ ὅπως ἐκβάλῃ ἐργάτας εἰς τὸν θερισμὸν αὐτοῦ.
+  luke_text: ἔλεγεν ⸀δὲ πρὸς αὐτούς· Ὁ μὲν θερισμὸς πολύς, οἱ δὲ ἐργάται ὀλίγοι· δεήθητε οὖν τοῦ κυρίου τοῦ θερισμοῦ ὅπως
+    ⸂ἐργάτας ἐκβάλῃ⸃ εἰς τὸν θερισμὸν αὐτοῦ.
+- matt_index: 312
+  luke_index: 455
+  matt_ref: Matt 10:40
+  luke_ref: Luke 9:48
+  score: 0.674308
+  window_support: 0.33282
+  composite_score: 0.554787
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 141.4
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 20
+  matt_text: Ὁ δεχόμενος ὑμᾶς ἐμὲ δέχεται, καὶ ὁ ἐμὲ δεχόμενος δέχεται τὸν ἀποστείλαντά με.
+  luke_text: καὶ εἶπεν αὐτοῖς· Ὃς ⸀ἂν δέξηται τοῦτο τὸ παιδίον ἐπὶ τῷ ὀνόματί μου ἐμὲ δέχεται, καὶ ὃς ⸁ἂν ἐμὲ δέξηται δέχεται
+    τὸν ἀποστείλαντά με· ὁ γὰρ μικρότερος ἐν πᾶσιν ὑμῖν ὑπάρχων οὗτός ⸀ἐστιν μέγας.
+- matt_index: 167
+  luke_index: 593
+  matt_ref: Matt 6:30
+  luke_ref: Luke 12:28
+  score: 0.574883
+  window_support: 0.51637
+  composite_score: 0.554403
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 396.86
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: εἰ δὲ τὸν χόρτον τοῦ ἀγροῦ σήμερον ὄντα καὶ αὔριον εἰς κλίβανον βαλλόμενον ὁ θεὸς οὕτως ἀμφιέννυσιν, οὐ πολλῷ
+    μᾶλλον ὑμᾶς, ὀλιγόπιστοι;
+  luke_text: εἰ δὲ ⸂ἐν ἀγρῷ τὸν χόρτον ὄντα σήμερον⸃ καὶ αὔριον εἰς κλίβανον βαλλόμενον ὁ θεὸς οὕτως ⸀ἀμφιέζει, πόσῳ μᾶλλον
+    ὑμᾶς, ὀλιγόπιστοι.
+- matt_index: 348
+  luke_index: 256
+  matt_ref: Matt 12:4
+  luke_ref: Luke 6:4
+  score: 0.614565
+  window_support: 0.43181
+  composite_score: 0.550601
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 81.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  - 14
+  matt_text: πῶς εἰσῆλθεν εἰς τὸν οἶκον τοῦ θεοῦ καὶ τοὺς ἄρτους τῆς προθέσεως ⸂ἔφαγον, ὃ⸃ οὐκ ἐξὸν ἦν αὐτῷ φαγεῖν οὐδὲ τοῖς
+    μετ’ αὐτοῦ, εἰ μὴ τοῖς ἱερεῦσιν μόνοις;
+  luke_text: ⸀ὡς εἰσῆλθεν εἰς τὸν οἶκον τοῦ θεοῦ καὶ τοὺς ἄρτους τῆς προθέσεως ⸀λαβὼν ἔφαγεν καὶ ⸀ἔδωκεν τοῖς μετ’ αὐτοῦ,
+    οὓς οὐκ ἔξεστιν φαγεῖν εἰ μὴ μόνους τοὺς ἱερεῖς;
+- matt_index: 427
+  luke_index: 645
+  matt_ref: Matt 13:33
+  luke_ref: Luke 13:21
+  score: 0.663345
+  window_support: 0.3061
+  composite_score: 0.538309
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 274.71
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ἄλλην παραβολὴν ἐλάλησεν αὐτοῖς· Ὁμοία ἐστὶν ἡ βασιλεία τῶν οὐρανῶν ζύμῃ, ἣν λαβοῦσα γυνὴ ⸀ἐνέκρυψεν εἰς ἀλεύρου
+    σάτα τρία ἕως οὗ ἐζυμώθη ὅλον.
+  luke_text: ὁμοία ἐστὶν ζύμῃ, ἣν λαβοῦσα γυνὴ ⸀ἔκρυψεν εἰς ἀλεύρου σάτα τρία ἕως οὗ ἐζυμώθη ὅλον.
+- matt_index: 222
+  luke_index: 467
+  matt_ref: Matt 8:22
+  luke_ref: Luke 9:60
+  score: 0.576413
+  window_support: 0.457566
+  composite_score: 0.534817
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 236.62
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὁ δὲ Ἰησοῦς ⸀λέγει αὐτῷ· Ἀκολούθει μοι, καὶ ἄφες τοὺς νεκροὺς θάψαι τοὺς ἑαυτῶν νεκρούς.
+  luke_text: εἶπεν δὲ ⸀αὐτῷ· Ἄφες τοὺς νεκροὺς θάψαι τοὺς ἑαυτῶν νεκρούς, σὺ δὲ ἀπελθὼν διάγγελλε τὴν βασιλείαν τοῦ θεοῦ.
+- matt_index: 703
+  luke_index: 886
+  matt_ref: Matt 21:24
+  luke_ref: Luke 20:2
+  score: 0.497687
+  window_support: 0.603341
+  composite_score: 0.534666
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: ἀποκριθεὶς δὲ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Ἐρωτήσω ὑμᾶς κἀγὼ λόγον ἕνα, ὃν ἐὰν εἴπητέ μοι κἀγὼ ὑμῖν ἐρῶ ἐν ποίᾳ ἐξουσίᾳ
+    ταῦτα ποιῶ·
+  luke_text: καὶ εἶπαν ⸂λέγοντες πρὸς αὐτόν⸃· Εἰπὸν ἡμῖν ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιεῖς, ἢ τίς ἐστιν ὁ δούς σοι τὴν ἐξουσίαν
+    ταύτην;
+- matt_index: 377
+  luke_index: 295
+  matt_ref: Matt 12:33
+  luke_ref: Luke 6:43
+  score: 0.566255
+  window_support: 0.472174
+  composite_score: 0.533327
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 54.31
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: Ἢ ποιήσατε τὸ δένδρον καλὸν καὶ τὸν καρπὸν αὐτοῦ καλόν, ἢ ποιήσατε τὸ δένδρον σαπρὸν καὶ τὸν καρπὸν αὐτοῦ σαπρόν·
+    ἐκ γὰρ τοῦ καρποῦ τὸ δένδρον γινώσκεται.
+  luke_text: Οὐ γάρ ἐστιν δένδρον καλὸν ποιοῦν καρπὸν σαπρόν, οὐδὲ ⸀πάλιν δένδρον σαπρὸν ποιοῦν καρπὸν καλόν.
+- matt_index: 271
+  luke_index: 471
+  matt_ref: Matt 9:37
+  luke_ref: Luke 10:2
+  score: 0.576059
+  window_support: 0.43579
+  composite_score: 0.526965
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 211.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: τότε λέγει τοῖς μαθηταῖς αὐτοῦ· Ὁ μὲν θερισμὸς πολύς, οἱ δὲ ἐργάται ὀλίγοι·
+  luke_text: ἔλεγεν ⸀δὲ πρὸς αὐτούς· Ὁ μὲν θερισμὸς πολύς, οἱ δὲ ἐργάται ὀλίγοι· δεήθητε οὖν τοῦ κυρίου τοῦ θερισμοῦ ὅπως
+    ⸂ἐργάτας ἐκβάλῃ⸃ εἰς τὸν θερισμὸν αὐτοῦ.
+- matt_index: 299
+  luke_index: 568
+  matt_ref: Matt 10:27
+  luke_ref: Luke 12:3
+  score: 0.572205
+  window_support: 0.424737
+  composite_score: 0.520591
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 271.95
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὃ λέγω ὑμῖν ἐν τῇ σκοτίᾳ, εἴπατε ἐν τῷ φωτί· καὶ ὃ εἰς τὸ οὖς ἀκούετε, κηρύξατε ἐπὶ τῶν δωμάτων.
+  luke_text: ἀνθ’ ὧν ὅσα ἐν τῇ σκοτίᾳ εἴπατε ἐν τῷ φωτὶ ἀκουσθήσεται, καὶ ὃ πρὸς τὸ οὖς ἐλαλήσατε ἐν τοῖς ταμείοις κηρυχθήσεται
+    ἐπὶ τῶν δωμάτων.
+- matt_index: 298
+  luke_index: 567
+  matt_ref: Matt 10:26
+  luke_ref: Luke 12:2
+  score: 0.570855
+  window_support: 0.424737
+  composite_score: 0.519714
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 272.3
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Μὴ οὖν φοβηθῆτε αὐτούς· οὐδὲν γάρ ἐστιν κεκαλυμμένον ὃ οὐκ ἀποκαλυφθήσεται, καὶ κρυπτὸν ὃ οὐ γνωσθήσεται.
+  luke_text: οὐδὲν δὲ συγκεκαλυμμένον ἐστὶν ὃ οὐκ ἀποκαλυφθήσεται, καὶ κρυπτὸν ὃ οὐ γνωσθήσεται.
+- matt_index: 340
+  luke_index: 490
+  matt_ref: Matt 11:26
+  luke_ref: Luke 10:21
+  score: 0.441698
+  window_support: 0.661179
+  composite_score: 0.518516
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 154.07
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ναί, ὁ πατήρ, ὅτι οὕτως ⸂εὐδοκία ἐγένετο⸃ ἔμπροσθέν σου.
+  luke_text: Ἐν αὐτῇ τῇ ὥρᾳ ἠγαλλιάσατο ⸀τῷ πνεύματι ⸂τῷ ἁγίῳ⸃ καὶ εἶπεν· Ἐξομολογοῦμαί σοι, πάτερ κύριε τοῦ οὐρανοῦ καὶ τῆς
+    γῆς, ὅτι ἀπέκρυψας ταῦτα ἀπὸ σοφῶν καὶ συνετῶν, καὶ ἀπεκάλυψας αὐτὰ νηπίοις· ναί, ὁ πατήρ, ὅτι οὕτως ⸂εὐδοκία ἐγένετο⸃
+    ἔμπροσθέν σου.
+- matt_index: 294
+  luke_index: 948
+  matt_ref: Matt 10:22
+  luke_ref: Luke 21:17
+  score: 0.651929
+  window_support: 0.270319
+  composite_score: 0.518365
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 674.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 11
+  - 28
+  matt_text: καὶ ἔσεσθε μισούμενοι ὑπὸ πάντων διὰ τὸ ὄνομά μου· ὁ δὲ ὑπομείνας εἰς τέλος οὗτος σωθήσεται.
+  luke_text: καὶ ἔσεσθε μισούμενοι ὑπὸ πάντων διὰ τὸ ὄνομά μου.
+- matt_index: 854
+  luke_index: 607
+  matt_ref: Matt 24:45
+  luke_ref: Luke 12:42
+  score: 0.456058
+  window_support: 0.63241
+  composite_score: 0.517781
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 358.08
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Τίς ἄρα ἐστὶν ὁ πιστὸς δοῦλος καὶ φρόνιμος ὃν κατέστησεν ὁ ⸀κύριος ἐπὶ τῆς ⸀οἰκετείας αὐτοῦ τοῦ ⸀δοῦναι αὐτοῖς
+    τὴν τροφὴν ἐν καιρῷ;
+  luke_text: ⸂καὶ εἶπεν⸃ ὁ κύριος· Τίς ἄρα ἐστὶν ὁ πιστὸς οἰκονόμος, ⸀ὁ φρόνιμος, ὃν καταστήσει ὁ κύριος ἐπὶ τῆς θεραπείας
+    αὐτοῦ τοῦ διδόναι ἐν καιρῷ ⸀τὸ σιτομέτριον;
+- matt_index: 370
+  luke_index: 529
+  matt_ref: Matt 12:26
+  luke_ref: Luke 11:18
+  score: 0.399556
+  window_support: 0.724517
+  composite_score: 0.513293
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 183.04
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ εἰ ὁ Σατανᾶς τὸν Σατανᾶν ἐκβάλλει, ἐφ’ ἑαυτὸν ἐμερίσθη· πῶς οὖν σταθήσεται ἡ βασιλεία αὐτοῦ;
+  luke_text: εἰ δὲ καὶ ὁ Σατανᾶς ἐφ’ ἑαυτὸν διεμερίσθη, πῶς σταθήσεται ἡ βασιλεία αὐτοῦ; ὅτι λέγετε ἐν Βεελζεβοὺλ ἐκβάλλειν
+    με τὰ δαιμόνια.
+- matt_index: 783
+  luke_index: 807
+  matt_ref: Matt 23:12
+  luke_ref: Luke 18:14
+  score: 0.638974
+  window_support: 0.256795
+  composite_score: 0.505211
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 124.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 27
+  matt_text: ὅστις δὲ ὑψώσει ἑαυτὸν ταπεινωθήσεται, καὶ ὅστις ταπεινώσει ἑαυτὸν ⸀ὑψωθήσεται.
+  luke_text: λέγω ὑμῖν, κατέβη οὗτος δεδικαιωμένος εἰς τὸν οἶκον αὐτοῦ ⸂παρ’ ἐκεῖνον⸃· ὅτι πᾶς ὁ ὑψῶν ἑαυτὸν ταπεινωθήσεται,
+    ὁ δὲ ταπεινῶν ἑαυτὸν ὑψωθήσεται.
+- matt_index: 852
+  luke_index: 604
+  matt_ref: Matt 24:43
+  luke_ref: Luke 12:39
+  score: 0.521288
+  window_support: 0.449422
+  composite_score: 0.496135
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 360.86
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἐκεῖνο δὲ γινώσκετε ὅτι εἰ ᾔδει ὁ οἰκοδεσπότης ποίᾳ φυλακῇ ὁ κλέπτης ἔρχεται, ἐγρηγόρησεν ἂν καὶ οὐκ ἂν εἴασεν
+    διορυχθῆναι τὴν οἰκίαν αὐτοῦ.
+  luke_text: Τοῦτο δὲ γινώσκετε ὅτι εἰ ᾔδει ὁ οἰκοδεσπότης ποίᾳ ὥρᾳ ὁ κλέπτης ἔρχεται, ⸂οὐκ ἂν⸃ ἀφῆκεν ⸀διορυχθῆναι τὸν οἶκον
+    αὐτοῦ.
+- matt_index: 175
+  luke_index: 293
+  matt_ref: Matt 7:4
+  luke_ref: Luke 6:41
+  score: 0.346676
+  window_support: 0.773257
+  composite_score: 0.495979
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 95.64
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἢ πῶς ἐρεῖς τῷ ἀδελφῷ σου· Ἄφες ἐκβάλω τὸ κάρφος ⸀ἐκ τοῦ ὀφθαλμοῦ σου, καὶ ἰδοὺ ἡ δοκὸς ἐν τῷ ὀφθαλμῷ σοῦ;
+  luke_text: τί δὲ βλέπεις τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ τοῦ ἀδελφοῦ σου, τὴν δὲ δοκὸν τὴν ἐν τῷ ἰδίῳ ὀφθαλμῷ οὐ κατανοεῖς;
+- matt_index: 318
+  luke_index: 323
+  matt_ref: Matt 11:4
+  luke_ref: Luke 7:22
+  score: 0.343017
+  window_support: 0.770616
+  composite_score: 0.492676
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.5
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: καὶ ἀποκριθεὶς ὁ Ἰησοῦς εἶπεν αὐτοῖς· Πορευθέντες ἀπαγγείλατε Ἰωάννῃ ἃ ἀκούετε καὶ βλέπετε·
+  luke_text: καὶ ⸀ἀποκριθεὶς εἶπεν αὐτοῖς· Πορευθέντες ἀπαγγείλατε Ἰωάννῃ ἃ εἴδετε καὶ ἠκούσατε· ⸀τυφλοὶ ἀναβλέπουσιν, χωλοὶ
+    περιπατοῦσιν, λεπροὶ καθαρίζονται, ⸀κωφοὶ ἀκούουσιν, νεκροὶ ἐγείρονται, πτωχοὶ εὐαγγελίζονται·
+- matt_index: 857
+  luke_index: 610
+  matt_ref: Matt 24:48
+  luke_ref: Luke 12:45
+  score: 0.447738
+  window_support: 0.5701
+  composite_score: 0.490565
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 355.4
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἐὰν δὲ εἴπῃ ὁ κακὸς δοῦλος ἐκεῖνος ἐν τῇ καρδίᾳ αὐτοῦ· Χρονίζει ⸂μου ὁ κύριος⸃,
+  luke_text: ἐὰν δὲ εἴπῃ ὁ δοῦλος ἐκεῖνος ἐν τῇ καρδίᾳ αὐτοῦ· Χρονίζει ὁ κύριός μου ἔρχεσθαι, καὶ ἄρξηται τύπτειν τοὺς παῖδας
+    καὶ τὰς παιδίσκας, ἐσθίειν τε καὶ πίνειν καὶ μεθύσκεσθαι,
+- matt_index: 267
+  luke_index: 525
+  matt_ref: Matt 9:33
+  luke_ref: Luke 11:14
+  score: 0.480515
+  window_support: 0.489721
+  composite_score: 0.483737
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 271.24
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ ἐκβληθέντος τοῦ δαιμονίου ἐλάλησεν ὁ κωφός. καὶ ἐθαύμασαν οἱ ὄχλοι λέγοντες· Οὐδέποτε ἐφάνη οὕτως ἐν τῷ Ἰσραήλ.
+  luke_text: Καὶ ἦν ἐκβάλλων ⸀δαιμόνιον κωφόν· ἐγένετο δὲ τοῦ δαιμονίου ἐξελθόντος ἐλάλησεν ὁ κωφός. καὶ ἐθαύμασαν οἱ ὄχλοι·
+- matt_index: 163
+  luke_index: 589
+  matt_ref: Matt 6:26
+  luke_ref: Luke 12:24
+  score: 0.395675
+  window_support: 0.640243
+  composite_score: 0.481274
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 393.46
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἐμβλέψατε εἰς τὰ πετεινὰ τοῦ οὐρανοῦ ὅτι οὐ σπείρουσιν οὐδὲ θερίζουσιν οὐδὲ συνάγουσιν εἰς ἀποθήκας, καὶ ὁ πατὴρ
+    ὑμῶν ὁ οὐράνιος τρέφει αὐτά· οὐχ ὑμεῖς μᾶλλον διαφέρετε αὐτῶν;
+  luke_text: κατανοήσατε τοὺς κόρακας ὅτι οὐ σπείρουσιν οὐδὲ θερίζουσιν, οἷς οὐκ ἔστιν ταμεῖον οὐδὲ ἀποθήκη, καὶ ὁ θεὸς τρέφει
+    αὐτούς· πόσῳ μᾶλλον ὑμεῖς διαφέρετε τῶν πετεινῶν.
+- matt_index: 165
+  luke_index: 592
+  matt_ref: Matt 6:28
+  luke_ref: Luke 12:27
+  score: 0.415049
+  window_support: 0.603281
+  composite_score: 0.480931
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 396.16
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ περὶ ἐνδύματος τί μεριμνᾶτε; καταμάθετε τὰ κρίνα τοῦ ἀγροῦ πῶς ⸂αὐξάνουσιν· οὐ κοπιῶσιν οὐδὲ νήθουσιν⸃·
+  luke_text: κατανοήσατε τὰ κρίνα πῶς αὐξάνει· οὐ κοπιᾷ οὐδὲ νήθει· λέγω δὲ ὑμῖν, οὐδὲ Σολομὼν ἐν πάσῃ τῇ δόξῃ αὐτοῦ περιεβάλετο
+    ὡς ἓν τούτων.
+- matt_index: 531
+  luke_index: 540
+  matt_ref: Matt 16:4
+  luke_ref: Luke 11:29
+  score: 0.554368
+  window_support: 0.329591
+  composite_score: 0.475696
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 114.23
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Γενεὰ πονηρὰ καὶ μοιχαλὶς σημεῖον ἐπιζητεῖ, καὶ σημεῖον οὐ δοθήσεται αὐτῇ εἰ μὴ τὸ σημεῖον ⸀Ἰωνᾶ. καὶ καταλιπὼν
+    αὐτοὺς ἀπῆλθεν.
+  luke_text: Τῶν δὲ ὄχλων ἐπαθροιζομένων ἤρξατο λέγειν· Ἡ γενεὰ αὕτη ⸀γενεὰ πονηρά ἐστιν· σημεῖον ⸀ζητεῖ, καὶ σημεῖον οὐ δοθήσεται
+    αὐτῇ εἰ μὴ τὸ σημεῖον ⸀Ἰωνᾶ.
+- matt_index: 809
+  luke_index: 659
+  matt_ref: Matt 23:39
+  luke_ref: Luke 13:35
+  score: 0.579298
+  window_support: 0.283011
+  composite_score: 0.475598
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 277.55
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: λέγω γὰρ ὑμῖν, οὐ μή με ἴδητε ἀπ’ ἄρτι ἕως ἂν εἴπητε· Εὐλογημένος ὁ ἐρχόμενος ἐν ὀνόματι κυρίου.
+  luke_text: ἰδοὺ ἀφίεται ὑμῖν ὁ οἶκος ⸀ὑμῶν. λέγω ⸀δὲ ⸀ὑμῖν, οὐ μὴ ⸂ἴδητέ με⸃ ἕως ⸂ἥξει ὅτε⸃ εἴπητε· Εὐλογημένος ὁ ἐρχόμενος
+    ἐν ὀνόματι κυρίου.
+- matt_index: 889
+  luke_index: 862
+  matt_ref: Matt 25:29
+  luke_ref: Luke 19:26
+  score: 0.589548
+  window_support: 0.254277
+  composite_score: 0.472203
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 106.85
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: τῷ γὰρ ἔχοντι παντὶ δοθήσεται καὶ περισσευθήσεται· ⸂τοῦ δὲ⸃ μὴ ἔχοντος καὶ ὃ ἔχει ἀρθήσεται ἀπ’ αὐτοῦ.
+  luke_text: ⸀λέγω ὑμῖν ὅτι παντὶ τῷ ἔχοντι δοθήσεται, ἀπὸ δὲ τοῦ μὴ ἔχοντος καὶ ὃ ἔχει ⸀ἀρθήσεται.
+- matt_index: 172
+  luke_index: 289
+  matt_ref: Matt 7:1
+  luke_ref: Luke 6:37
+  score: 0.562774
+  window_support: 0.298948
+  composite_score: 0.470435
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 92.1
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Μὴ κρίνετε, ἵνα μὴ κριθῆτε·
+  luke_text: Καὶ μὴ κρίνετε, καὶ οὐ μὴ κριθῆτε· ⸀καὶ μὴ καταδικάζετε, καὶ οὐ μὴ καταδικασθῆτε. ἀπολύετε, καὶ ἀπολυθήσεσθε·
+- matt_index: 406
+  luke_index: 862
+  matt_ref: Matt 13:12
+  luke_ref: Luke 19:26
+  score: 0.606896
+  window_support: 0.202398
+  composite_score: 0.465322
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 500.86
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὅστις γὰρ ἔχει, δοθήσεται αὐτῷ καὶ περισσευθήσεται· ὅστις δὲ οὐκ ἔχει, καὶ ὃ ἔχει ἀρθήσεται ἀπ’ αὐτοῦ.
+  luke_text: ⸀λέγω ὑμῖν ὅτι παντὶ τῷ ἔχοντι δοθήσεται, ἀπὸ δὲ τοῦ μὴ ἔχοντος καὶ ὃ ἔχει ⸀ἀρθήσεται.
+- matt_index: 189
+  luke_index: 295
+  matt_ref: Matt 7:18
+  luke_ref: Luke 6:43
+  score: 0.509298
+  window_support: 0.382707
+  composite_score: 0.464991
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 95.52
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οὐ δύναται δένδρον ἀγαθὸν καρποὺς πονηροὺς ⸀ποιεῖν, οὐδὲ δένδρον σαπρὸν καρποὺς καλοὺς ποιεῖν.
+  luke_text: Οὐ γάρ ἐστιν δένδρον καλὸν ποιοῦν καρπὸν σαπρόν, οὐδὲ ⸀πάλιν δένδρον σαπρὸν ποιοῦν καρπὸν καλόν.
+- matt_index: 379
+  luke_index: 297
+  matt_ref: Matt 12:35
+  luke_ref: Luke 6:45
+  score: 0.508002
+  window_support: 0.378592
+  composite_score: 0.462709
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 52.92
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὁ ἀγαθὸς ἄνθρωπος ἐκ τοῦ ἀγαθοῦ θησαυροῦ ἐκβάλλει ἀγαθά, καὶ ὁ πονηρὸς ἄνθρωπος ἐκ τοῦ πονηροῦ θησαυροῦ ἐκβάλλει
+    πονηρά.
+  luke_text: ὁ ἀγαθὸς ἄνθρωπος ἐκ τοῦ ἀγαθοῦ θησαυροῦ τῆς καρδίας ⸀αὐτοῦ προφέρει τὸ ἀγαθόν, καὶ ὁ ⸀πονηρὸς ἐκ τοῦ ⸀πονηροῦ
+    προφέρει τὸ πονηρόν· ἐκ γὰρ ⸀περισσεύματος καρδίας λαλεῖ τὸ στόμα αὐτοῦ.
+- matt_index: 346
+  luke_index: 254
+  matt_ref: Matt 12:2
+  luke_ref: Luke 6:2
+  score: 0.422556
+  window_support: 0.536447
+  composite_score: 0.462418
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 82.73
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: οἱ δὲ Φαρισαῖοι ἰδόντες εἶπαν αὐτῷ· Ἰδοὺ οἱ μαθηταί σου ποιοῦσιν ὃ οὐκ ἔξεστιν ποιεῖν ἐν σαββάτῳ.
+  luke_text: τινὲς δὲ τῶν Φαρισαίων ⸀εἶπαν· Τί ποιεῖτε ὃ οὐκ ⸀ἔξεστιν τοῖς σάββασιν;
+- matt_index: 74
+  luke_index: 177
+  matt_ref: Matt 4:10
+  luke_ref: Luke 4:8
+  score: 0.54386
+  window_support: 0.30407
+  composite_score: 0.459933
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 4.56
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 5
+  matt_text: τότε λέγει αὐτῷ ὁ Ἰησοῦς· ⸀Ὕπαγε, Σατανᾶ· γέγραπται γάρ· Κύριον τὸν θεόν σου προσκυνήσεις καὶ αὐτῷ μόνῳ λατρεύσεις.
+  luke_text: καὶ ἀποκριθεὶς ⸂ὁ Ἰησοῦς εἶπεν αὐτῷ⸃· Γέγραπται· ⸂Κύριον τὸν θεόν σου προσκυνήσεις⸃ καὶ αὐτῷ μόνῳ λατρεύσεις.
+- matt_index: 181
+  luke_index: 522
+  matt_ref: Matt 7:10
+  luke_ref: Luke 11:11
+  score: 0.395917
+  window_support: 0.5778
+  composite_score: 0.459576
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 323.73
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ⸀ἢ καὶ ⸂ἰχθὺν αἰτήσει⸃— μὴ ὄφιν ἐπιδώσει αὐτῷ;
+  luke_text: τίνα δὲ ⸀ἐξ ὑμῶν τὸν πατέρα αἰτήσει ὁ ⸀υἱὸς ἰχθύν, ⸀καὶ ἀντὶ ἰχθύος ὄφιν ⸂αὐτῷ ἐπιδώσει⸃;
+- matt_index: 347
+  luke_index: 255
+  matt_ref: Matt 12:3
+  luke_ref: Luke 6:3
+  score: 0.415258
+  window_support: 0.536447
+  composite_score: 0.457674
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 81.87
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 10
+  matt_text: ὁ δὲ εἶπεν αὐτοῖς· Οὐκ ἀνέγνωτε τί ἐποίησεν Δαυὶδ ὅτε ⸀ἐπείνασεν καὶ οἱ μετ’ αὐτοῦ;
+  luke_text: καὶ ἀποκριθεὶς πρὸς αὐτοὺς εἶπεν ὁ Ἰησοῦς· Οὐδὲ τοῦτο ἀνέγνωτε ὃ ἐποίησεν Δαυὶδ ⸀ὁπότε ἐπείνασεν αὐτὸς καὶ οἱ
+    μετ’ αὐτοῦ ⸀ὄντες;
+- matt_index: 160
+  luke_index: 546
+  matt_ref: Matt 6:23
+  luke_ref: Luke 11:35
+  score: 0.431274
+  window_support: 0.498348
+  composite_score: 0.45475
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 350.92
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἐὰν δὲ ὁ ὀφθαλμός σου πονηρὸς ᾖ, ὅλον τὸ σῶμά σου σκοτεινὸν ἔσται. εἰ οὖν τὸ φῶς τὸ ἐν σοὶ σκότος ἐστίν, τὸ σκότος
+    πόσον.
+  luke_text: σκόπει οὖν μὴ τὸ φῶς τὸ ἐν σοὶ σκότος ἐστίν.
+- matt_index: 502
+  luke_index: 291
+  matt_ref: Matt 15:14
+  luke_ref: Luke 6:39
+  score: 0.546494
+  window_support: 0.274627
+  composite_score: 0.45134
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 134.09
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἄφετε αὐτούς· ⸂τυφλοί εἰσιν ὁδηγοὶ τυφλῶν⸃· τυφλὸς δὲ τυφλὸν ἐὰν ὁδηγῇ, ἀμφότεροι εἰς βόθυνον πεσοῦνται.
+  luke_text: Εἶπεν δὲ ⸀καὶ παραβολὴν αὐτοῖς· Μήτι δύναται τυφλὸς τυφλὸν ὁδηγεῖν; οὐχὶ ἀμφότεροι εἰς βόθυνον ⸀ἐμπεσοῦνται;
+- matt_index: 219
+  luke_index: 464
+  matt_ref: Matt 8:19
+  luke_ref: Luke 9:57
+  score: 0.298303
+  window_support: 0.730356
+  composite_score: 0.449521
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 234.19
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ προσελθὼν εἷς γραμματεὺς εἶπεν αὐτῷ· Διδάσκαλε, ἀκολουθήσω σοι ὅπου ἐὰν ἀπέρχῃ.
+  luke_text: ⸀Καὶ πορευομένων αὐτῶν ἐν τῇ ὁδῷ εἶπέν τις πρὸς αὐτόν· Ἀκολουθήσω σοι ὅπου ⸀ἐὰν ⸀ἀπέρχῃ.
+- matt_index: 844
+  luke_index: 963
+  matt_ref: Matt 24:35
+  luke_ref: Luke 21:32
+  score: 0.354514
+  window_support: 0.617546
+  composite_score: 0.446575
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ὁ οὐρανὸς καὶ ἡ γῆ ⸀παρελεύσεται, οἱ δὲ λόγοι μου οὐ μὴ παρέλθωσιν.
+  luke_text: ἀμὴν λέγω ὑμῖν ὅτι οὐ μὴ παρέλθῃ ἡ γενεὰ αὕτη ἕως ἂν πάντα γένηται.
+- matt_index: 115
+  luke_index: 624
+  matt_ref: Matt 5:26
+  luke_ref: Luke 12:59
+  score: 0.533294
+  window_support: 0.279081
+  composite_score: 0.44432
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 435.75
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἀμὴν λέγω σοι, οὐ μὴ ἐξέλθῃς ἐκεῖθεν ἕως ἂν ἀποδῷς τὸν ἔσχατον κοδράντην.
+  luke_text: λέγω σοι, οὐ μὴ ἐξέλθῃς ἐκεῖθεν ἕως ⸂καὶ τὸ⸃ ἔσχατον λεπτὸν ἀποδῷς.
+- matt_index: 210
+  luke_index: 310
+  matt_ref: Matt 8:10
+  luke_ref: Luke 7:9
+  score: 0.397739
+  window_support: 0.529171
+  composite_score: 0.44374
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 81.88
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἀκούσας δὲ ὁ Ἰησοῦς ἐθαύμασεν καὶ εἶπεν τοῖς ἀκολουθοῦσιν· Ἀμὴν λέγω ὑμῖν, ⸂παρ’ οὐδενὶ τοσαύτην πίστιν ἐν τῷ
+    Ἰσραὴλ⸃ εὗρον.
+  luke_text: ἀκούσας δὲ ταῦτα ὁ Ἰησοῦς ἐθαύμασεν αὐτόν, καὶ στραφεὶς τῷ ἀκολουθοῦντι αὐτῷ ὄχλῳ εἶπεν· Λέγω ὑμῖν, ⸀οὐδὲ ἐν
+    τῷ Ἰσραὴλ τοσαύτην πίστιν εὗρον.
+- matt_index: 249
+  luke_index: 247
+  matt_ref: Matt 9:15
+  luke_ref: Luke 5:34
+  score: 0.399193
+  window_support: 0.523695
+  composite_score: 0.442769
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 9
+  matt_text: καὶ εἶπεν αὐτοῖς ὁ Ἰησοῦς· Μὴ δύνανται οἱ υἱοὶ τοῦ νυμφῶνος πενθεῖν ἐφ’ ὅσον μετ’ αὐτῶν ἐστιν ὁ νυμφίος; ἐλεύσονται
+    δὲ ἡμέραι ὅταν ἀπαρθῇ ἀπ’ αὐτῶν ὁ νυμφίος, καὶ τότε νηστεύσουσιν.
+  luke_text: ὁ ⸀δὲ εἶπεν πρὸς αὐτούς· Μὴ δύνασθε τοὺς υἱοὺς τοῦ νυμφῶνος ἐν ᾧ ὁ νυμφίος μετ’ αὐτῶν ἐστιν ποιῆσαι ⸀νηστεῦσαι;
+- matt_index: 769
+  luke_index: 927
+  matt_ref: Matt 22:44
+  luke_ref: Luke 20:43
+  score: 0.400295
+  window_support: 0.521537
+  composite_score: 0.44273
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 27
+  matt_text: ⸀Εἶπεν κύριος τῷ κυρίῳ μου· Κάθου ἐκ δεξιῶν μου ἕως ἂν θῶ τοὺς ἐχθρούς σου ⸀ὑποκάτω τῶν ποδῶν σου;
+  luke_text: ἕως ἂν θῶ τοὺς ἐχθρούς σου ὑποπόδιον τῶν ποδῶν σου.
+- matt_index: 368
+  luke_index: 526
+  matt_ref: Matt 12:24
+  luke_ref: Luke 11:15
+  score: 0.534512
+  window_support: 0.270466
+  composite_score: 0.442096
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 180.85
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οἱ δὲ Φαρισαῖοι ἀκούσαντες εἶπον· Οὗτος οὐκ ἐκβάλλει τὰ δαιμόνια εἰ μὴ ἐν τῷ Βεελζεβοὺλ ἄρχοντι τῶν δαιμονίων.
+  luke_text: τινὲς δὲ ἐξ αὐτῶν εἶπον· Ἐν Βεελζεβοὺλ ⸀τῷ ἄρχοντι τῶν δαιμονίων ἐκβάλλει τὰ δαιμόνια·
+- matt_index: 703
+  luke_index: 892
+  matt_ref: Matt 21:24
+  luke_ref: Luke 20:8
+  score: 0.519163
+  window_support: 0.282148
+  composite_score: 0.436208
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 5.0
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: ἀποκριθεὶς δὲ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Ἐρωτήσω ὑμᾶς κἀγὼ λόγον ἕνα, ὃν ἐὰν εἴπητέ μοι κἀγὼ ὑμῖν ἐρῶ ἐν ποίᾳ ἐξουσίᾳ
+    ταῦτα ποιῶ·
+  luke_text: καὶ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Οὐδὲ ἐγὼ λέγω ὑμῖν ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιῶ.
+- matt_index: 385
+  luke_index: 542
+  matt_ref: Matt 12:41
+  luke_ref: Luke 11:31
+  score: 0.249058
+  window_support: 0.781258
+  composite_score: 0.435328
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 190.23
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ἄνδρες Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+  luke_text: βασίλισσα νότου ἐγερθήσεται ἐν τῇ κρίσει μετὰ τῶν ἀνδρῶν τῆς γενεᾶς ταύτης καὶ κατακρινεῖ αὐτούς· ὅτι ἦλθεν ἐκ
+    τῶν περάτων τῆς γῆς ἀκοῦσαι τὴν σοφίαν Σολομῶνος, καὶ ἰδοὺ πλεῖον Σολομῶνος ὧδε.
+- matt_index: 371
+  luke_index: 529
+  matt_ref: Matt 12:27
+  luke_ref: Luke 11:18
+  score: 0.279528
+  window_support: 0.724517
+  composite_score: 0.435274
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 182.63
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ εἰ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο αὐτοὶ ⸂κριταὶ ἔσονται
+    ὑμῶν⸃.
+  luke_text: εἰ δὲ καὶ ὁ Σατανᾶς ἐφ’ ἑαυτὸν διεμερίσθη, πῶς σταθήσεται ἡ βασιλεία αὐτοῦ; ὅτι λέγετε ἐν Βεελζεβοὺλ ἐκβάλλειν
+    με τὰ δαιμόνια.
+- matt_index: 254
+  luke_index: 395
+  matt_ref: Matt 9:20
+  luke_ref: Luke 8:44
+  score: 0.505671
+  window_support: 0.296229
+  composite_score: 0.432366
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 144.29
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Καὶ ἰδοὺ γυνὴ αἱμορροοῦσα δώδεκα ἔτη προσελθοῦσα ὄπισθεν ἥψατο τοῦ κρασπέδου τοῦ ἱματίου αὐτοῦ·
+  luke_text: προσελθοῦσα ὄπισθεν ἥψατο τοῦ κρασπέδου τοῦ ἱματίου αὐτοῦ, καὶ παραχρῆμα ἔστη ἡ ῥύσις τοῦ αἵματος αὐτῆς.
+- matt_index: 176
+  luke_index: 293
+  matt_ref: Matt 7:5
+  luke_ref: Luke 6:41
+  score: 0.346828
+  window_support: 0.587266
+  composite_score: 0.430981
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 95.49
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὑποκριτά, ἔκβαλε πρῶτον ⸂ἐκ τοῦ ὀφθαλμοῦ σοῦ τὴν δοκόν⸃, καὶ τότε διαβλέψεις ἐκβαλεῖν τὸ κάρφος ἐκ τοῦ ὀφθαλμοῦ
+    τοῦ ἀδελφοῦ σου.
+  luke_text: τί δὲ βλέπεις τὸ κάρφος τὸ ἐν τῷ ὀφθαλμῷ τοῦ ἀδελφοῦ σου, τὴν δὲ δοκὸν τὴν ἐν τῷ ἰδίῳ ὀφθαλμῷ οὐ κατανοεῖς;
+- matt_index: 317
+  luke_index: 321
+  matt_ref: Matt 11:3
+  luke_ref: Luke 7:20
+  score: 0.307993
+  window_support: 0.659068
+  composite_score: 0.43087
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: εἶπεν αὐτῷ· Σὺ εἶ ὁ ἐρχόμενος ἢ ἕτερον προσδοκῶμεν;
+  luke_text: παραγενόμενοι δὲ πρὸς αὐτὸν οἱ ἄνδρες εἶπαν· Ἰωάννης ὁ βαπτιστὴς ⸀ἀπέστειλεν ἡμᾶς πρὸς σὲ λέγων· Σὺ εἶ ὁ ἐρχόμενος
+    ἢ ἄλλον προσδοκῶμεν;
+- matt_index: 386
+  luke_index: 543
+  matt_ref: Matt 12:42
+  luke_ref: Luke 11:32
+  score: 0.267386
+  window_support: 0.733588
+  composite_score: 0.430557
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 190.92
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: βασίλισσα νότου ἐγερθήσεται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινεῖ αὐτήν· ὅτι ἦλθεν ἐκ τῶν περάτων
+    τῆς γῆς ἀκοῦσαι τὴν σοφίαν Σολομῶνος, καὶ ἰδοὺ πλεῖον Σολομῶνος ὧδε.
+  luke_text: ἄνδρες ⸀Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+- matt_index: 808
+  luke_index: 659
+  matt_ref: Matt 23:38
+  luke_ref: Luke 13:35
+  score: 0.305071
+  window_support: 0.659614
+  composite_score: 0.429161
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 277.32
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἰδοὺ ἀφίεται ὑμῖν ὁ οἶκος ὑμῶν ⸀ἔρημος.
+  luke_text: ἰδοὺ ἀφίεται ὑμῖν ὁ οἶκος ⸀ὑμῶν. λέγω ⸀δὲ ⸀ὑμῖν, οὐ μὴ ⸂ἴδητέ με⸃ ἕως ⸂ἥξει ὅτε⸃ εἴπητε· Εὐλογημένος ὁ ἐρχόμενος
+    ἐν ὀνόματι κυρίου.
+- matt_index: 410
+  luke_index: 492
+  matt_ref: Matt 13:16
+  luke_ref: Luke 10:23
+  score: 0.40269
+  window_support: 0.476832
+  composite_score: 0.42864
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 130.29
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὑμῶν δὲ μακάριοι οἱ ὀφθαλμοὶ ὅτι βλέπουσιν, καὶ τὰ ὦτα ὑμῶν ὅτι ⸀ἀκούουσιν.
+  luke_text: Καὶ στραφεὶς πρὸς τοὺς μαθητὰς κατ’ ἰδίαν εἶπεν· Μακάριοι οἱ ὀφθαλμοὶ οἱ βλέποντες ἃ βλέπετε.
+- matt_index: 20
+  luke_index: 30
+  matt_ref: Matt 1:21
+  luke_ref: Luke 1:31
+  score: 0.499258
+  window_support: 0.292625
+  composite_score: 0.426937
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 18.0
+  tags:
+  - strong_verbal_echo
+  - moderate_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 1
+  - 2
+  matt_text: τέξεται δὲ υἱὸν καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν, αὐτὸς γὰρ σώσει τὸν λαὸν αὐτοῦ ἀπὸ τῶν ἁμαρτιῶν αὐτῶν.
+  luke_text: καὶ ἰδοὺ συλλήμψῃ ἐν γαστρὶ καὶ τέξῃ υἱόν, καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν.
+- matt_index: 188
+  luke_index: 295
+  matt_ref: Matt 7:17
+  luke_ref: Luke 6:43
+  score: 0.450375
+  window_support: 0.382913
+  composite_score: 0.426763
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 95.67
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οὕτως πᾶν δένδρον ἀγαθὸν καρποὺς καλοὺς ποιεῖ, τὸ δὲ σαπρὸν δένδρον καρποὺς πονηροὺς ποιεῖ·
+  luke_text: Οὐ γάρ ἐστιν δένδρον καλὸν ποιοῦν καρπὸν σαπρόν, οὐδὲ ⸀πάλιν δένδρον σαπρὸν ποιοῦν καρπὸν καλόν.
+- matt_index: 974
+  luke_index: 1033
+  matt_ref: Matt 26:68
+  luke_ref: Luke 22:64
+  score: 0.556421
+  window_support: 0.184344
+  composite_score: 0.426194
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 8.18
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 30
+  matt_text: λέγοντες· Προφήτευσον ἡμῖν, χριστέ, τίς ἐστιν ὁ παίσας σε;
+  luke_text: καὶ περικαλύψαντες ⸂αὐτὸν ἐπηρώτων⸃ λέγοντες· Προφήτευσον, τίς ἐστιν ὁ παίσας σε;
+- matt_index: 301
+  luke_index: 571
+  matt_ref: Matt 10:29
+  luke_ref: Luke 12:6
+  score: 0.326714
+  window_support: 0.610752
+  composite_score: 0.426127
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 272.25
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οὐχὶ δύο στρουθία ἀσσαρίου πωλεῖται; καὶ ἓν ἐξ αὐτῶν οὐ πεσεῖται ἐπὶ τὴν γῆν ἄνευ τοῦ πατρὸς ὑμῶν.
+  luke_text: οὐχὶ πέντε στρουθία ⸀πωλοῦνται ἀσσαρίων δύο; καὶ ἓν ἐξ αὐτῶν οὐκ ἔστιν ἐπιλελησμένον ἐνώπιον τοῦ θεοῦ.
+- matt_index: 385
+  luke_index: 541
+  matt_ref: Matt 12:41
+  luke_ref: Luke 11:30
+  score: 0.224576
+  window_support: 0.781258
+  composite_score: 0.419414
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 189.23
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ἄνδρες Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+  luke_text: καθὼς γὰρ ἐγένετο ⸀Ἰωνᾶς ⸂τοῖς Νινευίταις σημεῖον⸃, οὕτως ἔσται καὶ ὁ υἱὸς τοῦ ἀνθρώπου τῇ γενεᾷ ταύτῃ.
+- matt_index: 208
+  luke_index: 308
+  matt_ref: Matt 8:8
+  luke_ref: Luke 7:7
+  score: 0.322053
+  window_support: 0.595388
+  composite_score: 0.41772
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 80.25
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ⸂καὶ ἀποκριθεὶς⸃ ὁ ἑκατόνταρχος ἔφη· Κύριε, οὐκ εἰμὶ ἱκανὸς ἵνα μου ὑπὸ τὴν στέγην εἰσέλθῃς· ἀλλὰ μόνον εἰπὲ
+    λόγῳ, καὶ ἰαθήσεται ὁ παῖς μου·
+  luke_text: διὸ οὐδὲ ἐμαυτὸν ἠξίωσα πρὸς σὲ ἐλθεῖν· ἀλλὰ εἰπὲ λόγῳ, καὶ ⸀ἰαθήτω ὁ παῖς μου·
+- matt_index: 337
+  luke_index: 484
+  matt_ref: Matt 11:23
+  luke_ref: Luke 10:15
+  score: 0.47833
+  window_support: 0.303493
+  composite_score: 0.417137
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 148.47
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ σύ, Καφαρναούμ, ⸂μὴ ἕως οὐρανοῦ ὑψωθήσῃ⸃; ἕως ᾅδου ⸀καταβήσῃ· ὅτι εἰ ἐν Σοδόμοις ⸀ἐγενήθησαν αἱ δυνάμεις
+    αἱ γενόμεναι ἐν σοί, ⸀ἔμεινεν ἂν μέχρι τῆς σήμερον.
+  luke_text: καὶ σύ, Καφαρναούμ, ⸂μὴ ἕως οὐρανοῦ ὑψωθήσῃ⸃; ἕως ⸀τοῦ ᾅδου ⸀καταβιβασθήσῃ.
+- matt_index: 70
+  luke_index: 179
+  matt_ref: Matt 4:6
+  luke_ref: Luke 4:10
+  score: 0.310127
+  window_support: 0.610157
+  composite_score: 0.415137
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 5
+  matt_text: καὶ λέγει αὐτῷ· Εἰ υἱὸς εἶ τοῦ θεοῦ, βάλε σεαυτὸν κάτω· γέγραπται γὰρ ὅτι Τοῖς ἀγγέλοις αὐτοῦ ἐντελεῖται περὶ
+    σοῦ καὶ ἐπὶ χειρῶν ἀροῦσίν σε, μήποτε προσκόψῃς πρὸς λίθον τὸν πόδα σου.
+  luke_text: γέγραπται γὰρ ὅτι Τοῖς ἀγγέλοις αὐτοῦ ἐντελεῖται περὶ σοῦ τοῦ διαφυλάξαι σε,
+- matt_index: 426
+  luke_index: 643
+  matt_ref: Matt 13:32
+  luke_ref: Luke 13:19
+  score: 0.36316
+  window_support: 0.511433
+  composite_score: 0.415055
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 273.14
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὃ μικρότερον μέν ἐστιν πάντων τῶν σπερμάτων, ὅταν δὲ αὐξηθῇ μεῖζον τῶν λαχάνων ἐστὶν καὶ γίνεται δένδρον, ὥστε
+    ἐλθεῖν τὰ πετεινὰ τοῦ οὐρανοῦ καὶ κατασκηνοῦν ἐν τοῖς κλάδοις αὐτοῦ.
+  luke_text: ὁμοία ἐστὶν κόκκῳ σινάπεως, ὃν λαβὼν ἄνθρωπος ἔβαλεν εἰς κῆπον ἑαυτοῦ, καὶ ηὔξησεν καὶ ἐγένετο εἰς ⸀δένδρον,
+    καὶ τὰ πετεινὰ τοῦ οὐρανοῦ κατεσκήνωσεν ἐν τοῖς κλάδοις αὐτοῦ.
+- matt_index: 160
+  luke_index: 545
+  matt_ref: Matt 6:23
+  luke_ref: Luke 11:34
+  score: 0.367773
+  window_support: 0.498348
+  composite_score: 0.413474
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 349.92
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἐὰν δὲ ὁ ὀφθαλμός σου πονηρὸς ᾖ, ὅλον τὸ σῶμά σου σκοτεινὸν ἔσται. εἰ οὖν τὸ φῶς τὸ ἐν σοὶ σκότος ἐστίν, τὸ σκότος
+    πόσον.
+  luke_text: ὁ λύχνος τοῦ σώματός ἐστιν ὁ ὀφθαλμός ⸀σου. ⸀ὅταν ὁ ὀφθαλμός σου ἁπλοῦς ᾖ, καὶ ὅλον τὸ σῶμά σου φωτεινόν ἐστιν·
+    ἐπὰν δὲ πονηρὸς ᾖ, καὶ τὸ σῶμά σου σκοτεινόν.
+- matt_index: 855
+  luke_index: 602
+  matt_ref: Matt 24:46
+  luke_ref: Luke 12:37
+  score: 0.485748
+  window_support: 0.278711
+  composite_score: 0.413286
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 363.18
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: μακάριος ὁ δοῦλος ἐκεῖνος ὃν ἐλθὼν ὁ κύριος αὐτοῦ εὑρήσει ⸂οὕτως ποιοῦντα⸃·
+  luke_text: μακάριοι οἱ δοῦλοι ἐκεῖνοι, οὓς ἐλθὼν ὁ κύριος εὑρήσει γρηγοροῦντας· ἀμὴν λέγω ὑμῖν ὅτι περιζώσεται καὶ ἀνακλινεῖ
+    αὐτοὺς καὶ παρελθὼν διακονήσει αὐτοῖς.
+- matt_index: 311
+  luke_index: 431
+  matt_ref: Matt 10:39
+  luke_ref: Luke 9:24
+  score: 0.511176
+  window_support: 0.213365
+  composite_score: 0.406942
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 118.75
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 20
+  matt_text: ὁ εὑρὼν τὴν ψυχὴν αὐτοῦ ἀπολέσει αὐτήν, καὶ ὁ ἀπολέσας τὴν ψυχὴν αὐτοῦ ἕνεκεν ἐμοῦ εὑρήσει αὐτήν.
+  luke_text: ὃς γὰρ ⸀ἂν θέλῃ τὴν ψυχὴν αὐτοῦ σῶσαι, ἀπολέσει αὐτήν· ὃς δ’ ἂν ἀπολέσῃ τὴν ψυχὴν αὐτοῦ ἕνεκεν ἐμοῦ, οὗτος σώσει
+    αὐτήν.
+- matt_index: 336
+  luke_index: 481
+  matt_ref: Matt 11:22
+  luke_ref: Luke 10:12
+  score: 0.216961
+  window_support: 0.759635
+  composite_score: 0.406897
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 145.6
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πλὴν λέγω ὑμῖν, Τύρῳ καὶ Σιδῶνι ἀνεκτότερον ἔσται ἐν ἡμέρᾳ κρίσεως ἢ ὑμῖν.
+  luke_text: λέγω ὑμῖν ὅτι Σοδόμοις ἐν τῇ ἡμέρᾳ ἐκείνῃ ἀνεκτότερον ἔσται ἢ τῇ πόλει ἐκείνῃ.
+- matt_index: 168
+  luke_index: 594
+  matt_ref: Matt 6:31
+  luke_ref: Luke 12:29
+  score: 0.395172
+  window_support: 0.425426
+  composite_score: 0.405761
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 397.71
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: μὴ οὖν μεριμνήσητε λέγοντες· Τί φάγωμεν; ἤ· Τί πίωμεν; ἤ· Τί περιβαλώμεθα;
+  luke_text: καὶ ὑμεῖς μὴ ζητεῖτε τί φάγητε ⸀καὶ τί πίητε, καὶ μὴ μετεωρίζεσθε,
+- matt_index: 843
+  luke_index: 964
+  matt_ref: Matt 24:34
+  luke_ref: Luke 21:33
+  score: 0.334868
+  window_support: 0.531673
+  composite_score: 0.40375
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ἀμὴν λέγω ὑμῖν ⸀ὅτι οὐ μὴ παρέλθῃ ἡ γενεὰ αὕτη ἕως ἂν πάντα ταῦτα γένηται.
+  luke_text: ὁ οὐρανὸς καὶ ἡ γῆ ⸀παρελεύσονται, οἱ δὲ λόγοι μου οὐ μὴ παρελεύσονται.
+- matt_index: 397
+  luke_index: 356
+  matt_ref: Matt 13:3
+  luke_ref: Luke 8:5
+  score: 0.417396
+  window_support: 0.377527
+  composite_score: 0.403442
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 0.5
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: καὶ ἐλάλησεν αὐτοῖς πολλὰ ἐν παραβολαῖς λέγων· Ἰδοὺ ἐξῆλθεν ὁ σπείρων τοῦ σπείρειν.
+  luke_text: Ἐξῆλθεν ὁ σπείρων τοῦ σπεῖραι τὸν σπόρον αὐτοῦ. καὶ ἐν τῷ σπείρειν αὐτὸν ὃ μὲν ἔπεσεν παρὰ τὴν ὁδόν, καὶ κατεπατήθη
+    καὶ τὰ πετεινὰ τοῦ οὐρανοῦ κατέφαγεν αὐτό.
+- matt_index: 390
+  luke_index: 371
+  matt_ref: Matt 12:46
+  luke_ref: Luke 8:20
+  score: 0.395259
+  window_support: 0.415458
+  composite_score: 0.402329
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 17.71
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - moderate_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: Ἔτι ⸀δὲ αὐτοῦ λαλοῦντος τοῖς ὄχλοις ἰδοὺ ἡ μήτηρ καὶ οἱ ἀδελφοὶ αὐτοῦ εἱστήκεισαν ἔξω ζητοῦντες αὐτῷ λαλῆσαι.
+  luke_text: ⸂ἀπηγγέλη δὲ⸃ ⸀αὐτῷ· Ἡ μήτηρ σου καὶ οἱ ἀδελφοί σου ἑστήκασιν ἔξω ἰδεῖν ⸂σε θέλοντες⸃.
+- matt_index: 70
+  luke_index: 178
+  matt_ref: Matt 4:6
+  luke_ref: Luke 4:9
+  score: 0.289981
+  window_support: 0.610157
+  composite_score: 0.402043
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 2.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 5
+  matt_text: καὶ λέγει αὐτῷ· Εἰ υἱὸς εἶ τοῦ θεοῦ, βάλε σεαυτὸν κάτω· γέγραπται γὰρ ὅτι Τοῖς ἀγγέλοις αὐτοῦ ἐντελεῖται περὶ
+    σοῦ καὶ ἐπὶ χειρῶν ἀροῦσίν σε, μήποτε προσκόψῃς πρὸς λίθον τὸν πόδα σου.
+  luke_text: ⸂Ἤγαγεν δὲ⸃ αὐτὸν εἰς Ἰερουσαλὴμ καὶ ⸀ἔστησεν ἐπὶ τὸ πτερύγιον τοῦ ἱεροῦ, καὶ εἶπεν αὐτῷ· Εἰ υἱὸς εἶ τοῦ θεοῦ,
+    βάλε σεαυτὸν ἐντεῦθεν κάτω·
+- matt_index: 584
+  luke_index: 810
+  matt_ref: Matt 18:3
+  luke_ref: Luke 18:17
+  score: 0.474029
+  window_support: 0.261367
+  composite_score: 0.399597
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 355.67
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 20
+  - 24
+  matt_text: καὶ εἶπεν· Ἀμὴν λέγω ὑμῖν, ἐὰν μὴ στραφῆτε καὶ γένησθε ὡς τὰ παιδία, οὐ μὴ εἰσέλθητε εἰς τὴν βασιλείαν τῶν οὐρανῶν.
+  luke_text: ἀμὴν λέγω ὑμῖν, ὃς ⸀ἂν μὴ δέξηται τὴν βασιλείαν τοῦ θεοῦ ὡς παιδίον, οὐ μὴ εἰσέλθῃ εἰς αὐτήν.
+- matt_index: 970
+  luke_index: 1038
+  matt_ref: Matt 26:64
+  luke_ref: Luke 22:69
+  score: 0.445585
+  window_support: 0.30505
+  composite_score: 0.396398
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 13.91
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - moderate_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 30
+  matt_text: λέγει αὐτῷ ὁ Ἰησοῦς· Σὺ εἶπας· πλὴν λέγω ὑμῖν, ἀπ’ ἄρτι ὄψεσθε τὸν υἱὸν τοῦ ἀνθρώπου καθήμενον ἐκ δεξιῶν τῆς
+    δυνάμεως καὶ ἐρχόμενον ἐπὶ τῶν νεφελῶν τοῦ οὐρανοῦ.
+  luke_text: ἀπὸ τοῦ νῦν ⸀δὲ ἔσται ὁ υἱὸς τοῦ ἀνθρώπου καθήμενος ἐκ δεξιῶν τῆς δυνάμεως τοῦ θεοῦ.
+- matt_index: 335
+  luke_index: 483
+  matt_ref: Matt 11:21
+  luke_ref: Luke 10:14
+  score: 0.200339
+  window_support: 0.759635
+  composite_score: 0.396093
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 5
+  nonlocality_vs_primary: 147.73
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Οὐαί σοι, Χοραζίν· οὐαί σοι, Βηθσαϊδά· ὅτι εἰ ἐν Τύρῳ καὶ Σιδῶνι ἐγένοντο αἱ δυνάμεις αἱ γενόμεναι ἐν ὑμῖν, πάλαι
+    ἂν ἐν σάκκῳ καὶ σποδῷ μετενόησαν.
+  luke_text: πλὴν Τύρῳ καὶ Σιδῶνι ἀνεκτότερον ἔσται ἐν τῇ κρίσει ἢ ὑμῖν.
+- matt_index: 841
+  luke_index: 962
+  matt_ref: Matt 24:32
+  luke_ref: Luke 21:31
+  score: 0.168148
+  window_support: 0.813853
+  composite_score: 0.394145
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: Ἀπὸ δὲ τῆς συκῆς μάθετε τὴν παραβολήν· ὅταν ἤδη ὁ κλάδος αὐτῆς γένηται ἁπαλὸς καὶ τὰ φύλλα ἐκφύῃ, γινώσκετε ὅτι
+    ἐγγὺς τὸ θέρος·
+  luke_text: οὕτως καὶ ὑμεῖς, ὅταν ἴδητε ταῦτα γινόμενα, γινώσκετε ὅτι ἐγγύς ἐστιν ἡ βασιλεία τοῦ θεοῦ.
+- matt_index: 425
+  luke_index: 643
+  matt_ref: Matt 13:31
+  luke_ref: Luke 13:19
+  score: 0.329413
+  window_support: 0.511433
+  composite_score: 0.39312
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 273.57
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ἄλλην παραβολὴν παρέθηκεν αὐτοῖς λέγων· Ὁμοία ἐστὶν ἡ βασιλεία τῶν οὐρανῶν κόκκῳ σινάπεως, ὃν λαβὼν ἄνθρωπος
+    ἔσπειρεν ἐν τῷ ἀγρῷ αὐτοῦ·
+  luke_text: ὁμοία ἐστὶν κόκκῳ σινάπεως, ὃν λαβὼν ἄνθρωπος ἔβαλεν εἰς κῆπον ἑαυτοῦ, καὶ ηὔξησεν καὶ ἐγένετο εἰς ⸀δένδρον,
+    καὶ τὰ πετεινὰ τοῦ οὐρανοῦ κατεσκήνωσεν ἐν τοῖς κλάδοις αὐτοῦ.
+- matt_index: 702
+  luke_index: 892
+  matt_ref: Matt 21:23
+  luke_ref: Luke 20:8
+  score: 0.446531
+  window_support: 0.287859
+  composite_score: 0.390996
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 6.0
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: Καὶ ⸂ἐλθόντος αὐτοῦ⸃ εἰς τὸ ἱερὸν προσῆλθον αὐτῷ διδάσκοντι οἱ ἀρχιερεῖς καὶ οἱ πρεσβύτεροι τοῦ λαοῦ λέγοντες·
+    Ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιεῖς; καὶ τίς σοι ἔδωκεν τὴν ἐξουσίαν ταύτην;
+  luke_text: καὶ ὁ Ἰησοῦς εἶπεν αὐτοῖς· Οὐδὲ ἐγὼ λέγω ὑμῖν ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιῶ.
+- matt_index: 704
+  luke_index: 888
+  matt_ref: Matt 21:25
+  luke_ref: Luke 20:4
+  score: 0.341865
+  window_support: 0.479482
+  composite_score: 0.390031
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: τὸ βάπτισμα ⸀τὸ Ἰωάννου πόθεν ἦν; ἐξ οὐρανοῦ ἢ ἐξ ἀνθρώπων; οἱ δὲ διελογίζοντο ⸀ἐν ἑαυτοῖς λέγοντες· Ἐὰν εἴπωμεν·
+    Ἐξ οὐρανοῦ, ἐρεῖ ἡμῖν· Διὰ τί οὖν οὐκ ἐπιστεύσατε αὐτῷ;
+  luke_text: Τὸ βάπτισμα Ἰωάννου ἐξ οὐρανοῦ ἦν ἢ ἐξ ἀνθρώπων;
+- matt_index: 55
+  luke_index: 140
+  matt_ref: Matt 3:8
+  luke_ref: Luke 3:9
+  score: 0.122839
+  window_support: 0.879367
+  composite_score: 0.387624
+  rank_matt_to_luke: 4
+  rank_luke_to_matt: 6
+  nonlocality_vs_primary: 1.5
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 4
+  matt_text: ποιήσατε οὖν καρπὸν ἄξιον τῆς μετανοίας
+  luke_text: ἤδη δὲ καὶ ἡ ἀξίνη πρὸς τὴν ῥίζαν τῶν δένδρων κεῖται· πᾶν οὖν δένδρον μὴ ποιοῦν καρπὸν καλὸν ἐκκόπτεται καὶ εἰς
+    πῦρ βάλλεται.
+- matt_index: 239
+  luke_index: 349
+  matt_ref: Matt 9:5
+  luke_ref: Luke 7:48
+  score: 0.465586
+  window_support: 0.233806
+  composite_score: 0.384463
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 113.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 9
+  - 15
+  matt_text: τί γάρ ἐστιν εὐκοπώτερον, εἰπεῖν· ⸀Ἀφίενταί σου αἱ ἁμαρτίαι, ἢ εἰπεῖν· ⸀Ἔγειρε καὶ περιπάτει;
+  luke_text: εἶπεν δὲ αὐτῇ· Ἀφέωνταί σου αἱ ἁμαρτίαι.
+- matt_index: 330
+  luke_index: 333
+  matt_ref: Matt 11:16
+  luke_ref: Luke 7:32
+  score: 0.266925
+  window_support: 0.601656
+  composite_score: 0.384081
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: Τίνι δὲ ὁμοιώσω τὴν γενεὰν ταύτην; ὁμοία ἐστὶν παιδίοις ⸂καθημένοις ἐν ταῖς ἀγοραῖς ἃ προσφωνοῦντα τοῖς ἑτέροις⸃
+  luke_text: ὅμοιοί εἰσιν παιδίοις τοῖς ἐν ἀγορᾷ καθημένοις καὶ προσφωνοῦσιν ἀλλήλοις, ⸂ἃ λέγει⸃· Ηὐλήσαμεν ὑμῖν καὶ οὐκ ὠρχήσασθε·
+    ⸀ἐθρηνήσαμεν καὶ οὐκ ἐκλαύσατε·
+- matt_index: 212
+  luke_index: 652
+  matt_ref: Matt 8:12
+  luke_ref: Luke 13:28
+  score: 0.404378
+  window_support: 0.345618
+  composite_score: 0.383812
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 423.5
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οἱ δὲ υἱοὶ τῆς βασιλείας ἐκβληθήσονται εἰς τὸ σκότος τὸ ἐξώτερον· ἐκεῖ ἔσται ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων.
+  luke_text: ἐκεῖ ἔσται ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων, ὅταν ⸀ὄψησθε Ἀβραὰμ καὶ Ἰσαὰκ καὶ Ἰακὼβ καὶ πάντας τοὺς προφήτας
+    ἐν τῇ βασιλείᾳ τοῦ θεοῦ, ὑμᾶς δὲ ἐκβαλλομένους ἔξω.
+- matt_index: 406
+  luke_index: 369
+  matt_ref: Matt 13:12
+  luke_ref: Luke 8:18
+  score: 0.471339
+  window_support: 0.221135
+  composite_score: 0.383768
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 7.86
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὅστις γὰρ ἔχει, δοθήσεται αὐτῷ καὶ περισσευθήσεται· ὅστις δὲ οὐκ ἔχει, καὶ ὃ ἔχει ἀρθήσεται ἀπ’ αὐτοῦ.
+  luke_text: βλέπετε οὖν πῶς ἀκούετε· ὃς ⸂ἂν γὰρ⸃ ἔχῃ, δοθήσεται αὐτῷ, καὶ ὃς ⸀ἂν μὴ ἔχῃ, καὶ ὃ δοκεῖ ἔχειν ἀρθήσεται ἀπ’
+    αὐτοῦ.
+- matt_index: 22
+  luke_index: 30
+  matt_ref: Matt 1:23
+  luke_ref: Luke 1:31
+  score: 0.431884
+  window_support: 0.294004
+  composite_score: 0.383626
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 4.0
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 2
+  matt_text: Ἰδοὺ ἡ παρθένος ἐν γαστρὶ ἕξει καὶ τέξεται υἱόν, καὶ καλέσουσιν τὸ ὄνομα αὐτοῦ Ἐμμανουήλ· ὅ ἐστιν μεθερμηνευόμενον
+    Μεθ’ ἡμῶν ὁ θεός.
+  luke_text: καὶ ἰδοὺ συλλήμψῃ ἐν γαστρὶ καὶ τέξῃ υἱόν, καὶ καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν.
+- matt_index: 858
+  luke_index: 610
+  matt_ref: Matt 24:49
+  luke_ref: Luke 12:45
+  score: 0.279423
+  window_support: 0.5701
+  composite_score: 0.38116
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 355.51
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ ἄρξηται τύπτειν τοὺς συνδούλους ⸂αὐτοῦ, ἐσθίῃ δὲ καὶ πίνῃ⸃ μετὰ τῶν μεθυόντων,
+  luke_text: ἐὰν δὲ εἴπῃ ὁ δοῦλος ἐκεῖνος ἐν τῇ καρδίᾳ αὐτοῦ· Χρονίζει ὁ κύριός μου ἔρχεσθαι, καὶ ἄρξηται τύπτειν τοὺς παῖδας
+    καὶ τὰς παιδίσκας, ἐσθίειν τε καὶ πίνειν καὶ μεθύσκεσθαι,
+- matt_index: 388
+  luke_index: 535
+  matt_ref: Matt 12:44
+  luke_ref: Luke 11:24
+  score: 0.188806
+  window_support: 0.738001
+  composite_score: 0.381024
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 182.31
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: τότε λέγει· ⸂Εἰς τὸν οἶκόν μου ἐπιστρέψω⸃ ὅθεν ἐξῆλθον· καὶ ἐλθὸν ⸀εὑρίσκει ⸀σχολάζοντα σεσαρωμένον καὶ κεκοσμημένον.
+  luke_text: Ὅταν τὸ ἀκάθαρτον πνεῦμα ἐξέλθῃ ἀπὸ τοῦ ἀνθρώπου, διέρχεται δι’ ἀνύδρων τόπων ζητοῦν ἀνάπαυσιν, καὶ μὴ ⸀εὑρίσκον
+    λέγει· Ὑποστρέψω εἰς τὸν οἶκόν μου ὅθεν ἐξῆλθον·
+- matt_index: 369
+  luke_index: 528
+  matt_ref: Matt 12:25
+  luke_ref: Luke 11:17
+  score: 0.19572
+  window_support: 0.724517
+  composite_score: 0.380799
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 182.44
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: εἰδὼς ⸀δὲ τὰς ἐνθυμήσεις αὐτῶν εἶπεν αὐτοῖς· Πᾶσα βασιλεία μερισθεῖσα καθ’ ἑαυτῆς ἐρημοῦται, καὶ πᾶσα πόλις ἢ
+    οἰκία μερισθεῖσα καθ’ ἑαυτῆς οὐ σταθήσεται.
+  luke_text: αὐτὸς δὲ εἰδὼς αὐτῶν τὰ διανοήματα εἶπεν αὐτοῖς· Πᾶσα βασιλεία ἐφ’ ἑαυτὴν διαμερισθεῖσα ἐρημοῦται, καὶ οἶκος
+    ἐπὶ οἶκον πίπτει.
+- matt_index: 469
+  luke_index: 423
+  matt_ref: Matt 14:17
+  luke_ref: Luke 9:16
+  score: 0.330602
+  window_support: 0.472977
+  composite_score: 0.380433
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 2.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 18
+  matt_text: οἱ δὲ λέγουσιν αὐτῷ· Οὐκ ἔχομεν ὧδε εἰ μὴ πέντε ἄρτους καὶ δύο ἰχθύας.
+  luke_text: λαβὼν δὲ τοὺς πέντε ἄρτους καὶ τοὺς δύο ἰχθύας ἀναβλέψας εἰς τὸν οὐρανὸν εὐλόγησεν αὐτοὺς καὶ κατέκλασεν καὶ
+    ἐδίδου τοῖς μαθηταῖς ⸀παραθεῖναι τῷ ὄχλῳ.
+- matt_index: 795
+  luke_index: 550
+  matt_ref: Matt 23:25
+  luke_ref: Luke 11:39
+  score: 0.428249
+  window_support: 0.289448
+  composite_score: 0.379669
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 383.36
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Οὐαὶ ὑμῖν, γραμματεῖς καὶ Φαρισαῖοι ὑποκριταί, ὅτι καθαρίζετε τὸ ἔξωθεν τοῦ ποτηρίου καὶ τῆς παροψίδος, ἔσωθεν
+    δὲ γέμουσιν ἐξ ἁρπαγῆς καὶ ⸀ἀκρασίας.
+  luke_text: εἶπεν δὲ ὁ κύριος πρὸς αὐτόν· Νῦν ὑμεῖς οἱ Φαρισαῖοι τὸ ἔξωθεν τοῦ ποτηρίου καὶ τοῦ πίνακος καθαρίζετε, τὸ δὲ
+    ἔσωθεν ὑμῶν γέμει ἁρπαγῆς καὶ πονηρίας.
+- matt_index: 850
+  luke_index: 792
+  matt_ref: Matt 24:41
+  luke_ref: Luke 17:35
+  score: 0.430506
+  window_support: 0.282985
+  composite_score: 0.378873
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 172.65
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 23
+  matt_text: δύο ἀλήθουσαι ἐν τῷ ⸀μύλῳ, μία παραλαμβάνεται καὶ μία ἀφίεται.
+  luke_text: ⸂ἔσονται δύο⸃ ἀλήθουσαι ἐπὶ τὸ αὐτό, ⸀ἡ μία παραλημφθήσεται ⸂ἡ δὲ⸃ ἑτέρα ⸀ἀφεθήσεται.
+- matt_index: 336
+  luke_index: 482
+  matt_ref: Matt 11:22
+  luke_ref: Luke 10:13
+  score: 0.173192
+  window_support: 0.759635
+  composite_score: 0.378447
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 146.6
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πλὴν λέγω ὑμῖν, Τύρῳ καὶ Σιδῶνι ἀνεκτότερον ἔσται ἐν ἡμέρᾳ κρίσεως ἢ ὑμῖν.
+  luke_text: Οὐαί σοι, Χοραζίν· οὐαί σοι, Βηθσαϊδά· ὅτι εἰ ἐν Τύρῳ καὶ Σιδῶνι ⸀ἐγενήθησαν αἱ δυνάμεις αἱ γενόμεναι ἐν ὑμῖν,
+    πάλαι ἂν ἐν σάκκῳ καὶ σποδῷ ⸀καθήμενοι μετενόησαν.
+- matt_index: 826
+  luke_index: 788
+  matt_ref: Matt 24:17
+  luke_ref: Luke 17:31
+  score: 0.386316
+  window_support: 0.357759
+  composite_score: 0.376321
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 164.67
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ὁ ἐπὶ τοῦ δώματος μὴ ⸀καταβάτω ἆραι τὰ ἐκ τῆς οἰκίας αὐτοῦ,
+  luke_text: ἐν ἐκείνῃ τῇ ἡμέρᾳ ὃς ἔσται ἐπὶ τοῦ δώματος καὶ τὰ σκεύη αὐτοῦ ἐν τῇ οἰκίᾳ, μὴ καταβάτω ἆραι αὐτά, καὶ ὁ ⸀ἐν
+    ἀγρῷ ὁμοίως μὴ ἐπιστρεψάτω εἰς τὰ ὀπίσω.
+- matt_index: 383
+  luke_index: 541
+  matt_ref: Matt 12:39
+  luke_ref: Luke 11:30
+  score: 0.187238
+  window_support: 0.718563
+  composite_score: 0.373202
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 4
+  nonlocality_vs_primary: 189.85
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὁ δὲ ἀποκριθεὶς εἶπεν αὐτοῖς· Γενεὰ πονηρὰ καὶ μοιχαλὶς σημεῖον ἐπιζητεῖ, καὶ σημεῖον οὐ δοθήσεται αὐτῇ εἰ μὴ
+    τὸ σημεῖον Ἰωνᾶ τοῦ προφήτου.
+  luke_text: καθὼς γὰρ ἐγένετο ⸀Ἰωνᾶς ⸂τοῖς Νινευίταις σημεῖον⸃, οὕτως ἔσται καὶ ὁ υἱὸς τοῦ ἀνθρώπου τῇ γενεᾷ ταύτῃ.
+- matt_index: 121
+  luke_index: 744
+  matt_ref: Matt 5:32
+  luke_ref: Luke 16:18
+  score: 0.455459
+  window_support: 0.214984
+  composite_score: 0.371293
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 554.84
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: ἐγὼ δὲ λέγω ὑμῖν ὅτι ⸂πᾶς ὁ ἀπολύων⸃ τὴν γυναῖκα αὐτοῦ παρεκτὸς λόγου πορνείας ποιεῖ αὐτὴν ⸀μοιχευθῆναι, καὶ
+    ὃς ἐὰν ἀπολελυμένην γαμήσῃ μοιχᾶται.
+  luke_text: Πᾶς ὁ ἀπολύων τὴν γυναῖκα αὐτοῦ καὶ γαμῶν ἑτέραν μοιχεύει, ⸀καὶ ὁ ἀπολελυμένην ἀπὸ ἀνδρὸς γαμῶν μοιχεύει.
+- matt_index: 719
+  luke_index: 899
+  matt_ref: Matt 21:40
+  luke_ref: Luke 20:15
+  score: 0.364099
+  window_support: 0.383075
+  composite_score: 0.370741
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: ὅταν οὖν ἔλθῃ ὁ κύριος τοῦ ἀμπελῶνος, τί ποιήσει τοῖς γεωργοῖς ἐκείνοις;
+  luke_text: καὶ ἐκβαλόντες αὐτὸν ἔξω τοῦ ἀμπελῶνος ἀπέκτειναν. τί οὖν ποιήσει αὐτοῖς ὁ κύριος τοῦ ἀμπελῶνος;
+- matt_index: 180
+  luke_index: 522
+  matt_ref: Matt 7:9
+  luke_ref: Luke 11:11
+  score: 0.234606
+  window_support: 0.6202
+  composite_score: 0.369564
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 323.88
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἢ τίς ⸀ἐστιν ἐξ ὑμῶν ἄνθρωπος, ὃν ⸀αἰτήσει ὁ υἱὸς αὐτοῦ ἄρτον— μὴ λίθον ἐπιδώσει αὐτῷ;
+  luke_text: τίνα δὲ ⸀ἐξ ὑμῶν τὸν πατέρα αἰτήσει ὁ ⸀υἱὸς ἰχθύν, ⸀καὶ ἀντὶ ἰχθύος ὄφιν ⸂αὐτῷ ἐπιδώσει⸃;
+- matt_index: 376
+  luke_index: 575
+  matt_ref: Matt 12:32
+  luke_ref: Luke 12:10
+  score: 0.465303
+  window_support: 0.191349
+  composite_score: 0.369419
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 226.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: καὶ ὃς ἐὰν εἴπῃ λόγον κατὰ τοῦ υἱοῦ τοῦ ἀνθρώπου, ἀφεθήσεται αὐτῷ· ὃς δ’ ἂν εἴπῃ κατὰ τοῦ πνεύματος τοῦ ἁγίου,
+    οὐκ ἀφεθήσεται αὐτῷ οὔτε ἐν ⸂τούτῳ τῷ⸃ αἰῶνι οὔτε ἐν τῷ μέλλοντι.
+  luke_text: καὶ πᾶς ὃς ἐρεῖ λόγον εἰς τὸν υἱὸν τοῦ ἀνθρώπου, ἀφεθήσεται αὐτῷ τῷ δὲ εἰς τὸ ἅγιον πνεῦμα βλασφημήσαντι οὐκ
+    ἀφεθήσεται.
+- matt_index: 385
+  luke_index: 540
+  matt_ref: Matt 12:41
+  luke_ref: Luke 11:29
+  score: 0.142906
+  window_support: 0.781258
+  composite_score: 0.366329
+  rank_matt_to_luke: 4
+  rank_luke_to_matt: 5
+  nonlocality_vs_primary: 188.23
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ἄνδρες Νινευῖται ἀναστήσονται ἐν τῇ κρίσει μετὰ τῆς γενεᾶς ταύτης καὶ κατακρινοῦσιν αὐτήν· ὅτι μετενόησαν εἰς
+    τὸ κήρυγμα Ἰωνᾶ, καὶ ἰδοὺ πλεῖον Ἰωνᾶ ὧδε.
+  luke_text: Τῶν δὲ ὄχλων ἐπαθροιζομένων ἤρξατο λέγειν· Ἡ γενεὰ αὕτη ⸀γενεὰ πονηρά ἐστιν· σημεῖον ⸀ζητεῖ, καὶ σημεῖον οὐ δοθήσεται
+    αὐτῇ εἰ μὴ τὸ σημεῖον ⸀Ἰωνᾶ.
+- matt_index: 322
+  luke_index: 327
+  matt_ref: Matt 11:8
+  luke_ref: Luke 7:26
+  score: 0.194297
+  window_support: 0.682098
+  composite_score: 0.365027
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: ἀλλὰ τί ἐξήλθατε ἰδεῖν; ἄνθρωπον ἐν ⸀μαλακοῖς ἠμφιεσμένον; ἰδοὺ οἱ τὰ μαλακὰ φοροῦντες ἐν τοῖς οἴκοις τῶν ⸀βασιλέων
+    ⸀εἰσίν.
+  luke_text: ἀλλὰ τί ⸀ἐξήλθατε ἰδεῖν; προφήτην; ναί, λέγω ὑμῖν, καὶ περισσότερον προφήτου.
+- matt_index: 843
+  luke_index: 962
+  matt_ref: Matt 24:34
+  luke_ref: Luke 21:31
+  score: 0.123167
+  window_support: 0.813853
+  composite_score: 0.364907
+  rank_matt_to_luke: 20
+  rank_luke_to_matt: 7
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ἀμὴν λέγω ὑμῖν ⸀ὅτι οὐ μὴ παρέλθῃ ἡ γενεὰ αὕτη ἕως ἂν πάντα ταῦτα γένηται.
+  luke_text: οὕτως καὶ ὑμεῖς, ὅταν ἴδητε ταῦτα γινόμενα, γινώσκετε ὅτι ἐγγύς ἐστιν ἡ βασιλεία τοῦ θεοῦ.
+- matt_index: 842
+  luke_index: 961
+  matt_ref: Matt 24:33
+  luke_ref: Luke 21:30
+  score: 0.121958
+  window_support: 0.813853
+  composite_score: 0.364121
+  rank_matt_to_luke: 5
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: οὕτως καὶ ὑμεῖς, ὅταν ἴδητε ⸂πάντα ταῦτα⸃, γινώσκετε ὅτι ἐγγύς ἐστιν ἐπὶ θύραις.
+  luke_text: ὅταν προβάλωσιν ἤδη, βλέποντες ἀφ’ ἑαυτῶν γινώσκετε ὅτι ἤδη ἐγγὺς τὸ θέρος ἐστίν·
+- matt_index: 300
+  luke_index: 569
+  matt_ref: Matt 10:28
+  luke_ref: Luke 12:4
+  score: 0.311734
+  window_support: 0.460739
+  composite_score: 0.363886
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 271.6
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ μὴ ⸀φοβεῖσθε ἀπὸ τῶν ἀποκτεννόντων τὸ σῶμα τὴν δὲ ψυχὴν μὴ δυναμένων ἀποκτεῖναι· ⸁φοβεῖσθε δὲ μᾶλλον τὸν
+    δυνάμενον ⸀καὶ ψυχὴν ⸁καὶ σῶμα ἀπολέσαι ἐν γεέννῃ.
+  luke_text: Λέγω δὲ ὑμῖν τοῖς φίλοις μου, μὴ φοβηθῆτε ἀπὸ τῶν ἀποκτεινόντων τὸ σῶμα καὶ μετὰ ταῦτα μὴ ἐχόντων περισσότερόν
+    τι ποιῆσαι.
+- matt_index: 169
+  luke_index: 595
+  matt_ref: Matt 6:32
+  luke_ref: Luke 12:30
+  score: 0.377909
+  window_support: 0.335271
+  composite_score: 0.362986
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 398.55
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πάντα γὰρ ταῦτα τὰ ἔθνη ⸀ἐπιζητοῦσιν· οἶδεν γὰρ ὁ πατὴρ ὑμῶν ὁ οὐράνιος ὅτι χρῄζετε τούτων ἁπάντων.
+  luke_text: ταῦτα γὰρ πάντα τὰ ἔθνη τοῦ κόσμου ⸀ἐπιζητοῦσιν, ὑμῶν δὲ ὁ πατὴρ οἶδεν ὅτι χρῄζετε τούτων.
+- matt_index: 232
+  luke_index: 384
+  matt_ref: Matt 8:32
+  luke_ref: Luke 8:33
+  score: 0.374691
+  window_support: 0.333856
+  composite_score: 0.360399
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 151.75
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ εἶπεν αὐτοῖς· Ὑπάγετε. οἱ δὲ ἐξελθόντες ἀπῆλθον εἰς ⸂τοὺς χοίρους⸃· καὶ ἰδοὺ ὥρμησεν πᾶσα ἡ ⸀ἀγέλη κατὰ τοῦ
+    κρημνοῦ εἰς τὴν θάλασσαν, καὶ ἀπέθανον ἐν τοῖς ὕδασιν.
+  luke_text: ἐξελθόντα δὲ τὰ δαιμόνια ἀπὸ τοῦ ἀνθρώπου εἰσῆλθον εἰς τοὺς χοίρους, καὶ ὥρμησεν ἡ ἀγέλη κατὰ τοῦ κρημνοῦ εἰς
+    τὴν λίμνην καὶ ἀπεπνίγη.
+- matt_index: 190
+  luke_index: 295
+  matt_ref: Matt 7:19
+  luke_ref: Luke 6:43
+  score: 0.360957
+  window_support: 0.35934
+  composite_score: 0.360391
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 4
+  nonlocality_vs_primary: 95.37
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: πᾶν δένδρον μὴ ποιοῦν καρπὸν καλὸν ἐκκόπτεται καὶ εἰς πῦρ βάλλεται.
+  luke_text: Οὐ γάρ ἐστιν δένδρον καλὸν ποιοῦν καρπὸν σαπρόν, οὐδὲ ⸀πάλιν δένδρον σαπρὸν ποιοῦν καρπὸν καλόν.
+- matt_index: 706
+  luke_index: 886
+  matt_ref: Matt 21:27
+  luke_ref: Luke 20:2
+  score: 0.428878
+  window_support: 0.231876
+  composite_score: 0.359928
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 6.0
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: καὶ ἀποκριθέντες τῷ Ἰησοῦ εἶπαν· Οὐκ οἴδαμεν. ἔφη αὐτοῖς καὶ αὐτός· Οὐδὲ ἐγὼ λέγω ὑμῖν ἐν ποίᾳ ἐξουσίᾳ ταῦτα
+    ποιῶ.
+  luke_text: καὶ εἶπαν ⸂λέγοντες πρὸς αὐτόν⸃· Εἰπὸν ἡμῖν ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιεῖς, ἢ τίς ἐστιν ὁ δούς σοι τὴν ἐξουσίαν
+    ταύτην;
+- matt_index: 239
+  luke_index: 237
+  matt_ref: Matt 9:5
+  luke_ref: Luke 5:24
+  score: 0.2422
+  window_support: 0.574975
+  composite_score: 0.358671
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 9
+  matt_text: τί γάρ ἐστιν εὐκοπώτερον, εἰπεῖν· ⸀Ἀφίενταί σου αἱ ἁμαρτίαι, ἢ εἰπεῖν· ⸀Ἔγειρε καὶ περιπάτει;
+  luke_text: ἵνα δὲ εἰδῆτε ὅτι ⸂ὁ υἱὸς τοῦ ἀνθρώπου ἐξουσίαν ἔχει⸃ ἐπὶ τῆς γῆς ἀφιέναι ἁμαρτίας— εἶπεν τῷ παραλελυμένῳ· Σοὶ
+    λέγω, ⸀ἔγειρε καὶ ἄρας τὸ κλινίδιόν σου πορεύου εἰς τὸν οἶκόν σου.
+- matt_index: 146
+  luke_index: 513
+  matt_ref: Matt 6:9
+  luke_ref: Luke 11:2
+  score: 0.356671
+  window_support: 0.361236
+  composite_score: 0.358268
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 320.04
+  tags:
+  - strong_verbal_echo
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Οὕτως οὖν προσεύχεσθε ὑμεῖς· Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς· ἁγιασθήτω τὸ ὄνομά σου,
+  luke_text: εἶπεν δὲ αὐτοῖς· Ὅταν προσεύχησθε, λέγετε· ⸀Πάτερ, ἁγιασθήτω τὸ ὄνομά σου· ἐλθέτω ἡ βασιλεία ⸀σου·
+- matt_index: 757
+  luke_index: 922
+  matt_ref: Matt 22:32
+  luke_ref: Luke 20:38
+  score: 0.334697
+  window_support: 0.40004
+  composite_score: 0.357567
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 27
+  matt_text: Ἐγώ εἰμι ὁ θεὸς Ἀβραὰμ καὶ ὁ θεὸς Ἰσαὰκ καὶ ὁ θεὸς Ἰακώβ; οὐκ ἔστιν ⸂ὁ θεὸς⸃ νεκρῶν ἀλλὰ ζώντων.
+  luke_text: θεὸς δὲ οὐκ ἔστιν νεκρῶν ἀλλὰ ζώντων, πάντες γὰρ αὐτῷ ζῶσιν.
+- matt_index: 384
+  luke_index: 541
+  matt_ref: Matt 12:40
+  luke_ref: Luke 11:30
+  score: 0.12892
+  window_support: 0.781258
+  composite_score: 0.357238
+  rank_matt_to_luke: 5
+  rank_luke_to_matt: 14
+  nonlocality_vs_primary: 189.54
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὥσπερ γὰρ ἦν Ἰωνᾶς ἐν τῇ κοιλίᾳ τοῦ κήτους τρεῖς ἡμέρας καὶ τρεῖς νύκτας, οὕτως ἔσται ὁ υἱὸς τοῦ ἀνθρώπου ἐν
+    τῇ καρδίᾳ τῆς γῆς τρεῖς ἡμέρας καὶ τρεῖς νύκτας.
+  luke_text: καθὼς γὰρ ἐγένετο ⸀Ἰωνᾶς ⸂τοῖς Νινευίταις σημεῖον⸃, οὕτως ἔσται καὶ ὁ υἱὸς τοῦ ἀνθρώπου τῇ γενεᾷ ταύτῃ.
+- matt_index: 661
+  luke_index: 654
+  matt_ref: Matt 20:16
+  luke_ref: Luke 13:30
+  score: 0.463597
+  window_support: 0.157607
+  composite_score: 0.356501
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 169.79
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: οὕτως ἔσονται οἱ ἔσχατοι πρῶτοι καὶ οἱ πρῶτοι ⸀ἔσχατοι.
+  luke_text: καὶ ἰδοὺ εἰσὶν ἔσχατοι οἳ ἔσονται πρῶτοι, καὶ εἰσὶν πρῶτοι οἳ ἔσονται ἔσχατοι.
+- matt_index: 181
+  luke_index: 523
+  matt_ref: Matt 7:10
+  luke_ref: Luke 11:12
+  score: 0.233458
+  window_support: 0.5778
+  composite_score: 0.353978
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 324.73
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ⸀ἢ καὶ ⸂ἰχθὺν αἰτήσει⸃— μὴ ὄφιν ἐπιδώσει αὐτῷ;
+  luke_text: ἢ καὶ ⸀αἰτήσει ᾠόν, ⸀ἐπιδώσει αὐτῷ σκορπίον;
+- matt_index: 645
+  luke_index: 654
+  matt_ref: Matt 19:30
+  luke_ref: Luke 13:30
+  score: 0.466348
+  window_support: 0.144946
+  composite_score: 0.353857
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 168.11
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: πολλοὶ δὲ ἔσονται πρῶτοι ἔσχατοι καὶ ἔσχατοι πρῶτοι.
+  luke_text: καὶ ἰδοὺ εἰσὶν ἔσχατοι οἳ ἔσονται πρῶτοι, καὶ εἰσὶν πρῶτοι οἳ ἔσονται ἔσχατοι.
+- matt_index: 827
+  luke_index: 788
+  matt_ref: Matt 24:18
+  luke_ref: Luke 17:31
+  score: 0.349524
+  window_support: 0.357759
+  composite_score: 0.352406
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 165.33
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: καὶ ὁ ἐν τῷ ἀγρῷ μὴ ἐπιστρεψάτω ὀπίσω ἆραι ⸂τὸ ἱμάτιον⸃ αὐτοῦ.
+  luke_text: ἐν ἐκείνῃ τῇ ἡμέρᾳ ὃς ἔσται ἐπὶ τοῦ δώματος καὶ τὰ σκεύη αὐτοῦ ἐν τῇ οἰκίᾳ, μὴ καταβάτω ἆραι αὐτά, καὶ ὁ ⸀ἐν
+    ἀγρῷ ὁμοίως μὴ ἐπιστρεψάτω εἰς τὰ ὀπίσω.
+- matt_index: 307
+  luke_index: 618
+  matt_ref: Matt 10:35
+  luke_ref: Luke 12:53
+  score: 0.421452
+  window_support: 0.220482
+  composite_score: 0.351113
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 311.15
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: ἦλθον γὰρ διχάσαι ἄνθρωπον κατὰ τοῦ πατρὸς αὐτοῦ καὶ θυγατέρα κατὰ τῆς μητρὸς αὐτῆς καὶ νύμφην κατὰ τῆς πενθερᾶς
+    αὐτῆς,
+  luke_text: ⸀διαμερισθήσονται πατὴρ ἐπὶ υἱῷ καὶ υἱὸς ἐπὶ πατρί, μήτηρ ⸀ἐπὶ ⸀θυγατέρα καὶ θυγάτηρ ἐπὶ ⸂τὴν μητέρα⸃, πενθερὰ
+    ἐπὶ τὴν νύμφην αὐτῆς καὶ νύμφη ἐπὶ τὴν ⸀πενθεράν.
+- matt_index: 719
+  luke_index: 897
+  matt_ref: Matt 21:40
+  luke_ref: Luke 20:13
+  score: 0.342562
+  window_support: 0.36649
+  composite_score: 0.350937
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 3.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: ὅταν οὖν ἔλθῃ ὁ κύριος τοῦ ἀμπελῶνος, τί ποιήσει τοῖς γεωργοῖς ἐκείνοις;
+  luke_text: εἶπεν δὲ ὁ κύριος τοῦ ἀμπελῶνος· Τί ποιήσω; πέμψω τὸν υἱόν μου τὸν ἀγαπητόν· ἴσως ⸀τοῦτον ἐντραπήσονται.
+- matt_index: 682
+  luke_index: 867
+  matt_ref: Matt 21:3
+  luke_ref: Luke 19:31
+  score: 0.386011
+  window_support: 0.283271
+  composite_score: 0.350052
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 3.0
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: καὶ ἐάν τις ὑμῖν εἴπῃ τι, ἐρεῖτε ὅτι Ὁ κύριος αὐτῶν χρείαν ἔχει· ⸀εὐθὺς δὲ ⸀ἀποστελεῖ αὐτούς.
+  luke_text: καὶ ἐάν τις ὑμᾶς ἐρωτᾷ· Διὰ τί λύετε; οὕτως ⸀ἐρεῖτε ὅτι Ὁ κύριος αὐτοῦ χρείαν ἔχει.
+- matt_index: 391
+  luke_index: 371
+  matt_ref: Matt 12:47
+  luke_ref: Luke 8:20
+  score: 0.314461
+  window_support: 0.415458
+  composite_score: 0.34981
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 17.43
+  tags:
+  - strong_window_echo
+  - moderate_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ⸂εἶπεν δέ τις αὐτῷ· Ἰδοὺ ἡ μήτηρ σου καὶ οἱ ἀδελφοί σου ἔξω ἑστήκασιν, ζητοῦντές σοι λαλῆσαι.⸃
+  luke_text: ⸂ἀπηγγέλη δὲ⸃ ⸀αὐτῷ· Ἡ μήτηρ σου καὶ οἱ ἀδελφοί σου ἑστήκασιν ἔξω ἰδεῖν ⸂σε θέλοντες⸃.
+- matt_index: 107
+  luke_index: 963
+  matt_ref: Matt 5:18
+  luke_ref: Luke 21:32
+  score: 0.388375
+  window_support: 0.277772
+  composite_score: 0.349664
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 775.96
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ἀμὴν γὰρ λέγω ὑμῖν, ἕως ἂν παρέλθῃ ὁ οὐρανὸς καὶ ἡ γῆ, ἰῶτα ἓν ἢ μία κεραία οὐ μὴ παρέλθῃ ἀπὸ τοῦ νόμου, ἕως
+    ἂν πάντα γένηται.
+  luke_text: ἀμὴν λέγω ὑμῖν ὅτι οὐ μὴ παρέλθῃ ἡ γενεὰ αὕτη ἕως ἂν πάντα γένηται.
+- matt_index: 102
+  luke_index: 693
+  matt_ref: Matt 5:13
+  luke_ref: Luke 14:34
+  score: 0.418135
+  window_support: 0.219725
+  composite_score: 0.348692
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 506.72
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: Ὑμεῖς ἐστε τὸ ἅλας τῆς γῆς· ἐὰν δὲ τὸ ἅλας μωρανθῇ, ἐν τίνι ἁλισθήσεται; εἰς οὐδὲν ἰσχύει ἔτι εἰ μὴ ⸂βληθὲν ἔξω⸃
+    καταπατεῖσθαι ὑπὸ τῶν ἀνθρώπων.
+  luke_text: Καλὸν ⸀οὖν τὸ ἅλας· ἐὰν δὲ ⸀καὶ τὸ ἅλας μωρανθῇ, ἐν τίνι ἀρτυθήσεται;
+- matt_index: 135
+  luke_index: 284
+  matt_ref: Matt 5:46
+  luke_ref: Luke 6:32
+  score: 0.408055
+  window_support: 0.233693
+  composite_score: 0.347028
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 92.71
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: ἐὰν γὰρ ἀγαπήσητε τοὺς ἀγαπῶντας ὑμᾶς, τίνα μισθὸν ἔχετε; οὐχὶ καὶ οἱ τελῶναι ⸂τὸ αὐτὸ⸃ ποιοῦσιν;
+  luke_text: Καὶ εἰ ἀγαπᾶτε τοὺς ἀγαπῶντας ὑμᾶς, ποία ὑμῖν χάρις ἐστίν; καὶ γὰρ οἱ ἁμαρτωλοὶ τοὺς ἀγαπῶντας αὐτοὺς ἀγαπῶσιν.
+- matt_index: 332
+  luke_index: 335
+  matt_ref: Matt 11:18
+  luke_ref: Luke 7:34
+  score: 0.211177
+  window_support: 0.598154
+  composite_score: 0.346619
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: ἦλθεν γὰρ Ἰωάννης μήτε ἐσθίων μήτε πίνων, καὶ λέγουσιν· Δαιμόνιον ἔχει·
+  luke_text: ἐλήλυθεν ὁ υἱὸς τοῦ ἀνθρώπου ἐσθίων καὶ πίνων, καὶ λέγετε· Ἰδοὺ ἄνθρωπος φάγος καὶ οἰνοπότης, φίλος τελωνῶν καὶ
+    ἁμαρτωλῶν.
+- matt_index: 345
+  luke_index: 253
+  matt_ref: Matt 12:1
+  luke_ref: Luke 6:1
+  score: 0.244225
+  window_support: 0.536447
+  composite_score: 0.346503
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 83.6
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Ἐν ἐκείνῳ τῷ καιρῷ ἐπορεύθη ὁ Ἰησοῦς τοῖς σάββασιν διὰ τῶν σπορίμων· οἱ δὲ μαθηταὶ αὐτοῦ ἐπείνασαν καὶ ἤρξαντο
+    τίλλειν στάχυας καὶ ἐσθίειν.
+  luke_text: Ἐγένετο δὲ ἐν ⸀σαββάτῳ διαπορεύεσθαι αὐτὸν ⸀διὰ σπορίμων, καὶ ἔτιλλον οἱ μαθηταὶ αὐτοῦ ⸂καὶ ἤσθιον τοὺς στάχυας⸃
+    ψώχοντες ταῖς χερσίν.
+- matt_index: 758
+  luke_index: 201
+  matt_ref: Matt 22:33
+  luke_ref: Luke 4:32
+  score: 0.462059
+  window_support: 0.129761
+  composite_score: 0.345755
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 720.33
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 7
+  - 27
+  matt_text: καὶ ἀκούσαντες οἱ ὄχλοι ἐξεπλήσσοντο ἐπὶ τῇ διδαχῇ αὐτοῦ.
+  luke_text: καὶ ἐξεπλήσσοντο ἐπὶ τῇ διδαχῇ αὐτοῦ, ὅτι ἐν ἐξουσίᾳ ἦν ὁ λόγος αὐτοῦ.
+- matt_index: 286
+  luke_index: 412
+  matt_ref: Matt 10:14
+  luke_ref: Luke 9:5
+  score: 0.420267
+  window_support: 0.205768
+  composite_score: 0.345192
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 140.67
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: καὶ ὃς ⸀ἂν μὴ δέξηται ὑμᾶς μηδὲ ἀκούσῃ τοὺς λόγους ὑμῶν, ἐξερχόμενοι ⸀ἔξω τῆς οἰκίας ἢ τῆς πόλεως ἐκείνης ἐκτινάξατε
+    τὸν κονιορτὸν τῶν ποδῶν ὑμῶν.
+  luke_text: καὶ ὅσοι ⸀ἂν μὴ ⸀δέχωνται ὑμᾶς, ἐξερχόμενοι ἀπὸ τῆς πόλεως ⸀ἐκείνης τὸν κονιορτὸν ἀπὸ τῶν ποδῶν ὑμῶν ⸀ἀποτινάσσετε
+    εἰς μαρτύριον ἐπ’ αὐτούς.
+- matt_index: 889
+  luke_index: 369
+  matt_ref: Matt 25:29
+  luke_ref: Luke 8:18
+  score: 0.437986
+  window_support: 0.171666
+  composite_score: 0.344774
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 599.85
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: τῷ γὰρ ἔχοντι παντὶ δοθήσεται καὶ περισσευθήσεται· ⸂τοῦ δὲ⸃ μὴ ἔχοντος καὶ ὃ ἔχει ἀρθήσεται ἀπ’ αὐτοῦ.
+  luke_text: βλέπετε οὖν πῶς ἀκούετε· ὃς ⸂ἂν γὰρ⸃ ἔχῃ, δοθήσεται αὐτῷ, καὶ ὃς ⸀ἂν μὴ ἔχῃ, καὶ ὃ δοκεῖ ἔχειν ἀρθήσεται ἀπ’
+    αὐτοῦ.
+- matt_index: 846
+  luke_index: 781
+  matt_ref: Matt 24:37
+  luke_ref: Luke 17:24
+  score: 0.249055
+  window_support: 0.521254
+  composite_score: 0.344324
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 183.22
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὥσπερ ⸀γὰρ αἱ ἡμέραι τοῦ Νῶε, οὕτως ⸀ἔσται ἡ παρουσία τοῦ υἱοῦ τοῦ ἀνθρώπου·
+  luke_text: ὥσπερ γὰρ ἡ ⸀ἀστραπὴ ἀστράπτουσα ἐκ τῆς ⸂ὑπὸ τὸν⸃ οὐρανὸν εἰς τὴν ὑπ’ οὐρανὸν λάμπει, οὕτως ἔσται ὁ υἱὸς τοῦ
+    ἀνθρώπου ⸂ἐν τῇ ἡμέρᾳ αὐτοῦ⸃.
+- matt_index: 672
+  luke_index: 654
+  matt_ref: Matt 20:27
+  luke_ref: Luke 13:30
+  score: 0.453949
+  window_support: 0.135479
+  composite_score: 0.342484
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 175.36
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 25
+  matt_text: καὶ ὃς ⸀ἂν θέλῃ ἐν ὑμῖν εἶναι πρῶτος ⸀ἔσται ὑμῶν δοῦλος·
+  luke_text: καὶ ἰδοὺ εἰσὶν ἔσχατοι οἳ ἔσονται πρῶτοι, καὶ εἰσὶν πρῶτοι οἳ ἔσονται ἔσχατοι.
+- matt_index: 150
+  luke_index: 515
+  matt_ref: Matt 6:13
+  luke_ref: Luke 11:4
+  score: 0.392481
+  window_support: 0.239516
+  composite_score: 0.338943
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 321.44
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ ⸀πονηροῦ.
+  luke_text: καὶ ἄφες ἡμῖν τὰς ἁμαρτίας ἡμῶν, καὶ γὰρ αὐτοὶ ἀφίομεν παντὶ ὀφείλοντι ἡμῖν· καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς ⸀πειρασμόν.
+- matt_index: 403
+  luke_index: 694
+  matt_ref: Matt 13:9
+  luke_ref: Luke 14:35
+  score: 0.454527
+  window_support: 0.121085
+  composite_score: 0.337822
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 335.0
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 15
+  matt_text: ὁ ἔχων ⸀ὦτα ἀκουέτω.
+  luke_text: οὔτε εἰς γῆν οὔτε εἰς κοπρίαν εὔθετόν ἐστιν· ἔξω βάλλουσιν αὐτό. ὁ ἔχων ὦτα ἀκούειν ἀκουέτω.
+- matt_index: 211
+  luke_index: 653
+  matt_ref: Matt 8:11
+  luke_ref: Luke 13:29
+  score: 0.335997
+  window_support: 0.329759
+  composite_score: 0.333814
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 424.69
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: λέγω δὲ ὑμῖν ὅτι πολλοὶ ἀπὸ ἀνατολῶν καὶ δυσμῶν ἥξουσιν καὶ ἀνακλιθήσονται μετὰ Ἀβραὰμ καὶ Ἰσαὰκ καὶ Ἰακὼβ ἐν
+    τῇ βασιλείᾳ τῶν οὐρανῶν·
+  luke_text: καὶ ἥξουσιν ἀπὸ ἀνατολῶν καὶ δυσμῶν καὶ ⸀ἀπὸ βορρᾶ καὶ νότου καὶ ἀνακλιθήσονται ἐν τῇ βασιλείᾳ τοῦ θεοῦ.
+- matt_index: 930
+  luke_index: 991
+  matt_ref: Matt 26:24
+  luke_ref: Luke 22:22
+  score: 0.394162
+  window_support: 0.220646
+  composite_score: 0.333431
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 5.5
+  tags:
+  - strong_verbal_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 29
+  matt_text: ὁ μὲν υἱὸς τοῦ ἀνθρώπου ὑπάγει καθὼς γέγραπται περὶ αὐτοῦ, οὐαὶ δὲ τῷ ἀνθρώπῳ ἐκείνῳ δι’ οὗ ὁ υἱὸς τοῦ ἀνθρώπου
+    παραδίδοται· καλὸν ἦν αὐτῷ εἰ οὐκ ἐγεννήθη ὁ ἄνθρωπος ἐκεῖνος.
+  luke_text: ⸂ὅτι ὁ υἱὸς μὲν⸃ τοῦ ἀνθρώπου ⸂κατὰ τὸ ὡρισμένον πορεύεται⸃, πλὴν οὐαὶ τῷ ἀνθρώπῳ ἐκείνῳ δι’ οὗ παραδίδοται.
+- matt_index: 107
+  luke_index: 964
+  matt_ref: Matt 5:18
+  luke_ref: Luke 21:33
+  score: 0.398728
+  window_support: 0.212094
+  composite_score: 0.333406
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 776.96
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 28
+  matt_text: ἀμὴν γὰρ λέγω ὑμῖν, ἕως ἂν παρέλθῃ ὁ οὐρανὸς καὶ ἡ γῆ, ἰῶτα ἓν ἢ μία κεραία οὐ μὴ παρέλθῃ ἀπὸ τοῦ νόμου, ἕως
+    ἂν πάντα γένηται.
+  luke_text: ὁ οὐρανὸς καὶ ἡ γῆ ⸀παρελεύσονται, οἱ δὲ λόγοι μου οὐ μὴ παρελεύσονται.
+- matt_index: 329
+  luke_index: 694
+  matt_ref: Matt 11:15
+  luke_ref: Luke 14:35
+  score: 0.454527
+  window_support: 0.100116
+  composite_score: 0.330483
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 362.6
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 13
+  matt_text: ὁ ἔχων ⸀ὦτα ἀκουέτω.
+  luke_text: οὔτε εἰς γῆν οὔτε εἰς κοπρίαν εὔθετόν ἐστιν· ἔξω βάλλουσιν αὐτό. ὁ ἔχων ὦτα ἀκούειν ἀκουέτω.
+- matt_index: 333
+  luke_index: 336
+  matt_ref: Matt 11:19
+  luke_ref: Luke 7:35
+  score: 0.266016
+  window_support: 0.448689
+  composite_score: 0.329952
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: ἦλθεν ὁ υἱὸς τοῦ ἀνθρώπου ἐσθίων καὶ πίνων, καὶ λέγουσιν· Ἰδοὺ ἄνθρωπος φάγος καὶ οἰνοπότης, τελωνῶν φίλος καὶ
+    ἁμαρτωλῶν. καὶ ἐδικαιώθη ἡ σοφία ἀπὸ τῶν ⸀ἔργων αὐτῆς.
+  luke_text: καὶ ἐδικαιώθη ἡ σοφία ἀπὸ ⸂πάντων τῶν τέκνων αὐτῆς⸃.
+- matt_index: 107
+  luke_index: 743
+  matt_ref: Matt 5:18
+  luke_ref: Luke 16:17
+  score: 0.404283
+  window_support: 0.187324
+  composite_score: 0.328348
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 555.96
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: ἀμὴν γὰρ λέγω ὑμῖν, ἕως ἂν παρέλθῃ ὁ οὐρανὸς καὶ ἡ γῆ, ἰῶτα ἓν ἢ μία κεραία οὐ μὴ παρέλθῃ ἀπὸ τοῦ νόμου, ἕως
+    ἂν πάντα γένηται.
+  luke_text: Εὐκοπώτερον δέ ἐστιν τὸν οὐρανὸν καὶ τὴν γῆν παρελθεῖν ἢ τοῦ νόμου μίαν κεραίαν πεσεῖν.
+- matt_index: 368
+  luke_index: 530
+  matt_ref: Matt 12:24
+  luke_ref: Luke 11:19
+  score: 0.261649
+  window_support: 0.451078
+  composite_score: 0.327949
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 184.85
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: οἱ δὲ Φαρισαῖοι ἀκούσαντες εἶπον· Οὗτος οὐκ ἐκβάλλει τὰ δαιμόνια εἰ μὴ ἐν τῷ Βεελζεβοὺλ ἄρχοντι τῶν δαιμονίων.
+  luke_text: εἰ δὲ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο ⸂αὐτοὶ ὑμῶν κριταὶ⸃
+    ἔσονται.
+- matt_index: 67
+  luke_index: 178
+  matt_ref: Matt 4:3
+  luke_ref: Luke 4:9
+  score: 0.197541
+  window_support: 0.569151
+  composite_score: 0.327605
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 6.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks:
+  - 5
+  matt_text: καὶ προσελθὼν ⸂ὁ πειράζων εἶπεν αὐτῷ⸃· Εἰ υἱὸς εἶ τοῦ θεοῦ, εἰπὲ ἵνα οἱ λίθοι οὗτοι ἄρτοι γένωνται.
+  luke_text: ⸂Ἤγαγεν δὲ⸃ αὐτὸν εἰς Ἰερουσαλὴμ καὶ ⸀ἔστησεν ἐπὶ τὸ πτερύγιον τοῦ ἱεροῦ, καὶ εἶπεν αὐτῷ· Εἰ υἱὸς εἶ τοῦ θεοῦ,
+    βάλε σεαυτὸν ἐντεῦθεν κάτω·
+- matt_index: 287
+  luke_index: 481
+  matt_ref: Matt 10:15
+  luke_ref: Luke 10:12
+  score: 0.403833
+  window_support: 0.181731
+  composite_score: 0.326097
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 209.33
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ἀμὴν λέγω ὑμῖν, ἀνεκτότερον ἔσται γῇ Σοδόμων καὶ Γομόρρων ἐν ἡμέρᾳ κρίσεως ἢ τῇ πόλει ἐκείνῃ.
+  luke_text: λέγω ὑμῖν ὅτι Σοδόμοις ἐν τῇ ἡμέρᾳ ἐκείνῃ ἀνεκτότερον ἔσται ἢ τῇ πόλει ἐκείνῃ.
+- matt_index: 371
+  luke_index: 531
+  matt_ref: Matt 12:27
+  luke_ref: Luke 11:20
+  score: 0.186204
+  window_support: 0.584674
+  composite_score: 0.325668
+  rank_matt_to_luke: 4
+  rank_luke_to_matt: 4
+  nonlocality_vs_primary: 184.63
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: καὶ εἰ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο αὐτοὶ ⸂κριταὶ ἔσονται
+    ὑμῶν⸃.
+  luke_text: εἰ δὲ ἐν δακτύλῳ ⸀θεοῦ ἐκβάλλω τὰ δαιμόνια, ἄρα ἔφθασεν ἐφ’ ὑμᾶς ἡ βασιλεία τοῦ θεοῦ.
+- matt_index: 92
+  luke_index: 272
+  matt_ref: Matt 5:3
+  luke_ref: Luke 6:20
+  score: 0.356689
+  window_support: 0.267239
+  composite_score: 0.325382
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 87.24
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: Μακάριοι οἱ πτωχοὶ τῷ πνεύματι, ὅτι αὐτῶν ἐστιν ἡ βασιλεία τῶν οὐρανῶν.
+  luke_text: Καὶ αὐτὸς ἐπάρας τοὺς ὀφθαλμοὺς αὐτοῦ εἰς τοὺς μαθητὰς αὐτοῦ ἔλεγεν· Μακάριοι οἱ πτωχοί, ὅτι ὑμετέρα ἐστὶν ἡ
+    βασιλεία τοῦ θεοῦ.
+- matt_index: 188
+  luke_index: 140
+  matt_ref: Matt 7:17
+  luke_ref: Luke 3:9
+  score: 0.287706
+  window_support: 0.395296
+  composite_score: 0.325362
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 3
+  nonlocality_vs_primary: 59.33
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 4
+  matt_text: οὕτως πᾶν δένδρον ἀγαθὸν καρποὺς καλοὺς ποιεῖ, τὸ δὲ σαπρὸν δένδρον καρποὺς πονηροὺς ποιεῖ·
+  luke_text: ἤδη δὲ καὶ ἡ ἀξίνη πρὸς τὴν ῥίζαν τῶν δένδρων κεῖται· πᾶν οὖν δένδρον μὴ ποιοῦν καρπὸν καλὸν ἐκκόπτεται καὶ εἰς
+    πῦρ βάλλεται.
+- matt_index: 372
+  luke_index: 530
+  matt_ref: Matt 12:28
+  luke_ref: Luke 11:19
+  score: 0.203454
+  window_support: 0.538539
+  composite_score: 0.320734
+  rank_matt_to_luke: 4
+  rank_luke_to_matt: 4
+  nonlocality_vs_primary: 183.22
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: εἰ δὲ ἐν πνεύματι θεοῦ ἐγὼ ἐκβάλλω τὰ δαιμόνια, ἄρα ἔφθασεν ἐφ’ ὑμᾶς ἡ βασιλεία τοῦ θεοῦ.
+  luke_text: εἰ δὲ ἐγὼ ἐν Βεελζεβοὺλ ἐκβάλλω τὰ δαιμόνια, οἱ υἱοὶ ὑμῶν ἐν τίνι ἐκβάλλουσιν; διὰ τοῦτο ⸂αὐτοὶ ὑμῶν κριταὶ⸃
+    ἔσονται.
+- matt_index: 702
+  luke_index: 885
+  matt_ref: Matt 21:23
+  luke_ref: Luke 20:1
+  score: 0.167614
+  window_support: 0.603341
+  composite_score: 0.320118
+  rank_matt_to_luke: 4
+  rank_luke_to_matt: 4
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 26
+  matt_text: Καὶ ⸂ἐλθόντος αὐτοῦ⸃ εἰς τὸ ἱερὸν προσῆλθον αὐτῷ διδάσκοντι οἱ ἀρχιερεῖς καὶ οἱ πρεσβύτεροι τοῦ λαοῦ λέγοντες·
+    Ἐν ποίᾳ ἐξουσίᾳ ταῦτα ποιεῖς; καὶ τίς σοι ἔδωκεν τὴν ἐξουσίαν ταύτην;
+  luke_text: Καὶ ἐγένετο ἐν μιᾷ τῶν ⸀ἡμερῶν διδάσκοντος αὐτοῦ τὸν λαὸν ἐν τῷ ἱερῷ καὶ εὐαγγελιζομένου ἐπέστησαν οἱ ⸀ἀρχιερεῖς
+    καὶ οἱ γραμματεῖς σὺν τοῖς πρεσβυτέροις,
+- matt_index: 158
+  luke_index: 545
+  matt_ref: Matt 6:21
+  luke_ref: Luke 11:34
+  score: 0.164165
+  window_support: 0.608108
+  composite_score: 0.319545
+  rank_matt_to_luke: 3
+  rank_luke_to_matt: 6
+  nonlocality_vs_primary: 350.22
+  tags:
+  - strong_window_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks: []
+  matt_text: ὅπου γάρ ἐστιν ὁ θησαυρός ⸀σου, ἐκεῖ ἔσται καὶ ἡ καρδία ⸁σου.
+  luke_text: ὁ λύχνος τοῦ σώματός ἐστιν ὁ ὀφθαλμός ⸀σου. ⸀ὅταν ὁ ὀφθαλμός σου ἁπλοῦς ᾖ, καὶ ὅλον τὸ σῶμά σου φωτεινόν ἐστιν·
+    ἐπὰν δὲ πονηρὸς ᾖ, καὶ τὸ σῶμά σου σκοτεινόν.
+- matt_index: 323
+  luke_index: 326
+  matt_ref: Matt 11:9
+  luke_ref: Luke 7:25
+  score: 0.123403
+  window_support: 0.682098
+  composite_score: 0.318946
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 13
+  matt_text: ἀλλὰ τί ἐξήλθατε⸂; προφήτην ἰδεῖν⸃; ναί, λέγω ὑμῖν, καὶ περισσότερον προφήτου.
+  luke_text: ἀλλὰ τί ⸀ἐξήλθατε ἰδεῖν; ἄνθρωπον ἐν μαλακοῖς ἱματίοις ἠμφιεσμένον; ἰδοὺ οἱ ἐν ἱματισμῷ ἐνδόξῳ καὶ τρυφῇ ὑπάρχοντες
+    ἐν τοῖς βασιλείοις εἰσίν.
+- matt_index: 444
+  luke_index: 652
+  matt_ref: Matt 13:50
+  luke_ref: Luke 13:28
+  score: 0.394048
+  window_support: 0.179349
+  composite_score: 0.318904
+  rank_matt_to_luke: 1
+  rank_luke_to_matt: 2
+  nonlocality_vs_primary: 257.71
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  related_loose_blocks: []
+  matt_text: καὶ βαλοῦσιν αὐτοὺς εἰς τὴν κάμινον τοῦ πυρός· ἐκεῖ ἔσται ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων.
+  luke_text: ἐκεῖ ἔσται ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων, ὅταν ⸀ὄψησθε Ἀβραὰμ καὶ Ἰσαὰκ καὶ Ἰακὼβ καὶ πάντας τοὺς προφήτας
+    ἐν τῇ βασιλείᾳ τοῦ θεοῦ, ὑμᾶς δὲ ἐκβαλλομένους ἔξω.
+- matt_index: 542
+  luke_index: 425
+  matt_ref: Matt 16:15
+  luke_ref: Luke 9:18
+  score: 0.266034
+  window_support: 0.414211
+  composite_score: 0.317896
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 2.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 19
+  - 20
+  matt_text: λέγει αὐτοῖς· Ὑμεῖς δὲ τίνα με λέγετε εἶναι;
+  luke_text: Καὶ ἐγένετο ἐν τῷ εἶναι αὐτὸν προσευχόμενον κατὰ μόνας συνῆσαν αὐτῷ οἱ μαθηταί, καὶ ἐπηρώτησεν αὐτοὺς λέγων·
+    Τίνα με ⸂οἱ ὄχλοι λέγουσιν⸃ εἶναι;
+- matt_index: 981
+  luke_index: 1030
+  matt_ref: Matt 26:75
+  luke_ref: Luke 22:61
+  score: 0.302237
+  window_support: 0.346514
+  composite_score: 0.317734
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 1.0
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 30
+  matt_text: καὶ ἐμνήσθη ὁ Πέτρος τοῦ ⸀ῥήματος Ἰησοῦ ⸀εἰρηκότος ὅτι Πρὶν ἀλέκτορα φωνῆσαι τρὶς ἀπαρνήσῃ με, καὶ ἐξελθὼν ἔξω
+    ἔκλαυσεν πικρῶς.
+  luke_text: καὶ στραφεὶς ὁ κύριος ἐνέβλεψεν τῷ Πέτρῳ, καὶ ὑπεμνήσθη ὁ Πέτρος τοῦ ⸀λόγου τοῦ κυρίου ὡς εἶπεν αὐτῷ ὅτι Πρὶν
+    ἀλέκτορα φωνῆσαι ⸀σήμερον ἀπαρνήσῃ με τρίς.
+- matt_index: 932
+  luke_index: 988
+  matt_ref: Matt 26:26
+  luke_ref: Luke 22:19
+  score: 0.317797
+  window_support: 0.314938
+  composite_score: 0.316796
+  rank_matt_to_luke: 2
+  rank_luke_to_matt: 1
+  nonlocality_vs_primary: 2.17
+  tags:
+  - strong_window_echo
+  - alternate_local
+  - multiple_sources
+  sources:
+  - verse_top20_luke
+  - verse_top20_matt
+  - window_top10_luke
+  - window_top10_matt
+  related_loose_blocks:
+  - 29
+  matt_text: Ἐσθιόντων δὲ αὐτῶν λαβὼν ὁ Ἰησοῦς ⸀ἄρτον καὶ ⸀εὐλογήσας ἔκλασεν καὶ ⸂δοὺς τοῖς μαθηταῖς⸃ εἶπεν· Λάβετε φάγετε,
+    τοῦτό ἐστιν τὸ σῶμά μου.
+  luke_text: καὶ λαβὼν ἄρτον εὐχαριστήσας ἔκλασεν καὶ ἔδωκεν αὐτοῖς λέγων· Τοῦτό ἐστιν τὸ σῶμά μου ⸂[τὸ ὑπὲρ ὑμῶν διδόμενον·
+    τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.

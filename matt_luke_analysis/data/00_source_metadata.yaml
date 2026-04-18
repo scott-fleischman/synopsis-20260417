@@ -1,0 +1,55 @@
+project: Matthew–Luke literary dependence case study
+source_files:
+- name: MorphGNT Matthew
+  local_path: /mnt/data/src_downloads/61-Mt-morphgnt.txt
+  upstream_url: https://github.com/morphgnt/sblgnt/raw/refs/heads/master/61-Mt-morphgnt.txt
+  sha256: 95b360228bedd1c2d06655469111d3f028a4ce1d46939d440ed549feee8b73ec
+  size_bytes: 1188216
+  line_count: 18329
+  notes:
+  - MorphGNT SBLGNT edition token/morph/lemma data for Matthew
+- name: MorphGNT Luke
+  local_path: /mnt/data/src_downloads/63-Lk-morphgnt.txt
+  upstream_url: https://github.com/morphgnt/sblgnt/raw/refs/heads/master/63-Lk-morphgnt.txt
+  sha256: a6f10ccf27a905f21ecbec96c3c01f220c39dd37aae118022113a52dfeb7528e
+  size_bytes: 1265076
+  line_count: 19446
+  notes:
+  - MorphGNT SBLGNT edition token/morph/lemma data for Luke
+- name: SBLGNT Matthew text
+  local_path: /mnt/data/src_downloads/Matt.txt
+  upstream_url: https://github.com/Faithlife/SBLGNT/raw/refs/heads/master/data/sblgnt/text/Matt.txt
+  sha256: 4fa718540cbc6330591b233c99c68bbf52b85afc90016e4188efe5cd9719eeb0
+  size_bytes: 235067
+  line_count: 1069
+  notes:
+  - Downloaded as corroborative source text snapshot
+- name: SBLGNT Luke text
+  local_path: /mnt/data/src_downloads/Luke.txt
+  upstream_url: https://github.com/Faithlife/SBLGNT/raw/refs/heads/master/data/sblgnt/text/Luke.txt
+  sha256: 102d65ec7a91271777115d1a605688776adfda6a1188680ccf593e27e3e876d6
+  size_bytes: 251219
+  line_count: 1150
+  notes:
+  - Downloaded as corroborative source text snapshot
+- name: SBLGNT Matthew apparatus
+  local_path: /mnt/data/src_downloads/Matt_app.txt
+  upstream_url: https://github.com/Faithlife/SBLGNT/raw/refs/heads/master/data/sblgntapp/text/Matt.txt
+  sha256: c08131305cfa3885f277a0b85d0883264d9fb33c31d4afcafb87dea7b84649fc
+  size_bytes: 63273
+  line_count: 1952
+  notes:
+  - Variant notes attached to Matthean verses
+- name: SBLGNT Luke apparatus
+  local_path: /mnt/data/src_downloads/Luke_app.txt
+  upstream_url: https://github.com/Faithlife/SBLGNT/raw/refs/heads/master/data/sblgntapp/text/Luke.txt
+  sha256: 687348bf3002146877b58e425c82697e797b81edf075c42b5e4f973984c8e212
+  size_bytes: 83568
+  line_count: 2585
+  notes:
+  - Variant notes attached to Lukan verses
+upstream_notes:
+- SBLGNT repository README reports version 1.2 and CC BY 4.0 licensing.
+- 'MorphGNT README documents columns: book/chapter/verse, part of speech, parsing code, text, word, normalized word, lemma.'
+- This package uses the MorphGNT token/lemma stream as the operative verse base and attaches SBLGNT apparatus notes by verse
+  reference.
