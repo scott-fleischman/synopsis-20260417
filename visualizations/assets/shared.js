@@ -137,13 +137,14 @@
       ['15_q_core.html', 'Q core reader', ['mld']],
       ['16_matt_verse_card.html', 'Matthew verse card', null],
       ['17_jtea_overview.html', 'Low-verbatim →', '__jtea'],
+      ['26_conclusions.html', 'Conclusions →', '__conclusions'],
     ];
     while (nav.firstChild) nav.removeChild(nav.firstChild);
     for (const [h, t, avail] of links) {
       const a = document.createElement('a');
-      const isJteaLink = avail === '__jtea';
-      const isDisabled = !isJteaLink && avail && avail.indexOf(D.name) < 0;
-      a.href = isJteaLink ? h : (h + '#' + (isDisabled ? avail[0] : D.name));
+      const isSectionLink = avail === '__jtea' || avail === '__conclusions';
+      const isDisabled = !isSectionLink && avail && avail.indexOf(D.name) < 0;
+      a.href = isSectionLink ? h : (h + '#' + (isDisabled ? avail[0] : D.name));
       a.textContent = t;
       const classes = [];
       if (h === current) classes.push('current');
@@ -151,7 +152,7 @@
         classes.push('disabled');
         a.title = 'Only available for: ' + avail.join(', ');
       }
-      if (isJteaLink) classes.push('section-link');
+      if (isSectionLink) classes.push('section-link');
       if (classes.length) a.className = classes.join(' ');
       nav.appendChild(a);
     }
@@ -173,6 +174,7 @@
       ['23_exact_hits.html', 'Exact-phrase hits'],
       ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel'],
       ['25_apocrypha_inventory.html', 'Apocrypha inventory'],
+      ['26_conclusions.html', 'Conclusions'],
     ];
     while (nav.firstChild) nav.removeChild(nav.firstChild);
     for (const [h, t] of links) {

@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Conclusions · interpretive synthesis across the packages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .intro { max-width: 960px; font-size: 14px; line-height: 1.6; }
+  .intro .warn { border-left: 3px solid var(--focus); padding: 10px 14px; background: #fff8e8; margin: 12px 0 18px; font-size: 13px; }
+  .conf-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .conf-legend .item { font-size: 12px; }
+
+  .conf-pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; white-space: nowrap; }
+  .conf-pill.high { background: #6b1f0a; }
+  .conf-pill.mhigh { background: #a8551a; }
+  .conf-pill.medium { background: #5c7a8b; }
+  .conf-pill.low { background: #8a8a8a; }
+  .conf-pill.cautionary { background: #5a5a5a; }
+
+  .concl { border: 1px solid var(--rule); border-radius: 4px; background: #fff; padding: 18px 22px; margin-bottom: 18px; }
+  .concl-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+  .concl-head .num { font-family: var(--serif); font-size: 28px; color: var(--ink-mute); font-weight: 300; min-width: 36px; }
+  .concl-head h2 { font-family: var(--serif); font-size: 20px; margin: 0; flex: 1; }
+  .concl-claim { background: #faf6ec; border-left: 3px solid var(--accent); padding: 10px 14px; margin: 8px 0 14px; font-style: italic; font-size: 14px; line-height: 1.55; }
+  .concl-why { font-size: 13px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 14px; max-width: 900px; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .stat-card { border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; background: #fafaf7; text-align: left; }
+  .stat-card .v { font-family: var(--serif); font-size: 20px; color: var(--ink); line-height: 1.1; }
+  .stat-card .l { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+
+  details.raw { border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; margin-bottom: 14px; }
+  details.raw > summary { padding: 8px 12px; cursor: pointer; font-size: 13px; color: var(--accent); font-weight: 600; list-style: none; }
+  details.raw > summary::-webkit-details-marker { display: none; }
+  details.raw > summary::before { content: "▸ "; color: var(--ink-mute); margin-right: 4px; }
+  details.raw[open] > summary::before { content: "▾ "; }
+  details.raw > summary:hover { background: #f2f0e6; }
+  details.raw .raw-body { padding: 10px 14px 14px; border-top: 1px solid var(--rule); }
+  details.raw pre { background: #fff; border: 1px solid var(--rule); padding: 10px 12px; font-size: 12px; line-height: 1.5; overflow-x: auto; margin: 0 0 8px; border-radius: 2px; }
+  details.raw .greek { font-family: "SBL Greek", "Gentium Plus", "Cardo", serif; font-size: 15px; line-height: 1.6; }
+  details.raw .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 12px; margin: 6px 0; }
+  details.raw .kv .k { color: var(--ink-mute); font-weight: 600; white-space: nowrap; }
+  details.raw h4 { margin: 12px 0 6px; font-family: var(--serif); font-size: 14px; color: var(--ink); }
+  details.raw table.compact { width: 100%; border-collapse: collapse; font-size: 12px; }
+  details.raw table.compact th, details.raw table.compact td { padding: 4px 8px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  details.raw table.compact th { background: #f2f0e6; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3px; }
+
+  .verify-band { border-top: 1px solid var(--rule); padding-top: 12px; }
+  .verify-band .label { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 600; }
+  .verify-links { display: flex; flex-wrap: wrap; gap: 6px; }
+  .verify-link { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; font-size: 12px; color: var(--ink); text-decoration: none; transition: background 0.12s; }
+  .verify-link:hover { background: #f2f0e6; border-color: var(--ink-mute); }
+  .verify-link .ds-tag { font-size: 10px; padding: 1px 5px; border-radius: 2px; background: var(--ink); color: #fff; font-weight: 600; letter-spacing: 0.3px; }
+  .verify-link .ds-tag.mm { background: #8b2e2e; }
+  .verify-link .ds-tag.ml { background: #a8551a; }
+  .verify-link .ds-tag.mld { background: #5c7a8b; }
+  .verify-link .ds-tag.jtea { background: #0f766e; }
+  .verify-link .why { color: var(--ink-mute); font-size: 11px; font-style: italic; margin-left: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Conclusions</h1>
+    <span class="sub">interpretive synthesis across the four packages</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <div class="intro">
+    <p>These are <b>author-authored</b> conclusions drawn from the four analysis packages. They are not pipeline output. Every claim cites a specific artifact, and every section links back into the visualizations where a reader can verify the evidence.</p>
+    <div class="warn">The underlying packages are deliberately neutral (retrieval scores, burden ledgers, no winners). This page is where the inference lives. A reader who wants the data without the inference should use the other 25 pages.</div>
+    <div class="conf-legend">
+      <div class="item"><span class="conf-pill high">High</span> alternative explanations require materially heavier burdens</div>
+      <div class="item"><span class="conf-pill mhigh">Medium-high</span> most economical reading, but sibling hypotheses remain live</div>
+      <div class="item"><span class="conf-pill medium">Medium</span> best current model, several competing models remain credible</div>
+      <div class="item"><span class="conf-pill low">Low</span> package doesn't yet support a firm conclusion</div>
+    </div>
+  </div>
+
+  <section class="card" style="margin-top:8px;">
+    <h2>Headline confidence table</h2>
+    <div class="scrollx"><table class="data-table" id="conf_table"></table></div>
+  </section>
+
+  <div id="conclusions"></div>
+
+  <section class="card">
+    <h2>Overall model</h2>
+    <div id="overall"></div>
+  </section>
+
+  <div class="footer" style="margin-top:20px;">
+    Prose source: <code>conclusions/CONCLUSIONS.md</code> · machine-readable: <code>conclusions/data/*.yaml</code>, <code>*.csv</code>. Data references live in each package's <code>data/</code> directory.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function(){
+  SH.buildJteaNav('26_conclusions.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const MM = B.mm, ML = B.ml, MLD = B.mld, J = B.jtea;
+
+  // ---- helpers ----
+  function pill(text, cls) { return el('span', {class: 'conf-pill ' + cls}, text); }
+  function stat(v, label) { return el('div', {class: 'stat-card'}, el('div', {class: 'v'}, v), el('div', {class: 'l'}, label)); }
+  function kvBlock(rows) {
+    const d = el('div', {class: 'kv'});
+    rows.forEach(([k, v]) => { d.appendChild(el('div', {class: 'k'}, k)); d.appendChild(el('div', null, String(v))); });
+    return d;
+  }
+  function yamlDump(obj, indent) {
+    indent = indent || 0;
+    const pad = '  '.repeat(indent);
+    if (obj === null || obj === undefined) return pad + 'null';
+    if (typeof obj === 'string') {
+      const esc = obj.indexOf('\n') >= 0 || obj.indexOf(': ') >= 0 || obj.indexOf('#') === 0;
+      return esc ? JSON.stringify(obj) : obj;
+    }
+    if (typeof obj !== 'object') return String(obj);
+    if (Array.isArray(obj)) {
+      if (obj.length === 0) return '[]';
+      return obj.map(item => {
+        if (typeof item === 'object' && item !== null && !Array.isArray(item)) {
+          const entries = Object.entries(item);
+          if (entries.length === 0) return pad + '- {}';
+          const [firstK, firstV] = entries[0];
+          const rest = entries.slice(1);
+          let out = pad + '- ' + firstK + ': ' + formatScalar(firstV);
+          if (typeof firstV === 'object' && firstV !== null) {
+            out = pad + '- ' + firstK + ':\n' + yamlDump(firstV, indent + 2);
+          }
+          for (const [k, v] of rest) {
+            if (typeof v === 'object' && v !== null) {
+              out += '\n' + pad + '  ' + k + ':\n' + yamlDump(v, indent + 2);
+            } else {
+              out += '\n' + pad + '  ' + k + ': ' + formatScalar(v);
+            }
+          }
+          return out;
+        }
+        return pad + '- ' + formatScalar(item);
+      }).join('\n');
+    }
+    return Object.entries(obj).map(([k, v]) => {
+      if (typeof v === 'object' && v !== null) return pad + k + ':\n' + yamlDump(v, indent + 1);
+      return pad + k + ': ' + formatScalar(v);
+    }).join('\n');
+  }
+  function formatScalar(v) {
+    if (v === null || v === undefined) return 'null';
+    if (typeof v === 'string') return v.length > 200 ? JSON.stringify(v.slice(0, 200) + '…') : v;
+    return String(v);
+  }
+  function pre(obj) { return el('pre', null, typeof obj === 'string' ? obj : yamlDump(obj)); }
+
+  function verifyLink(href, page, label, ds, why) {
+    const a = el('a', {class: 'verify-link', href: href});
+    if (ds) a.appendChild(el('span', {class: 'ds-tag ' + ds}, ds === 'jtea' ? 'jtea' : ds));
+    a.appendChild(el('span', null, page + ' · ' + label));
+    if (why) a.appendChild(el('span', {class: 'why'}, '— ' + why));
+    return a;
+  }
+  function verifyBand(links) {
+    const band = el('div', {class: 'verify-band'});
+    band.appendChild(el('div', {class: 'label'}, 'Verify in the visualizations'));
+    const lw = el('div', {class: 'verify-links'});
+    links.forEach(l => lw.appendChild(l));
+    band.appendChild(lw);
+    return band;
+  }
+  function section(opts) {
+    const s = el('section', {class: 'concl'});
+    const h = el('div', {class: 'concl-head'});
+    h.appendChild(el('span', {class: 'num'}, String(opts.num) + '.'));
+    h.appendChild(el('h2', null, opts.title));
+    h.appendChild(pill(opts.confLabel, opts.conf));
+    s.appendChild(h);
+    s.appendChild(el('div', {class: 'concl-claim'}, opts.claim));
+    if (opts.why) s.appendChild(el('div', {class: 'concl-why'}, opts.why));
+    if (opts.stats && opts.stats.length) {
+      const sr = el('div', {class: 'stats-row'});
+      opts.stats.forEach(([v, l]) => sr.appendChild(stat(v, l)));
+      s.appendChild(sr);
+    }
+    if (opts.raw) {
+      const d = el('details', {class: 'raw'});
+      d.appendChild(el('summary', null, opts.rawLabel || 'Inspect the underlying data'));
+      const body = el('div', {class: 'raw-body'});
+      (opts.raw instanceof Node ? [opts.raw] : opts.raw).forEach(n => body.appendChild(n));
+      d.appendChild(body);
+      s.appendChild(d);
+    }
+    if (opts.verify && opts.verify.length) s.appendChild(verifyBand(opts.verify));
+    return s;
+  }
+
+  // ---- confidence table ----
+  const confRows = [
+    ['Mark–Matthew', 'Matthew most likely used Mark or a Mark-like written text as a major narrative source.', 'High', 'high'],
+    ['1 Timothy 5:18 / Luke 10:7', 'Strongest case for a Luke-like written Jesus saying known to 1 Timothy.', 'High', 'high'],
+    ['Matthew–Luke double tradition', 'Better explained by common written/oral Jesus tradition than by simple one-way dependence.', 'Medium-high', 'mhigh'],
+    ['James / Gospel sayings', 'Likely draws on Jesus tradition; direct Matthew/Luke use not demonstrated.', 'Medium-high', 'mhigh'],
+    ['The Q question', 'Supports a shared sayings/tradition layer; does not prove one discrete Q document.', 'Medium', 'medium'],
+    ['John ↔ Synoptics', 'Substantial shared tradition; data does not justify a simple copy model.', 'Medium', 'medium'],
+    ['Thomas ↔ canonical', 'Sayings-network witness, not cleanly dependent on one canonical Gospel.', 'Medium', 'medium'],
+    ['1 Cor 11 / Luke 22 Lord\u2019s Supper', 'Shared liturgical formula; not direct Gospel dependence.', 'Cautionary', 'cautionary'],
+    ['1 John 3:13 / John 15:18–19', 'Shared Johannine school/idiolect; not one-verse proof of direction.', 'Medium', 'medium'],
+    ['Other apocrypha beyond Thomas', 'Inventory only; not enough data yet for firm conclusions.', 'Low', 'low'],
+  ];
+  const tbl = document.getElementById('conf_table');
+  const thead = el('thead', null, el('tr', null, el('th', null, 'Question'), el('th', null, 'Conclusion'), el('th', null, 'Confidence')));
+  tbl.appendChild(thead);
+  const tbody = el('tbody');
+  confRows.forEach(([q, c, clab, ccls]) => {
+    tbody.appendChild(el('tr', null,
+      el('td', {style: 'font-weight:600;white-space:nowrap;'}, q),
+      el('td', null, c),
+      el('td', null, pill(clab, ccls))));
+  });
+  tbl.appendChild(tbody);
+
+  // ---- build 10 sections ----
+  const container = document.getElementById('conclusions');
+
+  // [1] Mark-Matthew
+  const mmG = MM.summary.global_metrics;
+  const mmPS = MM.summary.pair_score_summary || MM.summary.primary_pair_score_summary;
+  const mmRaw = [];
+  mmRaw.push(el('h4', null, 'From the generated mm package'));
+  mmRaw.push(kvBlock([
+    ['Primary aligned pairs', mmG.matched_pair_count],
+    ['Mark verses in chain', mmG.mark_matched_verse_count + ' / ' + mmG.mark_total_verse_count + '  (' + (mmG.mark_matched_pct * 100).toFixed(2) + '%)'],
+    ['Matthew verses in chain', mmG.matt_matched_verse_count + ' / ' + mmG.matt_total_verse_count + '  (' + (mmG.matt_matched_pct * 100).toFixed(2) + '%)'],
+    ['Loose blocks', mmG.loose_block_count],
+    ['Tight blocks', mmG.tight_block_count],
+    ['Mean pair score', mmPS ? Number(mmPS.mean).toFixed(4) : '—'],
+    ['Median pair score', mmPS ? Number(mmPS.median).toFixed(4) : '—'],
+  ]));
+  const mmGapIntervals = MM.summary.top_matt_gap_intervals || [];
+  if (mmGapIntervals.length) {
+    mmRaw.push(el('h4', null, 'Largest Matthean-only stretches (each one must be explained by a Mark-from-Matthew reader)'));
+    const gt = el('table', {class: 'compact'});
+    gt.appendChild(el('thead', null, el('tr', null, el('th', null, '#'), el('th', null, 'Start'), el('th', null, 'End'), el('th', null, 'Verses'), el('th', null, 'Boundary'))));
+    const gtb = el('tbody');
+    mmGapIntervals.slice(0, 8).forEach((g, i) => {
+      gtb.appendChild(el('tr', null,
+        el('td', null, String(i + 1)),
+        el('td', null, g.start_ref || ''),
+        el('td', null, g.end_ref || ''),
+        el('td', null, String(g.verse_count || '')),
+        el('td', {style: 'color:var(--ink-mute);'}, g.boundary || '')));
+    });
+    gt.appendChild(gtb);
+    mmRaw.push(gt);
+  }
+  container.appendChild(section({
+    num: 1,
+    title: 'Mark–Matthew: Markan (or Mark-like) priority',
+    conf: 'high', confLabel: 'High',
+    claim: 'Matthew most likely used Mark, or a Mark-like written source very close to Mark. Mark-from-Matthew is possible in isolated blocks but cumulatively less economical.',
+    why: 'Inside the aligned core the two Gospels have near-identical token counts (Mark 8,258, Matthew 8,259 in loose blocks), but outside the core Matthew carries 474 extra gap verses to Mark\u2019s 87 — a heavily asymmetric pattern that is explained simply by Matthean expansion + additions (infancy, Sermon on the Mount, discourse clusters) and awkwardly by Mark deleting major Matthean material without trace.',
+    stats: [
+      [mmG.matched_pair_count, 'primary pairs'],
+      [(mmG.mark_matched_pct * 100).toFixed(1) + '%', 'of Mark in chain'],
+      [(mmG.matt_matched_pct * 100).toFixed(1) + '%', 'of Matthew in chain'],
+      ['474 : 87', 'Matt : Mark gap verses'],
+      [mmG.loose_block_count, 'loose blocks'],
+    ],
+    raw: mmRaw,
+    verify: [
+      verifyLink('01_synoptic_map.html#mm', '01', 'Synoptic map', 'mm', 'see every aligned pair'),
+      verifyLink('02_block_ribbon.html#mm', '02', 'Block ribbon', 'mm', 'see the 25 loose blocks'),
+      verifyLink('03_burden_ledger.html#mm', '03', 'Direction burden', 'mm', 'per-block editing cost both ways'),
+      verifyLink('04_gap_timeline.html#mm', '04', 'Gap timeline', 'mm', 'where Matt has material Mark does not'),
+      verifyLink('07_block_cards.html#mm', '07', 'Block cards', 'mm', 'per-block token counts'),
+      verifyLink('09_pair_explorer.html#mm', '09', 'Pair explorer', 'mm', 'browse individual pairs'),
+    ],
+  }));
+
+  // [2] 1 Tim 5:18 / Luke 10:7
+  const c1tim = (J.case_studies || []).find(c => c.case_id === 'epistle_1tim_5_18_worker_wages_luke_10_7') || {};
+  const tim_raw = [];
+  tim_raw.push(el('h4', null, 'Case study — 1Tim 5:18 ~ Luke 10:7'));
+  tim_raw.push(kvBlock([
+    ['Source', c1tim.source_ref || '1Tim 5:18'],
+    ['Target', c1tim.target_ref || 'Luke 10:7'],
+    ['Feature', c1tim.feature || 'worker worthy of wages'],
+    ['Signal', c1tim.prima_facie_signal || ''],
+    ['Best explanation', c1tim.provisional_best_explanation || ''],
+  ]));
+  if (c1tim.source_text) tim_raw.push(el('div', {style: 'margin-top:8px;'}, el('div', {class: 'k', style: 'font-size:11px;color:var(--ink-mute);margin-bottom:2px;'}, '1 Timothy 5:18'), el('div', {class: 'greek'}, c1tim.source_text)));
+  if (c1tim.target_text) tim_raw.push(el('div', {style: 'margin-top:8px;'}, el('div', {class: 'k', style: 'font-size:11px;color:var(--ink-mute);margin-bottom:2px;'}, 'Luke 10:7'), el('div', {class: 'greek'}, c1tim.target_text)));
+  if (c1tim.automatic_metrics) { tim_raw.push(el('h4', null, 'Automatic retrieval metrics')); tim_raw.push(pre(c1tim.automatic_metrics)); }
+  if (c1tim.hypotheses) { tim_raw.push(el('h4', null, 'Hypothesis burden')); tim_raw.push(pre(c1tim.hypotheses)); }
+  container.appendChild(section({
+    num: 2,
+    title: '1 Timothy 5:18 ~ Luke 10:7 — Luke-like fixed Jesus saying',
+    conf: 'high', confLabel: 'High',
+    claim: '1 Timothy 5:18 very probably knows a fixed Jesus saying in a Luke-like form. It is stronger evidence for a Luke-like written or stabilized sayings tradition than for independent oral convergence.',
+    why: 'The exact 5-token Greek run ο εργατης του μισθου αυτου matches Luke\u2019s μισθός (wages) form. Matthew has a different formulation (worthy of food/support), which makes independent convergence with Luke implausible. Introduced in 1 Tim explicitly as γραφή — "scripture says."',
+    stats: [
+      ['5', 'token exact run'],
+      ['ο εργατης του μισθου αυτου', 'the exact phrase'],
+      ['Luke-like', 'not Matthew-like'],
+      ['γραφή', 'citation formula'],
+    ],
+    raw: tim_raw,
+    verify: [
+      verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'full case with Greek + burden'),
+      verifyLink('23_exact_hits.html', '23', 'Exact hits', 'jtea', 'the 5-token run in top hits'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'the edge in full network'),
+    ],
+  }));
+
+  // [3] Matt-Luke
+  const mlG = ML.summary.global_metrics;
+  const mldG = MLD.summary.global_metrics;
+  const mlEchoes = ML.echoes || [];
+  const topEchoes = mlEchoes.slice().sort((a,b) => (b.composite_score || b.score || 0) - (a.composite_score || a.score || 0)).slice(0, 12);
+  const mlRaw = [];
+  mlRaw.push(el('h4', null, 'Full Matthew–Luke (ml package)'));
+  mlRaw.push(kvBlock([
+    ['Primary backbone pairs', mlG.matched_pair_count],
+    ['Secondary echoes', (ML.echoes || []).length],
+    ['Matt in backbone', mlG.matt_matched_verse_count + ' / ' + mlG.matt_total_verse_count],
+    ['Luke in backbone', mlG.luke_matched_verse_count + ' / ' + mlG.luke_total_verse_count],
+    ['Direction burden (authored)', 'Matt prior: 142.559 · Luke prior: 75.477'],
+  ]));
+  mlRaw.push(el('h4', null, 'Masked Matt–Luke (mld package — Markan material stripped)'));
+  mlRaw.push(kvBlock([
+    ['Matt masked as Markan', mldG.matt_masked_markan_count + ' / ' + mldG.matt_total_verse_count],
+    ['Luke masked as Markan', mldG.luke_masked_markan_count + ' / ' + mldG.luke_total_verse_count],
+    ['Primary chain pairs on masked matrix', mldG.matched_pair_count],
+    ['Loose blocks', mldG.loose_block_count],
+    ['Tight blocks', mldG.tight_block_count],
+    ['Direction burden (authored)', 'Luke uses Matthew: 26.446 · Matthew uses Luke: 26.446 · common source: 8.86'],
+  ]));
+  mlRaw.push(el('h4', null, 'Top 12 Matt↔Luke echoes by composite score'));
+  const et = el('table', {class: 'compact'});
+  et.appendChild(el('thead', null, el('tr', null, el('th', null, 'Matt'), el('th', null, 'Luke'), el('th', null, 'Score'), el('th', null, 'Nonlocal?'), el('th', null, 'Tags'))));
+  const eb = el('tbody');
+  topEchoes.forEach(e => {
+    eb.appendChild(el('tr', null,
+      el('td', null, e.a_ref),
+      el('td', null, e.b_ref),
+      el('td', null, Number(e.composite_score || e.score || 0).toFixed(3)),
+      el('td', null, e.nonlocal ? '☑' : ''),
+      el('td', {style: 'color:var(--ink-mute);font-size:11px;'}, (e.tags || []).slice(0, 3).join(' · '))));
+  });
+  et.appendChild(eb);
+  mlRaw.push(et);
+  container.appendChild(section({
+    num: 3,
+    title: 'Matthew–Luke double tradition — shared, but not a simple copy',
+    conf: 'mhigh', confLabel: 'Medium-high',
+    claim: 'The Matthew–Luke double tradition is real shared tradition, often verbally fixed, but the data favors a common sayings/tradition model over direct one-way dependence.',
+    why: 'The full comparison numerically favors Luke-priority (142.559 vs 75.477), but that includes Markan confounds. Once likely-Markan material is masked, burdens become perfectly symmetrical (26.446 each way) — a signature of shared source/tradition, not direct copy. And 1,033 echoes with extensive nonlocal reordering weaken any order-chain dependence story.',
+    stats: [
+      [mlG.matched_pair_count, 'backbone pairs (full ml)'],
+      [(ML.echoes || []).length, 'secondary echoes'],
+      [mldG.matched_pair_count, 'backbone pairs (masked mld)'],
+      ['26.4 = 26.4', 'symmetric masked burden'],
+    ],
+    raw: mlRaw,
+    verify: [
+      verifyLink('01_synoptic_map.html#ml', '01', 'Synoptic map', 'ml', 'see sparse backbone'),
+      verifyLink('01_synoptic_map.html#mld', '01', 'Synoptic map (masked)', 'mld', 'see Q-core only'),
+      verifyLink('03_burden_ledger.html#mld', '03', 'Direction burden', 'mld', 'symmetric masked totals'),
+      verifyLink('11_echo_gallery.html#ml', '11', 'Echo gallery', 'ml', 'all 1,033 echoes'),
+      verifyLink('10_displacement.html#ml', '10', 'Displacement', 'ml', 'nonlocal placement'),
+      verifyLink('14_mask_audit.html#mld', '14', 'Mask audit', 'mld', 'what was masked as Markan'),
+      verifyLink('15_q_core.html#mld', '15', 'Q core reader', 'mld', 'residual double tradition'),
+    ],
+  }));
+
+  // [4] James
+  const jamesCases = (J.case_studies || []).filter(c => (c.case_id || '').indexOf('james_') >= 0);
+  const jamesConcepts = (J.concepts || []).filter(c => (c.epistle_refs || []).some(r => /\bJas\b/.test(r)));
+  const jamesRaw = [];
+  jamesRaw.push(el('h4', null, 'James case studies in the package (' + jamesCases.length + ')'));
+  jamesCases.forEach(c => {
+    jamesRaw.push(el('div', {style: 'margin:6px 0 10px;padding:8px 10px;border:1px solid var(--rule);border-radius:3px;background:#fff;'},
+      el('div', {style: 'font-weight:600;font-size:12px;'}, c.source_ref + ' ~ ' + c.target_ref + ' — ' + (c.feature || '')),
+      el('div', {style: 'font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.5;'}, c.provisional_best_explanation || '')));
+  });
+  if (jamesConcepts.length) {
+    jamesRaw.push(el('h4', null, 'James-adjacent concept signatures (' + jamesConcepts.length + ')'));
+    const ct = el('table', {class: 'compact'});
+    ct.appendChild(el('thead', null, el('tr', null, el('th', null, 'Concept'), el('th', null, 'Canonical'), el('th', null, 'Epistle'), el('th', null, 'Signal'), el('th', null, 'Independence burden'))));
+    const cb = el('tbody');
+    jamesConcepts.forEach(c => {
+      cb.appendChild(el('tr', null,
+        el('td', null, c.concept_id),
+        el('td', {style: 'font-size:11px;color:var(--ink-mute);'}, (c.canonical_refs || []).join(' · ')),
+        el('td', {style: 'font-size:11px;color:var(--ink-mute);'}, (c.epistle_refs || []).join(' · ')),
+        el('td', {style: 'font-size:11px;'}, c.signal_type || ''),
+        el('td', null, c.independence_burden || '')));
+    });
+    ct.appendChild(cb);
+    jamesRaw.push(ct);
+  }
+  container.appendChild(section({
+    num: 4,
+    title: 'James ↔ Gospel sayings — Jesus-tradition, not direct Matthew',
+    conf: 'mhigh', confLabel: 'Medium-high',
+    claim: 'James probably reflects Jesus tradition, but the package does not support direct dependence on Matthew or Luke as the simplest explanation. Shared oral or written catechetical tradition has lower burden.',
+    why: 'The highest-value case (Jas 5:12 ~ Matt 5:34-37, the oath saying) is semantically tight but lexically compressed — James does not mechanically copy Matthew\u2019s expanded antithesis. The pattern holds across poor/kingdom, ask/receive, hear/do, humble/exalt, and judge-not/mercy material: semantic convergence without tight lexical alignment. Exact-word methods systematically under-detect relationships of this shape.',
+    stats: [
+      [jamesCases.length, 'James case studies'],
+      [jamesConcepts.length, 'James-adjacent concepts'],
+      ['semantic', 'over lexical'],
+      ['high', 'independence burden'],
+    ],
+    raw: jamesRaw,
+    verify: [
+      verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'cross-corpus saying motifs'),
+      verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'James cases with Greek'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'filter to James edges'),
+    ],
+  }));
+
+  // [5] Q
+  const qRaw = [];
+  qRaw.push(el('h4', null, 'Why the data supports a sayings layer, not necessarily a discrete Q document'));
+  qRaw.push(el('ul', {class: 'clean', style: 'font-size:13px;line-height:1.6;'},
+    el('li', null, 'Once Markan material is removed, direct Matt↔Luke burdens collapse to symmetry (26.446 each way) — no directional preference survives.'),
+    el('li', null, 'Nonlocal placement of the strongest echoes is too high for a stable written source read linearly.'),
+    el('li', null, 'Matt 7:7–8 ↔ Luke 11:9–10, Matt 8:20 ↔ Luke 9:58, Matt 12:41–42 ↔ Luke 11:31–32, Matt 6:24 ↔ Luke 16:13 — portable sapiential/eschatological material, consistent with fixed sayings in a fluid order.'),
+    el('li', null, 'Several of these same motifs surface in Thomas, independently of the question of direct canonical dependence.')));
+  qRaw.push(el('h4', null, 'Masked Q-core summary (mld package)'));
+  qRaw.push(kvBlock([
+    ['Matt verses unmasked (available for double-tradition)', mldG.matt_unmasked_count || '—'],
+    ['Luke verses unmasked', mldG.luke_unmasked_count || '—'],
+    ['Primary chain pairs', mldG.matched_pair_count],
+    ['Secondary echoes retained', (MLD.echoes || []).length],
+  ]));
+  container.appendChild(section({
+    num: 5,
+    title: 'The Q question — sayings layer, not necessarily one document',
+    conf: 'medium', confLabel: 'Medium',
+    claim: 'The data supports a shared sayings/tradition layer; it does not by itself prove one discrete Q document.',
+    why: 'Calling this layer "Q" is appropriate if Q is defined cautiously (shared source/tradition). The data does not require a tidy single document with the exact shape of classic reconstructions. Portable sayings behave like what they are — portable.',
+    stats: [
+      ['symmetric', 'direct-burden totals'],
+      [(MLD.echoes || []).length, 'echoes retained after masking'],
+      ['high', 'nonlocality in top echoes'],
+      ['shared layer', 'best current model'],
+    ],
+    raw: qRaw,
+    verify: [
+      verifyLink('15_q_core.html#mld', '15', 'Q core reader', 'mld', 'residual double-tradition backbone'),
+      verifyLink('10_displacement.html#ml', '10', 'Displacement', 'ml', 'nonlocal top-echo placement'),
+      verifyLink('11_echo_gallery.html#ml', '11', 'Echo gallery', 'ml', 'full secondary-echo catalog'),
+      verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'saying concepts in all three corpora'),
+    ],
+  }));
+
+  // [6] John
+  const anchors = J.anchors || [];
+  const anchorRaw = [];
+  anchorRaw.push(el('h4', null, 'All ' + anchors.length + ' John ↔ Synoptic anchor episodes'));
+  anchors.forEach(a => {
+    const block = el('div', {style: 'margin:8px 0;padding:10px 12px;border:1px solid var(--rule);border-radius:3px;background:#fff;'});
+    block.appendChild(el('div', {style: 'font-weight:600;font-size:13px;'}, (a.anchor_id || '').replace(/_/g, ' ')));
+    block.appendChild(el('div', {style: 'font-size:12px;color:var(--ink-mute);margin-top:3px;'}, 'John: ' + (a.john_refs || '') + '  ·  Synoptics: ' + ((a.synoptic_refs || []).join(' / '))));
+    if (a.shared_features && a.shared_features.length) {
+      const chips = el('div', {style: 'margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;'});
+      a.shared_features.forEach(f => chips.appendChild(el('span', {style: 'font-size:11px;padding:2px 7px;border:1px solid var(--rule);border-radius:12px;background:#fafaf7;'}, f)));
+      block.appendChild(chips);
+    }
+    if (a.provisional_best_explanation) block.appendChild(el('div', {style: 'font-size:12px;line-height:1.5;margin-top:6px;color:var(--ink-soft);'}, '→ ' + a.provisional_best_explanation));
+    anchorRaw.push(block);
+  });
+  container.appendChild(section({
+    num: 6,
+    title: 'John ↔ Synoptics — overlapping tradition, not a simple copy',
+    conf: 'medium', confLabel: 'Medium',
+    claim: 'John almost certainly shares substantial tradition with the Synoptics. Pure independence is implausible for several detail clusters. But the data does not yet justify saying John directly used Mark, Matthew, or Luke as a dominant written source.',
+    why: 'John shares many anchor episodes — Baptist, feeding, walking on water, anointing, entry, arrest, denial, passion, garments — but transforms each so heavily that a linear lexical pipeline under-represents the relationship. Some detail clusters (sword + ear in arrest; lots over garments; Peter\u2019s denial structure) are too specific for independence; but they could equally belong to shared passion/miracle tradition.',
+    stats: [
+      [anchors.length, 'anchor episodes'],
+      ['passion', 'strongest zone'],
+      ['heavy', 'Johannine transformation'],
+      ['network', 'not tree model'],
+    ],
+    raw: anchorRaw,
+    verify: [
+      verifyLink('20_john_anchors.html', '20', 'John/Synoptic anchors', 'jtea', '10 anchors with two-hypothesis columns'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'filter to john_to_synoptics layer'),
+    ],
+  }));
+
+  // [7] Thomas
+  const thomas = J.thomas_registry || [];
+  const thomasBurdens = {};
+  thomas.forEach(t => { const k = t.direct_dependence_burden || 'unknown'; thomasBurdens[k] = (thomasBurdens[k] || 0) + 1; });
+  const thomasRaw = [];
+  thomasRaw.push(el('h4', null, 'Burden distribution across ' + thomas.length + ' Thomas parallels'));
+  thomasRaw.push(pre(thomasBurdens));
+  thomasRaw.push(el('h4', null, 'All Thomas parallels'));
+  const tt = el('table', {class: 'compact'});
+  tt.appendChild(el('thead', null, el('tr', null, el('th', null, 'Logion'), el('th', null, 'Motif'), el('th', null, 'Canonical refs'), el('th', null, 'Best-first model'), el('th', null, 'Burden'))));
+  const ttb = el('tbody');
+  thomas.forEach(t => {
+    ttb.appendChild(el('tr', null,
+      el('td', {style: 'font-weight:600;'}, t.thomas_logion),
+      el('td', null, t.motif || ''),
+      el('td', {style: 'font-size:11px;color:var(--ink-mute);'}, (t.canonical_refs || []).join(' · ')),
+      el('td', {style: 'font-size:11px;'}, t.best_first_model || ''),
+      el('td', null, t.direct_dependence_burden || '')));
+  });
+  tt.appendChild(ttb);
+  thomasRaw.push(tt);
+  container.appendChild(section({
+    num: 7,
+    title: 'Thomas ↔ canonical — sayings-network witness',
+    conf: 'medium', confLabel: 'Medium',
+    claim: 'Thomas is not best explained as an independent creation. It preserves or reworks many Jesus-tradition units known also from canonical material. But its relation is network-like, not a simple branch from one canonical Gospel.',
+    why: 'Many Thomas parallels are highly portable (hidden/revealed, lamp, seek/find/knock) — low direct-dependence value. Others involve more structured material (sower, mustard seed, banquet excuses, wicked tenants, Caesar\u2019s coin, pearl) where independence becomes harder. Because Thomas is sayings-only and preserved in Coptic, direct Greek literary dependence is not automatically scorable — it must be assessed logion by logion.',
+    stats: [
+      [thomas.length, 'registered parallels'],
+      [(J.thomas_units || []).length, 'Coptic Thomas units parsed'],
+      ['Coptic', 'target language'],
+      ['logion-by-logion', 'assessment required'],
+    ],
+    raw: thomasRaw,
+    verify: [
+      verifyLink('21_thomas_parallels.html', '21', 'Thomas parallels', 'jtea', 'click any logion to see Coptic'),
+      verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'concepts present in Thomas + canon'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'thomas_to_canonical edges'),
+    ],
+  }));
+
+  // [8] 1 Cor 11 / Luke 22
+  const c1cor = (J.case_studies || []).find(c => c.case_id === 'epistle_1cor_11_24_lord_supper_luke_22') || {};
+  const corRaw = [];
+  corRaw.push(el('h4', null, 'Case study — 1Cor 11:24 ~ Luke 22:19'));
+  corRaw.push(kvBlock([
+    ['Source', c1cor.source_ref || '1Cor 11:24'],
+    ['Target', c1cor.target_ref || 'Luke 22:19'],
+    ['Feature', c1cor.feature || 'eucharistic formula'],
+    ['Signal', c1cor.prima_facie_signal || ''],
+    ['Best explanation', c1cor.provisional_best_explanation || ''],
+  ]));
+  if (c1cor.source_text) corRaw.push(el('div', {style: 'margin-top:8px;'}, el('div', {class: 'k', style: 'font-size:11px;color:var(--ink-mute);margin-bottom:2px;'}, '1 Cor 11:24'), el('div', {class: 'greek'}, c1cor.source_text)));
+  if (c1cor.target_text) corRaw.push(el('div', {style: 'margin-top:8px;'}, el('div', {class: 'k', style: 'font-size:11px;color:var(--ink-mute);margin-bottom:2px;'}, 'Luke 22:19'), el('div', {class: 'greek'}, c1cor.target_text)));
+  if (c1cor.hypotheses) { corRaw.push(el('h4', null, 'Hypothesis burden')); corRaw.push(pre(c1cor.hypotheses)); }
+  container.appendChild(section({
+    num: 8,
+    title: '1 Cor 11:24 ~ Luke 22:19 — liturgical formula, not Paul copying Luke',
+    conf: 'cautionary', confLabel: 'Cautionary',
+    claim: 'The Lord\u2019s Supper overlap shows strong shared formula, but it should be treated as liturgical tradition rather than direct Gospel dependence unless additional directional evidence is supplied.',
+    why: 'Lexically this is one of the longest exact normalized-Greek runs in the whole package (6 tokens: τουτο ποιειτε εις την εμην αναμνησιν). But the best reading is chronological/causal, not lexical: Paul pre-dates the Gospel of Luke in any standard model, so if anything, Luke draws on a tradition Paul also knows. This case is a critical negative-space control — long exact agreement can mean liturgy, not copy.',
+    stats: [
+      ['6', 'token exact run'],
+      ['τουτο ποιειτε…', 'formula text'],
+      ['pre-Lukan', 'dating constraint'],
+      ['liturgy', 'best model'],
+    ],
+    raw: corRaw,
+    verify: [
+      verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the full Eucharistic case'),
+      verifyLink('23_exact_hits.html', '23', 'Exact hits', 'jtea', 'the 6-token run by score'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'the edge in context'),
+    ],
+  }));
+
+  // [9] 1 John / John
+  const c1jn = (J.case_studies || []).find(c => c.case_id === 'johannine_1john_3_13_world_hates_you') || {};
+  const worldhatesConcept = (J.concepts || []).find(c => c.concept_id === 'world_hates_disciples') || {};
+  const jnRaw = [];
+  jnRaw.push(el('h4', null, 'Case study — 1John 3:13 ~ John 15:18–19'));
+  jnRaw.push(kvBlock([
+    ['Source', c1jn.source_ref || '1John 3:13'],
+    ['Target', c1jn.target_ref || 'John 15:18–19'],
+    ['Feature', c1jn.feature || 'world hates disciples/brothers'],
+    ['Signal', c1jn.prima_facie_signal || ''],
+    ['Best explanation', c1jn.provisional_best_explanation || ''],
+  ]));
+  if (worldhatesConcept.concept_id) { jnRaw.push(el('h4', null, 'Concept signature')); jnRaw.push(pre(worldhatesConcept)); }
+  container.appendChild(section({
+    num: 9,
+    title: '1 John 3:13 ~ John 15:18–19 — shared Johannine school',
+    conf: 'medium', confLabel: 'Medium',
+    claim: '1 John and John share Johannine language and conceptual tradition. That is strong evidence of a shared school or compositional environment, but one motif does not decide whether the epistle used the Gospel or the Gospel used epistolary tradition.',
+    why: 'The "world hates you" material is one of the clearest Johannine idioms, but direction within the Johannine school is not resolvable from a single lexical run. This is a different category than Gospel-to-Gospel dependence — it is intra-corpus idiolectal continuity.',
+    stats: [
+      ['Johannine', 'school'],
+      ['idiolect', 'not copy'],
+      ['world hates', 'shared motif'],
+      ['intra-corpus', 'continuity'],
+    ],
+    raw: jnRaw,
+    verify: [
+      verifyLink('19_case_studies.html', '19', 'Case studies', 'jtea', 'the Johannine case'),
+      verifyLink('22_concept_signatures.html', '22', 'Concept signatures', 'jtea', 'world_hates_disciples concept'),
+      verifyLink('18_intertext_network.html', '18', 'Intertext network', 'jtea', 'the Johannine edge'),
+    ],
+  }));
+
+  // [10] Other apocrypha
+  const apoc = J.apocrypha || [];
+  const apocByGroup = {};
+  apoc.forEach(a => { const g = a.corpus_group || 'other'; (apocByGroup[g] = apocByGroup[g] || []).push(a); });
+  const apocRaw = [];
+  apocRaw.push(el('h4', null, 'Inventory — ' + apoc.length + ' works grouped by corpus'));
+  Object.entries(apocByGroup).forEach(([g, items]) => {
+    apocRaw.push(el('div', {style: 'margin:10px 0 4px;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:0.4px;color:var(--ink-mute);'}, g + '  (' + items.length + ')'));
+    items.forEach(a => {
+      apocRaw.push(el('div', {style: 'margin:3px 0 3px 12px;font-size:12px;line-height:1.5;'},
+        el('b', null, a.work_or_section || ''),
+        a.expected_signal ? el('span', {style: 'color:var(--ink-mute);'}, ' — ' + a.expected_signal) : null));
+    });
+  });
+  container.appendChild(section({
+    num: 10,
+    title: 'Other apocrypha beyond Thomas — inventory only',
+    conf: 'low', confLabel: 'Low',
+    claim: 'The package does not yet support firm conclusions on non-Thomas apocrypha. It mostly identifies future high-value texts.',
+    why: 'Gospel of Peter and passion apocrypha are probably the highest-value next test cases — passion material has dense shared narrative detail. Infancy and childhood gospels are valuable but need a different model: they tend to expand into narrative gaps rather than directly rewrite canonical pericopae.',
+    stats: [
+      [apoc.length, 'apocryphal works inventoried'],
+      [Object.keys(apocByGroup).length, 'corpus groups'],
+      ['inventory_only', 'current analysis layer'],
+      ['Gospel of Peter', 'highest-value next case'],
+    ],
+    raw: apocRaw,
+    verify: [
+      verifyLink('25_apocrypha_inventory.html', '25', 'Apocrypha inventory', 'jtea', '18 works grouped'),
+    ],
+  }));
+
+  // ---- overall model ----
+  const overallDoc = {
+    best_current_model_from_generated_data: {
+      mark: { role: 'major written narrative source', relation_to_matthew: 'Matthew probably uses Mark or Mark-like source' },
+      matthew_luke_double_tradition: { role: 'shared sayings/tradition layer', best_explanation: 'common written/oral Jesus tradition', q_implication: 'supports Q-like layer, not necessarily a single recoverable Q document' },
+      john: { role: 'independent literary-theological Gospel using overlapping Jesus/passion/sign traditions', direct_synoptic_use: 'possible locally, not globally proven' },
+      thomas: { role: 'sayings-network witness', direct_dependence_on_canonical_gospels: 'varies by logion, not globally established' },
+      james: { role: 'epistolary paraenesis saturated with Jesus-tradition motifs', direct_gospel_use: 'not demonstrated' },
+      first_timothy: { role: 'strong witness to a Luke-like fixed Jesus saying', independent_convergence: 'very unlikely' },
+      paul_lord_supper: { role: 'liturgical/traditional formula', direct_luke_dependence: 'not the best explanation' },
+    },
+  };
+  const overall = document.getElementById('overall');
+  overall.appendChild(el('p', {class: 'caption', style: 'max-width:900px;margin:0 0 12px;'}, 'The early Christian textual field is not one tree. It is a mixed network: one strong written narrative backbone around Mark, a sayings/tradition layer behind Matthew–Luke material, shared passion and sign traditions overlapping John, and epistolary reuse of fixed Jesus sayings and liturgical formulas. Different questions need different models — an order-sensitive literary-dependence model for Mark–Matthew, a sayings-source model for Matthew–Luke double tradition, anchor-based transformation analysis for John, sayings-network analysis for Thomas, and formula/saying detection plus burden analysis for James and the epistles.'));
+  const ovd = el('details', {class: 'raw'});
+  ovd.appendChild(el('summary', null, 'best_current_model_from_generated_data (machine-readable)'));
+  const ovb = el('div', {class: 'raw-body'});
+  ovb.appendChild(pre(overallDoc));
+  ovd.appendChild(ovb);
+  overall.appendChild(ovd);
+  overall.appendChild(el('div', {style: 'display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;'},
+    verifyLink('13_triangle.html', '13', 'Synoptic triangle', null, 'three-corner comparison view'),
+    verifyLink('17_jtea_overview.html', '17', 'Low-verbatim overview', 'jtea', 'the six-layer package'),
+    verifyLink('index.html', '—', 'Index', null, 'back to all views')));
+})();
+</script>
+</body>
+</html>
