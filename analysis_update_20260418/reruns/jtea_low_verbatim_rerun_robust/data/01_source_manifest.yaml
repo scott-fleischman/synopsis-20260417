@@ -1,0 +1,25 @@
+created_utc: '2026-04-18T16:50:25.870465+00:00'
+canonical_greek_local_rerun:
+  books_used:
+  - Matt
+  - Mark
+  - Luke
+  - John
+  - Jas
+  - 1Tim
+  - 2Tim
+  - 1Cor
+  - 1John
+  source_base: Local SBLGNT text + apparatus + MorphGNT files in sources/
+  rerun_layers:
+  - canonical_units
+  - targeted_case_metrics
+  - formula_risk_augmentation
+reused_curated_layers_from_prior_thread_artifact:
+  thomas_units_csv: Copied from earlier thread artifact; used as curated source registry.
+  thomas_parallel_registry: Copied and augmented with evidence-origin and relation-type
+    labels.
+  john_synoptic_anchor_registry: Copied and augmented with evidence-origin and relation-type
+    labels.
+  apocrypha_inventory: Copied as inventory layer; not automatically re-aligned in
+    this patch.

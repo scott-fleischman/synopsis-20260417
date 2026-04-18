@@ -1,0 +1,567 @@
+- from_a_ref: Matt 1:25
+  to_a_ref: Matt 3:7
+  from_b_ref: Luke 1:31
+  to_b_ref: Luke 3:7
+  delta_a: 25
+  delta_b: 105
+  reorder_pressure: 80
+  score_from: 0.420808
+  score_to: 0.509213
+- from_a_ref: Matt 3:7
+  to_a_ref: Matt 3:9
+  from_b_ref: Luke 3:7
+  to_b_ref: Luke 3:8
+  delta_a: 2
+  delta_b: 1
+  reorder_pressure: 1
+  score_from: 0.509213
+  score_to: 0.848287
+- from_a_ref: Matt 3:9
+  to_a_ref: Matt 3:10
+  from_b_ref: Luke 3:8
+  to_b_ref: Luke 3:9
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.848287
+  score_to: 0.936615
+- from_a_ref: Matt 3:10
+  to_a_ref: Matt 3:12
+  from_b_ref: Luke 3:9
+  to_b_ref: Luke 3:17
+  delta_a: 1
+  delta_b: 7
+  reorder_pressure: 6
+  score_from: 0.936615
+  score_to: 0.749568
+- from_a_ref: Matt 3:12
+  to_a_ref: Matt 4:2
+  from_b_ref: Luke 3:17
+  to_b_ref: Luke 4:2
+  delta_a: 4
+  delta_b: 22
+  reorder_pressure: 18
+  score_from: 0.749568
+  score_to: 0.338996
+- from_a_ref: Matt 4:2
+  to_a_ref: Matt 4:3
+  from_b_ref: Luke 4:2
+  to_b_ref: Luke 4:3
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.338996
+  score_to: 0.572487
+- from_a_ref: Matt 4:3
+  to_a_ref: Matt 4:4
+  from_b_ref: Luke 4:3
+  to_b_ref: Luke 4:4
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.572487
+  score_to: 0.472079
+- from_a_ref: Matt 4:4
+  to_a_ref: Matt 4:5
+  from_b_ref: Luke 4:4
+  to_b_ref: Luke 4:9
+  delta_a: 1
+  delta_b: 4
+  reorder_pressure: 3
+  score_from: 0.472079
+  score_to: 0.378854
+- from_a_ref: Matt 4:5
+  to_a_ref: Matt 4:6
+  from_b_ref: Luke 4:9
+  to_b_ref: Luke 4:11
+  delta_a: 1
+  delta_b: 2
+  reorder_pressure: 1
+  score_from: 0.378854
+  score_to: 0.595825
+- from_a_ref: Matt 4:6
+  to_a_ref: Matt 5:3
+  from_b_ref: Luke 4:11
+  to_b_ref: Luke 6:20
+  delta_a: 17
+  delta_b: 53
+  reorder_pressure: 36
+  score_from: 0.595825
+  score_to: 0.373554
+- from_a_ref: Matt 5:3
+  to_a_ref: Matt 5:6
+  from_b_ref: Luke 6:20
+  to_b_ref: Luke 6:21
+  delta_a: 3
+  delta_b: 1
+  reorder_pressure: 2
+  score_from: 0.373554
+  score_to: 0.341208
+- from_a_ref: Matt 5:6
+  to_a_ref: Matt 5:11
+  from_b_ref: Luke 6:21
+  to_b_ref: Luke 6:22
+  delta_a: 5
+  delta_b: 1
+  reorder_pressure: 4
+  score_from: 0.341208
+  score_to: 0.339832
+- from_a_ref: Matt 5:11
+  to_a_ref: Matt 5:12
+  from_b_ref: Luke 6:22
+  to_b_ref: Luke 6:23
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.339832
+  score_to: 0.373106
+- from_a_ref: Matt 5:12
+  to_a_ref: Matt 5:44
+  from_b_ref: Luke 6:23
+  to_b_ref: Luke 6:27
+  delta_a: 28
+  delta_b: 4
+  reorder_pressure: 24
+  score_from: 0.373106
+  score_to: 0.387443
+- from_a_ref: Matt 5:44
+  to_a_ref: Matt 7:1
+  from_b_ref: Luke 6:27
+  to_b_ref: Luke 6:37
+  delta_a: 37
+  delta_b: 10
+  reorder_pressure: 27
+  score_from: 0.387443
+  score_to: 0.342096
+- from_a_ref: Matt 7:1
+  to_a_ref: Matt 7:3
+  from_b_ref: Luke 6:37
+  to_b_ref: Luke 6:41
+  delta_a: 1
+  delta_b: 4
+  reorder_pressure: 3
+  score_from: 0.342096
+  score_to: 0.764073
+- from_a_ref: Matt 7:3
+  to_a_ref: Matt 7:4
+  from_b_ref: Luke 6:41
+  to_b_ref: Luke 6:42
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.764073
+  score_to: 0.536049
+- from_a_ref: Matt 7:4
+  to_a_ref: Matt 7:18
+  from_b_ref: Luke 6:42
+  to_b_ref: Luke 6:43
+  delta_a: 14
+  delta_b: 1
+  reorder_pressure: 13
+  score_from: 0.536049
+  score_to: 0.435015
+- from_a_ref: Matt 7:18
+  to_a_ref: Matt 8:8
+  from_b_ref: Luke 6:43
+  to_b_ref: Luke 7:7
+  delta_a: 15
+  delta_b: 13
+  reorder_pressure: 2
+  score_from: 0.435015
+  score_to: 0.427947
+- from_a_ref: Matt 8:8
+  to_a_ref: Matt 8:9
+  from_b_ref: Luke 7:7
+  to_b_ref: Luke 7:8
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.427947
+  score_to: 0.869664
+- from_a_ref: Matt 8:9
+  to_a_ref: Matt 8:10
+  from_b_ref: Luke 7:8
+  to_b_ref: Luke 7:9
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.869664
+  score_to: 0.655418
+- from_a_ref: Matt 8:10
+  to_a_ref: Matt 11:3
+  from_b_ref: Luke 7:9
+  to_b_ref: Luke 7:19
+  delta_a: 63
+  delta_b: 10
+  reorder_pressure: 53
+  score_from: 0.655418
+  score_to: 0.519428
+- from_a_ref: Matt 11:3
+  to_a_ref: Matt 11:5
+  from_b_ref: Luke 7:19
+  to_b_ref: Luke 7:22
+  delta_a: 1
+  delta_b: 3
+  reorder_pressure: 2
+  score_from: 0.519428
+  score_to: 0.700909
+- from_a_ref: Matt 11:5
+  to_a_ref: Matt 11:6
+  from_b_ref: Luke 7:22
+  to_b_ref: Luke 7:23
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.700909
+  score_to: 0.943357
+- from_a_ref: Matt 11:6
+  to_a_ref: Matt 11:7
+  from_b_ref: Luke 7:23
+  to_b_ref: Luke 7:24
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.943357
+  score_to: 0.77343
+- from_a_ref: Matt 11:7
+  to_a_ref: Matt 11:8
+  from_b_ref: Luke 7:24
+  to_b_ref: Luke 7:25
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.77343
+  score_to: 0.593065
+- from_a_ref: Matt 11:8
+  to_a_ref: Matt 11:9
+  from_b_ref: Luke 7:25
+  to_b_ref: Luke 7:26
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.593065
+  score_to: 0.864639
+- from_a_ref: Matt 11:9
+  to_a_ref: Matt 11:11
+  from_b_ref: Luke 7:26
+  to_b_ref: Luke 7:28
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.864639
+  score_to: 0.677339
+- from_a_ref: Matt 11:11
+  to_a_ref: Matt 11:16
+  from_b_ref: Luke 7:28
+  to_b_ref: Luke 7:31
+  delta_a: 4
+  delta_b: 3
+  reorder_pressure: 1
+  score_from: 0.677339
+  score_to: 0.347749
+- from_a_ref: Matt 11:16
+  to_a_ref: Matt 11:17
+  from_b_ref: Luke 7:31
+  to_b_ref: Luke 7:32
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.347749
+  score_to: 0.541087
+- from_a_ref: Matt 11:17
+  to_a_ref: Matt 11:18
+  from_b_ref: Luke 7:32
+  to_b_ref: Luke 7:33
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.541087
+  score_to: 0.57366
+- from_a_ref: Matt 11:18
+  to_a_ref: Matt 11:19
+  from_b_ref: Luke 7:33
+  to_b_ref: Luke 7:34
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.57366
+  score_to: 0.674027
+- from_a_ref: Matt 11:19
+  to_a_ref: Matt 11:21
+  from_b_ref: Luke 7:34
+  to_b_ref: Luke 10:13
+  delta_a: 2
+  delta_b: 90
+  reorder_pressure: 88
+  score_from: 0.674027
+  score_to: 0.864137
+- from_a_ref: Matt 11:21
+  to_a_ref: Matt 11:22
+  from_b_ref: Luke 10:13
+  to_b_ref: Luke 10:14
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.864137
+  score_to: 0.783292
+- from_a_ref: Matt 11:22
+  to_a_ref: Matt 11:23
+  from_b_ref: Luke 10:14
+  to_b_ref: Luke 10:15
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.783292
+  score_to: 0.563552
+- from_a_ref: Matt 11:23
+  to_a_ref: Matt 11:25
+  from_b_ref: Luke 10:15
+  to_b_ref: Luke 10:21
+  delta_a: 2
+  delta_b: 6
+  reorder_pressure: 4
+  score_from: 0.563552
+  score_to: 0.55537
+- from_a_ref: Matt 11:25
+  to_a_ref: Matt 11:27
+  from_b_ref: Luke 10:21
+  to_b_ref: Luke 10:22
+  delta_a: 2
+  delta_b: 1
+  reorder_pressure: 1
+  score_from: 0.55537
+  score_to: 0.680131
+- from_a_ref: Matt 11:27
+  to_a_ref: Matt 12:25
+  from_b_ref: Luke 10:22
+  to_b_ref: Luke 11:17
+  delta_a: 18
+  delta_b: 33
+  reorder_pressure: 15
+  score_from: 0.680131
+  score_to: 0.371466
+- from_a_ref: Matt 12:25
+  to_a_ref: Matt 12:27
+  from_b_ref: Luke 11:17
+  to_b_ref: Luke 11:19
+  delta_a: 1
+  delta_b: 2
+  reorder_pressure: 1
+  score_from: 0.371466
+  score_to: 0.8925
+- from_a_ref: Matt 12:27
+  to_a_ref: Matt 12:28
+  from_b_ref: Luke 11:19
+  to_b_ref: Luke 11:20
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.8925
+  score_to: 0.850468
+- from_a_ref: Matt 12:28
+  to_a_ref: Matt 12:30
+  from_b_ref: Luke 11:20
+  to_b_ref: Luke 11:23
+  delta_a: 1
+  delta_b: 3
+  reorder_pressure: 2
+  score_from: 0.850468
+  score_to: 0.826928
+- from_a_ref: Matt 12:30
+  to_a_ref: Matt 12:43
+  from_b_ref: Luke 11:23
+  to_b_ref: Luke 11:24
+  delta_a: 13
+  delta_b: 1
+  reorder_pressure: 12
+  score_from: 0.826928
+  score_to: 0.690322
+- from_a_ref: Matt 12:43
+  to_a_ref: Matt 12:44
+  from_b_ref: Luke 11:24
+  to_b_ref: Luke 11:25
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.690322
+  score_to: 0.554523
+- from_a_ref: Matt 12:44
+  to_a_ref: Matt 12:45
+  from_b_ref: Luke 11:25
+  to_b_ref: Luke 11:26
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.554523
+  score_to: 0.732689
+- from_a_ref: Matt 12:45
+  to_a_ref: Matt 23:25
+  from_b_ref: Luke 11:26
+  to_b_ref: Luke 11:39
+  delta_a: 223
+  delta_b: 11
+  reorder_pressure: 212
+  score_from: 0.732689
+  score_to: 0.406111
+- from_a_ref: Matt 23:25
+  to_a_ref: Matt 23:29
+  from_b_ref: Luke 11:39
+  to_b_ref: Luke 11:47
+  delta_a: 4
+  delta_b: 7
+  reorder_pressure: 3
+  score_from: 0.406111
+  score_to: 0.382234
+- from_a_ref: Matt 23:29
+  to_a_ref: Matt 23:34
+  from_b_ref: Luke 11:47
+  to_b_ref: Luke 11:49
+  delta_a: 5
+  delta_b: 2
+  reorder_pressure: 3
+  score_from: 0.382234
+  score_to: 0.322939
+- from_a_ref: Matt 23:34
+  to_a_ref: Matt 23:35
+  from_b_ref: Luke 11:49
+  to_b_ref: Luke 11:51
+  delta_a: 1
+  delta_b: 2
+  reorder_pressure: 1
+  score_from: 0.322939
+  score_to: 0.329496
+- from_a_ref: Matt 23:35
+  to_a_ref: Matt 24:43
+  from_b_ref: Luke 11:51
+  to_b_ref: Luke 12:39
+  delta_a: 18
+  delta_b: 42
+  reorder_pressure: 24
+  score_from: 0.329496
+  score_to: 0.653101
+- from_a_ref: Matt 24:43
+  to_a_ref: Matt 24:44
+  from_b_ref: Luke 12:39
+  to_b_ref: Luke 12:40
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.653101
+  score_to: 0.783554
+- from_a_ref: Matt 24:44
+  to_a_ref: Matt 24:45
+  from_b_ref: Luke 12:40
+  to_b_ref: Luke 12:42
+  delta_a: 1
+  delta_b: 2
+  reorder_pressure: 1
+  score_from: 0.783554
+  score_to: 0.645371
+- from_a_ref: Matt 24:45
+  to_a_ref: Matt 24:46
+  from_b_ref: Luke 12:42
+  to_b_ref: Luke 12:43
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.645371
+  score_to: 0.927206
+- from_a_ref: Matt 24:46
+  to_a_ref: Matt 24:47
+  from_b_ref: Luke 12:43
+  to_b_ref: Luke 12:44
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.927206
+  score_to: 0.881552
+- from_a_ref: Matt 24:47
+  to_a_ref: Matt 24:48
+  from_b_ref: Luke 12:44
+  to_b_ref: Luke 12:45
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.881552
+  score_to: 0.601776
+- from_a_ref: Matt 24:48
+  to_a_ref: Matt 24:50
+  from_b_ref: Luke 12:45
+  to_b_ref: Luke 12:46
+  delta_a: 2
+  delta_b: 1
+  reorder_pressure: 1
+  score_from: 0.601776
+  score_to: 0.70232
+- from_a_ref: Matt 24:50
+  to_a_ref: Matt 24:51
+  from_b_ref: Luke 12:46
+  to_b_ref: Luke 13:28
+  delta_a: 1
+  delta_b: 38
+  reorder_pressure: 37
+  score_from: 0.70232
+  score_to: 0.341989
+- from_a_ref: Matt 24:51
+  to_a_ref: Matt 25:26
+  from_b_ref: Luke 13:28
+  to_b_ref: Luke 19:22
+  delta_a: 25
+  delta_b: 177
+  reorder_pressure: 152
+  score_from: 0.341989
+  score_to: 0.323859
+- from_a_ref: Matt 25:26
+  to_a_ref: Matt 25:27
+  from_b_ref: Luke 19:22
+  to_b_ref: Luke 19:23
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.323859
+  score_to: 0.338249
+- from_a_ref: Matt 25:27
+  to_a_ref: Matt 25:28
+  from_b_ref: Luke 19:23
+  to_b_ref: Luke 19:24
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.338249
+  score_to: 0.420058
+- from_a_ref: Matt 25:28
+  to_a_ref: Matt 26:16
+  from_b_ref: Luke 19:24
+  to_b_ref: Luke 22:6
+  delta_a: 25
+  delta_b: 56
+  reorder_pressure: 31
+  score_from: 0.420058
+  score_to: 0.371521
+- from_a_ref: Matt 26:16
+  to_a_ref: Matt 26:68
+  from_b_ref: Luke 22:6
+  to_b_ref: Luke 22:64
+  delta_a: 8
+  delta_b: 43
+  reorder_pressure: 35
+  score_from: 0.371521
+  score_to: 0.532178
+- from_a_ref: Matt 26:68
+  to_a_ref: Matt 27:58
+  from_b_ref: Luke 22:64
+  to_b_ref: Luke 23:52
+  delta_a: 30
+  delta_b: 47
+  reorder_pressure: 17
+  score_from: 0.532178
+  score_to: 0.669725
+- from_a_ref: Matt 27:58
+  to_a_ref: Matt 27:59
+  from_b_ref: Luke 23:52
+  to_b_ref: Luke 23:53
+  delta_a: 1
+  delta_b: 1
+  reorder_pressure: 0
+  score_from: 0.669725
+  score_to: 0.367064

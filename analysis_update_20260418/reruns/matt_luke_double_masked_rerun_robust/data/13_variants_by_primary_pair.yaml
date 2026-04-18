@@ -1,0 +1,643 @@
+- a_ref: Matt 1:25
+  b_ref: Luke 1:31
+  score: 0.420808
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 3:7
+  b_ref: Luke 3:7
+  score: 0.509213
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 3:9
+  b_ref: Luke 3:8
+  score: 0.848287
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 3:10
+  b_ref: Luke 3:9
+  score: 0.936615
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 3:12
+  b_ref: Luke 3:17
+  score: 0.749568
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 17 διακαθᾶραι WH NA28 ] διακαθαριεῖ Treg; καὶ διακαθαριεῖ RP
+  - • συναγαγεῖν WH NA28 ] συναξεῖ Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 4:2
+  b_ref: Luke 4:2
+  score: 0.338996
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 2 αὐτῶν WH Treg NA28 ] + ὕστερον RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 4:3
+  b_ref: Luke 4:3
+  score: 0.572487
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 3 εἶπεν δὲ WH Treg NA28 ] Καὶ εἶπεν RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 4:4
+  b_ref: Luke 4:4
+  score: 0.472079
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 4 πρὸς αὐτὸν ὁ Ἰησοῦς WH NA28 Treg ] Ἰησοῦς πρὸς αὐτόν λέγων RP
+  - • ὁ WH Treg NA28 ] – RP
+  - • ἄνθρωπος WH NA28 ] + ἀλλʼ ἐπὶ παντὶ ῥήματι θεοῦ Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 4:5
+  b_ref: Luke 4:9
+  score: 0.378854
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 9 Ἤγαγεν δὲ WH Treg NA28 ] Καὶ ἤγαγεν RP
+  - • ἔστησεν WH NA28 ] + αὐτὸν Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 4:6
+  b_ref: Luke 4:11
+  score: 0.595825
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 11 ὅτι WH Treg NA28 ] – RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 5:3
+  b_ref: Luke 6:20
+  score: 0.373554
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 5:6
+  b_ref: Luke 6:21
+  score: 0.341208
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 5:11
+  b_ref: Luke 6:22
+  score: 0.339832
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 5:12
+  b_ref: Luke 6:23
+  score: 0.373106
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 23 τὰ αὐτὰ WH Treg NA28 ] ταῦτα RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 5:44
+  b_ref: Luke 6:27
+  score: 0.387443
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 7:1
+  b_ref: Luke 6:37
+  score: 0.342096
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 37 καὶ WH NA28 ] – Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 7:3
+  b_ref: Luke 6:41
+  score: 0.764073
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 7:4
+  b_ref: Luke 6:42
+  score: 0.536049
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 42 πῶς WH NA28 ] ἢ πῶς Treg RP
+  - • τὸ κάρφος … σου ἐκβαλεῖν WH NA28 ] ἐκβαλεῖν τὸ κάρφος … σου Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 7:18
+  b_ref: Luke 6:43
+  score: 0.435015
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 43 πάλιν WH Treg NA28 ] – RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 8:8
+  b_ref: Luke 7:7
+  score: 0.427947
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 7 ἰαθήτω WH Treg NA28 ] ἰαθήσεται RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 8:9
+  b_ref: Luke 7:8
+  score: 0.869664
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 8:10
+  b_ref: Luke 7:9
+  score: 0.655418
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 9 οὐδὲ WH Treg NA28 ] οὔτε RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:3
+  b_ref: Luke 7:19
+  score: 0.519428
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 19 κύριον WH Treg NA28 ] Ἰησοῦν RP
+  - • ἄλλον NA28 RP ] ἕτερον WH Treg
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:5
+  b_ref: Luke 7:22
+  score: 0.700909
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 22 ἀποκριθεὶς WH Treg NA28 ] + ὁ Ἰησοῦς RP
+  - • τυφλοὶ WH NA28 ] ὅτι τυφλοὶ Treg RP
+  - • κωφοὶ Treg RP ] καὶ κωφοὶ WH NA28
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:6
+  b_ref: Luke 7:23
+  score: 0.943357
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:7
+  b_ref: Luke 7:24
+  score: 0.77343
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 24 πρὸς τοὺς ὄχλους WH Treg NA28 ] τοῖς ὄχλοις RP
+  - • ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:8
+  b_ref: Luke 7:25
+  score: 0.593065
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 25 ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:9
+  b_ref: Luke 7:26
+  score: 0.864639
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 26 ἐξήλθατε WH Treg NA28 ] ἐξεληλύθατε RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:11
+  b_ref: Luke 7:28
+  score: 0.677339
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 28 λέγω WH Treg NA28 ] + γὰρ RP
+  - • Ἰωάννου WH NA28 ] προφήτης Ἰωάννου Treg; προφήτης Ἰωάννου τοῦ βαπτιστοῦ RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:16
+  b_ref: Luke 7:31
+  score: 0.347749
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:17
+  b_ref: Luke 7:32
+  score: 0.541087
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 32 ἃ λέγει WH NA28 ] λέγοντες Treg; καὶ λέγουσιν RP
+  - • ἐθρηνήσαμεν WH Treg NA28 ] + ὑμῖν RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:18
+  b_ref: Luke 7:33
+  score: 0.57366
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 33 μὴ WH NA28 ] μήτε Treg RP
+  - • ἐσθίων ἄρτον μήτε πίνων οἶνον WH Treg NA28 ] ἄρτον ἐσθίων μὴτὲ οἶνον πίνων RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:19
+  b_ref: Luke 7:34
+  score: 0.674027
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:21
+  b_ref: Luke 10:13
+  score: 0.864137
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 13 ἐγενήθησαν WH Treg NA28 ] ἐγένοντο RP
+  - • καθήμενοι WH Treg NA28 ] καθήμεναι RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:22
+  b_ref: Luke 10:14
+  score: 0.783292
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:23
+  b_ref: Luke 10:15
+  score: 0.563552
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 15 μὴ ἕως οὐρανοῦ ὑψωθήσῃ WH Treg NA28 ] ἡ ἕως τοῦ οὐρανοῦ ὑψωθεῖσα RP
+  - • τοῦ WH Treg NA28 ] – RP
+  - • καταβιβασθήσῃ Treg RP ] καταβήσῃ WH NA28
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:25
+  b_ref: Luke 10:21
+  score: 0.55537
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 21 τῷ WH Treg RP ] ἐν τῷ NA28
+  - • τῷ ἁγίῳ WH Treg NA28 ] ὁ Ἰησοῦς RP
+  - • εὐδοκία ἐγένετο WH Treg NA28 ] ἐγένετο εὐδοκία RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 11:27
+  b_ref: Luke 10:22
+  score: 0.680131
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 22 πάντα WH Treg NA28 ] Καὶ στραφείς πρός τούς μαθητάς εἶπεν πάντα RP
+  - • ἐὰν NA28 RP ] ἂν WH Treg
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:25
+  b_ref: Luke 11:17
+  score: 0.371466
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:27
+  b_ref: Luke 11:19
+  score: 0.8925
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 19 αὐτοὶ ὑμῶν κριταὶ WH NA28 ] αὐτοὶ κριταὶ ὑμῶν Treg; κριταὶ ὑμῶν αὐτοὶ RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:28
+  b_ref: Luke 11:20
+  score: 0.850468
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 20 θεοῦ RP ] + ἐγὼ WH Treg NA28
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:30
+  b_ref: Luke 11:23
+  score: 0.826928
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:43
+  b_ref: Luke 11:24
+  score: 0.690322
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 24 εὑρίσκον Treg RP ] + τότε WH NA28
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:44
+  b_ref: Luke 11:25
+  score: 0.554523
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 25 εὑρίσκει Treg NA28 RP ] + σχολάζοντα WH
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 12:45
+  b_ref: Luke 11:26
+  score: 0.732689
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 26 ἕτερα … ἑαυτοῦ ἑπτά WH Treg NA28 ] ἑπτά ἕτερα … ἑαυτοῦ RP
+  - • εἰσελθόντα WH Treg NA28 ] ἐλθόντα RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 23:25
+  b_ref: Luke 11:39
+  score: 0.406111
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 23:29
+  b_ref: Luke 11:47
+  score: 0.382234
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 23:34
+  b_ref: Luke 11:49
+  score: 0.322939
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 49 διώξουσιν WH NA28 ] ἐκδιώξουσιν Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 23:35
+  b_ref: Luke 11:51
+  score: 0.329496
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 51 ἀπὸ WH Treg NA28 ] + τοῦ NIV RP
+  - • ἕως WH Treg NA28 ] + τοῦ NIV RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:43
+  b_ref: Luke 12:39
+  score: 0.653101
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 39 οὐκ ἂν NA28 ] ἐγρηγόρησεν ἂν καὶ οὐκ WH Treg; ἐγρηγόρησεν ἂν καὶ οὐκ ἂν RP
+  - • διορυχθῆναι WH NA28 ] διορυγῆναι Treg RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:44
+  b_ref: Luke 12:40
+  score: 0.783554
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 40 ὑμεῖς WH Treg NA28 ] + οὖν RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:45
+  b_ref: Luke 12:42
+  score: 0.645371
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 42 καὶ εἶπεν WH Treg NA28 ] Εἶπεν δὲ RP
+  - • ὁ WH Treg NA28 ] καὶ RP
+  - • τὸ WH NA28 RP ] – Treg
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:46
+  b_ref: Luke 12:43
+  score: 0.927206
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:47
+  b_ref: Luke 12:44
+  score: 0.881552
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:48
+  b_ref: Luke 12:45
+  score: 0.601776
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:50
+  b_ref: Luke 12:46
+  score: 0.70232
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 24:51
+  b_ref: Luke 13:28
+  score: 0.341989
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 28 ὄψησθε WH NA28 RP ] ὄψεσθε Treg
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 25:26
+  b_ref: Luke 19:22
+  score: 0.323859
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 22 λέγει WH Treg NA28 ] + δὲ RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 25:27
+  b_ref: Luke 19:23
+  score: 0.338249
+  a_variant_note_count: 0
+  b_variant_note_count: 2
+  a_variant_notes: []
+  b_variant_notes:
+  - 23 μου τὸ ἀργύριον WH Treg NA28 ] τὸ ἀργύριόν μου RP
+  - • αὐτὸ ἔπραξα WH Treg NA28 ] ἔπραξα αὐτό RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 25:28
+  b_ref: Luke 19:24
+  score: 0.420058
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 26:16
+  b_ref: Luke 22:6
+  score: 0.371521
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 6 ἄτερ ὄχλου αὐτοῖς WH Treg NA28 ] αὐτοῖς ἄτερ ὄχλου RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 26:68
+  b_ref: Luke 22:64
+  score: 0.532178
+  a_variant_note_count: 0
+  b_variant_note_count: 1
+  a_variant_notes: []
+  b_variant_notes:
+  - 64 αὐτὸν ἐπηρώτων WH Treg NA28 ] αὐτόν ἔτυπτον αὐτοῦ τὸ πρόσωπον καὶ ἐπηρώτων
+    αὐτόν RP
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 27:58
+  b_ref: Luke 23:52
+  score: 0.669725
+  a_variant_note_count: 0
+  b_variant_note_count: 0
+  a_variant_notes: []
+  b_variant_notes: []
+  a_bracketed: false
+  b_bracketed: false
+- a_ref: Matt 27:59
+  b_ref: Luke 23:53
+  score: 0.367064
+  a_variant_note_count: 0
+  b_variant_note_count: 3
+  a_variant_notes: []
+  b_variant_notes:
+  - 53 καθελὼν WH Treg NA28 ] + αὐτὸ RP
+  - • αὐτὸν WH Treg NA28 ] αὐτὸ NIV RP
+  - • οὐδεὶς οὔπω WH Treg NA28 ] οὐδέπω οὐδεὶς RP
+  a_bracketed: false
+  b_bracketed: false

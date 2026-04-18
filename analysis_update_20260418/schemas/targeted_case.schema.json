@@ -1,0 +1,23 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: TargetedCaseStudy
+type: object
+required:
+- case_id
+- source_ref
+- target_ref
+- provisional_best_explanation
+properties:
+  case_id:
+    type: string
+  source_ref:
+    type: string
+  target_ref:
+    type: string
+  automatic_score_supports_claim:
+    type: string
+  philological_case_strength:
+    type: string
+  formula_risk:
+    type: string
+  provisional_best_explanation:
+    type: string

@@ -1,0 +1,448 @@
+- block_id: 1
+  matt_span_refs: Matt 1:25–Matt 1:25
+  luke_span_refs: Luke 1:31–Luke 1:31
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 2
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.0
+  hypothesis_luke_prior_numeric_burden: 1.0
+  hypothesis_matt_prior_rationales:
+  - 2 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 2 replacement groups imply targeted redaction under either direction.
+- block_id: 2
+  matt_span_refs: Matt 3:7–Matt 3:10
+  luke_span_refs: Luke 3:7–Luke 3:9
+  matched_pairs: 3
+  matt_unaligned_count: 1
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 7
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 2
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 2.71
+  hypothesis_luke_prior_numeric_burden: 2.46
+  hypothesis_matt_prior_rationales:
+  - Luke would need omission/non-use of material if Matt were prior.
+  - More inserted-than-deleted tokens (7>2) fit Luke expansion from Matt.
+  - 2 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt has 1 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Luke-prior.
+  - Matt would have to compress/delete more if derived from Luke.
+  - 2 replacement groups imply targeted redaction under either direction.
+- block_id: 3
+  matt_span_refs: Matt 3:12–Matt 3:12
+  luke_span_refs: Luke 3:17–Luke 3:17
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 1
+  replacement_groups: 2
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.13
+  hypothesis_luke_prior_numeric_burden: 1.13
+  hypothesis_matt_prior_rationales:
+  - 2 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 2 replacement groups imply targeted redaction under either direction.
+- block_id: 4
+  matt_span_refs: Matt 4:2–Matt 4:6
+  luke_span_refs: Luke 4:2–Luke 4:11
+  matched_pairs: 5
+  matt_unaligned_count: 0
+  luke_unaligned_count: 4
+  inserted_tokens_a_to_b: 24
+  deleted_tokens_a_to_b: 32
+  replacement_groups: 7
+  reorder_events: 1
+  hypothesis_matt_prior_numeric_burden: 10.76
+  hypothesis_luke_prior_numeric_burden: 12.12
+  hypothesis_matt_prior_rationales:
+  - Luke has 4 more unaligned verses inside span; later Luke expansion/clustering
+    is easier under Matt-prior.
+  - Luke would have to compress/delete more if derived from Matt.
+  - 7 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_luke_prior_rationales:
+  - Matt would need omission/non-use of material if Luke were prior.
+  - More deleted-than-inserted tokens (32>24) fit Matt expansion from Luke.
+  - 7 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 5
+  matt_span_refs: Matt 5:3–Matt 5:6
+  luke_span_refs: Luke 6:20–Luke 6:21
+  matched_pairs: 2
+  matt_unaligned_count: 2
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 11
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 4
+  reorder_events: 1
+  hypothesis_matt_prior_numeric_burden: 5.41
+  hypothesis_luke_prior_numeric_burden: 4.88
+  hypothesis_matt_prior_rationales:
+  - Luke would need omission/non-use of material if Matt were prior.
+  - More inserted-than-deleted tokens (11>2) fit Luke expansion from Matt.
+  - 4 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_luke_prior_rationales:
+  - Matt has 2 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Luke-prior.
+  - Matt would have to compress/delete more if derived from Luke.
+  - 4 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 6
+  matt_span_refs: Matt 5:11–Matt 5:12
+  luke_span_refs: Luke 6:22–Luke 6:23
+  matched_pairs: 2
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 7
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 7
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 3.85
+  hypothesis_luke_prior_numeric_burden: 4.06
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (7>0) fit Luke expansion from Matt.
+  - 7 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+  - 7 replacement groups imply targeted redaction under either direction.
+- block_id: 7
+  matt_span_refs: Matt 5:44–Matt 5:44
+  luke_span_refs: Luke 6:27–Luke 6:27
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 3
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.5
+  hypothesis_luke_prior_numeric_burden: 1.5
+  hypothesis_matt_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+- block_id: 8
+  matt_span_refs: Matt 7:1–Matt 7:4
+  luke_span_refs: Luke 6:37–Luke 6:42
+  matched_pairs: 3
+  matt_unaligned_count: 0
+  luke_unaligned_count: 3
+  inserted_tokens_a_to_b: 36
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 4
+  reorder_events: 1
+  hypothesis_matt_prior_numeric_burden: 6.66
+  hypothesis_luke_prior_numeric_burden: 8.88
+  hypothesis_matt_prior_rationales:
+  - Luke has 3 more unaligned verses inside span; later Luke expansion/clustering
+    is easier under Matt-prior.
+  - More inserted-than-deleted tokens (36>2) fit Luke expansion from Matt.
+  - 4 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_luke_prior_rationales:
+  - Matt would need omission/non-use of material if Luke were prior.
+  - Matt would have to compress/delete more if derived from Luke.
+  - 4 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 9
+  matt_span_refs: Matt 7:18–Matt 7:18
+  luke_span_refs: Luke 6:43–Luke 6:43
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 3
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.55
+  hypothesis_luke_prior_numeric_burden: 1.58
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (1>0) fit Luke expansion from Matt.
+  - 3 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+  - 3 replacement groups imply targeted redaction under either direction.
+- block_id: 10
+  matt_span_refs: Matt 8:8–Matt 8:10
+  luke_span_refs: Luke 7:7–Luke 7:9
+  matched_pairs: 3
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 10
+  deleted_tokens_a_to_b: 4
+  replacement_groups: 3
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 2.32
+  hypothesis_luke_prior_numeric_burden: 2.5
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (10>4) fit Luke expansion from Matt.
+  - 3 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+  - 3 replacement groups imply targeted redaction under either direction.
+- block_id: 11
+  matt_span_refs: Matt 11:3–Matt 11:19
+  luke_span_refs: Luke 7:19–Luke 7:34
+  matched_pairs: 11
+  matt_unaligned_count: 3
+  luke_unaligned_count: 4
+  inserted_tokens_a_to_b: 16
+  deleted_tokens_a_to_b: 18
+  replacement_groups: 19
+  reorder_events: 1
+  hypothesis_matt_prior_numeric_burden: 18.84
+  hypothesis_luke_prior_numeric_burden: 19.18
+  hypothesis_matt_prior_rationales:
+  - Luke has 1 more unaligned verses inside span; later Luke expansion/clustering
+    is easier under Matt-prior.
+  - Luke would have to compress/delete more if derived from Matt.
+  - 19 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_luke_prior_rationales:
+  - Matt would need omission/non-use of material if Luke were prior.
+  - More deleted-than-inserted tokens (18>16) fit Matt expansion from Luke.
+  - 19 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 12
+  matt_span_refs: Matt 11:21–Matt 11:23
+  luke_span_refs: Luke 10:13–Luke 10:15
+  matched_pairs: 3
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 2
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 3
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.76
+  hypothesis_luke_prior_numeric_burden: 1.76
+  hypothesis_matt_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+- block_id: 13
+  matt_span_refs: Matt 11:25–Matt 11:27
+  luke_span_refs: Luke 10:21–Luke 10:22
+  matched_pairs: 2
+  matt_unaligned_count: 1
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 9
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 6
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 4.65
+  hypothesis_luke_prior_numeric_burden: 4.52
+  hypothesis_matt_prior_rationales:
+  - Luke would need omission/non-use of material if Matt were prior.
+  - More inserted-than-deleted tokens (9>0) fit Luke expansion from Matt.
+  - 6 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt has 1 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Luke-prior.
+  - Matt would have to compress/delete more if derived from Luke.
+  - 6 replacement groups imply targeted redaction under either direction.
+- block_id: 14
+  matt_span_refs: Matt 12:25–Matt 12:30
+  luke_span_refs: Luke 11:17–Luke 11:23
+  matched_pairs: 4
+  matt_unaligned_count: 0
+  luke_unaligned_count: 3
+  inserted_tokens_a_to_b: 6
+  deleted_tokens_a_to_b: 6
+  replacement_groups: 3
+  reorder_events: 1
+  hypothesis_matt_prior_numeric_burden: 4.98
+  hypothesis_luke_prior_numeric_burden: 6.18
+  hypothesis_matt_prior_rationales:
+  - Luke has 3 more unaligned verses inside span; later Luke expansion/clustering
+    is easier under Matt-prior.
+  - 3 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_luke_prior_rationales:
+  - Matt would need omission/non-use of material if Luke were prior.
+  - 3 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 15
+  matt_span_refs: Matt 12:43–Matt 12:45
+  luke_span_refs: Luke 11:24–Luke 11:26
+  matched_pairs: 3
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 22
+  replacement_groups: 1
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 2.31
+  hypothesis_luke_prior_numeric_burden: 1.68
+  hypothesis_matt_prior_rationales:
+  - Luke would have to compress/delete more if derived from Matt.
+  - 1 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - More deleted-than-inserted tokens (22>1) fit Matt expansion from Luke.
+  - 1 replacement groups imply targeted redaction under either direction.
+- block_id: 16
+  matt_span_refs: Matt 23:25–Matt 23:25
+  luke_span_refs: Luke 11:39–Luke 11:39
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 3
+  replacement_groups: 4
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 2.24
+  hypothesis_luke_prior_numeric_burden: 2.15
+  hypothesis_matt_prior_rationales:
+  - Luke would have to compress/delete more if derived from Matt.
+  - 4 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - More deleted-than-inserted tokens (3>0) fit Matt expansion from Luke.
+  - 4 replacement groups imply targeted redaction under either direction.
+- block_id: 17
+  matt_span_refs: Matt 23:29–Matt 23:29
+  luke_span_refs: Luke 11:47–Luke 11:47
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 10
+  replacement_groups: 1
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.3
+  hypothesis_luke_prior_numeric_burden: 1.0
+  hypothesis_matt_prior_rationales:
+  - Luke would have to compress/delete more if derived from Matt.
+  - 1 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - More deleted-than-inserted tokens (10>0) fit Matt expansion from Luke.
+  - 1 replacement groups imply targeted redaction under either direction.
+- block_id: 18
+  matt_span_refs: Matt 23:34–Matt 23:35
+  luke_span_refs: Luke 11:49–Luke 11:51
+  matched_pairs: 2
+  matt_unaligned_count: 0
+  luke_unaligned_count: 1
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 15
+  replacement_groups: 7
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 5.5
+  hypothesis_luke_prior_numeric_burden: 5.45
+  hypothesis_matt_prior_rationales:
+  - Luke has 1 more unaligned verses inside span; later Luke expansion/clustering
+    is easier under Matt-prior.
+  - Luke would have to compress/delete more if derived from Matt.
+  - 7 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt would need omission/non-use of material if Luke were prior.
+  - More deleted-than-inserted tokens (15>0) fit Matt expansion from Luke.
+  - 7 replacement groups imply targeted redaction under either direction.
+- block_id: 19
+  matt_span_refs: Matt 24:43–Matt 24:50
+  luke_span_refs: Luke 12:39–Luke 12:46
+  matched_pairs: 7
+  matt_unaligned_count: 1
+  luke_unaligned_count: 1
+  inserted_tokens_a_to_b: 35
+  deleted_tokens_a_to_b: 9
+  replacement_groups: 9
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 8.97
+  hypothesis_luke_prior_numeric_burden: 9.75
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (35>9) fit Luke expansion from Matt.
+  - 9 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+  - 9 replacement groups imply targeted redaction under either direction.
+- block_id: 20
+  matt_span_refs: Matt 24:51–Matt 24:51
+  luke_span_refs: Luke 13:28–Luke 13:28
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 20
+  deleted_tokens_a_to_b: 11
+  replacement_groups: 0
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.88
+  hypothesis_luke_prior_numeric_burden: 2.15
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (20>11) fit Luke expansion from Matt.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+- block_id: 21
+  matt_span_refs: Matt 25:26–Matt 25:28
+  luke_span_refs: Luke 19:22–Luke 19:24
+  matched_pairs: 3
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 16
+  deleted_tokens_a_to_b: 16
+  replacement_groups: 5
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 4.58
+  hypothesis_luke_prior_numeric_burden: 4.58
+  hypothesis_matt_prior_rationales:
+  - 5 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 5 replacement groups imply targeted redaction under either direction.
+- block_id: 22
+  matt_span_refs: Matt 26:16–Matt 26:16
+  luke_span_refs: Luke 22:6–Luke 22:6
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 3
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.5
+  hypothesis_luke_prior_numeric_burden: 1.5
+  hypothesis_matt_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - 3 replacement groups imply targeted redaction under either direction.
+- block_id: 23
+  matt_span_refs: Matt 26:68–Matt 26:68
+  luke_span_refs: Luke 22:64–Luke 22:64
+  matched_pairs: 1
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 4
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 0
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 0.36
+  hypothesis_luke_prior_numeric_burden: 0.42
+  hypothesis_matt_prior_rationales:
+  - More inserted-than-deleted tokens (4>2) fit Luke expansion from Matt.
+  hypothesis_luke_prior_rationales:
+  - Matt would have to compress/delete more if derived from Luke.
+- block_id: 24
+  matt_span_refs: Matt 27:58–Matt 27:59
+  luke_span_refs: Luke 23:52–Luke 23:53
+  matched_pairs: 2
+  matt_unaligned_count: 0
+  luke_unaligned_count: 0
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 5
+  replacement_groups: 2
+  reorder_events: 0
+  hypothesis_matt_prior_numeric_burden: 1.4
+  hypothesis_luke_prior_numeric_burden: 1.25
+  hypothesis_matt_prior_rationales:
+  - Luke would have to compress/delete more if derived from Matt.
+  - 2 replacement groups imply targeted redaction under either direction.
+  hypothesis_luke_prior_rationales:
+  - More deleted-than-inserted tokens (5>0) fit Matt expansion from Luke.
+  - 2 replacement groups imply targeted redaction under either direction.

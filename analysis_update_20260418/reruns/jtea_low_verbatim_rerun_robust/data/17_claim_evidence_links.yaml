@@ -1,0 +1,723 @@
+- claim_id: jtea_epistle_1tim_5_18_worker_wages_luke_10_7
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_1tim_5_18_worker_wages_luke_10_7
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: 1Tim 5:18 -> Luke 10:7
+  confidence_dimensions:
+    automatic_retrieval_confidence: strong
+    philological_case_strength: strong
+    formula_risk: low
+  provisional_best_explanation: direct written or fixed written-saying tradition;
+    strong evidence against independent convergence
+- claim_id: jtea_epistle_1tim_5_18_worker_wages_matt_10_10
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_1tim_5_18_worker_wages_matt_10_10
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: 1Tim 5:18 -> Matt 10:10
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: strong
+    formula_risk: low
+  provisional_best_explanation: supports Jesus-saying tradition; less specifically
+    supports Matthew than Luke
+- claim_id: jtea_epistle_james_5_12_oaths_matt_5_34_37
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_james_5_12_oaths_matt_5_34_37
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: Jas 5:12 -> Matt 5:34-37
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared Jesus tradition, possibly written or oral;
+    direct Matthew dependence not required by the data
+- claim_id: jtea_epistle_james_2_5_poor_kingdom_luke_6_20
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_james_2_5_poor_kingdom_luke_6_20
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: Jas 2:5 -> Luke 6:20
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared beatitude/Jesus tradition rather than demonstrable
+    direct literary dependence
+- claim_id: jtea_epistle_james_1_5_6_ask_given_faith
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_james_1_5_6_ask_given_faith
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: Jas 1:5-6 -> Matt 7:7-8
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared sapiential prayer tradition with possible Jesus-saying
+    influence
+- claim_id: jtea_epistle_james_1_22_25_hear_do_words
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_james_1_22_25_hear_do_words
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: Jas 1:22-25 -> Matt 7:24-27
+  confidence_dimensions:
+    automatic_retrieval_confidence: weak
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: common sapiential/Jesus tradition; direct dependence
+    unproven
+- claim_id: jtea_epistle_james_4_10_humble_exalt
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_james_4_10_humble_exalt
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: Jas 4:10 -> Luke 14:11
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable Jesus/reversal saying; not enough for direct
+    literary dependence
+- claim_id: jtea_epistle_1cor_11_24_lord_supper_luke_22
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_1cor_11_24_lord_supper_luke_22
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: 1Cor 11:24 -> Luke 22:19
+  confidence_dimensions:
+    automatic_retrieval_confidence: strong
+    philological_case_strength: strong
+    formula_risk: high
+  provisional_best_explanation: shared liturgical tradition and/or Luke drawing on
+    a tradition also represented by Paul
+- claim_id: jtea_epistle_2tim_2_12_denying_christ
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: epistle_2tim_2_12_denying_christ
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: 2Tim 2:12 -> Matt 10:33
+  confidence_dimensions:
+    automatic_retrieval_confidence: weak
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared saying/confessional tradition
+- claim_id: jtea_johannine_1john_3_13_world_hates_you
+  claim_type: targeted_case
+  supports:
+  - artifact: data/07_targeted_case_studies.yaml
+    case_id: johannine_1john_3_13_world_hates_you
+  - artifact: data/06_exact_phrase_hits_len4plus.csv
+    match_hint: 1John 3:13 -> John 15:18-19
+  confidence_dimensions:
+    automatic_retrieval_confidence: medium
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared Johannine tradition/idiolect; direction requires
+    broader corpus modeling
+- claim_id: jtea_anchor_01
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: john_baptist_witness_spirit_descends
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared Baptist/baptism tradition; direct dependence
+    not established
+- claim_id: jtea_anchor_02
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: temple_action_relocated
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared temple-action tradition; direct direction underdetermined
+- claim_id: jtea_anchor_03
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: prophet_no_honor
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable proverb in Jesus tradition
+- claim_id: jtea_anchor_04
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: feeding_5000
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared miracle tradition with possible literary contact
+    not isolated by automatic metrics
+- claim_id: jtea_anchor_05
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: walking_on_water
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared miracle tradition
+- claim_id: jtea_anchor_06
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: anointing_bethany
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: tradition cluster with possible literary and memory
+    contamination
+- claim_id: jtea_anchor_07
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: triumphal_entry
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared passion tradition; direct relation possible
+    but underdetermined
+- claim_id: jtea_anchor_08
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: peter_denial
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared passion tradition; possible literary shaping
+- claim_id: jtea_anchor_09
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: sword_ear_arrest
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared passion arrest tradition; direct direction
+    unresolved
+- claim_id: jtea_anchor_10
+  claim_type: john_synoptic_anchor
+  supports:
+  - artifact: data/08_john_synoptic_anchor_registry.yaml
+    anchor_id: garment_division_scripture
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared passion-scripture tradition; John’s elaboration
+    likely secondary at this local level
+- claim_id: jtea_thomas_logion_2
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '2'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared sayings tradition; Thomas expands toward revelatory
+    sequence
+- claim_id: jtea_thomas_logion_3
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '3'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared kingdom saying with divergent theological framing
+- claim_id: jtea_thomas_logion_5
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '5'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable proverb/tradition
+- claim_id: jtea_thomas_logion_6
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '6'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared ethical tradition or anti-ritual polemic; direct
+    dependence weak
+- claim_id: jtea_thomas_logion_8
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '8'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition; Thomas compresses/gnomizes
+- claim_id: jtea_thomas_logion_9
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '9'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared parable tradition; direct dependence possible
+    if wording clusters survive in Greek witnesses
+- claim_id: jtea_thomas_logion_10
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '10'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared apocalyptic saying
+- claim_id: jtea_thomas_logion_16
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '16'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared apocalyptic/mission saying
+- claim_id: jtea_thomas_logion_20
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '20'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition; direct dependence hard because
+    compact parable travels orally
+- claim_id: jtea_thomas_logion_26
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '26'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable satirical saying
+- claim_id: jtea_thomas_logion_31
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '31'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable proverb
+- claim_id: jtea_thomas_logion_32
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '32'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared saying; Matthew-context dependence possible
+    but not forced
+- claim_id: jtea_thomas_logion_33
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '33'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable proverb
+- claim_id: jtea_thomas_logion_34
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '34'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable proverb
+- claim_id: jtea_thomas_logion_35
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '35'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared controversy saying/tradition
+- claim_id: jtea_thomas_logion_36
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '36'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared sapiential saying cluster
+- claim_id: jtea_thomas_logion_39
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '39'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared polemical saying; possible Luke/Thomas cluster
+- claim_id: jtea_thomas_logion_41
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '41'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable aphorism
+- claim_id: jtea_thomas_logion_44
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '44'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared controversy saying
+- claim_id: jtea_thomas_logion_45
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '45'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared sapiential cluster
+- claim_id: jtea_thomas_logion_46
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '46'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared Baptist saying
+- claim_id: jtea_thomas_logion_47
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '47'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: conflated saying cluster; network model better than
+    tree model
+- claim_id: jtea_thomas_logion_54
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '54'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: beatitude tradition; Thomas closer to Luke’s simple
+    poor form
+- claim_id: jtea_thomas_logion_55
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '55'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: discipleship saying tradition
+- claim_id: jtea_thomas_logion_57
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '57'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: possible Matthew-related tradition; Thomas shorter
+    and less allegorized
+- claim_id: jtea_thomas_logion_64
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '64'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition; Luke/Thomas closer in shape than
+    Matthew
+- claim_id: jtea_thomas_logion_65-66
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: 65-66
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable plus scripture citation tradition
+- claim_id: jtea_thomas_logion_72
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '72'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared Lukan/Thomas-like independent saying or Thomas
+    knowing Luke; independence burden high
+- claim_id: jtea_thomas_logion_73
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '73'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: mission saying tradition
+- claim_id: jtea_thomas_logion_76
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '76'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition; possible Matthean relationship
+    but not decided by Coptic layer alone
+- claim_id: jtea_thomas_logion_78
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '78'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: Baptist saying tradition
+- claim_id: jtea_thomas_logion_79
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '79'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared or Lukan-related saying; high-value because
+    uncommon scene
+- claim_id: jtea_thomas_logion_86
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '86'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: discipleship saying tradition
+- claim_id: jtea_thomas_logion_89
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '89'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared polemical saying; possible Luke/Thomas form
+    relation
+- claim_id: jtea_thomas_logion_90
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '90'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: possible Matthean/Thomas relation or shared wisdom-Christology
+    saying
+- claim_id: jtea_thomas_logion_91
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '91'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared signs-of-the-time saying
+- claim_id: jtea_thomas_logion_92
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '92'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable saying; Thomas redactional context matters
+    more than surface wording
+- claim_id: jtea_thomas_logion_94
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '94'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: portable saying
+- claim_id: jtea_thomas_logion_95
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '95'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared ethical saying; possible Lukan affinity
+- claim_id: jtea_thomas_logion_96
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '96'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition
+- claim_id: jtea_thomas_logion_99
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '99'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared biographical/saying tradition
+- claim_id: jtea_thomas_logion_100
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '100'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: shared controversy tradition; direct relation possible
+    only with closer wording analysis
+- claim_id: jtea_thomas_logion_101
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '101'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: discipleship saying tradition
+- claim_id: jtea_thomas_logion_103
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '103'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: apocalyptic watchfulness saying
+- claim_id: jtea_thomas_logion_107
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '107'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition with divergent theological placement
+- claim_id: jtea_thomas_logion_109
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '109'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: parable tradition; possible Matthean relation but
+    direct evidence limited in Coptic-only layer
+- claim_id: jtea_thomas_logion_113
+  claim_type: thomas_parallel
+  supports:
+  - artifact: data/09_thomas_parallel_registry.yaml
+    thomas_logion: '113'
+  confidence_dimensions:
+    automatic_retrieval_confidence: n/a_curated
+    philological_case_strength: medium
+    formula_risk: low
+  provisional_best_explanation: kingdom-saying tradition; Thomas develops realized/interiorized
+    idiom

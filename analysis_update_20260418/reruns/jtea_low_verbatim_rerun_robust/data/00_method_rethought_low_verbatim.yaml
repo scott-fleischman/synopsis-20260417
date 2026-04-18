@@ -1,0 +1,25 @@
+project: Low-verbatim rerun/augmentation for John, Thomas, epistles, and apocrypha
+why_method_changed:
+- John, Thomas, and many epistle/Gospel relation claims are not well served by a single
+  monotonic order-chain method.
+- Exact wording remains valuable but is only one signal among anchor structure, formula
+  risk, and curated concept/signature analysis.
+layers:
+- canonical Greek unit extraction from local SBLGNT + MorphGNT source base
+- targeted-case automatic metric rerun for key cases
+- exact phrase hit augmentation with formula-risk flags
+- curated John/Synoptic anchor registry with explicit evidence-origin labeling
+- curated Thomas parallel registry with per-logion relation-type labeling
+- apocrypha inventory retained as high-value future work rather than over-claimed
+  automatic dependence
+review_concerns_addressed:
+- separates automatic retrieval confidence from philological case strength
+- adds formula-risk classification for exact hits
+- adds claim-to-evidence mapping
+- makes explicit which layers are rerun from source and which remain curated/reused
+important_limitations:
+- Thomas remains cross-lingual and curated; no automatic Greek-to-Coptic dependence
+  scoring is claimed here.
+- Apocrypha beyond Thomas remain inventory/registry level in this rerun.
+- Exact phrase hits can still be driven by liturgy, scripture citation, or common
+  formula.

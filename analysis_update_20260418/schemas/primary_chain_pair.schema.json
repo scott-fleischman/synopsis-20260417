@@ -1,0 +1,20 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: PrimaryChainPair
+type: object
+required:
+- rank_in_chain
+- score
+properties:
+  rank_in_chain:
+    type: integer
+    minimum: 1
+  score:
+    type: number
+    minimum: 0
+    maximum: 1
+  mark_ref:
+    type: string
+  matt_ref:
+    type: string
+  luke_ref:
+    type: string

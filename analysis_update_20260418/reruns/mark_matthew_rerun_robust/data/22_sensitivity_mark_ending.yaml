@@ -1,0 +1,41 @@
+default_exclude_double_bracketed_from_surface_and_empty_lemma:
+  pair_count: 386
+  last_five_pairs:
+  - mark_ref: Mark 15:46
+    matt_ref: Matt 27:60
+    score: 0.416056
+  - mark_ref: Mark 15:47
+    matt_ref: Matt 27:61
+    score: 0.338141
+  - mark_ref: Mark 16:1
+    matt_ref: Matt 28:1
+    score: 0.259224
+  - mark_ref: Mark 16:6
+    matt_ref: Matt 28:6
+    score: 0.369014
+  - mark_ref: Mark 16:7
+    matt_ref: Matt 28:7
+    score: 0.515131
+  mark16_9_20_aligned_pairs: []
+include_bracketed_surface_and_lemma:
+  pair_count: 386
+  last_five_pairs:
+  - mark_ref: Mark 15:46
+    matt_ref: Matt 27:60
+    score: 0.416056
+  - mark_ref: Mark 15:47
+    matt_ref: Matt 27:61
+    score: 0.338141
+  - mark_ref: Mark 16:1
+    matt_ref: Matt 28:1
+    score: 0.259224
+  - mark_ref: Mark 16:6
+    matt_ref: Matt 28:6
+    score: 0.369014
+  - mark_ref: Mark 16:7
+    matt_ref: Matt 28:7
+    score: 0.515131
+  mark16_9_20_aligned_pairs: []
+observation: Under the current chain threshold, the primary chain still terminates
+  before Mark 16:9–20; the text-critical sensitivity run affects candidate space more
+  than final chain alignment.

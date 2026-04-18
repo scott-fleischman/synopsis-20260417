@@ -1,0 +1,8 @@
+matt_prior_Luke_uses_Matt: 97.16
+luke_prior_Matt_uses_Luke: 101.68
+common_source_or_oral_lower_burden_indicator:
+  heuristic_relative_total: 34.978
+  interpretation: This lower heuristic total reflects the high density of strong secondary
+    echoes outside the monotonic backbone. It is an audit prompt, not a probability.
+caution: Direct-model totals and common-source indicator are heuristic audit numbers,
+  not posterior probabilities.

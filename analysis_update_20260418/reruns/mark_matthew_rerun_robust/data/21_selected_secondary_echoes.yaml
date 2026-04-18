@@ -1,0 +1,170 @@
+- a_ref: Mark 13:13
+  b_ref: Matt 10:22
+  a_idx: 510
+  b_idx: 294
+  score: 0.9879611730575562
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 13:12
+  b_ref: Matt 10:21
+  a_idx: 509
+  b_idx: 293
+  score: 0.9518445134162903
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 7:7
+  b_ref: Matt 15:9
+  a_idx: 254
+  b_idx: 497
+  score: 0.9331939220428467
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 7:6
+  b_ref: Matt 15:8
+  a_idx: 253
+  b_idx: 496
+  score: 0.7327755689620972
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 1:31
+  b_ref: Matt 8:15
+  a_idx: 30
+  b_idx: 215
+  score: 0.6243330836296082
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 4:25
+  b_ref: Matt 13:12
+  a_idx: 132
+  b_idx: 406
+  score: 0.599928081035614
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 13:11
+  b_ref: Matt 10:20
+  a_idx: 508
+  b_idx: 292
+  score: 0.5170900821685791
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 1:6
+  b_ref: Matt 3:4
+  a_idx: 5
+  b_idx: 51
+  score: 0.5139658451080322
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 4:25
+  b_ref: Matt 25:29
+  a_idx: 132
+  b_idx: 889
+  score: 0.508894681930542
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 3:22
+  b_ref: Matt 9:34
+  a_idx: 94
+  b_idx: 268
+  score: 0.49430376291275024
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 5:13
+  b_ref: Matt 8:32
+  a_idx: 161
+  b_idx: 232
+  score: 0.4917924404144287
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 1:32
+  b_ref: Matt 8:16
+  a_idx: 31
+  b_idx: 216
+  score: 0.4906681478023529
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 10:36
+  b_ref: Matt 20:32
+  a_idx: 405
+  b_idx: 677
+  score: 0.4872138202190399
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 11:29
+  b_ref: Matt 21:27
+  a_idx: 449
+  b_idx: 706
+  score: 0.48567304015159607
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 5:28
+  b_ref: Matt 9:21
+  a_idx: 176
+  b_idx: 255
+  score: 0.48515841364860535
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 8:35
+  b_ref: Matt 10:39
+  a_idx: 318
+  b_idx: 311
+  score: 0.4785221219062805
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 6:42
+  b_ref: Matt 15:37
+  a_idx: 233
+  b_idx: 525
+  score: 0.47801947593688965
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 10:11
+  b_ref: Matt 5:31
+  a_idx: 380
+  b_idx: 120
+  score: 0.4736413359642029
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 1:2
+  b_ref: Matt 11:10
+  a_idx: 1
+  b_idx: 324
+  score: 0.4710872173309326
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 9:41
+  b_ref: Matt 10:42
+  a_idx: 362
+  b_idx: 314
+  score: 0.46955522894859314
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Mark 5:14
+  b_ref: Matt 8:33
+  a_idx: 162
+  b_idx: 233
+  score: 0.4551042914390564
+  tags:
+  - moderate_verbal_echo
+- a_ref: Mark 3:18
+  b_ref: Matt 10:3
+  a_idx: 90
+  b_idx: 275
+  score: 0.4513181746006012
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder

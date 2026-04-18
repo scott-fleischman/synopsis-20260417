@@ -1,0 +1,384 @@
+- block_id: 1
+  matt_span_refs: Matt 1:25–Matt 1:25
+  luke_span_refs: Luke 1:31–Luke 1:31
+  pair_count: 1
+  mean_score: 0.420808
+  min_score: 0.420808
+  max_score: 0.420808
+  pairs:
+  - a_ref: Matt 1:25
+    b_ref: Luke 1:31
+    score: 0.420808
+- block_id: 2
+  matt_span_refs: Matt 3:7–Matt 3:10
+  luke_span_refs: Luke 3:7–Luke 3:9
+  pair_count: 3
+  mean_score: 0.764705
+  min_score: 0.509213
+  max_score: 0.936615
+  pairs:
+  - a_ref: Matt 3:7
+    b_ref: Luke 3:7
+    score: 0.509213
+  - a_ref: Matt 3:9
+    b_ref: Luke 3:8
+    score: 0.848287
+  - a_ref: Matt 3:10
+    b_ref: Luke 3:9
+    score: 0.936615
+- block_id: 3
+  matt_span_refs: Matt 3:12–Matt 3:12
+  luke_span_refs: Luke 3:17–Luke 3:17
+  pair_count: 1
+  mean_score: 0.749568
+  min_score: 0.749568
+  max_score: 0.749568
+  pairs:
+  - a_ref: Matt 3:12
+    b_ref: Luke 3:17
+    score: 0.749568
+- block_id: 4
+  matt_span_refs: Matt 4:2–Matt 4:6
+  luke_span_refs: Luke 4:2–Luke 4:11
+  pair_count: 5
+  mean_score: 0.471648
+  min_score: 0.338996
+  max_score: 0.595825
+  pairs:
+  - a_ref: Matt 4:2
+    b_ref: Luke 4:2
+    score: 0.338996
+  - a_ref: Matt 4:3
+    b_ref: Luke 4:3
+    score: 0.572487
+  - a_ref: Matt 4:4
+    b_ref: Luke 4:4
+    score: 0.472079
+  - a_ref: Matt 4:5
+    b_ref: Luke 4:9
+    score: 0.378854
+  - a_ref: Matt 4:6
+    b_ref: Luke 4:11
+    score: 0.595825
+- block_id: 5
+  matt_span_refs: Matt 5:3–Matt 5:6
+  luke_span_refs: Luke 6:20–Luke 6:21
+  pair_count: 2
+  mean_score: 0.357381
+  min_score: 0.341208
+  max_score: 0.373554
+  pairs:
+  - a_ref: Matt 5:3
+    b_ref: Luke 6:20
+    score: 0.373554
+  - a_ref: Matt 5:6
+    b_ref: Luke 6:21
+    score: 0.341208
+- block_id: 6
+  matt_span_refs: Matt 5:11–Matt 5:12
+  luke_span_refs: Luke 6:22–Luke 6:23
+  pair_count: 2
+  mean_score: 0.356469
+  min_score: 0.339832
+  max_score: 0.373106
+  pairs:
+  - a_ref: Matt 5:11
+    b_ref: Luke 6:22
+    score: 0.339832
+  - a_ref: Matt 5:12
+    b_ref: Luke 6:23
+    score: 0.373106
+- block_id: 7
+  matt_span_refs: Matt 5:44–Matt 5:44
+  luke_span_refs: Luke 6:27–Luke 6:27
+  pair_count: 1
+  mean_score: 0.387443
+  min_score: 0.387443
+  max_score: 0.387443
+  pairs:
+  - a_ref: Matt 5:44
+    b_ref: Luke 6:27
+    score: 0.387443
+- block_id: 8
+  matt_span_refs: Matt 7:1–Matt 7:4
+  luke_span_refs: Luke 6:37–Luke 6:42
+  pair_count: 3
+  mean_score: 0.547406
+  min_score: 0.342096
+  max_score: 0.764073
+  pairs:
+  - a_ref: Matt 7:1
+    b_ref: Luke 6:37
+    score: 0.342096
+  - a_ref: Matt 7:3
+    b_ref: Luke 6:41
+    score: 0.764073
+  - a_ref: Matt 7:4
+    b_ref: Luke 6:42
+    score: 0.536049
+- block_id: 9
+  matt_span_refs: Matt 7:18–Matt 7:18
+  luke_span_refs: Luke 6:43–Luke 6:43
+  pair_count: 1
+  mean_score: 0.435015
+  min_score: 0.435015
+  max_score: 0.435015
+  pairs:
+  - a_ref: Matt 7:18
+    b_ref: Luke 6:43
+    score: 0.435015
+- block_id: 10
+  matt_span_refs: Matt 8:8–Matt 8:10
+  luke_span_refs: Luke 7:7–Luke 7:9
+  pair_count: 3
+  mean_score: 0.65101
+  min_score: 0.427947
+  max_score: 0.869664
+  pairs:
+  - a_ref: Matt 8:8
+    b_ref: Luke 7:7
+    score: 0.427947
+  - a_ref: Matt 8:9
+    b_ref: Luke 7:8
+    score: 0.869664
+  - a_ref: Matt 8:10
+    b_ref: Luke 7:9
+    score: 0.655418
+- block_id: 11
+  matt_span_refs: Matt 11:3–Matt 11:19
+  luke_span_refs: Luke 7:19–Luke 7:34
+  pair_count: 11
+  mean_score: 0.655335
+  min_score: 0.347749
+  max_score: 0.943357
+  pairs:
+  - a_ref: Matt 11:3
+    b_ref: Luke 7:19
+    score: 0.519428
+  - a_ref: Matt 11:5
+    b_ref: Luke 7:22
+    score: 0.700909
+  - a_ref: Matt 11:6
+    b_ref: Luke 7:23
+    score: 0.943357
+  - a_ref: Matt 11:7
+    b_ref: Luke 7:24
+    score: 0.77343
+  - a_ref: Matt 11:8
+    b_ref: Luke 7:25
+    score: 0.593065
+  - a_ref: Matt 11:9
+    b_ref: Luke 7:26
+    score: 0.864639
+  - a_ref: Matt 11:11
+    b_ref: Luke 7:28
+    score: 0.677339
+  - a_ref: Matt 11:16
+    b_ref: Luke 7:31
+    score: 0.347749
+  - a_ref: Matt 11:17
+    b_ref: Luke 7:32
+    score: 0.541087
+  - a_ref: Matt 11:18
+    b_ref: Luke 7:33
+    score: 0.57366
+  - a_ref: Matt 11:19
+    b_ref: Luke 7:34
+    score: 0.674027
+- block_id: 12
+  matt_span_refs: Matt 11:21–Matt 11:23
+  luke_span_refs: Luke 10:13–Luke 10:15
+  pair_count: 3
+  mean_score: 0.736994
+  min_score: 0.563552
+  max_score: 0.864137
+  pairs:
+  - a_ref: Matt 11:21
+    b_ref: Luke 10:13
+    score: 0.864137
+  - a_ref: Matt 11:22
+    b_ref: Luke 10:14
+    score: 0.783292
+  - a_ref: Matt 11:23
+    b_ref: Luke 10:15
+    score: 0.563552
+- block_id: 13
+  matt_span_refs: Matt 11:25–Matt 11:27
+  luke_span_refs: Luke 10:21–Luke 10:22
+  pair_count: 2
+  mean_score: 0.617751
+  min_score: 0.55537
+  max_score: 0.680131
+  pairs:
+  - a_ref: Matt 11:25
+    b_ref: Luke 10:21
+    score: 0.55537
+  - a_ref: Matt 11:27
+    b_ref: Luke 10:22
+    score: 0.680131
+- block_id: 14
+  matt_span_refs: Matt 12:25–Matt 12:30
+  luke_span_refs: Luke 11:17–Luke 11:23
+  pair_count: 4
+  mean_score: 0.73534
+  min_score: 0.371466
+  max_score: 0.8925
+  pairs:
+  - a_ref: Matt 12:25
+    b_ref: Luke 11:17
+    score: 0.371466
+  - a_ref: Matt 12:27
+    b_ref: Luke 11:19
+    score: 0.8925
+  - a_ref: Matt 12:28
+    b_ref: Luke 11:20
+    score: 0.850468
+  - a_ref: Matt 12:30
+    b_ref: Luke 11:23
+    score: 0.826928
+- block_id: 15
+  matt_span_refs: Matt 12:43–Matt 12:45
+  luke_span_refs: Luke 11:24–Luke 11:26
+  pair_count: 3
+  mean_score: 0.659178
+  min_score: 0.554523
+  max_score: 0.732689
+  pairs:
+  - a_ref: Matt 12:43
+    b_ref: Luke 11:24
+    score: 0.690322
+  - a_ref: Matt 12:44
+    b_ref: Luke 11:25
+    score: 0.554523
+  - a_ref: Matt 12:45
+    b_ref: Luke 11:26
+    score: 0.732689
+- block_id: 16
+  matt_span_refs: Matt 23:25–Matt 23:25
+  luke_span_refs: Luke 11:39–Luke 11:39
+  pair_count: 1
+  mean_score: 0.406111
+  min_score: 0.406111
+  max_score: 0.406111
+  pairs:
+  - a_ref: Matt 23:25
+    b_ref: Luke 11:39
+    score: 0.406111
+- block_id: 17
+  matt_span_refs: Matt 23:29–Matt 23:29
+  luke_span_refs: Luke 11:47–Luke 11:47
+  pair_count: 1
+  mean_score: 0.382234
+  min_score: 0.382234
+  max_score: 0.382234
+  pairs:
+  - a_ref: Matt 23:29
+    b_ref: Luke 11:47
+    score: 0.382234
+- block_id: 18
+  matt_span_refs: Matt 23:34–Matt 23:35
+  luke_span_refs: Luke 11:49–Luke 11:51
+  pair_count: 2
+  mean_score: 0.326217
+  min_score: 0.322939
+  max_score: 0.329496
+  pairs:
+  - a_ref: Matt 23:34
+    b_ref: Luke 11:49
+    score: 0.322939
+  - a_ref: Matt 23:35
+    b_ref: Luke 11:51
+    score: 0.329496
+- block_id: 19
+  matt_span_refs: Matt 24:43–Matt 24:50
+  luke_span_refs: Luke 12:39–Luke 12:46
+  pair_count: 7
+  mean_score: 0.742126
+  min_score: 0.601776
+  max_score: 0.927206
+  pairs:
+  - a_ref: Matt 24:43
+    b_ref: Luke 12:39
+    score: 0.653101
+  - a_ref: Matt 24:44
+    b_ref: Luke 12:40
+    score: 0.783554
+  - a_ref: Matt 24:45
+    b_ref: Luke 12:42
+    score: 0.645371
+  - a_ref: Matt 24:46
+    b_ref: Luke 12:43
+    score: 0.927206
+  - a_ref: Matt 24:47
+    b_ref: Luke 12:44
+    score: 0.881552
+  - a_ref: Matt 24:48
+    b_ref: Luke 12:45
+    score: 0.601776
+  - a_ref: Matt 24:50
+    b_ref: Luke 12:46
+    score: 0.70232
+- block_id: 20
+  matt_span_refs: Matt 24:51–Matt 24:51
+  luke_span_refs: Luke 13:28–Luke 13:28
+  pair_count: 1
+  mean_score: 0.341989
+  min_score: 0.341989
+  max_score: 0.341989
+  pairs:
+  - a_ref: Matt 24:51
+    b_ref: Luke 13:28
+    score: 0.341989
+- block_id: 21
+  matt_span_refs: Matt 25:26–Matt 25:28
+  luke_span_refs: Luke 19:22–Luke 19:24
+  pair_count: 3
+  mean_score: 0.360722
+  min_score: 0.323859
+  max_score: 0.420058
+  pairs:
+  - a_ref: Matt 25:26
+    b_ref: Luke 19:22
+    score: 0.323859
+  - a_ref: Matt 25:27
+    b_ref: Luke 19:23
+    score: 0.338249
+  - a_ref: Matt 25:28
+    b_ref: Luke 19:24
+    score: 0.420058
+- block_id: 22
+  matt_span_refs: Matt 26:16–Matt 26:16
+  luke_span_refs: Luke 22:6–Luke 22:6
+  pair_count: 1
+  mean_score: 0.371521
+  min_score: 0.371521
+  max_score: 0.371521
+  pairs:
+  - a_ref: Matt 26:16
+    b_ref: Luke 22:6
+    score: 0.371521
+- block_id: 23
+  matt_span_refs: Matt 26:68–Matt 26:68
+  luke_span_refs: Luke 22:64–Luke 22:64
+  pair_count: 1
+  mean_score: 0.532178
+  min_score: 0.532178
+  max_score: 0.532178
+  pairs:
+  - a_ref: Matt 26:68
+    b_ref: Luke 22:64
+    score: 0.532178
+- block_id: 24
+  matt_span_refs: Matt 27:58–Matt 27:59
+  luke_span_refs: Luke 23:52–Luke 23:53
+  pair_count: 2
+  mean_score: 0.518395
+  min_score: 0.367064
+  max_score: 0.669725
+  pairs:
+  - a_ref: Matt 27:58
+    b_ref: Luke 23:52
+    score: 0.669725
+  - a_ref: Matt 27:59
+    b_ref: Luke 23:53
+    score: 0.367064

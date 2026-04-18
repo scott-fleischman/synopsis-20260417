@@ -1,0 +1,49 @@
+global_reading:
+  epistles_to_gospels: A few cases have strong exact or formulaic overlap, but many high exact hits are scripture/liturgy
+    rather than Gospel dependence.
+  james: James has multiple Jesus-tradition convergences; oath saying is high-value but better explained as shared Jesus tradition
+    than proven direct Matthew use.
+  pastorals: 1Tim 5:18 is one of the strongest Greek-form cases for a fixed Jesus-saying close to Luke 10:7.
+  john: John shares many passion/miracle/entry anchors with Synoptics, but the low-verbatim/high-transformation profile favors
+    tradition-network analysis before direct direction claims.
+  thomas: Thomas is sayings-heavy; direct dependence requires more than shared motif because oral/fixed-saying transmission
+    has low burden for aphorisms.
+  apocrypha: 'Inventory indicates high-value future cases: Gospel of Peter, Gospel of Nicodemus/Acts of Pilate, Protevangelium,
+    Infancy Thomas, Jewish-Christian gospel fragments.'
+case_burdens:
+- case: 1Tim 5:18 ~ Luke 10:7
+  direct_literary: medium
+  fixed_written_saying: low-to-medium
+  oral_tradition: medium
+  independent: very_high
+  notes: Exact phrase with Luke’s μισθός form, lacking Luke’s γάρ in the same local position.
+- case: Jas 5:12 ~ Matt 5:34-37
+  direct_literary: medium
+  fixed_written_saying: low-to-medium
+  oral_tradition: low
+  independent: high
+  notes: Distinctive cluster; lexical drift and compact paraenesis make oral/shared tradition low burden.
+- case: 1Cor 11:24-25 ~ Luke 22:19-20
+  direct_literary: directionally complex
+  liturgical_tradition: low
+  independent: very_high
+  notes: Long formula; chronology prevents simplistic Paul-depends-on-Luke analysis.
+- case: John passion anchors ~ Synoptics
+  direct_literary: medium-to-high transformation burden
+  common_passion_tradition: low
+  independent: very_high for some detail clusters
+  notes: Specific details such as ear/servant/garments lower independence; order and theology complicate direction.
+- case: Thomas portable sayings ~ Synoptics
+  direct_literary: varies by logion; often medium-to-high
+  oral_or_fixed_saying: often low
+  independent: varies; high for complex parables/scenes
+  notes: Sayings without narrative order are poor direct-dependence tests unless distinctive wording/order clusters survive.
+scoring_interpretation:
+  automatic_score_above_0_35: strong retrieval candidate; inspect negative-space flags before dependence claim
+  exact_run_len_4plus: potentially important but frequently scriptural/formulaic
+  semantic_registry_without_lexical_score: hypothesis for human review, not automatic proof
+  best_models_should_minimize:
+  - coincidence burden
+  - access burden
+  - transformation burden
+  - negative-space residuals

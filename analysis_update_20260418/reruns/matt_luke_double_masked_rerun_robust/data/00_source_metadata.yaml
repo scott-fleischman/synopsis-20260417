@@ -1,0 +1,122 @@
+created_utc: '2026-04-18T16:46:33.753278+00:00'
+books:
+  Mark:
+    text_file: Mark.txt
+    text_sha256: fe1b5a4c15db71e7e30f33fb67966ca93baffae377085ece0b88f66316729638
+    apparatus_file: Mark.xml
+    apparatus_sha256: 119360f19dfafe085c5aa11e869087eaac84d710b72520813977e25d24b1c433
+    morph_file: 62-Mk-morphgnt.txt
+    morph_sha256: 4a2d2365cfe3e8d6c20b7c130c2c46363fa4459c3a6004992eba0a18231b183e
+    actual_vs_canonical:
+      actual_unit_count: 673
+      canonical_slot_count: 678
+      missing_canonical_slots:
+      - Mark 7:16
+      - Mark 9:44
+      - Mark 9:46
+      - Mark 11:26
+      - Mark 15:28
+      chapter_max_verses:
+        1: 45
+        2: 28
+        3: 35
+        4: 41
+        5: 43
+        6: 56
+        7: 37
+        8: 38
+        9: 50
+        10: 52
+        11: 33
+        12: 44
+        13: 37
+        14: 72
+        15: 47
+        16: 20
+  Matt:
+    text_file: Matt.txt
+    text_sha256: 4fa718540cbc6330591b233c99c68bbf52b85afc90016e4188efe5cd9719eeb0
+    apparatus_file: Matt.xml
+    apparatus_sha256: c10a68e83f2506f974d7b5b450416fa10cc9acff3c64adee136349449881d40e
+    morph_file: 61-Mt-morphgnt.txt
+    morph_sha256: 95b360228bedd1c2d06655469111d3f028a4ce1d46939d440ed549feee8b73ec
+    actual_vs_canonical:
+      actual_unit_count: 1068
+      canonical_slot_count: 1071
+      missing_canonical_slots:
+      - Matt 17:21
+      - Matt 18:11
+      - Matt 23:14
+      chapter_max_verses:
+        1: 25
+        2: 23
+        3: 17
+        4: 25
+        5: 48
+        6: 34
+        7: 29
+        8: 34
+        9: 38
+        10: 42
+        11: 30
+        12: 50
+        13: 58
+        14: 36
+        15: 39
+        16: 28
+        17: 27
+        18: 35
+        19: 30
+        20: 34
+        21: 46
+        22: 46
+        23: 39
+        24: 51
+        25: 46
+        26: 75
+        27: 66
+        28: 20
+  Luke:
+    text_file: Luke.txt
+    text_sha256: 102d65ec7a91271777115d1a605688776adfda6a1188680ccf593e27e3e876d6
+    apparatus_file: Luke.xml
+    apparatus_sha256: 392b3aefbefd625f35cf437d59ab07cc139992352435e8c0dc770b3642cf27f4
+    morph_file: 63-Lk-morphgnt.txt
+    morph_sha256: a6f10ccf27a905f21ecbec96c3c01f220c39dd37aae118022113a52dfeb7528e
+    actual_vs_canonical:
+      actual_unit_count: 1149
+      canonical_slot_count: 1151
+      missing_canonical_slots:
+      - Luke 17:36
+      - Luke 23:17
+      chapter_max_verses:
+        1: 80
+        2: 52
+        3: 38
+        4: 44
+        5: 39
+        6: 49
+        7: 50
+        8: 56
+        9: 62
+        10: 42
+        11: 54
+        12: 59
+        13: 35
+        14: 35
+        15: 32
+        16: 31
+        17: 37
+        18: 43
+        19: 48
+        20: 47
+        21: 38
+        22: 71
+        23: 56
+        24: 53
+notes:
+  canonical_text_base: Faithlife SBLGNT text files downloaded locally
+  apparatus: Faithlife SBLGNT apparatus XML downloaded locally
+  morphology: MorphGNT local files downloaded locally
+  text_critical_default_policy: double-bracketed text removed from default surface
+    layer; if surface is empty after removal, lemma layer is also excluded by default

@@ -1,0 +1,19 @@
+corpus_group,work_or_section,analysis_layer,expected_signal
+early_gospel_fragments,Gospel according to the Hebrews,inventory_only; target for future primary-language fragment alignment,Jesus sayings and Jewish-Christian gospel tradition
+early_gospel_fragments,Gospel of the Ebionites,inventory_only,synoptic-like Jewish-Christian gospel fragments
+early_gospel_fragments,Gospel according to the Egyptians,inventory_only,dialogue/sayings; possible Thomas-like motifs
+early_gospel_fragments,Gospel of Philip,inventory_only,late/gnostic themes; low direct canonical narrative alignment
+early_gospel_fragments,Traditions of Matthias,inventory_only,lost sayings/traditions
+early_gospel_fragments,Gospel of Peter testimonies and fragment,English/OCR inventory; high-value passion narrative target,passion narrative with canonical overlap and transformation
+early_gospel_fragments,Gospel of Thomas ancient testimonies / Oxyrhynchus sayings,inventory; Thomas handled separately from Coptic Scriptorium,sayings parallels to Synoptics/John
+early_gospel_fragments,Fayoum Gospel fragment,inventory_only,short passion/last supper fragment
+agrapha,Agrapha in Gospel additions and quotations,inventory_only,isolated sayings; high oral/common-tradition ambiguity
+infancy_gospels,Book of James / Protevangelium,inventory_only,birth/Mary traditions; canonical infancy narrative relationship
+infancy_gospels,Infancy Gospel of Thomas Greek A/B and Latin,inventory_only,childhood miracle traditions; low direct Gospel narrative alignment
+infancy_gospels,"Pseudo-Matthew, Birth of Mary, Arabic Infancy, Armenian Infancy",inventory_only,expanded infancy narrative networks
+passion_gospels,Gospel of Nicodemus / Acts of Pilate,inventory_only,"trial, passion, descent traditions; high canonical-passion overlap"
+passion_gospels,"Letters/Reports of Pilate, Herod, Tiberius; Vengeance of Savior; Joseph of Arimathea",inventory_only,late passion expansions
+passion_gospels,Gospel/Book of Bartholomew and resurrection/assumption materials,inventory_only,post-resurrection and visionary expansions
+apocryphal_acts,"Acts of John, including discourse concerning the Lord",inventory_only,Johannine/Docetic traditions; possible John-contact questions
+apocryphal_acts,Acts of Paul / Thecla / Third Corinthians,inventory_only,Pauline reception rather than Gospel dependence
+apocryphal_acts,"Acts of Peter, Andrew, Thomas, Philip, Andrew and Matthias",inventory_only,apostolic romance traditions; lower direct Gospel-saying signal

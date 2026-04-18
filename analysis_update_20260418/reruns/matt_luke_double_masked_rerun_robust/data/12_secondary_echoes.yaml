@@ -1,0 +1,426 @@
+- a_ref: Matt 7:8
+  b_ref: Luke 11:10
+  a_idx: 158
+  b_idx: 416
+  score: 0.9784719347953796
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:7
+  b_ref: Luke 11:9
+  a_idx: 157
+  b_idx: 415
+  score: 0.9138877391815186
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:20
+  b_ref: Luke 9:58
+  a_idx: 193
+  b_idx: 363
+  score: 0.8944393992424011
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 12:41
+  b_ref: Luke 11:32
+  a_idx: 301
+  b_idx: 435
+  score: 0.8881125450134277
+  tags:
+  - strong_verbal_echo
+- a_ref: Matt 12:42
+  b_ref: Luke 11:31
+  a_idx: 302
+  b_idx: 434
+  score: 0.8047777414321899
+  tags:
+  - strong_verbal_echo
+- a_ref: Matt 6:24
+  b_ref: Luke 16:13
+  a_idx: 141
+  b_idx: 623
+  score: 0.7899556756019592
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:27
+  b_ref: Luke 12:25
+  a_idx: 144
+  b_idx: 480
+  score: 0.7779704332351685
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 23:37
+  b_ref: Luke 13:34
+  a_idx: 539
+  b_idx: 544
+  score: 0.7299086451530457
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:30
+  b_ref: Luke 12:28
+  a_idx: 147
+  b_idx: 483
+  score: 0.6961929798126221
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:21
+  b_ref: Luke 12:34
+  a_idx: 138
+  b_idx: 489
+  score: 0.691831648349762
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 21:44
+  b_ref: Luke 20:18
+  a_idx: 477
+  b_idx: 736
+  score: 0.6850923299789429
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:11
+  b_ref: Luke 11:13
+  a_idx: 161
+  b_idx: 419
+  score: 0.6794857382774353
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:29
+  b_ref: Luke 12:27
+  a_idx: 146
+  b_idx: 482
+  score: 0.6760314106941223
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:21
+  b_ref: Luke 9:59
+  a_idx: 194
+  b_idx: 364
+  score: 0.6749038100242615
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 13:17
+  b_ref: Luke 10:24
+  a_idx: 312
+  b_idx: 390
+  score: 0.6596546173095703
+  tags:
+  - moderate_verbal_echo
+- a_ref: Matt 10:26
+  b_ref: Luke 12:2
+  a_idx: 232
+  b_idx: 457
+  score: 0.6537418365478516
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 22:45
+  b_ref: Luke 20:44
+  a_idx: 505
+  b_idx: 745
+  score: 0.6499873399734497
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 10:27
+  b_ref: Luke 12:3
+  a_idx: 233
+  b_idx: 458
+  score: 0.6305451393127441
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 5:26
+  b_ref: Luke 12:59
+  a_idx: 99
+  b_idx: 514
+  score: 0.6126886010169983
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 9:38
+  b_ref: Luke 10:2
+  a_idx: 214
+  b_idx: 369
+  score: 0.6117947697639465
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:32
+  b_ref: Luke 12:30
+  a_idx: 149
+  b_idx: 485
+  score: 0.6003326773643494
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:11
+  b_ref: Luke 11:3
+  a_idx: 130
+  b_idx: 409
+  score: 0.5989169478416443
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:22
+  b_ref: Luke 11:34
+  a_idx: 139
+  b_idx: 436
+  score: 0.5931406021118164
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:19
+  b_ref: Luke 9:57
+  a_idx: 192
+  b_idx: 362
+  score: 0.5839484930038452
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:19
+  b_ref: Luke 3:9
+  a_idx: 169
+  b_idx: 137
+  score: 0.5727813243865967
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:33
+  b_ref: Luke 12:31
+  a_idx: 150
+  b_idx: 486
+  score: 0.571534276008606
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 13:33
+  b_ref: Luke 13:21
+  a_idx: 322
+  b_idx: 532
+  score: 0.570921778678894
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:22
+  b_ref: Luke 9:60
+  a_idx: 195
+  b_idx: 365
+  score: 0.5642639398574829
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:25
+  b_ref: Luke 12:22
+  a_idx: 142
+  b_idx: 477
+  score: 0.5613908767700195
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 9:33
+  b_ref: Luke 11:14
+  a_idx: 211
+  b_idx: 420
+  score: 0.5541784763336182
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 12:42
+  b_ref: Luke 11:32
+  a_idx: 302
+  b_idx: 435
+  score: 0.5524501800537109
+  tags:
+  - moderate_verbal_echo
+- a_ref: Matt 24:38
+  b_ref: Luke 17:27
+  a_idx: 551
+  b_idx: 666
+  score: 0.5511243343353271
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 10:30
+  b_ref: Luke 12:7
+  a_idx: 236
+  b_idx: 462
+  score: 0.5428085327148438
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:26
+  b_ref: Luke 12:24
+  a_idx: 143
+  b_idx: 479
+  score: 0.5424184799194336
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:7
+  b_ref: Luke 11:10
+  a_idx: 157
+  b_idx: 416
+  score: 0.5379112362861633
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 12:41
+  b_ref: Luke 11:31
+  a_idx: 301
+  b_idx: 434
+  score: 0.5294899344444275
+  tags:
+  - moderate_verbal_echo
+- a_ref: Matt 10:31
+  b_ref: Luke 12:7
+  a_idx: 237
+  b_idx: 462
+  score: 0.5274441838264465
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 9:37
+  b_ref: Luke 10:2
+  a_idx: 213
+  b_idx: 369
+  score: 0.5257725715637207
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:10
+  b_ref: Luke 11:12
+  a_idx: 160
+  b_idx: 418
+  score: 0.5206319689750671
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 26:70
+  b_ref: Luke 22:57
+  a_idx: 625
+  b_idx: 811
+  score: 0.5103737711906433
+  tags:
+  - moderate_verbal_echo
+- a_ref: Matt 10:15
+  b_ref: Luke 10:12
+  a_idx: 226
+  b_idx: 378
+  score: 0.5029727816581726
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 24:37
+  b_ref: Luke 17:26
+  a_idx: 550
+  b_idx: 665
+  score: 0.5017775297164917
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:8
+  b_ref: Luke 11:9
+  a_idx: 158
+  b_idx: 415
+  score: 0.5008829832077026
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:25
+  b_ref: Luke 12:23
+  a_idx: 142
+  b_idx: 478
+  score: 0.5003249645233154
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:9
+  b_ref: Luke 11:11
+  a_idx: 159
+  b_idx: 417
+  score: 0.49376511573791504
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 10:32
+  b_ref: Luke 12:8
+  a_idx: 238
+  b_idx: 463
+  score: 0.49215930700302124
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 23:38
+  b_ref: Luke 13:35
+  a_idx: 540
+  b_idx: 545
+  score: 0.4916706681251526
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 17:16
+  b_ref: Luke 9:40
+  a_idx: 392
+  b_idx: 350
+  score: 0.47838664054870605
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 23:12
+  b_ref: Luke 14:11
+  a_idx: 516
+  b_idx: 556
+  score: 0.4762299060821533
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 10:29
+  b_ref: Luke 12:6
+  a_idx: 235
+  b_idx: 461
+  score: 0.474837988615036
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 12:35
+  b_ref: Luke 6:45
+  a_idx: 295
+  b_idx: 252
+  score: 0.4738624691963196
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:23
+  b_ref: Luke 11:35
+  a_idx: 140
+  b_idx: 437
+  score: 0.4693969488143921
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 22:43
+  b_ref: Luke 20:44
+  a_idx: 504
+  b_idx: 745
+  score: 0.4614785313606262
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:11
+  b_ref: Luke 13:29
+  a_idx: 186
+  b_idx: 540
+  score: 0.45126035809516907
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder

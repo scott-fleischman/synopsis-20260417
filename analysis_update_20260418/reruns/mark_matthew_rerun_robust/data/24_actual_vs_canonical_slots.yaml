@@ -1,0 +1,62 @@
+Mark:
+  actual_unit_count: 673
+  canonical_slot_count: 678
+  missing_canonical_slots:
+  - Mark 7:16
+  - Mark 9:44
+  - Mark 9:46
+  - Mark 11:26
+  - Mark 15:28
+  chapter_max_verses:
+    1: 45
+    2: 28
+    3: 35
+    4: 41
+    5: 43
+    6: 56
+    7: 37
+    8: 38
+    9: 50
+    10: 52
+    11: 33
+    12: 44
+    13: 37
+    14: 72
+    15: 47
+    16: 20
+Matt:
+  actual_unit_count: 1068
+  canonical_slot_count: 1071
+  missing_canonical_slots:
+  - Matt 17:21
+  - Matt 18:11
+  - Matt 23:14
+  chapter_max_verses:
+    1: 25
+    2: 23
+    3: 17
+    4: 25
+    5: 48
+    6: 34
+    7: 29
+    8: 34
+    9: 38
+    10: 42
+    11: 30
+    12: 50
+    13: 58
+    14: 36
+    15: 39
+    16: 28
+    17: 27
+    18: 35
+    19: 30
+    20: 34
+    21: 46
+    22: 46
+    23: 39
+    24: 51
+    25: 46
+    26: 75
+    27: 66
+    28: 20

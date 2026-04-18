@@ -1,0 +1,23 @@
+mark_matthew_global:
+  claim: Matthew most likely used Mark or a Mark-like written narrative source.
+  supports:
+  - reruns/mark_matthew_rerun_robust/data/07_primary_chain_pairs.csv
+  - reruns/mark_matthew_rerun_robust/data/14_direction_ledger_by_loose_block.yaml
+  - reruns/mark_matthew_rerun_robust/data/22_sensitivity_mark_ending.yaml
+  - reruns/mark_matthew_rerun_robust/data/23_sensitivity_score_grid.csv
+matt_luke_masked_global:
+  claim: After explicit Markan masking, the remaining Matthew–Luke relation is better
+    characterized as a dense field of nonlocal echoes than as a single clean monotonic
+    direct-dependence chain.
+  supports:
+  - reruns/matt_luke_double_masked_rerun_robust/data/01c_mask_regime_comparison.csv
+  - reruns/matt_luke_double_masked_rerun_robust/data/12_secondary_echoes.yaml
+  - reruns/matt_luke_double_masked_rerun_robust/data/17_mask_regime_sensitivity.yaml
+jtea_global:
+  claim: The JTEA patch should be read primarily as an interpretive-control improvement,
+    not as a new full automatic cross-lingual proof engine.
+  supports:
+  - reruns/jtea_low_verbatim_rerun_robust/data/00_method_rethought_low_verbatim.yaml
+  - reruns/jtea_low_verbatim_rerun_robust/data/07_targeted_case_studies.yaml
+  - reruns/jtea_low_verbatim_rerun_robust/data/17_claim_evidence_links.yaml
+  - reruns/jtea_low_verbatim_rerun_robust/data/18_formula_risk_summary.csv

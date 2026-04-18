@@ -1,0 +1,124 @@
+project: Mark–Matthew literary dependence rerun with reproducibility patch
+method_summary:
+  text_base: Local SBLGNT text + apparatus + MorphGNT
+  updates_in_this_rerun:
+  - committed-style runnable scripts included in package
+  - actual verse rows separated from canonical verse-slot counts
+  - double-bracketed text excluded from default lemma layer when surface becomes empty
+  - score-threshold and gap-penalty sensitivity grid added
+  - Mark 16:9–20 sensitivity run added
+  - claim/evidence mapping added at package level
+  default_parameters:
+    primary_chain_min_score: 0.25
+    gap_penalty: 0.05
+    loose_gap_mark: 4
+    loose_gap_matt: 7
+    tight_gap_mark: 3
+    tight_gap_matt: 3
+    secondary_echo_min_score: 0.45
+    secondary_echo_top_n: 250
+global_metrics:
+  matched_pair_count: 386
+  mark_total_verse_count: 673
+  matt_total_verse_count: 1068
+  mark_matched_pct: 0.5736
+  matt_matched_pct: 0.3614
+  loose_block_count: 27
+  tight_block_count: 50
+  secondary_echo_count: 22
+global_style:
+  matched_mark_euthys: 23
+  matched_matt_euthys: 6
+  matched_mark_kingdom_god: 3
+  matched_mark_kingdom_heaven: 0
+  matched_matt_kingdom_god: 0
+  matched_matt_kingdom_heaven: 3
+  matched_mark_present_indicative_ratio: 0.2092
+  matched_matt_present_indicative_ratio: 0.1888
+pair_score_summary:
+  mean: 0.509501
+  median: 0.494344
+  min: 0.253066
+  max: 0.943053
+  ge_0.80: 12
+  ge_0.70: 46
+  ge_0.60: 100
+  ge_0.50: 189
+  lt_0.40: 97
+pair_class_counts:
+  b_expands: 64
+  a_expands: 61
+  reordering: 348
+  substitution: 244
+  close_match: 17
+burden_totals:
+  mark_prior_Matt_uses_Mark: 774.87
+  matt_prior_Mark_uses_Matt: 788.66
+actual_vs_canonical:
+  Mark:
+    actual_unit_count: 673
+    canonical_slot_count: 678
+    missing_canonical_slots:
+    - Mark 7:16
+    - Mark 9:44
+    - Mark 9:46
+    - Mark 11:26
+    - Mark 15:28
+    chapter_max_verses:
+      1: 45
+      2: 28
+      3: 35
+      4: 41
+      5: 43
+      6: 56
+      7: 37
+      8: 38
+      9: 50
+      10: 52
+      11: 33
+      12: 44
+      13: 37
+      14: 72
+      15: 47
+      16: 20
+  Matt:
+    actual_unit_count: 1068
+    canonical_slot_count: 1071
+    missing_canonical_slots:
+    - Matt 17:21
+    - Matt 18:11
+    - Matt 23:14
+    chapter_max_verses:
+      1: 25
+      2: 23
+      3: 17
+      4: 25
+      5: 48
+      6: 34
+      7: 29
+      8: 34
+      9: 38
+      10: 42
+      11: 30
+      12: 50
+      13: 58
+      14: 36
+      15: 39
+      16: 28
+      17: 27
+      18: 35
+      19: 30
+      20: 34
+      21: 46
+      22: 46
+      23: 39
+      24: 51
+      25: 46
+      26: 75
+      27: 66
+      28: 20
+notes:
+- This rerun is close to, but not identical with, the earlier thread artifact because
+  the default text-critical handling is stricter and the package now exposes sensitivity
+  layers rather than a single opaque default.
+- The burden totals are heuristic audit numbers, not probabilities.

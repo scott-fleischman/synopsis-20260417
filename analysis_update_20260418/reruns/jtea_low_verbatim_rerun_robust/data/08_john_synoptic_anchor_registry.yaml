@@ -1,0 +1,234 @@
+- anchor_id: john_baptist_witness_spirit_descends
+  john_refs: John 1:29-34
+  synoptic_refs:
+  - Mark 1:9-11
+  - Matt 3:13-17
+  - Luke 3:21-22
+  shared_features:
+  - Baptist setting
+  - Spirit descends
+  - Jesus identified by divine sign
+  john_transformation_if_synoptics_prior: John converts baptism narrative into testimonial
+    recognition; baptism action itself is displaced/offstage.
+  synoptic_transformation_if_john_prior: Synoptics would narrativize John’s testimony
+    into a baptism scene with heavenly voice.
+  common_tradition_assessment: 'Low-burden: baptism/Baptist tradition likely circulated
+    independently of exact wording.'
+  provisional_best_explanation: shared Baptist/baptism tradition; direct dependence
+    not established
+  claim_id: jtea_anchor_01
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: temple_action_relocated
+  john_refs: John 2:13-22
+  synoptic_refs:
+  - Mark 11:15-19
+  - Matt 21:12-17
+  - Luke 19:45-48
+  shared_features:
+  - Temple action
+  - sellers/money-changers
+  - challenge around temple authority
+  john_transformation_if_synoptics_prior: John relocates the temple action to the
+    beginning and makes it programmatic for Jesus’ identity/death/resurrection.
+  synoptic_transformation_if_john_prior: Synoptics relocate the action to final week
+    as a passion trigger.
+  common_tradition_assessment: Possible but the large order displacement must be explained
+    in any direct-use model.
+  provisional_best_explanation: shared temple-action tradition; direct direction underdetermined
+  claim_id: jtea_anchor_02
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: prophet_no_honor
+  john_refs: John 4:44
+  synoptic_refs:
+  - Mark 6:4
+  - Matt 13:57
+  - Luke 4:24
+  shared_features:
+  - A prophet lacks honor in his own homeland/country
+  john_transformation_if_synoptics_prior: John abstracts a Nazareth rejection saying
+    into a transitional travel comment.
+  synoptic_transformation_if_john_prior: Synoptics localize a general proverb into
+    the Nazareth rejection scene.
+  common_tradition_assessment: Very plausible because it is a compact proverb.
+  provisional_best_explanation: portable proverb in Jesus tradition
+  claim_id: jtea_anchor_03
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: feeding_5000
+  john_refs: John 6:1-15
+  synoptic_refs:
+  - Mark 6:30-44
+  - Matt 14:13-21
+  - Luke 9:10-17
+  shared_features:
+  - five thousand
+  - loaves
+  - distribution
+  - leftover baskets
+  - wilderness/sea setting
+  john_transformation_if_synoptics_prior: John develops discourse theology from the
+    sign and adds/foregrounds Philip/Andrew and Passover.
+  synoptic_transformation_if_john_prior: Synoptics simplify Johannine sign theology
+    into miracle narration.
+  common_tradition_assessment: Strong common miracle tradition; direct dependence
+    possible but not required by wording.
+  provisional_best_explanation: shared miracle tradition with possible literary contact
+    not isolated by automatic metrics
+  claim_id: jtea_anchor_04
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: walking_on_water
+  john_refs: John 6:16-21
+  synoptic_refs:
+  - Mark 6:45-52
+  - Matt 14:22-33
+  shared_features:
+  - disciples at sea
+  - Jesus walks on sea
+  - fear
+  - arrival/boat motif
+  john_transformation_if_synoptics_prior: John drastically compresses the scene and
+    drops Peter/Matthean expansion.
+  synoptic_transformation_if_john_prior: Synoptics expand compressed Johannine episode
+    into a theophany/narrative scene.
+  common_tradition_assessment: Plausible miracle tradition; direction difficult without
+    sequence clusters.
+  provisional_best_explanation: shared miracle tradition
+  claim_id: jtea_anchor_05
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: anointing_bethany
+  john_refs: John 12:1-8
+  synoptic_refs:
+  - Mark 14:3-9
+  - Matt 26:6-13
+  - Luke 7:36-50
+  shared_features:
+  - woman/anointing
+  - costly ointment
+  - objection over value
+  - Jesus interprets action
+  john_transformation_if_synoptics_prior: John names Mary/Judas and integrates Lazarus
+    context; chronologically near passion.
+  synoptic_transformation_if_john_prior: Mark/Matthew anonymize named characters and
+    strip Lazarus setting.
+  common_tradition_assessment: Moderate; multiple anointing traditions or conflation
+    likely.
+  provisional_best_explanation: tradition cluster with possible literary and memory
+    contamination
+  claim_id: jtea_anchor_06
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: triumphal_entry
+  john_refs: John 12:12-19
+  synoptic_refs:
+  - Mark 11:1-10
+  - Matt 21:1-11
+  - Luke 19:28-40
+  shared_features:
+  - entry to Jerusalem
+  - branches/garments
+  - Hosanna/blessed coming one
+  - king motif
+  john_transformation_if_synoptics_prior: John compresses preparation and explicitly
+    adds interpretive memory after glorification.
+  synoptic_transformation_if_john_prior: Synoptics expand logistics of colt acquisition
+    and public acclamation.
+  common_tradition_assessment: Strong passion-entry tradition; exact Hosanna phrase
+    produces lexical evidence but not direction alone.
+  provisional_best_explanation: shared passion tradition; direct relation possible
+    but underdetermined
+  claim_id: jtea_anchor_07
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: peter_denial
+  john_refs: John 18:15-27
+  synoptic_refs:
+  - Mark 14:66-72
+  - Matt 26:69-75
+  - Luke 22:54-62
+  shared_features:
+  - Peter denies three times
+  - courtyard/fire setting
+  - cock crow motif
+  john_transformation_if_synoptics_prior: John interweaves denial with trial scenes
+    and adds beloved-disciple access.
+  synoptic_transformation_if_john_prior: Synoptics make a compact escalating denial
+    narrative.
+  common_tradition_assessment: Strong passion tradition; direction requires local-seam
+    analysis.
+  provisional_best_explanation: shared passion tradition; possible literary shaping
+  claim_id: jtea_anchor_08
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: sword_ear_arrest
+  john_refs: John 18:10-11
+  synoptic_refs:
+  - Mark 14:47
+  - Matt 26:51-52
+  - Luke 22:49-51
+  shared_features:
+  - sword blow
+  - servant of high priest
+  - ear cut off
+  john_transformation_if_synoptics_prior: John names Peter and Malchus and adds cup
+    theology.
+  synoptic_transformation_if_john_prior: Synoptics anonymize names and modify theological
+    response; Luke adds healing.
+  common_tradition_assessment: Specific detail cluster makes pure independence unlikely.
+  provisional_best_explanation: shared passion arrest tradition; direct direction
+    unresolved
+  claim_id: jtea_anchor_09
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition
+- anchor_id: garment_division_scripture
+  john_refs: John 19:23-24
+  synoptic_refs:
+  - Mark 15:24
+  - Matt 27:35
+  - Luke 23:34
+  shared_features:
+  - division of garments
+  - casting lots
+  - scriptural frame
+  john_transformation_if_synoptics_prior: John splits garments/tunic and makes scriptural
+    fulfillment explicit.
+  synoptic_transformation_if_john_prior: Synoptics compress to lot-casting formula.
+  common_tradition_assessment: Strong passion tradition plus Psalm 22 scripturalization.
+  provisional_best_explanation: shared passion-scripture tradition; John’s elaboration
+    likely secondary at this local level
+  claim_id: jtea_anchor_10
+  evidence_origin:
+    automatic_retrieval: false
+    curated_case: true
+    hand_interpretation_required: true
+  relation_type: shared_anchor_tradition

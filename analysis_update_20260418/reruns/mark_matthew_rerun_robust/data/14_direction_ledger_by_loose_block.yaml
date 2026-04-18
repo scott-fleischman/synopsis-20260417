@@ -1,0 +1,574 @@
+- block_id: 1
+  mark_span_refs: Mark 1:3–Mark 1:12
+  matt_span_refs: Matt 3:3–Matt 4:1
+  matched_pairs: 7
+  mark_unaligned_count: 3
+  matt_unaligned_count: 9
+  inserted_tokens_a_to_b: 47
+  deleted_tokens_a_to_b: 22
+  replacement_groups: 12
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 21.51
+  hypothesis_matt_prior_numeric_burden: 24.66
+  hypothesis_mark_prior_rationales:
+  - Matt has 6 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (47>22) fit Matt expansion from Mark.
+  - 12 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 12 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 2
+  mark_span_refs: Mark 1:14–Mark 1:20
+  matt_span_refs: Matt 4:12–Matt 4:22
+  matched_pairs: 7
+  mark_unaligned_count: 0
+  matt_unaligned_count: 4
+  inserted_tokens_a_to_b: 30
+  deleted_tokens_a_to_b: 15
+  replacement_groups: 9
+  reorder_events: 1
+  hypothesis_mark_prior_numeric_burden: 10.7
+  hypothesis_matt_prior_numeric_burden: 12.75
+  hypothesis_mark_prior_rationales:
+  - Matt has 4 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (30>15) fit Matt expansion from Mark.
+  - 9 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 9 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 3
+  mark_span_refs: Mark 1:22–Mark 1:22
+  matt_span_refs: Matt 7:29–Matt 7:29
+  matched_pairs: 1
+  mark_unaligned_count: 0
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 6
+  replacement_groups: 0
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 0.53
+  hypothesis_matt_prior_numeric_burden: 0.38
+  hypothesis_mark_prior_rationales:
+  - Matt would have to compress/delete more if derived from Mark.
+  hypothesis_matt_prior_rationales:
+  - More deleted-than-inserted tokens (6>1) fit Mark expansion from Matt.
+- block_id: 4
+  mark_span_refs: Mark 1:40–Mark 1:44
+  matt_span_refs: Matt 8:2–Matt 8:4
+  matched_pairs: 3
+  mark_unaligned_count: 2
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 9
+  deleted_tokens_a_to_b: 2
+  replacement_groups: 5
+  reorder_events: 1
+  hypothesis_mark_prior_numeric_burden: 5.81
+  hypothesis_matt_prior_numeric_burden: 5.22
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (9>2) fit Matt expansion from Mark.
+  - 5 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark has 2 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 5 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 5
+  mark_span_refs: Mark 2:5–Mark 2:22
+  matt_span_refs: Matt 9:2–Matt 9:17
+  matched_pairs: 14
+  mark_unaligned_count: 4
+  matt_unaligned_count: 2
+  inserted_tokens_a_to_b: 65
+  deleted_tokens_a_to_b: 34
+  replacement_groups: 23
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 23.87
+  hypothesis_matt_prior_numeric_burden: 24.0
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (65>34) fit Matt expansion from Mark.
+  - 23 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark has 2 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 23 replacement groups imply targeted redaction under either direction.
+- block_id: 6
+  mark_span_refs: Mark 2:23–Mark 3:7
+  matt_span_refs: Matt 12:1–Matt 12:15
+  matched_pairs: 12
+  mark_unaligned_count: 1
+  matt_unaligned_count: 3
+  inserted_tokens_a_to_b: 35
+  deleted_tokens_a_to_b: 29
+  replacement_groups: 22
+  reorder_events: 1
+  hypothesis_mark_prior_numeric_burden: 18.97
+  hypothesis_matt_prior_numeric_burden: 19.95
+  hypothesis_mark_prior_rationales:
+  - Matt has 2 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (35>29) fit Matt expansion from Mark.
+  - 22 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 22 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 7
+  mark_span_refs: Mark 3:12–Mark 3:12
+  matt_span_refs: Matt 12:16–Matt 12:16
+  matched_pairs: 1
+  mark_unaligned_count: 0
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 1
+  replacement_groups: 1
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 0.63
+  hypothesis_matt_prior_numeric_burden: 0.63
+  hypothesis_mark_prior_rationales:
+  - 1 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - 1 replacement groups imply targeted redaction under either direction.
+- block_id: 8
+  mark_span_refs: Mark 3:22–Mark 3:28
+  matt_span_refs: Matt 12:24–Matt 12:31
+  matched_pairs: 5
+  mark_unaligned_count: 2
+  matt_unaligned_count: 3
+  inserted_tokens_a_to_b: 17
+  deleted_tokens_a_to_b: 6
+  replacement_groups: 11
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 12.23
+  hypothesis_matt_prior_numeric_burden: 12.96
+  hypothesis_mark_prior_rationales:
+  - Matt has 1 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (17>6) fit Matt expansion from Mark.
+  - 11 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 11 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 9
+  mark_span_refs: Mark 3:31–Mark 4:20
+  matt_span_refs: Matt 12:46–Matt 13:23
+  matched_pairs: 20
+  mark_unaligned_count: 5
+  matt_unaligned_count: 8
+  inserted_tokens_a_to_b: 24
+  deleted_tokens_a_to_b: 27
+  replacement_groups: 51
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 41.86
+  hypothesis_matt_prior_numeric_burden: 42.97
+  hypothesis_mark_prior_rationales:
+  - Matt has 3 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 51 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (27>24) fit Mark expansion from Matt.
+  - 51 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 10
+  mark_span_refs: Mark 4:31–Mark 4:34
+  matt_span_refs: Matt 13:31–Matt 13:34
+  matched_pairs: 3
+  mark_unaligned_count: 1
+  matt_unaligned_count: 1
+  inserted_tokens_a_to_b: 15
+  deleted_tokens_a_to_b: 16
+  replacement_groups: 7
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 7.53
+  hypothesis_matt_prior_numeric_burden: 7.5
+  hypothesis_mark_prior_rationales:
+  - Matt would have to compress/delete more if derived from Mark.
+  - 7 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - More deleted-than-inserted tokens (16>15) fit Mark expansion from Matt.
+  - 7 replacement groups imply targeted redaction under either direction.
+- block_id: 11
+  mark_span_refs: Mark 6:2–Mark 6:5
+  matt_span_refs: Matt 13:54–Matt 13:58
+  matched_pairs: 4
+  mark_unaligned_count: 0
+  matt_unaligned_count: 1
+  inserted_tokens_a_to_b: 4
+  deleted_tokens_a_to_b: 18
+  replacement_groups: 12
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 8.44
+  hypothesis_matt_prior_numeric_burden: 8.42
+  hypothesis_mark_prior_rationales:
+  - Matt has 1 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 12 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (18>4) fit Mark expansion from Matt.
+  - 12 replacement groups imply targeted redaction under either direction.
+- block_id: 12
+  mark_span_refs: Mark 6:14–Mark 7:29
+  matt_span_refs: Matt 14:2–Matt 15:28
+  matched_pairs: 45
+  mark_unaligned_count: 26
+  matt_unaligned_count: 18
+  inserted_tokens_a_to_b: 79
+  deleted_tokens_a_to_b: 137
+  replacement_groups: 91
+  reorder_events: 9
+  hypothesis_mark_prior_numeric_burden: 108.71
+  hypothesis_matt_prior_numeric_burden: 103.77
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 91 replacement groups imply targeted redaction under either direction.
+  - 9 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark has 8 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - More deleted-than-inserted tokens (137>79) fit Mark expansion from Matt.
+  - 91 replacement groups imply targeted redaction under either direction.
+  - 9 local reorder events increase transformation burden.
+- block_id: 13
+  mark_span_refs: Mark 8:2–Mark 8:20
+  matt_span_refs: Matt 15:32–Matt 16:10
+  matched_pairs: 15
+  mark_unaligned_count: 4
+  matt_unaligned_count: 3
+  inserted_tokens_a_to_b: 57
+  deleted_tokens_a_to_b: 21
+  replacement_groups: 30
+  reorder_events: 1
+  hypothesis_mark_prior_numeric_burden: 27.03
+  hypothesis_matt_prior_numeric_burden: 27.71
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (57>21) fit Matt expansion from Mark.
+  - 30 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark has 1 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 30 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 14
+  mark_span_refs: Mark 8:27–Mark 9:13
+  matt_span_refs: Matt 16:13–Matt 17:12
+  matched_pairs: 22
+  mark_unaligned_count: 3
+  matt_unaligned_count: 6
+  inserted_tokens_a_to_b: 66
+  deleted_tokens_a_to_b: 77
+  replacement_groups: 45
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 40.96
+  hypothesis_matt_prior_numeric_burden: 41.83
+  hypothesis_mark_prior_rationales:
+  - Matt has 3 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 45 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (77>66) fit Mark expansion from Matt.
+  - 45 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 15
+  mark_span_refs: Mark 9:18–Mark 9:19
+  matt_span_refs: Matt 17:16–Matt 17:17
+  matched_pairs: 2
+  mark_unaligned_count: 0
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 5
+  deleted_tokens_a_to_b: 16
+  replacement_groups: 5
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 4.03
+  hypothesis_matt_prior_numeric_burden: 3.7
+  hypothesis_mark_prior_rationales:
+  - Matt would have to compress/delete more if derived from Mark.
+  - 5 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - More deleted-than-inserted tokens (16>5) fit Mark expansion from Matt.
+  - 5 replacement groups imply targeted redaction under either direction.
+- block_id: 16
+  mark_span_refs: Mark 9:28–Mark 9:31
+  matt_span_refs: Matt 17:19–Matt 17:22
+  matched_pairs: 2
+  mark_unaligned_count: 2
+  matt_unaligned_count: 1
+  inserted_tokens_a_to_b: 0
+  deleted_tokens_a_to_b: 9
+  replacement_groups: 6
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 6.92
+  hypothesis_matt_prior_numeric_burden: 6.25
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 6 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark has 1 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - More deleted-than-inserted tokens (9>0) fit Mark expansion from Matt.
+  - 6 replacement groups imply targeted redaction under either direction.
+- block_id: 17
+  mark_span_refs: Mark 9:36–Mark 9:37
+  matt_span_refs: Matt 18:2–Matt 18:5
+  matched_pairs: 2
+  mark_unaligned_count: 0
+  matt_unaligned_count: 2
+  inserted_tokens_a_to_b: 1
+  deleted_tokens_a_to_b: 17
+  replacement_groups: 3
+  reorder_events: 1
+  hypothesis_mark_prior_numeric_burden: 4.81
+  hypothesis_matt_prior_numeric_burden: 5.13
+  hypothesis_mark_prior_rationales:
+  - Matt has 2 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 3 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (17>1) fit Mark expansion from Matt.
+  - 3 replacement groups imply targeted redaction under either direction.
+  - 1 local reorder events increase transformation burden.
+- block_id: 18
+  mark_span_refs: Mark 9:42–Mark 9:47
+  matt_span_refs: Matt 18:6–Matt 18:9
+  matched_pairs: 3
+  mark_unaligned_count: 1
+  matt_unaligned_count: 1
+  inserted_tokens_a_to_b: 14
+  deleted_tokens_a_to_b: 3
+  replacement_groups: 14
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 9.94
+  hypothesis_matt_prior_numeric_burden: 10.27
+  hypothesis_mark_prior_rationales:
+  - More inserted-than-deleted tokens (14>3) fit Matt expansion from Mark.
+  - 14 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark would have to compress/delete more if derived from Matt.
+  - 14 replacement groups imply targeted redaction under either direction.
+- block_id: 19
+  mark_span_refs: Mark 10:1–Mark 10:31
+  matt_span_refs: Matt 19:1–Matt 19:30
+  matched_pairs: 23
+  mark_unaligned_count: 8
+  matt_unaligned_count: 7
+  inserted_tokens_a_to_b: 81
+  deleted_tokens_a_to_b: 58
+  replacement_groups: 44
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 46.49
+  hypothesis_matt_prior_numeric_burden: 46.78
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (81>58) fit Matt expansion from Mark.
+  - 44 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark has 1 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 44 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 20
+  mark_span_refs: Mark 10:32–Mark 12:12
+  matt_span_refs: Matt 20:17–Matt 21:46
+  matched_pairs: 45
+  mark_unaligned_count: 20
+  matt_unaligned_count: 19
+  inserted_tokens_a_to_b: 113
+  deleted_tokens_a_to_b: 90
+  replacement_groups: 87
+  reorder_events: 5
+  hypothesis_mark_prior_numeric_burden: 97.05
+  hypothesis_matt_prior_numeric_burden: 97.34
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (113>90) fit Matt expansion from Mark.
+  - 87 replacement groups imply targeted redaction under either direction.
+  - 5 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark has 1 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 87 replacement groups imply targeted redaction under either direction.
+  - 5 local reorder events increase transformation burden.
+- block_id: 21
+  mark_span_refs: Mark 12:13–Mark 12:39
+  matt_span_refs: Matt 22:15–Matt 23:6
+  matched_pairs: 21
+  mark_unaligned_count: 6
+  matt_unaligned_count: 17
+  inserted_tokens_a_to_b: 54
+  deleted_tokens_a_to_b: 88
+  replacement_groups: 37
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 49.64
+  hypothesis_matt_prior_numeric_burden: 53.02
+  hypothesis_mark_prior_rationales:
+  - Matt has 11 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 37 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (88>54) fit Mark expansion from Matt.
+  - 37 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 22
+  mark_span_refs: Mark 13:1–Mark 13:8
+  matt_span_refs: Matt 24:1–Matt 24:7
+  matched_pairs: 7
+  mark_unaligned_count: 1
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 26
+  deleted_tokens_a_to_b: 8
+  replacement_groups: 11
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 8.64
+  hypothesis_matt_prior_numeric_burden: 8.78
+  hypothesis_mark_prior_rationales:
+  - Matt would need omission/non-use of material if Mark were prior.
+  - More inserted-than-deleted tokens (26>8) fit Matt expansion from Mark.
+  - 11 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark has 1 more unaligned verses inside span; later Mark expansion/clustering
+    is easier under Matt-prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 11 replacement groups imply targeted redaction under either direction.
+- block_id: 23
+  mark_span_refs: Mark 13:13–Mark 13:35
+  matt_span_refs: Matt 24:13–Matt 24:42
+  matched_pairs: 20
+  mark_unaligned_count: 3
+  matt_unaligned_count: 10
+  inserted_tokens_a_to_b: 53
+  deleted_tokens_a_to_b: 47
+  replacement_groups: 26
+  reorder_events: 3
+  hypothesis_mark_prior_numeric_burden: 31.91
+  hypothesis_matt_prior_numeric_burden: 34.89
+  hypothesis_mark_prior_rationales:
+  - Matt has 7 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (53>47) fit Matt expansion from Mark.
+  - 26 replacement groups imply targeted redaction under either direction.
+  - 3 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 26 replacement groups imply targeted redaction under either direction.
+  - 3 local reorder events increase transformation burden.
+- block_id: 24
+  mark_span_refs: Mark 13:37–Mark 13:37
+  matt_span_refs: Matt 25:12–Matt 25:12
+  matched_pairs: 1
+  mark_unaligned_count: 0
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 4
+  deleted_tokens_a_to_b: 0
+  replacement_groups: 1
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 0.7
+  hypothesis_matt_prior_numeric_burden: 0.82
+  hypothesis_mark_prior_rationales:
+  - More inserted-than-deleted tokens (4>0) fit Matt expansion from Mark.
+  - 1 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - Mark would have to compress/delete more if derived from Matt.
+  - 1 replacement groups imply targeted redaction under either direction.
+- block_id: 25
+  mark_span_refs: Mark 14:1–Mark 15:1
+  matt_span_refs: Matt 26:4–Matt 27:2
+  matched_pairs: 62
+  mark_unaligned_count: 11
+  matt_unaligned_count: 12
+  inserted_tokens_a_to_b: 135
+  deleted_tokens_a_to_b: 192
+  replacement_groups: 119
+  reorder_events: 2
+  hypothesis_mark_prior_numeric_burden: 105.01
+  hypothesis_matt_prior_numeric_burden: 103.7
+  hypothesis_mark_prior_rationales:
+  - Matt has 1 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - Matt would have to compress/delete more if derived from Mark.
+  - 119 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - More deleted-than-inserted tokens (192>135) fit Mark expansion from Matt.
+  - 119 replacement groups imply targeted redaction under either direction.
+  - 2 local reorder events increase transformation burden.
+- block_id: 26
+  mark_span_refs: Mark 15:2–Mark 16:1
+  matt_span_refs: Matt 27:11–Matt 28:1
+  matched_pairs: 37
+  mark_unaligned_count: 9
+  matt_unaligned_count: 20
+  inserted_tokens_a_to_b: 96
+  deleted_tokens_a_to_b: 92
+  replacement_groups: 74
+  reorder_events: 4
+  hypothesis_mark_prior_numeric_burden: 77.16
+  hypothesis_matt_prior_numeric_burden: 81.68
+  hypothesis_mark_prior_rationales:
+  - Matt has 11 more unaligned verses inside span; later Matt expansion/clustering
+    is easier under Mark-prior.
+  - More inserted-than-deleted tokens (96>92) fit Matt expansion from Mark.
+  - 74 replacement groups imply targeted redaction under either direction.
+  - 4 local reorder events increase transformation burden.
+  hypothesis_matt_prior_rationales:
+  - Mark would need omission/non-use of material if Matt were prior.
+  - Mark would have to compress/delete more if derived from Matt.
+  - 74 replacement groups imply targeted redaction under either direction.
+  - 4 local reorder events increase transformation burden.
+- block_id: 27
+  mark_span_refs: Mark 16:6–Mark 16:7
+  matt_span_refs: Matt 28:6–Matt 28:7
+  matched_pairs: 2
+  mark_unaligned_count: 0
+  matt_unaligned_count: 0
+  inserted_tokens_a_to_b: 5
+  deleted_tokens_a_to_b: 13
+  replacement_groups: 5
+  reorder_events: 0
+  hypothesis_mark_prior_numeric_burden: 3.79
+  hypothesis_matt_prior_numeric_burden: 3.55
+  hypothesis_mark_prior_rationales:
+  - Matt would have to compress/delete more if derived from Mark.
+  - 5 replacement groups imply targeted redaction under either direction.
+  hypothesis_matt_prior_rationales:
+  - More deleted-than-inserted tokens (13>5) fit Mark expansion from Matt.
+  - 5 replacement groups imply targeted redaction under either direction.

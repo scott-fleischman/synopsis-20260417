@@ -1,0 +1,100 @@
+project: John–Thomas–Epistles–Apocrypha rerun/augmentation with reproducibility patch
+global_metrics:
+  canonical_units: 4614
+  thomas_units: 116
+  targeted_cases: 10
+  john_synoptic_anchors: 10
+  thomas_parallel_entries: 47
+  exact_hits_len4plus: 11366
+  filtered_exact_hits_non_high_formula_risk: 11135
+  network_edges: 6397
+most_important_updates:
+- automatic retrieval support is now separated from philological case strength
+- formula-risk classification added for exact hits
+- claim-evidence links added
+- canonical Greek targeted case metrics rerun against the local source base
+high_value_case_snapshot:
+- case_id: epistle_1tim_5_18_worker_wages_luke_10_7
+  source_ref: 1Tim 5:18
+  target_ref: Luke 10:7
+  automatic_score_supports_claim: strong
+  philological_case_strength: strong
+  formula_risk: low
+  provisional_best_explanation: direct written or fixed written-saying tradition;
+    strong evidence against independent convergence
+- case_id: epistle_1tim_5_18_worker_wages_matt_10_10
+  source_ref: 1Tim 5:18
+  target_ref: Matt 10:10
+  automatic_score_supports_claim: medium
+  philological_case_strength: strong
+  formula_risk: low
+  provisional_best_explanation: supports Jesus-saying tradition; less specifically
+    supports Matthew than Luke
+- case_id: epistle_james_5_12_oaths_matt_5_34_37
+  source_ref: Jas 5:12
+  target_ref: Matt 5:34-37
+  automatic_score_supports_claim: medium
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: shared Jesus tradition, possibly written or oral;
+    direct Matthew dependence not required by the data
+- case_id: epistle_james_2_5_poor_kingdom_luke_6_20
+  source_ref: Jas 2:5
+  target_ref: Luke 6:20
+  automatic_score_supports_claim: medium
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: shared beatitude/Jesus tradition rather than demonstrable
+    direct literary dependence
+- case_id: epistle_james_1_5_6_ask_given_faith
+  source_ref: Jas 1:5-6
+  target_ref: Matt 7:7-8
+  automatic_score_supports_claim: medium
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: shared sapiential prayer tradition with possible Jesus-saying
+    influence
+- case_id: epistle_james_1_22_25_hear_do_words
+  source_ref: Jas 1:22-25
+  target_ref: Matt 7:24-27
+  automatic_score_supports_claim: weak
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: common sapiential/Jesus tradition; direct dependence
+    unproven
+- case_id: epistle_james_4_10_humble_exalt
+  source_ref: Jas 4:10
+  target_ref: Luke 14:11
+  automatic_score_supports_claim: medium
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: portable Jesus/reversal saying; not enough for direct
+    literary dependence
+- case_id: epistle_1cor_11_24_lord_supper_luke_22
+  source_ref: 1Cor 11:24
+  target_ref: Luke 22:19
+  automatic_score_supports_claim: strong
+  philological_case_strength: strong
+  formula_risk: high
+  provisional_best_explanation: shared liturgical tradition and/or Luke drawing on
+    a tradition also represented by Paul
+- case_id: epistle_2tim_2_12_denying_christ
+  source_ref: 2Tim 2:12
+  target_ref: Matt 10:33
+  automatic_score_supports_claim: weak
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: shared saying/confessional tradition
+- case_id: johannine_1john_3_13_world_hates_you
+  source_ref: 1John 3:13
+  target_ref: John 15:18-19
+  automatic_score_supports_claim: medium
+  philological_case_strength: medium
+  formula_risk: low
+  provisional_best_explanation: shared Johannine tradition/idiolect; direction requires
+    broader corpus modeling
+notes:
+- This patch is strongest for canonical Greek targeted cases such as 1Tim 5:18 ~ Luke
+  10:7 and Jas 5:12 ~ Matt 5:34–37.
+- Thomas and apocrypha remain curated/human-reviewed layers in this patch rather than
+  fully rerun automatic dependence models.
