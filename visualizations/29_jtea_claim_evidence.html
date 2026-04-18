@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Claim → evidence links — low-verbatim corpus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .claim-card { border: 1px solid var(--rule); border-left: 4px solid var(--matt); padding: 14px 16px; margin-bottom: 14px; background: #fff; border-radius: 3px; }
+  .claim-card .type { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-mute); }
+  .claim-card h3 { margin: 2px 0 8px; font-family: var(--serif); font-size: 15px; color: var(--ink); }
+  .claim-card .best { font-family: var(--serif); font-size: 13px; line-height: 1.55; color: var(--ink); background: #fdf6ea; padding: 8px 10px; border-radius: 2px; margin: 8px 0; }
+  .conf-grid { display: grid; grid-template-columns: repeat(3, auto); gap: 10px 18px; font-size: 11px; margin-bottom: 8px; }
+  .conf-grid .lbl { color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+  .conf-grid .val { font-weight: 600; color: var(--ink); }
+  .conf-val-strong { color: #0f766e !important; }
+  .conf-val-medium { color: #22506c !important; }
+  .conf-val-weak { color: #8b2e2e !important; }
+  .conf-val-low { color: #0f766e !important; }
+  .conf-val-high { color: #8b2e2e !important; }
+  .conf-val-medium-risk { color: #a35d1a !important; }
+  .evidence-list { font-size: 12px; color: var(--ink-soft); margin-top: 4px; }
+  .evidence-list code { font-size: 11px; background: #f5f0e0; padding: 1px 5px; border-radius: 2px; }
+  .filters { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; font-size: 12px; }
+  .filters select { font-size: 12px; padding: 3px 6px; }
+  .risk-bar { display: flex; height: 22px; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; font-size: 10px; }
+  .risk-bar .seg { display: flex; align-items: center; justify-content: center; color: #fff; font-variant-numeric: tabular-nums; }
+  .risk-bar .seg.low { background: #0f766e; }
+  .risk-bar .seg.medium { background: #a35d1a; }
+  .risk-bar .seg.high { background: #8b2e2e; }
+  .layer-block { margin-bottom: 14px; }
+  .layer-block h4 { margin: 0 0 4px; font-size: 12px; font-family: var(--serif); color: var(--ink); }
+  .layer-block .small { color: var(--ink-mute); font-size: 11px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Claim → evidence linkage</h1>
+    <span class="sub">Low-verbatim corpus (John, Thomas, epistles, apocrypha) — each claim mapped to its supporting artifacts and three-way confidence.</span>
+    <span id="statusBadge" style="margin-left:auto;font-size:12px;color:var(--ink-mute);"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    The reproducibility-patch rerun splits confidence into three dimensions — <strong>retrieval</strong> (is the automatic similarity signal there?), <strong>philological</strong> (does close reading sustain the case?), and <strong>formula risk</strong> (is the lexical overlap a scriptural citation or stock liturgical formula that might inflate the apparent connection?). A case is only strong when all three dimensions are favorable. This page is the authoritative register mapping each interpretive claim to the artifacts (CSV rows, YAML records, case studies) that support it, with <code>provisional_best_explanation</code> spelled out.
+  </p>
+
+  <section class="card">
+    <h2>Formula-risk flagging across the retrieval layers</h2>
+    <p class="caption" style="margin:0 0 10px;">
+      Exact Greek runs of length ≥4 are first retrieved automatically. The rerun then flags each candidate for formula risk: shared scripture quotations, liturgical boilerplate, and common prayer fragments fall in the "high" bucket and should not be taken as evidence of direct literary dependence between the epistle and gospel on their own.
+    </p>
+    <div id="riskBlocks"></div>
+  </section>
+
+  <section class="card">
+    <h2>Full claim register</h2>
+    <div class="filters">
+      <label>Claim type
+        <select id="fType"><option value="">All</option></select>
+      </label>
+      <label>Retrieval
+        <select id="fRet"><option value="">All</option><option value="strong">strong</option><option value="medium">medium</option><option value="weak">weak</option></select>
+      </label>
+      <label>Philological
+        <select id="fPhil"><option value="">All</option><option value="strong">strong</option><option value="medium">medium</option><option value="weak">weak</option></select>
+      </label>
+      <label>Formula risk
+        <select id="fRisk"><option value="">All</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option></select>
+      </label>
+      <label>Search
+        <input id="fSearch" type="search" placeholder="claim id, case id, or best-explanation" style="width:260px;" />
+      </label>
+    </div>
+    <div id="claimCount" class="small" style="margin-bottom:10px;color:var(--ink-mute);"></div>
+    <div id="claimList"></div>
+  </section>
+
+  <p class="caption" style="margin-top:18px;">
+    Source: <code>analysis_update_20260418/reruns/jtea_low_verbatim_rerun_robust/data/17_claim_evidence_links.yaml</code> and <code>…/18_formula_risk_summary.csv</code>.
+  </p>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('29_jtea_claim_evidence.html');
+  const BUNDLE = SH.BUNDLE;
+  const jtea = BUNDLE.jtea;
+  const rerun = jtea && jtea.rerun;
+  const statusEl = document.getElementById('statusBadge');
+  if (!rerun || !rerun.claim_evidence_links) {
+    statusEl.textContent = 'rerun data unavailable';
+    document.querySelector('.wrap').appendChild(SH.el('div', {class: 'card'},
+      SH.el('p', null, 'No reproducibility-patch JTEA data found. Re-run the preprocessor against analysis_update_20260418/.')));
+    return;
+  }
+  statusEl.textContent = 'jtea_low_verbatim_rerun_robust';
+
+  // --- Formula-risk blocks ---
+  const risk = rerun.formula_risk_summary || [];
+  const riskHost = document.getElementById('riskBlocks');
+  // group by layer
+  const layers = [...new Set(risk.map(r => r.layer))];
+  for (const layer of layers) {
+    const rows = risk.filter(r => r.layer === layer);
+    const total = rows.reduce((s, r) => s + r.count, 0);
+    const block = SH.el('div', { class: 'layer-block' });
+    const human = layer === 'epistle_to_gospel' ? 'Epistle → gospel (4+ token exact runs)'
+                : layer === 'john_to_synoptic' ? 'John → synoptic (4+ token exact runs)'
+                : layer;
+    block.appendChild(SH.el('h4', null, human));
+    block.appendChild(SH.el('div', { class: 'small' }, total.toLocaleString() + ' total candidate matches'));
+    const bar = SH.el('div', { class: 'risk-bar' });
+    for (const r of rows.sort((a,b) => (a.formula_risk === 'low' ? -1 : a.formula_risk === 'medium' ? 0 : 1))) {
+      const pct = (r.count / total) * 100;
+      const seg = SH.el('div', { class: 'seg ' + r.formula_risk, style: 'width:' + pct.toFixed(1) + '%;' });
+      seg.textContent = r.formula_risk + ' ' + r.count.toLocaleString() + ' (' + pct.toFixed(1) + '%)';
+      bar.appendChild(seg);
+    }
+    block.appendChild(bar);
+    riskHost.appendChild(block);
+  }
+
+  // --- Claim register ---
+  const claims = rerun.claim_evidence_links || [];
+  const typeSel = document.getElementById('fType');
+  const types = [...new Set(claims.map(c => c.claim_type).filter(Boolean))].sort();
+  for (const t of types) {
+    typeSel.appendChild(SH.el('option', { value: t }, t));
+  }
+
+  const listHost = document.getElementById('claimList');
+  const countHost = document.getElementById('claimCount');
+
+  function confClass(level) {
+    return 'conf-val-' + level;
+  }
+
+  function riskClass(level) {
+    if (level === 'high') return 'conf-val-high';
+    if (level === 'medium') return 'conf-val-medium-risk';
+    return 'conf-val-low';
+  }
+
+  function render() {
+    const ft = document.getElementById('fType').value;
+    const fr = document.getElementById('fRet').value;
+    const fp = document.getElementById('fPhil').value;
+    const fk = document.getElementById('fRisk').value;
+    const q = (document.getElementById('fSearch').value || '').toLowerCase().trim();
+    while (listHost.firstChild) listHost.removeChild(listHost.firstChild);
+    let shown = 0;
+    for (const c of claims) {
+      if (ft && c.claim_type !== ft) continue;
+      const cd = c.confidence_dimensions || {};
+      if (fr && cd.automatic_retrieval_confidence !== fr) continue;
+      if (fp && cd.philological_case_strength !== fp) continue;
+      if (fk && cd.formula_risk !== fk) continue;
+      if (q) {
+        const hay = ((c.claim_id || '') + ' ' + (c.provisional_best_explanation || '') +
+          ' ' + (c.supports || []).map(s => (s.case_id || '') + ' ' + (s.match_hint || '')).join(' ')).toLowerCase();
+        if (hay.indexOf(q) < 0) continue;
+      }
+
+      const card = SH.el('div', { class: 'claim-card' });
+      card.appendChild(SH.el('div', { class: 'type' }, c.claim_type || '—'));
+      card.appendChild(SH.el('h3', null, c.claim_id || '—'));
+
+      const cg = SH.el('div', { class: 'conf-grid' });
+      cg.appendChild(SH.el('div', { class: 'lbl' }, 'Retrieval'));
+      cg.appendChild(SH.el('div', { class: 'lbl' }, 'Philological'));
+      cg.appendChild(SH.el('div', { class: 'lbl' }, 'Formula risk'));
+      cg.appendChild(SH.el('div', { class: 'val ' + confClass(cd.automatic_retrieval_confidence || '') }, cd.automatic_retrieval_confidence || '—'));
+      cg.appendChild(SH.el('div', { class: 'val ' + confClass(cd.philological_case_strength || '') }, cd.philological_case_strength || '—'));
+      cg.appendChild(SH.el('div', { class: 'val ' + riskClass(cd.formula_risk || '') }, cd.formula_risk || '—'));
+      card.appendChild(cg);
+
+      if (c.provisional_best_explanation) {
+        card.appendChild(SH.el('div', { class: 'best' },
+          SH.el('b', null, 'Provisional best explanation: '),
+          c.provisional_best_explanation));
+      }
+
+      const sup = c.supports || [];
+      if (sup.length) {
+        const ul = SH.el('ul', { class: 'evidence-list', style: 'margin:4px 0 0 16px;padding:0;' });
+        for (const s of sup) {
+          ul.appendChild(SH.el('li', null,
+            SH.el('code', null, s.artifact || '—'),
+            s.case_id ? ' · case_id: ' + s.case_id : '',
+            s.match_hint ? ' · ' + s.match_hint : ''));
+        }
+        card.appendChild(ul);
+      }
+      listHost.appendChild(card);
+      shown++;
+    }
+    countHost.textContent = shown + ' of ' + claims.length + ' claims shown';
+  }
+
+  for (const id of ['fType', 'fRet', 'fPhil', 'fRisk']) {
+    document.getElementById(id).addEventListener('change', render);
+  }
+  document.getElementById('fSearch').addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>

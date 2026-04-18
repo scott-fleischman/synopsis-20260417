@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8" />
+<title>Reader — Greek gospels with parallel overlays</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  /* Layout -------------------------------------------------------------- */
+  .rdr-grid {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr) 340px;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 1200px) {
+    .rdr-grid { grid-template-columns: 140px minmax(0, 1fr); }
+    .rdr-detail { grid-column: 1 / -1; }
+  }
+
+  /* Chapter rail -------------------------------------------------------- */
+  .rdr-rail {
+    position: sticky;
+    top: 14px;
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    font-size: 12px;
+    padding: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+  }
+  .rdr-rail h4 {
+    margin: 0 0 6px;
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-mute);
+    border-bottom: 1px solid var(--rule-soft);
+    padding-bottom: 4px;
+  }
+  .rdr-rail .ch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    margin: 4px 0 10px;
+  }
+  .rdr-rail .ch {
+    display: block;
+    text-align: center;
+    padding: 4px 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+  }
+  .rdr-rail .ch:hover { background: var(--rule-soft); border-color: var(--rule); }
+  .rdr-rail .ch.active { background: var(--ink); color: #fff; }
+
+  .book-tabs { display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap; }
+  .book-tabs button {
+    padding: 7px 14px;
+    font-size: 13px;
+    border: 1px solid var(--rule);
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: var(--serif);
+  }
+  .book-tabs button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  /* Layer toggle bar ---------------------------------------------------- */
+  .layer-bar {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-size: 12px;
+    align-items: center;
+  }
+  .layer-bar label { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; user-select: none; }
+  .layer-bar .key {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+  .layer-bar input[type=search] { flex: 1; min-width: 160px; }
+
+  /* Gospel title -------------------------------------------------------- */
+  .book-title {
+    font-family: var(--greek);
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    margin: 6px 0 18px;
+    padding: 6px 0 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Chapter + verse rendering ------------------------------------------ */
+  .ch-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 900px;
+    margin-bottom: 18px;
+    padding: 10px 14px 14px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+  }
+  .ch-heading {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--rule-soft);
+    letter-spacing: 0.03em;
+  }
+  .ch-heading .ch-num {
+    font-family: var(--greek);
+    font-size: 20px;
+    color: var(--mark);
+    margin-right: 8px;
+  }
+
+  .verse {
+    display: flex;
+    align-items: flex-start;
+    padding: 2px 6px;
+    margin: 1px 0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 120ms;
+  }
+  .verse:hover { background: var(--rule-soft); }
+  .verse.selected { background: #ede8d6; outline: 2px solid var(--accent); }
+  .verse.search-hit { background: #fef3c7; }
+
+  .verse-num {
+    flex: 0 0 38px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-mute);
+    padding-top: 5px;
+    text-align: right;
+    margin-right: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  .verse-text {
+    flex: 1;
+    font-family: var(--greek);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .verse-chips {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    padding-left: 8px;
+    padding-top: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 140px;
+  }
+  .vchip {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 2px;
+    line-height: 1.4;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--sans);
+    letter-spacing: 0.03em;
+  }
+  .vchip.mm  { background: #8b2e2e; }
+  .vchip.ml  { background: #22506c; }
+  .vchip.mld { background: #6b4ba0; }
+  .vchip.ec  { background: #0f766e; }
+  .vchip.mx  { background: #a8551a; }
+  .vchip.an  { background: #9a7500; }
+  .vchip:hover { filter: brightness(1.25); }
+
+  /* Score heat stripe on the left edge of a verse */
+  .verse[data-heat="1"]  { box-shadow: inset 3px 0 0 #f4efdf; }
+  .verse[data-heat="2"]  { box-shadow: inset 3px 0 0 #ddbd85; }
+  .verse[data-heat="3"]  { box-shadow: inset 3px 0 0 #b9804c; }
+  .verse[data-heat="4"]  { box-shadow: inset 3px 0 0 #8a4823; }
+  .verse[data-heat="5"]  { box-shadow: inset 3px 0 0 #5c240c; }
+
+  /* Masked-as-Markan texture: diagonal stripes across the verse number */
+  .verse.masked .verse-num {
+    background-image: repeating-linear-gradient(135deg,
+      transparent 0 3px, rgba(168, 85, 26, 0.25) 3px 5px);
+    border-radius: 2px;
+  }
+
+  /* Detail panel -------------------------------------------------------- */
+  .rdr-detail {
+    position: sticky;
+    top: 14px;
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+  .rdr-detail h3 {
+    margin: 0 0 6px;
+    font-family: var(--serif);
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .rdr-detail .ref {
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .rdr-detail .src {
+    font-family: var(--greek);
+    font-size: 16px;
+    line-height: 1.55;
+    background: #faf7ef;
+    padding: 8px 10px;
+    border-left: 3px solid var(--ink-soft);
+    border-radius: 0 2px 2px 0;
+    margin: 8px 0 14px;
+  }
+  .parallel-item {
+    border-top: 1px solid var(--rule-soft);
+    padding: 8px 0;
+  }
+  .parallel-item:first-of-type { border-top: 0; padding-top: 0; }
+  .parallel-item .ptitle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 3px;
+  }
+  .parallel-item .pref {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .parallel-item .ptext {
+    font-family: var(--greek);
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 4px 0 6px;
+  }
+  .parallel-item .plink {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--focus);
+    padding: 2px 7px;
+    background: #e7f1ef;
+    border-radius: 2px;
+    margin-top: 2px;
+    margin-right: 4px;
+  }
+  .parallel-item .plink:hover { background: #d0e4e1; border-bottom: 0; }
+  .parallel-item .score-tag {
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .empty-detail { color: var(--ink-mute); font-size: 12px; font-style: italic; margin-top: 10px; }
+  .mask-note {
+    background: #fff2e3;
+    border-left: 3px solid #a8551a;
+    padding: 6px 10px;
+    margin: 8px 0 12px;
+    font-size: 12px;
+    color: #5a2e08;
+    border-radius: 0 2px 2px 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Reader — Greek gospels with parallel overlays</h1>
+    <span class="sub">SBLGNT · Matt · Mark · Luke · John</span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:18px;"></nav>
+  <p class="caption">
+    Full Greek text of each gospel with parallel overlays from every analysis package.
+    Each verse shows compact badges indicating which datasets have a parallel at that reference.
+    Click a verse to see all its parallels with one-click jump-to-viz.
+    Hover a badge for a brief summary. The layer toggles below control which parallel types
+    are rendered as badges; the row heat stripe reflects the highest parallel score regardless
+    of layer state.
+    <em>
+      Masked-as-Markan verses have a striped verse number — that is, the Markan-masked rerun treated
+      that verse as owed to Mark and removed it before computing the double tradition.
+    </em>
+  </p>
+
+  <div class="book-tabs" id="bookTabs"></div>
+
+  <div class="layer-bar">
+    <label><input type="checkbox" id="tMM" checked><span class="key" style="background:#8b2e2e;"></span>Mark↔Matt primary</label>
+    <label><input type="checkbox" id="tML" checked><span class="key" style="background:#22506c;"></span>Matt↔Luke primary</label>
+    <label><input type="checkbox" id="tMLD" checked><span class="key" style="background:#6b4ba0;"></span>Masked primary</label>
+    <label><input type="checkbox" id="tEc" checked><span class="key" style="background:#0f766e;"></span>Echoes</label>
+    <label><input type="checkbox" id="tMx" checked><span class="key" style="background:#a8551a;"></span>Masked-as-Markan</label>
+    <label><input type="checkbox" id="tAn" checked><span class="key" style="background:#9a7500;"></span>John anchors</label>
+    <input type="search" id="q" placeholder="filter: text or ch:verse (e.g. 5:3)" style="min-width:180px;" />
+    <button id="clearSel" type="button" style="font-size:11px;padding:3px 10px;">Clear selection</button>
+  </div>
+
+  <div class="rdr-grid">
+    <aside class="rdr-rail" id="rail"></aside>
+    <main id="reader">
+      <div class="book-title" id="booktitle"></div>
+      <div id="body"></div>
+    </main>
+    <aside class="rdr-detail" id="detail">
+      <div class="empty-detail">Click any verse to see its parallels here. Chips on the verse are also clickable — they jump directly to the relevant analysis view.</div>
+    </aside>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('30_reader.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const BUNDLE = SH.BUNDLE;
+  const reader = BUNDLE.reader || [];
+  if (!reader.length) {
+    document.getElementById('body').textContent = 'No reader data in bundle.';
+    return;
+  }
+
+  // ----- Indices: ref → list of parallels --------------------------------
+  // Each entry: { type: 'mm'|'ml'|'mld'|'ec-mm'|'ec-ml'|'ec-mld'|'mx'|'an',
+  //               otherRef, score, dataset, key, extra }
+  //
+  // One verse may have multiple parallels across multiple datasets. Flat
+  // arrays keyed by ref make the per-row render O(1).
+  const byRef = new Map();
+  function add(ref, entry) {
+    if (!ref) return;
+    const a = byRef.get(ref);
+    if (a) a.push(entry); else byRef.set(ref, [entry]);
+  }
+
+  function addPairs(ds, type) {
+    const e = BUNDLE[ds];
+    if (!e || !e.pairs) return;
+    for (const p of e.pairs) {
+      const key = p.a_ref + '|' + p.b_ref;
+      add(p.a_ref, { type, otherRef: p.b_ref, score: p.score, dataset: ds, key,
+                      a_text: p.a_text, b_text: p.b_text });
+      add(p.b_ref, { type, otherRef: p.a_ref, score: p.score, dataset: ds, key,
+                      a_text: p.a_text, b_text: p.b_text });
+    }
+  }
+  function addEchoes(ds) {
+    const e = BUNDLE[ds];
+    if (!e || !e.echoes) return;
+    const type = 'ec-' + ds;
+    for (const p of e.echoes) {
+      const key = p.a_ref + '|' + p.b_ref;
+      add(p.a_ref, { type, otherRef: p.b_ref, score: p.score || 0, dataset: ds, key,
+                      a_text: p.a_text || '', b_text: p.b_text || '',
+                      tags: p.tags || [] });
+      add(p.b_ref, { type, otherRef: p.a_ref, score: p.score || 0, dataset: ds, key,
+                      a_text: p.a_text || '', b_text: p.b_text || '',
+                      tags: p.tags || [] });
+    }
+  }
+
+  addPairs('mm', 'mm');
+  addPairs('ml', 'ml');
+  addPairs('mld', 'mld');
+  addEchoes('mm');
+  addEchoes('ml');
+  addEchoes('mld');
+
+  // Masked-as-Markan flags (mld.mask_audit)
+  const maskedRefs = new Map();
+  if (BUNDLE.mld && BUNDLE.mld.mask_audit) {
+    for (const r of BUNDLE.mld.mask_audit) {
+      if (r.masked_as_markan) {
+        maskedRefs.set(r.ref, r);
+        add(r.ref, {
+          type: 'mx',
+          otherRef: r.best_mark_ref || '',
+          score: r.best_mark_score || 0,
+          dataset: 'mld',
+          rule: r.mask_rule,
+        });
+      }
+    }
+  }
+
+  // JTEA anchors — expand range refs to individual verses.
+  // "John 1:29-34" → ["John 1:29","John 1:30",...,"John 1:34"]
+  function expandRange(refStr) {
+    const m = refStr.match(/^([1-3A-Za-z]+)\s+(\d+):(\d+)(?:-(\d+))?$/);
+    if (!m) return [refStr];
+    const book = m[1], ch = m[2], v1 = parseInt(m[3], 10);
+    const v2 = m[4] ? parseInt(m[4], 10) : v1;
+    const out = [];
+    for (let v = v1; v <= v2; v++) out.push(book + ' ' + ch + ':' + v);
+    return out;
+  }
+  if (BUNDLE.jtea && BUNDLE.jtea.anchors) {
+    for (const a of BUNDLE.jtea.anchors) {
+      const johnRefs = (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+      const synRefs = Array.isArray(a.synoptic_refs) ? a.synoptic_refs :
+                      (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+      const allGroups = johnRefs.concat(synRefs);
+      for (const g of allGroups) {
+        for (const r of expandRange(g)) {
+          add(r, {
+            type: 'an',
+            anchor_id: a.anchor_id,
+            group: g,
+            shared: a.shared_features || [],
+            assessment: a.common_tradition_assessment || '',
+            best: a.provisional_best_explanation || '',
+          });
+        }
+      }
+    }
+  }
+
+  // ----- Book selection --------------------------------------------------
+  const BOOKS = reader.map(b => b.book);
+  const STORAGE_KEY = 'reader_book';
+  function getInitialBook() {
+    const h = (location.hash || '').replace('#', '');
+    const parts = h.split('/');
+    if (parts[0] && BOOKS.indexOf(parts[0]) >= 0) return parts[0];
+    try {
+      const s = localStorage.getItem(STORAGE_KEY);
+      if (BOOKS.indexOf(s) >= 0) return s;
+    } catch (e) {}
+    return BOOKS[0];
+  }
+  let currentBook = getInitialBook();
+  let selectedRef = null;
+  function parseHash() {
+    const h = (location.hash || '').replace('#', '');
+    const parts = h.split('/');
+    return { book: parts[0] || null, ref: parts[1] ? decodeURIComponent(parts[1]) : null };
+  }
+  const hParts = parseHash();
+  if (hParts.ref) selectedRef = hParts.ref;
+
+  // ----- Render book tabs ------------------------------------------------
+  const tabBar = document.getElementById('bookTabs');
+  const BOOK_LABELS = { Matt: 'Matthew', Mark: 'Mark', Luke: 'Luke', John: 'John' };
+  for (const b of BOOKS) {
+    const btn = document.createElement('button');
+    btn.textContent = BOOK_LABELS[b] || b;
+    if (b === currentBook) btn.className = 'active';
+    btn.addEventListener('click', () => switchBook(b));
+    tabBar.appendChild(btn);
+  }
+
+  function switchBook(b) {
+    currentBook = b;
+    try { localStorage.setItem(STORAGE_KEY, b); } catch (e) {}
+    location.hash = b + (selectedRef ? ('/' + encodeURIComponent(selectedRef)) : '');
+    renderAll();
+  }
+
+  // ----- Render rail, body ----------------------------------------------
+  function renderAll() {
+    const book = reader.find(b => b.book === currentBook);
+    if (!book) return;
+    document.getElementById('booktitle').textContent = book.display || currentBook;
+
+    // Active-tab updates
+    Array.from(tabBar.children).forEach(btn => {
+      btn.className = btn.textContent === (BOOK_LABELS[currentBook] || currentBook) ? 'active' : '';
+    });
+
+    // Rail
+    const rail = document.getElementById('rail');
+    while (rail.firstChild) rail.removeChild(rail.firstChild);
+    rail.appendChild(SH.el('h4', null, 'Chapters'));
+    const grid = SH.el('div', { class: 'ch-grid' });
+    for (const ch of book.chapters) {
+      const a = SH.el('a', {
+        class: 'ch',
+        href: '#' + currentBook + '-ch-' + ch.chapter,
+        onclick: (e) => {
+          const el = document.getElementById(currentBook + '-ch-' + ch.chapter);
+          if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        },
+      }, String(ch.chapter));
+      grid.appendChild(a);
+    }
+    rail.appendChild(grid);
+
+    // Legend
+    rail.appendChild(SH.el('h4', null, 'Chips'));
+    const lg = SH.el('div', { style: 'font-size:11px;line-height:1.9;color:var(--ink-soft);' });
+    const legendRows = [
+      ['mm',  'MM',  'Mark↔Matt primary'],
+      ['ml',  'ML',  'Matt↔Luke primary'],
+      ['mld', 'MLD', 'Masked primary'],
+      ['ec',  'Ec',  'Secondary echo'],
+      ['mx',  'Mx',  'Masked-as-Markan'],
+      ['an',  'An',  'John anchor'],
+    ];
+    for (const [cls, code, label] of legendRows) {
+      const row = SH.el('div', null,
+        SH.el('span', { class: 'vchip ' + cls, style: 'margin-right:6px;' }, code),
+        SH.el('span', null, label));
+      lg.appendChild(row);
+    }
+    rail.appendChild(lg);
+
+    // Body — whole book, chapter by chapter
+    const body = document.getElementById('body');
+    while (body.firstChild) body.removeChild(body.firstChild);
+    for (const ch of book.chapters) {
+      body.appendChild(renderChapter(ch));
+    }
+
+    // If there's a selected ref from the hash and it's in this book, scroll to it.
+    if (selectedRef && selectedRef.startsWith(currentBook + ' ')) {
+      const row = document.querySelector('[data-ref="' + cssEscape(selectedRef) + '"]');
+      if (row) {
+        requestAnimationFrame(() => row.scrollIntoView({ block: 'center', behavior: 'smooth' }));
+        selectVerse(selectedRef, false);
+      }
+    } else {
+      renderDetailEmpty();
+    }
+    applyLayerFilter();
+    applySearch();
+  }
+
+  function cssEscape(s) { return (s || '').replace(/[^a-zA-Z0-9_-]/g, ch => '\\' + ch); }
+
+  // ----- Per-verse scoring & rendering ----------------------------------
+  function heatBucket(score) {
+    if (score >= 0.8) return '5';
+    if (score >= 0.6) return '4';
+    if (score >= 0.45) return '3';
+    if (score >= 0.3) return '2';
+    if (score > 0) return '1';
+    return '';
+  }
+
+  function chipCode(type) {
+    if (type === 'mm') return 'MM';
+    if (type === 'ml') return 'ML';
+    if (type === 'mld') return 'MLD';
+    if (type === 'ec-mm') return 'Ec';
+    if (type === 'ec-ml') return 'Ec';
+    if (type === 'ec-mld') return 'Ec';
+    if (type === 'mx') return 'Mx';
+    if (type === 'an') return 'An';
+    return '?';
+  }
+  function chipClass(type) {
+    if (type === 'mm' || type === 'ml' || type === 'mld' || type === 'mx' || type === 'an') return type;
+    if (type && type.indexOf('ec-') === 0) return 'ec';
+    return '';
+  }
+  function layerKey(type) {
+    if (type === 'mm')   return 'tMM';
+    if (type === 'ml')   return 'tML';
+    if (type === 'mld')  return 'tMLD';
+    if (type === 'mx')   return 'tMx';
+    if (type === 'an')   return 'tAn';
+    if (type && type.indexOf('ec-') === 0) return 'tEc';
+    return null;
+  }
+
+  function vizLink(entry, ref) {
+    // Decide the best target viz for each parallel type.
+    if (entry.type === 'mm' || entry.type === 'ml' || entry.type === 'mld') {
+      const key = encodeURIComponent(entry.key);
+      return { href: '09_pair_explorer.html#' + entry.dataset + '/' + key, label: 'pair explorer →' };
+    }
+    if (entry.type && entry.type.indexOf('ec-') === 0) {
+      return { href: '11_echo_gallery.html#' + entry.dataset, label: 'echo gallery →' };
+    }
+    if (entry.type === 'mx') {
+      return { href: '14_mask_audit.html#mld', label: 'mask audit →' };
+    }
+    if (entry.type === 'an') {
+      return { href: '20_john_anchors.html', label: 'John anchors →' };
+    }
+    return null;
+  }
+
+  function renderChapter(ch) {
+    const section = SH.el('section', {
+      class: 'ch-section',
+      id: currentBook + '-ch-' + ch.chapter,
+    });
+    const h = SH.el('h3', { class: 'ch-heading' },
+      SH.el('span', { class: 'ch-num' }, String(ch.chapter)),
+      'Chapter ' + ch.chapter);
+    section.appendChild(h);
+    for (const v of ch.verses) section.appendChild(renderVerse(v));
+    return section;
+  }
+
+  function renderVerse(v) {
+    const parallels = byRef.get(v.ref) || [];
+    // Highest score across all parallels (for the heat stripe)
+    let maxScore = 0;
+    for (const p of parallels) {
+      if (typeof p.score === 'number' && p.score > maxScore) maxScore = p.score;
+    }
+    const row = SH.el('div', {
+      class: 'verse' + (maskedRefs.has(v.ref) ? ' masked' : ''),
+      'data-ref': v.ref,
+      'data-heat': heatBucket(maxScore),
+    });
+    row.appendChild(SH.el('span', { class: 'verse-num' }, String(v.verse)));
+    row.appendChild(SH.el('span', { class: 'verse-text' }, v.text));
+
+    // Chips: one per distinct (type, otherRef) — but dedupe identical types
+    // to avoid a clutter of "MM MM MM" when the same verse matches multiple
+    // Mark verses. Keep the single highest-score instance per type.
+    const byType = {};
+    for (const p of parallels) {
+      const k = p.type;
+      if (!byType[k] || (p.score || 0) > (byType[k].score || 0)) byType[k] = p;
+    }
+    const order = ['mm','ml','mld','ec-mm','ec-ml','ec-mld','mx','an'];
+    const chips = SH.el('span', { class: 'verse-chips' });
+    for (const k of order) {
+      const p = byType[k];
+      if (!p) continue;
+      const chip = SH.el('a', {
+        class: 'vchip ' + chipClass(p.type),
+        'data-layer': layerKey(p.type),
+        href: '#',
+      }, chipCode(p.type));
+      chip.addEventListener('mouseenter', (e) => {
+        const lines = [SH.tipLine(chipFullName(p.type), null)];
+        if (p.otherRef) lines.push(SH.tipRow('↔', p.otherRef));
+        if (typeof p.score === 'number' && p.score > 0) lines.push(SH.tipRow('score', p.score.toFixed(3)));
+        if (p.rule) lines.push(SH.tipRow('rule', p.rule));
+        if (p.group) lines.push(SH.tipRow('anchor', p.group));
+        lines.push(SH.tipLine('click to open target viz', 'small'));
+        const wrap = document.createElement('div');
+        lines.forEach(n => wrap.appendChild(n));
+        SH.showTip(wrap, e.clientX, e.clientY);
+      });
+      chip.addEventListener('mouseleave', SH.hideTip);
+      chip.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const link = vizLink(p, v.ref);
+        if (link) location.href = link.href;
+      });
+      chips.appendChild(chip);
+    }
+    row.appendChild(chips);
+
+    row.addEventListener('click', () => selectVerse(v.ref, true));
+    if (selectedRef === v.ref) row.classList.add('selected');
+    return row;
+  }
+
+  function chipFullName(type) {
+    if (type === 'mm')    return 'Mark ↔ Matthew primary pair';
+    if (type === 'ml')    return 'Matthew ↔ Luke primary pair';
+    if (type === 'mld')   return 'Masked Matt ↔ Luke primary pair';
+    if (type === 'ec-mm') return 'Mark ↔ Matthew secondary echo';
+    if (type === 'ec-ml') return 'Matthew ↔ Luke secondary echo';
+    if (type === 'ec-mld')return 'Masked Matt ↔ Luke secondary echo';
+    if (type === 'mx')    return 'Masked as Markan (mld)';
+    if (type === 'an')    return 'John/synoptic anchor (jtea)';
+    return type || '';
+  }
+
+  // ----- Selection + detail panel ---------------------------------------
+  function selectVerse(ref, updateHash) {
+    document.querySelectorAll('.verse.selected').forEach(r => r.classList.remove('selected'));
+    selectedRef = ref;
+    const row = document.querySelector('[data-ref="' + cssEscape(ref) + '"]');
+    if (row) row.classList.add('selected');
+    if (updateHash) location.hash = currentBook + '/' + encodeURIComponent(ref);
+    renderDetail(ref);
+  }
+
+  function renderDetailEmpty() {
+    const d = document.getElementById('detail');
+    while (d.firstChild) d.removeChild(d.firstChild);
+    d.appendChild(SH.el('div', { class: 'empty-detail' },
+      'Click any verse to see its parallels here. Chips on the verse are also clickable — they jump directly to the relevant analysis view.'));
+  }
+
+  function renderDetail(ref) {
+    const d = document.getElementById('detail');
+    while (d.firstChild) d.removeChild(d.firstChild);
+
+    // Title + source text
+    const book = reader.find(b => b.book === currentBook);
+    let srcText = '';
+    for (const ch of book.chapters) {
+      for (const v of ch.verses) if (v.ref === ref) { srcText = v.text; break; }
+      if (srcText) break;
+    }
+    d.appendChild(SH.el('div', { class: 'ref' }, 'Selected verse'));
+    d.appendChild(SH.el('h3', null, ref));
+    d.appendChild(SH.el('div', { class: 'src' }, srcText));
+
+    // If masked, surface the reason
+    const mrow = maskedRefs.get(ref);
+    if (mrow) {
+      d.appendChild(SH.el('div', { class: 'mask-note' },
+        'Masked as Markan · rule: ' + (mrow.mask_rule || '?')
+        + (mrow.best_mark_ref ? ' · best Mark parallel: ' + mrow.best_mark_ref
+            + ' (score ' + (mrow.best_mark_score || 0).toFixed(3) + ')' : '')));
+    }
+
+    const parallels = (byRef.get(ref) || []).filter(p => p.type !== 'mx');
+    if (!parallels.length) {
+      d.appendChild(SH.el('div', { class: 'empty-detail' },
+        'No pair/echo/anchor parallels indexed at this reference.'));
+      return;
+    }
+
+    // Sort by type priority then score desc
+    const order = { mm: 0, ml: 1, mld: 2, 'ec-mm': 3, 'ec-ml': 4, 'ec-mld': 5, an: 6 };
+    parallels.sort((a, b) => {
+      const oa = order[a.type] ?? 99, ob = order[b.type] ?? 99;
+      if (oa !== ob) return oa - ob;
+      return (b.score || 0) - (a.score || 0);
+    });
+
+    d.appendChild(SH.el('h4', {
+      style: 'margin:14px 0 4px;font-family:var(--serif);font-size:13px;color:var(--ink-mute);' +
+              'text-transform:uppercase;letter-spacing:0.06em;',
+    }, 'Parallels'));
+
+    for (const p of parallels) {
+      const wrap = SH.el('div', { class: 'parallel-item' });
+      const title = SH.el('div', { class: 'ptitle' },
+        SH.el('span', { class: 'vchip ' + chipClass(p.type) }, chipCode(p.type)),
+        SH.el('span', null, chipFullName(p.type)));
+      if (typeof p.score === 'number' && p.score > 0) {
+        title.appendChild(SH.el('span', {
+          class: 'score-tag',
+          style: 'margin-left:auto;background:' + SH.scoreColor(p.score) + ';',
+        }, p.score.toFixed(2)));
+      }
+      wrap.appendChild(title);
+      if (p.otherRef) wrap.appendChild(SH.el('div', { class: 'pref' }, p.otherRef));
+
+      // Show the Greek of the counterpart if we have it
+      let otherText = '';
+      if (p.dataset && p.otherRef) {
+        // Use the pair's b_text / a_text — ref matching tells us which side.
+        if (p.a_text && p.otherRef !== ref) otherText = p.a_text;
+        else if (p.b_text && p.otherRef !== ref) otherText = p.b_text;
+      }
+      if (otherText) wrap.appendChild(SH.el('div', { class: 'ptext' }, otherText));
+
+      if (p.tags && p.tags.length) {
+        const tagBar = SH.el('div', { style: 'margin:4px 0;' });
+        for (const t of p.tags) tagBar.appendChild(SH.el('span', { class: 'chip' }, t));
+        wrap.appendChild(tagBar);
+      }
+
+      if (p.type === 'an') {
+        if (p.shared && p.shared.length) {
+          wrap.appendChild(SH.el('div', {
+            style: 'font-size:11px;color:var(--ink-soft);margin:3px 0;',
+          }, 'shared: ' + p.shared.join(' · ')));
+        }
+        if (p.best) {
+          wrap.appendChild(SH.el('div', {
+            style: 'font-size:11px;color:var(--ink-soft);margin:3px 0;font-style:italic;',
+          }, p.best));
+        }
+      }
+
+      const link = vizLink(p, ref);
+      if (link) wrap.appendChild(SH.el('a', { class: 'plink', href: link.href }, link.label));
+
+      // Also offer a "read counterpart" link to this same reader, if it's a gospel ref
+      if (p.otherRef) {
+        const m = p.otherRef.match(/^([1-3A-Za-z]+)\s+\d+:\d+/);
+        if (m && BOOKS.indexOf(m[1]) >= 0) {
+          wrap.appendChild(SH.el('a', {
+            class: 'plink',
+            href: '#' + m[1] + '/' + encodeURIComponent(p.otherRef),
+            onclick: (e) => {
+              e.preventDefault();
+              currentBook = m[1];
+              try { localStorage.setItem(STORAGE_KEY, currentBook); } catch (er) {}
+              selectedRef = p.otherRef;
+              location.hash = currentBook + '/' + encodeURIComponent(selectedRef);
+              renderAll();
+            },
+          }, 'read counterpart →'));
+        }
+      }
+
+      d.appendChild(wrap);
+    }
+  }
+
+  document.getElementById('clearSel').addEventListener('click', () => {
+    selectedRef = null;
+    document.querySelectorAll('.verse.selected').forEach(r => r.classList.remove('selected'));
+    location.hash = currentBook;
+    renderDetailEmpty();
+  });
+
+  // ----- Layer toggles --------------------------------------------------
+  function applyLayerFilter() {
+    const keys = { tMM: 'mm', tML: 'ml', tMLD: 'mld', tEc: 'ec', tMx: 'mx', tAn: 'an' };
+    const on = {};
+    for (const k in keys) on[keys[k]] = document.getElementById(k).checked;
+    document.querySelectorAll('.vchip[data-layer]').forEach(chip => {
+      const layerId = chip.getAttribute('data-layer');
+      const k = { tMM: 'mm', tML: 'ml', tMLD: 'mld', tEc: 'ec', tMx: 'mx', tAn: 'an' }[layerId];
+      chip.style.display = on[k] ? 'inline-block' : 'none';
+    });
+    // Also hide/show the masked striping
+    document.querySelectorAll('.verse.masked').forEach(r => {
+      r.style.setProperty('--mx-visible', on.mx ? '1' : '0');
+      // keep the class; CSS uses it regardless, but stripping the visual
+      // effect when filtered is done by an extra class:
+      if (on.mx) r.classList.remove('mx-hidden');
+      else r.classList.add('mx-hidden');
+    });
+  }
+  ['tMM','tML','tMLD','tEc','tMx','tAn'].forEach(id =>
+    document.getElementById(id).addEventListener('change', applyLayerFilter));
+
+  // ----- Search --------------------------------------------------------
+  function applySearch() {
+    const q = (document.getElementById('q').value || '').trim().toLowerCase();
+    document.querySelectorAll('.verse').forEach(r => r.classList.remove('search-hit'));
+    if (!q) return;
+    // Accept "3:5" or "ch 3:5" or plain text substring
+    const cvMatch = q.match(/^(\d+)[:\.](\d+)$/);
+    if (cvMatch) {
+      const target = currentBook + ' ' + cvMatch[1] + ':' + cvMatch[2];
+      const row = document.querySelector('[data-ref="' + cssEscape(target) + '"]');
+      if (row) {
+        row.classList.add('search-hit');
+        row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+      return;
+    }
+    const rows = document.querySelectorAll('.verse');
+    let firstHit = null;
+    rows.forEach(r => {
+      const text = (r.querySelector('.verse-text') || {}).textContent || '';
+      if (text.toLowerCase().indexOf(q) >= 0 ||
+          (r.dataset.ref || '').toLowerCase().indexOf(q) >= 0) {
+        r.classList.add('search-hit');
+        if (!firstHit) firstHit = r;
+      }
+    });
+    if (firstHit) firstHit.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
+  document.getElementById('q').addEventListener('input', applySearch);
+
+  // ----- Hash-driven navigation (back button, direct links) -------------
+  window.addEventListener('hashchange', () => {
+    const h = parseHash();
+    if (h.book && h.book !== currentBook && BOOKS.indexOf(h.book) >= 0) {
+      currentBook = h.book;
+      selectedRef = h.ref || null;
+      renderAll();
+    } else if (h.ref && h.ref !== selectedRef) {
+      selectVerse(h.ref, false);
+      const row = document.querySelector('[data-ref="' + cssEscape(h.ref) + '"]');
+      if (row) row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+  });
+
+  // Add chip-hiding rule used by applyLayerFilter's mx-hidden class
+  const extraCss = document.createElement('style');
+  extraCss.textContent = '.verse.mx-hidden .verse-num { background-image: none; }';
+  document.head.appendChild(extraCss);
+
+  renderAll();
+})();
+</script>
+</body>
+</html>

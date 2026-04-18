@@ -397,12 +397,12 @@
     evidence: [
       {file: 'mark_matthew_analysis/data/12_global_summary.yaml', row: 'global_metrics', note: '474 Matt-only gap verses vs 87 Mark-only — the asymmetry on which the claim rests.'},
       {file: 'mark_matthew_analysis/data/01_primary_alignment_chain.csv', row: '1189 rows', note: 'the aligned pair spine; 99.52% of Mark is in-chain.'},
-      {file: 'mark_matthew_analysis/data/04_loose_blocks.csv', row: '25 blocks', note: 'coherent narrative stretches; within these, Mark/Matt token counts match closely (8258/8259).'},
+      {file: 'mark_matthew_analysis/data/04_loose_blocks.csv', row: (mmG.loose_block_count || 25) + ' blocks', note: 'coherent narrative stretches; within these, Mark/Matt token counts match closely (8258/8259).'},
       {file: 'mark_matthew_analysis/data/08_direction_burden_ledger.yaml', row: 'per-block', note: 'Matthew-from-Mark expansion is cheaper than Mark-from-Matthew deletion across the sample.'},
     ],
     verify: [
       verifyLink('01_synoptic_map.html#mm', '01', 'Synoptic map', 'mm', 'see every aligned pair'),
-      verifyLink('02_block_ribbon.html#mm', '02', 'Block ribbon', 'mm', 'see the 25 loose blocks'),
+      verifyLink('02_block_ribbon.html#mm', '02', 'Block ribbon', 'mm', 'see the ' + (mmG.loose_block_count || 25) + ' loose blocks'),
       verifyLink('03_burden_ledger.html#mm', '03', 'Direction burden', 'mm', 'per-block editing cost both ways'),
       verifyLink('04_gap_timeline.html#mm', '04', 'Gap timeline', 'mm', 'where Matt has material Mark does not'),
       verifyLink('07_block_cards.html#mm', '07', 'Block cards', 'mm', 'per-block token counts'),
@@ -454,15 +454,26 @@
   const mlG = ML.summary.global_metrics;
   const mldG = MLD.summary.global_metrics;
   const mlEchoes = ML.echoes || [];
+  const mlEchoCt = mlEchoes.length;
   const topEchoes = mlEchoes.slice().sort((a,b) => (b.composite_score || b.score || 0) - (a.composite_score || a.score || 0)).slice(0, 12);
+  const mlBurden = ML.burden || {};
+  const mlBMP = (mlBurden.matt_prior && mlBurden.matt_prior.numeric_totals && mlBurden.matt_prior.numeric_totals.overall) || 142.559;
+  const mlBLP = (mlBurden.luke_prior && mlBurden.luke_prior.numeric_totals && mlBurden.luke_prior.numeric_totals.overall) || 75.477;
+  const mldRerunBT = (MLD.rerun && MLD.rerun.summary && MLD.rerun.summary.directional_burden_totals) || {};
+  const mldBMP = mldRerunBT.matt_prior_Luke_uses_Matt;
+  const mldBLP = mldRerunBT.luke_prior_Matt_uses_Luke;
+  const mldBCO = mldRerunBT.common_source_or_oral_heuristic_relative_total;
+  const mldBurdenKV = (typeof mldBMP === 'number')
+    ? `Matt-prior (Luke uses Matt): ${mldBMP} · Luke-prior (Matt uses Luke): ${mldBLP} · common-source heuristic: ${mldBCO}`
+    : 'Luke uses Matthew: 26.446 · Matthew uses Luke: 26.446 · common source: 8.86';
   const mlRaw = [];
   mlRaw.push(el('h4', null, 'Full Matthew–Luke (ml package)'));
   mlRaw.push(kvBlock([
     ['Primary backbone pairs', mlG.matched_pair_count],
-    ['Secondary echoes', (ML.echoes || []).length],
+    ['Secondary echoes', mlEchoCt],
     ['Matt in backbone', mlG.matt_matched_verse_count + ' / ' + mlG.matt_total_verse_count],
     ['Luke in backbone', mlG.luke_matched_verse_count + ' / ' + mlG.luke_total_verse_count],
-    ['Direction burden (authored)', 'Matt prior: 142.559 · Luke prior: 75.477'],
+    ['Direction burden (authored)', `Matt prior: ${mlBMP} · Luke prior: ${mlBLP}`],
   ]));
   mlRaw.push(el('h4', null, 'Masked Matt–Luke (mld package — Markan material stripped)'));
   mlRaw.push(kvBlock([
@@ -471,7 +482,7 @@
     ['Primary chain pairs on masked matrix', mldG.matched_pair_count],
     ['Loose blocks', mldG.loose_block_count],
     ['Tight blocks', mldG.tight_block_count],
-    ['Direction burden (authored)', 'Luke uses Matthew: 26.446 · Matthew uses Luke: 26.446 · common source: 8.86'],
+    ['Direction burden (reprod. patched)', mldBurdenKV],
   ]));
   mlRaw.push(el('h4', null, 'Top 12 Matt↔Luke echoes by composite score'));
   const et = el('table', {class: 'compact'});
@@ -492,25 +503,25 @@
     title: 'Matthew–Luke double tradition — shared, but not a simple copy',
     conf: 'mhigh', confLabel: 'Medium-high',
     claim: 'The Matthew–Luke double tradition is real shared tradition, often verbally fixed, but the data favors a common sayings/tradition model over direct one-way dependence.',
-    why: 'The full comparison numerically favors Luke-priority (142.559 vs 75.477), but that includes Markan confounds. Once likely-Markan material is masked, burdens become perfectly symmetrical (26.446 each way) — a signature of shared source/tradition, not direct copy. And 1,033 echoes with extensive nonlocal reordering weaken any order-chain dependence story.',
+    why: `The full comparison numerically favors Luke-priority (${mlBMP} vs ${mlBLP}), but that includes Markan confounds. Once likely-Markan material is masked, direct-model burdens are near-symmetric (Matt-prior ${typeof mldBMP==='number'?mldBMP:'97.16'} vs Luke-prior ${typeof mldBLP==='number'?mldBLP:'101.68'}) while the common-source indicator is lower (${typeof mldBCO==='number'?mldBCO:'34.98'}) — consistent with shared source/tradition over one-way direct copy. And ${mlEchoCt.toLocaleString()} echoes with extensive nonlocal reordering weaken any order-chain dependence story.`,
     stats: [
       [mlG.matched_pair_count, 'backbone pairs (full ml)'],
-      [(ML.echoes || []).length, 'secondary echoes'],
+      [mlEchoCt, 'secondary echoes'],
       [mldG.matched_pair_count, 'backbone pairs (masked mld)'],
-      ['26.4 = 26.4', 'symmetric masked burden'],
+      [(typeof mldBCO==='number' && typeof mldBMP==='number') ? `${mldBCO} < ${Math.min(mldBMP, mldBLP)}` : '34.98 < 97.16', 'common-source < direct'],
     ],
     raw: mlRaw,
     evidence: [
-      {file: 'matt_luke_analysis/data/08_direction_burden_ledger.yaml', row: 'full totals', note: 'Luke-prior: 142.559 vs Matt-prior: 75.477 — but includes Markan confounds.'},
-      {file: 'matt_luke_double_masked_analysis/data/08_direction_burden_ledger.yaml', row: 'masked totals', note: 'after masking Markan material: Luke-uses-Matt = Matt-uses-Luke = 26.446 (perfectly symmetric).'},
-      {file: 'matt_luke_analysis/data/05_secondary_echoes.csv', row: '1033 rows', note: 'echoes with extensive nonlocal reordering — inconsistent with a stable linear written source.'},
-      {file: 'matt_luke_double_masked_analysis/data/13_mask_audit.csv', row: 'per-verse rule trace', note: 'reproducible masking decisions; each verse records why it was or wasn\u2019t treated as Markan.'},
+      {file: 'matt_luke_analysis/data/15_direction_burden_totals.yaml', row: 'full totals', note: `Matt-prior: ${mlBMP} · Luke-prior: ${mlBLP} — but includes Markan confounds.`},
+      {file: 'analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust/data/15_direction_burden_totals.yaml', row: 'masked totals (reprod. patched)', note: `after masking Markan material: Matt-prior ${typeof mldBMP==='number'?mldBMP:'97.16'}, Luke-prior ${typeof mldBLP==='number'?mldBLP:'101.68'}, common-source heuristic ${typeof mldBCO==='number'?mldBCO:'34.98'}.`},
+      {file: 'matt_luke_analysis/data/12_secondary_echoes.yaml', row: mlEchoCt + ' rows', note: 'echoes with extensive nonlocal reordering — inconsistent with a stable linear written source.'},
+      {file: 'analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust/data/01b_mask_audit_default_medium.csv', row: 'per-verse rule trace', note: 'reproducible masking decisions under default medium regime; each verse records why it was or wasn\u2019t treated as Markan.'},
     ],
     verify: [
       verifyLink('01_synoptic_map.html#ml', '01', 'Synoptic map', 'ml', 'see sparse backbone'),
       verifyLink('01_synoptic_map.html#mld', '01', 'Synoptic map (masked)', 'mld', 'see Q-core only'),
-      verifyLink('03_burden_ledger.html#mld', '03', 'Direction burden', 'mld', 'symmetric masked totals'),
-      verifyLink('11_echo_gallery.html#ml', '11', 'Echo gallery', 'ml', 'all 1,033 echoes'),
+      verifyLink('03_burden_ledger.html#mld', '03', 'Direction burden', 'mld', 'near-symmetric masked totals'),
+      verifyLink('11_echo_gallery.html#ml', '11', 'Echo gallery', 'ml', 'all ' + mlEchoCt.toLocaleString() + ' echoes'),
       verifyLink('10_displacement.html#ml', '10', 'Displacement', 'ml', 'nonlocal placement'),
       verifyLink('14_mask_audit.html#mld', '14', 'Mask audit', 'mld', 'what was masked as Markan'),
       verifyLink('15_q_core.html#mld', '15', 'Q core reader', 'mld', 'residual double tradition'),
@@ -571,7 +582,9 @@
   const qRaw = [];
   qRaw.push(el('h4', null, 'Why the data supports a sayings layer, not necessarily a discrete Q document'));
   qRaw.push(el('ul', {class: 'clean', style: 'font-size:13px;line-height:1.6;'},
-    el('li', null, 'Once Markan material is removed, direct Matt↔Luke burdens collapse to symmetry (26.446 each way) — no directional preference survives.'),
+    el('li', null, (typeof mldBMP==='number')
+      ? `Once Markan material is removed, direct Matt↔Luke burdens are near-symmetric (Matt-prior ${mldBMP}, Luke-prior ${mldBLP}) with common-source indicator ${mldBCO} — no directional preference dominates.`
+      : 'Once Markan material is removed, direct Matt↔Luke burdens are near-symmetric — no directional preference dominates.'),
     el('li', null, 'Nonlocal placement of the strongest echoes is too high for a stable written source read linearly.'),
     el('li', null, 'Matt 7:7–8 ↔ Luke 11:9–10, Matt 8:20 ↔ Luke 9:58, Matt 12:41–42 ↔ Luke 11:31–32, Matt 6:24 ↔ Luke 16:13 — portable sapiential/eschatological material, consistent with fixed sayings in a fluid order.'),
     el('li', null, 'Several of these same motifs surface in Thomas, independently of the question of direct canonical dependence.')));
@@ -596,7 +609,7 @@
     ],
     raw: qRaw,
     evidence: [
-      {file: 'matt_luke_double_masked_analysis/data/08_direction_burden_ledger.yaml', row: 'residual double-tradition', note: 'masking Markan material collapses direction asymmetry to 26.446 = 26.446.'},
+      {file: 'analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust/data/15_direction_burden_totals.yaml', row: 'residual double-tradition', note: (typeof mldBMP==='number') ? `under the reproducibility-patched default medium regime: Matt-prior ${mldBMP}, Luke-prior ${mldBLP}, common-source heuristic ${mldBCO}.` : 'reproducibility-patched heuristic burden totals — near-symmetric direct terms, lower common-source indicator.'},
       {file: 'matt_luke_analysis/data/05_secondary_echoes.csv', row: 'nonlocal rows', note: 'strong echoes scattered across positions — portable, not linear.'},
       {file: 'john_thomas_epistles_apocrypha_analysis/data/11_concept_signature_registry.yaml', row: 'concept_ids spanning Matt/Luke/Thomas', note: 'same motifs surface in canonical pairs and in Thomas, supporting a shared saying layer.'},
     ],

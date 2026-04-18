@@ -282,9 +282,15 @@
     ['14_mask_audit.html', 'Mask audit · masked only',
       'Per-verse audit of the Markan mask: which verses were removed, why (strict / chain / cluster), and where their nearest Markan parallel lies. Data inspection, not a Q-hypothesis commitment.'],
     ['15_q_core.html', 'Q core reader · masked only',
-      'The 49 primary pairs that survive Markan masking, laid out for close Greek reading: full texts, lemma partition (shared / Matt-only / Luke-only), lemma and surface diffs, variant notes.'],
+      'The primary pairs that survive Markan masking (medium regime), laid out for close Greek reading: full texts, lemma partition (shared / Matt-only / Luke-only), lemma and surface diffs, variant notes.'],
     ['16_matt_verse_card.html', 'Matthew verse card · cross-dataset',
       'For each of Matthew\'s 1,068 verses, the best Mark parallel, the best Luke parallel, and the Markan-mask verdict — all on one page. Surfaces "masked-but-Q-like" verses where the mask decision and the Luke evidence disagree.'],
+    ['27_mm_sensitivity.html', 'Sensitivity · Mark–Matthew',
+      'How stable is the Mark↔Matthew backbone? Score-threshold × gap-penalty heatmap plus the Mark 16:9–20 text-critical sensitivity — from the reproducibility-patch rerun.'],
+    ['28_mld_regime_sensitivity.html', 'Sensitivity · masked Q-core',
+      'Three mask regimes (strict / medium / broad) × four chain thresholds (0.28–0.34). How fragile is the Q-core pair count against mask-threshold choice? Reproducibility-patch rerun data.'],
+    ['30_reader.html', 'Reader · Greek gospels with parallel overlays',
+      'Full SBLGNT text for Matt, Mark, Luke, John. Each verse shows compact parallel badges (MM / ML / MLD / Ec / Mx / An); hover a badge for a brief summary, click to jump to the relevant analysis page. Bidirectional: the viz pages also link back to the reader at the relevant verse.'],
   ];
   const cg = document.getElementById('cardgrid');
   for (const [h, t, desc] of views) {
@@ -319,6 +325,8 @@
         J.book_matrix.length + ' book-to-book cells with toggleable metrics: total candidates, score ≥ 0.35, exact run ≥ 4, and best score.'],
       ['25_apocrypha_inventory.html', 'Apocrypha inventory',
         J.apocrypha.length + ' M.R. James apocryphal works enumerated by corpus group — infancy gospels, apocryphal acts, NHC tractates — as future-analysis targets.'],
+      ['29_jtea_claim_evidence.html', 'Claim → evidence links',
+        (J.rerun && J.rerun.claim_evidence_links ? J.rerun.claim_evidence_links.length : '—') + ' interpretive claims, each mapped to its supporting artifacts and a three-axis confidence score (retrieval · philological · formula-risk). From the reproducibility-patch rerun.'],
     ];
     const jcg = document.getElementById('jteaCards');
     for (const [h, t, desc] of jteaViews) {

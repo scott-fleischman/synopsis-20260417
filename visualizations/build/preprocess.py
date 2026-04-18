@@ -28,6 +28,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from typing import Any
 
 # Allow running as a script (``python3 visualizations/build/preprocess.py``)
 # by inserting the parent of the ``build`` package onto sys.path.
@@ -88,6 +89,12 @@ if __package__ in (None, ""):
         load_jtea_thomas_registry,
         load_jtea_thomas_units,
     )
+    from build.loaders_rerun import (  # type: ignore[no-redef]
+        load_jtea_rerun,
+        load_mld_rerun,
+        load_mm_rerun,
+    )
+    from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
 else:  # imported as a package member
     from .dataset import Dataset
@@ -144,6 +151,12 @@ else:  # imported as a package member
         load_jtea_thomas_registry,
         load_jtea_thomas_units,
     )
+    from .loaders_rerun import (
+        load_jtea_rerun,
+        load_mld_rerun,
+        load_mm_rerun,
+    )
+    from .loaders_reader import load_reader_books
     from .preprocess_paths import OUT, ROOT
 
 
@@ -162,6 +175,40 @@ def _meta_with_counts(ds: Dataset) -> dict:
     }
 
 
+def _overlay_rerun_headline(summary: Any, rerun: dict, mld: bool = False) -> Any:
+    """Promote the rerun's authoritative headline numbers into ``summary.global_metrics``.
+
+    The old loaders read ``mark_matthew_analysis/`` etc. for per-pair detail
+    (the new rerun schema dropped fields we need). But we want existing viz
+    pages — which read ``summary.global_metrics.matched_pair_count`` etc. —
+    to show the *rerun* headline numbers, because those are the authoritative
+    reproducibility-patched values. This function overlays the rerun numbers
+    on top of the old summary without touching per-pair data.
+    """
+    if not isinstance(summary, dict) or not isinstance(rerun, dict):
+        return summary
+    r_sum = rerun.get("summary") or {}
+    gm_new = (r_sum.get("global_metrics") or {}) if isinstance(r_sum, dict) else {}
+    if not gm_new:
+        return summary
+
+    gm_old = dict(summary.get("global_metrics") or {})
+    # MLD uses ``_default_medium`` suffixed keys — normalize to plain keys for the viz.
+    suffix = "_default_medium"
+    for k, v in gm_new.items():
+        base = k[:-len(suffix)] if mld and k.endswith(suffix) else k
+        gm_old[base] = v
+        gm_old[k] = v  # also preserve the suffixed key for pages that want it
+    summary["global_metrics"] = gm_old
+
+    # Burden totals only live in the rerun — expose them alongside.
+    if "burden_totals" in r_sum:
+        summary["burden_totals"] = r_sum["burden_totals"]
+    # Also expose a ``rerun_metadata`` pointer so the viz can add a provenance line.
+    summary["rerun_source"] = "analysis_update_20260418"
+    return summary
+
+
 def build_mm() -> dict:
     ds = Dataset(
         "mm",
@@ -170,6 +217,7 @@ def build_mm() -> dict:
         b_book="Matt",
         label="Mark ↔ Matthew",
     )
+    rerun = load_mm_rerun()
     return {
         "name": ds.name,
         "a_book": ds.a_book,
@@ -181,7 +229,7 @@ def build_mm() -> dict:
         "micro": load_mm_micro(ds),
         "echoes": load_mm_echoes(ds),
         "gaps": load_gaps(ds),
-        "summary": load_summary(ds),
+        "summary": _overlay_rerun_headline(load_summary(ds), rerun),
         "ledger": load_ledger(ds),
         "burden": load_burden(ds),
         "negspace": load_negspace(ds),
@@ -189,6 +237,7 @@ def build_mm() -> dict:
         "loose_full": load_loose_full(ds),
         "variants": load_variants(ds),
         "detailed": load_mm_detailed(ds),
+        "rerun": rerun,
     }
 
 
@@ -244,6 +293,7 @@ def build_mld() -> dict:
     meta["mask_rule_counts"] = rule_counts_by_book
     meta["masked_idx"] = masked_idx_by_book
 
+    rerun = load_mld_rerun()
     return {
         "name": ds.name,
         "a_book": ds.a_book,
@@ -255,7 +305,7 @@ def build_mld() -> dict:
         "micro": load_mld_micro(ds),
         "echoes": load_mld_echoes(ds),
         "gaps": load_mld_gaps(ds),
-        "summary": load_mld_summary(ds),
+        "summary": _overlay_rerun_headline(load_mld_summary(ds), rerun, mld=True),
         "ledger": load_mld_ledger(ds),
         "burden": load_mld_burden(ds),
         "negspace": load_mld_negspace(ds),
@@ -264,6 +314,7 @@ def build_mld() -> dict:
         "loose_full": load_mld_loose_full(ds),
         "variants": load_variants(ds),
         "detailed": load_mld_detailed(ds),
+        "rerun": rerun,
     }
 
 
@@ -286,6 +337,7 @@ def build_jtea() -> dict:
         "book_matrix": load_jtea_book_matrix(),
         "books": load_jtea_canonical_book_counts(),
         "apocrypha": load_jtea_apocrypha(),
+        "rerun": load_jtea_rerun(),
     }
 
 
@@ -356,7 +408,22 @@ def main() -> None:
             f"{len(conclusions.get('case_snippets') or [])} case snippets"
         )
 
-    bundle = {"mm": mm, "ml": ml, "mld": mld, "jtea": jtea, "conclusions": conclusions}
+    print("Loading full SBLGNT text for reader view...")
+    reader = load_reader_books(["Matt", "Mark", "Luke", "John"])
+    _reader_verse_ct = sum(
+        sum(len(ch.get("verses") or []) for ch in (bk.get("chapters") or []))
+        for bk in reader
+    )
+    print(f"  {len(reader)} books, {_reader_verse_ct} verses")
+
+    bundle = {
+        "mm": mm,
+        "ml": ml,
+        "mld": mld,
+        "jtea": jtea,
+        "conclusions": conclusions,
+        "reader": reader,
+    }
 
     jsfile = OUT / "bundle.js"
     with open(jsfile, "w") as f:

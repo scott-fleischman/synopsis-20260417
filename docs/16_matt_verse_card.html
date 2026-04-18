@@ -88,8 +88,9 @@
         <h3>The "Q-core surviving" set</h3>
         <div class="small" style="line-height:1.65;">
           Matt verses that are unmasked and paired in the masked primary chain (<code>mld</code>).
-          These 49 pairs are the narrowest possible Q core by construction — the double-tradition
-          remainder after subtracting Markan-looking material from both sides.
+          These pairs are the narrowest possible Q core by construction — the double-tradition
+          remainder after subtracting Markan-looking material from both sides. The exact count
+          (<span id="qCoreCt">—</span> pairs under the default medium regime) updates live from the bundle.
         </div>
       </div>
       <div>
@@ -120,6 +121,13 @@
   SH.buildNav('16_matt_verse_card.html');
   const BUNDLE = SH.BUNDLE;
   const mm = BUNDLE.mm, ml = BUNDLE.ml, mld = BUNDLE.mld;
+
+  // Wire the Q-core count into the intro prose from the MLD summary.
+  const qCoreNode = document.getElementById('qCoreCt');
+  if (qCoreNode && mld && mld.summary && mld.summary.global_metrics) {
+    const n = mld.summary.global_metrics.matched_pair_count;
+    if (typeof n === 'number') qCoreNode.textContent = String(n);
+  }
 
   // Matt total verses. mm has Matt as b, ml has Matt as a. Both use same denom.
   const mattTotal = mm.meta.b_total_verses;
@@ -348,6 +356,10 @@
         href: '15_q_core.html#mld/' + encodeURIComponent(mldPair[i].a_ref + '|' + mldPair[i].b_ref),
         style: 'font-size:12px;color:#0f766e;',
       }, 'Q core reader →') : null,
+      SH.el('a', {
+        href: '30_reader.html#Matt/' + encodeURIComponent(ref.ref),
+        style: 'font-size:12px;color:#0f766e;',
+      }, 'read in context →'),
     );
     host.appendChild(head);
 

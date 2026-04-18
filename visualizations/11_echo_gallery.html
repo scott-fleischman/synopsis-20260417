@@ -54,10 +54,14 @@
   const D = SH.D;
   document.getElementById('sub').textContent = D.label + ' — high-signal non-chain parallels';
 
+  const gm = (D.summary && D.summary.global_metrics) || {};
+  const pairCt = gm.matched_pair_count || (D.pairs && D.pairs.length) || 0;
+  const echoCt = (D.echoes && D.echoes.length) || 0;
+  const nonlocalCt = (D.echoes || []).filter(e => e.nonlocal).length;
   const captions = {
-    mm: 'Secondary echoes are pairs the chain did not claim. Because the Mark↔Matt primary chain is tight (385 pairs), echoes here are relatively sparse (231) and many are local "near misses" rather than true dislocations. Filter by min-distance to isolate the true structural echoes.',
-    ml: 'Echo gallery for Matt↔Luke — this is where most of the double-tradition evidence lives. Of 1,033 echoes, dozens score above 0.80 and sit hundreds of verses away from the chain position: these are Q-parallels reordered. The richer ML echoes carry Greek text directly, so you can read them here without switching pages.',
-    mld: '60 secondary echoes on the masked matrix, 38 tagged nonlocal_reorder. Because the primary chain is tiny (49 anchors), every echo reads as a richly preserved double-tradition parallel that the chain could not monotonically take — the characteristic Q-dislocation pattern. Greek is bundled directly on each card, so you can read both sides without switching pages. Try sorting by distance to surface the long-range parallels (e.g. Matt 25 talents ↔ Luke 19 pounds, reordered across ~700 verses of Lukan travel narrative).',
+    mm: `Secondary echoes are pairs the chain did not claim. Because the Mark↔Matt primary chain is tight (${pairCt} pairs), echoes here are relatively sparse (${echoCt.toLocaleString()} in the retrieval set) and many are local "near misses" rather than true dislocations. Filter by min-distance to isolate the true structural echoes.`,
+    ml: `Echo gallery for Matt↔Luke — this is where most of the double-tradition evidence lives. Of ${echoCt.toLocaleString()} echoes, dozens score above 0.80 and sit hundreds of verses away from the chain position: these are Q-parallels reordered. The richer ML echoes carry Greek text directly, so you can read them here without switching pages.`,
+    mld: `${echoCt.toLocaleString()} secondary echoes on the masked matrix, ${nonlocalCt} tagged nonlocal_reorder. Because the primary chain is small (${pairCt} anchors), every echo reads as a richly preserved double-tradition parallel that the chain could not monotonically take — the characteristic Q-dislocation pattern. Greek is bundled directly on each card, so you can read both sides without switching pages. Try sorting by distance to surface the long-range parallels (e.g. Matt 25 talents ↔ Luke 19 pounds, reordered across ~700 verses of Lukan travel narrative).`,
   };
   document.getElementById('caption').textContent = captions[D.name];
 
@@ -110,6 +114,21 @@
       if (e.composite_score != null) top.appendChild(SH.el('span', { class: 'chip' }, 'comp ' + e.composite_score.toFixed(3)));
       if (e.nonlocality != null) top.appendChild(SH.el('span', { class: 'chip' }, 'dist ' + e.nonlocality.toFixed(0)));
       if (e.tags) for (const tg of e.tags) top.appendChild(SH.el('span', { class: 'echo-tag' }, tg));
+      // Bidirectional: open either side in the full-text reader.
+      const aBk = (e.a_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
+      const bBk = (e.b_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
+      if (aBk) top.appendChild(SH.el('a', {
+        href: '30_reader.html#' + aBk + '/' + encodeURIComponent(e.a_ref),
+        class: 'chip',
+        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
+        title: 'Open ' + e.a_ref + ' in the reader',
+      }, 'read a →'));
+      if (bBk) top.appendChild(SH.el('a', {
+        href: '30_reader.html#' + bBk + '/' + encodeURIComponent(e.b_ref),
+        class: 'chip',
+        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
+        title: 'Open ' + e.b_ref + ' in the reader',
+      }, 'read b →'));
       card.appendChild(top);
       if (aText) card.appendChild(SH.el('div', { class: 'echo-a greek' }, aText));
       if (bText) card.appendChild(SH.el('div', { class: 'echo-b greek' }, bText));

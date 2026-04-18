@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mask-regime sensitivity — masked Matt↔Luke</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .reg-wrap { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .reg-card { border: 1px solid var(--rule); padding: 14px; border-radius: 4px; background: #fff; }
+  .reg-card.strict { border-top: 4px solid #8b2e2e; }
+  .reg-card.medium { border-top: 4px solid #22506c; }
+  .reg-card.broad { border-top: 4px solid #0f766e; }
+  .reg-card h3 { margin: 0 0 4px; font-family: var(--serif); font-size: 15px; }
+  .reg-card .thresh { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+  .reg-card .counts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; font-size: 13px; }
+  .reg-card .counts .num { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--matt); }
+  .reg-card .reason { font-size: 11px; color: var(--ink-soft); margin-top: 6px; line-height: 1.5; }
+  .stat-tbl td, .stat-tbl th { padding: 5px 10px; text-align: left; font-size: 12px; }
+  .stat-tbl th { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-mute); border-bottom: 1px solid var(--rule); }
+  .stat-tbl td { font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--rule); }
+  .stat-tbl tr.default-row td { background: #fdf6ea; font-weight: 600; }
+  .sensitivity-plot svg { background: #fff; border: 1px solid var(--rule); }
+  .lgnd { display: flex; gap: 16px; font-size: 11px; color: var(--ink-soft); margin-top: 6px; }
+  .lgnd .sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Mask-regime sensitivity</h1>
+    <span class="sub">How the Q-core size shifts under strict / medium / broad masking (reproducibility-patch rerun).</span>
+    <span id="statusBadge" style="margin-left:auto;font-size:12px;color:var(--ink-mute);"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    The reproducibility patch runs three masking regimes against the same similarity matrix: <strong>strict</strong> (threshold 0.40), <strong>medium</strong> (0.355, the project default), and <strong>broad</strong> (0.325). A tighter threshold keeps more verses in play, so the residual Q-core is larger; a looser threshold masks more aggressively, so the residual Q-core is smaller. The question this page answers is: <em>how fragile is the Q-core count against mask-threshold choice?</em>
+  </p>
+
+  <section class="card">
+    <h2>Regime comparison — mask counts by reason</h2>
+    <div class="reg-wrap" id="regimeCards"></div>
+  </section>
+
+  <section class="card">
+    <h2>Pair &amp; block counts across regime × chain threshold</h2>
+    <div class="caption" style="margin:0 0 10px;">
+      For each regime, the chain was re-run at <code>primary_chain_min_score ∈ {0.28, 0.30, 0.32, 0.34}</code>. The curves below show how the backbone size changes. The default medium regime (striped) is highlighted.
+    </div>
+    <div class="sensitivity-plot" id="regimePlot"></div>
+    <div class="lgnd">
+      <span><span class="sw" style="background:#8b2e2e"></span>strict</span>
+      <span><span class="sw" style="background:#22506c"></span>medium (default)</span>
+      <span><span class="sw" style="background:#0f766e"></span>broad</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Full sensitivity grid</h2>
+    <div class="scrollx"><table class="stat-tbl" id="sensTbl"></table></div>
+  </section>
+
+  <p class="caption" style="margin-top:18px;">
+    Source: <code>analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust/data/</code>.
+    The medium regime is the default; the other two are audit aids. See also the
+    <a href="14_mask_audit.html#mld">mask audit</a> and the <a href="15_q_core.html#mld">Q-core reader</a>.
+  </p>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('28_mld_regime_sensitivity.html');
+  const BUNDLE = SH.BUNDLE;
+  const mld = BUNDLE.mld;
+  const rerun = mld && mld.rerun;
+  const statusEl = document.getElementById('statusBadge');
+  if (!rerun || !rerun.regime_comparison || !rerun.regime_comparison.length) {
+    statusEl.textContent = 'rerun data unavailable';
+    document.querySelector('.wrap').appendChild(SH.el('div', {class: 'card'},
+      SH.el('p', null, 'No reproducibility-patch MLD data found. Re-run the preprocessor against analysis_update_20260418/.')));
+    return;
+  }
+  statusEl.textContent = 'medium = default · strict and broad are audit aids';
+
+  // --- Regime comparison cards ---
+  const reg = rerun.regime_comparison;
+  const colors = { strict: '#8b2e2e', medium: '#22506c', broad: '#0f766e' };
+  const cardsHost = document.getElementById('regimeCards');
+  for (const r of reg) {
+    const card = SH.el('div', { class: 'reg-card ' + r.regime });
+    card.appendChild(SH.el('h3', null, r.regime + (r.regime === 'medium' ? ' · default' : '')));
+    card.appendChild(SH.el('div', { class: 'thresh' }, 'threshold ≥ ' + r.threshold));
+    const cnt = SH.el('div', { class: 'counts' });
+    cnt.appendChild(SH.el('div', null,
+      'Matt masked: ', SH.el('span', { class: 'num' }, String(r.matt_masked)),
+      ' / ', String(r.matt_masked + r.matt_unmasked)));
+    cnt.appendChild(SH.el('div', null,
+      'Luke masked: ', SH.el('span', { class: 'num' }, String(r.luke_masked)),
+      ' / ', String(r.luke_masked + r.luke_unmasked)));
+    card.appendChild(cnt);
+
+    // Reason breakdown
+    const rc = r.matt_reason_counts || {};
+    const parts = [];
+    for (const k of Object.keys(rc)) {
+      if (k === 'unmasked') continue;
+      parts.push(k + ': ' + rc[k]);
+    }
+    if (parts.length) {
+      card.appendChild(SH.el('div', { class: 'reason' }, 'Matt reason counts — ' + parts.join(' · ')));
+    }
+    const rc2 = r.luke_reason_counts || {};
+    const parts2 = [];
+    for (const k of Object.keys(rc2)) {
+      if (k === 'unmasked') continue;
+      parts2.push(k + ': ' + rc2[k]);
+    }
+    if (parts2.length) {
+      card.appendChild(SH.el('div', { class: 'reason' }, 'Luke reason counts — ' + parts2.join(' · ')));
+    }
+    cardsHost.appendChild(card);
+  }
+
+  // --- Regime × chain-threshold plot ---
+  const sens = rerun.regime_sensitivity || [];
+  const thresholds = [...new Set(sens.map(r => r.primary_chain_min_score))].sort((a,b) => a-b);
+  const regimes = ['strict', 'medium', 'broad'];
+  const W = 720, H = 320, padL = 52, padR = 20, padT = 20, padB = 40;
+  const xScale = SH.scale(thresholds[0], thresholds[thresholds.length - 1], padL, W - padR);
+  const allPair = sens.map(r => r.pair_count);
+  const minP = Math.min(...allPair) - 5;
+  const maxP = Math.max(...allPair) + 5;
+  const yScale = SH.scale(minP, maxP, H - padB, padT);
+
+  const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+  // axes
+  svg.appendChild(SH.svgEl('line', { x1: padL, y1: H - padB, x2: W - padR, y2: H - padB, stroke: '#1a1a1a' }));
+  svg.appendChild(SH.svgEl('line', { x1: padL, y1: padT, x2: padL, y2: H - padB, stroke: '#1a1a1a' }));
+  // x ticks
+  for (const t of thresholds) {
+    const x = xScale(t);
+    svg.appendChild(SH.svgEl('line', { x1: x, y1: H - padB, x2: x, y2: H - padB + 4, stroke: '#1a1a1a' }));
+    const lbl = SH.svgEl('text', { x, y: H - padB + 18, 'text-anchor': 'middle', 'font-size': 10, fill: '#4a4a4a', 'font-family': 'var(--serif)' });
+    lbl.textContent = t.toFixed(2);
+    svg.appendChild(lbl);
+  }
+  const xTitle = SH.svgEl('text', { x: (padL + (W - padR)) / 2, y: H - 6, 'text-anchor': 'middle', 'font-size': 11, fill: '#4a4a4a', 'font-family': 'var(--serif)' });
+  xTitle.textContent = 'primary_chain_min_score';
+  svg.appendChild(xTitle);
+  // y ticks
+  for (let p = Math.ceil(minP/10)*10; p <= maxP; p += 10) {
+    const y = yScale(p);
+    svg.appendChild(SH.svgEl('line', { x1: padL - 4, y1: y, x2: padL, y2: y, stroke: '#1a1a1a' }));
+    const lbl = SH.svgEl('text', { x: padL - 8, y: y + 3, 'text-anchor': 'end', 'font-size': 10, fill: '#4a4a4a', 'font-family': 'var(--serif)' });
+    lbl.textContent = String(p);
+    svg.appendChild(lbl);
+  }
+  const yTitle = SH.svgEl('text', { x: 14, y: (padT + (H - padB)) / 2, 'text-anchor': 'middle', 'font-size': 11, fill: '#4a4a4a', 'font-family': 'var(--serif)', transform: `rotate(-90, 14, ${(padT + (H - padB)) / 2})` });
+  yTitle.textContent = 'pair count';
+  svg.appendChild(yTitle);
+
+  // lines
+  for (const reg of regimes) {
+    const rows = sens.filter(r => r.regime === reg).sort((a,b) => a.primary_chain_min_score - b.primary_chain_min_score);
+    if (!rows.length) continue;
+    let pts = '';
+    for (const r of rows) {
+      const x = xScale(r.primary_chain_min_score), y = yScale(r.pair_count);
+      pts += (pts ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1);
+    }
+    svg.appendChild(SH.svgEl('path', { d: pts, fill: 'none', stroke: colors[reg], 'stroke-width': reg === 'medium' ? 3 : 2, 'stroke-dasharray': reg === 'medium' ? '' : '' }));
+    for (const r of rows) {
+      const x = xScale(r.primary_chain_min_score), y = yScale(r.pair_count);
+      svg.appendChild(SH.svgEl('circle', { cx: x, cy: y, r: 4, fill: colors[reg] }));
+      const lbl = SH.svgEl('text', { x, y: y - 8, 'text-anchor': 'middle', 'font-size': 10, fill: colors[reg], 'font-family': 'var(--serif)', 'font-variant-numeric': 'tabular-nums' });
+      lbl.textContent = String(r.pair_count);
+      svg.appendChild(lbl);
+    }
+  }
+  document.getElementById('regimePlot').appendChild(svg);
+
+  // --- Full sensitivity table ---
+  const tbl = document.getElementById('sensTbl');
+  tbl.appendChild(SH.el('thead', null,
+    SH.el('tr', null,
+      SH.el('th', null, 'regime'),
+      SH.el('th', null, 'chain threshold'),
+      SH.el('th', null, 'pair count'),
+      SH.el('th', null, 'loose blocks'))));
+  const tb = SH.el('tbody');
+  for (const r of sens) {
+    // Flag the default row: medium regime + chain threshold 0.32, the documented project default under the reproducibility patch.
+    const isDefault = (r.regime === 'medium' && Math.abs(r.primary_chain_min_score - 0.32) < 1e-6);
+    tb.appendChild(SH.el('tr', isDefault ? { class: 'default-row' } : null,
+      SH.el('td', null, r.regime),
+      SH.el('td', null, r.primary_chain_min_score.toFixed(2)),
+      SH.el('td', null, String(r.pair_count)),
+      SH.el('td', null, String(r.loose_block_count))));
+  }
+  tbl.appendChild(tb);
+})();
+</script>
+</body>
+</html>

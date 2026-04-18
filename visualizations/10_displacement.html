@@ -52,10 +52,19 @@
   document.getElementById('aLabel').textContent = D.a_book;
   document.getElementById('bLabel').textContent = D.b_book;
 
+  const BUNDLE = SH.BUNDLE;
+  const mmEchoCt = (BUNDLE.mm && BUNDLE.mm.echoes || []).length;
+  const mlEchoCt = (BUNDLE.ml && BUNDLE.ml.echoes || []).length;
+  const mldEchoes = (BUNDLE.mld && BUNDLE.mld.echoes) || [];
+  const mldEchoCt = mldEchoes.length;
+  const mldNonlocal = mldEchoes.filter(e => (e.tags || []).includes('nonlocal_reorder')).length;
+  const mldPairCt = (BUNDLE.mld && BUNDLE.mld.summary && BUNDLE.mld.summary.global_metrics
+                      && BUNDLE.mld.summary.global_metrics.matched_pair_count) || (BUNDLE.mld.pairs || []).length;
+
   const captions = {
-    mm: 'Secondary echoes in Mark↔Matthew are the pairs the chain could not take. Many of them are local (same content, minor position shift). The ones at large distance are Matthew\'s structural remix — a Markan eschatological line landing in Matt 24, or Matt\'s Olivet section borrowing from Mark\'s little apocalypse with reshuffled order. There are 231 echoes total; with the "strong" filter you see only the high-signal ones.',
-    ml: 'Matt↔Luke has 1,033 echoes — 4× the primary chain. This is the evidence for reordering in the double tradition: Matthew\'s Sermon on the Mount material lives in Luke\'s Sermon on the Plain, but also scattered across Luke 10–13. The arc diagram shows the "Great Insertion" clearly — many arcs reach far into Luke 9–15 from Matthean positions. The long right tail in the distance histogram is the quantitative fingerprint of this reordering.',
-    mld: 'Markan-masked Matt↔Luke has 60 secondary echoes, 38 of them tagged nonlocal_reorder. Because the primary chain is tiny (49 pairs), the distance measure here is computed from the 49 anchors by linear interpolation — long arcs are verses where the double-tradition echo lands far from where chain geometry would place it. Classic examples: Matt 8:20 (foxes-have-holes) echoing Luke 9:58 in Luke\'s Travel Narrative; Matt 25 talents parables reaching into Luke 19. Click any arc to jump into the pair explorer.',
+    mm: `Secondary echoes in Mark↔Matthew are the pairs the chain could not take. Many of them are local (same content, minor position shift). The ones at large distance are Matthew's structural remix — a Markan eschatological line landing in Matt 24, or Matt's Olivet section borrowing from Mark's little apocalypse with reshuffled order. There are ${mmEchoCt.toLocaleString()} echoes total; with the "strong" filter you see only the high-signal ones.`,
+    ml: `Matt↔Luke has ${mlEchoCt.toLocaleString()} echoes — 4× the primary chain. This is the evidence for reordering in the double tradition: Matthew's Sermon on the Mount material lives in Luke's Sermon on the Plain, but also scattered across Luke 10–13. The arc diagram shows the "Great Insertion" clearly — many arcs reach far into Luke 9–15 from Matthean positions. The long right tail in the distance histogram is the quantitative fingerprint of this reordering.`,
+    mld: `Markan-masked Matt↔Luke has ${mldEchoCt} secondary echoes, ${mldNonlocal} of them tagged nonlocal_reorder. Because the primary chain is tiny (${mldPairCt} pairs), the distance measure here is computed from the ${mldPairCt} anchors by linear interpolation — long arcs are verses where the double-tradition echo lands far from where chain geometry would place it. Classic examples: Matt 8:20 (foxes-have-holes) echoing Luke 9:58 in Luke's Travel Narrative; Matt 25 talents parables reaching into Luke 19. Click any arc to jump into the pair explorer.`,
   };
   document.getElementById('caption').textContent = captions[D.name];
 

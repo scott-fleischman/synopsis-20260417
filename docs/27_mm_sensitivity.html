@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Mark–Matthew sensitivity — parameter &amp; text-critical</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .sens-grid { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
+  .sens-grid svg { background: #fff; border: 1px solid var(--rule); }
+  .heatmap-cell { font-variant-numeric: tabular-nums; font-size: 11px; }
+  .heat-key { display: flex; gap: 8px; align-items: center; font-size: 11px; color: var(--ink-soft); margin-top: 6px; }
+  .heat-key .grad { width: 140px; height: 10px; border: 1px solid var(--rule); }
+  .stat-tbl td, .stat-tbl th { padding: 5px 10px; text-align: left; }
+  .stat-tbl th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-mute); border-bottom: 1px solid var(--rule); }
+  .stat-tbl td { font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--rule); }
+  .stat-tbl tr.default td { background: #fdf6ea; font-weight: 600; }
+  .pair-list { font-family: var(--greek); font-size: 14px; line-height: 1.7; }
+  .pair-list .ref { font-family: var(--serif); color: var(--matt); font-size: 12px; }
+  .obs-block { background: #fdf6ea; border-left: 3px solid var(--matt); padding: 10px 14px; font-size: 13px; line-height: 1.6; font-family: var(--serif); color: var(--ink); margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Mark–Matthew sensitivity</h1>
+    <span class="sub">Parameter sweep &amp; text-critical robustness (reproducibility-patch rerun).</span>
+    <span id="statusBadge" style="margin-left:auto;font-size:12px;color:var(--ink-mute);"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption">
+    Two questions the rerun answers directly: (1) <em>How stable is the 386-pair Mark↔Matthew backbone under different score thresholds and gap penalties?</em> (2) <em>Does including vs. excluding the double-bracketed Mark 16:9–20 shift the chain?</em>
+    The score grid visualizes pair and loose-block counts across <code>primary_chain_min_score ∈ {0.24, 0.25, 0.26, 0.27}</code> × <code>gap_penalty ∈ {0.04, 0.05, 0.06}</code>. Below, the text-critical sensitivity shows the last five aligned Mark pairs under each variant.
+  </p>
+
+  <section class="card">
+    <h2>Score-grid sensitivity: pair count</h2>
+    <div class="caption" style="margin:0 0 10px;">Cells = backbone pair count at each (threshold, gap-penalty) combination. Darker = more pairs. The project default (threshold 0.25, gap 0.04–0.06) is highlighted.</div>
+    <div class="sens-grid">
+      <div id="heatmapPairs"></div>
+      <div>
+        <h3 style="margin:0 0 8px;">Full grid</h3>
+        <div class="scrollx"><table class="stat-tbl" id="gridTbl"></table></div>
+        <div class="heat-key">
+          <span>fewer</span><div class="grad" id="gradLegend"></div><span>more pairs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Text-critical sensitivity — Mark 16:9–20</h2>
+    <p class="caption" style="margin:0 0 10px;">
+      The SBLGNT marks Mark 16:9–20 as double-bracketed (uncertain). The rerun compares two policies: the default excludes these verses from the surface/lemma stream, the alternative includes them. Either way, the primary chain terminates before 16:9–20 under the current threshold.
+    </p>
+    <div id="markEndingGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;"></div>
+    <div class="obs-block" id="markEndingObs"></div>
+  </section>
+
+  <section class="card">
+    <h2>Numeric summary</h2>
+    <div id="numericSummary"></div>
+  </section>
+
+  <p class="caption" style="margin-top:18px;">
+    Source: <code>analysis_update_20260418/reruns/mark_matthew_rerun_robust/data/</code>. Full provenance and SHA256 hashes are in that package's <code>MANIFEST.yaml</code>.
+  </p>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('27_mm_sensitivity.html');
+  const BUNDLE = SH.BUNDLE;
+  const mm = BUNDLE.mm;
+  const rerun = mm && mm.rerun;
+  const statusEl = document.getElementById('statusBadge');
+  if (!rerun || !rerun.score_grid || !rerun.score_grid.length) {
+    statusEl.textContent = 'rerun data unavailable';
+    document.querySelector('.wrap').appendChild(SH.el('div', {class: 'card'},
+      SH.el('p', null, 'No reproducibility-patch data found. Re-run the preprocessor against analysis_update_20260418/.')));
+    return;
+  }
+  statusEl.textContent = rerun.summary && rerun.summary.package
+    ? 'Package: ' + rerun.summary.package
+    : 'analysis_update_20260418 / mark_matthew_rerun_robust';
+
+  // --- Score grid heatmap ---
+  const grid = rerun.score_grid;
+  const thresholds = [...new Set(grid.map(r => r.primary_chain_min_score))].sort((a,b) => a-b);
+  const gaps = [...new Set(grid.map(r => r.gap_penalty))].sort((a,b) => a-b);
+  const lookup = new Map();
+  for (const r of grid) lookup.set(`${r.primary_chain_min_score}|${r.gap_penalty}`, r);
+
+  const pc = grid.map(r => r.pair_count);
+  const minC = Math.min(...pc), maxC = Math.max(...pc);
+  function heatColor(v) {
+    const t = (v - minC) / Math.max(1, maxC - minC);
+    const stops = [[0.9,0.6,0.35],[0.45,0.22,0.12]];
+    const a = stops[0], b = stops[1];
+    const r = a[0] + (b[0]-a[0])*t, g = a[1] + (b[1]-a[1])*t, bl = a[2] + (b[2]-a[2])*t;
+    return `rgb(${Math.round(r*255)},${Math.round(g*255)},${Math.round(bl*255)})`;
+  }
+
+  // Heatmap SVG — thresholds as rows, gaps as columns.
+  const cellW = 84, cellH = 54, leftPad = 70, topPad = 32;
+  const hmW = leftPad + cellW * gaps.length + 20;
+  const hmH = topPad + cellH * thresholds.length + 20;
+  const hm = SH.svgEl('svg', { viewBox: `0 0 ${hmW} ${hmH}`, width: hmW, height: hmH });
+  // column headers
+  gaps.forEach((g, i) => {
+    const x = leftPad + i * cellW + cellW/2;
+    const t = SH.svgEl('text', { x, y: topPad - 10, 'text-anchor': 'middle', 'font-size': 11, fill: '#4a4a4a', 'font-family': 'var(--serif)' });
+    t.textContent = 'gap ' + g;
+    hm.appendChild(t);
+  });
+  // row labels
+  thresholds.forEach((th, i) => {
+    const y = topPad + i * cellH + cellH/2 + 4;
+    const t = SH.svgEl('text', { x: leftPad - 10, y, 'text-anchor': 'end', 'font-size': 11, fill: '#4a4a4a', 'font-family': 'var(--serif)' });
+    t.textContent = 'score ≥ ' + th;
+    hm.appendChild(t);
+  });
+  // cells
+  thresholds.forEach((th, i) => {
+    gaps.forEach((g, j) => {
+      const key = `${th}|${g}`;
+      const r = lookup.get(key);
+      if (!r) return;
+      const x = leftPad + j * cellW;
+      const y = topPad + i * cellH;
+      hm.appendChild(SH.svgEl('rect', { x, y, width: cellW-4, height: cellH-4, fill: heatColor(r.pair_count), stroke: '#fff', 'stroke-width': 1 }));
+      const t = SH.svgEl('text', { x: x + (cellW-4)/2, y: y + (cellH-4)/2, 'text-anchor': 'middle', 'dominant-baseline': 'central', 'font-size': 16, fill: '#fff', 'font-weight': 600 });
+      t.textContent = r.pair_count;
+      hm.appendChild(t);
+      const sub = SH.svgEl('text', { x: x + (cellW-4)/2, y: y + (cellH-4) - 6, 'text-anchor': 'middle', 'font-size': 10, fill: '#fff', 'fill-opacity': 0.85 });
+      sub.textContent = r.loose_block_count + ' blocks';
+      hm.appendChild(sub);
+    });
+  });
+  document.getElementById('heatmapPairs').appendChild(hm);
+
+  // Gradient legend
+  const legendNode = document.getElementById('gradLegend');
+  legendNode.style.background = `linear-gradient(to right, ${heatColor(minC)}, ${heatColor(maxC)})`;
+
+  // Full table (with default highlight)
+  const tbl = document.getElementById('gridTbl');
+  const thead = SH.el('thead', null,
+    SH.el('tr', null,
+      SH.el('th', null, 'threshold'),
+      SH.el('th', null, 'gap penalty'),
+      SH.el('th', null, 'pair count'),
+      SH.el('th', null, 'loose blocks')));
+  tbl.appendChild(thead);
+  const tb = SH.el('tbody');
+  const defaultThr = 0.25;
+  grid.forEach(r => {
+    const tr = SH.el('tr', r.primary_chain_min_score === defaultThr ? {class: 'default'} : null,
+      SH.el('td', null, r.primary_chain_min_score.toFixed(2)),
+      SH.el('td', null, r.gap_penalty.toFixed(2)),
+      SH.el('td', null, String(r.pair_count)),
+      SH.el('td', null, String(r.loose_block_count)));
+    tb.appendChild(tr);
+  });
+  tbl.appendChild(tb);
+
+  // --- Mark 16:9-20 sensitivity ---
+  const mse = rerun.mark_ending_sensitivity || {};
+  const meGrid = document.getElementById('markEndingGrid');
+  const variantLabel = {
+    default_exclude_double_bracketed_from_surface_and_empty_lemma: 'Default — exclude double-bracketed',
+    include_bracketed_surface_and_lemma: 'Alt. — include bracketed material',
+  };
+  for (const key of Object.keys(variantLabel)) {
+    const rec = mse[key];
+    if (!rec) continue;
+    const card = SH.el('div', { style: 'border:1px solid var(--rule);padding:14px;border-radius:4px;background:#fff;' },
+      SH.el('h3', { style: 'margin:0 0 6px;font-size:14px;font-family:var(--serif);' }, variantLabel[key]),
+      SH.el('div', { class: 'small', style: 'margin-bottom:10px;' },
+        'Pair count: ', SH.el('b', null, String(rec.pair_count || 0)),
+        ' · Aligned in 16:9–20: ', SH.el('b', null, String((rec.mark16_9_20_aligned_pairs || []).length))),
+      SH.el('h4', { style: 'margin:10px 0 4px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-mute);' }, 'Last five aligned pairs')
+    );
+    const plist = SH.el('div', { class: 'pair-list' });
+    for (const p of (rec.last_five_pairs || [])) {
+      plist.appendChild(SH.el('div', null,
+        SH.el('span', { class: 'ref' }, p.mark_ref + ' ↔ ' + p.matt_ref),
+        SH.el('span', { style: 'color:var(--ink-mute);margin-left:10px;' }, 'score ' + (p.score || 0).toFixed(3))));
+    }
+    card.appendChild(plist);
+    meGrid.appendChild(card);
+  }
+  const obsEl = document.getElementById('markEndingObs');
+  obsEl.textContent = mse.observation || 'No observation recorded.';
+
+  // --- Numeric summary ---
+  const ns = document.getElementById('numericSummary');
+  const sum = rerun.summary || {};
+  const rows = [];
+  if (sum.global_metrics) {
+    const gm = sum.global_metrics;
+    rows.push(['Primary pairs', gm.matched_pair_count]);
+    rows.push(['Loose blocks', gm.loose_block_count]);
+    rows.push(['Tight blocks', gm.tight_block_count]);
+    rows.push(['Secondary echoes', gm.secondary_echo_count]);
+    rows.push(['Mark matched', (gm.mark_matched_pct * 100).toFixed(2) + '%']);
+    rows.push(['Matt matched', (gm.matt_matched_pct * 100).toFixed(2) + '%']);
+  }
+  const bt = (sum.burden_totals) || {};
+  if (typeof bt.mark_prior_Matt_uses_Mark === 'number') {
+    rows.push(['Mark-prior burden (heuristic)', bt.mark_prior_Matt_uses_Mark]);
+    rows.push(['Matt-prior burden (heuristic)', bt.matt_prior_Mark_uses_Matt]);
+  }
+  const t = SH.el('table', { class: 'stat-tbl' });
+  const tb2 = SH.el('tbody');
+  for (const [k, v] of rows) {
+    tb2.appendChild(SH.el('tr', null, SH.el('td', null, k), SH.el('td', null, String(v))));
+  }
+  t.appendChild(tb2);
+  ns.appendChild(t);
+})();
+</script>
+</body>
+</html>

@@ -71,10 +71,12 @@
   const D = SH.D;
   document.getElementById('sub').textContent = D.label + ' — Greek-level diffs';
 
+  const gmPE = (D.summary && D.summary.global_metrics) || {};
+  const pairCtPE = gmPE.matched_pair_count || (D.pairs && D.pairs.length) || 0;
   const captions = {
     mm: 'Click any primary pair on the left to see Mark vs Matthew side-by-side with surface-word diff coloring, the lemma-level insertions/deletions/replacements, variant apparatus notes, and the edit classification. Green = inserted on the opposite side; dashed-red = deleted; orange = substitution. This is where the abstract scores become concrete Greek edits.',
-    ml: 'Matt vs Luke at the verse level, over the 233 primary-backbone pairs. Because Matt↔Luke is so heavily paraphrased, most pairs show heavy ins/del and only a minority preserve shared surface words. The opcode coloring here is computed from lemma differences (surface alignment is often broken for these pairs). Use the sort controls to find the cleanest cores (score ↓) or the most edit-heavy (ins ↓).',
-    mld: 'Matt vs Luke after Markan masking — just 49 primary pairs. Token-level opcodes are not reconstructed for this dataset (the pipeline outputs rendered diff strings instead), so the side-by-side text is shown plain; the lemma partition (shared / Matt-only / Luke-only) and the rendered diff strings below give you everything needed for close reading. For a more reader-optimized layout of the same 49 pairs, use the dedicated Q core reader.',
+    ml: `Matt vs Luke at the verse level, over the ${pairCtPE} primary-backbone pairs. Because Matt↔Luke is so heavily paraphrased, most pairs show heavy ins/del and only a minority preserve shared surface words. The opcode coloring here is computed from lemma differences (surface alignment is often broken for these pairs). Use the sort controls to find the cleanest cores (score ↓) or the most edit-heavy (ins ↓).`,
+    mld: `Matt vs Luke after Markan masking — ${pairCtPE} primary pairs. Token-level opcodes are not reconstructed for this dataset (the pipeline outputs rendered diff strings instead), so the side-by-side text is shown plain; the lemma partition (shared / Matt-only / Luke-only) and the rendered diff strings below give you everything needed for close reading. For a more reader-optimized layout of the same pairs, use the dedicated Q core reader.`,
   };
   document.getElementById('caption').textContent = captions[D.name];
 
@@ -140,6 +142,24 @@
 
     // Header
     const card = SH.el('div', { class: 'card' });
+    const aBookName = (p.a_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
+    const bBookName = (p.b_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
+    const readerA = aBookName
+      ? SH.el('a', {
+          href: '30_reader.html#' + aBookName + '/' + encodeURIComponent(p.a_ref),
+          class: 'chip',
+          style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
+          title: 'Open ' + p.a_ref + ' in the full-text reader',
+        }, 'read ' + p.a_ref + ' →')
+      : null;
+    const readerB = bBookName
+      ? SH.el('a', {
+          href: '30_reader.html#' + bBookName + '/' + encodeURIComponent(p.b_ref),
+          class: 'chip',
+          style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
+          title: 'Open ' + p.b_ref + ' in the full-text reader',
+        }, 'read ' + p.b_ref + ' →')
+      : null;
     card.appendChild(SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;' },
       SH.el('div', { style: 'font-size:18px;font-weight:700;color:#8b2e2e;' }, p.a_ref),
       SH.el('div', { style: 'font-size:18px;font-weight:700;color:#22506c;' }, p.b_ref),
@@ -147,6 +167,7 @@
       (p.classes || []).length ? SH.el('span', { class: 'chip' }, (p.classes || []).join(' · ')) : null,
       p.macro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'macro #' + p.macro) : null,
       p.micro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'micro #' + p.micro) : null,
+      readerA, readerB,
     ));
 
     // Side-by-side verses with token diff

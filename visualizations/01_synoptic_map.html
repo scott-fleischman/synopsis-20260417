@@ -63,10 +63,13 @@
 
   document.getElementById('sub').textContent = D.label + ' — every primary pair and every echo on the verse grid';
 
+  const gm = (D.summary && D.summary.global_metrics) || {};
+  const pairCt = gm.matched_pair_count || (D.pairs && D.pairs.length) || 0;
+  const echoCt = (D.echoes && D.echoes.length) || 0;
   const captionByDs = {
-    mm: 'x-axis: Mark 1:1 (left) → 16:20 (right). y-axis: Matthew 1:1 (top) → 28:20 (bottom). The 385 primary pairs form a near-monotonic diagonal chain; the 231 secondary echoes pick up alternate local matches and nonlocal reuse. The deep right side of Matthew (its first several chapters and the Sermon on the Mount) has no Markan parallel — visible as an empty band at the top of the plot.',
-    ml: 'x-axis: Matthew. y-axis: Luke. Only 233 primary pairs form the intentionally conservative backbone — but 1,033 secondary echoes fill in the displaced double tradition. Hover any teal dot to read the saying; many Sermon-on-the-Mount sayings (Matt 5–7) here appear in Luke 11–12 rather than Luke 6, a hallmark of the Q/double-tradition dislocation.',
-    mld: 'x-axis: Matthew (full 1,068 verses, though 389 are algorithmically masked as Markan). y-axis: Luke (full 1,149 verses, 226 masked). The 49 primary pairs that survive masking form a much sparser diagonal — roughly a fifth of the unmasked backbone. The 60 secondary echoes (many nonlocal, e.g. Matt 8:20 ↔ Luke 9:58 "foxes have holes") reveal the Q dislocation pattern. Everything remaining here is, by construction, a double-tradition candidate not owed to Mark.',
+    mm: `x-axis: Mark 1:1 (left) → 16:20 (right). y-axis: Matthew 1:1 (top) → 28:20 (bottom). The ${pairCt} primary pairs form a near-monotonic diagonal chain; the ${echoCt.toLocaleString()} secondary echoes pick up alternate local matches and nonlocal reuse. The deep right side of Matthew (its first several chapters and the Sermon on the Mount) has no Markan parallel — visible as an empty band at the top of the plot.`,
+    ml: `x-axis: Matthew. y-axis: Luke. Only ${pairCt} primary pairs form the intentionally conservative backbone — but ${echoCt.toLocaleString()} secondary echoes fill in the displaced double tradition. Hover any teal dot to read the saying; many Sermon-on-the-Mount sayings (Matt 5–7) here appear in Luke 11–12 rather than Luke 6, a hallmark of the Q/double-tradition dislocation.`,
+    mld: `x-axis: Matthew (full 1,068 verses; under the default medium mask, 387 are algorithmically masked as Markan). y-axis: Luke (full 1,149 verses, 232 masked). The ${pairCt} primary pairs that survive masking form a much sparser diagonal. The ${echoCt.toLocaleString()} secondary echoes (many nonlocal, e.g. Matt 8:20 ↔ Luke 9:58 "foxes have holes") reveal the Q dislocation pattern. Everything remaining here is, by construction, a double-tradition candidate not owed to Mark.`,
   };
   document.getElementById('caption').textContent = captionByDs[D.name];
 

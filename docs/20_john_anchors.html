@@ -71,6 +71,32 @@
         SH.el('span', { class: 'rs' }, 'Syn: ' + (Array.isArray(a.synoptic_refs) ? a.synoptic_refs.join(' · ') : a.synoptic_refs || ''))));
     card.appendChild(head);
 
+    // Read-in-reader links: one per referenced verse range. The reader
+    // expands ranges and scrolls to the first verse; the anchor overlay
+    // is automatically shown when the reader loads.
+    const readerLinks = SH.el('div', { style: 'margin:6px 0 10px;font-size:11px;color:var(--ink-mute);' });
+    const jFirst = (a.john_refs || '').split(';')[0].trim();
+    if (jFirst) {
+      const m = jFirst.match(/^([1-3A-Za-z]+)\s+(\d+):(\d+)/);
+      if (m) readerLinks.appendChild(SH.el('a', {
+        href: '30_reader.html#' + m[1] + '/' + encodeURIComponent(m[1] + ' ' + m[2] + ':' + m[3]),
+        class: 'chip',
+        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;margin-right:6px;',
+      }, 'read ' + jFirst + ' →'));
+    }
+    const synList = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : [a.synoptic_refs || ''];
+    for (const sr of synList) {
+      if (!sr) continue;
+      const m = sr.match(/^([1-3A-Za-z]+)\s+(\d+):(\d+)/);
+      if (!m) continue;
+      readerLinks.appendChild(SH.el('a', {
+        href: '30_reader.html#' + m[1] + '/' + encodeURIComponent(m[1] + ' ' + m[2] + ':' + m[3]),
+        class: 'chip',
+        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;margin-right:6px;',
+      }, 'read ' + sr + ' →'));
+    }
+    if (readerLinks.firstChild) card.appendChild(readerLinks);
+
     if (a.shared_features && a.shared_features.length) {
       const feats = SH.el('div', { class: 'shared-features' });
       (Array.isArray(a.shared_features) ? a.shared_features : [a.shared_features]).forEach(f => {

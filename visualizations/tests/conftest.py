@@ -54,14 +54,27 @@ def html_files() -> list[Path]:
     return sorted(VIZ.glob("*.html"))
 
 
+# Page categorization: jtea pages use SH.buildJteaNav and operate over the
+# low-verbatim (John / Thomas / epistles / apocrypha) package. Synoptic pages
+# use SH.buildNav and operate over mm / ml / mld. A page is identified by its
+# numeric prefix. These lists are explicit rather than range-based because
+# pages added later (e.g. 27 = mm sensitivity, 28 = mld sensitivity, 30 =
+# reader) do not follow the original ≥17 → jtea heuristic.
+_JTEA_PREFIXES = {"17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "29"}
+_SYNOPTIC_PREFIXES = {
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+    "11", "12", "13", "14", "15", "16", "27", "28", "30",
+}
+
+
 @pytest.fixture(scope="session")
 def jtea_html_files(html_files) -> list[Path]:
-    return [h for h in html_files if h.name[:2].isdigit() and int(h.name[:2]) >= 17]
+    return [h for h in html_files if h.name[:2] in _JTEA_PREFIXES]
 
 
 @pytest.fixture(scope="session")
 def synoptic_html_files(html_files) -> list[Path]:
-    return [h for h in html_files if h.name[:2].isdigit() and 1 <= int(h.name[:2]) <= 16]
+    return [h for h in html_files if h.name[:2] in _SYNOPTIC_PREFIXES]
 
 
 def csv_rows(path: Path) -> list[dict[str, str]]:

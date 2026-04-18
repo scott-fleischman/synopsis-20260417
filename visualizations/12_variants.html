@@ -51,10 +51,12 @@
   const D = SH.D;
   document.getElementById('sub').textContent = D.label + ' — SBLGNT apparatus in parallel';
 
+  const gmCap = (D.summary && D.summary.global_metrics) || {};
+  const pairCtCap = gmCap.matched_pair_count || (D.pairs && D.pairs.length) || 0;
   const captions = {
     mm: 'For every primary pair where either side carries an SBLGNT apparatus note, the reading and editorial witnesses appear here. The witnesses are WH (Westcott–Hort), Treg (Tregelles), NA28 (Nestle–Aland 28), and RP (Robinson–Pierpont Byzantine). When both sides have variants at the same point, the variant problem becomes a synoptic question: did the text-critical decision diverge between the parallels?',
     ml: 'Variants for Matt↔Luke primary pairs. Notice that variants are nearly equally distributed between the two sides (roughly 210–235 notes each), suggesting the critical issues are distributed rather than concentrated in one evangelist.',
-    mld: 'SBLGNT apparatus notes on the 49 masked primary pairs. 41 records total: 25 carry Matthean variants, 31 carry Lukan variants. Because this slice is narrow (Q-core only), each pair is worth looking at closely — this is where the textual history of the double-tradition intersects the synoptic reconstruction.',
+    mld: `SBLGNT apparatus notes on the ${pairCtCap} masked primary pairs. Because this slice is narrow (Q-core only), each pair is worth looking at closely — this is where the textual history of the double-tradition intersects the synoptic reconstruction.`,
   };
   document.getElementById('caption').textContent = captions[D.name];
 

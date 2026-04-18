@@ -56,10 +56,13 @@
   document.getElementById('sub').textContent = D.label + ' — macro blocks as paired bands';
   document.getElementById('label_a').textContent = D.a_book;
   document.getElementById('label_b').textContent = D.b_book;
+  const gm = (D.summary && D.summary.global_metrics) || {};
+  const looseCt = gm.loose_block_count || (D.macro && D.macro.length) || 0;
+  const pairCt = gm.matched_pair_count || (D.pairs && D.pairs.length) || 0;
   const captions = {
-    mm: '25 loose blocks. Top band: Mark (673 verses, 16 chapters). Bottom band: Matthew (1,068 verses, 28 chapters). Amber segments are aligned material, pale segments are gap verses. Lines connect each block to its paired block. Matthew\'s long non-aligned stretches — especially before block 4 (Sermon on the Mount) and before block 7 (Q-material, ch. 10–11) — are the iconic Markan priority puzzles.',
-    ml: '32 loose blocks. Top band: Matthew. Bottom band: Luke (1,149 verses, 24 chapters). The huge gap in Luke around chapters 9–15 is the Lukan travel narrative (known traditionally as the "Great Insertion"). The small pale lattice before block 1 is the two birth narratives, each going their own way.',
-    mld: '13 loose blocks drawn on the Markan-masked Matt/Luke pair chain (only 49 primary pairs survive). Top band: Matthew\'s 679 unmasked verses. Bottom band: Luke\'s 923 unmasked verses. Band positions are indexed against the full gospels (including the pale masked-Markan remainder shown as gap). Because per-block token counts aren\'t exported for this dataset, the second chart shows score spread (min/mean/max) instead of token balance.',
+    mm: `${looseCt} loose blocks. Top band: Mark (673 verses, 16 chapters). Bottom band: Matthew (1,068 verses, 28 chapters). Amber segments are aligned material, pale segments are gap verses. Lines connect each block to its paired block. Matthew's long non-aligned stretches — especially before block 4 (Sermon on the Mount) and before block 7 (Q-material, ch. 10–11) — are the iconic Markan priority puzzles.`,
+    ml: `${looseCt} loose blocks. Top band: Matthew. Bottom band: Luke (1,149 verses, 24 chapters). The huge gap in Luke around chapters 9–15 is the Lukan travel narrative (known traditionally as the "Great Insertion"). The small pale lattice before block 1 is the two birth narratives, each going their own way.`,
+    mld: `${looseCt} loose blocks drawn on the Markan-masked Matt/Luke pair chain (${pairCt} primary pairs survive under the default medium mask regime). Top band: Matthew's 681 unmasked verses. Bottom band: Luke's 917 unmasked verses. Band positions are indexed against the full gospels (including the pale masked-Markan remainder shown as gap). Because per-block token counts aren't exported for this dataset, the second chart shows score spread (min/mean/max) instead of token balance.`,
   };
   document.getElementById('caption').textContent = captions[D.name];
 

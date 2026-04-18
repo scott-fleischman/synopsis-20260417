@@ -136,6 +136,9 @@
       ['14_mask_audit.html', 'Mask audit', ['mld']],
       ['15_q_core.html', 'Q core reader', ['mld']],
       ['16_matt_verse_card.html', 'Matthew verse card', null],
+      ['27_mm_sensitivity.html', 'Sensitivity (mm)', ['mm']],
+      ['28_mld_regime_sensitivity.html', 'Sensitivity (mld)', ['mld']],
+      ['30_reader.html', 'Reader', null],
       ['17_jtea_overview.html', 'Low-verbatim →', '__jtea'],
       ['26_conclusions.html', 'Conclusions →', '__conclusions'],
     ];
@@ -174,6 +177,8 @@
       ['23_exact_hits.html', 'Exact-phrase hits'],
       ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel'],
       ['25_apocrypha_inventory.html', 'Apocrypha inventory'],
+      ['29_jtea_claim_evidence.html', 'Claim → evidence'],
+      ['30_reader.html', 'Reader'],
       ['26_conclusions.html', 'Conclusions'],
     ];
     while (nav.firstChild) nav.removeChild(nav.firstChild);
@@ -242,14 +247,74 @@
     };
   }
 
+  // Footer — license attribution and provenance. Attached once per page, after
+  // the main .wrap. Kept small but explicit because the corpora have different
+  // upstream licenses (CC BY 4.0, CC-BY-SA, CC-BY) and the project MIT does not
+  // override them.
+  function buildFooter() {
+    if (document.querySelector('footer.site-footer')) return;
+    const foot = document.createElement('footer');
+    foot.className = 'site-footer';
+    foot.style.cssText = 'max-width:1200px;margin:40px auto 24px;padding:20px 24px;' +
+      'border-top:1px solid var(--rule);font-size:11px;color:var(--ink-mute);' +
+      'line-height:1.65;font-family:var(--serif);';
+
+    // DOM-composition helpers: strong label, link, em, code, plain text, row.
+    const s = (t) => { const e = document.createElement('strong'); e.textContent = t; return e; };
+    const a = (href, t) => {
+      const e = document.createElement('a');
+      e.href = href; e.style.color = 'inherit'; e.textContent = t; return e;
+    };
+    const em = (t) => { const e = document.createElement('em'); e.textContent = t; return e; };
+    const code = (t) => { const e = document.createElement('code'); e.textContent = t; return e; };
+    const row = (...kids) => {
+      const d = document.createElement('div');
+      for (const k of kids) {
+        if (k == null) continue;
+        d.appendChild(typeof k === 'string' ? document.createTextNode(k) : k);
+      }
+      return d;
+    };
+
+    foot.appendChild(row(
+      s('Project'), ' · MIT (code & visualizations) · ',
+      a('https://scott-fleischman.github.io/synopsis-20260417/',
+        'scott-fleischman.github.io/synopsis-20260417'),
+    ));
+    foot.appendChild(row(
+      s('Sources'), ' · ',
+      a('https://sblgnt.com/', 'SBLGNT'),
+      ' (CC BY 4.0, Society of Biblical Literature & Logos) · ',
+      a('https://github.com/morphgnt/sblgnt', 'MorphGNT'),
+      ' (CC BY-SA 3.0, James Tauber) · ',
+      a('https://copticscriptorium.org/', 'Coptic Scriptorium'),
+      ' Thomas (CC BY 4.0) · M.R. James, ',
+      em('The Apocryphal New Testament'), ' (1924, public domain)',
+    ));
+    foot.appendChild(row(
+      s('Rerun'), ' · Reproducibility-patch analyses from ',
+      code('analysis_update_20260418/'),
+      ' · per-file SHA256 hashes in each package\u2019s MANIFEST.yaml · ',
+      'all headline numbers, burden totals, and sensitivity grids on these pages are driven from that patch\u2019s outputs.',
+    ));
+    document.body.appendChild(foot);
+  }
+
   window.SH = {
     BUNDLE,
     get D() { return D; },
     setDataset,
     currentDataset,
     showTip, hideTip, tipLine, tipRow, tipGreek,
-    scoreColor, buildNav, buildJteaNav, buildDatasetSwitcher, svgEl, svgElText, scale, clamp,
+    scoreColor, buildNav, buildJteaNav, buildDatasetSwitcher, buildFooter, svgEl, svgElText, scale, clamp,
     chapterLookup,
     el,
   };
+
+  // Auto-attach footer once DOM is ready — no need to edit every page.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', buildFooter);
+  } else {
+    buildFooter();
+  }
 })();
