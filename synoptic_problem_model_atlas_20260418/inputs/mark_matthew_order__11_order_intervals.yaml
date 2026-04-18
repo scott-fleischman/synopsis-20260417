@@ -1,0 +1,272 @@
+- before_block: 1
+  mark_gap:
+    start_ref: Mark 1:1
+    end_ref: Mark 1:2
+    verse_count: 2
+  matt_gap:
+    start_ref: Matt 1:1
+    end_ref: Matt 3:2
+    verse_count: 50
+  interpretation:
+  - Matthew has 48 more gap verses than Mark at this boundary.
+- before_block: 2
+  mark_gap:
+    start_ref: Mark 1:7
+    end_ref: Mark 1:7
+    verse_count: 1
+  matt_gap:
+    start_ref: Matt 3:5
+    end_ref: Matt 3:10
+    verse_count: 6
+  interpretation:
+  - Matthew has 5 more gap verses than Mark at this boundary.
+- before_block: 3
+  mark_gap:
+    start_ref: Mark 1:14
+    end_ref: Mark 1:14
+    verse_count: 1
+  matt_gap:
+    start_ref: Matt 4:3
+    end_ref: Matt 4:16
+    verse_count: 14
+  interpretation:
+  - Matthew has 13 more gap verses than Mark at this boundary.
+- before_block: 4
+  mark_gap: null
+  matt_gap:
+    start_ref: Matt 4:24
+    end_ref: Matt 7:28
+    verse_count: 112
+  interpretation:
+  - Matthew has 112 more gap verses than Mark at this boundary.
+- before_block: 5
+  mark_gap:
+    start_ref: Mark 1:23
+    end_ref: Mark 1:39
+    verse_count: 17
+  matt_gap:
+    start_ref: Matt 8:1
+    end_ref: Matt 8:1
+    verse_count: 1
+  interpretation:
+  - Mark has 16 more gap verses than Matthew at this boundary.
+- before_block: 6
+  mark_gap:
+    start_ref: Mark 2:2
+    end_ref: Mark 2:4
+    verse_count: 3
+  matt_gap:
+    start_ref: Matt 8:6
+    end_ref: Matt 9:1
+    verse_count: 30
+  interpretation:
+  - Matthew has 27 more gap verses than Mark at this boundary.
+- before_block: 7
+  mark_gap: null
+  matt_gap:
+    start_ref: Matt 9:18
+    end_ref: Matt 11:30
+    verse_count: 93
+  interpretation:
+  - Matthew has 93 more gap verses than Mark at this boundary.
+- before_block: 8
+  mark_gap:
+    start_ref: Mark 3:8
+    end_ref: Mark 3:20
+    verse_count: 13
+  matt_gap:
+    start_ref: Matt 12:16
+    end_ref: Matt 12:22
+    verse_count: 7
+  interpretation:
+  - Mark has 6 more gap verses than Matthew at this boundary.
+- before_block: 9
+  mark_gap:
+    start_ref: Mark 3:30
+    end_ref: Mark 3:30
+    verse_count: 1
+  matt_gap:
+    start_ref: Matt 12:33
+    end_ref: Matt 12:45
+    verse_count: 13
+  interpretation:
+  - Matthew has 12 more gap verses than Mark at this boundary.
+- before_block: 10
+  mark_gap:
+    start_ref: Mark 4:12
+    end_ref: Mark 4:13
+    verse_count: 2
+  matt_gap:
+    start_ref: Matt 13:12
+    end_ref: Matt 13:17
+    verse_count: 6
+  interpretation:
+  - Matthew has 4 more gap verses than Mark at this boundary.
+- before_block: 11
+  mark_gap:
+    start_ref: Mark 4:21
+    end_ref: Mark 4:30
+    verse_count: 10
+  matt_gap:
+    start_ref: Matt 13:24
+    end_ref: Matt 13:30
+    verse_count: 7
+  interpretation:
+  - Mark has 3 more gap verses than Matthew at this boundary.
+- before_block: 12
+  mark_gap:
+    start_ref: Mark 4:35
+    end_ref: Mark 6:1
+    verse_count: 51
+  matt_gap:
+    start_ref: Matt 13:35
+    end_ref: Matt 13:53
+    verse_count: 19
+  interpretation:
+  - Mark has 32 more gap verses than Matthew at this boundary.
+- before_block: 13
+  mark_gap:
+    start_ref: Mark 6:6
+    end_ref: Mark 6:13
+    verse_count: 8
+  matt_gap:
+    start_ref: Matt 14:1
+    end_ref: Matt 14:1
+    verse_count: 1
+  interpretation:
+  - Mark has 7 more gap verses than Matthew at this boundary.
+- before_block: 14
+  mark_gap:
+    start_ref: Mark 7:4
+    end_ref: Mark 7:8
+    verse_count: 5
+  matt_gap: null
+  interpretation:
+  - Mark has 5 more gap verses than Matthew at this boundary.
+- before_block: 15
+  mark_gap:
+    start_ref: Mark 7:30
+    end_ref: Mark 8:1
+    verse_count: 9
+  matt_gap:
+    start_ref: Matt 15:29
+    end_ref: Matt 15:31
+    verse_count: 3
+  interpretation:
+  - Mark has 6 more gap verses than Matthew at this boundary.
+- before_block: 16
+  mark_gap:
+    start_ref: Mark 8:21
+    end_ref: Mark 8:26
+    verse_count: 6
+  matt_gap:
+    start_ref: Matt 16:11
+    end_ref: Matt 16:12
+    verse_count: 2
+  interpretation:
+  - Mark has 4 more gap verses than Matthew at this boundary.
+- before_block: 17
+  mark_gap:
+    start_ref: Mark 9:20
+    end_ref: Mark 9:41
+    verse_count: 22
+  matt_gap:
+    start_ref: Matt 17:18
+    end_ref: Matt 18:5
+    verse_count: 14
+  interpretation:
+  - Mark has 8 more gap verses than Matthew at this boundary.
+- before_block: 18
+  mark_gap:
+    start_ref: Mark 9:48
+    end_ref: Mark 10:5
+    verse_count: 8
+  matt_gap:
+    start_ref: Matt 18:10
+    end_ref: Matt 19:3
+    verse_count: 28
+  interpretation:
+  - Matthew has 20 more gap verses than Mark at this boundary.
+- before_block: 19
+  mark_gap: null
+  matt_gap:
+    start_ref: Matt 20:1
+    end_ref: Matt 20:16
+    verse_count: 16
+  interpretation:
+  - Matthew has 16 more gap verses than Mark at this boundary.
+- before_block: 20
+  mark_gap:
+    start_ref: Mark 11:18
+    end_ref: Mark 11:20
+    verse_count: 3
+  matt_gap:
+    start_ref: Matt 21:14
+    end_ref: Matt 21:19
+    verse_count: 6
+  interpretation:
+  - Matthew has 3 more gap verses than Mark at this boundary.
+- before_block: 21
+  mark_gap:
+    start_ref: Mark 12:11
+    end_ref: Mark 12:12
+    verse_count: 2
+  matt_gap:
+    start_ref: Matt 21:43
+    end_ref: Matt 22:14
+    verse_count: 18
+  interpretation:
+  - Matthew has 16 more gap verses than Mark at this boundary.
+- before_block: 22
+  mark_gap:
+    start_ref: Mark 12:38
+    end_ref: Mark 12:44
+    verse_count: 7
+  matt_gap:
+    start_ref: Matt 22:46
+    end_ref: Matt 23:39
+    verse_count: 39
+  interpretation:
+  - Matthew has 32 more gap verses than Mark at this boundary.
+- before_block: 23
+  mark_gap:
+    start_ref: Mark 13:33
+    end_ref: Mark 13:37
+    verse_count: 5
+  matt_gap:
+    start_ref: Matt 24:37
+    end_ref: Matt 26:3
+    verse_count: 64
+  interpretation:
+  - Matthew has 59 more gap verses than Mark at this boundary.
+- before_block: 24
+  mark_gap: null
+  matt_gap:
+    start_ref: Matt 27:2
+    end_ref: Matt 27:10
+    verse_count: 9
+  interpretation:
+  - Matthew has 9 more gap verses than Mark at this boundary.
+- before_block: 25
+  mark_gap:
+    start_ref: Mark 16:1
+    end_ref: Mark 16:5
+    verse_count: 5
+  matt_gap:
+    start_ref: Matt 27:62
+    end_ref: Matt 28:5
+    verse_count: 10
+  interpretation:
+  - Matthew has 5 more gap verses than Mark at this boundary.
+- before_block: null
+  after_last: true
+  mark_gap:
+    start_ref: Mark 16:8
+    end_ref: Mark 16:20
+    verse_count: 13
+  matt_gap:
+    start_ref: Matt 28:8
+    end_ref: Matt 28:20
+    verse_count: 13
+  interpretation:
+  - Gap sizes are equal at this boundary.

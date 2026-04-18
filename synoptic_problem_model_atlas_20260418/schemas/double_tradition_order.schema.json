@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Markan-masked Matthew-Luke double-tradition order row",
+  "type": "object",
+  "required": [
+    "double_tradition_id",
+    "alignment_layer",
+    "matt_ref",
+    "luke_ref",
+    "score"
+  ],
+  "properties": {
+    "double_tradition_id": {
+      "type": "string"
+    },
+    "alignment_layer": {
+      "enum": [
+        "primary_monotonic_after_markan_mask",
+        "secondary_echo_after_markan_mask"
+      ]
+    },
+    "matt_ref": {
+      "type": "string"
+    },
+    "luke_ref": {
+      "type": "string"
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "order_signal": {
+      "type": "string"
+    },
+    "model_implication": {
+      "type": "string"
+    }
+  }
+}

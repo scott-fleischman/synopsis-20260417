@@ -1,0 +1,41 @@
+# Test Results
+
+Passed 37/37 checks.
+
+- [PASS] exists:data/00_source_provenance_and_input_manifest.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/00_source_provenance_and_input_manifest.yaml
+- [PASS] exists:data/01_gospel_verse_inventory.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/01_gospel_verse_inventory.csv
+- [PASS] exists:data/02_system_model_registry.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/02_system_model_registry.yaml
+- [PASS] exists:data/03_direction_hypothesis_registry.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/03_direction_hypothesis_registry.yaml
+- [PASS] exists:data/04_gospel_direction_matrix_4x4.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/04_gospel_direction_matrix_4x4.csv
+- [PASS] exists:data/10_pericope_ontology_computational_and_anchor.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/10_pericope_ontology_computational_and_anchor.csv
+- [PASS] exists:data/11_pericope_model_dossiers.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/11_pericope_model_dossiers.yaml
+- [PASS] exists:data/12_pericope_obligation_summary.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/12_pericope_obligation_summary.csv
+- [PASS] exists:data/20_model_pericope_obligation_ledger.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/20_model_pericope_obligation_ledger.csv
+- [PASS] exists:data/21_material_omission_addition_by_model.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/21_material_omission_addition_by_model.csv
+- [PASS] exists:data/22_reordering_displacement_by_model.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/22_reordering_displacement_by_model.csv
+- [PASS] exists:data/23_primary_pair_wording_change_diffs_by_model.csv.gz: /mnt/data/synoptic_problem_model_atlas_20260418/data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+- [PASS] exists:data/30_minor_agreements_catalog_triple_tradition.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/30_minor_agreements_catalog_triple_tradition.csv
+- [PASS] exists:data/31_minor_agreements_summary.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/31_minor_agreements_summary.yaml
+- [PASS] exists:data/40_double_tradition_order_catalog_markan_masked.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/40_double_tradition_order_catalog_markan_masked.csv
+- [PASS] exists:data/41_double_tradition_order_summary.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/41_double_tradition_order_summary.yaml
+- [PASS] exists:data/50_direction_burden_reference.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/50_direction_burden_reference.csv
+- [PASS] exists:data/51_model_component_direction_matrix.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/51_model_component_direction_matrix.csv
+- [PASS] exists:data/52_system_model_comparison_scorecard.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/52_system_model_comparison_scorecard.csv
+- [PASS] exists:data/53_system_model_evidence_cards.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/53_system_model_evidence_cards.yaml
+- [PASS] exists:data/60_redactional_tendency_profiles.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/60_redactional_tendency_profiles.yaml
+- [PASS] exists:data/70_variant_sensitivity_registry.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/70_variant_sensitivity_registry.csv
+- [PASS] exists:data/71_text_critical_policy.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/71_text_critical_policy.yaml
+- [PASS] exists:data/80_direction_support_contra_cards.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/80_direction_support_contra_cards.yaml
+- [PASS] exists:data/81_conclusion_evidence_counterevidence_cards.yaml: /mnt/data/synoptic_problem_model_atlas_20260418/data/81_conclusion_evidence_counterevidence_cards.yaml
+- [PASS] exists:data/90_data_layer_status_and_objectivity.csv: /mnt/data/synoptic_problem_model_atlas_20260418/data/90_data_layer_status_and_objectivity.csv
+- [PASS] exists:scripts/build_synoptic_model_atlas.py: /mnt/data/synoptic_problem_model_atlas_20260418/scripts/build_synoptic_model_atlas.py
+- [PASS] gospel_verse_inventory_has_3768_rows: rows=3768
+- [PASS] gospel_verse_inventory_four_books: ['John', 'Luke', 'Mark', 'Matt']
+- [PASS] pericope_ontology_unique_ids: rows=102, unique=102
+- [PASS] obligations_unit_ids_in_ontology: missing=0
+- [PASS] minor_agreement_catalog_nonempty: rows=118
+- [PASS] double_tradition_has_primary_and_secondary: {'secondary_echo_after_markan_mask': 60, 'primary_monotonic_after_markan_mask': 49}
+- [PASS] gospel_matrix_16_cells: rows=16
+- [PASS] system_model_scorecard_13_models: rows=13
+- [PASS] variant_registry_nonempty: rows=2682
+- [PASS] build_script_compiles: scripts/build_synoptic_model_atlas.py

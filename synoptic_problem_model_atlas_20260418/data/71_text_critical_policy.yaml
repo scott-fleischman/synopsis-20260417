@@ -1,0 +1,5 @@
+default_policy: Use SBLGNT surface text with explicit markers; exclude empty/double-bracketed
+  secondary ending material from primary-chain defaults where prior package did so.
+high_value_cases_require: Inspect variant notes before using an exact phrase or local
+  run as decisive evidence.
+limitation: Not a substitute for full apparatus adjudication.

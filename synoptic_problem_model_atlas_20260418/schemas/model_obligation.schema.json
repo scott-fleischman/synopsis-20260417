@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model pericope obligation ledger row",
+  "type": "object",
+  "required": [
+    "model_id",
+    "direction_id",
+    "pair",
+    "unit_id",
+    "required_explanation",
+    "contrary_evidence",
+    "response_model",
+    "basis"
+  ],
+  "properties": {
+    "model_id": {
+      "type": "string"
+    },
+    "direction_id": {
+      "type": "string"
+    },
+    "pair": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "source_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "obligation_type": {
+      "type": "string"
+    },
+    "required_explanation": {
+      "type": "string"
+    },
+    "contrary_evidence": {
+      "type": "string"
+    },
+    "response_model": {
+      "type": "string"
+    },
+    "basis": {
+      "type": "string"
+    }
+  }
+}

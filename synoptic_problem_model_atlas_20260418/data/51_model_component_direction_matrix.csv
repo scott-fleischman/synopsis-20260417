@@ -1,0 +1,59 @@
+model_id,direction_id,component_role,pair,burden_model,burden_score,interpretive_result
+markan_priority_matthew_and_luke,matthew_used_mark,required,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+markan_priority_matthew_and_luke,luke_used_mark,required,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+markan_priority_matthew_and_luke,shared_matt_luke_sayings_tradition,optional,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+markan_priority_matthew_and_luke,luke_used_matthew,optional,Matthew↔Luke,full_pair_direct_use,142.559,full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan layers mixed
+markan_priority_matthew_and_luke,luke_used_matthew,optional,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+markan_priority_matthew_and_luke,matthew_used_luke,optional,Matthew↔Luke,full_pair_direct_use,75.477,lower in full ledger but not decisive after Mark masking
+markan_priority_matthew_and_luke,matthew_used_luke,optional,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+two_source_mark_q,matthew_used_mark,required,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+two_source_mark_q,luke_used_mark,required,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+two_source_mark_q,shared_matt_luke_sayings_tradition,required,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+two_source_mark_q,proto_mark_common_source,optional,,,,unscored/model-level
+farrer_mark_matthew_luke,matthew_used_mark,required,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+farrer_mark_matthew_luke,luke_used_mark,required,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+farrer_mark_matthew_luke,luke_used_matthew,required,Matthew↔Luke,full_pair_direct_use,142.559,full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan layers mixed
+farrer_mark_matthew_luke,luke_used_matthew,required,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+farrer_mark_matthew_luke,shared_matt_luke_sayings_tradition,optional,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+matthew_used_luke_plus_mark_like,matthew_used_luke,required,Matthew↔Luke,full_pair_direct_use,75.477,lower in full ledger but not decisive after Mark masking
+matthew_used_luke_plus_mark_like,matthew_used_luke,required,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+matthew_used_luke_plus_mark_like,matthew_used_mark,required,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+matthew_used_luke_plus_mark_like,luke_used_mark,optional,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+matthew_used_luke_plus_mark_like,shared_matt_luke_sayings_tradition,optional,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+griesbach_two_gospel,luke_used_matthew,required,Matthew↔Luke,full_pair_direct_use,142.559,full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan layers mixed
+griesbach_two_gospel,luke_used_matthew,required,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+griesbach_two_gospel,mark_used_matthew,required,Mark↔Matthew,direct_use,788.66,higher burden than Matthew used Mark
+griesbach_two_gospel,mark_used_luke,required,Mark↔Luke,direct_use,303.1966,higher than Luke used Mark among direct-use alternatives
+augustinian_matthew_mark_luke,mark_used_matthew,required,Mark↔Matthew,direct_use,788.66,higher burden than Matthew used Mark
+augustinian_matthew_mark_luke,luke_used_mark,required,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+augustinian_matthew_mark_luke,luke_used_matthew,optional,Matthew↔Luke,full_pair_direct_use,142.559,full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan layers mixed
+augustinian_matthew_mark_luke,luke_used_matthew,optional,Matthew↔Luke masked double tradition,masked_direct_use,26.446,not favored over common source/oral tradition
+proto_mark_plus_sayings,proto_mark_common_source,required,,,,unscored/model-level
+proto_mark_plus_sayings,shared_matt_luke_sayings_tradition,required,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+proto_mark_plus_sayings,matthew_used_mark,optional,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+proto_mark_plus_sayings,luke_used_mark,optional,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+oral_tradition_network,shared_mark_luke_tradition,required,Mark↔Luke,shared_tradition_adjusted,385.6134,higher than Mark-prior under moderate penalty; lower than direct models if unpenalized
+oral_tradition_network,shared_matt_luke_sayings_tradition,required,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,lowest burden in masked double-tradition ledger
+oral_tradition_network,shared_john_mark_anchor_tradition,required,John↔Mark,shared_anchor_tradition,23.5,lowest burden
+oral_tradition_network,shared_john_luke_anchor_tradition,required,John↔Luke,shared_anchor_tradition,20.8,lowest burden
+oral_tradition_network,shared_john_matthew_anchor_tradition,required,John↔Matt,shared_anchor_tradition,24.8,lowest burden
+oral_tradition_network,matthew_used_mark,optional,Mark↔Matthew,direct_use,774.87,lower burden than Mark used Matthew
+oral_tradition_network,luke_used_mark,optional,Mark↔Luke,direct_use,254.6466,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+john_uses_mark,john_used_mark,required,John↔Mark,anchor_direct_use,59.741,higher than shared anchor tradition
+john_uses_mark,shared_john_mark_anchor_tradition,optional,John↔Mark,shared_anchor_tradition,23.5,lowest burden
+john_uses_matthew,john_used_matthew,required,John↔Matt,anchor_direct_use,55.862,higher than shared anchor tradition
+john_uses_matthew,shared_john_matthew_anchor_tradition,optional,John↔Matt,shared_anchor_tradition,24.8,lowest burden
+john_uses_luke,john_used_luke,required,John↔Luke,anchor_direct_use,58.598,higher than shared anchor tradition
+john_uses_luke,shared_john_luke_anchor_tradition,optional,John↔Luke,shared_anchor_tradition,20.8,lowest burden
+synoptics_use_john_or_johnlike,mark_used_john,required,John↔Mark,anchor_reverse_direct_use,64.041,higher than shared anchor tradition
+synoptics_use_john_or_johnlike,matthew_used_john,required,John↔Matt,anchor_reverse_direct_use,60.162,higher than shared anchor tradition
+synoptics_use_john_or_johnlike,luke_used_john,required,John↔Luke,anchor_reverse_direct_use,61.698,higher than shared anchor tradition
+synoptics_use_john_or_johnlike,shared_john_mark_anchor_tradition,optional,John↔Mark,shared_anchor_tradition,23.5,lowest burden
+synoptics_use_john_or_johnlike,shared_john_luke_anchor_tradition,optional,John↔Luke,shared_anchor_tradition,20.8,lowest burden
+synoptics_use_john_or_johnlike,shared_john_matthew_anchor_tradition,optional,John↔Matt,shared_anchor_tradition,24.8,lowest burden
+shared_john_synoptic_anchor_tradition,shared_john_mark_anchor_tradition,required,John↔Mark,shared_anchor_tradition,23.5,lowest burden
+shared_john_synoptic_anchor_tradition,shared_john_luke_anchor_tradition,required,John↔Luke,shared_anchor_tradition,20.8,lowest burden
+shared_john_synoptic_anchor_tradition,shared_john_matthew_anchor_tradition,required,John↔Matt,shared_anchor_tradition,24.8,lowest burden
+shared_john_synoptic_anchor_tradition,john_used_mark,optional,John↔Mark,anchor_direct_use,59.741,higher than shared anchor tradition
+shared_john_synoptic_anchor_tradition,john_used_luke,optional,John↔Luke,anchor_direct_use,58.598,higher than shared anchor tradition
+shared_john_synoptic_anchor_tradition,john_used_matthew,optional,John↔Matt,anchor_direct_use,55.862,higher than shared anchor tradition

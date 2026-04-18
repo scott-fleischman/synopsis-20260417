@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Variant sensitivity registry row",
+  "type": "object",
+  "required": [
+    "variant_case_id",
+    "layer",
+    "pair_or_context",
+    "ref",
+    "status",
+    "potential_effect",
+    "conclusion_stability"
+  ],
+  "properties": {
+    "variant_case_id": {
+      "type": "string"
+    },
+    "layer": {
+      "type": "string"
+    },
+    "pair_or_context": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "variant_marker_count": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "variant_note_count": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "potential_effect": {
+      "type": "string"
+    },
+    "conclusion_stability": {
+      "type": "string"
+    }
+  }
+}

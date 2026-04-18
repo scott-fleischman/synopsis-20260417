@@ -1,0 +1,22 @@
+sample_rows: 160
+stratum_counts:
+  low_formula_high_score_top30: 30
+  low_formula_exact_run_ge4_top30: 30
+  high_formula_top30: 30
+  low_formula_random30_seed42: 30
+  weak_low_score_random30_seed43: 30
+  targeted_dossier_not_in_top500: 7
+  targeted_dossier_present_in_top500: 3
+machine_audit_class_counts:
+  uncertain_candidate: 59
+  strong_low_formula_candidate: 41
+  scriptural_formula_shared_source: 26
+  moderate_low_formula_candidate: 18
+  targeted_known_case: 13
+  high_formula_risk_needs_manual_review: 3
+formula_risk_counts_in_top500:
+  low: 317
+  high: 166
+  medium: 17
+targeted_case_rows: 10
+warning: machine triage; not human philological validation

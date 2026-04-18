@@ -1,0 +1,715 @@
+[
+  {
+    "block_id": 1,
+    "pair_count": 1,
+    "matt_start": "Matt 1:25",
+    "matt_end": "Matt 1:25",
+    "luke_start": "Luke 1:31",
+    "luke_end": "Luke 1:31",
+    "matt_original_start_idx": 25,
+    "matt_original_end_idx": 25,
+    "luke_original_start_idx": 31,
+    "luke_original_end_idx": 31,
+    "mean_score": 0.598505,
+    "min_score": 0.598505,
+    "max_score": 0.598505,
+    "pairs": [
+      {
+        "matt_ref": "Matt 1:25",
+        "luke_ref": "Luke 1:31",
+        "score": 0.5985,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 2,
+    "pair_count": 8,
+    "matt_start": "Matt 3:7",
+    "matt_end": "Matt 4:7",
+    "luke_start": "Luke 3:7",
+    "luke_end": "Luke 4:12",
+    "matt_original_start_idx": 55,
+    "matt_original_end_idx": 72,
+    "luke_original_start_idx": 139,
+    "luke_original_end_idx": 182,
+    "mean_score": 0.654037,
+    "min_score": 0.47243,
+    "max_score": 0.936647,
+    "pairs": [
+      {
+        "matt_ref": "Matt 3:7",
+        "luke_ref": "Luke 3:7",
+        "score": 0.5815,
+        "tags": [
+          "moderate_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 3:9",
+        "luke_ref": "Luke 3:8",
+        "score": 0.7596,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 3:10",
+        "luke_ref": "Luke 3:9",
+        "score": 0.9366,
+        "tags": [
+          "close_match",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 3:12",
+        "luke_ref": "Luke 3:17",
+        "score": 0.8183,
+        "tags": [
+          "close_match",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 4:3",
+        "luke_ref": "Luke 4:3",
+        "score": 0.5152,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 4:4",
+        "luke_ref": "Luke 4:4",
+        "score": 0.4724,
+        "tags": [
+          "moderate_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 4:6",
+        "luke_ref": "Luke 4:11",
+        "score": 0.6012,
+        "tags": [
+          "strong_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 4:7",
+        "luke_ref": "Luke 4:12",
+        "score": 0.5474,
+        "tags": [
+          "moderate_parallel",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 3,
+    "pair_count": 1,
+    "matt_start": "Matt 5:3",
+    "matt_end": "Matt 5:3",
+    "luke_start": "Luke 6:20",
+    "luke_end": "Luke 6:20",
+    "matt_original_start_idx": 93,
+    "matt_original_end_idx": 93,
+    "luke_original_start_idx": 273,
+    "luke_original_end_idx": 273,
+    "mean_score": 0.356689,
+    "min_score": 0.356689,
+    "max_score": 0.356689,
+    "pairs": [
+      {
+        "matt_ref": "Matt 5:3",
+        "luke_ref": "Luke 6:20",
+        "score": 0.3567,
+        "tags": [
+          "weak_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 4,
+    "pair_count": 1,
+    "matt_start": "Matt 5:46",
+    "matt_end": "Matt 5:46",
+    "luke_start": "Luke 6:32",
+    "luke_end": "Luke 6:32",
+    "matt_original_start_idx": 136,
+    "matt_original_end_idx": 136,
+    "luke_original_start_idx": 285,
+    "luke_original_end_idx": 285,
+    "mean_score": 0.408055,
+    "min_score": 0.408055,
+    "max_score": 0.408055,
+    "pairs": [
+      {
+        "matt_ref": "Matt 5:46",
+        "luke_ref": "Luke 6:32",
+        "score": 0.4081,
+        "tags": [
+          "moderate_parallel"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 5,
+    "pair_count": 6,
+    "matt_start": "Matt 7:1",
+    "matt_end": "Matt 8:10",
+    "luke_start": "Luke 6:37",
+    "luke_end": "Luke 7:9",
+    "matt_original_start_idx": 173,
+    "matt_original_end_idx": 211,
+    "luke_original_start_idx": 290,
+    "luke_original_end_idx": 311,
+    "mean_score": 0.629656,
+    "min_score": 0.397739,
+    "max_score": 0.919195,
+    "pairs": [
+      {
+        "matt_ref": "Matt 7:1",
+        "luke_ref": "Luke 6:37",
+        "score": 0.5628,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 7:3",
+        "luke_ref": "Luke 6:41",
+        "score": 0.6981,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 7:4",
+        "luke_ref": "Luke 6:42",
+        "score": 0.6908,
+        "tags": [
+          "strong_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 7:18",
+        "luke_ref": "Luke 6:43",
+        "score": 0.5093,
+        "tags": [
+          "moderate_parallel",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 8:9",
+        "luke_ref": "Luke 7:8",
+        "score": 0.9192,
+        "tags": [
+          "close_match",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 8:10",
+        "luke_ref": "Luke 7:9",
+        "score": 0.3977,
+        "tags": [
+          "weak_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 6,
+    "pair_count": 10,
+    "matt_start": "Matt 11:3",
+    "matt_end": "Matt 11:19",
+    "luke_start": "Luke 7:19",
+    "luke_end": "Luke 7:34",
+    "matt_original_start_idx": 318,
+    "matt_original_end_idx": 334,
+    "luke_original_start_idx": 321,
+    "luke_original_end_idx": 336,
+    "mean_score": 0.617443,
+    "min_score": 0.404583,
+    "max_score": 1.0,
+    "pairs": [
+      {
+        "matt_ref": "Matt 11:3",
+        "luke_ref": "Luke 7:19",
+        "score": 0.4046,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:5",
+        "luke_ref": "Luke 7:22",
+        "score": 0.7574,
+        "tags": [
+          "strong_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:6",
+        "luke_ref": "Luke 7:23",
+        "score": 1.0,
+        "tags": [
+          "close_match",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:7",
+        "luke_ref": "Luke 7:24",
+        "score": 0.7581,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:8",
+        "luke_ref": "Luke 7:25",
+        "score": 0.411,
+        "tags": [
+          "moderate_parallel",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:9",
+        "luke_ref": "Luke 7:26",
+        "score": 0.5728,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:11",
+        "luke_ref": "Luke 7:28",
+        "score": 0.4756,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:17",
+        "luke_ref": "Luke 7:32",
+        "score": 0.5928,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:18",
+        "luke_ref": "Luke 7:33",
+        "score": 0.5123,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:19",
+        "luke_ref": "Luke 7:34",
+        "score": 0.6899,
+        "tags": [
+          "strong_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 7,
+    "pair_count": 5,
+    "matt_start": "Matt 11:21",
+    "matt_end": "Matt 11:27",
+    "luke_start": "Luke 10:13",
+    "luke_end": "Luke 10:22",
+    "matt_original_start_idx": 336,
+    "matt_original_end_idx": 342,
+    "luke_original_start_idx": 483,
+    "luke_original_end_idx": 492,
+    "mean_score": 0.682605,
+    "min_score": 0.47833,
+    "max_score": 0.920229,
+    "pairs": [
+      {
+        "matt_ref": "Matt 11:21",
+        "luke_ref": "Luke 10:13",
+        "score": 0.9202,
+        "tags": [
+          "close_match",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:22",
+        "luke_ref": "Luke 10:14",
+        "score": 0.7528,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:23",
+        "luke_ref": "Luke 10:15",
+        "score": 0.4783,
+        "tags": [
+          "moderate_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:25",
+        "luke_ref": "Luke 10:21",
+        "score": 0.5833,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 11:27",
+        "luke_ref": "Luke 10:22",
+        "score": 0.6784,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 8,
+    "pair_count": 5,
+    "matt_start": "Matt 12:28",
+    "matt_end": "Matt 12:45",
+    "luke_start": "Luke 11:20",
+    "luke_end": "Luke 11:26",
+    "matt_original_start_idx": 373,
+    "matt_original_end_idx": 390,
+    "luke_original_start_idx": 532,
+    "luke_original_end_idx": 538,
+    "mean_score": 0.749141,
+    "min_score": 0.46359,
+    "max_score": 1.0,
+    "pairs": [
+      {
+        "matt_ref": "Matt 12:28",
+        "luke_ref": "Luke 11:20",
+        "score": 0.7913,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 12:30",
+        "luke_ref": "Luke 11:23",
+        "score": 1.0,
+        "tags": [
+          "close_match",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 12:43",
+        "luke_ref": "Luke 11:24",
+        "score": 0.7237,
+        "tags": [
+          "strong_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 12:44",
+        "luke_ref": "Luke 11:25",
+        "score": 0.4636,
+        "tags": [
+          "moderate_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 12:45",
+        "luke_ref": "Luke 11:26",
+        "score": 0.7672,
+        "tags": [
+          "strong_parallel",
+          "matt_expands_or_luke_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 9,
+    "pair_count": 2,
+    "matt_start": "Matt 23:25",
+    "matt_end": "Matt 23:35",
+    "luke_start": "Luke 11:39",
+    "luke_end": "Luke 11:51",
+    "matt_original_start_idx": 796,
+    "matt_original_end_idx": 806,
+    "luke_original_start_idx": 551,
+    "luke_original_end_idx": 563,
+    "mean_score": 0.387418,
+    "min_score": 0.346588,
+    "max_score": 0.428249,
+    "pairs": [
+      {
+        "matt_ref": "Matt 23:25",
+        "luke_ref": "Luke 11:39",
+        "score": 0.4282,
+        "tags": [
+          "moderate_parallel",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 23:35",
+        "luke_ref": "Luke 11:51",
+        "score": 0.3466,
+        "tags": [
+          "weak_parallel",
+          "matt_expands_or_luke_abbreviates"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 10,
+    "pair_count": 7,
+    "matt_start": "Matt 24:43",
+    "matt_end": "Matt 24:50",
+    "luke_start": "Luke 12:39",
+    "luke_end": "Luke 12:46",
+    "matt_original_start_idx": 853,
+    "matt_original_end_idx": 860,
+    "luke_original_start_idx": 605,
+    "luke_original_end_idx": 612,
+    "mean_score": 0.643259,
+    "min_score": 0.447738,
+    "max_score": 0.838452,
+    "pairs": [
+      {
+        "matt_ref": "Matt 24:43",
+        "luke_ref": "Luke 12:39",
+        "score": 0.5213,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:44",
+        "luke_ref": "Luke 12:40",
+        "score": 0.6793,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:45",
+        "luke_ref": "Luke 12:42",
+        "score": 0.4561,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:46",
+        "luke_ref": "Luke 12:43",
+        "score": 0.7826,
+        "tags": [
+          "strong_parallel",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:47",
+        "luke_ref": "Luke 12:44",
+        "score": 0.8385,
+        "tags": [
+          "close_match",
+          "content_order_preserved"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:48",
+        "luke_ref": "Luke 12:45",
+        "score": 0.4477,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      },
+      {
+        "matt_ref": "Matt 24:50",
+        "luke_ref": "Luke 12:46",
+        "score": 0.7773,
+        "tags": [
+          "strong_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 11,
+    "pair_count": 1,
+    "matt_start": "Matt 25:30",
+    "matt_end": "Matt 25:30",
+    "luke_start": "Luke 13:28",
+    "luke_end": "Luke 13:28",
+    "matt_original_start_idx": 891,
+    "matt_original_end_idx": 891,
+    "luke_original_start_idx": 653,
+    "luke_original_end_idx": 653,
+    "mean_score": 0.371233,
+    "min_score": 0.371233,
+    "max_score": 0.371233,
+    "pairs": [
+      {
+        "matt_ref": "Matt 25:30",
+        "luke_ref": "Luke 13:28",
+        "score": 0.3712,
+        "tags": [
+          "weak_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "multi_lemma_overlap"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 12,
+    "pair_count": 1,
+    "matt_start": "Matt 26:16",
+    "matt_end": "Matt 26:16",
+    "luke_start": "Luke 22:6",
+    "luke_end": "Luke 22:6",
+    "matt_original_start_idx": 923,
+    "matt_original_end_idx": 923,
+    "luke_original_start_idx": 976,
+    "luke_original_end_idx": 976,
+    "mean_score": 0.521526,
+    "min_score": 0.521526,
+    "max_score": 0.521526,
+    "pairs": [
+      {
+        "matt_ref": "Matt 26:16",
+        "luke_ref": "Luke 22:6",
+        "score": 0.5215,
+        "tags": [
+          "moderate_parallel",
+          "luke_expands_or_matt_abbreviates",
+          "content_order_preserved"
+        ]
+      }
+    ]
+  },
+  {
+    "block_id": 13,
+    "pair_count": 1,
+    "matt_start": "Matt 26:68",
+    "matt_end": "Matt 26:68",
+    "luke_start": "Luke 22:64",
+    "luke_end": "Luke 22:64",
+    "matt_original_start_idx": 975,
+    "matt_original_end_idx": 975,
+    "luke_original_start_idx": 1034,
+    "luke_original_end_idx": 1034,
+    "mean_score": 0.556421,
+    "min_score": 0.556421,
+    "max_score": 0.556421,
+    "pairs": [
+      {
+        "matt_ref": "Matt 26:68",
+        "luke_ref": "Luke 22:64",
+        "score": 0.5564,
+        "tags": [
+          "moderate_parallel",
+          "content_order_preserved"
+        ]
+      }
+    ]
+  }
+]

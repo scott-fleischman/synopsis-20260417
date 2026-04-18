@@ -1,0 +1,4 @@
+pair,direction_rows,pericope_block_count,block_order_or_rewriting_pressure_rows,secondary_echo_rows_copied,interpretation
+Mark↔Matthew,50,25,40,0,Strong primary-chain relation
+Mark↔Luke,70,35,28,280,Strong primary-chain relation
+Matthew↔Luke,64,32,62,2000,Mixed chain/echo relation; displacement central to interpretation.

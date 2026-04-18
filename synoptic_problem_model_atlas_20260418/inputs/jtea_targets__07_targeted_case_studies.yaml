@@ -1,0 +1,518 @@
+- case_id: epistle_1tim_5_18_worker_wages_luke_10_7
+  source_ref: 1Tim 5:18
+  target_ref: Luke 10:7
+  feature: worker worthy/deserving of wages
+  why_high_value: The epistle explicitly introduces the material as γραφή and juxtaposes Deut 25:4 with a Jesus-saying form
+    closest to Luke.
+  prima_facie_signal: 'The saying segment has a five-token exact run: ο εργατης του μισθου αυτου. Luke has γάρ after ἄξιος;
+    1 Timothy has γάρ earlier in λέγει γὰρ ἡ γραφή, not inside the quoted saying segment.'
+  hypotheses:
+    direct_use_of_luke: Moderate-to-high signal; strong lexical match to Luke over Matthew, but access and date remain debated.
+    shared_written_sayings_source: Plausible; a fixed Jesus-saying could have circulated in a catena or instruction source.
+    oral_tradition: Possible but must explain near-verbatim Greek wording and the μισθός rather than τροφή form.
+    independent_convergence: Very high burden; phrase and topic are too specific.
+  provisional_best_explanation: direct written or fixed written-saying tradition; strong evidence against independent convergence
+  automatic_metrics:
+    score: 0.3436
+    token_weighted_jaccard: 0.2009
+    stem_weighted_jaccard: 0.1861
+    lcs_len: 7
+    lcs_ratio: 0.4667
+    max_exact_run_len: 5
+    max_exact_run: ο εργατησ του μισθου αυτου
+    shared_bigrams: 4
+    shared_trigrams: 3
+    shared_fourgrams: 2
+    shared_content_tokens: αξιοσ εργατησ μισθου
+    shared_content_token_count: 3
+  source_text: λέγει γὰρ ἡ γραφή· Βοῦν ἀλοῶντα οὐ φιμώσεις, καί· Ἄξιος ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ.
+  target_text: ἐν αὐτῇ δὲ τῇ οἰκίᾳ μένετε, ἐσθίοντες καὶ πίνοντες τὰ παρʼ αὐτῶν, ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ ⸀αὐτοῦ. μὴ
+    μεταβαίνετε ἐξ οἰκίας εἰς οἰκίαν.
+  token_alignment_ops:
+  - op: replace
+    a: λεγει
+    b: εν αυτη δε τη οικια μενετε εσθιοντεσ και πινοντεσ τα παρ αυτων αξιοσ
+  - op: equal
+    a: γαρ
+    b: γαρ
+  - op: delete
+    a: η γραφη βουν αλοωντα ου φιμωσεισ και αξιοσ
+    b: ''
+  - op: equal
+    a: ο εργατησ του μισθου αυτου
+    b: ο εργατησ του μισθου αυτου
+  - op: insert
+    a: ''
+    b: μη μεταβαινετε εξ οικιασ εισ οικιαν
+- case_id: epistle_1tim_5_18_worker_wages_matt_10_10
+  source_ref: 1Tim 5:18
+  target_ref: Matt 10:10
+  feature: worker worthy/deserving motif
+  why_high_value: Matthew preserves the same opening wording but has τροφῆς rather than μισθοῦ.
+  prima_facie_signal: Motif and opening phrase agree, but lexical object differs.
+  hypotheses:
+    direct_use_of_matthew: Lower than Luke because the object noun differs.
+    shared_tradition: Very plausible; Matthew and Luke themselves preserve variant forms.
+    independent_convergence: Moderate-to-high burden.
+  provisional_best_explanation: supports Jesus-saying tradition; less specifically supports Matthew than Luke
+  automatic_metrics:
+    score: 0.1673
+    token_weighted_jaccard: 0.1267
+    stem_weighted_jaccard: 0.1291
+    lcs_len: 4
+    lcs_ratio: 0.2667
+    max_exact_run_len: 2
+    max_exact_run: ο εργατησ
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: αξιοσ εργατησ
+    shared_content_token_count: 2
+  source_text: λέγει γὰρ ἡ γραφή· Βοῦν ἀλοῶντα οὐ φιμώσεις, καί· Ἄξιος ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ.
+  target_text: μὴ πήραν εἰς ὁδὸν μηδὲ δύο χιτῶνας μηδὲ ὑποδήματα μηδὲ ⸀ῥάβδον· ἄξιος γὰρ ὁ ἐργάτης τῆς τροφῆς ⸀αὐτοῦ.
+  token_alignment_ops:
+  - op: replace
+    a: λεγει
+    b: μη πηραν εισ οδον μηδε δυο χιτωνασ μηδε υποδηματα μηδε ραβδον αξιοσ
+  - op: equal
+    a: γαρ
+    b: γαρ
+  - op: delete
+    a: η γραφη βουν αλοωντα ου φιμωσεισ και αξιοσ
+    b: ''
+  - op: equal
+    a: ο εργατησ
+    b: ο εργατησ
+  - op: replace
+    a: του μισθου
+    b: τησ τροφησ
+  - op: equal
+    a: αυτου
+    b: αυτου
+- case_id: epistle_james_5_12_oaths_matt_5_34_37
+  source_ref: Jas 5:12
+  target_ref: Matt 5:34-37
+  feature: no oaths; heaven/earth; yes/yes and no/no
+  why_high_value: This is one of the strongest James–Jesus-tradition overlaps, but exact roots differ at the oath verb.
+  prima_facie_signal: Shared oath prohibition frame plus yes/no closure; low exact-score because Matthew expands and uses
+    different inflected roots.
+  hypotheses:
+    direct_use_of_matthew: Possible but requires James to compress and rephrase substantially.
+    shared_written_sayings_source: Plausible; compact legal/ethical saying could circulate as a unit.
+    oral_tradition: Very plausible; stable ethical gist and memorable yes/no formula with lexical drift.
+    independent_convergence: High burden because the combined heaven/earth/oath/yes-no pattern is not a generic maxim.
+  provisional_best_explanation: shared Jesus tradition, possibly written or oral; direct Matthew dependence not required by
+    the data
+  automatic_metrics:
+    score: 0.105
+    token_weighted_jaccard: 0.0483
+    stem_weighted_jaccard: 0.0503
+    lcs_len: 11
+    lcs_ratio: 0.3438
+    max_exact_run_len: 2
+    max_exact_run: ναι ναι
+    shared_bigrams: 2
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: μητε ναι
+    shared_content_token_count: 2
+  source_text: Πρὸ πάντων δέ, ἀδελφοί μου, μὴ ὀμνύετε, μήτε τὸν οὐρανὸν μήτε τὴν γῆν μήτε ἄλλον τινὰ ὅρκον· ἤτω δὲ ὑμῶν τὸ
+    Ναὶ ναὶ καὶ τὸ Οὒ οὔ, ἵνα μὴ ⸂ὑπὸ κρίσιν⸃ πέσητε.
+  target_text: ἐγὼ δὲ λέγω ὑμῖν μὴ ὀμόσαι ὅλως· μήτε ἐν τῷ οὐρανῷ, ὅτι θρόνος ἐστὶν τοῦ θεοῦ· μήτε ἐν τῇ γῇ, ὅτι ὑποπόδιόν
+    ἐστιν τῶν ποδῶν αὐτοῦ· μήτε εἰς Ἱεροσόλυμα, ὅτι πόλις ἐστὶν τοῦ μεγάλου βασιλέως· μήτε ἐν τῇ κεφαλῇ σου ὀμόσῃς, ὅτι οὐ
+    δύνασαι μίαν τρίχα λευκὴν ⸂ποιῆσαι ἢ μέλαιναν⸃. ἔστω δὲ ὁ λόγος ὑμῶν ναὶ ναί, οὒ οὔ· τὸ δὲ περισσὸν τούτων ἐκ τοῦ πονηροῦ
+    ἐστιν.
+  token_alignment_ops:
+  - op: replace
+    a: προ παντων
+    b: εγω
+  - op: equal
+    a: δε
+    b: δε
+  - op: replace
+    a: αδελφοι μου
+    b: λεγω υμιν
+  - op: equal
+    a: μη
+    b: μη
+  - op: replace
+    a: ομνυετε
+    b: ομοσαι ολωσ
+  - op: equal
+    a: μητε
+    b: μητε
+  - op: replace
+    a: τον ουρανον
+    b: εν τω ουρανω οτι θρονοσ εστιν του θεου
+  - op: equal
+    a: μητε
+    b: μητε
+  - op: replace
+    a: την γην
+    b: εν τη γη οτι υποποδιον εστιν των ποδων αυτου
+  - op: equal
+    a: μητε
+    b: μητε
+  - op: replace
+    a: αλλον τινα ορκον ητω
+    b: εισ ιεροσολυμα οτι πολισ εστιν του μεγαλου βασιλεωσ μητε εν τη κεφαλη σου ομοσησ οτι ου δυνασαι μιαν τριχα λευκην ποιησαι
+      η μελαιναν εστω
+  - op: equal
+    a: δε
+    b: δε
+  - op: insert
+    a: ''
+    b: ο λογοσ
+  - op: equal
+    a: υμων
+    b: υμων
+  - op: delete
+    a: το
+    b: ''
+  - op: equal
+    a: ναι ναι
+    b: ναι ναι
+  - op: delete
+    a: και το
+    b: ''
+  - op: equal
+    a: ου ου
+    b: ου ου
+  - op: replace
+    a: ινα μη υπο κρισιν πεσητε
+    b: το δε περισσον τουτων εκ του πονηρου εστιν
+- case_id: epistle_james_2_5_poor_kingdom_luke_6_20
+  source_ref: Jas 2:5
+  target_ref: Luke 6:20
+  feature: poor as heirs/possessors of kingdom
+  why_high_value: Combines poverty and kingdom language in an ethical paraenetic context.
+  prima_facie_signal: Semantic rather than exact verbal agreement; Luke is closer than Matthew’s poor-in-spirit form.
+  hypotheses:
+    direct_use_of_luke: Possible but weak lexically.
+    shared_beatitude_tradition: Plausible and lower burden.
+    oral_tradition: Plausible; beatitude concepts are portable.
+    independent_convergence: Not impossible because poverty/kingdom are common themes, but combined pattern raises burden.
+  provisional_best_explanation: shared beatitude/Jesus tradition rather than demonstrable direct literary dependence
+  automatic_metrics:
+    score: 0.0331
+    token_weighted_jaccard: 0.0184
+    stem_weighted_jaccard: 0.019
+    lcs_len: 1
+    lcs_ratio: 0.0476
+    max_exact_run_len: 1
+    max_exact_run: τουσ
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: τουσ
+    shared_content_token_count: 1
+  source_text: ἀκούσατε, ἀδελφοί μου ἀγαπητοί. οὐχ ὁ θεὸς ἐξελέξατο τοὺς πτωχοὺς ⸂τῷ κόσμῳ⸃ πλουσίους ἐν πίστει καὶ κληρονόμους
+    τῆς βασιλείας ἧς ἐπηγγείλατο τοῖς ἀγαπῶσιν αὐτόν;
+  target_text: Καὶ αὐτὸς ἐπάρας τοὺς ὀφθαλμοὺς αὐτοῦ εἰς τοὺς μαθητὰς αὐτοῦ ἔλεγεν· Μακάριοι οἱ πτωχοί, ὅτι ὑμετέρα ἐστὶν
+    ἡ βασιλεία τοῦ θεοῦ.
+  token_alignment_ops:
+  - op: replace
+    a: ακουσατε αδελφοι μου αγαπητοι ουχ ο θεοσ εξελεξατο
+    b: και αυτοσ επαρασ
+  - op: equal
+    a: τουσ
+    b: τουσ
+  - op: replace
+    a: πτωχουσ τω κοσμω πλουσιουσ εν πιστει και κληρονομουσ τησ βασιλειασ ησ επηγγειλατο τοισ αγαπωσιν αυτον
+    b: οφθαλμουσ αυτου εισ τουσ μαθητασ αυτου ελεγεν μακαριοι οι πτωχοι οτι υμετερα εστιν η βασιλεια του θεου
+- case_id: epistle_james_1_5_6_ask_given_faith
+  source_ref: Jas 1:5-6
+  target_ref: Matt 7:7-8
+  feature: ask and it will be given; ask in confidence
+  why_high_value: Shows how a concept can connect to multiple Jesus-saying clusters without exact quotation.
+  prima_facie_signal: The ask/give motif is shared, but James frames wisdom and non-doubting.
+  hypotheses:
+    direct_use_of_matthew: Weak-to-moderate; needs thematic recomposition.
+    shared_sapiential_and_Jesus_tradition: Plausible.
+    oral_tradition: Plausible.
+    independent_convergence: Plausible if reduced to asking/giving alone; less so when faith/non-doubt is included with Mark
+      11/Matt 21.
+  provisional_best_explanation: shared sapiential prayer tradition with possible Jesus-saying influence
+  automatic_metrics:
+    score: 0.0622
+    token_weighted_jaccard: 0.0272
+    stem_weighted_jaccard: 0.0275
+    lcs_len: 4
+    lcs_ratio: 0.1667
+    max_exact_run_len: 2
+    max_exact_run: και δοθησεται
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: δοθησεται
+    shared_content_token_count: 1
+  source_text: Εἰ δέ τις ὑμῶν λείπεται σοφίας, αἰτείτω παρὰ τοῦ διδόντος θεοῦ πᾶσιν ἁπλῶς καὶ ⸀μὴ ὀνειδίζοντος, καὶ δοθήσεται
+    αὐτῷ· αἰτείτω δὲ ἐν πίστει, μηδὲν διακρινόμενος, ὁ γὰρ διακρινόμενος ἔοικεν κλύδωνι θαλάσσης ἀνεμιζομένῳ καὶ ῥιπιζομένῳ·
+  target_text: Αἰτεῖτε, καὶ δοθήσεται ὑμῖν· ζητεῖτε, καὶ εὑρήσετε· κρούετε, καὶ ἀνοιγήσεται ὑμῖν. πᾶς γὰρ ὁ αἰτῶν λαμβάνει
+    καὶ ὁ ζητῶν εὑρίσκει καὶ τῷ κρούοντι ⸀ἀνοιγήσεται.
+  token_alignment_ops:
+  - op: replace
+    a: ει δε τισ υμων λειπεται σοφιασ αιτειτω παρα του διδοντοσ θεου πασιν απλωσ και μη ονειδιζοντοσ
+    b: αιτειτε
+  - op: equal
+    a: και δοθησεται
+    b: και δοθησεται
+  - op: replace
+    a: αυτω αιτειτω δε εν πιστει μηδεν διακρινομενοσ
+    b: υμιν ζητειτε και ευρησετε κρουετε και ανοιγησεται υμιν πασ γαρ
+  - op: equal
+    a: ο
+    b: ο
+  - op: replace
+    a: γαρ διακρινομενοσ εοικεν κλυδωνι θαλασσησ ανεμιζομενω
+    b: αιτων λαμβανει
+  - op: equal
+    a: και
+    b: και
+  - op: replace
+    a: ριπιζομενω
+    b: ο ζητων ευρισκει και τω κρουοντι ανοιγησεται
+- case_id: epistle_james_1_22_25_hear_do_words
+  source_ref: Jas 1:22-25
+  target_ref: Matt 7:24-27
+  feature: hearing and doing the word/words
+  why_high_value: The conceptual agreement is stronger than the wording.
+  prima_facie_signal: James abstracts the hear/do contrast into paraenesis; Matthew/Luke narrativize it with house-building
+    imagery.
+  hypotheses:
+    direct_use_of_matthew: Possible but not compelling without the house image.
+    shared_Jesus_tradition: Plausible.
+    independent_convergence: Moderate burden; hearing/doing is common in Jewish wisdom.
+  provisional_best_explanation: common sapiential/Jesus tradition; direct dependence unproven
+  automatic_metrics:
+    score: 0.0473
+    token_weighted_jaccard: 0.0136
+    stem_weighted_jaccard: 0.0138
+    lcs_len: 8
+    lcs_ratio: 0.1231
+    max_exact_run_len: 2
+    max_exact_run: και μη
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ανδρι
+    shared_content_token_count: 1
+  source_text: Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ⸂ἀκροαταὶ μόνον⸃ παραλογιζόμενοι ἑαυτούς. ὅτι εἴ τις ἀκροατὴς λόγου ἐστὶν καὶ
+    οὐ ποιητής, οὗτος ἔοικεν ἀνδρὶ κατανοοῦντι τὸ πρόσωπον τῆς γενέσεως αὐτοῦ ἐν ἐσόπτρῳ, κατενόησεν γὰρ ἑαυτὸν καὶ ἀπελήλυθεν
+    καὶ εὐθέως ἐπελάθετο ὁποῖος ἦν. ὁ δὲ παρακύψας εἰς νόμον τέλειον τὸν τῆς ἐλευθερίας καὶ παραμείνας, ⸀οὐκ ἀκροατὴς ἐπιλησμονῆς
+    γενόμενος ἀλλὰ ποιητὴς ἔργου, οὗτος μακάριος ἐν τῇ ποιήσει αὐτοῦ ἔσται.
+  target_text: Πᾶς οὖν ὅστις ἀκούει μου τοὺς λόγους τούτους καὶ ποιεῖ αὐτούς, ⸀ὁμοιωθήσεται ἀνδρὶ φρονίμῳ, ὅστις ᾠκοδόμησεν
+    ⸂αὐτοῦ τὴν οἰκίαν⸃ ἐπὶ τὴν πέτραν. καὶ κατέβη ἡ βροχὴ καὶ ἦλθον οἱ ποταμοὶ καὶ ἔπνευσαν οἱ ἄνεμοι καὶ προσέπεσαν τῇ οἰκίᾳ
+    ἐκείνῃ, καὶ οὐκ ἔπεσεν, τεθεμελίωτο γὰρ ἐπὶ τὴν πέτραν. καὶ πᾶς ὁ ἀκούων μου τοὺς λόγους τούτους καὶ μὴ ποιῶν αὐτοὺς ὁμοιωθήσεται
+    ἀνδρὶ μωρῷ, ὅστις ᾠκοδόμησεν ⸂αὐτοῦ τὴν οἰκίαν⸃ ἐπὶ τὴν ἄμμον. καὶ κατέβη ἡ βροχὴ καὶ ἦλθον οἱ ποταμοὶ καὶ ἔπνευσαν οἱ
+    ἄνεμοι καὶ προσέκοψαν τῇ οἰκίᾳ ἐκείνῃ, καὶ ἔπεσεν, καὶ ἦν ἡ πτῶσις αὐτῆς μεγάλη.
+  token_alignment_ops:
+  - op: replace
+    a: γινεσθε δε ποιηται λογου
+    b: πασ ουν οστισ ακουει μου τουσ λογουσ τουτουσ και ποιει αυτουσ ομοιωθησεται ανδρι φρονιμω οστισ ωκοδομησεν αυτου την
+      οικιαν επι την πετραν και κατεβη η βροχη και ηλθον οι ποταμοι και επνευσαν οι ανεμοι και προσεπεσαν τη οικια εκεινη
+      και ουκ επεσεν τεθεμελιωτο γαρ επι την πετραν και πασ ο ακουων μου τουσ λογουσ τουτουσ
+  - op: equal
+    a: και μη
+    b: και μη
+  - op: replace
+    a: ακροαται μονον παραλογιζομενοι εαυτουσ οτι ει τισ ακροατησ λογου εστιν
+    b: ποιων αυτουσ ομοιωθησεται ανδρι μωρω οστισ ωκοδομησεν αυτου την οικιαν επι την αμμον
+  - op: equal
+    a: και
+    b: και
+  - op: replace
+    a: ου ποιητησ ουτοσ εοικεν ανδρι κατανοουντι το προσωπον τησ γενεσεωσ αυτου εν εσοπτρω κατενοησεν γαρ εαυτον
+    b: κατεβη η βροχη
+  - op: equal
+    a: και
+    b: και
+  - op: replace
+    a: απεληλυθεν
+    b: ηλθον οι ποταμοι
+  - op: equal
+    a: και
+    b: και
+  - op: replace
+    a: ευθεωσ επελαθετο οποιοσ
+    b: επνευσαν οι ανεμοι και προσεκοψαν τη οικια εκεινη και επεσεν και
+  - op: equal
+    a: ην
+    b: ην
+  - op: replace
+    a: ο δε παρακυψασ εισ νομον τελειον τον τησ ελευθεριασ και παραμεινασ ουκ ακροατησ επιλησμονησ γενομενοσ αλλα ποιητησ
+      εργου ουτοσ μακαριοσ εν τη ποιησει αυτου εσται
+    b: η πτωσισ αυτησ μεγαλη
+- case_id: epistle_james_4_10_humble_exalt
+  source_ref: Jas 4:10
+  target_ref: Luke 14:11
+  feature: humble oneself / be exalted
+  why_high_value: A compact aphorism found in multiple Gospel contexts.
+  prima_facie_signal: Semantic high, exact lower because James uses imperative paraenesis.
+  hypotheses:
+    direct_use_of_luke: Possible but weak; aphorism migrates easily.
+    shared_saying: Plausible and low burden.
+    independent_convergence: Moderate burden because the reversal aphorism is widespread.
+  provisional_best_explanation: portable Jesus/reversal saying; not enough for direct literary dependence
+  automatic_metrics:
+    score: 0.03
+    token_weighted_jaccard: 0.0
+    stem_weighted_jaccard: 0.0
+    lcs_len: 1
+    lcs_ratio: 0.1667
+    max_exact_run_len: 1
+    max_exact_run: και
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ''
+    shared_content_token_count: 0
+  source_text: ταπεινώθητε ἐνώπιον ⸀κυρίου, καὶ ὑψώσει ὑμᾶς.
+  target_text: ὅτι πᾶς ὁ ὑψῶν ἑαυτὸν ταπεινωθήσεται καὶ ὁ ταπεινῶν ἑαυτὸν ὑψωθήσεται.
+  token_alignment_ops:
+  - op: replace
+    a: ταπεινωθητε ενωπιον κυριου
+    b: οτι πασ ο υψων εαυτον ταπεινωθησεται
+  - op: equal
+    a: και
+    b: και
+  - op: replace
+    a: υψωσει υμασ
+    b: ο ταπεινων εαυτον υψωθησεται
+- case_id: epistle_1cor_11_24_lord_supper_luke_22
+  source_ref: 1Cor 11:24
+  target_ref: Luke 22:19
+  feature: 'Lord’s Supper words: do this in remembrance'
+  why_high_value: Clear formulaic tradition with long exact run; direction cannot be inferred naively because Paul is earlier
+    than Luke on conventional datings.
+  prima_facie_signal: Long exact sequence τουτο ποιειτε εις την εμην αναμνησιν.
+  hypotheses:
+    luke_uses_paul_or_pauline_liturgy: Plausible on chronology and formulaic wording.
+    paul_uses_luke: High chronological/access burden on standard datings.
+    shared_liturgical_tradition: Very plausible; formula could predate both forms.
+    independent_convergence: Very high burden.
+  provisional_best_explanation: shared liturgical tradition and/or Luke drawing on a tradition also represented by Paul
+  automatic_metrics:
+    score: 0.6228
+    token_weighted_jaccard: 0.6396
+    stem_weighted_jaccard: 0.6396
+    lcs_len: 17
+    lcs_ratio: 0.8947
+    max_exact_run_len: 6
+    max_exact_run: τουτο ποιειτε εισ την εμην αναμνησιν
+    shared_bigrams: 11
+    shared_trigrams: 7
+    shared_fourgrams: 3
+    shared_content_tokens: αναμνησιν εισ εκλασεν εμην εστιν ευχαριστησασ ποιειτε σωμα τουτο
+    shared_content_token_count: 9
+  source_text: καὶ εὐχαριστήσας ἔκλασεν καὶ ⸀εἶπεν· Τοῦτό μού ἐστιν τὸ σῶμα τὸ ὑπὲρ ⸀ὑμῶν· τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.
+  target_text: καὶ λαβὼν ἄρτον εὐχαριστήσας ἔκλασεν καὶ ἔδωκεν αὐτοῖς λέγων· Τοῦτό ἐστιν τὸ σῶμά μου ⸂[τὸ ὑπὲρ ὑμῶν διδόμενον·
+    τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.
+  token_alignment_ops:
+  - op: equal
+    a: και
+    b: και
+  - op: insert
+    a: ''
+    b: λαβων αρτον
+  - op: equal
+    a: ευχαριστησασ εκλασεν και
+    b: ευχαριστησασ εκλασεν και
+  - op: replace
+    a: ειπεν
+    b: εδωκεν αυτοισ λεγων
+  - op: equal
+    a: τουτο
+    b: τουτο
+  - op: delete
+    a: μου
+    b: ''
+  - op: equal
+    a: εστιν το σωμα
+    b: εστιν το σωμα
+  - op: insert
+    a: ''
+    b: μου
+  - op: equal
+    a: το υπερ υμων
+    b: το υπερ υμων
+  - op: insert
+    a: ''
+    b: διδομενον
+  - op: equal
+    a: τουτο ποιειτε εισ την εμην αναμνησιν
+    b: τουτο ποιειτε εισ την εμην αναμνησιν
+- case_id: epistle_2tim_2_12_denying_christ
+  source_ref: 2Tim 2:12
+  target_ref: Matt 10:33
+  feature: deny him / he will deny us
+  why_high_value: Compact conditional saying with close semantic shape.
+  prima_facie_signal: Shared denial motif, but phraseology is formulaic and confession/martyrdom context can generate similarity.
+  hypotheses:
+    direct_use_of_matthew: Possible but weak lexically.
+    shared_saying_or_confessional_formula: Plausible.
+    independent_convergence: Moderate burden.
+  provisional_best_explanation: shared saying/confessional tradition
+  automatic_metrics:
+    score: 0.0
+    token_weighted_jaccard: 0.0
+    stem_weighted_jaccard: 0.0
+    lcs_len: 0
+    lcs_ratio: 0.0
+    max_exact_run_len: 0
+    max_exact_run: ''
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ''
+    shared_content_token_count: 0
+  source_text: εἰ ὑπομένομεν, καὶ συμβασιλεύσομεν· εἰ ⸀ἀρνησόμεθα, κἀκεῖνος ἀρνήσεται ἡμᾶς·
+  target_text: ὅστις ⸂δʼ ἂν⸃ ἀρνήσηταί με ἔμπροσθεν τῶν ἀνθρώπων, ἀρνήσομαι ⸂κἀγὼ αὐτὸν⸃ ἔμπροσθεν τοῦ πατρός μου τοῦ ⸀ἐν
+    οὐρανοῖς.
+  token_alignment_ops:
+  - op: replace
+    a: ει υπομενομεν και συμβασιλευσομεν ει αρνησομεθα κακεινοσ αρνησεται ημασ
+    b: οστισ δ αν αρνησηται με εμπροσθεν των ανθρωπων αρνησομαι καγω αυτον εμπροσθεν του πατροσ μου του εν ουρανοισ
+- case_id: johannine_1john_3_13_world_hates_you
+  source_ref: 1John 3:13
+  target_ref: John 15:18-19
+  feature: world hates disciples
+  why_high_value: Tests dependence inside the Johannine corpus, where conceptual and idiolectal continuity matter more than
+    exact quotation.
+  prima_facie_signal: 'Shared Johannine idiom: κόσμος and hate language.'
+  hypotheses:
+    epistle_depends_on_gospel: Plausible but not proven by one motif.
+    gospel_depends_on_epistle_or_shared_school: Possible in a Johannine-community model.
+    shared_johannine_tradition: Very plausible.
+    independent_convergence: Lower burden than Gospel parallels because same school/idiolect may explain.
+  provisional_best_explanation: shared Johannine tradition/idiolect; direction requires broader corpus modeling
+  automatic_metrics:
+    score: 0.3705
+    token_weighted_jaccard: 0.1648
+    stem_weighted_jaccard: 0.1677
+    lcs_len: 5
+    lcs_ratio: 0.625
+    max_exact_run_len: 4
+    max_exact_run: μισει υμασ ο κοσμοσ
+    shared_bigrams: 3
+    shared_trigrams: 2
+    shared_fourgrams: 1
+    shared_content_tokens: κοσμοσ μισει υμασ
+    shared_content_token_count: 3
+  source_text: ⸀μὴ θαυμάζετε, ⸀ἀδελφοί, εἰ μισεῖ ὑμᾶς ὁ κόσμος.
+  target_text: Εἰ ὁ κόσμος ὑμᾶς μισεῖ, γινώσκετε ὅτι ἐμὲ πρῶτον ⸀ὑμῶν μεμίσηκεν. εἰ ἐκ τοῦ κόσμου ἦτε, ὁ κόσμος ἂν τὸ ἴδιον
+    ἐφίλει· ὅτι δὲ ἐκ τοῦ κόσμου οὐκ ἐστέ, ἀλλʼ ἐγὼ ἐξελεξάμην ὑμᾶς ἐκ τοῦ κόσμου, διὰ τοῦτο μισεῖ ὑμᾶς ὁ κόσμος.
+  token_alignment_ops:
+  - op: delete
+    a: μη θαυμαζετε αδελφοι
+    b: ''
+  - op: equal
+    a: ει
+    b: ει
+  - op: insert
+    a: ''
+    b: ο κοσμοσ υμασ μισει γινωσκετε οτι εμε πρωτον υμων μεμισηκεν ει εκ του κοσμου ητε ο κοσμοσ αν το ιδιον εφιλει οτι δε
+      εκ του κοσμου ουκ εστε αλλ εγω εξελεξαμην υμασ εκ του κοσμου δια τουτο
+  - op: equal
+    a: μισει υμασ ο κοσμοσ
+    b: μισει υμασ ο κοσμοσ

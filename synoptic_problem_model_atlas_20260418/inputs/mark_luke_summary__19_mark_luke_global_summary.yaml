@@ -1,0 +1,25 @@
+package_component: mark_luke_direct_analysis
+method_class: synoptic_narrative_alignment_with_text_critical_default
+source_book: Mark
+target_book: Luke
+source_verse_rows_default_mark_main_text: 661
+source_verse_rows_with_long_ending: 673
+target_verse_rows: 1149
+full_verse_matrix_rows: 773277
+default_matrix_rows_excluding_mark_16_9_20: 759489
+primary_chain_threshold: 0.18
+primary_chain_pairs: 183
+primary_chain_score_sum: 73.9635
+primary_chain_mean_score: 0.4042
+loose_blocks: 35
+tight_blocks: 76
+gap_intervals: 113
+secondary_echoes_score_ge_0_22: 140
+window_candidate_rows_mark_to_luke_top5_per_mark: 3305
+window_candidate_rows_luke_to_mark_top5_per_luke: 5745
+burden_totals:
+  Mark_prior_Luke_uses_Mark_or_Mark_like_source: 254.6466
+  Luke_prior_Mark_uses_Luke_or_Luke_like_source: 303.1966
+  shared_narrative_or_oral_tradition_without_direct_use: 164.1468
+interpretive_reading: Direct Mark-Luke comparison shows source-like local alignment with substantial Lukan gap burden; it
+  is the required complement to Mark-Matthew before making a full Markan-source claim.

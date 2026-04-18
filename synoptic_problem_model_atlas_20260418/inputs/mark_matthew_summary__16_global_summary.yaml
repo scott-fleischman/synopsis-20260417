@@ -1,0 +1,398 @@
+project: Mark–Matthew literary dependence case study
+method_summary:
+  text_base: Faithlife SBLGNT text + apparatus; MorphGNT lemma/morph data
+  pipeline:
+  - negative-space flagging
+  - full verse similarity matrix
+  - 3-verse contextual windows
+  - global monotonic primary chain
+  - loose/tight block segmentation
+  - pair-level surface and lemma diffs
+  - variant attachment
+  - directional burden ledger in both directions
+  - secondary-echo recovery
+global_metrics:
+  matched_pair_count: 385
+  mark_matched_verse_count: 385
+  matt_matched_verse_count: 385
+  mark_total_verse_count: 673
+  matt_total_verse_count: 1068
+  mark_matched_pct: 0.5721
+  matt_matched_pct: 0.3605
+  loose_block_count: 25
+  tight_block_count: 51
+global_style:
+  matched_mark_euthys: 25
+  matched_matt_euthys: 17
+  matched_mark_kingdom_god: 9
+  matched_mark_kingdom_heaven: 0
+  matched_matt_kingdom_god: 1
+  matched_matt_kingdom_heaven: 5
+  matched_mark_present_indicative_ratio: 0.3639
+  matched_matt_present_indicative_ratio: 0.3314
+variant_global:
+  mark_variant_verses_in_primary_pairs: 291
+  matt_variant_verses_in_primary_pairs: 211
+  mark_variant_notes_in_primary_pairs: 566
+  matt_variant_notes_in_primary_pairs: 316
+pair_score_summary:
+  mean: 0.438499
+  median: 0.409121
+  min: 0.102066
+  max: 1.0
+  ge_0.80: 23
+  ge_0.70: 47
+  ge_0.60: 90
+  ge_0.50: 142
+  lt_0.40: 186
+pair_class_counts:
+  matt_expands: 138
+  substitution: 294
+  reordering: 266
+  mark_expands: 151
+  close_match: 12
+top_matt_only_content_lemmas_in_primary_pairs:
+- - ιησους
+  - 51
+- - λεγω
+  - 49
+- - ουτος
+  - 28
+- - μαθητης
+  - 23
+- - προσερχομαι
+  - 19
+- - οχλος
+  - 16
+- - αποκρινομαι
+  - 16
+- - υιος
+  - 14
+- - ερχομαι
+  - 13
+- - ανθρωπος
+  - 12
+- - ευθεως
+  - 11
+- - λαμβανω
+  - 11
+- - ει
+  - 11
+- - δια
+  - 10
+- - εχω
+  - 10
+- - ποιεω
+  - 10
+- - θελω
+  - 10
+- - δυο
+  - 9
+- - οραω
+  - 9
+- - ακουω
+  - 9
+- - ουρανος
+  - 8
+- - πατηρ
+  - 8
+- - πορευομαι
+  - 8
+- - η
+  - 8
+- - κατα
+  - 8
+- - γινομαι
+  - 8
+- - φημι
+  - 8
+- - εξερχομαι
+  - 8
+- - μεν
+  - 7
+- - θεος
+  - 7
+top_mark_only_content_lemmas_in_primary_pairs:
+- - λεγω
+  - 25
+- - ερχομαι
+  - 20
+- - ευθυς
+  - 19
+- - ινα
+  - 19
+- - αρχω
+  - 16
+- - γινομαι
+  - 14
+- - αλλα
+  - 14
+- - ουτος
+  - 13
+- - ιησους
+  - 12
+- - εχω
+  - 12
+- - δυναμαι
+  - 12
+- - εαν
+  - 12
+- - θεος
+  - 11
+- - ακουω
+  - 11
+- - παλιν
+  - 11
+- - ποιεω
+  - 11
+- - ουδεις
+  - 10
+- - οταν
+  - 10
+- - οραω
+  - 10
+- - περι
+  - 9
+- - εξερχομαι
+  - 9
+- - διδωμι
+  - 9
+- - η
+  - 9
+- - πολυς
+  - 9
+- - αποκρινομαι
+  - 9
+- - ιδε
+  - 8
+- - ανθρωπος
+  - 8
+- - εκεινος
+  - 7
+- - δια
+  - 7
+- - εαυτου
+  - 7
+top_lemma_replacement_pairs:
+- - και -> τοτε
+  - 6
+- - εις -> επι
+  - 3
+- - ευθυς -> ευθεως
+  - 3
+- - ανιστημι -> εγειρω
+  - 3
+- - μη -> ου
+  - 3
+- - εκ -> εν
+  - 3
+- - εις -> εν
+  - 2
+- - ιδε -> ιδου
+  - 2
+- - θεος -> ουρανος
+  - 2
+- - ος -> ουτος
+  - 2
+- - αυτος -> ο
+  - 2
+- - εν -> ο
+  - 2
+- - αποκρινομαι -> λεγω
+  - 2
+- - μετα -> ο
+  - 2
+- - τρεις -> τριτος
+  - 2
+- - φημι -> αποκρινομαι
+  - 2
+- - αυτος -> δε
+  - 2
+- - η -> και
+  - 2
+- - αυτος -> εις
+  - 2
+- - και -> αυτος
+  - 1
+- - ειμι -> δε
+  - 1
+- - ιωαννης -> αυτος
+  - 1
+- - εκ -> απο
+  - 1
+- - ο -> οραω
+  - 1
+- - καταβαινω -> ερχομαι
+  - 1
+- - συ -> ος
+  - 1
+- - και -> περιπατεω
+  - 1
+- - παραγω -> δε
+  - 1
+- - ολιγος -> εκειθεν
+  - 1
+- - σαββατον -> γαλιλαια
+  - 1
+- - ειμι -> και
+  - 1
+- - δε -> ιδου
+  - 1
+- - ο -> εαυτου
+  - 1
+- - καρδια -> ουτος
+  - 1
+- - αυτος -> βλασφημεω
+  - 1
+- - πνευμα -> ενθυμησις
+  - 1
+- - συ -> αυτος
+  - 1
+- - απολλυμι -> εκχεω
+  - 1
+- - ουδεποτε -> ου
+  - 1
+- - διδωμι -> λαμβανω
+  - 1
+- - ου -> πως
+  - 1
+- - δυναμαι -> ουν
+  - 1
+- - αλλα -> ο
+  - 1
+- - τελος -> βασιλεια
+  - 1
+- - εχω -> αυτος
+  - 1
+- - αλλα -> η
+  - 1
+- - ουδεις -> πως
+  - 1
+- - εισερχομαι -> και
+  - 1
+- - διαρπαζω -> αρπαζω
+  - 1
+- - βλασφημεω -> λεγω
+  - 1
+top_matt_gap_intervals:
+- boundary: before_block_4
+  start_ref: Matt 4:24
+  end_ref: Matt 7:28
+  verse_count: 112
+- boundary: before_block_7
+  start_ref: Matt 9:18
+  end_ref: Matt 11:30
+  verse_count: 93
+- boundary: before_block_23
+  start_ref: Matt 24:37
+  end_ref: Matt 26:3
+  verse_count: 64
+- boundary: before_block_1
+  start_ref: Matt 1:1
+  end_ref: Matt 3:2
+  verse_count: 50
+- boundary: before_block_22
+  start_ref: Matt 22:46
+  end_ref: Matt 23:39
+  verse_count: 39
+- boundary: before_block_6
+  start_ref: Matt 8:6
+  end_ref: Matt 9:1
+  verse_count: 30
+- boundary: before_block_18
+  start_ref: Matt 18:10
+  end_ref: Matt 19:3
+  verse_count: 28
+- boundary: before_block_12
+  start_ref: Matt 13:35
+  end_ref: Matt 13:53
+  verse_count: 19
+- boundary: before_block_21
+  start_ref: Matt 21:43
+  end_ref: Matt 22:14
+  verse_count: 18
+- boundary: before_block_19
+  start_ref: Matt 20:1
+  end_ref: Matt 20:16
+  verse_count: 16
+- boundary: before_block_3
+  start_ref: Matt 4:3
+  end_ref: Matt 4:16
+  verse_count: 14
+- boundary: before_block_17
+  start_ref: Matt 17:18
+  end_ref: Matt 18:5
+  verse_count: 14
+- boundary: before_block_9
+  start_ref: Matt 12:33
+  end_ref: Matt 12:45
+  verse_count: 13
+- boundary: after_last
+  start_ref: Matt 28:8
+  end_ref: Matt 28:20
+  verse_count: 13
+- boundary: before_block_25
+  start_ref: Matt 27:62
+  end_ref: Matt 28:5
+  verse_count: 10
+top_mark_gap_intervals:
+- boundary: before_block_12
+  start_ref: Mark 4:35
+  end_ref: Mark 6:1
+  verse_count: 51
+- boundary: before_block_17
+  start_ref: Mark 9:20
+  end_ref: Mark 9:41
+  verse_count: 22
+- boundary: before_block_5
+  start_ref: Mark 1:23
+  end_ref: Mark 1:39
+  verse_count: 17
+- boundary: before_block_8
+  start_ref: Mark 3:8
+  end_ref: Mark 3:20
+  verse_count: 13
+- boundary: after_last
+  start_ref: Mark 16:8
+  end_ref: Mark 16:20
+  verse_count: 13
+- boundary: before_block_11
+  start_ref: Mark 4:21
+  end_ref: Mark 4:30
+  verse_count: 10
+- boundary: before_block_15
+  start_ref: Mark 7:30
+  end_ref: Mark 8:1
+  verse_count: 9
+- boundary: before_block_13
+  start_ref: Mark 6:6
+  end_ref: Mark 6:13
+  verse_count: 8
+- boundary: before_block_18
+  start_ref: Mark 9:48
+  end_ref: Mark 10:5
+  verse_count: 8
+- boundary: before_block_22
+  start_ref: Mark 12:38
+  end_ref: Mark 12:44
+  verse_count: 7
+- boundary: before_block_16
+  start_ref: Mark 8:21
+  end_ref: Mark 8:26
+  verse_count: 6
+- boundary: before_block_14
+  start_ref: Mark 7:4
+  end_ref: Mark 7:8
+  verse_count: 5
+- boundary: before_block_23
+  start_ref: Mark 13:33
+  end_ref: Mark 13:37
+  verse_count: 5
+- boundary: before_block_25
+  start_ref: Mark 16:1
+  end_ref: Mark 16:5
+  verse_count: 5
+- boundary: before_block_6
+  start_ref: Mark 2:2
+  end_ref: Mark 2:4
+  verse_count: 3

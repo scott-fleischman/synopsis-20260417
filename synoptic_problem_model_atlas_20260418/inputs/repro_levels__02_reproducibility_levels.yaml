@@ -1,0 +1,24 @@
+purpose: clarify what is regenerated, inherited, and curated
+level_1_regenerated_in_this_patch:
+- MorphGNT token/verse layer
+- Mark-Luke morphology audit
+- Mark-Luke shared-tradition penalty sensitivity
+- John anchor ledgers
+- Thomas curation-status augmentation
+- Epistle validation sample
+- Epistle targeted morphology audit
+- Q/mask-regime robustness summary
+level_2_regenerated_from_prior_artifact_inputs:
+- authoritative numbers
+- Q robustness table
+- John aggregate summaries
+- epistle validation strata
+level_3_curated_or_interpretive:
+- Mark-Luke interpretive caution
+- apocrypha roadmap
+- updated data-only conclusions
+not_done_in_this_patch:
+- fresh apocrypha primary-text comparison beyond Thomas
+- automatic Coptic-to-Greek Thomas scoring
+- human philological validation
+- visualization integration

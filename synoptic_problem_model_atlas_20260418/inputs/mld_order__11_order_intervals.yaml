@@ -1,0 +1,134 @@
+[
+  {
+    "after_block": 1,
+    "before_block": 2,
+    "matt_gap_unmasked_verse_count": 25,
+    "luke_gap_unmasked_verse_count": 105,
+    "matt_gap_start": "Matt 2:1",
+    "matt_gap_end": "Matt 3:2",
+    "luke_gap_start": "Luke 1:32",
+    "luke_gap_end": "Luke 3:6",
+    "asymmetry_abs": 80
+  },
+  {
+    "after_block": 2,
+    "before_block": 3,
+    "matt_gap_unmasked_verse_count": 15,
+    "luke_gap_unmasked_verse_count": 56,
+    "matt_gap_start": "Matt 4:8",
+    "matt_gap_end": "Matt 5:2",
+    "luke_gap_start": "Luke 4:13",
+    "luke_gap_end": "Luke 6:19",
+    "asymmetry_abs": 41
+  },
+  {
+    "after_block": 3,
+    "before_block": 4,
+    "matt_gap_unmasked_verse_count": 39,
+    "luke_gap_unmasked_verse_count": 10,
+    "matt_gap_start": "Matt 5:4",
+    "matt_gap_end": "Matt 5:45",
+    "luke_gap_start": "Luke 6:21",
+    "luke_gap_end": "Luke 6:30",
+    "asymmetry_abs": 29
+  },
+  {
+    "after_block": 4,
+    "before_block": 5,
+    "matt_gap_unmasked_verse_count": 34,
+    "luke_gap_unmasked_verse_count": 4,
+    "matt_gap_start": "Matt 5:47",
+    "matt_gap_end": "Matt 6:34",
+    "luke_gap_start": "Luke 6:33",
+    "luke_gap_end": "Luke 6:36",
+    "asymmetry_abs": 30
+  },
+  {
+    "after_block": 5,
+    "before_block": 6,
+    "matt_gap_unmasked_verse_count": 66,
+    "luke_gap_unmasked_verse_count": 9,
+    "matt_gap_start": "Matt 8:11",
+    "matt_gap_end": "Matt 11:2",
+    "luke_gap_start": "Luke 7:10",
+    "luke_gap_end": "Luke 7:18",
+    "asymmetry_abs": 57
+  },
+  {
+    "after_block": 6,
+    "before_block": 7,
+    "matt_gap_unmasked_verse_count": 1,
+    "luke_gap_unmasked_verse_count": 87,
+    "matt_gap_start": "Matt 11:20",
+    "matt_gap_end": "Matt 11:20",
+    "luke_gap_start": "Luke 7:35",
+    "luke_gap_end": "Luke 10:12",
+    "asymmetry_abs": 86
+  },
+  {
+    "after_block": 7,
+    "before_block": 8,
+    "matt_gap_unmasked_verse_count": 17,
+    "luke_gap_unmasked_verse_count": 35,
+    "matt_gap_start": "Matt 11:28",
+    "matt_gap_end": "Matt 12:23",
+    "luke_gap_start": "Luke 10:23",
+    "luke_gap_end": "Luke 11:17",
+    "asymmetry_abs": 18
+  },
+  {
+    "after_block": 8,
+    "before_block": 9,
+    "matt_gap_unmasked_verse_count": 214,
+    "luke_gap_unmasked_verse_count": 11,
+    "matt_gap_start": "Matt 13:1",
+    "matt_gap_end": "Matt 23:24",
+    "luke_gap_start": "Luke 11:27",
+    "luke_gap_end": "Luke 11:38",
+    "asymmetry_abs": 203
+  },
+  {
+    "after_block": 9,
+    "before_block": 10,
+    "matt_gap_unmasked_verse_count": 17,
+    "luke_gap_unmasked_verse_count": 41,
+    "matt_gap_start": "Matt 23:36",
+    "matt_gap_end": "Matt 24:41",
+    "luke_gap_start": "Luke 11:52",
+    "luke_gap_end": "Luke 12:38",
+    "asymmetry_abs": 24
+  },
+  {
+    "after_block": 10,
+    "before_block": 11,
+    "matt_gap_unmasked_verse_count": 27,
+    "luke_gap_unmasked_verse_count": 38,
+    "matt_gap_start": "Matt 24:51",
+    "matt_gap_end": "Matt 25:28",
+    "luke_gap_start": "Luke 12:47",
+    "luke_gap_end": "Luke 13:27",
+    "asymmetry_abs": 11
+  },
+  {
+    "after_block": 11,
+    "before_block": 12,
+    "matt_gap_unmasked_verse_count": 22,
+    "luke_gap_unmasked_verse_count": 234,
+    "matt_gap_start": "Matt 25:31",
+    "matt_gap_end": "Matt 26:15",
+    "luke_gap_start": "Luke 13:29",
+    "luke_gap_end": "Luke 22:4",
+    "asymmetry_abs": 212
+  },
+  {
+    "after_block": 12,
+    "before_block": 13,
+    "matt_gap_unmasked_verse_count": 8,
+    "luke_gap_unmasked_verse_count": 40,
+    "matt_gap_start": "Matt 26:18",
+    "matt_gap_end": "Matt 26:66",
+    "luke_gap_start": "Luke 22:8",
+    "luke_gap_end": "Luke 22:63",
+    "asymmetry_abs": 32
+  }
+]

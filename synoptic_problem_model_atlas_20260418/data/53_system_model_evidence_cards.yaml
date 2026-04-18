@@ -1,0 +1,239 @@
+- model_id: markan_priority_matthew_and_luke
+  short_label: Markan priority for Matthew and Luke
+  rating: strong_with_mark_luke_caution
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  selected_burden_scores: matthew_used_mark=774.87 (direct_use); luke_used_mark=254.6466
+    (direct_use)
+  strongest_support: Mark-like narrative source explains most Mark-Matthew/Mark-Luke
+    core
+  strongest_contra_or_unresolved_burden: does not solve double tradition
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: does_not_decide_Q_or_Farrer
+    minor_agreements_fit: unresolved_burden
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: two_source_mark_q
+  short_label: Two-source / Mark + Q-like sayings source
+  rating: strong_but_Q_document_and_minor_agreement_burdens
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  - shared_matt_luke_sayings_tradition
+  selected_burden_scores: matthew_used_mark=774.87 (direct_use); luke_used_mark=254.6466
+    (direct_use); shared_matt_luke_sayings_tradition=8.86 (common_source_or_oral)
+  strongest_support: explains Markan backbone plus non-Markan sayings layer
+  strongest_contra_or_unresolved_burden: Q/source reconstruction and minor agreements
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: strong_for_shared_sayings_low_burden
+    minor_agreements_fit: burden_needs_catalog_evaluation
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: farrer_mark_matthew_luke
+  short_label: Farrer / Mark + Matthew → Luke
+  rating: viable_major_alternative
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  - luke_used_matthew
+  selected_burden_scores: matthew_used_mark=774.87 (direct_use); luke_used_mark=254.6466
+    (direct_use); luke_used_matthew=26.446 (masked_direct_use)
+  strongest_support: avoids Q document and explains minor agreements via Luke-Matthew
+    contact
+  strongest_contra_or_unresolved_burden: must explain Lukan de-Mattheanization/dispersal
+    of sayings
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: viable_if_Lukan_redistribution_model_supplied
+    minor_agreements_fit: stronger_than_strict_independent_two_source
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: matthew_used_luke_plus_mark_like
+  short_label: Matthew used Luke plus Mark-like material
+  rating: possible_but_high_burden
+  required_directions:
+  - matthew_used_luke
+  - matthew_used_mark
+  selected_burden_scores: matthew_used_luke=26.446 (masked_direct_use); matthew_used_mark=774.87
+    (direct_use)
+  strongest_support: explains Matthew as organizer/collector
+  strongest_contra_or_unresolved_burden: less economical system-level pattern and
+    Matthew-Mark relationship
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: possible_if_Matthean_clustering_model_supplied
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: griesbach_two_gospel
+  short_label: Griesbach / Two-Gospel model
+  rating: possible_but_high_burden
+  required_directions:
+  - luke_used_matthew
+  - mark_used_matthew
+  - mark_used_luke
+  selected_burden_scores: luke_used_matthew=26.446 (masked_direct_use); mark_used_matthew=788.66
+    (direct_use); mark_used_luke=303.1966 (direct_use)
+  strongest_support: direct Matthew-Luke contact explains agreements against Mark
+  strongest_contra_or_unresolved_burden: Markan omission/compression of major Matthean/Lukan
+    material
+  criteria:
+    mark_matthew_fit: weak_to_medium_high_burden
+    mark_luke_fit: medium_or_component_dependent
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: strong
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: augustinian_matthew_mark_luke
+  short_label: Augustinian sequence Matthew → Mark → Luke
+  rating: high_burden_due_mark_from_matthew
+  required_directions:
+  - mark_used_matthew
+  - luke_used_mark
+  selected_burden_scores: mark_used_matthew=788.66 (direct_use); luke_used_mark=254.6466
+    (direct_use)
+  strongest_support: simple canonical order tradition
+  strongest_contra_or_unresolved_burden: Mark-from-Matthew burden
+  criteria:
+    mark_matthew_fit: weak_to_medium_high_burden
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: proto_mark_plus_sayings
+  short_label: Proto-Mark/common narrative source + sayings tradition
+  rating: plausible_lost_source_hybrid
+  required_directions:
+  - proto_mark_common_source
+  - shared_matt_luke_sayings_tradition
+  selected_burden_scores: proto_mark_common_source=unscored/model-level; shared_matt_luke_sayings_tradition=8.86
+    (common_source_or_oral)
+  strongest_support: accounts for canonical-form uncertainty and Mark-like core
+  strongest_contra_or_unresolved_burden: lost source reconstruction burden
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: medium_high
+    minor_agreements_fit: can_absorb_with_lost_source_but_pays_lost_source_cost
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: oral_tradition_network
+  short_label: Stable oral/traditional network
+  rating: good_for_sayings_john_weak_for_ordered_synoptic_narrative
+  required_directions:
+  - shared_mark_luke_tradition
+  - shared_matt_luke_sayings_tradition
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  selected_burden_scores: shared_mark_luke_tradition=385.6134 (shared_tradition_adjusted);
+    shared_matt_luke_sayings_tradition=8.86 (common_source_or_oral); shared_john_mark_anchor_tradition=23.5
+    (shared_anchor_tradition); shared_john_luke_anchor_tradition=20.8 (shared_anchor_tradition);
+    shared_john_matthew_anchor_tradition=24.8 (shared_anchor_tradition)
+  strongest_support: explains mobile sayings and John anchors
+  strongest_contra_or_unresolved_burden: dense order and exact wording in Synoptic
+    narrative cores
+  criteria:
+    mark_matthew_fit: medium_requires_order_retention
+    mark_luke_fit: medium_requires_order_retention
+    matt_luke_double_tradition_fit: high_for_sayings
+    minor_agreements_fit: medium
+    john_anchor_fit: not_applicable
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: john_uses_mark
+  short_label: John used Mark
+  rating: local_possible_global_not_favored
+  required_directions:
+  - john_used_mark
+  selected_burden_scores: john_used_mark=59.741 (anchor_direct_use)
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: john_uses_matthew
+  short_label: John used Matthew
+  rating: weak_global_direct_model
+  required_directions:
+  - john_used_matthew
+  selected_burden_scores: john_used_matthew=55.862 (anchor_direct_use)
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: john_uses_luke
+  short_label: John used Luke
+  rating: local_possible_global_not_favored
+  required_directions:
+  - john_used_luke
+  selected_burden_scores: john_used_luke=58.598 (anchor_direct_use)
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: synoptics_use_john_or_johnlike
+  short_label: Synoptics used John / John-like tradition
+  rating: high_burden_if_canonical_john_source
+  required_directions:
+  - mark_used_john
+  - matthew_used_john
+  - luke_used_john
+  selected_burden_scores: mark_used_john=64.041 (anchor_reverse_direct_use); matthew_used_john=60.162
+    (anchor_reverse_direct_use); luke_used_john=61.698 (anchor_reverse_direct_use)
+  strongest_support: keeps possibility of pre-Johannine shared traditions
+  strongest_contra_or_unresolved_burden: de-Johannization/compression burden
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: high_burden_for_canonical_John_as_source
+  reader_note: Interpretive synthesis, not a posterior probability.
+- model_id: shared_john_synoptic_anchor_tradition
+  short_label: Shared John/Synoptic anchor tradition
+  rating: best_current_john_global_model
+  required_directions:
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  selected_burden_scores: shared_john_mark_anchor_tradition=23.5 (shared_anchor_tradition);
+    shared_john_luke_anchor_tradition=20.8 (shared_anchor_tradition); shared_john_matthew_anchor_tradition=24.8
+    (shared_anchor_tradition)
+  strongest_support: explains anchors without forcing monotonic chain
+  strongest_contra_or_unresolved_burden: local exact/specific clusters may still require
+    case-level direct-dependence explanations
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: strong_lowest_current_burden
+  reader_note: Interpretive synthesis, not a posterior probability.

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triple-tradition minor agreement row",
+  "type": "object",
+  "required": [
+    "minor_agreement_id",
+    "mark_ref",
+    "matt_ref",
+    "luke_ref",
+    "minor_agreement_strength"
+  ],
+  "properties": {
+    "minor_agreement_id": {
+      "type": "string"
+    },
+    "mark_ref": {
+      "type": "string"
+    },
+    "matt_ref": {
+      "type": "string"
+    },
+    "luke_ref": {
+      "type": "string"
+    },
+    "agreement_absent_from_mark_count": {
+      "type": "integer"
+    },
+    "mark_omitted_by_both_count": {
+      "type": "integer"
+    },
+    "minor_agreement_strength": {
+      "type": "integer"
+    },
+    "possible_implications": {
+      "type": "string"
+    }
+  }
+}

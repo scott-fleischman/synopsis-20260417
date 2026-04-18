@@ -1,0 +1,13 @@
+status: not a completed primary-text analysis layer
+why_not_fully_addressed_here:
+- no critical primary text layer for non-Thomas apocrypha
+- prior apocrypha file is inventory, not parsed aligned corpus
+recommended_next_ingestion_priorities:
+- text: Gospel of Peter
+  priority: high
+- text: Protevangelium of James
+  priority: medium_high
+- text: Infancy Gospel of Thomas
+  priority: medium
+- text: Gospel of Nicodemus / Acts of Pilate
+  priority: medium

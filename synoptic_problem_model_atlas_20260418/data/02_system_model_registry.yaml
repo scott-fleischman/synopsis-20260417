@@ -1,0 +1,156 @@
+- model_id: markan_priority_matthew_and_luke
+  short_label: Markan priority for Matthew and Luke
+  family: direct-literary
+  core_claim: Matthew and Luke each used Mark or a Mark-like written narrative source.
+  required_direction_hypotheses:
+  - matthew_used_mark
+  - luke_used_mark
+  optional_or_competing_components:
+  - shared_matt_luke_sayings_tradition
+  - luke_used_matthew
+  - matthew_used_luke
+  status_from_current_atlas: strong for Matthew used Mark; medium-high for Luke used
+    Mark over Mark used Luke, with shared-tradition penalty required
+- model_id: two_source_mark_q
+  short_label: Two-source / Mark + Q-like sayings source
+  family: source-critical
+  core_claim: Matthew and Luke used Mark independently and also drew on a shared non-Markan
+    sayings source/tradition.
+  required_direction_hypotheses:
+  - matthew_used_mark
+  - luke_used_mark
+  - shared_matt_luke_sayings_tradition
+  optional_or_competing_components:
+  - proto_mark_common_source
+  status_from_current_atlas: strong model fit for broad structure, but minor agreements
+    and Q-document reconstruction remain burdens
+- model_id: farrer_mark_matthew_luke
+  short_label: Farrer / Mark + Matthew → Luke
+  family: direct-literary
+  core_claim: Matthew used Mark; Luke used Mark and Matthew; Q is unnecessary.
+  required_direction_hypotheses:
+  - matthew_used_mark
+  - luke_used_mark
+  - luke_used_matthew
+  optional_or_competing_components:
+  - shared_matt_luke_sayings_tradition
+  status_from_current_atlas: viable major alternative; must explain Lukan redistribution
+    and omission of Matthean discourse/framing
+- model_id: matthew_used_luke_plus_mark_like
+  short_label: Matthew used Luke plus Mark-like material
+  family: direct-literary
+  core_claim: Matthew used Luke and Mark-like material, collecting/discourse-arranging
+    Lukan sayings.
+  required_direction_hypotheses:
+  - matthew_used_luke
+  - matthew_used_mark
+  optional_or_competing_components:
+  - luke_used_mark
+  - shared_matt_luke_sayings_tradition
+  status_from_current_atlas: possible locally, system-level burden high
+- model_id: griesbach_two_gospel
+  short_label: Griesbach / Two-Gospel model
+  family: direct-literary
+  core_claim: Matthew was first, Luke used Matthew, and Mark used both Matthew and
+    Luke.
+  required_direction_hypotheses:
+  - luke_used_matthew
+  - mark_used_matthew
+  - mark_used_luke
+  optional_or_competing_components: []
+  status_from_current_atlas: possible but high-burden due to Markan omission/compression
+    and roughening obligations
+- model_id: augustinian_matthew_mark_luke
+  short_label: Augustinian sequence Matthew → Mark → Luke
+  family: direct-literary
+  core_claim: Matthew wrote first; Mark used Matthew; Luke used Mark and perhaps Matthew.
+  required_direction_hypotheses:
+  - mark_used_matthew
+  - luke_used_mark
+  optional_or_competing_components:
+  - luke_used_matthew
+  status_from_current_atlas: high-burden because Mark used Matthew is weaker than
+    Matthew used Mark
+- model_id: proto_mark_plus_sayings
+  short_label: Proto-Mark/common narrative source + sayings tradition
+  family: lost-source/network
+  core_claim: Narrative agreements derive from a Mark-like common source plus a shared
+    sayings layer.
+  required_direction_hypotheses:
+  - proto_mark_common_source
+  - shared_matt_luke_sayings_tradition
+  optional_or_competing_components:
+  - matthew_used_mark
+  - luke_used_mark
+  status_from_current_atlas: plausible hedge against canonical-form uncertainty; pays
+    lost-source burden
+- model_id: oral_tradition_network
+  short_label: Stable oral/traditional network
+  family: non-direct/shared-tradition
+  core_claim: Similarities reflect stable oral/traditional narrative and sayings networks
+    more than direct copying.
+  required_direction_hypotheses:
+  - shared_mark_luke_tradition
+  - shared_matt_luke_sayings_tradition
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  optional_or_competing_components:
+  - matthew_used_mark
+  - luke_used_mark
+  status_from_current_atlas: good for sayings and John anchors; weak unless order-retention
+    penalties are paid for Synoptic narrative
+- model_id: john_uses_mark
+  short_label: John used Mark
+  family: john-synoptic-direct
+  core_claim: John knew Mark or Mark-like written material.
+  required_direction_hypotheses:
+  - john_used_mark
+  optional_or_competing_components:
+  - shared_john_mark_anchor_tradition
+  status_from_current_atlas: possible locally; shared anchor tradition lower globally
+- model_id: john_uses_matthew
+  short_label: John used Matthew
+  family: john-synoptic-direct
+  core_claim: John knew Matthew or Matthean tradition.
+  required_direction_hypotheses:
+  - john_used_matthew
+  optional_or_competing_components:
+  - shared_john_matthew_anchor_tradition
+  status_from_current_atlas: weak as global direct-use model
+- model_id: john_uses_luke
+  short_label: John used Luke
+  family: john-synoptic-direct
+  core_claim: John knew Luke or Lukan tradition.
+  required_direction_hypotheses:
+  - john_used_luke
+  optional_or_competing_components:
+  - shared_john_luke_anchor_tradition
+  status_from_current_atlas: possible locally; shared anchor tradition lower globally
+- model_id: synoptics_use_john_or_johnlike
+  short_label: Synoptics used John / John-like tradition
+  family: john-reverse-or-prejohannine
+  core_claim: Synoptics drew on John or pre-Johannine traditions.
+  required_direction_hypotheses:
+  - mark_used_john
+  - matthew_used_john
+  - luke_used_john
+  optional_or_competing_components:
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  status_from_current_atlas: high-burden if canonical John is source
+- model_id: shared_john_synoptic_anchor_tradition
+  short_label: Shared John/Synoptic anchor tradition
+  family: non-direct/shared-tradition
+  core_claim: John and Synoptics share passion/sign/Baptist anchor traditions without
+    global direct copying.
+  required_direction_hypotheses:
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  optional_or_competing_components:
+  - john_used_mark
+  - john_used_luke
+  - john_used_matthew
+  status_from_current_atlas: currently lowest burden for John-pair comparisons

@@ -1,0 +1,49 @@
+package_id: synoptic_problem_model_atlas_20260418
+purpose: Consolidated, expert-facing model-comparison dataset for the Synoptic Problem
+  including John.
+counts:
+  gospel_verse_rows: 3768
+  input_snapshots: 102
+  input_snapshot_bytes_mb: 62.4
+  system_models: 13
+  direction_hypotheses: 15
+  gospel_direction_matrix_cells: 16
+  pericope_ontology_rows: 102
+  pericope_ontology_synoptic_blocks: 92
+  pericope_ontology_john_anchors: 10
+  model_obligation_rows: 1945
+  material_by_model_rows: 1310
+  reorder_by_model_rows: 7578
+  wording_by_model_rows: 6029
+  minor_agreement_rows: 118
+  double_tradition_rows: 109
+  double_tradition_secondary_echoes: 60
+  variant_sensitivity_rows: 2682
+  conclusion_cards: 25
+major_outputs:
+  model_scorecard: data/52_system_model_comparison_scorecard.csv
+  gospel_direction_matrix: data/04_gospel_direction_matrix_4x4.csv
+  pericope_ontology: data/10_pericope_ontology_computational_and_anchor.csv
+  model_obligation_ledger: data/20_model_pericope_obligation_ledger.csv
+  minor_agreements: data/30_minor_agreements_catalog_triple_tradition.csv
+  double_tradition_order: data/40_double_tradition_order_catalog_markan_masked.csv
+  variant_sensitivity: data/70_variant_sensitivity_registry.csv
+  conclusion_cards: data/81_conclusion_evidence_counterevidence_cards.yaml
+headline_findings:
+- Matthew used Mark or a Mark-like source remains the strongest direction-level result.
+- Luke used Mark is stronger than Mark used Luke among direct-use alternatives, but
+  direct use over shared tradition requires explicit order-retention penalties.
+- Matthew-Luke masked double tradition still behaves more like a sayings/echo layer
+  than a stable narrative chain.
+- Minor agreements are now separated as an explicit model-discriminating catalog for
+  Q/Farrer/Griesbach/common-source/harmonization debates.
+- John-Synoptic evidence is best represented as anchor-level shared tradition with
+  local direct-use possibilities, not as a global monotonic chain.
+- The system-model scorecard is a transparent evidence index, not a probability ranking.
+method_status:
+  computed: verse inventory, minor agreements screen, double-tradition order fields,
+    model-component matrices
+  inherited_computed: primary-chain/block/matrix data from earlier packages
+  curated_or_interpretive: system model definitions, response-model prose, John anchor
+    registry, conclusion cards
+  text_critical: variant sensitivity is flagged, not fully adjudicated

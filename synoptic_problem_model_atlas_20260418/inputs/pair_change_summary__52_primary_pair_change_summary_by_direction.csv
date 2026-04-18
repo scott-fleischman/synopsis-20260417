@@ -1,0 +1,13 @@
+direction_id,pair_count,mean_score,mean_token_jaccard,mean_exact_run_len,max_exact_run_len,mean_source_token_count,mean_target_token_count,target_longer_pct
+john_used_luke,9,0.1528,0.1714,1.778,3,9.89,13.22,0.667
+john_used_mark,10,0.2401,0.2364,2.0,4,11.2,10.6,0.4
+john_used_matthew,10,0.3162,0.3212,2.6,6,10.4,10.3,0.2
+luke_used_john,9,0.1528,0.1714,1.778,3,13.22,9.89,0.333
+luke_used_mark,183,0.4042,0.396,3.727,11,10.85,10.49,0.388
+luke_used_matthew,233,0.3524,0.2685,2.657,14,10.68,10.04,0.412
+mark_used_john,10,0.2401,0.2364,2.0,4,10.6,11.2,0.6
+mark_used_luke,183,0.4042,0.396,3.727,11,10.49,10.85,0.492
+mark_used_matthew,385,0.4385,0.3694,3.075,17,10.2,10.37,0.462
+matthew_used_john,10,0.3162,0.3212,2.6,6,10.3,10.4,0.7
+matthew_used_luke,233,0.3524,0.2685,2.657,14,10.04,10.68,0.481
+matthew_used_mark,385,0.4385,0.3694,3.075,17,10.37,10.2,0.403

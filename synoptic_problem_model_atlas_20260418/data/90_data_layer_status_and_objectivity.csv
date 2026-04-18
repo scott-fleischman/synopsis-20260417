@@ -1,0 +1,9 @@
+layer_id,file,data_type,objectivity,curation
+gospel_verse_inventory,data/01_gospel_verse_inventory.csv,source-derived,high,none beyond source normalization
+pericope_ontology,data/10_pericope_ontology_computational_and_anchor.csv,alignment ontology,mixed,computed Synoptic blocks plus curated John anchors
+model_obligations,data/20_model_pericope_obligation_ledger.csv,model implication ledger,mixed,algorithmic + interpretive response labels
+minor_agreements,data/30_minor_agreements_catalog_triple_tradition.csv,computed screening catalog,medium-high,algorithmic triple-alignment filter
+double_tradition_order,data/40_double_tradition_order_catalog_markan_masked.csv,computed/order catalog,medium-high,uses Markan mask from prior package
+model_scorecard,data/52_system_model_comparison_scorecard.csv,interpretive synthesis,medium,explicit model-level synthesis
+variant_sensitivity,data/70_variant_sensitivity_registry.csv,text-critical audit,medium-high,variant-marker and apparatus-note extraction
+conclusion_cards,data/81_conclusion_evidence_counterevidence_cards.yaml,expert-facing conclusion index,mixed,explicit synthesis

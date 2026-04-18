@@ -1,0 +1,49 @@
+- gospel: Matthew
+  profile_basis: Mark→Matthew aligned data
+  confidence: high for aligned core
+  computed_indicators:
+    pericope_requirement_rows: 94
+    material_gap_rows: 26
+    pair_diff_rows: 385
+  inferred_tendencies:
+  - uses Mark-like sequence as narrative backbone
+  - adds/relocates non-Markan material
+  - clusters teaching/discourse material
+  - adds fulfillment/scriptural framing where present
+  caution: Inferred from current alignment data.
+- gospel: Luke
+  profile_basis: Mark→Luke and masked Matthew-Luke data
+  confidence: medium-high for Mark-prior over reverse
+  computed_indicators:
+    pericope_requirement_rows: 70
+    material_gap_rows: 113
+    pair_diff_rows: 183
+  inferred_tendencies:
+  - selective use of Mark-like sequence
+  - large non-Markan additions
+  - local smoothing/reframing
+  - displacement of sayings material
+  caution: Shared-tradition alternatives require order-retention penalties.
+- gospel: Mark_as_hypothetical_redactor
+  profile_basis: Reverse-direction ledgers
+  confidence: low-to-medium as explanatory profile
+  computed_indicators:
+    pericope_requirement_rows: 164
+    material_gap_rows: 139
+    pair_diff_rows: 568
+  inferred_tendencies_required_by_reverse_models:
+  - radical abbreviation/epitome
+  - omission/non-use of infancy/discourse blocks
+  - action-focused compression
+  caution: Required tendency under reverse models, not independently established.
+- gospel: John
+  profile_basis: John/Synoptic anchor-specific ledger
+  confidence: medium for shared anchor traditions
+  computed_indicators:
+    anchor_rows: 29
+    unique_anchors: 10
+  inferred_tendencies:
+  - transforms shared anchors into Johannine testimony/sign/discourse frames
+  - weak continuous order
+  - strongest overlap in passion/sign/Baptist anchors
+  caution: Anchor dossiers are partly curated.

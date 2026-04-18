@@ -1,0 +1,187 @@
+- direction_id: matthew_used_mark
+  hypothesis: Matthew used Mark
+  pair: Mark↔Matthew
+  current_status: supported / high confidence relative to reverse
+  primary_support_count: 3
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 8
+  max_gap_abs_difference: 112.0
+  reordering_or_secondary_echo_rows: 20
+  primary_pair_count: 385
+  mean_primary_pair_score: 0.4385
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Matthean redaction of Mark-like narrative source plus additional
+    sayings, fulfillment, infancy, and discourse traditions.
+- direction_id: mark_used_matthew
+  hypothesis: Mark used Matthew
+  pair: Mark↔Matthew
+  current_status: possible locally, higher cumulative burden
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 8
+  max_gap_abs_difference: 112.0
+  reordering_or_secondary_echo_rows: 20
+  primary_pair_count: 385
+  mean_primary_pair_score: 0.4385
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Markan epitome/abbreviation model with deliberate focus on
+    action narrative and omission of long discourse/infancy material; plausible only
+    if Mark had strong genre/theological reasons to compress Matthew.
+- direction_id: luke_used_mark
+  hypothesis: Luke used Mark
+  pair: Mark↔Luke
+  current_status: supported over reverse among direct-use alternatives; medium-high
+    with order-retention penalties
+  primary_support_count: 3
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 8
+  max_gap_abs_difference: 228.0
+  reordering_or_secondary_echo_rows: 154
+  primary_pair_count: 183
+  mean_primary_pair_score: 0.4042
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Luke used Mark-like narrative source selectively, combining
+    it with other sources/traditions and extensive Lukan redaction; shared-tradition
+    alternatives must pay an order-retention penalty.
+- direction_id: mark_used_luke
+  hypothesis: Mark used Luke
+  pair: Mark↔Luke
+  current_status: possible locally, higher burden than Luke used Mark among direct-use
+    alternatives
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 8
+  max_gap_abs_difference: 228.0
+  reordering_or_secondary_echo_rows: 154
+  primary_pair_count: 183
+  mean_primary_pair_score: 0.4042
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Markan epitome of Luke with radical abbreviation and narrative
+    concentration; this is a high-burden response model in the current data.
+- direction_id: matthew_used_luke
+  hypothesis: Matthew used Luke
+  pair: Matthew↔Luke
+  current_status: not demonstrated after Markan masking; possible locally
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 12
+  max_gap_abs_difference: 237.0
+  reordering_or_secondary_echo_rows: 1031
+  primary_pair_count: 233
+  mean_primary_pair_score: 0.3524
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Matthew used Luke-like sayings/tradition or Luke itself selectively,
+    reorganizing sayings into discourse blocks; strongest version requires a robust
+    explanation for displaced double-tradition order.
+- direction_id: luke_used_matthew
+  hypothesis: Luke used Matthew
+  pair: Matthew↔Luke
+  current_status: possible locally; not demonstrated by masked data alone
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 12
+  max_gap_abs_difference: 237.0
+  reordering_or_secondary_echo_rows: 1031
+  primary_pair_count: 233
+  mean_primary_pair_score: 0.3524
+  john_anchor_count: .nan
+  john_anchors_where_shared_tradition_best: .nan
+  best_response_model: Luke used Matthew selectively, deliberately de-Mattheanizing
+    discourse clusters and redistributing sayings; plausible under a strong editorial-theological
+    program but not forced by current masked data.
+- direction_id: john_used_mark
+  hypothesis: John used Mark
+  pair: John↔Mark
+  current_status: possible locally; shared anchor tradition currently lower burden
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 10
+  mean_primary_pair_score: 0.2401
+  john_anchor_count: 10.0
+  john_anchors_where_shared_tradition_best: 10.0
+  best_response_model: John knew Mark or Mark-like tradition but used it selectively
+    through a theological rewriting program; strongest only for local passion/sign
+    anchors, not global dependence.
+- direction_id: john_used_matthew
+  hypothesis: John used Matthew
+  pair: John↔Matthew
+  current_status: possible locally; shared anchor tradition currently lower burden
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 10
+  mean_primary_pair_score: 0.3162
+  john_anchor_count: 10.0
+  john_anchors_where_shared_tradition_best: 10.0
+  best_response_model: John used Matthew-like tradition selectively or knew Synoptic
+    tradition in a Matthean form; current evidence is better treated anchor by anchor.
+- direction_id: john_used_luke
+  hypothesis: John used Luke
+  pair: John↔Luke
+  current_status: possible locally; shared anchor tradition currently lower burden
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 9
+  mean_primary_pair_score: 0.1528
+  john_anchor_count: 9.0
+  john_anchors_where_shared_tradition_best: 9.0
+  best_response_model: John knew Luke-like traditions or a shared passion/sign source;
+    direct use of canonical Luke remains a local possibility, not a global conclusion.
+- direction_id: mark_used_john
+  hypothesis: Mark used John
+  pair: John↔Mark
+  current_status: low support; included for completeness
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 10
+  mean_primary_pair_score: 0.2401
+  john_anchor_count: 10.0
+  john_anchors_where_shared_tradition_best: 10.0
+  best_response_model: A radical Synoptic condensation of Johannine tradition; currently
+    a high-burden completeness hypothesis.
+- direction_id: matthew_used_john
+  hypothesis: Matthew used John
+  pair: John↔Matthew
+  current_status: low support; included for completeness
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 10
+  mean_primary_pair_score: 0.3162
+  john_anchor_count: 10.0
+  john_anchors_where_shared_tradition_best: 10.0
+  best_response_model: Matthew knew a Johannine-like anchor tradition but not necessarily
+    the Gospel of John; direct use of John is not currently supported.
+- direction_id: luke_used_john
+  hypothesis: Luke used John
+  pair: John↔Luke
+  current_status: low support; included for completeness
+  primary_support_count: 2
+  primary_contra_count: 4
+  major_gap_count_abs_diff_ge_20: 0
+  max_gap_abs_difference: .nan
+  reordering_or_secondary_echo_rows: 0
+  primary_pair_count: 9
+  mean_primary_pair_score: 0.1528
+  john_anchor_count: 9.0
+  john_anchors_where_shared_tradition_best: 9.0
+  best_response_model: Luke knew a shared Johannine-like passion/sign tradition rather
+    than using canonical John; direct John→Luke is a low-priority hypothesis.

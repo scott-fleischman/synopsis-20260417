@@ -1,0 +1,800 @@
+- pair: Mark↔Matthew
+  interval_id: mm_gap_000
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 1:1–Mark 1:2
+  target_gap_range: Matt 1:1–Matt 3:2
+  source_gap_count: 2
+  target_gap_count: 50
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 48
+  interpretation: Matthew has 48 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_000
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 1:1–Matt 3:2
+  target_gap_range: Mark 1:1–Mark 1:2
+  source_gap_count: 50
+  target_gap_count: 2
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 48
+  interpretation: Matthew has 48 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_003
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: ''
+  target_gap_range: Matt 4:24–Matt 7:28
+  source_gap_count: 0
+  target_gap_count: 112
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 112
+  interpretation: Matthew has 112 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_003
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 4:24–Matt 7:28
+  target_gap_range: ''
+  source_gap_count: 112
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 112
+  interpretation: Matthew has 112 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_005
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 2:2–Mark 2:4
+  target_gap_range: Matt 8:6–Matt 9:1
+  source_gap_count: 3
+  target_gap_count: 30
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 27
+  interpretation: Matthew has 27 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_005
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 8:6–Matt 9:1
+  target_gap_range: Mark 2:2–Mark 2:4
+  source_gap_count: 30
+  target_gap_count: 3
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 27
+  interpretation: Matthew has 27 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_006
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: ''
+  target_gap_range: Matt 9:18–Matt 11:30
+  source_gap_count: 0
+  target_gap_count: 93
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 93
+  interpretation: Matthew has 93 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_006
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 9:18–Matt 11:30
+  target_gap_range: ''
+  source_gap_count: 93
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 93
+  interpretation: Matthew has 93 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_011
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 4:35–Mark 6:1
+  target_gap_range: Matt 13:35–Matt 13:53
+  source_gap_count: 51
+  target_gap_count: 19
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Markan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 32
+  interpretation: Mark has 32 more gap verses than Matthew at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_011
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 13:35–Matt 13:53
+  target_gap_range: Mark 4:35–Mark 6:1
+  source_gap_count: 19
+  target_gap_count: 51
+  dominant_material_issue: target_addition
+  directional_implication: Mark adds material here beyond Matthew.
+  plausible_response: Markan expansion/vividization or de-grouping.
+  contrary_evidence_value: 32
+  interpretation: Mark has 32 more gap verses than Matthew at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_017
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 9:48–Mark 10:5
+  target_gap_range: Matt 18:10–Matt 19:3
+  source_gap_count: 8
+  target_gap_count: 28
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 20
+  interpretation: Matthew has 20 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_017
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 18:10–Matt 19:3
+  target_gap_range: Mark 9:48–Mark 10:5
+  source_gap_count: 28
+  target_gap_count: 8
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 20
+  interpretation: Matthew has 20 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_021
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 12:38–Mark 12:44
+  target_gap_range: Matt 22:46–Matt 23:39
+  source_gap_count: 7
+  target_gap_count: 39
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 32
+  interpretation: Matthew has 32 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_021
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 22:46–Matt 23:39
+  target_gap_range: Mark 12:38–Mark 12:44
+  source_gap_count: 39
+  target_gap_count: 7
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 32
+  interpretation: Matthew has 32 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_022
+  direction_id: matthew_used_mark
+  source: Mark
+  target: Matthew
+  source_gap_range: Mark 13:33–Mark 13:37
+  target_gap_range: Matt 24:37–Matt 26:3
+  source_gap_count: 5
+  target_gap_count: 64
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition extra material here.
+  plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+  contrary_evidence_value: 59
+  interpretation: Matthew has 59 more gap verses than Mark at this boundary.
+- pair: Mark↔Matthew
+  interval_id: mm_gap_022
+  direction_id: mark_used_matthew
+  source: Matthew
+  target: Mark
+  source_gap_range: Matt 24:37–Matt 26:3
+  target_gap_range: Mark 13:33–Mark 13:37
+  source_gap_count: 64
+  target_gap_count: 5
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Matthean material here.
+  plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+  contrary_evidence_value: 59
+  interpretation: Matthew has 59 more gap verses than Mark at this boundary.
+- pair: Mark↔Luke
+  interval_id: gap_000
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 1:1; Mark 1:2
+  target_gap_range: Luke 1:1; Luke 1:2; Luke 1:3; Luke 1:4; ...+37 more
+  source_gap_count: 2
+  target_gap_count: 135
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 133
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_000
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 1:1; Luke 1:2; Luke 1:3; Luke 1:4; ...+37 more
+  target_gap_range: Mark 1:1; Mark 1:2
+  source_gap_count: 135
+  target_gap_count: 2
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 133
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_003
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 1:12; Mark 1:13; Mark 1:14; Mark 1:15; ...+5 more
+  target_gap_range: Luke 3:23; Luke 3:24; Luke 3:25; Luke 3:26; ...+37 more
+  source_gap_count: 9
+  target_gap_count: 46
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 37
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_003
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 3:23; Luke 3:24; Luke 3:25; Luke 3:26; ...+37 more
+  target_gap_range: Mark 1:12; Mark 1:13; Mark 1:14; Mark 1:15; ...+5 more
+  source_gap_count: 46
+  target_gap_count: 9
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 37
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_036
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 3:20; Mark 3:21; Mark 3:22; Mark 3:23; ...+15 more
+  target_gap_range: Luke 6:17; Luke 6:18; Luke 6:19; Luke 6:20; ...+37 more
+  source_gap_count: 19
+  target_gap_count: 87
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 68
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_036
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 6:17; Luke 6:18; Luke 6:19; Luke 6:20; ...+37 more
+  target_gap_range: Mark 3:20; Mark 3:21; Mark 3:22; Mark 3:23; ...+15 more
+  source_gap_count: 87
+  target_gap_count: 19
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 68
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_069
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 6:43; Mark 6:44; Mark 6:45; Mark 6:46; ...+37 more
+  target_gap_range: Luke 9:18
+  source_gap_count: 77
+  target_gap_count: 1
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Markan material here.
+  plausible_response: Lukan abbreviation/omission/reordering of Markan sequence.
+  contrary_evidence_value: 76
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_069
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 9:18
+  target_gap_range: Mark 6:43; Mark 6:44; Mark 6:45; Mark 6:46; ...+37 more
+  source_gap_count: 1
+  target_gap_count: 77
+  dominant_material_issue: target_addition
+  directional_implication: Mark adds material here beyond Luke.
+  plausible_response: Markan expansion or vividization.
+  contrary_evidence_value: 76
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_086
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 9:41; Mark 9:42; Mark 9:43; Mark 9:45; ...+3 more
+  target_gap_range: Luke 9:51; Luke 9:52; Luke 9:53; Luke 9:54; ...+37 more
+  source_gap_count: 7
+  target_gap_count: 235
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 228
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_086
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 9:51; Luke 9:52; Luke 9:53; Luke 9:54; ...+37 more
+  target_gap_range: Mark 9:41; Mark 9:42; Mark 9:43; Mark 9:45; ...+3 more
+  source_gap_count: 235
+  target_gap_count: 7
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 228
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_088
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 10:6; Mark 10:7
+  target_gap_range: Luke 15:4; Luke 15:5; Luke 15:6; Luke 15:7; ...+37 more
+  source_gap_count: 2
+  target_gap_count: 94
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 92
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_088
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 15:4; Luke 15:5; Luke 15:6; Luke 15:7; ...+37 more
+  target_gap_range: Mark 10:6; Mark 10:7
+  source_gap_count: 94
+  target_gap_count: 2
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 92
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_110
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: ''
+  target_gap_range: Luke 18:43; Luke 19:1; Luke 19:2; Luke 19:3; ...+25 more
+  source_gap_count: 0
+  target_gap_count: 29
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 29
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_110
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 18:43; Luke 19:1; Luke 19:2; Luke 19:3; ...+25 more
+  target_gap_range: ''
+  source_gap_count: 29
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 29
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_183
+  direction_id: luke_used_mark
+  source: Mark
+  target: Luke
+  source_gap_range: Mark 15:44; Mark 15:45; Mark 15:46; Mark 15:47; ...+8 more
+  target_gap_range: Luke 23:53; Luke 23:54; Luke 23:55; Luke 23:56; ...+37 more
+  source_gap_count: 12
+  target_gap_count: 57
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+  contrary_evidence_value: 45
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Mark↔Luke
+  interval_id: gap_183
+  direction_id: mark_used_luke
+  source: Luke
+  target: Mark
+  source_gap_range: Luke 23:53; Luke 23:54; Luke 23:55; Luke 23:56; ...+37 more
+  target_gap_range: Mark 15:44; Mark 15:45; Mark 15:46; Mark 15:47; ...+8 more
+  source_gap_count: 57
+  target_gap_count: 12
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Mark must omit/non-use Lukan material here.
+  plausible_response: Markan radical epitome/abbreviation of Luke.
+  contrary_evidence_value: 45
+  interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+    material present only/mostly in source is an omission/addition burden under target-prior.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_002
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 2:1–Matt 2:9
+  target_gap_range: Luke 1:32–Luke 2:9
+  source_gap_count: 9
+  target_gap_count: 58
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 49
+  interpretation: Luke has 49 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_002
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 1:32–Luke 2:9
+  target_gap_range: Matt 2:1–Matt 2:9
+  source_gap_count: 58
+  target_gap_count: 9
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 49
+  interpretation: Luke has 49 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_003
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 2:11–Matt 3:2
+  target_gap_range: Luke 2:11–Luke 3:3
+  source_gap_count: 15
+  target_gap_count: 45
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 30
+  interpretation: Luke has 30 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_003
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 2:11–Luke 3:3
+  target_gap_range: Matt 2:11–Matt 3:2
+  source_gap_count: 45
+  target_gap_count: 15
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 30
+  interpretation: Luke has 30 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_006
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 4:24–Matt 7:27
+  target_gap_range: Luke 4:16–Luke 4:31
+  source_gap_count: 111
+  target_gap_count: 16
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Matthean material here.
+  plausible_response: Lukan abbreviation/de-Mattheanization.
+  contrary_evidence_value: 95
+  interpretation: Matthew has 95 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_006
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 4:16–Luke 4:31
+  target_gap_range: Matt 4:24–Matt 7:27
+  source_gap_count: 16
+  target_gap_count: 111
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition material here.
+  plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+  contrary_evidence_value: 95
+  interpretation: Matthew has 95 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_007
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 7:29–Matt 8:1
+  target_gap_range: Luke 4:33–Luke 5:11
+  source_gap_count: 2
+  target_gap_count: 23
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 21
+  interpretation: Luke has 21 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_007
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 4:33–Luke 5:11
+  target_gap_range: Matt 7:29–Matt 8:1
+  source_gap_count: 23
+  target_gap_count: 2
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 21
+  interpretation: Luke has 21 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_008
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 8:5–Matt 9:1
+  target_gap_range: Luke 5:15–Luke 5:19
+  source_gap_count: 31
+  target_gap_count: 5
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Matthean material here.
+  plausible_response: Lukan abbreviation/de-Mattheanization.
+  contrary_evidence_value: 26
+  interpretation: Matthew has 26 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_008
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 5:15–Luke 5:19
+  target_gap_range: Matt 8:5–Matt 9:1
+  source_gap_count: 5
+  target_gap_count: 31
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition material here.
+  plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+  contrary_evidence_value: 26
+  interpretation: Matthew has 26 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_018
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 14:21–Matt 15:9
+  target_gap_range: ''
+  source_gap_count: 25
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Matthean material here.
+  plausible_response: Lukan abbreviation/de-Mattheanization.
+  contrary_evidence_value: 25
+  interpretation: Matthew has 25 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_018
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: ''
+  target_gap_range: Matt 14:21–Matt 15:9
+  source_gap_count: 0
+  target_gap_count: 25
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition material here.
+  plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+  contrary_evidence_value: 25
+  interpretation: Matthew has 25 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_019
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 15:11–Matt 16:13
+  target_gap_range: ''
+  source_gap_count: 42
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Matthean material here.
+  plausible_response: Lukan abbreviation/de-Mattheanization.
+  contrary_evidence_value: 42
+  interpretation: Matthew has 42 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_019
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: ''
+  target_gap_range: Matt 15:11–Matt 16:13
+  source_gap_count: 0
+  target_gap_count: 42
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition material here.
+  plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+  contrary_evidence_value: 42
+  interpretation: Matthew has 42 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_020
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 18:6–Matt 18:9
+  target_gap_range: Luke 9:49–Luke 15:2
+  source_gap_count: 4
+  target_gap_count: 241
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 237
+  interpretation: Luke has 237 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_020
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 9:49–Luke 15:2
+  target_gap_range: Matt 18:6–Matt 18:9
+  source_gap_count: 241
+  target_gap_count: 4
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 237
+  interpretation: Luke has 237 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_021
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: ''
+  target_gap_range: Luke 15:8–Luke 17:1
+  source_gap_count: 0
+  target_gap_count: 57
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 57
+  interpretation: Luke has 57 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_021
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 15:8–Luke 17:1
+  target_gap_range: ''
+  source_gap_count: 57
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 57
+  interpretation: Luke has 57 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_025
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: ''
+  target_gap_range: Luke 19:1–Luke 19:28
+  source_gap_count: 0
+  target_gap_count: 28
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 28
+  interpretation: Luke has 28 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_025
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 19:1–Luke 19:28
+  target_gap_range: ''
+  source_gap_count: 28
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 28
+  interpretation: Luke has 28 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_028
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: Matt 24:36–Matt 26:2
+  target_gap_range: Luke 21:34–Luke 22:1
+  source_gap_count: 64
+  target_gap_count: 6
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Luke must omit/compress Matthean material here.
+  plausible_response: Lukan abbreviation/de-Mattheanization.
+  contrary_evidence_value: 58
+  interpretation: Matthew has 58 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_028
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 21:34–Luke 22:1
+  target_gap_range: Matt 24:36–Matt 26:2
+  source_gap_count: 6
+  target_gap_count: 64
+  dominant_material_issue: target_addition
+  directional_implication: Matthew must add/insert/reposition material here.
+  plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+  contrary_evidence_value: 58
+  interpretation: Matthew has 58 more gap verses than Luke at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_029
+  direction_id: luke_used_matthew
+  source: Matthew
+  target: Luke
+  source_gap_range: ''
+  target_gap_range: Luke 22:19–Luke 22:38
+  source_gap_count: 0
+  target_gap_count: 20
+  dominant_material_issue: target_addition
+  directional_implication: Luke must add/insert/reposition material here.
+  plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+  contrary_evidence_value: 20
+  interpretation: Luke has 20 more gap verses than Matthew at this boundary.
+- pair: Matthew↔Luke
+  interval_id: ml_gap_029
+  direction_id: matthew_used_luke
+  source: Luke
+  target: Matthew
+  source_gap_range: Luke 22:19–Luke 22:38
+  target_gap_range: ''
+  source_gap_count: 20
+  target_gap_count: 0
+  dominant_material_issue: target_omission_of_source
+  directional_implication: Matthew must omit/compress Lukan material here.
+  plausible_response: Matthean abbreviation or relocation.
+  contrary_evidence_value: 20
+  interpretation: Luke has 20 more gap verses than Matthew at this boundary.

@@ -1,0 +1,71 @@
+purpose: Recommended expert-facing visualization/data presentation layer for this
+  atlas.
+priority_order:
+- view_id: gospel_direction_matrix
+  data_files:
+  - data/04_gospel_direction_matrix_4x4.csv
+  - data/52_system_model_comparison_scorecard.csv
+  scholarly_question: Which Gospel-to-Gospel directions are represented, and how strong/costly
+    are they?
+  design: 4×4 source→target matrix with each cell showing support, counterevidence,
+    best response model, and links to dossiers.
+- view_id: model_comparison_dashboard
+  data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  scholarly_question: What does each major Synoptic model explain well, and what does
+    it struggle to explain?
+  design: Cards for Two-source, Farrer, Griesbach, proto-Mark, oral network, John/Synoptic
+    models; support and limitations side-by-side.
+- view_id: pericope_dossier_browser
+  data_files:
+  - data/10_pericope_ontology_computational_and_anchor.csv
+  - data/11_pericope_model_dossiers.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  scholarly_question: For this pericope, what does each model/direction have to explain?
+  design: Searchable pericope list with side-by-side Greek text, direction obligations,
+    counterevidence, response models.
+- view_id: minor_agreements_dashboard
+  data_files:
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/31_minor_agreements_summary.yaml
+  scholarly_question: Where do Matthew and Luke agree against Mark in aligned triple
+    tradition?
+  design: Sortable catalog by strength; columns for addition-against-Mark and omission-against-Mark
+    tokens.
+- view_id: double_tradition_order_dashboard
+  data_files:
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+  - data/41_double_tradition_order_summary.yaml
+  scholarly_question: Does Matthew–Luke non-Markan material behave like direct copying,
+    common source, or mobile sayings tradition?
+  design: Order/displacement plot plus table separating primary monotonic and secondary/nonlocal
+    echoes.
+- view_id: john_anchor_dashboard
+  data_files:
+  - data/10_pericope_ontology_computational_and_anchor.csv
+  - data/20_model_pericope_obligation_ledger.csv
+  scholarly_question: For John/Synoptic anchors, does direct use or shared anchor
+    tradition fit better?
+  design: Anchor cards with John, Mark, Matthew, Luke references and model burdens.
+- view_id: variant_sensitivity_dashboard
+  data_files:
+  - data/70_variant_sensitivity_registry.csv
+  - data/71_text_critical_policy.yaml
+  scholarly_question: Which claims or parallels are text-critically sensitive?
+  design: Filter by variant layer, reference, and conclusion stability.
+- view_id: conclusion_cards
+  data_files:
+  - data/81_conclusion_evidence_counterevidence_cards.yaml
+  scholarly_question: What can be responsibly concluded, what supports it, and what
+    counts against it?
+  design: No conclusion card without an explicit counterevidence panel and links to
+    raw data.
+presentation_principles:
+- Never display a score without explaining whether it is retrieval, burden, or interpretive
+  synthesis.
+- Always distinguish computed, inherited-computed, curated, and interpretive data
+  layers.
+- Show support and counterevidence in equal visual weight.
+- Use pericope/anchor dossiers as the central expert-facing unit.
+- Make every chart downloadable as CSV/YAML.

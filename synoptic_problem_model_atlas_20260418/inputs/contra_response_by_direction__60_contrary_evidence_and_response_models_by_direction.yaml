@@ -1,0 +1,1423 @@
+matthew_used_mark:
+  hypothesis: Matthew used Mark
+  source: Mark
+  target: Matthew
+  current_status: supported / high confidence relative to reverse
+  supporting_evidence:
+  - Large Mark–Matthew primary chain and Mark-like order skeleton.
+  - Burden lower than Mark-used-Matthew in rerun.
+  - Matthean additions/gaps fit source-plus-additional-material model.
+  contrary_evidence:
+  - Matthew has major additional material, so Mark cannot be the only source.
+  - Some Markan vividness and roughness could look secondary if judged locally.
+  - Some agreements could be mediated by shared tradition rather than direct copying.
+  - Text-critical variation and pericope-level displacement complicate strict one-source claims.
+  best_response_model: Matthean redaction of Mark-like narrative source plus additional sayings, fulfillment, infancy, and
+    discourse traditions.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: direct_use
+      burden_score: 774.87
+      interpretive_result: lower burden than Mark used Matthew
+    gap_interval_count: 26
+    major_gap_count_abs_diff_ge_20: 8
+    max_gap_abs_difference: 112
+    reordering_or_secondary_echo_rows: 20
+    primary_pair_count: 385
+    mean_primary_pair_score: 0.4385
+    mean_token_jaccard: 0.3694
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_003
+    direction_id: matthew_used_mark
+    source: Mark
+    target: Matthew
+    source_gap_range: .nan
+    target_gap_range: Matt 4:24–Matt 7:28
+    source_gap_count: 0
+    target_gap_count: 112
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition extra material here.
+    plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+    contrary_evidence_value: 112
+    interpretation: Matthew has 112 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_006
+    direction_id: matthew_used_mark
+    source: Mark
+    target: Matthew
+    source_gap_range: .nan
+    target_gap_range: Matt 9:18–Matt 11:30
+    source_gap_count: 0
+    target_gap_count: 93
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition extra material here.
+    plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+    contrary_evidence_value: 93
+    interpretation: Matthew has 93 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_022
+    direction_id: matthew_used_mark
+    source: Mark
+    target: Matthew
+    source_gap_range: Mark 13:33–Mark 13:37
+    target_gap_range: Matt 24:37–Matt 26:3
+    source_gap_count: 5
+    target_gap_count: 64
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition extra material here.
+    plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+    contrary_evidence_value: 59
+    interpretation: Matthew has 59 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_000
+    direction_id: matthew_used_mark
+    source: Mark
+    target: Matthew
+    source_gap_range: Mark 1:1–Mark 1:2
+    target_gap_range: Matt 1:1–Matt 3:2
+    source_gap_count: 2
+    target_gap_count: 50
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition extra material here.
+    plausible_response: Matthean added source/tradition/discourse/fulfillment material or relocation.
+    contrary_evidence_value: 48
+    interpretation: Matthew has 48 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_011
+    direction_id: matthew_used_mark
+    source: Mark
+    target: Matthew
+    source_gap_range: Mark 4:35–Mark 6:1
+    target_gap_range: Matt 13:35–Matt 13:53
+    source_gap_count: 51
+    target_gap_count: 19
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Matthew must omit/compress Markan material here.
+    plausible_response: Matthean abbreviation or relocation.
+    contrary_evidence_value: 32
+    interpretation: Mark has 32 more gap verses than Matthew at this boundary.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+mark_used_matthew:
+  hypothesis: Mark used Matthew
+  source: Matthew
+  target: Mark
+  current_status: possible locally, higher cumulative burden
+  supporting_evidence:
+  - Many close Mark–Matthew local agreements can be described under reverse direction.
+  - Mark’s shorter form could be construed as an epitome in individual places.
+  contrary_evidence:
+  - The repeated omission of high-value Matthean material has high cumulative burden.
+  - Mark’s shorter form is often easier to explain as source than as drastic abridgment of Matthew.
+  - Matthean discourse clustering looks like expansion/organization rather than material Mark split apart.
+  - The global Mark–Matthew alignment favors Mark-like source priority under the current burden model.
+  best_response_model: Markan epitome/abbreviation model with deliberate focus on action narrative and omission of long discourse/infancy
+    material; plausible only if Mark had strong genre/theological reasons to compress Matthew.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: direct_use
+      burden_score: 788.66
+      interpretive_result: higher burden than Matthew used Mark
+    gap_interval_count: 26
+    major_gap_count_abs_diff_ge_20: 8
+    max_gap_abs_difference: 112
+    reordering_or_secondary_echo_rows: 20
+    primary_pair_count: 385
+    mean_primary_pair_score: 0.4385
+    mean_token_jaccard: 0.3694
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_003
+    direction_id: mark_used_matthew
+    source: Matthew
+    target: Mark
+    source_gap_range: Matt 4:24–Matt 7:28
+    target_gap_range: .nan
+    source_gap_count: 112
+    target_gap_count: 0
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Matthean material here.
+    plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+    contrary_evidence_value: 112
+    interpretation: Matthew has 112 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_006
+    direction_id: mark_used_matthew
+    source: Matthew
+    target: Mark
+    source_gap_range: Matt 9:18–Matt 11:30
+    target_gap_range: .nan
+    source_gap_count: 93
+    target_gap_count: 0
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Matthean material here.
+    plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+    contrary_evidence_value: 93
+    interpretation: Matthew has 93 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_022
+    direction_id: mark_used_matthew
+    source: Matthew
+    target: Mark
+    source_gap_range: Matt 24:37–Matt 26:3
+    target_gap_range: Mark 13:33–Mark 13:37
+    source_gap_count: 64
+    target_gap_count: 5
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Matthean material here.
+    plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+    contrary_evidence_value: 59
+    interpretation: Matthew has 59 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_000
+    direction_id: mark_used_matthew
+    source: Matthew
+    target: Mark
+    source_gap_range: Matt 1:1–Matt 3:2
+    target_gap_range: Mark 1:1–Mark 1:2
+    source_gap_count: 50
+    target_gap_count: 2
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Matthean material here.
+    plausible_response: Markan epitome/abbreviation and action-narrative selectivity.
+    contrary_evidence_value: 48
+    interpretation: Matthew has 48 more gap verses than Mark at this boundary.
+  - pair: Mark↔Matthew
+    interval_id: mm_gap_011
+    direction_id: mark_used_matthew
+    source: Matthew
+    target: Mark
+    source_gap_range: Matt 13:35–Matt 13:53
+    target_gap_range: Mark 4:35–Mark 6:1
+    source_gap_count: 19
+    target_gap_count: 51
+    dominant_material_issue: target_addition
+    directional_implication: Mark adds material here beyond Matthew.
+    plausible_response: Markan expansion/vividization or de-grouping.
+    contrary_evidence_value: 32
+    interpretation: Mark has 32 more gap verses than Matthew at this boundary.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+luke_used_mark:
+  hypothesis: Luke used Mark
+  source: Mark
+  target: Luke
+  current_status: supported over reverse among direct-use alternatives; medium-high with order-retention penalties
+  supporting_evidence:
+  - Mark–Luke primary chain shows substantial narrative alignment.
+  - Direct-use burden lower than Mark-used-Luke.
+  - Morphology audit strengthens many Mark–Luke local alignments.
+  contrary_evidence:
+  - An unpenalized shared-tradition model had lower burden than either direct-use direction.
+  - Luke has major non-Markan blocks and different theological/narrative aims.
+  - Some Mark–Luke parallels are low-score or could reflect common tradition.
+  - The Mark–Luke data alone is not as decisive as Mark–Matthew.
+  best_response_model: Luke used Mark-like narrative source selectively, combining it with other sources/traditions and extensive
+    Lukan redaction; shared-tradition alternatives must pay an order-retention penalty.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: direct_use
+      burden_score: 254.6466
+      interpretive_result: lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in
+        moderate penalty model
+    gap_interval_count: 113
+    major_gap_count_abs_diff_ge_20: 8
+    max_gap_abs_difference: 228
+    reordering_or_secondary_echo_rows: 154
+    primary_pair_count: 183
+    mean_primary_pair_score: 0.4042
+    mean_token_jaccard: 0.396
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Mark↔Luke
+    interval_id: gap_086
+    direction_id: luke_used_mark
+    source: Mark
+    target: Luke
+    source_gap_range: Mark 9:41; Mark 9:42; Mark 9:43; Mark 9:45; ...+3 more
+    target_gap_range: Luke 9:51; Luke 9:52; Luke 9:53; Luke 9:54; ...+37 more
+    source_gap_count: 7
+    target_gap_count: 235
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+    contrary_evidence_value: 228
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_000
+    direction_id: luke_used_mark
+    source: Mark
+    target: Luke
+    source_gap_range: Mark 1:1; Mark 1:2
+    target_gap_range: Luke 1:1; Luke 1:2; Luke 1:3; Luke 1:4; ...+37 more
+    source_gap_count: 2
+    target_gap_count: 135
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+    contrary_evidence_value: 133
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_088
+    direction_id: luke_used_mark
+    source: Mark
+    target: Luke
+    source_gap_range: Mark 10:6; Mark 10:7
+    target_gap_range: Luke 15:4; Luke 15:5; Luke 15:6; Luke 15:7; ...+37 more
+    source_gap_count: 2
+    target_gap_count: 94
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+    contrary_evidence_value: 92
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_069
+    direction_id: luke_used_mark
+    source: Mark
+    target: Luke
+    source_gap_range: Mark 6:43; Mark 6:44; Mark 6:45; Mark 6:46; ...+37 more
+    target_gap_range: Luke 9:18
+    source_gap_count: 77
+    target_gap_count: 1
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Luke must omit/compress Markan material here.
+    plausible_response: Lukan abbreviation/omission/reordering of Markan sequence.
+    contrary_evidence_value: 76
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_036
+    direction_id: luke_used_mark
+    source: Mark
+    target: Luke
+    source_gap_range: Mark 3:20; Mark 3:21; Mark 3:22; Mark 3:23; ...+15 more
+    target_gap_range: Luke 6:17; Luke 6:18; Luke 6:19; Luke 6:20; ...+37 more
+    source_gap_count: 19
+    target_gap_count: 87
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan infancy/travel/teaching material or relocation from other sources.
+    contrary_evidence_value: 68
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+mark_used_luke:
+  hypothesis: Mark used Luke
+  source: Luke
+  target: Mark
+  current_status: possible locally, higher burden than Luke used Mark among direct-use alternatives
+  supporting_evidence:
+  - Mark–Luke local agreements can be reversed formally.
+  - Some Markan concision could be framed as abbreviation of Luke.
+  contrary_evidence:
+  - Mark must omit more distinctive Lukan material than Luke must add under Mark-prior.
+  - Luke-prior direct-use burden is higher in the Mark–Luke ledger.
+  - Mark’s style and order fit better as a shorter narrative source in the broader Synoptic system.
+  - Matthew’s relation to Mark independently supports a Mark-like source before both Matthew and Luke.
+  best_response_model: Markan epitome of Luke with radical abbreviation and narrative concentration; this is a high-burden
+    response model in the current data.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: direct_use
+      burden_score: 303.1966
+      interpretive_result: higher than Luke used Mark among direct-use alternatives
+    gap_interval_count: 113
+    major_gap_count_abs_diff_ge_20: 8
+    max_gap_abs_difference: 228
+    reordering_or_secondary_echo_rows: 154
+    primary_pair_count: 183
+    mean_primary_pair_score: 0.4042
+    mean_token_jaccard: 0.396
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Mark↔Luke
+    interval_id: gap_086
+    direction_id: mark_used_luke
+    source: Luke
+    target: Mark
+    source_gap_range: Luke 9:51; Luke 9:52; Luke 9:53; Luke 9:54; ...+37 more
+    target_gap_range: Mark 9:41; Mark 9:42; Mark 9:43; Mark 9:45; ...+3 more
+    source_gap_count: 235
+    target_gap_count: 7
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Lukan material here.
+    plausible_response: Markan radical epitome/abbreviation of Luke.
+    contrary_evidence_value: 228
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_000
+    direction_id: mark_used_luke
+    source: Luke
+    target: Mark
+    source_gap_range: Luke 1:1; Luke 1:2; Luke 1:3; Luke 1:4; ...+37 more
+    target_gap_range: Mark 1:1; Mark 1:2
+    source_gap_count: 135
+    target_gap_count: 2
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Lukan material here.
+    plausible_response: Markan radical epitome/abbreviation of Luke.
+    contrary_evidence_value: 133
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_088
+    direction_id: mark_used_luke
+    source: Luke
+    target: Mark
+    source_gap_range: Luke 15:4; Luke 15:5; Luke 15:6; Luke 15:7; ...+37 more
+    target_gap_range: Mark 10:6; Mark 10:7
+    source_gap_count: 94
+    target_gap_count: 2
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Lukan material here.
+    plausible_response: Markan radical epitome/abbreviation of Luke.
+    contrary_evidence_value: 92
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_069
+    direction_id: mark_used_luke
+    source: Luke
+    target: Mark
+    source_gap_range: Luke 9:18
+    target_gap_range: Mark 6:43; Mark 6:44; Mark 6:45; Mark 6:46; ...+37 more
+    source_gap_count: 1
+    target_gap_count: 77
+    dominant_material_issue: target_addition
+    directional_implication: Mark adds material here beyond Luke.
+    plausible_response: Markan expansion or vividization.
+    contrary_evidence_value: 76
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  - pair: Mark↔Luke
+    interval_id: gap_036
+    direction_id: mark_used_luke
+    source: Luke
+    target: Mark
+    source_gap_range: Luke 6:17; Luke 6:18; Luke 6:19; Luke 6:20; ...+37 more
+    target_gap_range: Mark 3:20; Mark 3:21; Mark 3:22; Mark 3:23; ...+15 more
+    source_gap_count: 87
+    target_gap_count: 19
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Mark must omit/non-use Lukan material here.
+    plausible_response: Markan radical epitome/abbreviation of Luke.
+    contrary_evidence_value: 68
+    interpretation: Material present only/mostly in target in this interval is a target-addition burden under source-prior;
+      material present only/mostly in source is an omission/addition burden under target-prior.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+matthew_used_luke:
+  hypothesis: Matthew used Luke
+  source: Luke
+  target: Matthew
+  current_status: not demonstrated after Markan masking; possible locally
+  supporting_evidence:
+  - Some full Matthew–Luke unmasked burden totals favor Luke-prior in that mixed dataset.
+  - Explains agreements if Matthew heavily clusters and scripturalizes Lukan material.
+  contrary_evidence:
+  - After Markan masking, direct-dependence burdens were symmetric and common source/oral tradition lower.
+  - Many double-tradition items are displaced rather than arranged in a simple Luke-to-Matthew chain.
+  - The material behaves more like sayings/tradition than narrative source copying.
+  - Matthew’s order and grouping often look like independent topical clustering rather than rewriting Luke’s sequence.
+  best_response_model: Matthew used Luke-like sayings/tradition or Luke itself selectively, reorganizing sayings into discourse
+    blocks; strongest version requires a robust explanation for displaced double-tradition order.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: full_pair_direct_use
+      burden_score: 75.477
+      interpretive_result: lower in full ledger but not decisive after Mark masking
+    - burden_model: masked_direct_use
+      burden_score: 26.446
+      interpretive_result: not favored over common source/oral tradition
+    gap_interval_count: 33
+    major_gap_count_abs_diff_ge_20: 12
+    max_gap_abs_difference: 237
+    reordering_or_secondary_echo_rows: 1031
+    primary_pair_count: 233
+    mean_primary_pair_score: 0.3524
+    mean_token_jaccard: 0.2685
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_020
+    direction_id: matthew_used_luke
+    source: Luke
+    target: Matthew
+    source_gap_range: Luke 9:49–Luke 15:2
+    target_gap_range: Matt 18:6–Matt 18:9
+    source_gap_count: 241
+    target_gap_count: 4
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Matthew must omit/compress Lukan material here.
+    plausible_response: Matthean abbreviation or relocation.
+    contrary_evidence_value: 237
+    interpretation: Luke has 237 more gap verses than Matthew at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_006
+    direction_id: matthew_used_luke
+    source: Luke
+    target: Matthew
+    source_gap_range: Luke 4:16–Luke 4:31
+    target_gap_range: Matt 4:24–Matt 7:27
+    source_gap_count: 16
+    target_gap_count: 111
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition material here.
+    plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+    contrary_evidence_value: 95
+    interpretation: Matthew has 95 more gap verses than Luke at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_028
+    direction_id: matthew_used_luke
+    source: Luke
+    target: Matthew
+    source_gap_range: Luke 21:34–Luke 22:1
+    target_gap_range: Matt 24:36–Matt 26:2
+    source_gap_count: 6
+    target_gap_count: 64
+    dominant_material_issue: target_addition
+    directional_implication: Matthew must add/insert/reposition material here.
+    plausible_response: Matthean discourse clustering/fulfillment insertion or alternate source.
+    contrary_evidence_value: 58
+    interpretation: Matthew has 58 more gap verses than Luke at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_021
+    direction_id: matthew_used_luke
+    source: Luke
+    target: Matthew
+    source_gap_range: Luke 15:8–Luke 17:1
+    target_gap_range: .nan
+    source_gap_count: 57
+    target_gap_count: 0
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Matthew must omit/compress Lukan material here.
+    plausible_response: Matthean abbreviation or relocation.
+    contrary_evidence_value: 57
+    interpretation: Luke has 57 more gap verses than Matthew at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_002
+    direction_id: matthew_used_luke
+    source: Luke
+    target: Matthew
+    source_gap_range: Luke 1:32–Luke 2:9
+    target_gap_range: Matt 2:1–Matt 2:9
+    source_gap_count: 58
+    target_gap_count: 9
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Matthew must omit/compress Lukan material here.
+    plausible_response: Matthean abbreviation or relocation.
+    contrary_evidence_value: 49
+    interpretation: Luke has 49 more gap verses than Matthew at this boundary.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+luke_used_matthew:
+  hypothesis: Luke used Matthew
+  source: Matthew
+  target: Luke
+  current_status: possible locally; not demonstrated by masked data alone
+  supporting_evidence:
+  - Explains double-tradition agreements without positing a discrete Q document.
+  - Full Matthew–Luke unmasked ledger can be interpreted in this direction in some blocks.
+  contrary_evidence:
+  - The masked double-tradition result favors common source/oral tradition under the current ledger.
+  - Luke must intentionally break up highly organized Matthean discourses.
+  - Some Matt/Luke agreements are short portable sayings compatible with shared tradition.
+  - The full Matthew–Luke numeric result is not clean because it includes non-double-tradition material.
+  best_response_model: Luke used Matthew selectively, deliberately de-Mattheanizing discourse clusters and redistributing
+    sayings; plausible under a strong editorial-theological program but not forced by current masked data.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: full_pair_direct_use
+      burden_score: 142.559
+      interpretive_result: full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan
+        layers mixed
+    - burden_model: masked_direct_use
+      burden_score: 26.446
+      interpretive_result: not favored over common source/oral tradition
+    gap_interval_count: 33
+    major_gap_count_abs_diff_ge_20: 12
+    max_gap_abs_difference: 237
+    reordering_or_secondary_echo_rows: 1031
+    primary_pair_count: 233
+    mean_primary_pair_score: 0.3524
+    mean_token_jaccard: 0.2685
+    john_anchor_count: null
+    john_anchors_where_shared_tradition_best: null
+  top_material_gap_burdens:
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_020
+    direction_id: luke_used_matthew
+    source: Matthew
+    target: Luke
+    source_gap_range: Matt 18:6–Matt 18:9
+    target_gap_range: Luke 9:49–Luke 15:2
+    source_gap_count: 4
+    target_gap_count: 241
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+    contrary_evidence_value: 237
+    interpretation: Luke has 237 more gap verses than Matthew at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_006
+    direction_id: luke_used_matthew
+    source: Matthew
+    target: Luke
+    source_gap_range: Matt 4:24–Matt 7:27
+    target_gap_range: Luke 4:16–Luke 4:31
+    source_gap_count: 111
+    target_gap_count: 16
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Luke must omit/compress Matthean material here.
+    plausible_response: Lukan abbreviation/de-Mattheanization.
+    contrary_evidence_value: 95
+    interpretation: Matthew has 95 more gap verses than Luke at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_028
+    direction_id: luke_used_matthew
+    source: Matthew
+    target: Luke
+    source_gap_range: Matt 24:36–Matt 26:2
+    target_gap_range: Luke 21:34–Luke 22:1
+    source_gap_count: 64
+    target_gap_count: 6
+    dominant_material_issue: target_omission_of_source
+    directional_implication: Luke must omit/compress Matthean material here.
+    plausible_response: Lukan abbreviation/de-Mattheanization.
+    contrary_evidence_value: 58
+    interpretation: Matthew has 58 more gap verses than Luke at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_021
+    direction_id: luke_used_matthew
+    source: Matthew
+    target: Luke
+    source_gap_range: .nan
+    target_gap_range: Luke 15:8–Luke 17:1
+    source_gap_count: 0
+    target_gap_count: 57
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+    contrary_evidence_value: 57
+    interpretation: Luke has 57 more gap verses than Matthew at this boundary.
+  - pair: Matthew↔Luke
+    interval_id: ml_gap_002
+    direction_id: luke_used_matthew
+    source: Matthew
+    target: Luke
+    source_gap_range: Matt 2:1–Matt 2:9
+    target_gap_range: Luke 1:32–Luke 2:9
+    source_gap_count: 9
+    target_gap_count: 58
+    dominant_material_issue: target_addition
+    directional_implication: Luke must add/insert/reposition material here.
+    plausible_response: Lukan redistribution/travel narrative insertion or alternate source.
+    contrary_evidence_value: 49
+    interpretation: Luke has 49 more gap verses than Matthew at this boundary.
+  top_john_anchor_burdens: []
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+john_used_mark:
+  hypothesis: John used Mark
+  source: Mark
+  target: John
+  current_status: possible locally; shared anchor tradition currently lower burden
+  supporting_evidence:
+  - Shared Johannine/Synoptic anchor episodes exist.
+  - Some local best pairs have nontrivial exact runs or specific shared features.
+  contrary_evidence:
+  - Anchor-specific ledgers favor shared anchor tradition over direct John-use-of-Mark.
+  - John lacks a continuous Markan narrative chain.
+  - Many shared anchors are passion/sign traditions that could circulate independently.
+  - Lexical overlap is often low and exact runs are short or formulaic.
+  best_response_model: John knew Mark or Mark-like tradition but used it selectively through a theological rewriting program;
+    strongest only for local passion/sign anchors, not global dependence.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_direct_use
+      burden_score: 59.741
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 10
+    mean_primary_pair_score: 0.2401
+    mean_token_jaccard: 0.2364
+    john_anchor_count: 10
+    john_anchors_where_shared_tradition_best: 10
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: garment_division_scripture
+    source: Mark
+    target: John
+    source_refs: Mark 15:24
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.798
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.952
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Mark 15:24", "score": 0.0337, "max_exact_run": ""}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Mark
+    target: John
+    source_refs: Mark 1:9-11
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.526
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.724
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Mark 1:10", "score": 0.1957, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: temple_action_relocated
+    source: Mark
+    target: John
+    source_refs: Mark 11:15-19
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.265
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 10.985
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Mark 11:15", "score": 0.1558, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: prophet_no_honor
+    source: Mark
+    target: John
+    source_refs: Mark 6:4
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.362
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.388
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Mark 6:4", "score": 0.1647, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: sword_ear_arrest
+    source: Mark
+    target: John
+    source_refs: Mark 14:47
+    target_refs: John 18:10-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.238
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.512
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Mark 14:47", "score": 0.1854, "max_exact_run": "μαχαιραν"}'
+    required_explanation_if_direction: John names Peter and Malchus and adds cup theology.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+john_used_matthew:
+  hypothesis: John used Matthew
+  source: Matthew
+  target: John
+  current_status: possible locally; shared anchor tradition currently lower burden
+  supporting_evidence:
+  - Shared Johannine/Synoptic anchor episodes exist.
+  - Some local best pairs have nontrivial exact runs or specific shared features.
+  contrary_evidence:
+  - Anchor-specific ledgers favor shared tradition.
+  - John does not preserve Matthew’s discourse architecture.
+  - Some overlap is generic Gospel tradition or scriptural/passion formula.
+  - A Matthew-specific source signal is weaker than a shared Synoptic/passion-tradition signal.
+  best_response_model: John used Matthew-like tradition selectively or knew Synoptic tradition in a Matthean form; current
+    evidence is better treated anchor by anchor.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_direct_use
+      burden_score: 55.862
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 10
+    mean_primary_pair_score: 0.3162
+    mean_token_jaccard: 0.3212
+    john_anchor_count: 10
+    john_anchors_where_shared_tradition_best: 10
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Matthew
+    target: John
+    source_refs: Matt 3:13-17
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.601
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.649
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Matt 3:16", "score": 0.1831, "max_exact_run": "πνευμα καταβαινον"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: temple_action_relocated
+    source: Matthew
+    target: John
+    source_refs: Matt 21:12-17
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.19
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.06
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:15", "synoptic_ref": "Matt 21:12", "score": 0.1684, "max_exact_run": "τασ τραπεζασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: prophet_no_honor
+    source: Matthew
+    target: John
+    source_refs: Matt 13:57
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.361
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.389
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Matt 13:57", "score": 0.1648, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: sword_ear_arrest
+    source: Matthew
+    target: John
+    source_refs: Matt 26:51-52
+    target_refs: John 18:10-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.68
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.07
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:11", "synoptic_ref": "Matt 26:52", "score": 0.17, "max_exact_run": "μαχαιραν εισ"}'
+    required_explanation_if_direction: John names Peter and Malchus and adds cup theology.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: garment_division_scripture
+    source: Matthew
+    target: John
+    source_refs: Matt 27:35
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.442
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.308
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Matt 27:35", "score": 0.2096, "max_exact_run": "διεμερισαντο ιματια"}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+john_used_luke:
+  hypothesis: John used Luke
+  source: Luke
+  target: John
+  current_status: possible locally; shared anchor tradition currently lower burden
+  supporting_evidence:
+  - Shared Johannine/Synoptic anchor episodes exist.
+  - Some local best pairs have nontrivial exact runs or specific shared features.
+  contrary_evidence:
+  - John↔Luke anchor ledger favors shared tradition.
+  - Many overlaps are passion tradition rather than Lukan-specific wording.
+  - John lacks Luke’s narrative order and distinctive Lukan framing.
+  - Low exact-run evidence weakens direct literary dependence.
+  best_response_model: John knew Luke-like traditions or a shared passion/sign source; direct use of canonical Luke remains
+    a local possibility, not a global conclusion.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_direct_use
+      burden_score: 58.598
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 9
+    mean_primary_pair_score: 0.1528
+    mean_token_jaccard: 0.1714
+    john_anchor_count: 9
+    john_anchors_where_shared_tradition_best: 9
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: garment_division_scripture
+    source: Luke
+    target: John
+    source_refs: Luke 23:34
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.77
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.98
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Luke 23:34", "score": 0.0383, "max_exact_run": ""}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: prophet_no_honor
+    source: Luke
+    target: John
+    source_refs: Luke 4:24
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.577
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 6.173
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Luke 4:24", "score": 0.0705, "max_exact_run": ""}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Luke
+    target: John
+    source_refs: Luke 3:21-22
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.415
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.835
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Luke 3:22", "score": 0.2142, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: temple_action_relocated
+    source: Luke
+    target: John
+    source_refs: Luke 19:45-48
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.232
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.018
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Luke 19:45", "score": 0.1613, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: peter_denial
+    source: Luke
+    target: John
+    source_refs: Luke 22:54-62
+    target_refs: John 18:15-27
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.135
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 9.115
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Luke 22:60", "score": 0.2025, "max_exact_run": "πετροσ"}'
+    required_explanation_if_direction: John interweaves denial with trial scenes and adds beloved-disciple access.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+mark_used_john:
+  hypothesis: Mark used John
+  source: John
+  target: Mark
+  current_status: low support; included for completeness
+  supporting_evidence:
+  - Reverse direction is formally testable at anchor level.
+  - Some anchors could be narrativized from Johannine-like tradition.
+  contrary_evidence:
+  - Synoptic style and structure do not look like abridged John.
+  - Shared anchor tradition has lower burden than reverse direct use.
+  - The Synoptic triple tradition is better explained without making John prior to Mark.
+  - Mark lacks central Johannine features that would be costly to omit if John were the source.
+  best_response_model: A radical Synoptic condensation of Johannine tradition; currently a high-burden completeness hypothesis.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_reverse_direct_use
+      burden_score: 64.041
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 10
+    mean_primary_pair_score: 0.2401
+    mean_token_jaccard: 0.2364
+    john_anchor_count: 10
+    john_anchors_where_shared_tradition_best: 10
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: garment_division_scripture
+    source: John
+    target: Mark
+    source_refs: John 19:23-24
+    target_refs: Mark 15:24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.398
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.952
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Mark 15:24", "score": 0.0337, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics compress to lot-casting formula.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Mark
+    source_refs: John 18:10-11
+    target_refs: Mark 14:47
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.438
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.512
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Mark 14:47", "score": 0.1854, "max_exact_run": "μαχαιραν"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: prophet_no_honor
+    source: John
+    target: Mark
+    source_refs: John 4:44
+    target_refs: Mark 6:4
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.962
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.388
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Mark 6:4", "score": 0.1647, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: feeding_5000
+    source: John
+    target: Mark
+    source_refs: John 6:1-15
+    target_refs: Mark 6:30-44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.923
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.027
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:11", "synoptic_ref": "Mark 6:44", "score": 0.1629, "max_exact_run": "τουσ αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: temple_action_relocated
+    source: John
+    target: Mark
+    source_refs: John 2:13-22
+    target_refs: Mark 11:15-19
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.365
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 10.985
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Mark 11:15", "score": 0.1558, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: Synoptics relocate the action to final week as a passion trigger.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+matthew_used_john:
+  hypothesis: Matthew used John
+  source: John
+  target: Matthew
+  current_status: low support; included for completeness
+  supporting_evidence:
+  - Reverse direction is formally testable at anchor level.
+  - Some anchors could be narrativized from Johannine-like tradition.
+  contrary_evidence:
+  - Matthew’s strongest literary relation is Mark-like, not Johannine.
+  - Shared anchor tradition lower burden than direct Matthew-use-of-John.
+  - Matthew lacks central Johannine structure and vocabulary.
+  - No continuous John-to-Matthew chain is evident.
+  best_response_model: Matthew knew a Johannine-like anchor tradition but not necessarily the Gospel of John; direct use of
+    John is not currently supported.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_reverse_direct_use
+      burden_score: 60.162
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 10
+    mean_primary_pair_score: 0.3162
+    mean_token_jaccard: 0.3212
+    john_anchor_count: 10
+    john_anchors_where_shared_tradition_best: 10
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: prophet_no_honor
+    source: John
+    target: Matthew
+    source_refs: John 4:44
+    target_refs: Matt 13:57
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.961
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.389
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Matt 13:57", "score": 0.1648, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Matthew
+    source_refs: John 18:10-11
+    target_refs: Matt 26:51-52
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.88
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.07
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:11", "synoptic_ref": "Matt 26:52", "score": 0.17, "max_exact_run": "μαχαιραν εισ"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: feeding_5000
+    source: John
+    target: Matthew
+    source_refs: John 6:1-15
+    target_refs: Matt 14:13-21
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.588
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.362
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Matt 14:17", "score": 0.2187, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: temple_action_relocated
+    source: John
+    target: Matthew
+    source_refs: John 2:13-22
+    target_refs: Matt 21:12-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.29
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.06
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:15", "synoptic_ref": "Matt 21:12", "score": 0.1684, "max_exact_run": "τασ τραπεζασ"}'
+    required_explanation_if_direction: Synoptics relocate the action to final week as a passion trigger.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: john_baptist_witness_spirit_descends
+    source: John
+    target: Matthew
+    source_refs: John 1:29-34
+    target_refs: Matt 3:13-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.201
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.649
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Matt 3:16", "score": 0.1831, "max_exact_run": "πνευμα καταβαινον"}'
+    required_explanation_if_direction: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.
+luke_used_john:
+  hypothesis: Luke used John
+  source: John
+  target: Luke
+  current_status: low support; included for completeness
+  supporting_evidence:
+  - Reverse direction is formally testable at anchor level.
+  - Some anchors could be narrativized from Johannine-like tradition.
+  contrary_evidence:
+  - Luke’s Mark-like narrative relationship is stronger than any John-like relation.
+  - John↔Luke anchor ledger favors shared tradition.
+  - Luke lacks Johannine discourse architecture.
+  - No continuous John-to-Luke chain is evident.
+  best_response_model: Luke knew a shared Johannine-like passion/sign tradition rather than using canonical John; direct John→Luke
+    is a low-priority hypothesis.
+  quantitative_indicators:
+    burden_scores:
+    - burden_model: anchor_reverse_direct_use
+      burden_score: 61.698
+      interpretive_result: higher than shared anchor tradition
+    gap_interval_count: 0
+    major_gap_count_abs_diff_ge_20: 0
+    max_gap_abs_difference: null
+    reordering_or_secondary_echo_rows: 0
+    primary_pair_count: 9
+    mean_primary_pair_score: 0.1528
+    mean_token_jaccard: 0.1714
+    john_anchor_count: 9
+    john_anchors_where_shared_tradition_best: 9
+  top_material_gap_burdens: []
+  top_john_anchor_burdens:
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: garment_division_scripture
+    source: John
+    target: Luke
+    source_refs: John 19:23-24
+    target_refs: Luke 23:34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.37
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.98
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Luke 23:34", "score": 0.0383, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics compress to lot-casting formula.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: prophet_no_honor
+    source: John
+    target: Luke
+    source_refs: John 4:44
+    target_refs: Luke 4:24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.177
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 6.173
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Luke 4:24", "score": 0.0705, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: feeding_5000
+    source: John
+    target: Luke
+    source_refs: John 6:1-15
+    target_refs: Luke 9:10-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.112
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.838
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Luke 9:16", "score": 0.1314, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Luke
+    source_refs: John 18:10-11
+    target_refs: Luke 22:49-51
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.884
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.066
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Luke 22:50", "score": 0.1694, "max_exact_run": "αρχιερεωσ δουλον"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: peter_denial
+    source: John
+    target: Luke
+    source_refs: John 18:15-27
+    target_refs: Luke 22:54-62
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.735
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 9.115
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Luke 22:60", "score": 0.2025, "max_exact_run": "πετροσ"}'
+    required_explanation_if_direction: Synoptics make a compact escalating denial narrative.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  what_would_strengthen_this_hypothesis:
+  - More high-specificity local agreements with nonformulaic exact wording.
+  - A coherent redactional program that explains most omissions/additions without ad hoc moves.
+  - Sensitivity/variant checks showing the pattern remains stable.
+  what_would_weaken_this_hypothesis:
+  - Another direction or shared-source model explains the same data with lower burden.
+  - The strongest agreements prove formulaic, scriptural, or generic.
+  - Required omissions/additions become too numerous or lack a coherent motive.

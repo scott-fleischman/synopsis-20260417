@@ -1,0 +1,2314 @@
+- block_id: 1
+  matt_span:
+  - Matt 1:21
+  - Matt 1:21
+  luke_span:
+  - Luke 1:13
+  - Luke 1:13
+  pair_count: 1
+  avg_score: 0.181643
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 9
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 2
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.181643
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.278
+          residual: 1.573
+          coincidence: 0.842
+          overall: 0.898
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 9
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 2
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.181643
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.028
+          residual: 1.573
+          coincidence: 0.842
+          overall: 1.148
+      concise_reasoning:
+      - Matthew span is longer here (19 vs 28 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+- block_id: 2
+  matt_span:
+  - Matt 1:23
+  - Matt 1:25
+  luke_span:
+  - Luke 1:27
+  - Luke 1:31
+  pair_count: 2
+  avg_score: 0.376184
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 13
+        unmatched_matt_verses_in_block: 1
+        unmatched_luke_verses_in_block: 3
+        lemma_replacements: 7
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 7
+        mean_pair_score: 0.376184
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.556
+          residual: 1.195
+          coincidence: 0
+          overall: 0.584
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (3 Luke-only vs 1 Matt-only verses in-block).
+      - The matched pairs carry 7 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 7 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 13
+        unmatched_matt_verses_in_block: 1
+        unmatched_luke_verses_in_block: 3
+        lemma_replacements: 7
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 7
+        mean_pair_score: 0.376184
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 2.139
+          residual: 1.195
+          coincidence: 0
+          overall: 1.111
+      concise_reasoning:
+      - Matthew span is longer here (55 vs 68 tokens) and/or leaves more Lukan span material unmatched (3 Luke-only vs 1 Matt-only
+        verses).
+      - The matched pairs carry 7 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 7 secondary echoes touch the block.'
+- block_id: 3
+  matt_span:
+  - Matt 2:10
+  - Matt 2:10
+  luke_span:
+  - Luke 2:10
+  - Luke 2:10
+  pair_count: 1
+  avg_score: 0.180106
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 10
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 5
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.180106
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.278
+          residual: 1.38
+          coincidence: 0.849
+          overall: 0.836
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 10
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 5
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.180106
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.111
+          residual: 1.38
+          coincidence: 0.849
+          overall: 1.113
+      concise_reasoning:
+      - Matthew span is longer here (8 vs 18 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+- block_id: 4
+  matt_span:
+  - Matt 3:3
+  - Matt 3:17
+  luke_span:
+  - Luke 3:4
+  - Luke 3:22
+  pair_count: 8
+  avg_score: 0.609856
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 52
+        unmatched_matt_verses_in_block: 7
+        unmatched_luke_verses_in_block: 11
+        lemma_replacements: 23
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 32
+        mean_pair_score: 0.609856
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.444
+          residual: 3.2
+          coincidence: 0
+          overall: 1.548
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (11 Luke-only vs 7 Matt-only verses in-block).
+      - The matched pairs carry 23 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 32 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: 52
+        unmatched_matt_verses_in_block: 7
+        unmatched_luke_verses_in_block: 11
+        lemma_replacements: 23
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 32
+        mean_pair_score: 0.609856
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 6.778
+          residual: 3.2
+          coincidence: 0
+          overall: 3.326
+      concise_reasoning:
+      - Matthew span is longer here (307 vs 359 tokens) and/or leaves more Lukan span material unmatched (11 Luke-only vs
+        7 Matt-only verses).
+      - The matched pairs carry 23 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 32 secondary echoes touch the block.'
+- block_id: 5
+  matt_span:
+  - Matt 4:1
+  - Matt 4:7
+  luke_span:
+  - Luke 4:1
+  - Luke 4:12
+  pair_count: 7
+  avg_score: 0.404949
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 70
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 17
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 21
+        mean_pair_score: 0.404949
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.278
+          residual: 2.48
+          coincidence: 0
+          overall: 1.253
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (5 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 17 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 21 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: 70
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 17
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 21
+        mean_pair_score: 0.404949
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 8.361
+          residual: 2.48
+          coincidence: 0
+          overall: 3.614
+      concise_reasoning:
+      - Matthew span is longer here (122 vs 192 tokens) and/or leaves more Lukan span material unmatched (5 Luke-only vs 0
+        Matt-only verses).
+      - The matched pairs carry 17 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 21 secondary echoes touch the block.'
+- block_id: 6
+  matt_span:
+  - Matt 4:23
+  - Matt 4:23
+  luke_span:
+  - Luke 4:15
+  - Luke 4:15
+  pair_count: 1
+  avg_score: 0.237035
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -17
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 3
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.237035
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.583
+          residual: 1.252
+          coincidence: 0.565
+          overall: 1.133
+      concise_reasoning:
+      - Luke span is shorter here (10 vs 27 tokens) and/or leaves more Matthean span material unmatched (0 Matt-only vs 0
+        Luke-only verses).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -17
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 3
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.237035
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.167
+          residual: 1.252
+          coincidence: 0.565
+          overall: 0.661
+      concise_reasoning:
+      - Matthew later would need to compress some material (0 Matt-only vs 0 Luke-only verses in-block).
+- block_id: 7
+  matt_span:
+  - Matt 7:28
+  - Matt 7:28
+  luke_span:
+  - Luke 4:32
+  - Luke 4:32
+  pair_count: 1
+  avg_score: 0.276903
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile: []
+      evidence:
+        token_delta_luke_minus_matt: -3
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 0
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.276903
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.417
+          residual: 0.992
+          coincidence: 0.365
+          overall: 0.592
+      concise_reasoning: []
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile: []
+      evidence:
+        token_delta_luke_minus_matt: -3
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 0
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.276903
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.167
+          residual: 0.992
+          coincidence: 0.365
+          overall: 0.508
+      concise_reasoning: []
+- block_id: 8
+  matt_span:
+  - Matt 8:2
+  - Matt 8:4
+  luke_span:
+  - Luke 5:12
+  - Luke 5:14
+  pair_count: 3
+  avg_score: 0.566925
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 19
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 8
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 5
+        mean_pair_score: 0.566925
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.444
+          residual: 0.5
+          coincidence: 0
+          overall: 0.315
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 8 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 0 primary pairs show local reordering and 5 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 19
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 8
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 5
+        mean_pair_score: 0.566925
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 2.028
+          residual: 0.5
+          coincidence: 0
+          overall: 0.843
+      concise_reasoning:
+      - Matthew span is longer here (52 vs 71 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+      - The matched pairs carry 8 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 0 primary pairs show local reordering and 5 secondary echoes touch the block.'
+- block_id: 9
+  matt_span:
+  - Matt 9:2
+  - Matt 9:17
+  luke_span:
+  - Luke 5:20
+  - Luke 5:37
+  pair_count: 15
+  avg_score: 0.395373
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 32
+        unmatched_matt_verses_in_block: 1
+        unmatched_luke_verses_in_block: 3
+        lemma_replacements: 57
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 34
+        mean_pair_score: 0.395373
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.333
+          residual: 3.819
+          coincidence: 0
+          overall: 2.384
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (3 Luke-only vs 1 Matt-only verses in-block).
+      - The matched pairs carry 57 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 34 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 32
+        unmatched_matt_verses_in_block: 1
+        unmatched_luke_verses_in_block: 3
+        lemma_replacements: 57
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 34
+        mean_pair_score: 0.395373
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 6.5
+          residual: 3.819
+          coincidence: 0
+          overall: 3.44
+      concise_reasoning:
+      - Matthew span is longer here (313 vs 345 tokens) and/or leaves more Lukan span material unmatched (3 Luke-only vs 1
+        Matt-only verses).
+      - The matched pairs carry 57 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 34 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 10
+  matt_span:
+  - Matt 9:34
+  - Matt 10:4
+  luke_span:
+  - Luke 6:2
+  - Luke 6:16
+  pair_count: 4
+  avg_score: 0.252561
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 106
+        unmatched_matt_verses_in_block: 5
+        unmatched_luke_verses_in_block: 11
+        lemma_replacements: 12
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 42
+        mean_pair_score: 0.252561
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 0.833
+          residual: 5.19
+          coincidence: 0.487
+          overall: 2.17
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (11 Luke-only vs 5 Matt-only verses in-block).
+      - The matched pairs carry 12 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 42 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: 106
+        unmatched_matt_verses_in_block: 5
+        unmatched_luke_verses_in_block: 11
+        lemma_replacements: 12
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 42
+        mean_pair_score: 0.252561
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 11.167
+          residual: 5.19
+          coincidence: 0.487
+          overall: 5.615
+      concise_reasoning:
+      - Matthew span is longer here (156 vs 262 tokens) and/or leaves more Lukan span material unmatched (11 Luke-only vs
+        5 Matt-only verses).
+      - The matched pairs carry 12 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 42 secondary echoes touch the block.'
+- block_id: 11
+  matt_span:
+  - Matt 10:22
+  - Matt 10:22
+  luke_span:
+  - Luke 6:22
+  - Luke 6:22
+  pair_count: 1
+  avg_score: 0.139921
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 9
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 9
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.139921
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.667
+          residual: 1.64
+          coincidence: 1.05
+          overall: 1.119
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 9 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 9
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 9
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.139921
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.417
+          residual: 1.64
+          coincidence: 1.05
+          overall: 1.369
+      concise_reasoning:
+      - Matthew span is longer here (16 vs 25 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+      - The matched pairs carry 9 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+- block_id: 12
+  matt_span:
+  - Matt 10:24
+  - Matt 10:24
+  luke_span:
+  - Luke 6:40
+  - Luke 6:40
+  pair_count: 1
+  avg_score: 0.508187
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile: []
+      evidence:
+        token_delta_luke_minus_matt: 2
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 4
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.508187
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.222
+          residual: 0.1
+          coincidence: 0
+          overall: 0.107
+      concise_reasoning: []
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile: []
+      evidence:
+        token_delta_luke_minus_matt: 2
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 4
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 1
+        mean_pair_score: 0.508187
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.389
+          residual: 0.1
+          coincidence: 0
+          overall: 0.163
+      concise_reasoning: []
+- block_id: 13
+  matt_span:
+  - Matt 11:2
+  - Matt 11:19
+  luke_span:
+  - Luke 7:18
+  - Luke 7:34
+  pair_count: 13
+  avg_score: 0.572213
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 30
+        unmatched_matt_verses_in_block: 5
+        unmatched_luke_verses_in_block: 4
+        lemma_replacements: 16
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 31
+        mean_pair_score: 0.572213
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.472
+          residual: 3.1
+          coincidence: 0
+          overall: 1.524
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (4 Luke-only vs 5 Matt-only verses in-block).
+      - The matched pairs carry 16 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 31 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 30
+        unmatched_matt_verses_in_block: 5
+        unmatched_luke_verses_in_block: 4
+        lemma_replacements: 16
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 31
+        mean_pair_score: 0.572213
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.722
+          residual: 3.1
+          coincidence: 0
+          overall: 2.274
+      concise_reasoning:
+      - Matthew span is longer here (265 vs 295 tokens) and/or leaves more Lukan span material unmatched (4 Luke-only vs 5
+        Matt-only verses).
+      - The matched pairs carry 16 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 31 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 14
+  matt_span:
+  - Matt 12:4
+  - Matt 12:4
+  luke_span:
+  - Luke 7:36
+  - Luke 7:36
+  pair_count: 1
+  avg_score: 0.177348
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -10
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 3
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.177348
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.167
+          residual: 1.491
+          coincidence: 0.863
+          overall: 1.174
+      concise_reasoning:
+      - Luke span is shorter here (18 vs 28 tokens) and/or leaves more Matthean span material unmatched (0 Matt-only vs 0
+        Luke-only verses).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -10
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 3
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.177348
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: low
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.333
+          residual: 1.491
+          coincidence: 0.863
+          overall: 0.896
+      concise_reasoning:
+      - Matthew later would need to compress some material (0 Matt-only vs 0 Luke-only verses in-block).
+- block_id: 15
+  matt_span:
+  - Matt 12:31
+  - Matt 13:23
+  luke_span:
+  - Luke 7:47
+  - Luke 8:15
+  pair_count: 15
+  avg_score: 0.22885
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -488
+        unmatched_matt_verses_in_block: 28
+        unmatched_luke_verses_in_block: 4
+        lemma_replacements: 65
+        reordering_pair_count: 6
+        secondary_echo_count_touching_block: 93
+        mean_pair_score: 0.22885
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: medium
+        overall_directional_strain: high
+        numeric:
+          transformation: 51.278
+          residual: 10.385
+          coincidence: 0.606
+          overall: 20.756
+      concise_reasoning:
+      - Luke span is shorter here (350 vs 838 tokens) and/or leaves more Matthean span material unmatched (28 Matt-only vs
+        4 Luke-only verses).
+      - The matched pairs carry 65 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 6 primary pairs show local reordering and 93 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -488
+        unmatched_matt_verses_in_block: 28
+        unmatched_luke_verses_in_block: 4
+        lemma_replacements: 65
+        reordering_pair_count: 6
+        secondary_echo_count_touching_block: 93
+        mean_pair_score: 0.22885
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: medium
+        overall_directional_strain: high
+        numeric:
+          transformation: 4.611
+          residual: 10.385
+          coincidence: 0.606
+          overall: 5.2
+      concise_reasoning:
+      - Matthew later would need to compress some material (28 Matt-only vs 4 Luke-only verses in-block).
+      - The matched pairs carry 65 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 6 primary pairs show local reordering and 93 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 16
+  matt_span:
+  - Matt 13:37
+  - Matt 13:37
+  luke_span:
+  - Luke 8:21
+  - Luke 8:21
+  pair_count: 1
+  avg_score: 0.121777
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 7
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 6
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 10
+        mean_pair_score: 0.121777
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.333
+          residual: 2.513
+          coincidence: 1.141
+          overall: 1.329
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 6 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 0 primary pairs show local reordering and 10 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 7
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 6
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 10
+        mean_pair_score: 0.121777
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: medium
+        numeric:
+          transformation: 0.917
+          residual: 2.513
+          coincidence: 1.141
+          overall: 1.524
+      concise_reasoning:
+      - Matthew span is longer here (14 vs 21 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+      - The matched pairs carry 6 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 0 primary pairs show local reordering and 10 secondary echoes touch the block.'
+- block_id: 17
+  matt_span:
+  - Matt 13:51
+  - Matt 13:51
+  luke_span:
+  - Luke 8:45
+  - Luke 8:45
+  pair_count: 1
+  avg_score: 0.131545
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: 15
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 4
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.131545
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.222
+          residual: 1.674
+          coincidence: 1.092
+          overall: 0.996
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: 15
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 4
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 2
+        mean_pair_score: 0.131545
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.472
+          residual: 1.674
+          coincidence: 1.092
+          overall: 1.413
+      concise_reasoning:
+      - Matthew span is longer here (6 vs 21 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+- block_id: 18
+  matt_span:
+  - Matt 14:1
+  - Matt 14:20
+  luke_span:
+  - Luke 9:7
+  - Luke 9:17
+  pair_count: 6
+  avg_score: 0.312689
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -101
+        unmatched_matt_verses_in_block: 14
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 16
+        reordering_pair_count: 3
+        secondary_echo_count_touching_block: 18
+        mean_pair_score: 0.312689
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 12.056
+          residual: 2.549
+          coincidence: 0.187
+          overall: 4.93
+      concise_reasoning:
+      - Luke span is shorter here (217 vs 318 tokens) and/or leaves more Matthean span material unmatched (14 Matt-only vs
+        5 Luke-only verses).
+      - The matched pairs carry 16 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 3 primary pairs show local reordering and 18 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -101
+        unmatched_matt_verses_in_block: 14
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 16
+        reordering_pair_count: 3
+        secondary_echo_count_touching_block: 18
+        mean_pair_score: 0.312689
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: low
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.389
+          residual: 2.549
+          coincidence: 0.187
+          overall: 1.375
+      concise_reasoning:
+      - Matthew later would need to compress some material (14 Matt-only vs 5 Luke-only verses in-block).
+      - The matched pairs carry 16 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 3 primary pairs show local reordering and 18 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 19
+  matt_span:
+  - Matt 15:10
+  - Matt 15:10
+  luke_span:
+  - Luke 9:18
+  - Luke 9:18
+  pair_count: 1
+  avg_score: 0.132575
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 14
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 2
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.132575
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.278
+          residual: 1.77
+          coincidence: 1.087
+          overall: 1.045
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (0 Luke-only vs 0 Matt-only verses in-block).
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 14
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 2
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.132575
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.444
+          residual: 1.77
+          coincidence: 1.087
+          overall: 1.434
+      concise_reasoning:
+      - Matthew span is longer here (9 vs 23 tokens) and/or leaves more Lukan span material unmatched (0 Luke-only vs 0 Matt-only
+        verses).
+- block_id: 20
+  matt_span:
+  - Matt 16:14
+  - Matt 18:5
+  luke_span:
+  - Luke 9:19
+  - Luke 9:48
+  pair_count: 21
+  avg_score: 0.396067
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -306
+        unmatched_matt_verses_in_block: 25
+        unmatched_luke_verses_in_block: 9
+        lemma_replacements: 81
+        reordering_pair_count: 6
+        secondary_echo_count_touching_block: 83
+        mean_pair_score: 0.396067
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 35.0
+          residual: 8.716
+          coincidence: 0
+          overall: 14.572
+      concise_reasoning:
+      - Luke span is shorter here (590 vs 896 tokens) and/or leaves more Matthean span material unmatched (25 Matt-only vs
+        9 Luke-only verses).
+      - The matched pairs carry 81 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 6 primary pairs show local reordering and 83 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -306
+        unmatched_matt_verses_in_block: 25
+        unmatched_luke_verses_in_block: 9
+        lemma_replacements: 81
+        reordering_pair_count: 6
+        secondary_echo_count_touching_block: 83
+        mean_pair_score: 0.396067
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 5.5
+          residual: 8.716
+          coincidence: 0
+          overall: 4.739
+      concise_reasoning:
+      - Matthew later would need to compress some material (25 Matt-only vs 9 Luke-only verses in-block).
+      - The matched pairs carry 81 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 6 primary pairs show local reordering and 83 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 21
+  matt_span:
+  - Matt 18:10
+  - Matt 18:13
+  luke_span:
+  - Luke 15:3
+  - Luke 15:7
+  pair_count: 3
+  avg_score: 0.190414
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 14
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 2
+        lemma_replacements: 19
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 12
+        mean_pair_score: 0.190414
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.389
+          residual: 2.438
+          coincidence: 0.798
+          overall: 1.542
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (2 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 19 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 12 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: medium
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 14
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 2
+        lemma_replacements: 19
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 12
+        mean_pair_score: 0.190414
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.056
+          residual: 2.438
+          coincidence: 0.798
+          overall: 2.097
+      concise_reasoning:
+      - Matthew span is longer here (75 vs 89 tokens) and/or leaves more Lukan span material unmatched (2 Luke-only vs 0 Matt-only
+        verses).
+      - The matched pairs carry 19 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 12 secondary echoes touch the block.'
+- block_id: 22
+  matt_span:
+  - Matt 18:14
+  - Matt 18:33
+  luke_span:
+  - Luke 17:2
+  - Luke 17:13
+  pair_count: 4
+  avg_score: 0.188362
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: medium
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -169
+        unmatched_matt_verses_in_block: 16
+        unmatched_luke_verses_in_block: 8
+        lemma_replacements: 18
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 13
+        mean_pair_score: 0.188362
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: high
+        numeric:
+          transformation: 17.25
+          residual: 2.547
+          coincidence: 0.808
+          overall: 6.868
+      concise_reasoning:
+      - Luke span is shorter here (192 vs 361 tokens) and/or leaves more Matthean span material unmatched (16 Matt-only vs
+        8 Luke-only verses).
+      - The matched pairs carry 18 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 13 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -169
+        unmatched_matt_verses_in_block: 16
+        unmatched_luke_verses_in_block: 8
+        lemma_replacements: 18
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 13
+        mean_pair_score: 0.188362
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.167
+          residual: 2.547
+          coincidence: 0.808
+          overall: 1.507
+      concise_reasoning:
+      - Matthew later would need to compress some material (16 Matt-only vs 8 Luke-only verses in-block).
+      - The matched pairs carry 18 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 13 secondary echoes touch the block.'
+- block_id: 23
+  matt_span:
+  - Matt 19:5
+  - Matt 19:6
+  luke_span:
+  - Luke 17:34
+  - Luke 17:35
+  pair_count: 2
+  avg_score: 0.137583
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -8
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 10
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 5
+        mean_pair_score: 0.137583
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.389
+          residual: 1.95
+          coincidence: 1.062
+          overall: 1.467
+      concise_reasoning:
+      - Luke span is shorter here (30 vs 38 tokens) and/or leaves more Matthean span material unmatched (0 Matt-only vs 0
+        Luke-only verses).
+      - The matched pairs carry 10 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 5 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -8
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 10
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 5
+        mean_pair_score: 0.137583
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.722
+          residual: 1.95
+          coincidence: 1.062
+          overall: 1.245
+      concise_reasoning:
+      - Matthew later would need to compress some material (0 Matt-only vs 0 Luke-only verses in-block).
+      - The matched pairs carry 10 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 5 secondary echoes touch the block.'
+- block_id: 24
+  matt_span:
+  - Matt 19:13
+  - Matt 19:29
+  luke_span:
+  - Luke 18:15
+  - Luke 18:29
+  pair_count: 13
+  avg_score: 0.317064
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -68
+        unmatched_matt_verses_in_block: 4
+        unmatched_luke_verses_in_block: 2
+        lemma_replacements: 46
+        reordering_pair_count: 7
+        secondary_echo_count_touching_block: 36
+        mean_pair_score: 0.317064
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 9.889
+          residual: 4.332
+          coincidence: 0.165
+          overall: 4.795
+      concise_reasoning:
+      - Luke span is shorter here (240 vs 308 tokens) and/or leaves more Matthean span material unmatched (4 Matt-only vs
+        2 Luke-only verses).
+      - The matched pairs carry 46 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 7 primary pairs show local reordering and 36 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -68
+        unmatched_matt_verses_in_block: 4
+        unmatched_luke_verses_in_block: 2
+        lemma_replacements: 46
+        reordering_pair_count: 7
+        secondary_echo_count_touching_block: 36
+        mean_pair_score: 0.317064
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.722
+          residual: 4.332
+          coincidence: 0.165
+          overall: 2.74
+      concise_reasoning:
+      - Matthew later would need to compress some material (4 Matt-only vs 2 Luke-only verses in-block).
+      - The matched pairs carry 46 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 7 primary pairs show local reordering and 36 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 25
+  matt_span:
+  - Matt 20:18
+  - Matt 20:34
+  luke_span:
+  - Luke 18:31
+  - Luke 18:43
+  pair_count: 6
+  avg_score: 0.252396
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -112
+        unmatched_matt_verses_in_block: 11
+        unmatched_luke_verses_in_block: 7
+        lemma_replacements: 17
+        reordering_pair_count: 3
+        secondary_echo_count_touching_block: 34
+        mean_pair_score: 0.252396
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 11.778
+          residual: 4.39
+          coincidence: 0.488
+          overall: 5.552
+      concise_reasoning:
+      - Luke span is shorter here (169 vs 281 tokens) and/or leaves more Matthean span material unmatched (11 Matt-only vs
+        7 Luke-only verses).
+      - The matched pairs carry 17 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 3 primary pairs show local reordering and 34 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -112
+        unmatched_matt_verses_in_block: 11
+        unmatched_luke_verses_in_block: 7
+        lemma_replacements: 17
+        reordering_pair_count: 3
+        secondary_echo_count_touching_block: 34
+        mean_pair_score: 0.252396
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.444
+          residual: 4.39
+          coincidence: 0.488
+          overall: 2.108
+      concise_reasoning:
+      - Matthew later would need to compress some material (11 Matt-only vs 7 Luke-only verses in-block).
+      - The matched pairs carry 17 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 3 primary pairs show local reordering and 34 secondary echoes touch the block.'
+- block_id: 26
+  matt_span:
+  - Matt 21:1
+  - Matt 21:45
+  luke_span:
+  - Luke 19:29
+  - Luke 20:19
+  pair_count: 24
+  avg_score: 0.361107
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -217
+        unmatched_matt_verses_in_block: 21
+        unmatched_luke_verses_in_block: 15
+        lemma_replacements: 67
+        reordering_pair_count: 8
+        secondary_echo_count_touching_block: 60
+        mean_pair_score: 0.361107
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 24.639
+          residual: 6.556
+          coincidence: 0
+          overall: 10.398
+      concise_reasoning:
+      - Luke span is shorter here (635 vs 852 tokens) and/or leaves more Matthean span material unmatched (21 Matt-only vs
+        15 Luke-only verses).
+      - The matched pairs carry 67 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 8 primary pairs show local reordering and 60 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -217
+        unmatched_matt_verses_in_block: 21
+        unmatched_luke_verses_in_block: 15
+        lemma_replacements: 67
+        reordering_pair_count: 8
+        secondary_echo_count_touching_block: 60
+        mean_pair_score: 0.361107
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 5.056
+          residual: 6.556
+          coincidence: 0
+          overall: 3.87
+      concise_reasoning:
+      - Matthew later would need to compress some material (21 Matt-only vs 15 Luke-only verses in-block).
+      - The matched pairs carry 67 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 8 primary pairs show local reordering and 60 secondary echoes touch the block.'
+- block_id: 27
+  matt_span:
+  - Matt 22:16
+  - Matt 23:19
+  luke_span:
+  - Luke 20:21
+  - Luke 21:1
+  pair_count: 18
+  avg_score: 0.357389
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -344
+        unmatched_matt_verses_in_block: 31
+        unmatched_luke_verses_in_block: 10
+        lemma_replacements: 37
+        reordering_pair_count: 11
+        secondary_echo_count_touching_block: 69
+        mean_pair_score: 0.357389
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 37.806
+          residual: 7.47
+          coincidence: 0
+          overall: 15.092
+      concise_reasoning:
+      - Luke span is shorter here (373 vs 717 tokens) and/or leaves more Matthean span material unmatched (31 Matt-only vs
+        10 Luke-only verses).
+      - The matched pairs carry 37 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 11 primary pairs show local reordering and 69 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      evidence:
+        token_delta_luke_minus_matt: -344
+        unmatched_matt_verses_in_block: 31
+        unmatched_luke_verses_in_block: 10
+        lemma_replacements: 37
+        reordering_pair_count: 11
+        secondary_echo_count_touching_block: 69
+        mean_pair_score: 0.357389
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.889
+          residual: 7.47
+          coincidence: 0
+          overall: 3.786
+      concise_reasoning:
+      - Matthew later would need to compress some material (31 Matt-only vs 10 Luke-only verses in-block).
+      - The matched pairs carry 37 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 11 primary pairs show local reordering and 69 secondary echoes touch the block.'
+- block_id: 28
+  matt_span:
+  - Matt 24:2
+  - Matt 24:35
+  luke_span:
+  - Luke 21:6
+  - Luke 21:33
+  pair_count: 14
+  avg_score: 0.517871
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -117
+        unmatched_matt_verses_in_block: 20
+        unmatched_luke_verses_in_block: 14
+        lemma_replacements: 31
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 52
+        mean_pair_score: 0.517871
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 13.139
+          residual: 5.2
+          coincidence: 0
+          overall: 6.113
+      concise_reasoning:
+      - Luke span is shorter here (427 vs 544 tokens) and/or leaves more Matthean span material unmatched (20 Matt-only vs
+        14 Luke-only verses).
+      - The matched pairs carry 31 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 52 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -117
+        unmatched_matt_verses_in_block: 20
+        unmatched_luke_verses_in_block: 14
+        lemma_replacements: 31
+        reordering_pair_count: 1
+        secondary_echo_count_touching_block: 52
+        mean_pair_score: 0.517871
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 1.889
+          residual: 5.2
+          coincidence: 0
+          overall: 2.363
+      concise_reasoning:
+      - Matthew later would need to compress some material (20 Matt-only vs 14 Luke-only verses in-block).
+      - The matched pairs carry 31 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 1 primary pairs show local reordering and 52 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 29
+  matt_span:
+  - Matt 26:3
+  - Matt 26:29
+  luke_span:
+  - Luke 22:2
+  - Luke 22:18
+  pair_count: 10
+  avg_score: 0.285976
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -189
+        unmatched_matt_verses_in_block: 17
+        unmatched_luke_verses_in_block: 7
+        lemma_replacements: 43
+        reordering_pair_count: 5
+        secondary_echo_count_touching_block: 33
+        mean_pair_score: 0.285976
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 21.472
+          residual: 4.156
+          coincidence: 0.32
+          overall: 8.649
+      concise_reasoning:
+      - Luke span is shorter here (229 vs 418 tokens) and/or leaves more Matthean span material unmatched (17 Matt-only vs
+        7 Luke-only verses).
+      - The matched pairs carry 43 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 5 primary pairs show local reordering and 33 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -189
+        unmatched_matt_verses_in_block: 17
+        unmatched_luke_verses_in_block: 7
+        lemma_replacements: 43
+        reordering_pair_count: 5
+        secondary_echo_count_touching_block: 33
+        mean_pair_score: 0.285976
+      burden_summary:
+        transformation_burden: medium
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: medium
+        numeric:
+          transformation: 3.222
+          residual: 4.156
+          coincidence: 0.32
+          overall: 2.566
+      concise_reasoning:
+      - Matthew later would need to compress some material (17 Matt-only vs 7 Luke-only verses in-block).
+      - The matched pairs carry 43 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 5 primary pairs show local reordering and 33 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 30
+  matt_span:
+  - Matt 26:30
+  - Matt 28:8
+  luke_span:
+  - Luke 22:39
+  - Luke 24:12
+  pair_count: 32
+  avg_score: 0.282191
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: matthean_diction_reduced
+        strength: medium
+      - type: scriptural_framing_reduced
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -412
+        unmatched_matt_verses_in_block: 88
+        unmatched_luke_verses_in_block: 68
+        lemma_replacements: 120
+        reordering_pair_count: 15
+        secondary_echo_count_touching_block: 115
+        mean_pair_score: 0.282191
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 48.5
+          residual: 12.371
+          coincidence: 0.339
+          overall: 20.403
+      concise_reasoning:
+      - Luke span is shorter here (1521 vs 1933 tokens) and/or leaves more Matthean span material unmatched (88 Matt-only
+        vs 68 Luke-only verses).
+      - The matched pairs carry 120 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 15 primary pairs show local reordering and 115 secondary echoes touch the block.'
+      - Matthew-specific diction is heavier in this block, so Luke later would be reducing some Matthean phrasing if direct
+        dependence is assumed.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: high
+      - type: lexical_paraphrase
+        strength: high
+      - type: reordering_or_redistribution
+        strength: high
+      - type: lukan_diction_reworked
+        strength: medium
+      - type: scripturalization_added
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -412
+        unmatched_matt_verses_in_block: 88
+        unmatched_luke_verses_in_block: 68
+        lemma_replacements: 120
+        reordering_pair_count: 15
+        secondary_echo_count_touching_block: 115
+        mean_pair_score: 0.282191
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: high
+        coincidence_burden: low
+        overall_directional_strain: high
+        numeric:
+          transformation: 9.167
+          residual: 12.371
+          coincidence: 0.339
+          overall: 7.292
+      concise_reasoning:
+      - Matthew later would need to compress some material (88 Matt-only vs 68 Luke-only verses in-block).
+      - The matched pairs carry 120 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 15 primary pairs show local reordering and 115 secondary echoes touch the block.'
+      - Luke-specific diction is heavier in this block, so Matthew later would be reworking some Lukan phrasing if direct
+        dependence is assumed.
+- block_id: 31
+  matt_span:
+  - Matt 28:16
+  - Matt 28:16
+  luke_span:
+  - Luke 24:28
+  - Luke 24:28
+  pair_count: 1
+  avg_score: 0.122325
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: compression
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -4
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 6
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 0
+        mean_pair_score: 0.122325
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.667
+          residual: 1.511
+          coincidence: 1.138
+          overall: 1.105
+      concise_reasoning:
+      - Luke span is shorter here (12 vs 16 tokens) and/or leaves more Matthean span material unmatched (0 Matt-only vs 0
+        Luke-only verses).
+      - The matched pairs carry 6 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: compression
+        strength: medium
+      - type: lexical_paraphrase
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: -4
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 0
+        lemma_replacements: 6
+        reordering_pair_count: 0
+        secondary_echo_count_touching_block: 0
+        mean_pair_score: 0.122325
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 0.333
+          residual: 1.511
+          coincidence: 1.138
+          overall: 0.994
+      concise_reasoning:
+      - Matthew later would need to compress some material (0 Matt-only vs 0 Luke-only verses in-block).
+      - The matched pairs carry 6 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+- block_id: 32
+  matt_span:
+  - Matt 28:19
+  - Matt 28:20
+  luke_span:
+  - Luke 24:47
+  - Luke 24:53
+  pair_count: 2
+  avg_score: 0.130623
+  direction_ledger:
+    matt_prior:
+      hypothesis: Luke uses Matthew
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 51
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 13
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.130623
+      burden_summary:
+        transformation_burden: low
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: low
+        numeric:
+          transformation: 1.056
+          residual: 1.778
+          coincidence: 1.097
+          overall: 1.31
+      concise_reasoning:
+      - Luke later would need to expand or clarify some material (5 Luke-only vs 0 Matt-only verses in-block).
+      - The matched pairs carry 13 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 3 secondary echoes touch the block.'
+    luke_prior:
+      hypothesis: Matthew uses Luke
+      operation_profile:
+      - type: expansion
+        strength: high
+      - type: lexical_paraphrase
+        strength: medium
+      - type: reordering_or_redistribution
+        strength: medium
+      evidence:
+        token_delta_luke_minus_matt: 51
+        unmatched_matt_verses_in_block: 0
+        unmatched_luke_verses_in_block: 5
+        lemma_replacements: 13
+        reordering_pair_count: 2
+        secondary_echo_count_touching_block: 3
+        mean_pair_score: 0.130623
+      burden_summary:
+        transformation_burden: high
+        residual_anomaly_burden: medium
+        coincidence_burden: medium
+        overall_directional_strain: medium
+        numeric:
+          transformation: 6.556
+          residual: 1.778
+          coincidence: 1.097
+          overall: 3.143
+      concise_reasoning:
+      - Matthew span is longer here (41 vs 92 tokens) and/or leaves more Lukan span material unmatched (5 Luke-only vs 0 Matt-only
+        verses).
+      - The matched pairs carry 13 lemma-level replacements, so direct dependence would require substantial lexical rewriting.
+      - 'This block is under order pressure: 2 primary pairs show local reordering and 3 secondary echoes touch the block.'

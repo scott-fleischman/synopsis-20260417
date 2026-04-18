@@ -1,0 +1,1211 @@
+- thomas_logion: '2'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲙⲛ̄ⲧⲣⲉ ϥ⳿ ⲗⲟ ⲛ̄ϭⲓ ⲡ ⲉⲧ⳿ ϣⲓⲛⲉ ⲉ ϥ⳿ ϣⲓⲛⲉ ϣⲁⲛⲧⲉ ϥ⳿ ϭⲓⲛⲉ ⲁⲩⲱ ϩⲟⲧⲁⲛ⳿ ⲉϥϣⲁⲛ ϭⲓⲛⲉ ϥ ⲛⲁ ϣⲧⲣ̄ⲧⲣ̄ ⲁⲩⲱ ⲉϥϣⲁⲛ
+    ϣⲧⲟⲣⲧⲣ̄ ϥ ⲛⲁ ⲣ̄ϣⲡⲏⲣⲉ ⲁⲩⲱ ϥ ⲛⲁ ⲣ̄ⲣ̄ⲣ̄ⲟ ⲉϫⲙ̄ ⲡ ⲧⲏⲣϥ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲡⲣⲧⲣⲉ ⲛⲧⲟϥ ⲗⲟ ⲛϭⲓ ⲡ ⲉⲧⲉⲣⲉ ϣⲓⲛⲉ ⲉⲣⲉ ⲛⲧⲟϥ ϣⲓⲛⲉ ϣⲁⲛⲧⲉ ⲛⲧⲟϥ ϭⲓⲛⲉ ⲁⲩⲱ ϩⲟⲧⲁⲛ ⲉⲣϣⲁⲛ_ⲛⲧⲟϥ ϭⲓⲛⲉ ⲛⲧⲟϥ
+    ⲛⲁ ϣⲧⲟⲣⲧⲣ ⲁⲩⲱ ⲉⲣϣⲁⲛ_ⲛⲧⲟϥ ϣⲧⲟⲣⲧⲣ ⲛⲧⲟϥ ⲛⲁ ⲣ̄ϣⲡⲏⲣⲉ ⲁⲩⲱ ⲛⲧⲟϥ ⲛⲁ ⲣ̄ⲣⲣⲟ ⲉϫⲛ ⲡ ⲧⲏⲣϥ
+  motifs:
+  - seek/find and transformation
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 7:7-8
+    Mark: []
+    Luke:
+    - Luke 11:9-10
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: shared sayings tradition; Thomas expands toward revelatory sequence
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '3'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲉⲩϣⲁ ϫⲟⲟ ⲥ ⲛⲏ ⲧⲛ̄ ⲛ̄ϭⲓ ⲛ ⲉⲧ⳿ ⲥⲱⲕ ϩⲏⲧ⳿ ⲧⲏⲩⲧⲛ̄ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉ ⲧ⳿ ⲙⲛⲧⲉⲣⲟ ϩⲛ̄ ⲧ ⲡⲉ ⲉⲉⲓⲉ ⲛ̄ ϩⲁⲗⲏⲧ⳿
+    ⲛⲁ ⲣϣⲟⲣⲡ⳿ ⲉⲣⲱ ⲧⲛ̄ ⲛ̄ⲧⲉ ⲧ ⲡⲉ ⲉⲩϣⲁⲛ ϫⲟⲟ ⲥ ⲛⲏ ⲧⲛ ϫⲉ ⲥ ϩⲛ̄ ⲑ ⲁⲗⲁⲥⲥⲁ ⲉⲉⲓⲉ ⲛ̄ ⲧⲃⲧ⳿ ⲛⲁ ⲣ̄ϣⲟⲣⲡ⳿ ⲉⲣⲱ ⲧⲛ̄ ⲁⲗⲗⲁ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲥ ⲙ̄ ⲡⲉⲧⲛ̄
+    ϩⲟⲩⲛ⳿ ⲁⲩⲱ ⲥ ⲙ̄ ⲡⲉⲧⲛ̄ ⲃⲁⲗ ϩⲟⲧⲁⲛ ⲉⲧⲉⲧⲛ̄ϣⲁⲛ ⲥⲟⲩⲱⲛ ⲧⲏⲩⲧⲛ̄ ⲧⲟⲧⲉ ⲥⲉ ⲛⲁ ⲥⲟⲩⲱ⳯ ⲧⲏⲛⲉ ⲁⲩⲱ ⲧⲉⲧⲛ ⲁ ⲉⲓⲙⲉ ϫⲉ ⲛ̄ⲧⲱⲧⲛ̄ ⲡⲉ ⲛ̄ ϣⲏⲣⲉ ⲙ̄ ⲡ
+    ⲉⲓⲱⲧ ⲉⲧ ⲟⲛϩ ⲉϣⲱⲡⲉ ⲇⲉ ⲧⲉⲧ ⲛⲁ ⲥⲟⲩⲱⲛ ⲧⲏⲩⲧⲛ̄ ⲁⲛ ⲉⲉⲓⲉ ⲧⲉⲧⲛ̄ ϣⲟⲟⲡ⳿ ϩⲛ̄ ⲟⲩ ⲙⲛ̄ⲧϩⲏⲕⲉ ⲁⲩⲱ ⲛ̄ⲧⲱⲧⲛ̄ ⲡⲉ ⲧ ⲙⲛ̄ⲧϩⲏⲕⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉⲣϣⲁⲛ_ⲛⲧⲟⲟⲩ ϫⲱ ⲛⲧⲟⲥ ⲛⲁ ⲛⲧⲱⲧⲛ ⲛϭⲓ ⲡ ⲉⲧⲉⲣⲉ ⲥⲱⲕ ϩⲏⲧ ⲛⲧⲱⲧⲛ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ϩⲛ ⲡ ⲡⲉ ⲉⲓⲉ
+    ⲡ ϩⲁⲗⲏⲧ ⲛⲁ ⲣϣⲟⲣⲡ ⲉ ⲛⲧⲱⲧⲛ ⲛⲧⲉ ⲡ ⲡⲉ ⲉⲣϣⲁⲛ_ⲛⲧⲟⲟⲩ ϫⲱ ⲛⲧⲟⲥ ⲛⲁ ⲛⲧⲱⲧⲛ ϫⲉ ⲛⲧⲟⲥ ϩⲛ ⲡ ⲑⲁⲗⲁⲥⲥⲁ ⲉⲓⲉ ⲡ ⲧⲃⲧ ⲛⲁ ⲣϣⲟⲣⲡ ⲉ ⲛⲧⲱⲧⲛ ⲁⲗⲗⲁ ⲡ
+    ⲙⲛⲧⲣⲣⲟ ⲛⲧⲟⲥ ⲛ ⲡⲉⲧⲛ ϩⲟⲩⲛ ⲁⲩⲱ ⲛⲧⲟⲥ ⲛ ⲡⲉⲧⲛ ⲃⲟⲗ ϩⲟⲧⲁⲛ ⲉⲣϣⲁⲛ_ⲛⲧⲱⲧⲛ ⲥⲟⲟⲩⲛ ⲛⲧⲱⲧⲛ ⲧⲟⲧⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲥⲟⲟⲩⲛ ⲛⲧⲱⲧⲛ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ⲛⲁ ⲉⲓⲙⲉ
+    ϫⲉ ⲛⲧⲱⲧⲛ ⲡⲉ ⲡ ϣⲏⲣⲉ ⲛ ⲡ ⲉⲓⲱⲧ ⲉⲧⲉⲣⲉ ⲱⲛϩ ⲉϣⲱⲡⲉ ⲇⲉ ⲛⲧⲱⲧⲛ ⲛⲁ ⲥⲟⲟⲩⲛ ⲛⲧⲱⲧⲛ ⲁⲛ ⲉⲓⲉ ⲛⲧⲱⲧⲛ ϣⲱⲡⲉ ϩⲛ ⲟⲩ ⲙⲛⲧϩⲏⲕⲉ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ⲡⲉ ⲡ ⲙⲛⲧϩⲏⲕⲉ
+  motifs:
+  - kingdom inside/among you
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 17:20-21
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared kingdom saying with divergent theological framing
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '5'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲥⲟⲩⲱⲛ ⲡ ⲉⲧ ⲙ̄ ⲡ ⲙ̄ⲧⲟ ⲙ̄ ⲡⲉⲕ ϩⲟ ⲉⲃⲟⲗ⳿ ⲁⲩⲱ ⲡ ⲉⲑ ⲏⲡ⳿ ⲉⲣⲟ ⲕ⳿ ϥ ⲛⲁ ϭⲱⲗⲡ⳿ ⲉⲃⲟⲗ ⲛⲁ ⲕ⳿ ⲙⲛ̄ ⲗⲁⲁⲩ ⲅⲁⲣ ⲉ ϥ ϩⲏⲡ⳿
+    ⲉ ϥ ⲛⲁ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲁⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲥⲟⲟⲩⲛ ⲡ ⲉⲧⲉⲣⲉ ⲛ ⲡ ⲙⲧⲟ ⲛ ⲡⲉⲕ ϩⲟ ⲉⲃⲟⲗ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ϩⲱⲡ ⲉ ⲛⲧⲟⲕ ⲛⲧⲟϥ ⲛⲁ ϭⲱⲗⲡ ⲉⲃⲟⲗ ⲛⲁ ⲛⲧⲟⲕ ⲙⲛ ⲗⲁⲁⲩ
+    ⲅⲁⲣ ⲉⲣⲉ ⲛⲧⲟϥ ϩⲱⲡ ⲉⲣⲉ ⲛⲧⲟϥ ⲛⲁ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲁⲛ
+  motifs:
+  - hidden/revealed
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 10:26
+    Mark:
+    - Mark 4:22
+    Luke:
+    - Luke 8:17
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: high
+  best_first_model: portable proverb/tradition
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '6'
+  coptic_text: ⲁ ⲩ ϫⲛⲟⲩ ϥ ⲛ̄ϭⲓ ⲛⲉϥ⳿ ⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲁ ⲩ ⲛⲁ ϥ⳿ ϫⲉ ⲕ̂ ⲟⲩⲱϣ ⲉ ⲧⲣ ⲛ̄︤ ⲣ︥ⲛⲏⲥⲧⲉⲩⲉ ⲁⲩⲱ ⲉϣ ⲧⲉ ⲑ ⲉ ⲉ ⲛ ⲁ ϣⲗⲏⲗ ⲉ ⲛ ⲁ ϯⲉⲗⲉⲏⲙⲟⲥⲩⲛⲏ
+    ⲁⲩⲱ ⲉ ⲛ ⲁ ⲣ̄ⲡⲁⲣⲁⲧⲏⲣⲉⲓ ⲉ ⲟⲩ ⲛ̄ ϭⲓⲟⲩⲱⲙ⳿ ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲙ̄ⲡⲣ̄ ϫⲉϭⲟⲗ ⲁⲩⲱ ⲡ ⲉⲧ ⲉⲧⲙ̄ ⲙⲟⲥⲧⲉ ⲙ̄ⲙⲟ ϥ⳿ ⲙ̄ⲡⲣ̄ ⲁⲁ ϥ ϫⲉ ⲥⲉ ϭⲟⲗⲡ⳿ ⲧⲏⲣ
+    ⲟⲩ ⲉⲃⲟⲗ ⲙ̄ ⲡⲉ ⲙⲧⲟ ⲉⲃⲟⲗ ⲛ̄ ⲧ ⲡⲉ ⲙⲛ̄ ⲗⲁⲁⲩ ⲅⲁⲣ ⲉ ϥ ϩⲏⲡ · ⲉ ϥ ⲛⲁ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲁⲛ ⲁⲩⲱ ⲙⲛ ⲗⲁⲁⲩ ⲉ ϥ ϩⲟⲃ︤ⲥ︥ ⲉ ⲩ ⲛⲁ ϭⲱ ⲟⲩⲉϣⲛ̄ ϭⲟⲗⲡ
+    ϥ⳿
+  coptic_lemmas: ⲁ ⲛⲧⲟⲟⲩ ϫⲛⲟⲩ ⲛⲧⲟϥ ⲛϭⲓ ⲡⲉϥ ⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲛⲧⲟⲕ ⲟⲩⲱϣ ⲉ ⲧⲣⲉ ⲁⲛⲟⲛ ⲣⲛⲏⲥⲧⲉⲩⲉ ⲁⲩⲱ ⲁϣ ⲡⲉ ⲡ ϩⲉ ⲉⲣⲉ
+    ⲁⲛⲟⲛ ⲛⲁ ϣⲗⲏⲗ ⲉⲣⲉ ⲁⲛⲟⲛ ⲛⲁ ϯⲉⲗⲉⲏⲙⲟⲥⲩⲛⲏ ⲁⲩⲱ ⲉⲣⲉ ⲁⲛⲟⲛ ⲛⲁ ⲣⲡⲁⲣⲁⲧⲏⲣⲉⲓ ⲉ ⲟⲩ ⲛ ϭⲓⲛⲟⲩⲱⲙ ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲙⲡⲣ ϫⲓϭⲟⲗ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲛⲧⲱⲧⲛ
+    ⲙⲟⲥⲧⲉ ⲛ ⲛⲧⲟϥ ⲙⲡⲣ ⲉⲓⲣⲉ ⲛⲧⲟϥ ϫⲉ ⲛⲧⲟⲟⲩ ϭⲱⲗⲡ ⲧⲏⲣ ⲛⲧⲟⲟⲩ ⲉⲃⲟⲗ ⲛ ⲡ ⲙⲧⲟ ⲉⲃⲟⲗ ⲛ ⲡ ⲡⲉ ⲙⲛ ⲗⲁⲁⲩ ⲅⲁⲣ ⲉⲣⲉ ⲛⲧⲟϥ ϩⲱⲡ · ⲉⲣⲉ ⲛⲧⲟϥ ⲛⲁ ⲟⲩⲱⲛϩ
+    ⲉⲃⲟⲗ ⲁⲛ ⲁⲩⲱ ⲙⲛ ⲗⲁⲁⲩ ⲉⲣⲉ ⲛⲧⲟϥ ϩⲱⲃⲥ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ϭⲱ ⲟⲩⲉϣⲛ ϭⲱⲗⲡ ⲛⲧⲟϥ
+  motifs:
+  - fasting/prayer/alms disclosure
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 6:1-18
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared ethical tradition or anti-ritual polemic; direct dependence weak
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '8'
+  coptic_text: ⲁⲩⲱ ⲡⲉϫⲁ ϥ ϫⲉ ⲉ ⲡ ⲣⲱⲙⲉ ⲧⲛ̄ⲧⲱⲛ ⲁ ⲩ ⲟⲩⲱϩⲉ ⲣ̄ ⲣⲙⲛ̄ϩⲏⲧ⳿ ⲡⲁⲉⲓ ⲛ̄ⲧ ⲁ ϩ ⲛⲟⲩϫⲉ ⲛ̄ ⲧⲉϥ ⲁⲃⲱ ⲉ ⲑ ⲁⲗⲁⲥⲥⲁ ⲁ ϥ ⲥⲱⲕ ⲙ̄ⲙⲟ ⲥ
+    ⲉϩⲣⲁⲓ̈ ϩⲛ̄ ⲑ ⲁⲗⲁⲥⲥⲁ ⲉ ⲥ ⲙⲉϩ ⲛ ⲧⲃⲧ ⲛ̄ ⲕⲟⲩⲉⲓ ⲛ̄ ϩⲣⲁⲓ̈ ⲛ̄ϩⲏⲧ ⲟⲩ ⲁ ϥ ϩⲉ ⲁ ⲩ ⲛⲟϭ ⲛ̄ ⲧⲃ︤ⲧ︥ ⲉ ⲛⲁⲛⲟⲩ ϥ⳿ ⲛ̄ϭⲓ ⲡ ⲟⲩⲱϩⲉ ⲣ̄ ⲣⲙⲛϩⲏⲧ̂
+    ⲁ ϥ ⲛⲟⲩϫⲉ ⲛ̄ ⲛ̄ ⲕⲟⲩⲉⲓ ⲧⲏⲣ ⲟⲩ ⲛ ⲧⲃⲧ⳿ ⲉⲃⲟⲗ ⲉ [ⲡ ⲉ]ⲥⲏⲧ̂ ⲉ ⲑ ⲁⲗⲁⲥⲥⲁ ⲁ ϥ ⲥⲱⲧⲡ · ⲙ̄ ⲡ ⲛⲟϭ ⲛ̄ ⲧⲃ︤ⲧ︥ ⲭⲱⲣⲓⲥ ϩⲓⲥⲉ ⲡ ⲉⲧⲉ ⲟⲩⲛ ⲙⲁⲁϫⲉ
+    ⲙ̄ⲙⲟ ϥ ⲉ ⲥⲱⲧⲙ̄ ⲙⲁⲣⲉ ϥ̂ ⲥⲱⲧⲙ
+  coptic_lemmas: ⲁⲩⲱ ⲡⲉϫⲉ ⲛⲧⲟϥ ϫⲉ ⲉⲣⲉ ⲡ ⲣⲱⲙⲉ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲟⲩⲱϩⲉ ⲛ ⲣⲙⲛϩⲏⲧ ⲡⲁⲓ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ⲛⲟⲩϫⲉ ⲛ ⲡⲉϥ ⲁⲃⲱ ⲉ ⲡ ⲑⲁⲗⲁⲥⲥⲁ ⲁ ⲛⲧⲟϥ
+    ⲥⲱⲕ ⲛ ⲛⲧⲟⲥ ⲉϩⲣⲁⲓ ϩⲛ ⲡ ⲑⲁⲗⲁⲥⲥⲁ ⲉⲣⲉ ⲛⲧⲟⲥ ⲙⲟⲩϩ ⲛ ⲧⲃⲧ ⲛ ⲕⲟⲩⲓ ⲛ ϩⲣⲁⲓ ϩⲛ ⲛⲧⲟⲟⲩ ⲁ ⲛⲧⲟϥ ϩⲉ ⲉ ⲟⲩ ⲛⲟϭ ⲛ ⲧⲃⲧ ⲉⲣⲉ ⲛⲁⲛⲟⲩ ⲛⲧⲟϥ ⲛϭⲓ ⲡ
+    ⲟⲩⲱϩⲉ ⲛ ⲣⲙⲛϩⲏⲧ ⲁ ⲛⲧⲟϥ ⲛⲟⲩϫⲉ ⲛ ⲡ ⲕⲟⲩⲓ ⲧⲏⲣ ⲛⲧⲟⲟⲩ ⲛ ⲧⲃⲧ ⲉⲃⲟⲗ ⲉ ⲡ ⲉⲥⲏⲧ ⲉ ⲡ ⲑⲁⲗⲁⲥⲥⲁ ⲁ ⲛⲧⲟϥ ⲥⲱⲧⲡ · ⲛ ⲡ ⲛⲟϭ ⲛ ⲧⲃⲧ ⲭⲱⲣⲓⲥ ϩⲓⲥⲉ
+    ⲡ ⲉⲧⲉⲣⲉ ⲟⲩⲛ ⲙⲁⲁϫⲉ ⲛ ⲛⲧⲟϥ ⲉ ⲥⲱⲧⲙ ⲙⲁⲣⲉ ⲛⲧⲟϥ ⲥⲱⲧⲙ
+  motifs:
+  - fisherman/net and good fish
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:47-50
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: parable tradition; Thomas compresses/gnomizes
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '9'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ · ⲁ ϥ ⲉⲓ ⲉⲃⲟⲗ ⲛ̄ϭⲓ ⲡ ⲉⲧ⳿ ⲥⲓⲧⲉ ⲁ ϥ ⲙⲉϩⲧⲟⲟⲧ ϥ︦ ⲁ ϥ ⲛⲟⲩϫⲉ ⲁ ϩⲟⲉⲓⲛⲉ ⲙⲉⲛ ϩⲉ ⲉϫⲛ ⲧⲉ ϩⲓⲏ⳿ ⲁ
+    ⲩ ⲉⲓ ⲛ̄ϭⲓ ⲛ̄ ϩⲁⲗⲁⲧⲉ ⲁ ⲩ ⲕⲁⲧϥ ⲟⲩ ϩⲛ̄ ⲕⲟⲟⲩⲉ ⲁ ⲩ ϩⲉ ⲉϫⲛ̄ ⲧ ⲡⲉⲧⲣⲁ ⲁⲩⲱ ⲙ̄ⲡ ⲟⲩ ϫⲉⲛⲟⲩⲛⲉ ⲉ ⲡ ⲉⲥⲏⲧ̂ ⲉ ⲡ ⲕⲁϩ ⲁⲩⲱ ⲙ̄ⲡ ⲟⲩ ⲧⲉⲩⲉϩⲙ︤ⲥ︥
+    ⲉϩⲣⲁⲓ̈ ⲉ ⲧ ⲡⲉ ⲁⲩⲱ ϩⲛ̄ ⲕⲟⲟⲩⲉ ⲁ ⲩ ϩⲉ ⲉϫⲛ̄ ⲛ̄ ϣⲟ(ⲛ)ⲧⲉ ⲁ ⲩ ⲱϭⲧ⳿ ⲙ̄ ⲡⲉ ϭⲣⲟϭ ⲁⲩⲱ ⲁ ⲡ ϥⲛ︤ⲧ︥ ⲟⲩⲟⲙ ⲟⲩ ⲁⲩⲱ ⲁ ϩⲛ̄ ⲕⲟⲟⲩⲉ ϩⲉ ⲉϫⲛ̄ ⲡ
+    ⲕⲁϩ ⲉⲧ ⲛⲁⲛⲟⲩ ϥ⳿ ⲁⲩⲱ ⲁ ϥ ϯⲕⲁⲣⲡⲟⲥ ⲉϩⲣⲁⲓ̈ ⲉ ⲧ ⲡⲉ ⲉ ⲛⲁⲛⲟⲩ ϥ⳿ ⲁ ϥ ⲉⲓ ⲛ̄ ⲥⲉ ⲉ ⲥⲟⲧⲉ ⲁⲩⲱ ϣⲉ ϫⲟⲩⲱⲧ⳿ ⲉ ⲥⲟⲧⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ · ⲁ ⲛⲧⲟϥ ⲉⲓ ⲉⲃⲟⲗ ⲛϭⲓ ⲡ ⲉⲧⲉⲣⲉ ⲥⲓⲧⲉ ⲁ ⲛⲧⲟϥ ⲙⲉϩⲧⲟⲟⲧ ⲛⲧⲟϥ ⲁ ⲛⲧⲟϥ ⲛⲟⲩϫⲉ ⲁ ϩⲟⲉⲓⲛⲉ ⲙⲉⲛ
+    ϩⲉ ⲉϫⲛ ⲡ ϩⲓⲏ ⲁ ⲛⲧⲟⲟⲩ ⲉⲓ ⲛϭⲓ ⲡ ϩⲁⲗⲏⲧ ⲁ ⲛⲧⲟⲟⲩ ⲕⲱⲧϥ ⲛⲧⲟⲟⲩ ⲟⲩ ⲕⲉ ⲁ ⲛⲧⲟⲟⲩ ϩⲉ ⲉϫⲛ ⲡ ⲡⲉⲧⲣⲁ ⲁⲩⲱ ⲙⲡⲉ ⲛⲧⲟⲟⲩ ϫⲓⲛⲟⲩⲛⲉ ⲉ ⲡ ⲉⲥⲏⲧ ⲉ ⲡ
+    ⲕⲁϩ ⲁⲩⲱ ⲙⲡⲉ ⲛⲧⲟⲟⲩ ⲧⲉⲩⲉϩⲙⲥ ⲉϩⲣⲁⲓ ⲉ ⲡ ⲡⲉ ⲁⲩⲱ ⲟⲩ ⲕⲉ ⲁ ⲛⲧⲟⲟⲩ ϩⲉ ⲉϫⲛ ⲡ ϣⲟⲛⲧⲉ ⲁ ⲛⲧⲟⲟⲩ ⲱϭⲧ ⲛ ⲡ ϭⲣⲟϭ ⲁⲩⲱ ⲁ ⲡ ϥⲛⲧ ⲟⲩⲱⲙ ⲛⲧⲟⲟⲩ ⲁⲩⲱ
+    ⲁ ⲟⲩ ⲕⲉ ϩⲉ ⲉϫⲛ ⲡ ⲕⲁϩ ⲉⲧⲉⲣⲉ ⲛⲁⲛⲟⲩ ⲛⲧⲟϥ ⲁⲩⲱ ⲁ ⲛⲧⲟϥ ϯⲕⲁⲣⲡⲟⲥ ⲉϩⲣⲁⲓ ⲉ ⲡ ⲡⲉ ⲉⲣⲉ ⲛⲁⲛⲟⲩ ⲛⲧⲟϥ ⲁ ⲛⲧⲟϥ ⲉⲓ ⲛ ⲥⲉ ⲉ ⲥⲟⲧⲉ ⲁⲩⲱ ϣⲉ ϫⲟⲩⲱⲧ
+    ⲉ ⲥⲟⲧⲉ
+  motifs:
+  - sower parable
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:3-8
+    Mark:
+    - Mark 4:3-8
+    Luke:
+    - Luke 8:5-8
+    John: []
+  relation_type: possible_synoptic_influence_or_harmonization
+  matrix_strength: high
+  best_first_model: shared parable tradition; direct dependence possible if wording clusters survive in Greek witnesses
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '10'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲁ ⲉⲓ ⲛⲟⲩϫⲉ ⲛ̄ ⲟⲩ ⲕⲱϩⲧ⳿ ⲉϫⲛ̄ ⲡ ⲕⲟⲥⲙⲟⲥ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ϯ ϩⲁⲣⲉϩ ⲉⲣⲟ ϥ⳿ ϣⲁⲛⲧⲉ ϥ ϫⲉⲣⲟ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲁ ⲁⲛⲟⲕ ⲛⲟⲩϫⲉ ⲛ ⲟⲩ ⲕⲱϩⲧ ⲉϫⲛ ⲡ ⲕⲟⲥⲙⲟⲥ ⲁⲩⲱ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲁⲛⲟⲕ ϩⲁⲣⲉϩ ⲉ ⲛⲧⲟϥ ϣⲁⲛⲧⲉ ⲛⲧⲟϥ ϫⲉⲣⲟ
+  motifs:
+  - fire cast on earth
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 12:49
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared apocalyptic saying
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '16'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲧⲁⲭⲁ ⲉ ⲩ ⲙⲉⲉⲩⲉ ⲛ̄ϭⲓ ⲣ̄ ⲣⲱⲙⲉ ϫⲉ ⲛ̄ⲧⲁ ⲉⲓ ⲉⲓ ⲉ ⲛⲟⲩϫⲉ ⲛ̄ ⲟⲩ ⲉⲓⲣⲏⲛⲏ ⲉϫⲙ̄ ⲡ ⲕⲟⲥⲙⲟⲥ ⲁⲩⲱ ⲥⲉ ⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉ
+    ⲛ̄ⲧⲁ ⲉⲓ ⲉⲓ ⲁ ⲛⲟⲩϫⲉ ⲛ̄ ϩⲛ̄ ⲡⲱⲣϫ⳿ ⲉϫⲛ̄ ⲡ ⲕⲁϩ ⲟⲩ ⲕⲱϩⲧ ⲟⲩ ⲥⲏϥⲉ⳿ ⲟⲩ ⲡⲟⲗⲉⲙⲟⲥ ⲟⲩⲛ̄ ϯⲟⲩ ⲅⲁⲣ ⲛⲁ ϣⲱ[ⲡⲉ] ϩⲛ̄ ⲟⲩ ⲏⲉⲓ ⲟⲩⲛ̄ ϣⲟⲙⲧ ⲛⲁ
+    ϣⲱⲡⲉ ⲉϫⲛ̄ ⲥⲛⲁⲩ ⲁⲩⲱ ⲥⲛⲁⲩ ⲉϫⲛ̄ ϣⲟⲙⲧ⳿ ⲡ ⲉⲓⲱⲧ⳿ ⲉϫⲙ̄ ⲡ ϣⲏⲣⲉ ⲁⲩⲱ ⲡ ϣⲏⲣⲉ ⲉϫⲙ̄ ⲡ ⲉⲓⲱⲧ⳿ ⲁⲩⲱ · ⲥⲉ ⲛⲁ ⲱϩⲉ ⲉⲣⲁⲧ ⲟⲩ ⲉ ⲩ ⲟ ⲙ̄ ⲙⲟⲛⲁⲭⲟⲥ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲧⲁⲭⲁ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲙⲉⲉⲩⲉ ⲛϭⲓ ⲡ ⲣⲱⲙⲉ ϫⲉ ⲛⲧⲉ_ⲁⲛⲟⲕ ⲁⲛⲟⲕ ⲉⲓ ⲉ ⲛⲟⲩϫⲉ ⲛ ⲟⲩ ⲉⲓⲣⲏⲛⲏ ⲉϫⲛ ⲡ ⲕⲟⲥⲙⲟⲥ ⲁⲩⲱ ⲛⲧⲟⲟⲩ
+    ⲥⲟⲟⲩⲛ ⲁⲛ ϫⲉ ⲛⲧⲉ_ⲁⲛⲟⲕ ⲁⲛⲟⲕ ⲉⲓ ⲉ ⲛⲟⲩϫⲉ ⲛ ⲟⲩ ⲡⲱⲣϫ ⲉϫⲛ ⲡ ⲕⲁϩ ⲟⲩ ⲕⲱϩⲧ ⲟⲩ ⲥⲏϥⲉ ⲟⲩ ⲡⲟⲗⲉⲙⲟⲥ ⲟⲩⲛ ϯⲟⲩ ⲅⲁⲣ ⲛⲁ ϣⲱⲡⲉ ϩⲛ ⲟⲩ ⲏⲓ ⲟⲩⲛ ϣⲟⲙⲧ
+    ⲛⲁ ϣⲱⲡⲉ ⲉϫⲛ ⲥⲛⲁⲩ ⲁⲩⲱ ⲥⲛⲁⲩ ⲉϫⲛ ϣⲟⲙⲧ ⲡ ⲉⲓⲱⲧ ⲉϫⲛ ⲡ ϣⲏⲣⲉ ⲁⲩⲱ ⲡ ϣⲏⲣⲉ ⲉϫⲛ ⲡ ⲉⲓⲱⲧ ⲁⲩⲱ · ⲛⲧⲟⲟⲩ ⲛⲁ ⲱϩⲉ ⲉⲣⲁⲧ ⲛⲧⲟⲟⲩ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲉⲓⲣⲉ
+    ⲛ ⲙⲟⲛⲁⲭⲟⲥ
+  motifs:
+  - division in household
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 10:34-36
+    Mark: []
+    Luke:
+    - Luke 12:51-53
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared apocalyptic/mission saying
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '20'
+  coptic_text: ⲡⲉϫⲉ ⲙ̄ ⲙⲁⲑⲏⲧⲏⲥ ⲛ̄ ⲓ︤ⲥ︥ ϫⲉ ϫⲟⲟ ⲥ ⲉⲣⲟ ⲛ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲛ ⲙ̄ ⲡⲏⲩⲉ ⲉ ⲥ ⲧⲛ̄ⲧⲱⲛ ⲉ ⲛⲓⲙ ⲡⲉϫⲁ ϥ ⲛⲁ ⲩ ϫⲉ ⲉ ⲥ ⲧⲛ̄ⲧⲱⲛ ⲁ
+    ⲩ ⲃⲗ︦ⲃⲓⲗⲉ ⲛ̄ ϣⲗ︦ⲧⲁⲙ ⟨ⲥ⟩ ⲥⲟⲃ︤ⲕ︥ ⲡⲁⲣⲁ ⲛ̄ ϭⲣⲟϭ ⲧⲏⲣ ⲟⲩ ϩⲟⲧⲁⲛ ⲇⲉ ⲉⲥϣⲁ(ⲛ) ϩⲉ ⲉϫⲙ̄ ⲡ ⲕⲁϩ ⲉⲧ ⲟⲩ ⲣ̄ϩⲱⲃ ⲉⲣⲟ ϥ ϣⲁ ϥ ⲧⲉⲩⲟ ⲉⲃⲟⲗ ⲛ̄ⲛ
+    ⲟⲩ ⲛⲟϭ ⲛ̄ ⲧⲁⲣ ⲛ̄ ϥ ϣⲱⲡⲉ ⲛ̄ ⲥⲕⲉⲡⲏ ⲛ̄ ϩⲁⲗⲁⲧⲉ ⲛ̄ ⲧ ⲡⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲡ ⲙⲁⲑⲏⲧⲏⲥ ⲛ ⲓⲏⲥⲟⲩⲥ ϫⲉ ϫⲱ ⲛⲧⲟⲥ ⲉ ⲁⲛⲟⲛ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡ ⲡⲉ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲛⲓⲙ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ ⲉⲣⲉ
+    ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲁ ⲟⲩ ⲃⲗⲃⲓⲗⲉ ⲛ ϣⲗⲧⲁⲙ ⲛⲧⲟⲥ ⲥⲃⲟⲕ ⲡⲁⲣⲁ ⲡ ϭⲣⲟϭ ⲧⲏⲣ ⲛⲧⲟⲟⲩ ϩⲟⲧⲁⲛ ⲇⲉ ⲉⲣϣⲁⲛ_ⲛⲧⲟⲥ ϩⲉ ⲉϫⲛ ⲡ ⲕⲁϩ ⲉⲧⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲣϩⲱⲃ ⲉ ⲛⲧⲟϥ
+    ϣⲁⲣⲉ ⲛⲧⲟϥ ⲧⲉⲩⲟ ⲉⲃⲟⲗ ⲛ ⲟⲩ ⲛⲟϭ ⲛ ⲧⲁⲣ ⲛⲧⲉ ⲛⲧⲟϥ ϣⲱⲡⲉ ⲛ ⲥⲕⲉⲡⲏ ⲛ ϩⲁⲗⲏⲧ ⲛ ⲡ ⲡⲉ
+  motifs:
+  - mustard seed
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:31-32
+    Mark:
+    - Mark 4:30-32
+    Luke:
+    - Luke 13:18-19
+    John: []
+  relation_type: possible_synoptic_influence_or_harmonization
+  matrix_strength: high
+  best_first_model: parable tradition; direct dependence hard because compact parable travels orally
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '26'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲡ ϫⲏ ⲉⲧ ϩⲙ̄ ⲡ ⲃⲁⲗ ⲙ̄ ⲡⲉⲕ⳿ ⲥⲟⲛ ⲕ ⲛⲁⲩ ⲉⲣⲟ ϥ̂ ⲡ ⲥⲟⲓ ⲇⲉ ⲉⲧ ϩⲙ̄ ⲡⲉⲕ ⲃⲁⲗ⳿ ⲕ ⲛⲁⲩ ⲁⲛ ⲉⲣⲟ ϥ⳿ ϩⲟⲧⲁⲛ ⲉⲕϣⲁⲛ
+    ⲛⲟⲩϫⲉ ⲙ̄ ⲡ ⲥⲟⲉⲓ ⲉⲃⲟⲗ ϩⲙ̄ ⲡⲉⲕ⳿ ⲃⲁⲗ⳿ · ⲧⲟⲧⲉ ⲕ ⲛⲁ ⲛⲁⲩ ⲉⲃⲟⲗ ⲉ ⲛⲟⲩϫⲉ ⲙ̄ ⲡ ϫⲏ ⲉⲃⲟⲗ ϩⲙ̄ ⲡ ⲃⲁⲗ ⲙ̄ ⲡⲉⲕ ⲥⲟⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ϫⲏ ⲉⲧⲉⲣⲉ ϩⲛ ⲡ ⲃⲁⲗ ⲛ ⲡⲉⲕ ⲥⲟⲛ ⲛⲧⲟⲕ ⲛⲁⲩ ⲉ ⲛⲧⲟϥ ⲡ ⲥⲟⲓ ⲇⲉ ⲉⲧⲉⲣⲉ ϩⲛ ⲡⲉⲕ ⲃⲁⲗ ⲛⲧⲟⲕ ⲛⲁⲩ ⲁⲛ ⲉ ⲛⲧⲟϥ
+    ϩⲟⲧⲁⲛ ⲉⲣϣⲁⲛ_ⲛⲧⲟⲕ ⲛⲟⲩϫⲉ ⲛ ⲡ ⲥⲟⲓ ⲉⲃⲟⲗ ϩⲛ ⲡⲉⲕ ⲃⲁⲗ · ⲧⲟⲧⲉ ⲛⲧⲟⲕ ⲛⲁ ⲛⲁⲩ ⲉⲃⲟⲗ ⲉ ⲛⲟⲩϫⲉ ⲛ ⲡ ϫⲏ ⲉⲃⲟⲗ ϩⲛ ⲡ ⲃⲁⲗ ⲛ ⲡⲉⲕ ⲥⲟⲛ
+  motifs:
+  - speck and beam
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 7:3-5
+    Mark: []
+    Luke:
+    - Luke 6:41-42
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: portable satirical saying
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '31'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲙⲛ̄ ⲡⲣⲟⲫⲏⲧⲏⲥ ϣⲏⲡ · ϩⲙ̄ ⲡⲉϥ ϯⲙⲉ ⲙⲁⲣⲉ ⲥⲟⲉⲓⲛ ⲣ̄ⲑⲉⲣⲁⲡⲉⲩⲉ ⲛ̄ ⲛ ⲉⲧ⳿ ⲥⲟⲟⲩⲛ ⲙ̄ⲙⲟ ϥ⳿
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲛ ⲡⲣⲟⲫⲏⲧⲏⲥ ϣⲱⲡ · ϩⲛ ⲡⲉϥ ϯⲙⲉ ⲙⲉⲣⲉ ⲥⲟⲓⲛ ⲣⲑⲉⲣⲁⲡⲉⲩⲉ ⲛ ⲡ ⲉⲧⲉⲣⲉ ⲥⲟⲟⲩⲛ ⲛ ⲛⲧⲟϥ
+  motifs:
+  - prophet not accepted
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:57
+    Mark:
+    - Mark 6:4
+    Luke:
+    - Luke 4:24
+    John:
+    - John 4:44
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: high
+  best_first_model: portable proverb
+  direct_dependence_burden_labels:
+  - low
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '32'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲟⲩ ⲡⲟⲗⲓⲥ ⲉ ⲩ ⲕⲱⲧ ⲙ̄ⲙⲟ ⲥ ϩⲓϫⲛ̄ ⲟⲩ ⲧⲟⲟⲩ ⲉ ϥ ϫⲟⲥⲉ ⲉ ⲥ ⲧⲁϫⲣⲏⲩ ⲙⲛ̄ ϭⲟⲙ ⲛ̄ ⲥ ϩⲉ ⲟⲩⲇⲉ ⲥ ⲛⲁ ϣ ϩⲱⲡ⳿ ⲁⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲟⲩ ⲡⲟⲗⲓⲥ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲕⲱⲧ ⲛ ⲛⲧⲟⲥ ϩⲓϫⲛ ⲟⲩ ⲧⲟⲟⲩ ⲉⲣⲉ ⲛⲧⲟϥ ϫⲓⲥⲉ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲁϫⲣⲟ ⲙⲛ ϭⲟⲙ ⲛⲧⲉ ⲛⲧⲟⲥ ϩⲉ
+    ⲟⲩⲇⲉ ⲛⲧⲟⲥ ⲛⲁ ϣ ϩⲱⲡ ⲟⲛ
+  motifs:
+  - city on hill
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 5:14
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared saying; Matthew-context dependence possible but not forced
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '33'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲡ ⲉⲧ⳿ ⲕ ⲛⲁ ⲥⲱⲧⲙ̄ ⲉⲣⲟ ϥ ϩⲙ̄ ⲡⲉⲕ⳿ ⲙⲁⲁϫⲉ ϩⲙ̄ ⲡ ⲕⲉ ⲙⲁⲁϫⲉ ⲧⲁϣⲉⲟⲉⲓϣ⳿ ⲙ̄ⲙⲟ ϥ · ϩⲓϫⲛ̄ ⲛⲉⲧⲛ ϫⲉⲛⲉⲡⲱⲣ⳿ ⲙⲁⲣⲉ
+    ⲗⲁⲁⲩ⳿ · ⲅⲁⲣ ϫⲉⲣⲉ ϩⲏⲃ︤ⲥ︥ ⲛ̄ ϥ⳿ ⲕⲁⲁ ϥ · ϩⲁ ⲙⲁⲁϫⲉ ⲟⲩⲇⲉ ⲙⲁ ϥ ⲕⲁⲁ ϥ · ϩⲙ̄ ⲙⲁ ⲉ ϥ ϩⲏⲡ⳿ · ⲁⲗⲗⲁ ⲉ ϣⲁⲣⲉ ϥ ⲕⲁⲁ ϥ⳿ ϩⲓϫⲛ̄ ⲧ ⲗⲩⲭⲛⲓⲁ
+    ϫⲉⲕⲁⲁⲥ ⲟⲩⲟⲛ ⲛⲓⲙ⳿ ⲉⲧ ⲃⲏⲕ⳿ ⲉϩⲟⲩⲛ ⲁⲩⲱ ⲉⲧ ⲛ̄ⲛⲏⲩ ⲉⲃⲟⲗ ⲉ ⲩ ⲛⲁ ⲛⲁⲩ ⲁ ⲡⲉϥ ⲟⲩⲟⲉⲓⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲡ ⲉⲧⲉⲣⲉ ⲛⲧⲟⲕ ⲛⲁ ⲥⲱⲧⲙ ⲉ ⲛⲧⲟϥ ϩⲛ ⲡⲉⲕ ⲙⲁⲁϫⲉ ϩⲛ ⲡ ⲕⲉ ⲙⲁⲁϫⲉ ⲧⲁϣⲉⲟⲉⲓϣ ⲛ ⲛⲧⲟϥ · ϩⲓϫⲛ ⲡⲉⲧⲛ ϫⲉⲛⲉⲡⲱⲣ ⲙⲉⲣⲉ
+    ⲗⲁⲁⲩ · ⲅⲁⲣ ϫⲉⲣⲟ ϩⲏⲃⲥ ⲛⲧⲉ ⲛⲧⲟϥ ⲕⲱ ⲛⲧⲟϥ · ϩⲁ ⲙⲁⲁϫⲉ ⲟⲩⲇⲉ ⲙⲉⲣⲉ ⲛⲧⲟϥ ⲕⲱ ⲛⲧⲟϥ · ϩⲛ ⲙⲁ ⲉⲣⲉ ⲛⲧⲟϥ ϩⲱⲡ · ⲁⲗⲗⲁ ⲉⲣⲉ ϣⲁⲣⲉ ⲛⲧⲟϥ ⲕⲱ ⲛⲧⲟϥ
+    ϩⲓϫⲛ ⲡ ⲗⲩⲭⲛⲓⲁ ϫⲉⲕⲁⲁⲥ ⲟⲩⲟⲛ ⲛⲓⲙ ⲉⲧⲉⲣⲉ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲁⲩⲱ ⲉⲧⲉⲣⲉ ⲉⲓ ⲉⲃⲟⲗ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲛⲁⲩ ⲉ ⲡⲉϥ ⲟⲩⲟⲉⲓⲛ
+  motifs:
+  - lamp not hidden
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 5:15
+    Mark:
+    - Mark 4:21
+    Luke:
+    - Luke 8:16
+    - Luke 11:33
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: high
+  best_first_model: portable proverb
+  direct_dependence_burden_labels:
+  - low
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '34'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲟⲩ ⲃⲗ︦ⲗⲉ ⲉϥϣⲁⲛ⳿ ⲥⲱⲕ⳿ ϩⲏⲧ ϥ⳿ ⲛ̄ⲛ ⲟⲩ ⲃⲗ︦ⲗⲉ ϣⲁ ⲩ ϩⲉ ⲙ̄ ⲡⲉ ⲥⲛⲁⲩ⳿ · ⲉ ⲡ ⲉⲥⲏⲧ · ⲉ ⲩ ϩⲓⲉⲓⲧ⳿ ·
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲟⲩ ⲃⲗⲗⲉ ⲉⲣϣⲁⲛ_ⲛⲧⲟϥ ⲥⲱⲕ ϩⲏⲧ ⲛⲧⲟϥ ⲛ ⲟⲩ ⲃⲗⲗⲉ ϣⲁⲣⲉ ⲛⲧⲟⲟⲩ ϩⲉ ⲛ ⲡ ⲥⲛⲁⲩ · ⲉ ⲡ ⲉⲥⲏⲧ · ⲉ ⲟⲩ ϩⲓⲉⲓⲧ ·
+  motifs:
+  - blind leading blind
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 15:14
+    Mark: []
+    Luke:
+    - Luke 6:39
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: portable proverb
+  direct_dependence_burden_labels:
+  - low
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '35'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲙⲛ̄ ϭⲟⲙ⳿ ⲛ̄ⲧⲉ ⲟⲩⲁ ⲃⲱⲕ⳿ ⲉϩⲟⲩⲛ ⲉ ⲡ ⲏⲉⲓ ⲙ̄ ⲡ ϫⲱⲱⲣⲉ ⲛ̄ ϥ ϫⲓⲧ ϥ⳿ ⲛ̄ ϫⲛⲁϩ ⲉⲓⲙⲏⲧⲓ ⲛ̄ ϥ ⲙⲟⲩⲣ ⲛ̄ ⲛⲉϥ ϭⲓϫ⳿
+    ⲧⲟⲧⲉ ϥ ⲛⲁ ⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ⲙ̄ ⲡⲉϥ ⲏⲉⲓ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲛ ϭⲟⲙ ⲛⲧⲉ ⲟⲩⲁ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉ ⲡ ⲏⲓ ⲛ ⲡ ϫⲱⲱⲣⲉ ⲛⲧⲉ ⲛⲧⲟϥ ϫⲓ ⲛⲧⲟϥ ⲛ ϫⲛⲁϩ ⲉⲓⲙⲏⲧⲓ ⲛⲧⲉ ⲛⲧⲟϥ ⲙⲟⲩⲣ ⲛ ⲡⲉϥ
+    ϭⲓϫ ⲧⲟⲧⲉ ⲛⲧⲟϥ ⲛⲁ ⲡⲱⲱⲛⲉ ⲉⲃⲟⲗ ⲛ ⲡⲉϥ ⲏⲓ
+  motifs:
+  - strong man house/plunder
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 12:29
+    Mark:
+    - Mark 3:27
+    Luke:
+    - Luke 11:21-22
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: high
+  best_first_model: shared controversy saying/tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '36'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲙⲛ̄ ϥⲓⲣⲟⲟⲩϣ ϫⲓ(ⲛ) ϩⲧⲟⲟⲩⲉ ϣⲁ ⲣⲟⲩϩⲉ ⲁⲩⲱ ϫⲓⲛ ϩⲓⲣⲟⲩϩⲉ ϣⲁ ϩⲧⲟⲟⲩⲉ ϫⲉ ⲟⲩ ⲡ ⲉ⟨ⲧ⟩ ⲉⲧⲛ ⲁ ⲧⲁⲁ ϥ ϩⲓⲱⲧ⳿ ⲧⲏⲩⲧⲛ̄
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲡⲣ ϥⲓⲣⲟⲟⲩϣ ϫⲓⲛ ϩⲧⲟⲟⲩⲉ ϣⲁ ⲣⲟⲩϩⲉ ⲁⲩⲱ ϫⲓⲛ ϩⲓⲣⲟⲩϩⲉ ϣⲁ ϩⲧⲟⲟⲩⲉ ϫⲉ ⲟⲩ ⲡ ⲉⲧⲉⲣⲉ ⲛⲧⲱⲧⲛ ⲛⲁ ϯ ⲛⲧⲟϥ ϩⲓⲱⲧ
+    ⲛⲧⲱⲧⲛ
+  motifs:
+  - anxiety over clothing
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 6:25-34
+    Mark: []
+    Luke:
+    - Luke 12:22-31
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared sapiential saying cluster
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '39'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲙ̄ ⲫⲁⲣⲓⲥⲁⲓⲟⲥ ⲙⲛ̄ ⲛ ⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲁ ⲩ ϫⲓ ⲛ̄ ϣⲁϣⲧ⳿ · ⲛ̄ ⲧ ⲅⲛⲱⲥⲓⲥ ⲁ ⲩ ϩⲟⲡ ⲟⲩ ⲟⲩⲧⲉ ⲙ̄ⲡ ⲟⲩ ⲃⲱⲕ⳿ ⲉϩⲟⲩⲛ
+    ⲁⲩⲱ ⲛ ⲉⲧ ⲟⲩⲱϣ ⲉ ⲃⲱⲕ⳿ ⲉϩⲟⲩⲛ ⲙ̄ⲡ ⲟⲩ ⲕⲁⲁ ⲩ ⲛ̄ⲧⲱⲧⲛ̄ ⲇⲉ ϣⲱⲡⲉ ⲙ̄ ⲫⲣⲟⲛⲓⲙⲟⲥ ⲛ̄ ⲑ ⲉ ⲛ̄ ⲛ ϩⲟϥ⳿ ⲁⲩⲱ ⲛ̄ ⲁⲕⲉⲣⲁⲓⲟⲥ ⲛ̄ ⲑ ⲉ ⲛ̄ ⲛ̄ ϭⲣⲟⲙ⳿ⲡⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲫⲁⲣⲓⲥⲁⲓⲟⲥ ⲙⲛ ⲡ ⲅⲣⲁⲙⲙⲁⲧⲉⲩⲥ ⲁ ⲛⲧⲟⲟⲩ ϫⲓ ⲛ ϣⲁϣⲧ · ⲛ ⲡ ⲅⲛⲱⲥⲓⲥ ⲁ ⲛⲧⲟⲟⲩ ϩⲱⲡ ⲛⲧⲟⲟⲩ ⲟⲩⲧⲉ ⲙⲡⲉ ⲛⲧⲟⲟⲩ
+    ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲟⲩⲱϣ ⲉ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲙⲡⲉ ⲛⲧⲟⲟⲩ ⲕⲱ ⲛⲧⲟⲟⲩ ⲛⲧⲱⲧⲛ ⲇⲉ ϣⲱⲡⲉ ⲛ ⲫⲣⲟⲛⲓⲙⲟⲥ ⲛ ⲡ ϩⲉ ⲛ ⲡ ϩⲟϥ ⲁⲩⲱ ⲛ ⲁⲕⲉⲣⲁⲓⲟⲥ ⲛ ⲡ ϩⲉ
+    ⲛ ⲡ ϭⲣⲟⲙⲡⲉ
+  motifs:
+  - keys/knowledge and exclusion
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 23:13
+    Mark: []
+    Luke:
+    - Luke 11:52
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared polemical saying; possible Luke/Thomas cluster
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '41'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲡ ⲉⲧⲉ ⲩⲛⲧⲁ ϥ · ϩⲛ̄ ⲧⲉϥ⳿ ϭⲓϫ ⲥⲉ ⲛⲁ ϯ ⲛⲁ ϥ⳿ ⲁⲩⲱ ⲡ ⲉⲧⲉ ⲙⲛ̄ⲧⲁ ϥ ⲡ ⲕⲉ ϣⲏⲙ ⲉⲧ ⲟⲩⲛ̄ⲧⲁ ϥ⳿ ⲥⲉ ⲛⲁ ϥⲓⲧ ϥ̄
+    ⲛ̄ⲧⲟⲟⲧ ϥ̄
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ · ϩⲛ ⲡⲉϥ ϭⲓϫ ⲛⲧⲟⲟⲩ ⲛⲁ ϯ ⲛⲁ ⲛⲧⲟϥ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲙⲛⲧⲁ ⲛⲧⲟϥ ⲡ ⲕⲉ ϣⲏⲙ ⲉⲧⲉⲣⲉ ⲟⲩⲛⲧⲁ
+    ⲛⲧⲟϥ ⲛⲧⲟⲟⲩ ⲛⲁ ϥⲓ ϥ ⲛⲧⲛ ⲛⲧⲟϥ
+  motifs:
+  - whoever has will receive
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:12
+    Mark:
+    - Mark 4:25
+    Luke:
+    - Luke 8:18
+    - Luke 19:26
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: high
+  best_first_model: portable aphorism
+  direct_dependence_burden_labels:
+  - low
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '44'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲡ ⲉⲧ ⲁ ϫⲉⲟⲩⲁ ⲁ ⲡ ⲉⲓⲱⲧ⳿ ⲥⲉ ⲛⲁ ⲕⲱ ⲉⲃⲟⲗ ⲛⲁ ϥ⳿ ⲁⲩⲱ ⲡ ⲉⲧ ⲁ ϫⲉⲟⲩⲁ ⲉ ⲡ ϣⲏⲣⲉ ⲥⲉ ⲛⲁ ⲕⲱ ⲉⲃⲟⲗ ⲛⲁ ϥ⳿ ⲡ ⲉⲧ
+    ⲁ ϫⲉⲟⲩⲁ ⲇⲉ ⲁ ⲡ ⲡⲛ︤ⲁ︥ ⲉⲧ ⲟⲩⲁⲁⲃ ⲥⲉ ⲛⲁ ⲕⲱ ⲁⲛ ⲉⲃⲟⲗ ⲛⲁ ϥ⳿ ⲟⲩⲧⲉ ϩⲙ̄ ⲡ ⲕⲁϩ ⲟⲩⲧⲉ ϩⲛ̄ ⲧ ⲡⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ϫⲓⲟⲩⲁ ⲁ ⲡ ⲉⲓⲱⲧ ⲛⲧⲟⲟⲩ ⲛⲁ ⲕⲱ ⲉⲃⲟⲗ ⲛⲁ ⲛⲧⲟϥ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ϫⲓⲟⲩⲁ ⲉ ⲡ ϣⲏⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲁ
+    ⲕⲱ ⲉⲃⲟⲗ ⲛⲁ ⲛⲧⲟϥ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ϫⲓⲟⲩⲁ ⲇⲉ ⲉ ⲡ ⲡⲛⲉⲩⲙⲁ ⲉⲧⲉⲣⲉ ⲟⲩⲟⲡ ⲛⲧⲟⲟⲩ ⲛⲁ ⲕⲱ ⲁⲛ ⲉⲃⲟⲗ ⲛⲁ ⲛⲧⲟϥ ⲟⲩⲧⲉ ϩⲛ ⲡ ⲕⲁϩ ⲟⲩⲧⲉ ϩⲛ ⲡ ⲡⲉ
+  motifs:
+  - blasphemy against Spirit
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 12:31-32
+    Mark:
+    - Mark 3:28-29
+    Luke:
+    - Luke 12:10
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: high
+  best_first_model: shared controversy saying
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '45'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ⲙⲁ ⲩ ϫⲉⲗⲉ ⲉⲗⲟⲟⲗⲉ ⲉⲃⲟⲗ ϩⲛ̄ ϣⲟⲛⲧⲉ ⲟⲩⲧⲉ ⲙⲁ ⲩ ⲕⲱⲧϥ⳿ ⲕⲛ̄ⲧⲉ ⲉⲃⲟⲗ ϩⲛ̄ ⲥⲣ̄ϭⲁⲙⲟⲩⲗ⳿ ⲙⲁ ⲩ ϯ ⲕⲁⲣⲡⲟⲥ ⲅⲁⲣ [ⲟⲩ ⲁ]ⲅⲁⲑⲟⲥ
+    ⲣ̄ ⲣⲱⲙⲉ ϣⲁ ϥ ⲉⲓⲛⲉ ⲛ̄ ⲟⲩ ⲁⲅⲁⲑⲟⲛ ⲉⲃⲟⲗ ϩⲙ ⲡⲉϥ ⲉϩⲟ ⲟⲩ ⲕⲁ[ⲕⲟ]ⲥ ⲣ̄ ⲣⲱⲙⲉ ϣⲁ ϥ ⲉⲓⲛⲉ ⲛ̄ ϩⲛ̄ ⲡⲟⲛⲏⲣⲟⲛ ⲉⲃⲟⲗ ϩⲙ̄ ⲡⲉϥ ⲉϩⲟ ⲉⲑ ⲟⲟⲩ ⲉⲧ
+    ϩⲛ̄ ⲡⲉϥ ϩⲏⲧ⳿ ⲁⲩⲱ ⲛ̄ ϥ ϫⲱ ⲛ̄ ϩⲛ̄ ⲡⲟⲛⲏⲣⲟⲛ ⲉⲃⲟⲗ ⲅⲁⲣ ϩⲙ̄ ⲫ ⲟⲩⲟ ⲙ ⲫ ⲏⲧ⳿ ϣⲁ ϥ · ⲉⲓⲛⲉ ⲉⲃⲟⲗ ⲛ̄ ϩⲛ̄ ⲡⲟⲛⲏⲣⲟⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ ϫⲱⲱⲗⲉ ⲉⲗⲟⲟⲗⲉ ⲉⲃⲟⲗ ϩⲛ ϣⲟⲛⲧⲉ ⲟⲩⲧⲉ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲕⲱⲧϥ ⲕⲛⲧⲉ ⲉⲃⲟⲗ ϩⲛ ⲥⲉⲣϭⲁⲙⲟⲩⲗ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ
+    ϯ ⲕⲁⲣⲡⲟⲥ ⲅⲁⲣ ⲟⲩ ⲁⲅⲁⲑⲟⲥ ⲛ ⲣⲱⲙⲉ ϣⲁⲣⲉ ⲛⲧⲟϥ ⲉⲓⲛⲉ ⲛ ⲟⲩ ⲁⲅⲁⲑⲟⲛ ⲉⲃⲟⲗ ϩⲛ ⲡⲉϥ ⲁϩⲟ ⲟⲩ ⲕⲁⲕⲟⲥ ⲛ ⲣⲱⲙⲉ ϣⲁⲣⲉ ⲛⲧⲟϥ ⲉⲓⲛⲉ ⲛ ⲟⲩ ⲡⲟⲛⲏⲣⲟⲛ ⲉⲃⲟⲗ
+    ϩⲛ ⲡⲉϥ ⲁϩⲟ ⲉⲧⲉⲣⲉ ϩⲟⲟⲩ ⲉⲧⲉⲣⲉ ϩⲛ ⲡⲉϥ ϩⲏⲧ ⲁⲩⲱ ⲛⲧⲉ ⲛⲧⲟϥ ϫⲱ ⲛ ⲟⲩ ⲡⲟⲛⲏⲣⲟⲛ ⲉⲃⲟⲗ ⲅⲁⲣ ϩⲛ ⲡ ϩⲟⲩⲟ ⲛ ⲡ ϩⲏⲧ ϣⲁ ⲛⲧⲟϥ · ⲉⲓⲛⲉ ⲉⲃⲟⲗ ⲛ ⲟⲩ
+    ⲡⲟⲛⲏⲣⲟⲛ
+  motifs:
+  - tree and fruit / good and evil treasury
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 7:16-20
+    Mark: []
+    Luke:
+    - Luke 6:43-45
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared sapiential cluster
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '46'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ϫⲓⲛ ⲁⲇⲁⲙ ϣⲁ ⲓ̈ⲱϩⲁⲛⲛⲏⲥ ⲡ ⲃⲁⲡⲧⲓⲥⲧⲏⲥ ϩⲛ̄ ⲛ̄ ϫⲡⲟ ⲛ̄ ⲛ̄ ϩⲓⲟⲙⲉ ⲙⲛ̄ ⲡ ⲉⲧ ϫⲟⲥⲉ ⲁ ⲓ̈ⲱϩⲁⲛⲛⲏⲥ ⲡ ⲃⲁⲡⲧⲓⲥⲧⲏⲥ
+    ϣⲓⲛⲁ ϫⲉ ⲛ ⲟⲩ ⲱϭⲡ · ⲛ̄ϭⲓ ⲛⲉϥ ⲃⲁⲗ ⲁ ⲉⲓ ϫⲟⲟ ⲥ ⲇⲉ ϫⲉ ⲡ ⲉⲧ ⲛⲁ ϣⲱⲡⲉ ϩⲛ̄ ⲧⲏⲩⲧⲛ̄ ⲉ ϥ ⲟ ⲛ̄ ⲕⲟⲩⲉⲓ ϥ ⲛⲁ ⲥⲟⲩⲱⲛ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲁⲩⲱ ϥ ⲛⲁ
+    ϫⲓⲥⲉ ⲁ ⲓ̈ⲱϩⲁⲛⲛⲏⲥ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ϫⲓⲛ ⲁⲇⲁⲙ ϣⲁ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡ ⲃⲁⲡⲧⲓⲥⲧⲏⲥ ϩⲛ ⲡ ϫⲡⲟ ⲛ ⲡ ⲥϩⲓⲙⲉ ⲙⲛ ⲡ ⲉⲧⲉⲣⲉ ϫⲓⲥⲉ ⲉ ⲓⲱϩⲁⲛⲛⲏⲥ ⲡ ⲃⲁⲡⲧⲓⲥⲧⲏⲥ
+    ϩⲓⲛⲁ ϫⲉ ⲛⲛⲉ ⲛⲧⲟⲟⲩ ⲟⲩⲱϭⲡ · ⲛϭⲓ ⲡⲉϥ ⲃⲁⲗ ⲁ ⲁⲛⲟⲕ ϫⲱ ⲛⲧⲟⲥ ⲇⲉ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ϣⲱⲡⲉ ϩⲛ ⲛⲧⲱⲧⲛ ⲉⲣⲉ ⲛⲧⲟϥ ⲉⲓⲣⲉ ⲛ ⲕⲟⲩⲓ ⲛⲧⲟϥ ⲛⲁ ⲥⲟⲟⲩⲛ
+    ⲡ ⲙⲛⲧⲣⲣⲟ ⲁⲩⲱ ⲛⲧⲟϥ ⲛⲁ ϫⲓⲥⲉ ⲉ ⲓⲱϩⲁⲛⲛⲏⲥ
+  motifs:
+  - John the Baptist and least/greatest
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 11:11
+    Mark: []
+    Luke:
+    - Luke 7:28
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared Baptist saying
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '47'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲙⲛ̄ ϭⲟⲙ ⲛ̄ⲧⲉ ⲟⲩ ⲣⲱⲙⲉ ⲧⲉⲗⲟ ⲁ ϩⲧo ⲥⲛⲁⲩ ⲛ̄ ϥ ϫⲱⲗⲕ⳿ ⲙ̄ ⲡⲓⲧⲉ ⲥⲛ̄ⲧⲉ ⲁⲩⲱ ⲙⲛ̄ ϭⲟⲙ⳿ ⲛ̄ⲧⲉ ⲟⲩ ϩⲙϩ︤ⲁ︥︤ⲗ︥ ϣⲙ̄ϣⲉ
+    ϫⲟⲉⲓⲥ ⲥⲛⲁⲩ ⲏ ϥ ⲛⲁ ⲣ̄ⲧⲓⲙⲁ ⲙ̄ ⲡ ⲟⲩⲁ · ⲁⲩⲱ ⲡ ⲕⲉ ⲟⲩⲁ ϥ ⲛⲁ ⲣ̄ϩⲩⲃⲣⲓⲍⲉ ⲙ̄ⲙⲟ ϥ⳿ ⲙⲁⲣⲉ ⲣⲱⲙⲉ ⲥⲉ ⲣ̄ⲡ ⲁⲥ ⲁⲩⲱ ⲛ̄ ⲧⲉ ⲩⲛⲟⲩ ⲛ̄ ϥ⳿ ⲉⲡⲓⲑⲩⲙⲉⲓ
+    ⲁ ⲥⲱ ⲏⲣⲡ⳿ ⲃ︦ ⲃⲣⲣⲉ ⲁⲩⲱ ⲙⲁ ⲩ ⲛⲟⲩϫ⳿ ⲏⲣⲡ⳿ ⲛ̄ ⲃⲣ̄ⲣⲉ ⲉ ⲁⲥⲕⲟⲥ ⲛ̄ ⲁⲥ ϫⲉⲕⲁⲁⲥ ⲛ̄ⲛ ⲟⲩ ⲡⲱϩ ⲁⲩⲱ ⲙⲁ ⲩ ⲛⲉϫ⳿ ⲏⲣⲡ⳿ ⲛ̄ ⲁⲥ ⲉ ⲁⲥⲕⲟⲥ ⲛ̄ ⲃⲣ̄ⲣⲉ
+    ϣⲓⲛⲁ ϫⲉ ⲛⲉ ϥ ⲧⲉⲕⲁ ϥ⳿ ⲙⲁ ⲩ ϫ︤ⲗ︥ϭ ⲧⲟⲉⲓⲥ ⲛ̄ ⲁⲥ ⲁ ϣⲧⲏ(ⲛ) ⲛ̄ ϣⲁⲓ ⲉⲡⲉⲓ ⲟⲩⲛ ⲟⲩ ⲡⲱϩ ⲛⲁ ϣⲱⲡⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲙⲛ ϭⲟⲙ ⲛⲧⲉ ⲟⲩ ⲣⲱⲙⲉ ⲧⲉⲗⲟ ⲉ ϩⲧⲟ ⲥⲛⲁⲩ ⲛⲧⲉ ⲛⲧⲟϥ ϫⲱⲗⲕ ⲛ ⲡⲓⲧⲉ ⲥⲛⲁⲩ ⲁⲩⲱ ⲙⲛ ϭⲟⲙ ⲛⲧⲉ ⲟⲩ ϩⲙϩⲁⲗ ϣⲙϣⲉ
+    ϫⲟⲉⲓⲥ ⲥⲛⲁⲩ ⲏ ⲛⲧⲟϥ ⲛⲁ ⲣⲧⲓⲙⲁ ⲛ ⲡ ⲟⲩⲁ · ⲁⲩⲱ ⲡ ⲕⲉ ⲟⲩⲁ ⲛⲧⲟϥ ⲛⲁ ⲣϩⲩⲃⲣⲓⲍⲉ ⲛ ⲛⲧⲟϥ ⲙⲉⲣⲉ ⲣⲱⲙⲉ ⲥⲱ ⲏⲣⲡ ⲁⲥ ⲁⲩⲱ ⲛ ⲡ ⲟⲩⲛⲟⲩ ⲛⲧⲉ ⲛⲧⲟϥ ⲉⲡⲓⲑⲩⲙⲉⲓ
+    ⲉ ⲥⲱ ⲏⲣⲡ ⲛ ⲃⲣⲣⲉ ⲁⲩⲱ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲟⲩϫ ⲏⲣⲡ ⲛ ⲃⲣⲣⲉ ⲉ ⲁⲥⲕⲟⲥ ⲛ ⲁⲥ ϫⲉⲕⲁⲁⲥ ⲛⲛⲉ ⲛⲧⲟⲟⲩ ⲡⲱϩ ⲁⲩⲱ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲟⲩϫⲉ ⲏⲣⲡ ⲛ ⲁⲥ ⲉ ⲁⲥⲕⲟⲥ
+    ⲛ ⲃⲣⲣⲉ ϩⲓⲛⲁ ϫⲉ ⲛⲉⲣⲉ ⲛⲧⲟϥ ⲧⲁⲕⲟ ⲛⲧⲟϥ ⲙⲉⲣⲉ ⲛⲧⲟⲟⲩ ϫⲱⲗϭ ⲧⲟⲉⲓⲥ ⲛ ⲁⲥ ⲉ ϣⲧⲏⲛ ⲛ ϣⲁⲓ ⲉⲡⲉⲓ ⲟⲩⲛ ⲟⲩ ⲡⲱϩ ⲛⲁ ϣⲱⲡⲉ
+  motifs:
+  - new wine/old wineskins; two masters?
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 9:16-17
+    - Matt 6:24
+    Mark:
+    - Mark 2:21-22
+    Luke:
+    - Luke 5:36-39
+    - Luke 16:13
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: high
+  best_first_model: conflated saying cluster; network model better than tree model
+  direct_dependence_burden_labels:
+  - high for any single source
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '54'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ϩⲛ̄ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲛⲉ ⲛ ϩⲏⲕⲉ ϫⲉ ⲧⲱⲧⲛ̄ ⲧⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲛ ⲙ̄ ⲡⲏⲩⲉ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ϩⲉⲛ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲡⲉ ⲡ ϩⲏⲕⲉ ϫⲉ ⲧⲱⲧⲛ ⲡⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡ ⲡⲉ
+  motifs:
+  - blessed poor / kingdom
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 5:3
+    Mark: []
+    Luke:
+    - Luke 6:20
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: beatitude tradition; Thomas closer to Luke’s simple poor form
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '55'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲡ ⲉⲧ ⲁ ⲙⲉⲥⲧⲉ ⲡⲉϥ⳿ ⲉⲓⲱⲧ⳿ ⲁⲛ⳿ ⲙⲛ̄ ⲧⲉϥ ⲙⲁⲁⲩ ϥ ⲛⲁ ϣ ⲣ̄ⲙⲁⲑⲏⲧⲏⲥ ⲁⲛ ⲛⲁ ⲉⲓ ⲁⲩⲱ ⲛ̄ ϥ ⲙⲉⲥⲧⲉ ⲛⲉϥ̂ ⲥⲛⲏⲩ ·
+    ⲙⲛ̄ ⲛⲉϥ ⲥⲱⲛⲉ ⲛ̄ ϥ ϥⲉⲓ ⲙ ⲡⲉϥ ⲥⳁⲟⲥ ⲛ̄ ⲧⲁ ϩⲉ ϥ ⲛⲁ ϣⲱⲡⲉ ⲁⲛ ⲉ ϥ ⲟ ⲛ̄ ⲁⲝⲓⲟⲥ ⲛⲁ ⲉⲓ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ⲙⲟⲥⲧⲉ ⲡⲉϥ ⲉⲓⲱⲧ ⲁⲛ ⲙⲛ ⲡⲉϥ ⲙⲁⲁⲩ ⲛⲧⲟϥ ⲛⲁ ϣ ⲣⲙⲁⲑⲏⲧⲏⲥ ⲁⲛ ⲛ ⲁⲛⲟⲕ ⲁⲩⲱ ⲛⲧⲉ ⲛⲧⲟϥ ⲙⲟⲥⲧⲉ ⲡⲉϥ
+    ⲥⲟⲛ · ⲙⲛ ⲡⲉϥ ⲥⲱⲛⲉ ⲛⲧⲉ ⲛⲧⲟϥ ϥⲓ ⲛ ⲡⲉϥ ⲥⲧⲁⲩⲣⲟⲥ ⲛ ⲡⲁ ϩⲉ ⲛⲧⲟϥ ⲛⲁ ϣⲱⲡⲉ ⲁⲛ ⲉⲣⲉ ⲛⲧⲟϥ ⲉⲓⲣⲉ ⲛ ⲁⲝⲓⲟⲥ ⲛⲁ ⲁⲛⲟⲕ
+  motifs:
+  - hate family and carry cross
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 10:37-38
+    Mark: []
+    Luke:
+    - Luke 14:26-27
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '57'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲙ̄ ⲡ ⲉⲓⲱⲧ ⲉ ⲥ ⲧ⟨ⲛ̄⟩ⲧⲱ(ⲛ) ⲁ ⲩ ⲣⲱⲙⲉ ⲉ ⲩⲛ̄ⲧⲁ ϥ ⲙ̄ⲙⲁⲩ ⲛ̄ⲛ ⲟⲩ ϭⲣⲟϭ ⲉ̣ ⲛ̣[ⲁⲛⲟ]ⲩ ϥ⳿ ⲁ ⲡⲉϥ ϫⲁϫⲉ
+    ⲉⲓ ⲛ̄ ⲧ ⲟⲩϣⲏ⳿ ⲁ ϥ ⲥⲓⲧⲉ ⲛ̄ ⲟⲩ ⲍⲓⲍ̣ⲁ̣ⲛ̣ⲓ̣[ⲟ]ⲛ̣ ̣ⲉ̣ϫ̣ⲛ ⲡⲉ ϭⲣ̣ⲟ̣[ϭ ⲉ]ⲧ ⲛⲁⲛⲟⲩ ϥ⳿ ⲙ̄ⲡⲉ ⲡ ⲣⲱⲙⲉ ⲕⲟⲟ ⲩ ⲉ ϩⲱⲗⲉ ⲙ̄ ⲡ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲡⲉϫⲁ
+    ϥ ⲛⲁ ⲩ ϫⲉ ⲙⲏⲡⲱⲥ ⲛ̄ⲧⲉ ⲧⲛ̄ ⲃⲱⲕ ϫⲉ ⲉ ⲛ ⲁ ϩⲱⲗⲉ ⲙ̄ ⲡ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲛ̄ⲧⲉ ⲧⲛ̄ ϩⲱⲗⲉ ⲙ̄ ⲡ ⲥⲟⲩⲟ ⲛⲙ̄ⲙⲁ ϥ̂ ϩⲙ̄ ⲫ ⲟⲟⲩ ⲅⲁⲣ ⲙ̄ ⲡ ⲱϩ︤ⲥ︥ ⲛ̄
+    ⲍⲓⲍⲁⲛⲓⲟⲛ ⲛⲁ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ⳿ ⲥⲉ ϩⲟⲗ ⲟⲩ ⲛ̄ ⲥⲉ ⲣⲟⲕϩ ⲟⲩ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡ ⲉⲓⲱⲧ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲣⲱⲙⲉ ⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ ⲙⲙⲁⲩ ⲛ ⲟⲩ ϭⲣⲟϭ ⲉⲣⲉ ⲛⲁⲛⲟⲩ ⲛⲧⲟϥ ⲁ
+    ⲡⲉϥ ϫⲁϫⲉ ⲉⲓ ⲛ ⲡ ⲟⲩϣⲏ ⲁ ⲛⲧⲟϥ ⲥⲓⲧⲉ ⲛ ⲟⲩ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲉϫⲛ ⲡ ϭⲣⲟϭ ⲉⲧⲉⲣⲉ ⲛⲁⲛⲟⲩ ⲛⲧⲟϥ ⲙⲡⲉ ⲡ ⲣⲱⲙⲉ ⲕⲱ ⲛⲧⲟⲟⲩ ⲉ ϩⲱⲱⲗⲉ ⲛ ⲡ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲡⲉϫⲉ
+    ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ ⲙⲏⲡⲱⲥ ⲛⲧⲉ ⲛⲧⲱⲧⲛ ⲃⲱⲕ ϫⲉ ⲉⲣⲉ ⲛⲧⲱⲧⲛ ⲛⲁ ϩⲱⲱⲗⲉ ⲛ ⲡ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲛⲧⲉ ⲧⲛ ϩⲱⲱⲗⲉ ⲛ ⲡ ⲥⲟⲩⲟ ⲙⲛ ⲛⲧⲟϥ ϩⲛ ⲡ ϩⲟⲟⲩ ⲅⲁⲣ ⲛ
+    ⲡ ⲱϩⲥ ⲛ ⲍⲓⲍⲁⲛⲓⲟⲛ ⲛⲁ ⲟⲩⲱⲛϩ ⲉⲃⲟⲗ ⲛⲧⲟⲟⲩ ϩⲱⲱⲗⲉ ⲛⲧⲟⲟⲩ ⲛⲧⲉ ⲛⲧⲟⲟⲩ ⲣⲱⲕϩ ⲛⲧⲟⲟⲩ
+  motifs:
+  - weeds/tares
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:24-30
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: possible Matthew-related tradition; Thomas shorter and less allegorized
+  direct_dependence_burden_labels:
+  - moderate-to-high
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '64'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲟⲩ ⲣⲱⲙⲉ ⲛⲉ ⲩⲛ̄ⲧⲁ ϥ̣ ϩⲛ̄ ϣⲙ̄ⲙⲟ ⲁⲩⲱ ⲛ̄ⲧⲁⲣⲉ ϥ ⲥⲟⲃⲧⲉ ⲙ̄ ⲡ ⲇⲓⲡⲛⲟⲛ ⲁ ϥ ϫⲟⲟⲩ ⲙ̄ ⲡⲉϥ ϩⲙϩ︤ⲁ︥︤ⲗ︥ ϣⲓⲛⲁ ⲉ
+    ϥ ⲛⲁ ⲧⲱϩⲙ ⲛ̄ ⲛ̄ ϣⲙ̄ⲙⲟⲉⲓ ⲁ ϥ ⲃⲱⲕ⳿ ⲙ̄ ⲡ ϣⲟⲣⲡ⳿ · ⲡⲉϫⲁ ϥ ⲛⲁ ϥ⳿ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ̄ ⲙ̄ⲙⲟ ⲕ⳿ ⲡⲉϫⲁ ϥ ϫⲉ ⲟⲩⲛ̄ⲧⲁ ⲉⲓ ϩⲛ̄ ϩⲟⲙⲧ⳿ ⲁ ϩⲉⲛ
+    ⲉⲙⲡⲟⲣⲟⲥ ⲥⲉ ⲛ̄ⲛⲏⲩ ϣⲁⲣⲟ ⲉⲓ ⲉ ⲣⲟⲩϩⲉ ϯ ⲛⲁ ⲃⲱⲕ⳿ ⲛ̄ ⲧⲁ ⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁ ⲩ ϯ ⲣ̄ⲡⲁⲣⲁⲓⲧⲉⲓ ⲙ̄ ⲡ ⲇⲓⲡⲛⲟⲛ ⲁ ϥ ⲃⲱⲕ⳿ ϣⲁ ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲁ ϥ ⲛⲁ
+    ϥ⳿ ϫⲉ ⲁ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ̄ ⲙ̄ⲙⲟ ⲕ⳿ ⲡⲉϫⲁ ϥ ⲛⲁ ϥ ϫⲉ ⲁ ⲉⲓ ⲧⲟⲟⲩ ⲟⲩ ⲏⲉⲓ ⲁⲩⲱ ⲥⲉ ⲣ̄ⲁⲓⲧⲉⲓ ⲙ̄ⲙⲟ ⲉⲓ ⲛ̄ ⲟⲩ ϩⲏⲙⲉⲣⲁ ϯ ⲛⲁ ⲥⲣ̄ϥⲉ ⲁ(ⲛ) ⲁ ϥ
+    ⲉⲓ ϣⲁ ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲁ ϥ ⲛⲁ ϥ⳿ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ̄ ⲙ̄ⲙⲟ ⲕ⳿ ⲡⲉϫⲁ ϥ ⲛⲁ ϥ ϫⲉ ⲡⲁ ϣⲃⲏⲣ⳿ ⲛⲁ ⲣ̄ϣⲉⲗⲉⲉⲧ ⲁⲩⲱ ⲁⲛⲟⲕ⳿ ⲉⲧ ⲛⲁ ⲣ̄ⲇⲓⲡⲛⲟⲛ ϯ ⲛⲁ
+    ϣ ⲓ ⲁⲛ ϯ ⲣ̄ⲡⲁⲣⲁⲓⲧⲉⲓ ⲙ̄ ⲡ ⲇⲓⲡⲛⲟⲛ⳿ ⲁ ϥ⳿ ⲃⲱⲕ⳿ ϣⲁ ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲁ ϥ ⲛⲁ ϥ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ ⲙ̄ⲙⲟ ⲕ⳿ ⲡⲉϫⲁ ϥ ⲛⲁ ϥ⳿ ϫⲉ ⲁ ⲉⲓ ⲧⲟⲟⲩ ⲛ̄
+    ⲟⲩ ⲕⲱⲙⲏ ⲉ ⲉⲓ ⲃⲏⲕ⳿ ⲁ ϫⲓ ⲛ̄ ϣⲱⲙ ϯ ⲛⲁ ϣⲓ ⲓ ⲁⲛ ϯ ⲣ̄ⲡⲁⲣⲁⲓⲧⲉⲓ ⲁ ϥ ⲉⲓ ⲛ̄ϭⲓ ⲡ ϩⲙϩ︤ⲁ︥︤ⲗ︥ ⲁ ϥ ϫⲟⲟ ⲥ ⲁ ⲡⲉϥ ϫⲟⲉⲓⲥ ϫⲉ ⲛ ⲉⲛⲧ ⲁ ⲕ⳿ ⲧⲁϩⲙ
+    ⲟⲩ ⲁ ⲡ ⲇⲓⲡⲛⲟⲛ ⲁ ⲩ ⲡⲁⲣⲁⲓⲧⲉⲓ ⲡⲉϫⲉ ⲡ ϫⲟⲉⲓⲥ ⲙ̄ ⲡⲉϥ ϩⲙϩⲁ︤ⲗ︥ ϫⲉ ⲃⲱⲕ⳿ ⲉ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲁ ⲛ ϩⲓⲟⲟⲩⲉ ⲛ ⲉⲧ ⲕ ⲛⲁ ϩⲉ ⲉⲣⲟ ⲟⲩ ⲉⲛⲓ ⲟⲩ ϫⲉⲕⲁⲁⲥ
+    ⲉ ⲩ ⲛⲁ̣ ⲣ̣̄ⲇ̣ⲓ̣ⲡ̣ⲛⲉⲓ ⲛ̄ ⲣⲉϥⲧⲟⲟⲩ ⲙⲛ̄ ⲛⲉ ϣⲟⲧ̣[ⲉ ⲥⲉ ⲛⲁ ⲃ]ⲱ̣ⲕ̣ ⲁⲛ⳿ ⲉϩⲟⲩⲛ⳿ ⲉ ⲛ ⲧⲟⲡⲟⲥ ⲙ ⲡⲁ ⲓ̈ⲱⲧ⳿
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲟⲩ ⲣⲱⲙⲉ ⲛⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ ⲟⲩ ϣⲙⲙⲟ ⲁⲩⲱ ⲛⲧⲁⲣⲉ ⲛⲧⲟϥ ⲥⲟⲃⲧⲉ ⲛ ⲡ ⲇⲉⲓⲡⲛⲟⲛ ⲁ ⲛⲧⲟϥ ϫⲟⲟⲩ ⲛ ⲡⲉϥ ϩⲙϩⲁⲗ ϩⲓⲛⲁ
+    ⲉⲣⲉ ⲛⲧⲟϥ ⲛⲁ ⲧⲱϩⲙ ⲛ ⲡ ϣⲙⲙⲟ ⲁ ⲛⲧⲟϥ ⲃⲱⲕ ⲛ ⲡ ϣⲟⲣⲡ · ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ ⲛ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ϫⲉ ⲟⲩⲛⲧⲁ ⲁⲛⲟⲕ ⲟⲩ ϩⲟⲙⲧ
+    ⲉ ⲟⲩ ⲉⲙⲡⲟⲣⲟⲥ ⲛⲧⲟⲟⲩ ⲉⲓ ϣⲁ ⲁⲛⲟⲕ ⲉ ⲣⲟⲩϩⲉ ⲁⲛⲟⲕ ⲛⲁ ⲃⲱⲕ ⲛⲧⲉ ⲁⲛⲟⲕ ⲟⲩⲉϩⲥⲁϩⲛⲉ ⲛⲁ ⲛⲧⲟⲟⲩ ⲁⲛⲟⲕ ⲣⲡⲁⲣⲁⲓⲧⲉⲓ ⲛ ⲡ ⲇⲉⲓⲡⲛⲟⲛ ⲁ ⲛⲧⲟϥ ⲃⲱⲕ ϣⲁ
+    ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲁ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ ⲛ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲁ ⲁⲛⲟⲕ ⲧⲟⲟⲩ ⲟⲩ ⲏⲓ ⲁⲩⲱ ⲛⲧⲟⲟⲩ ⲣⲁⲓⲧⲉⲓ ⲛ ⲁⲛⲟⲕ ⲛ ⲟⲩ
+    ϩⲏⲙⲉⲣⲁ ⲁⲛⲟⲕ ⲛⲁ ⲥⲣϥⲉ ⲁⲛ ⲁ ⲛⲧⲟϥ ⲉⲓ ϣⲁ ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ ⲧⲱϩⲙ ⲛ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡⲁ ϣⲃⲏⲣ ⲛⲁ ⲣϣⲉⲗⲉⲉⲧ
+    ⲁⲩⲱ ⲁⲛⲟⲕ ⲉⲧⲉⲣⲉ ⲛⲁ ⲣⲇⲓⲡⲛⲟⲛ ⲁⲛⲟⲕ ⲛⲁ ϣ ⲉⲓ ⲁⲛ ⲁⲛⲟⲕ ⲣⲡⲁⲣⲁⲓⲧⲉⲓ ⲛ ⲡ ⲇⲉⲓⲡⲛⲟⲛ ⲁ ⲛⲧⲟϥ ⲃⲱⲕ ϣⲁ ⲕⲉ ⲟⲩⲁ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡⲁ ϫⲟⲉⲓⲥ
+    ⲧⲱϩⲙ ⲛ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲁ ⲁⲛⲟⲕ ⲧⲟⲟⲩ ⲛ ⲟⲩ ⲕⲱⲙⲏ ⲉⲣⲉ ⲁⲛⲟⲕ ⲃⲱⲕ ⲉ ϫⲓ ⲡ ϣⲱⲙ ⲁⲛⲟⲕ ⲛⲁ ϣ ⲉⲓ ⲁⲛ ⲁⲛⲟⲕ ⲣⲡⲁⲣⲁⲓⲧⲉⲓ ⲁ ⲛⲧⲟϥ ⲉⲓ
+    ⲛϭⲓ ⲡ ϩⲙϩⲁⲗ ⲁ ⲛⲧⲟϥ ϫⲱ ⲛⲧⲟⲥ ⲉ ⲡⲉϥ ϫⲟⲉⲓⲥ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟⲕ ⲧⲱϩⲙ ⲛⲧⲟⲟⲩ ⲉ ⲡ ⲇⲉⲓⲡⲛⲟⲛ ⲁ ⲛⲧⲟⲟⲩ ⲡⲁⲣⲁⲓⲧⲉⲓ ⲡⲉϫⲉ ⲡ ϫⲟⲉⲓⲥ ⲛ ⲡⲉϥ ϩⲙϩⲁⲗ
+    ϫⲉ ⲃⲱⲕ ⲉ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲉ ⲡ ϩⲓⲏ ⲡ ⲉⲧⲉⲣⲉ ⲛⲧⲟⲕ ⲛⲁ ϩⲉ ⲉ ⲛⲧⲟⲟⲩ ⲉⲓⲛⲉ ⲛⲧⲟⲟⲩ ϫⲉⲕⲁⲁⲥ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲣⲇⲓⲡⲛⲉⲓ ⲛ ⲣⲉϥⲧⲟⲟⲩ ⲙⲛ ⲡ ϣⲟⲧⲉ ⲛⲧⲟⲟⲩ
+    ⲛⲁ ⲃⲱⲕ ⲁⲛ ⲉϩⲟⲩⲛ ⲉ ⲡ ⲧⲟⲡⲟⲥ ⲛ ⲡⲁ ⲉⲓⲱⲧ
+  motifs:
+  - banquet excuses
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 22:1-14
+    Mark: []
+    Luke:
+    - Luke 14:16-24
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: parable tradition; Luke/Thomas closer in shape than Matthew
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '72'
+  coptic_text: '[ⲡⲉ]ϫ̣ⲉ̣ ⲟ̣ⲩ̣ ⲣ̣[ⲱⲙ]ⲉ̣ ⲛ̣ⲁ̣ ϥ̣ ̣ϫ̣ⲉ ϫⲟⲟ ⲥ ⲛ̄ ⲛⲁ ⲥⲛⲏⲩ ϣⲓⲛⲁ ⲉ ⲩ ⲛⲁ̣ ⲡ̣ⲱϣⲉ ⲛ̄ ⲛ̄ ϩⲛⲁⲁⲩ ⲙ̄ ⲡⲁ ⲉⲓⲱⲧ⳿ ⲛⲙ̄ⲙⲁ ⲉⲓ ⲡⲉϫⲁ
+    ϥ ⲛⲁ ϥ̂ ϫⲉ ⲱ ⲡ ⲣⲱⲙⲉ ⲛⲓⲙ ⲡⲉ ⲛ̄ⲧ ⲁ ϩ̣ ⲁⲁ ⲧ⳿ ⲛ̄ ⲣⲉϥⲡⲱϣⲉ ⲁ ϥ ⲕⲟⲧ ϥ̅ ⲁ⳿ ⲛⲉϥ ⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲁ ϥ ⲛⲁ ⲩ ϫⲉ ⲙⲏ ⲉ ⲉⲓ ϣⲟⲟⲡ̂ ⲛ̄ ⲣⲉϥ⳿ⲡⲱϣⲉ'
+  coptic_lemmas: ⲡⲉϫⲉ ⲟⲩ ⲣⲱⲙⲉ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ϫⲱ ⲛⲧⲟⲥ ⲛ ⲡⲁ ⲥⲟⲛ ϩⲓⲛⲁ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲡⲱϣⲉ ⲛ ⲡ ϩⲛⲁⲁⲩ ⲛ ⲡⲁ ⲉⲓⲱⲧ ⲙⲛ ⲁⲛⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ
+    ⲛⲧⲟϥ ϫⲉ ⲱ ⲡ ⲣⲱⲙⲉ ⲛⲓⲙ ⲡⲉ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ⲉⲓⲣⲉ ⲁⲛⲟⲕ ⲛ ⲣⲉϥⲡⲱϣⲉ ⲁ ⲛⲧⲟϥ ⲕⲱⲧ ⲛⲧⲟϥ ⲉ ⲡⲉϥ ⲙⲁⲑⲏⲧⲏⲥ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ ⲙⲏ ⲉⲣⲉ ⲁⲛⲟⲕ
+    ϣⲱⲡⲉ ⲛ ⲣⲉϥⲡⲱϣⲉ
+  motifs:
+  - inheritance divider
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 12:13-14
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared Lukan/Thomas-like independent saying or Thomas knowing Luke; independence burden high
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '73'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲡ ⲱϩⲥ ⲙⲉⲛ ⲛⲁϣⲱ ϥ⳿ ⲛ̄ ⲉⲣⲅⲁⲧⲏⲥ ⲇⲉ ⲥⲟⲃⲕ⳿ ⲥⲟⲡⲥ︥ ⲇⲉ ⲙ̄ ⲡ ϫⲟⲉⲓⲥ ϣⲓⲛⲁ ⲉ ϥ ⲛⲁ ⲛⲉϫ⳿ ⲉⲣⲅⲁⲧⲏⲥ ⲉⲃⲟⲗ ⲉ ⲡ ⲱϩ︤ⲥ︥
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲱϩⲥ ⲙⲉⲛ ⲛⲁϣⲉ ⲛⲧⲟϥ ⲛ ⲉⲣⲅⲁⲧⲏⲥ ⲇⲉ ⲥⲟⲃⲕ ⲥⲟⲡⲥ ⲇⲉ ⲛ ⲡ ϫⲟⲉⲓⲥ ϩⲓⲛⲁ ⲉⲣⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲟⲩϫⲉ ⲉⲣⲅⲁⲧⲏⲥ ⲉⲃⲟⲗ
+    ⲉ ⲡ ⲱϩⲥ
+  motifs:
+  - harvest plentiful, laborers few
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 9:37-38
+    Mark: []
+    Luke:
+    - Luke 10:2
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: mission saying tradition
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '76'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲙ̄ ⲡ ⲉⲓⲱⲧ⳿ ⲉ ⲥ ⲧⲛ̄ⲧⲱⲛ ⲁ ⲩ ⲣⲱⲙⲉ ⲛ̄ ⲉϣⲱⲱⲧ⳿ ⲉ ⲩⲛⲧⲁ ϥ⳿ ⲙ̄ⲙⲁⲩ ⲛ̄ ⲟⲩ ⲫⲟⲣⲧⲓⲟⲛ ⲉ ⲁ ϥ ϩⲉ ⲁ ⲩ
+    ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ ⲡ ⲉϣⲱⲧ⳿ ⲉⲧ ⲙ̄ⲙⲁⲩ ⲟⲩ ⲥⲁⲃⲉ ⲡⲉ ⲁ ϥ ϯ ⲡⲉ ⲫⲟⲣⲧⲓⲟⲛ ⲉⲃⲟⲗ ⲁ ϥ ⲧⲟⲟⲩ ⲛⲁ ϥ ⲙ̄ ⲡⲓ ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ ⲟⲩⲱⲧ⳿ ⲛ̄ⲧⲱⲧⲛ̄ ϩⲱⲧ⳿ ⲧⲏⲩⲧⲛ̄
+    ϣⲓⲛⲉ ⲛ̄ⲥⲁ ⲡⲉ{ϥ} \bⲉ/ϩⲟ ⲉ ⲙⲁ ϥ ⲱϫⲛ̄ ⲉ ϥ ⲙⲏⲛ⳿ ⲉⲃⲟⲗ ⲡ ⲙⲁ ⲉ ⲙⲁⲣⲉ ϫⲟⲟⲗⲉⲥ ⲧϩⲛⲟ ⲉϩⲟⲩⲛ⳿ ⲉⲙⲁⲩ ⲉ ⲟⲩⲱⲙ⳿ ⲟⲩⲇⲉ ⲙⲁⲣⲉ ϥ ϥⲛ︤ⲧ︥ ⲧⲁⲕⲟ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡ ⲉⲓⲱⲧ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲣⲱⲙⲉ ⲛ ϣⲱⲧ ⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ ⲙⲙⲁⲩ ⲛ ⲟⲩ ⲫⲟⲣⲧⲓⲟⲛ ⲉⲣⲉ ⲁ ⲛⲧⲟϥ
+    ϩⲉ ⲉ ⲟⲩ ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ ⲡ ϣⲱⲧ ⲉⲧⲉⲣⲉ ⲙⲙⲁⲩ ⲟⲩ ⲥⲁⲃⲉ ⲡⲉ ⲁ ⲛⲧⲟϥ ϯ ⲡ ⲫⲟⲣⲧⲓⲟⲛ ⲉⲃⲟⲗ ⲁ ⲛⲧⲟϥ ⲧⲟⲟⲩ ⲛⲁ ⲛⲧⲟϥ ⲛ ⲡⲓ ⲙⲁⲣⲅⲁⲣⲓⲧⲏⲥ ⲟⲩⲱⲧ ⲛⲧⲱⲧⲛ
+    ϩⲱⲱ ⲛⲧⲱⲧⲛ ϣⲓⲛⲉ ⲛⲥⲁ ⲡⲉϥ ⲁϩⲟ ⲉⲣⲉ ⲙⲉⲣⲉ ⲛⲧⲟϥ ⲱϫⲛ ⲉⲣⲉ ⲛⲧⲟϥ ⲙⲟⲩⲛ ⲉⲃⲟⲗ ⲡ ⲙⲁ ⲉⲣⲉ ⲙⲉⲣⲉ ϫⲟⲟⲗⲉⲥ ⲧϩⲛⲟ ⲉϩⲟⲩⲛ ⲙⲙⲁⲩ ⲉ ⲟⲩⲱⲙ ⲟⲩⲇⲉ ⲙⲉⲣⲉ
+    ⲡ ϥⲛⲧ ⲧⲁⲕⲟ
+  motifs:
+  - pearl of great value
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:45-46
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: parable tradition; possible Matthean relationship but not decided by Coptic layer alone
+  direct_dependence_burden_labels:
+  - moderate-to-high
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '78'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲉⲧⲃⲉ ⲟⲩ ⲁ ⲧⲉⲧⲛ ⲉⲓ ⲉⲃⲟⲗ ⲉ ⲧ ⲥⲱϣⲉ ⲉ ⲛⲁⲩ ⲉ ⲩ ⲕⲁϣ ⲉ ϥ ⲕⲓⲙ ⲉ̣[ⲃⲟⲗ] ϩⲓⲧⲙ̄ ⲡ ⲧⲏⲩ ⲁⲩⲱ ⲉ ⲛⲁⲩ ⲉ ⲩ ⲣ[ⲱ]ⲙ̣[ⲉ
+    ⲉ] ⲩ̣ⲛ̄ ϣⲧⲏⲛ ⲉ ⲩ ϭⲏⲛ ϩⲓⲱⲱ ⲃ ⲛ̄ [ⲑ ⲉ ⲛ̄ ⲛⲉⲧ]ⲛ̣ ⲣ̄ⲣⲱⲟⲩ ⲙⲛ̄ ⲛⲉⲧⲙ̄ ⲙⲉⲅⲓⲥⲧⲁⲛⲟⲥ ⲛⲁⲉⲓ ⲉ ⲛ[ⲉ] ϣ̣ⲧ̣ⲏ̣ⲛ̣ ⲉ̣[ⲧ] ϭⲏⲛ ϩⲓⲱ ⲟⲩ ⲁⲩⲱ ⲥⲉ
+    ⲛ̣[ⲁ] ϣ̣ ⲥⲟⲩⲛ ⲧ ⲙⲉ ⲁⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉⲧⲃⲉ ⲟⲩ ⲁ ⲛⲧⲱⲧⲛ ⲉⲓ ⲉⲃⲟⲗ ⲉ ⲡ ⲥⲱϣⲉ ⲉ ⲛⲁⲩ ⲉ ⲟⲩ ⲕⲁϣ ⲉⲣⲉ ⲛⲧⲟϥ ⲕⲓⲙ ⲉⲃⲟⲗ ϩⲓⲧⲛ ⲡ ⲧⲏⲩ ⲁⲩⲱ ⲉ ⲛⲁⲩ ⲉ ⲟⲩ
+    ⲣⲱⲙⲉ ⲉ ⲟⲩⲛ ϣⲧⲏⲛ ⲉⲣⲉ ⲛⲧⲟⲟⲩ ϭⲛⲟⲛ ϩⲓ ⲛⲧⲟϥ ⲛ ⲡ ϩⲉ ⲛ ⲡⲉⲧⲛ ⲣⲣⲟ ⲙⲛ ⲡⲉⲧⲛ ⲙⲉⲅⲓⲥⲧⲁⲛⲟⲥ ⲛⲁⲓ ⲉ ⲡ ϣⲧⲏⲛ ⲉⲧⲉⲣⲉ ϭⲛⲟⲛ ϩⲓ ⲛⲧⲟⲟⲩ ⲁⲩⲱ ⲛⲧⲟⲟⲩ
+    ⲛⲁ ϣ ⲥⲟⲟⲩⲛ ⲡ ⲙⲉ ⲁⲛ
+  motifs:
+  - reed/soft clothing in palaces
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 11:7-8
+    Mark: []
+    Luke:
+    - Luke 7:24-25
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: Baptist saying tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '79'
+  coptic_text: 'ⲡⲉϫⲉ ⲟⲩ ⲥϩⲓⲙ̣[ⲉ] ⲛⲁ ϥ ϩⲙ̄ ⲡ ⲙⲏϣⲉ ϫⲉ ⲛⲉⲉⲓⲁⲧ ⲥ̣ [ⲛ̄] ⲑ ϩⲏ ⲛ̄ⲧ ⲁ ϩ ϥⲓ ϩⲁⲣⲟ ⲕ ⲁⲩⲱ ⲛ̄ ⲕⲓ[ⲃ]ⲉ ⲉⲛⲧ ⲁ ϩ ⲥⲁ[[ϩ]]ⲛⲟⲩϣ
+    ⲕ ⲡⲉϫⲁ ϥ ⲛⲁ [ⲥ] ϫⲉ ⲛⲉⲉⲓⲁⲧ ⲟⲩ ⲛ̄ ⲛ ⲉⲛⲧ ⲁ ϩ ⲥⲱ̣ⲧⲙ̄ ⲁ: ⲡ ⲗⲟⲅⲟⲥ ⲙ̄ ⲡ ⲉⲓⲱⲧ ⲁ ⲩ̣ ⲁⲣⲉϩ ⲉⲣⲟ ϥ ϩⲛ̄ ⲟⲩ ⲙⲉ ⲟⲩⲛ̄ ϩⲛ̄ ϩⲟⲟⲩ ⲅⲁⲣ ⲛⲁ ϣⲱⲡⲉ
+    ⲛ̄ ⲧⲉⲧⲛ̄ ϫⲟⲟ ⲥ ϫⲉ ⲛⲉ ⲉⲓⲁⲧ ϥ︦ ⲛ̄ ⲑ ϩⲏ ⲧⲁⲉⲓ ⲉⲧⲉ ⲙ̄ⲡ ⲥ ⲱ ⲁⲩⲱ ⲛ̄ ⲕⲓⲃⲉ ⲛⲁⲉⲓ ⲉ ⲙⲡ ⲟⲩ ϯⲉⲣⲱⲧⲉ'
+  coptic_lemmas: ⲡⲉϫⲉ ⲟⲩ ⲥϩⲓⲙⲉ ⲛⲁ ⲛⲧⲟϥ ϩⲛ ⲡ ⲙⲏⲏϣⲉ ϫⲉ ⲛⲉⲉⲓⲁⲧ ⲛⲧⲟⲥ ⲛ ⲡ ϩⲏ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ϥⲓ ϩⲁ ⲛⲧⲟⲕ ⲁⲩⲱ ⲡ ⲉⲕⲓⲃⲉ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟⲟⲩ
+    ⲥⲁⲛⲟⲩϣ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲥ ϫⲉ ⲛⲉⲉⲓⲁⲧ ⲛⲧⲟⲟⲩ ⲛ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟⲟⲩ ⲥⲱⲧⲙ ⲉ ⲡ ⲗⲟⲅⲟⲥ ⲛ ⲡ ⲉⲓⲱⲧ ⲁ ⲛⲧⲟⲟⲩ ϩⲁⲣⲉϩ ⲉ ⲛⲧⲟϥ ϩⲛ ⲟⲩ ⲙⲉ
+    ⲟⲩⲛ ⲟⲩ ϩⲟⲟⲩ ⲅⲁⲣ ⲛⲁ ϣⲱⲡⲉ ⲛⲧⲉ ⲛⲧⲱⲧⲛ ϫⲱ ⲛⲧⲟⲥ ϫⲉ ⲡ ⲉⲓⲁⲧ ⲛⲧⲟϥ ⲛ ⲡ ϩⲏ ⲡⲁⲓ ⲉⲧⲉⲣⲉ ⲙⲡⲉ ⲛⲧⲟⲥ ⲱⲱ ⲁⲩⲱ ⲡ ⲉⲕⲓⲃⲉ ⲡⲁⲓ ⲉⲣⲉ ⲙⲡⲉ ⲛⲧⲟⲟⲩ ϯⲉⲣⲱⲧⲉ
+  motifs:
+  - womb/breasts blessing reversed
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 11:27-28
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared or Lukan-related saying; high-value because uncommon scene
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '86'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ̣ [ⲛ̄ ⲃⲁϣⲟⲣ ⲟⲩⲛ̄ⲧ]ⲁ̣ ⲩ̣ ̣ⲛ̣ ⲟ̣ⲩ̣ [ⲃⲏ]ⲃ̣ ̣ⲁ̣ⲩ̣ⲱ̣ ⲛ ϩⲁⲗⲁⲧⲉ ⲟⲩⲛ̄ⲧⲁ ⲩ ⲙⲙⲁⲩ ⲙ̄ ⲡ̣[̣ⲉ]ⲩ ⲙⲁϩ ⲡ ϣⲏⲣⲉ ⲇⲉ
+    ⲙ̄ ⲡ ⲣⲱⲙⲉ ⲙⲛ̄ⲧⲁ ϥ⳿ ⲛⲛ̣ [ⲟ]ⲩ ⲙⲁ ⲉ ⲣⲓⲕⲉ ⲛ̄ ⲧⲉϥ⳿ ⲁⲡⲉ ⲛ̄ ϥ⳿ ⲙ̄ⲧⲟⲛ · ⲙ̄[ⲙⲟ] ϥ̣
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲃⲁϣⲟⲣ ⲟⲩⲛⲧⲁ ⲛⲧⲟⲟⲩ ⲛ ⲉⲩ ⲃⲏⲃ ⲁⲩⲱ ⲡ ϩⲁⲗⲏⲧ ⲟⲩⲛⲧⲁ ⲛⲧⲟⲟⲩ ⲙⲙⲁⲩ ⲛ ⲡⲉⲩ ⲙⲁϩ ⲡ ϣⲏⲣⲉ ⲇⲉ ⲛ ⲡ ⲣⲱⲙⲉ ⲙⲛⲧⲁ
+    ⲛⲧⲟϥ ⲛ ⲟⲩ ⲙⲁ ⲉ ⲣⲓⲕⲉ ⲛ ⲡⲉϥ ⲁⲡⲉ ⲛⲧⲉ ⲛⲧⲟϥ ⲙⲧⲟⲛ · ⲛ ⲛⲧⲟϥ
+  motifs:
+  - foxes have holes
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 8:20
+    Mark: []
+    Luke:
+    - Luke 9:58
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '89'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲉⲧⲃⲉ ⲟⲩ ⲧⲉⲧⲛ̄ ⲉⲓⲱⲉ ⲙ̄ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲙ̄ ⲡ ⲡⲟⲧⲏⲣⲓⲟⲛ ⲧⲉⲧⲛ̄ ⲣ̄ⲛⲟⲉⲓ ⲁⲛ ϫⲉ ⲡ ⲉⲛⲧ ⲁ ϩ ⲧⲁⲙⲓⲟ ⲙ̄ ⲡ ⲥⲁ ⲛϩⲟⲩⲛ
+    ⲛ̄ⲧⲟϥ ⲟⲛ ⲡ ⲉⲛⲧ ⲁ ϥ ⲧⲁⲙⲓⲟ ⲙ̄ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ·
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉⲧⲃⲉ ⲟⲩ ⲛⲧⲱⲧⲛ ⲉⲓⲱⲉ ⲛ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲛ ⲡ ⲡⲟⲧⲏⲣⲓⲟⲛ ⲛⲧⲱⲧⲛ ⲣⲛⲟⲉⲓ ⲁⲛ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ⲧⲁⲙⲓⲟ ⲛ ⲡ ⲥⲁ
+    ⲛϩⲟⲩⲛ ⲛⲧⲟϥ ⲟⲛ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ⲧⲁⲙⲓⲟ ⲛ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ·
+  motifs:
+  - clean inside/outside cup
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 23:25-26
+    Mark: []
+    Luke:
+    - Luke 11:39-41
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared polemical saying; possible Luke/Thomas form relation
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '90'
+  coptic_text: ⲡⲉϫⲉ ⲓⲏ︤ⲥ︥ ϫⲉ ⲁⲙⲏⲉⲓ ⲧⲛ̄ ϣⲁⲣⲟ ⲉⲓ̂ ϫⲉ ⲟⲩ ⲭⲣⲏⲥⲧⲟⲥ ⲡⲉ ⲡⲁ ⲛⲁϩⲃ ⲁⲩⲱ ⲧⲁ ⲙⲛ︤ⲧ︥ϫⲟⲉⲓⲥ ⲟⲩ ⲣⲙ̄ⲣⲁϣ ⲧⲉ ⲁⲩⲱ ⲧⲉⲧⲛ ⲁ ϩⲉ ⲁ ⲩ
+    ⲁⲛⲁ{ⲩ}ⲡⲁ⟨ⲩ⟩ⲥⲓⲥ ⲛⲏ ⲧⲛ̄
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉⲓ ⲛⲧⲱⲧⲛ ϣⲁ ⲁⲛⲟⲕ ϫⲉ ⲟⲩ ⲭⲣⲏⲥⲧⲟⲥ ⲡⲉ ⲡⲁ ⲛⲁϩⲃ ⲁⲩⲱ ⲡⲁ ⲙⲛⲧϫⲟⲉⲓⲥ ⲟⲩ ⲣⲙⲣⲁϣ ⲡⲉ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ⲛⲁ ϩⲉ ⲉ ⲟⲩ
+    ⲁⲛⲁⲡⲁⲩⲥⲓⲥ ⲛⲁ ⲛⲧⲱⲧⲛ
+  motifs:
+  - rest and easy yoke
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 11:28-30
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: possible Matthean/Thomas relation or shared wisdom-Christology saying
+  direct_dependence_burden_labels:
+  - moderate-to-high
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '91'
+  coptic_text: ⲡⲉϫⲁ ⲩ ⲛⲁ ϥ⳿ ϫⲉ ϫⲟⲟ ⲥ ⲉⲣⲟ ⲛ ϫⲉ ⲛ̄ⲧⲕ ⲛⲓⲙ ϣⲓⲛⲁ ⲉ ⲛ ⲁ ⲣ̄ⲡⲓⲥⲧⲉⲩⲉ ⲉⲣⲟ ⲕ⳿ ⲡⲉϫⲁ ϥ ⲛⲁ ⲩ ϫⲉ ⲧⲉⲧⲛ̄ ⲣ̄ⲡⲓⲣⲁⲍⲉ ⲙ̄ ⲡ ϩⲟ ⲛ̄
+    ⲧ ⲡⲉ ⲙⲛ̄ ⲡ ⲕⲁϩ ⲁⲩⲱ ⲡ ⲉⲧ ⲛ̄ ⲡⲉⲧⲛ̄ ⲙⲧⲟ ⲉⲃⲟⲗ⳿ ⲙ̄ⲡⲉ ⲧⲛ̄ ⲥⲟⲩⲱⲛ ϥ⳿ ⲁⲩⲱ ⲡⲉⲉⲓ ⲕⲁⲓⲣⲟⲥ ⲧⲉⲧⲛ̄ ⲥⲟⲟⲩⲛ ⲁⲛ ⲛ̄ ⲣ̄ⲡⲓⲣⲁⲍⲉ ⲙ̄ⲙⲟ ϥ⳿
+  coptic_lemmas: ⲡⲉϫⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ϫⲱ ⲛⲧⲟⲥ ⲉ ⲁⲛⲟⲛ ϫⲉ ⲛⲧⲟⲕ ⲛⲓⲙ ϩⲓⲛⲁ ⲉⲣⲉ ⲁⲛⲟⲛ ⲛⲁ ⲣⲡⲓⲥⲧⲉⲩⲉ ⲉ ⲛⲧⲟⲕ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ ⲛⲧⲱⲧⲛ
+    ⲣⲡⲉⲓⲣⲁⲍⲉ ⲛ ⲡ ϩⲟ ⲛ ⲡ ⲡⲉ ⲙⲛ ⲡ ⲕⲁϩ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲛ ⲡⲉⲧⲛ ⲙⲧⲟ ⲉⲃⲟⲗ ⲙⲡⲉ ⲛⲧⲱⲧⲛ ⲥⲟⲟⲩⲛ ⲛⲧⲟϥ ⲁⲩⲱ ⲡⲉⲓ ⲕⲁⲓⲣⲟⲥ ⲛⲧⲱⲧⲛ ⲥⲟⲟⲩⲛ ⲁⲛ ⲛⲧⲉ ⲣⲡⲉⲓⲣⲁⲍⲉ
+    ⲛ ⲛⲧⲟϥ
+  motifs:
+  - interpreting weather/signs but not the time
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 16:2-3
+    Mark: []
+    Luke:
+    - Luke 12:54-56
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared signs-of-the-time saying
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '92'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ϣⲓⲛⲉ ⲁⲩⲱ ⲧⲉⲧⲛ ⲁ ϭⲓⲛⲉ ⲁⲗⲗⲁ ⲛ ⲉⲧ ⲁ ⲧⲉⲧⲛ̄ ϫⲛⲟⲩ ⲉⲓ ⲉⲣⲟ ⲟⲩ ⲛ̄ ⲛⲓ ϩⲟⲟⲩ ⲉ ⲙ̄ⲡ ⲓ ϫⲟⲟ ⲩ ⲛⲏ ⲧⲛ̄ ⲙ̄ ⲫ ⲟⲟⲩ
+    ⲉⲧ ⲙ̄ⲙⲁⲩ ⲧⲉⲛⲟⲩ ⲉ ϩⲛⲁ ⲓ̈ ⲉ ϫⲟ ⲟⲩ ⲁⲩⲱ ⲧⲉⲧⲛ̄ ϣⲓⲛⲉ ⲁⲛ⳿ ⲛ̄ⲥⲱ ⲟⲩ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ϣⲓⲛⲉ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ⲛⲁ ϭⲓⲛⲉ ⲁⲗⲗⲁ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲱⲧⲛ ϫⲛⲟⲩ ⲁⲛⲟⲕ ⲉ ⲛⲧⲟⲟⲩ ⲛ ⲡⲓ ϩⲟⲟⲩ ⲉⲣⲉ ⲙⲡⲉ ⲁⲛⲟⲕ ϫⲱ ⲛⲧⲟⲟⲩ
+    ⲛⲁ ⲛⲧⲱⲧⲛ ⲛ ⲡ ϩⲟⲟⲩ ⲉⲧⲉⲣⲉ ⲙⲙⲁⲩ ⲧⲉⲛⲟⲩ ⲉⲣⲉ ϩⲛⲁ ⲁⲛⲟⲕ ⲉ ϫⲟ ⲛⲧⲟⲟⲩ ⲁⲩⲱ ⲛⲧⲱⲧⲛ ϣⲓⲛⲉ ⲁⲛ ⲛⲥⲁ ⲛⲧⲟⲟⲩ
+  motifs:
+  - seek/find
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 7:7-8
+    Mark: []
+    Luke:
+    - Luke 11:9-10
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: portable saying; Thomas redactional context matters more than surface wording
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '94'
+  coptic_text: '[ⲡⲉϫ]ⲉ̣ ⲓⲥ ⲡ ⲉⲧ ϣⲓⲛⲉ ϥ ⲛⲁ ϭⲓⲛⲉ [ⲡ ⲉⲧ ⲧⲱϩⲙ ⲉ]ϩ̣ⲟⲩⲛ ⲥⲉ ⲛⲁ ⲟⲩⲱⲛ ⲛⲁ ϥ⳿'
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ⲡ ⲉⲧⲉⲣⲉ ϣⲓⲛⲉ ⲛⲧⲟϥ ⲛⲁ ϭⲓⲛⲉ ⲡ ⲉⲧⲉⲣⲉ ⲧⲱϩⲙ ⲉϩⲟⲩⲛ ⲛⲧⲟⲟⲩ ⲛⲁ ⲟⲩⲱⲛ ⲛⲁ ⲛⲧⲟϥ
+  motifs:
+  - seek/find/knock/open
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 7:7-8
+    Mark: []
+    Luke:
+    - Luke 11:9-10
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: portable saying
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '95'
+  coptic_text: '[ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ] ⲉ̣ϣⲱⲡⲉ ⲟⲩⲛ̄ⲧⲏ ⲧⲛ̄ ϩⲟⲙⲧ⳿ ⲙ̄ⲡⲣ̄ ϯ ⲉ ⲧ ⲙⲏⲥⲉ ⲁⲗⲗⲁ ϯ̣ ⲙ̣[ⲙⲟ ϥ] ⲙ̣ ⲡ̣ ⲉ̣ⲧ̣ [ⲉ]ⲧⲛ ⲁ ϫⲓⲧ ⲟⲩ ⲁⲛ ⲛ̄ⲧⲟⲟⲧ
+    ϥ⳿'
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲉϣⲱⲡⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲱⲧⲛ ϩⲟⲙⲧ ⲙⲡⲣ ϯ ⲉ ⲡ ⲙⲏⲥⲉ ⲁⲗⲗⲁ ϯ ⲛ ⲛⲧⲟϥ ⲛ ⲡ ⲉⲧⲉⲣⲉ ⲛⲧⲱⲧⲛ ⲛⲁ ϫⲓ ⲛⲧⲟⲟⲩ ⲁⲛ ⲛⲧⲛ ⲛⲧⲟϥ
+  motifs:
+  - lend without return/usury
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 6:34-35
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: shared ethical saying; possible Lukan affinity
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '96'
+  coptic_text: ⲡ̣[ⲉϫ]ⲉ̣ ⲓ︤ⲥ︥ ϫⲉ ⲧ ⲙ︤ⲛ︥ⲧⲉⲣⲟ ⲙ̄ ⲡⲉⲓⲱⲧ̂ ⲉ ⲥ ⲧⲛ̄ⲧⲱ[ⲛ ⲉ ⲩ] ⲥϩⲓⲙⲉ ⲁ ⲥ ϫⲓ ⲛ̄ ⲟⲩ ⲕⲟⲩⲉⲓ ⲛ̄ ⲥⲁⲉⲓⲣ ⲁ [ⲥ ϩ]ⲟ̣ⲡ ϥ⳿ ϩⲛ̄
+    ⲟⲩ ϣⲱⲧⲉ ⲁ ⲥ ⲁⲁ ϥ ⲛ̄ ϩⲛ̄ ⲛⲟ[ϭ ⲛ] ⲛⲟⲉⲓⲕ⳿ ⲡ ⲉⲧⲉ ⲩⲙ̄ ⲙⲁⲁϫⲉ ⲙ̄ⲙⲟ ϥ ⲙⲁ[ⲣⲉ] ϥ̣ ⲥⲱⲧⲙ̄
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡⲉⲓⲱⲧ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲥϩⲓⲙⲉ ⲁ ⲛⲧⲟⲥ ϫⲓ ⲛ ⲟⲩ ⲕⲟⲩⲓ ⲛ ⲥⲓⲣ ⲁ ⲛⲧⲟⲥ ϩⲱⲡ ⲛⲧⲟϥ ϩⲛ ⲟⲩ
+    ϣⲱⲧⲉ ⲁ ⲛⲧⲟⲥ ⲉⲓⲣⲉ ⲛⲧⲟϥ ⲛ ⲟⲩ ⲛⲟϭ ⲛ ⲛⲟⲉⲓⲕ ⲡ ⲉⲧⲉⲣⲉ ⲟⲩⲛ ⲙⲁⲁϫⲉ ⲛ ⲛⲧⲟϥ ⲙⲁⲣⲉ ⲛⲧⲟϥ ⲥⲱⲧⲙ
+  motifs:
+  - leaven
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:33
+    Mark: []
+    Luke:
+    - Luke 13:20-21
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: parable tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '99'
+  coptic_text: ⲡⲉϫⲉ ⲙ̄ ⲙⲁⲑⲏⲧⲏⲥ ⲛⲁ ϥ ϫⲉ ⲛⲉⲕ · ⲥⲛⲏⲩ ⲙⲛ̄ ⲧⲉⲕ ⲙⲁⲁⲩ ⲥⲉ ⲁϩⲉ ⲣⲁⲧ ⲟⲩ ϩⲓ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲡⲉϫⲁ ϥ ⲛⲁ ⲩ ϫⲉ ⲛ ⲉⲧ ⲛ̄ ⲛⲉⲉⲓ ⲙⲁ
+    ⲉϯ ⲣⲉ ⲙ̄ ⲡ ⲟⲩⲱϣ ⲙ̄ ⲡⲁ ⲉⲓⲱⲧ⳿ ⲛⲁⲉⲓ ⲛⲉ ⲛⲁ ⲥⲛⲏⲩ ⲙⲛ̄ ⲧⲁ ⲙⲁⲁⲩ ⲛ̄ⲧⲟⲟⲩ ⲡⲉ ⲉⲧ ⲛⲁ ⲃⲱⲕ⳿ ⲉϩⲟⲩⲛ ⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲙ̄ ⲡⲁ ⲉⲓⲱⲧ⳿
+  coptic_lemmas: ⲡⲉϫⲉ ⲡ ⲙⲁⲑⲏⲧⲏⲥ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡⲉⲕ · ⲥⲛⲏⲩ ⲙⲛ ⲡⲉⲕ ⲙⲁⲁⲩ ⲛⲧⲟⲟⲩ ⲱϩⲉ ⲣⲁⲧ ⲛⲧⲟⲟⲩ ϩⲓ ⲡ ⲥⲁ ⲛ ⲃⲟⲗ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ
+    ⲡ ⲉⲧⲉⲣⲉ ⲛ ⲡⲉⲓ ⲙⲁ ⲉⲧⲉⲣⲉ ⲉⲓⲣⲉ ⲛ ⲡ ⲟⲩⲱϣ ⲛ ⲡⲁ ⲉⲓⲱⲧ ⲛⲁⲓ ⲡⲉ ⲡⲁ ⲥⲟⲛ ⲙⲛ ⲡⲁ ⲙⲁⲁⲩ ⲛⲧⲟⲟⲩ ⲡⲉ ⲉⲧⲉⲣⲉ ⲛⲁ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡⲁ ⲉⲓⲱⲧ
+  motifs:
+  - true family does will of Father
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 12:46-50
+    Mark:
+    - Mark 3:31-35
+    Luke:
+    - Luke 8:19-21
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: high
+  best_first_model: shared biographical/saying tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '100'
+  coptic_text: ⲁ ⲩ ⲧⲥⲉⲃⲉ ⲓ︤ⲥ︥ ⲁ ⲩ ⲛⲟⲩⲃ ⲁⲩⲱ ⲡⲉϫⲁ ⲩ ⲛⲁ ϥ⳿ ϫⲉ ⲛ ⲉⲧ ⲏⲡ · ⲁ ⲕⲁⲓⲥⲁⲣ⳿ ⲥⲉ ϣⲓⲧⲉ ⲙ̄ⲙⲟ ⲛ ⲛ̄ ⲛ̄ ϣⲱⲙ⳿ ⲡⲉϫⲁ ϥ ⲛⲁ ⲩ ϫⲉ ϯ
+    ⲛⲁ ⲕⲁⲓⲥⲁⲣ⳿ ⲛ̄ ⲕⲁⲓⲥⲁⲣ ϯ ⲛⲁ ⲡ ⲛⲟⲩⲧⲉ ⲙ̄ ⲡ ⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲡ ⲉⲧⲉ ⲡⲱ ⲉⲓ ⲡⲉ ⲙⲁ ⲧⲛ̄ ⲛⲁ ⲉⲓ ϥ
+  coptic_lemmas: ⲁ ⲛⲧⲟⲟⲩ ⲧⲥⲉⲃⲟ ⲓⲏⲥⲟⲩⲥ ⲉ ⲟⲩ ⲛⲟⲩⲃ ⲁⲩⲱ ⲡⲉϫⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲛⲧⲟϥ ϫⲉ ⲡ ⲉⲧⲉⲣⲉ ⲱⲡ · ⲁ ⲕⲁⲓⲥⲁⲣ ⲛⲧⲟⲟⲩ ϣⲓⲧⲉ ⲛ ⲁⲛⲟⲛ ⲛ ⲡ ϣⲱⲙ
+    ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛⲁ ⲛⲧⲟⲟⲩ ϫⲉ ϯ ⲡⲁ ⲕⲁⲓⲥⲁⲣ ⲛ ⲕⲁⲓⲥⲁⲣ ϯ ⲡⲁ ⲡ ⲛⲟⲩⲧⲉ ⲛ ⲡ ⲛⲟⲩⲧⲉ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲡⲱ ⲁⲛⲟⲛ ⲡ ϯ ⲛⲧⲱⲧⲛ ⲛⲁ ⲁⲛⲟⲕ ⲛⲧⲟϥ
+  motifs:
+  - Caesar’s coin
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 22:15-22
+    Mark:
+    - Mark 12:13-17
+    Luke:
+    - Luke 20:20-26
+    John: []
+  relation_type: possible_synoptic_influence_or_harmonization
+  matrix_strength: high
+  best_first_model: shared controversy tradition; direct relation possible only with closer wording analysis
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '101'
+  coptic_text: ⲡ ⲉⲧ ⲁ ⲙⲉⲥⲧⲉ ⲡⲉϥ ⲉⲓ̣[ⲱ]ⲧ⳿ ⲁ̣ⲛ ⲙⲛ̄ ⲧⲉϥ⳿ ⲙⲁⲁⲩ ⲛ̄ ⲧⲁ ϩⲉ ϥ ⲛⲁ ϣ ⲣ̄ⲙ̣[ⲁⲑⲏⲧ]ⲏ̣ⲥ̣ ̣ⲛ̣ⲁ̣ ⲉⲓ ⲁ(ⲛ) ⲁⲩⲱ ⲡ ⲉⲧ ⲁ ⲙⲣ̄ⲣⲉ ⲡⲉ[ϥ
+    ⲉⲓⲱⲧ ⲁⲛ ⲙ]ⲛ̣̄ ⲧ̣ⲉϥ ⲙⲁⲁⲩ ⲛ̄ ⲧⲁ ϩⲉ ϥ ⲛⲁ ϣ ⲣ̄ⲙ[ⲁⲑⲏⲧⲏⲥ ⲛⲁ] ⲉⲓ ⲁⲛ ⲧⲁ ⲙⲁⲁⲩ ⲅⲁⲣ ⲛ̄ⲧⲁ ⲥ̣[.........] [..]ⲟ̣ⲗ̣ [ⲧⲁ ⲙⲁⲁ]ⲩ ⲇⲉ ⲙ̄ ⲙⲉ
+    ⲁ ⲥ ϯ ⲛⲁ ⲉⲓ ⲙ ⲡ ⲱⲛϩ̣
+  coptic_lemmas: ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ⲙⲟⲥⲧⲉ ⲡⲉϥ ⲉⲓⲱⲧ ⲁⲛ ⲙⲛ ⲡⲉϥ ⲙⲁⲁⲩ ⲛ ⲡⲁ ϩⲉ ⲛⲧⲟϥ ⲛⲁ ϣ ⲣⲙⲁⲑⲏⲧⲏⲥ ⲛⲁ ⲁⲛⲟⲕ ⲁⲛ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲛⲁ ⲙⲣⲣⲉ ⲡⲉϥ ⲉⲓⲱⲧ
+    ⲁⲛ ⲙⲛ ⲡⲉϥ ⲙⲁⲁⲩ ⲛ ⲡⲁ ϩⲉ ⲛⲧⲟϥ ⲛⲁ ϣ ⲣⲙⲁⲑⲏⲧⲏⲥ ⲛ ⲁⲛⲟⲕ ⲁⲛ ⲡⲁ ⲙⲁⲁⲩ ⲅⲁⲣ ⲛⲧⲉ_ⲁⲛⲟⲕ ⲥ......... ..ⲟⲗ ⲡⲁ ⲙⲁⲁⲩ ⲇⲉ ⲛ ⲙⲉ ⲁ ⲛⲧⲟⲥ ϯ ⲛ ⲁⲛⲟⲕ
+    ⲛ ⲡ ⲱⲛϩ
+  motifs:
+  - hate father/mother
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 10:37
+    Mark: []
+    Luke:
+    - Luke 14:26
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '103'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲟⲩ ⲙⲁ̣[ⲕⲁ]ⲣⲓⲟⲥ ⲡⲉ ⲡ ⲣⲱⲙⲉ ⲡⲁⲉⲓ ⲉⲧ ⲥⲟⲟⲩ(ⲛ) ϫⲉ ϩ[ⲛ̄ ⲁϣ] ⲙ̣̄ ⲙⲉⲣⲟⲥ ⲉ ⲛ ⲗⲏⲥⲧⲏⲥ ⲛⲏⲩ ⲉϩⲟⲩⲛ ϣⲓⲛⲁ̣ [ⲉ ϥ]
+    ⲛ̣ⲁ ⲧⲱⲟⲩⲛ/ ⲛ ϥ ⲥⲱϩⲟⲩϩ ⲛ̄ ⲧⲉϥ⳿ ⲙⲛ︤ⲧ︥ⲉ̣[ⲣⲟ] ⲁⲩⲱ ⲛ̄ ϥ ⲙⲟⲩⲣ ⲙ̄ⲙⲟ ϥ ⲉϫⲛ̄ ⲧⲉϥ⳿ ϯⲡⲉ ϩ̣[ⲁ] ⲧ̣ ⲉϩⲏ ⲉ ⲙ⳿ⲡⲁⲧ ⲟⲩ ⲉⲓ ⲉϩⲟⲩⲛ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲟⲩ ⲙⲁⲕⲁⲣⲓⲟⲥ ⲡⲉ ⲡ ⲣⲱⲙⲉ ⲡⲁⲓ ⲉⲧⲉⲣⲉ ⲥⲟⲟⲩⲛ ϫⲉ ϩⲛ ⲁϣ ⲛ ⲙⲉⲣⲟⲥ ⲉ ⲡ ⲗⲏⲥⲧⲏⲥ ⲉⲓ ⲉϩⲟⲩⲛ ϩⲓⲛⲁ ⲉⲣⲉ ⲛⲧⲟϥ ⲛⲁ
+    ⲧⲱⲟⲩⲛ/ ⲛⲧⲉ ⲛⲧⲟϥ ⲥⲱⲟⲩϩ ⲛ ⲡⲉϥ ⲙⲛⲧⲣⲣⲟ ⲁⲩⲱ ⲛⲧⲉ ⲛⲧⲟϥ ⲙⲟⲩⲣ ⲛ ⲛⲧⲟϥ ⲉϫⲛ̄ ⲡⲉϥ ϯⲡⲉ ϩⲁ ⲡ ⲉϩⲏ ⲉⲣⲉ ⲙⲡⲁⲧⲉ ⲛⲧⲟⲟⲩ ⲉⲓ ⲉϩⲟⲩⲛ
+  motifs:
+  - thief known beforehand
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 24:43
+    Mark: []
+    Luke:
+    - Luke 12:39
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: apocalyptic watchfulness saying
+  direct_dependence_burden_labels:
+  - low-to-moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '107'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲉ ⲥ ⲧⲛ̄ⲧⲱ(ⲛ) ⲉ ⲩ ⲣⲱⲙⲉ ⲛ̄ ϣⲱⲥ ⲉ ⲩⲛ̄ⲧⲁ ϥ⳿ ⲙ̄ⲙⲁⲩ ⲛ̄ ϣⲉ ⲛ̄ ⲉⲥⲟⲟⲩ ⲁ ⲟⲩⲁ ⲛ̄ϩⲏⲧ ⲟⲩ ⲥⲱⲣⲙ⳿ ⲉ
+    ⲡ ⲛⲟϭ ⲡⲉ ⲁ ϥ ⲕⲱ ⲙ̄ ⲡⲥⲧⲉⲯⲓⲧ ⲁ ϥ ϣⲓⲛⲉ ⲛ̄ⲥⲁ ⲡⲓ ⲟⲩⲁ · ϣⲁⲛⲧⲉ ϥ ϩⲉ ⲉⲣⲟ ϥ ⲛ̄ⲧⲁⲣⲉ ϥ ϩⲓⲥⲉ ⲡⲉϫⲁ ϥ⳿ ⲙ̄ ⲡ ⲉⲥⲟ[[ⲩ]]ⲟⲩ ϫⲉ ϯ ⲟⲩⲟϣⲕ⳿ ⲡⲁⲣⲁ
+    ⲡⲥⲧⲉⲯⲓⲧ⳿
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲣⲱⲙⲉ ⲛ ϣⲱⲥ ⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ ⲙⲙⲁⲩ ⲛ ϣⲉ ⲛ ⲉⲥⲟⲟⲩ ⲁ ⲟⲩⲁ ϩⲛ ⲛⲧⲟⲟⲩ ⲥⲱⲣⲙ
+    ⲉⲣⲉ ⲡ ⲛⲟϭ ⲡⲉ ⲁ ⲛⲧⲟϥ ⲕⲱ ⲛ ⲡⲥⲧⲉⲯⲓⲧ ⲁ ⲛⲧⲟϥ ϣⲓⲛⲉ ⲛⲥⲁ ⲡⲓ ⲟⲩⲁ · ϣⲁⲛⲧⲉ ⲛⲧⲟϥ ϩⲉ ⲉ ⲛⲧⲟϥ ⲛⲧⲁⲣⲉ ⲛⲧⲟϥ ϩⲓⲥⲉ ⲡⲉϫⲉ ⲛⲧⲟϥ ⲛ ⲡ ⲉⲥⲟⲟⲩ ϫⲉ
+    ⲁⲛⲟⲕ ⲟⲩⲟϣⲕ ⲡⲁⲣⲁ ⲡⲥⲧⲉⲯⲓⲧ⳿
+  motifs:
+  - lost sheep
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 18:12-14
+    Mark: []
+    Luke:
+    - Luke 15:3-7
+    John: []
+  relation_type: shared_sayings_or_parable_tradition
+  matrix_strength: medium
+  best_first_model: parable tradition with divergent theological placement
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '109'
+  coptic_text: ⲡⲉϫⲉ ⲓ︤ⲥ︥ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲉ ⲥ ⲧⲛ̄ⲧⲱⲛ ⲉ ⲩ ⲣⲱⲙⲉ ⲉ ⲩⲛ̄ⲧⲁ ϥ̣ [ⲙ]ⲙ̣ⲁⲩ ϩⲛ̄ ⲧⲉϥ⳿ ⲥⲱϣⲉ ⲛ̄ⲛ ⲟⲩ ⲉϩⲟ ⲉ ϥ ϩ̣ⲏ̣[ⲡ ⲉ] ϥ̣ ⲟ ⲛ̄
+    ⲁⲧⲥⲟⲟⲩⲛ⳿ ⲉⲣⲟ ϥ ⲁⲩⲱ ⲙ̄[ⲙⲛ̄ⲛⲥⲁ ⲧ]ⲣⲉ ϥ ⲙⲟⲩ ⲁ ϥ ⲕⲁⲁ ϥ ⲙ︤ ⲡ︥ⲉϥ⳿ [ϣⲏⲣⲉ ⲛⲉ] ⲡ̣ ϣⲏⲣⲉ ⲥⲟⲟⲩⲛ ⲁⲛ⳿ ⲁ ϥ ϥⲓ⳿ ⲧ ⲥⲱϣⲉ ⲉⲧ ⲙⲙⲁⲩ ⲁ ϥ ⲧⲁ̣ⲁ̣
+    [ⲥ ⲉⲃⲟ]ⲗ̣ ̣ⲁ̣ⲩ̣ⲱ̣ ̣ⲡ̣ [ⲉⲛ]ⲧ ⲁ ϩ ⲧⲟⲟⲩ ⲥ ⲁ ϥ ⲉⲓ ⲉ ϥ ⲥⲕⲁⲉⲓ ⲁ̣ [ϥ ϩ]ⲉ ⲁ ⲡ ⲉϩⲟ ⲁ ϥ̣ ⲁⲣⲭⲉⲓ ⲛ̄ ϯ ϩⲟⲙⲧ⳿ ⲉ ⲧ ⲙⲏⲥⲉ ⲛ̣ [ⲛ ⲉⲧ] ⲟⲩⲟϣ
+    ⲟⲩ
+  coptic_lemmas: ⲡⲉϫⲉ ⲓⲏⲥⲟⲩⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲉⲣⲉ ⲛⲧⲟⲥ ⲧⲟⲛⲧⲛ ⲉ ⲟⲩ ⲣⲱⲙⲉ ⲉⲣⲉ ⲟⲩⲛⲧⲁ ⲛⲧⲟϥ ⲙⲙⲁⲩ ϩⲛ ⲡⲉϥ ⲥⲱϣⲉ ⲛ ⲟⲩ ⲁϩⲟ ⲉⲣⲉ ⲛⲧⲟϥ ϩⲱⲡ ⲉⲣⲉ
+    ⲛⲧⲟϥ ⲉⲓⲣⲉ ⲛ ⲁⲧⲥⲟⲟⲩⲛ ⲉ ⲛⲧⲟϥ ⲁⲩⲱ ⲙⲙⲛⲛⲥⲁ ⲧⲣⲉ ⲛⲧⲟϥ ⲙⲟⲩ ⲁ ⲛⲧⲟϥ ⲕⲱ ⲛⲧⲟϥ ⲛ ⲡⲉϥ ϣⲏⲣⲉ ⲛⲉ ⲡ ϣⲏⲣⲉ ⲥⲟⲟⲩⲛ ⲁⲛ ⲁ ⲛⲧⲟϥ ϥⲓ ⲡ ⲥⲱϣⲉ ⲉⲧⲉⲣⲉ
+    ⲙⲙⲁⲩ ⲁ ⲛⲧⲟϥ ϯ ⲛⲧⲟⲥ ⲉⲃⲟⲗ ⲁⲩⲱ ⲡ ⲉⲧⲉⲣⲉ ⲁ ⲛⲧⲟϥ ⲧⲟⲟⲩ ⲛⲧⲟⲥ ⲁ ⲛⲧⲟϥ ⲉⲓ ⲉⲣⲉ ⲛⲧⲟϥ ⲥⲕⲁⲓ ⲁ ⲛⲧⲟϥ ϩⲉ ⲉ ⲡ ⲁϩⲟ ⲁ ⲛⲧⲟϥ ⲁⲣⲭⲉⲓ ⲛ ϯ ϩⲟⲙⲧ ⲉ
+    ⲡ ⲙⲏⲥⲉ ⲛ ⲡ ⲉⲧⲉⲣⲉ ⲟⲩⲱϣ ⲛⲧⲟⲟⲩ
+  motifs:
+  - treasure hidden in field
+  canonical_refs_by_gospel:
+    Matt:
+    - Matt 13:44
+    Mark: []
+    Luke: []
+    John: []
+  relation_type: possible_synoptic_influence_or_harmonization
+  matrix_strength: medium
+  best_first_model: parable tradition; possible Matthean relation but direct evidence limited in Coptic-only layer
+  direct_dependence_burden_labels:
+  - moderate-to-high
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections
+- thomas_logion: '113'
+  coptic_text: ⲡⲉϫⲁ ⲩ ⲛⲁ ϥ ⲛ̄ϭⲓ ⲛⲉϥ ⲙⲁⲑⲏⲧⲏⲥ ϫⲉ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲉ ⲥ ⲛ̄ⲛⲏⲩ ⲛ̄ ⲁϣ ⲛ̄ ϩⲟⲟⲩ ⲉ ⲥ ⲛ̄ⲛⲏⲩ ⲁⲛ ϩⲛ̄ ⲟⲩ ϭⲱϣⲧ ⲉⲃⲟⲗ⳿ ⲉ ⲩ ⲛⲁ ϫⲟⲟ
+    ⲥ ⲁⲛ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲙ̄ ⲡⲓ ⲥⲁ ⲏ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲧⲏ ⲁⲗⲗⲁ ⲧ ⲙⲛ̄ⲧⲉⲣⲟ ⲙ̄ ⲡ ⲉⲓⲱⲧ̂ ⲉ ⲥ ⲡⲟⲣϣ⳿ ⲉⲃⲟⲗ ϩⲓϫⲙ̄ ⲡ ⲕⲁϩ ⲁⲩⲱ ⲣ̄ ⲣⲱⲙⲉ ⲛⲁⲩ ⲁⲛ ⲉⲣⲟ
+    ⲥ
+  coptic_lemmas: ⲡⲉϫⲉ ⲛⲧⲟⲟⲩ ⲛⲁ ⲛⲧⲟϥ ⲛϭⲓ ⲡⲉϥ ⲙⲁⲑⲏⲧⲏⲥ ϫⲉ ⲡ ⲙⲛⲧⲣⲣⲟ ⲉⲣⲉ ⲛⲧⲟⲥ ⲉⲓ ⲛ ⲁϣ ⲛ ϩⲟⲟⲩ ⲉⲣⲉ ⲛⲧⲟⲥ ⲉⲓ ⲁⲛ ϩⲛ ⲟⲩ ϭⲱϣⲧ ⲉⲃⲟⲗ ⲉⲣⲉ
+    ⲛⲧⲟⲟⲩ ⲛⲁ ϫⲱ ⲛⲧⲟⲥ ⲁⲛ ϫⲉ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲛ ⲡⲓ ⲥⲁ ⲏ ⲉⲓⲥ ϩⲏⲏⲧⲉ ⲡⲏ ⲁⲗⲗⲁ ⲡ ⲙⲛⲧⲣⲣⲟ ⲛ ⲡ ⲉⲓⲱⲧ ⲉⲣⲉ ⲛⲧⲟⲥ ⲡⲱⲣϣ ⲉⲃⲟⲗ ϩⲓϫⲛ ⲡ ⲕⲁϩ ⲁⲩⲱ ⲛ ⲣⲱⲙⲉ
+    ⲛⲁⲩ ⲁⲛ ⲉ ⲛⲧⲟⲥ
+  motifs:
+  - kingdom not observable / spread on earth
+  canonical_refs_by_gospel:
+    Matt: []
+    Mark: []
+    Luke:
+    - Luke 17:20-21
+    John: []
+  relation_type: overlapping_jesus_tradition_uncertain_direction
+  matrix_strength: medium
+  best_first_model: kingdom-saying tradition; Thomas develops realized/interiorized idiom
+  direct_dependence_burden_labels:
+  - moderate
+  supporting_observations:
+  - curated saying/parable parallel in prior JTEA registry
+  - should be judged at logion level, not as a whole-Gospel dependency claim
+  limiting_observations:
+  - Coptic-to-Greek semantic mediation prevents automatic direct literary dependence scoring
+  - short portable sayings can circulate orally or through collections

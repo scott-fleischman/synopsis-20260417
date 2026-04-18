@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Computational Pericope / Anchor Ontology row",
+  "type": "object",
+  "required": [
+    "pericope_id",
+    "unit_type",
+    "evidence_origin",
+    "methodological_status"
+  ],
+  "properties": {
+    "pericope_id": {
+      "type": "string"
+    },
+    "unit_type": {
+      "enum": [
+        "computational_synoptic_block",
+        "john_synoptic_anchor"
+      ]
+    },
+    "pair": {
+      "type": "string"
+    },
+    "matthew_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mark_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "luke_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "john_range": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "avg_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "evidence_origin": {
+      "type": "string"
+    },
+    "methodological_status": {
+      "type": "string"
+    }
+  }
+}

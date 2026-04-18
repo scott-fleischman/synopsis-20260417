@@ -1,0 +1,418 @@
+[
+  {
+    "block_id": 1,
+    "anchors": {
+      "matt": "Matt 1:25–Matt 1:25",
+      "luke": "Luke 1:31–Luke 1:31"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.598505,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.756
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.756
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.644
+    }
+  },
+  {
+    "block_id": 2,
+    "anchors": {
+      "matt": "Matt 3:7–Matt 4:7",
+      "luke": "Luke 3:7–Luke 4:12"
+    },
+    "metrics": {
+      "pair_count": 8,
+      "mean_score": 0.654037,
+      "matt_span": 18,
+      "luke_span": 44,
+      "span_asymmetry": 26
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Luke disperses or expands a tighter Matthean sequence"
+      ],
+      "heuristic_burden": 2.054
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Matthew clusters or abbreviates a wider Lukan sequence"
+      ],
+      "heuristic_burden": 2.054
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model must explain unusually close wording in this block"
+      ],
+      "heuristic_burden": 1.216
+    }
+  },
+  {
+    "block_id": 3,
+    "anchors": {
+      "matt": "Matt 5:3–Matt 5:3",
+      "luke": "Luke 6:20–Luke 6:20"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.356689,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.723
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.723
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.05
+    }
+  },
+  {
+    "block_id": 4,
+    "anchors": {
+      "matt": "Matt 5:46–Matt 5:46",
+      "luke": "Luke 6:32–Luke 6:32"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.408055,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.518
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.518
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.05
+    }
+  },
+  {
+    "block_id": 5,
+    "anchors": {
+      "matt": "Matt 7:1–Matt 8:10",
+      "luke": "Luke 6:37–Luke 7:9"
+    },
+    "metrics": {
+      "pair_count": 6,
+      "mean_score": 0.629656,
+      "matt_span": 39,
+      "luke_span": 22,
+      "span_asymmetry": 17
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Luke clusters or abbreviates a wider Matthean sequence"
+      ],
+      "heuristic_burden": 1.971
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Matthew disperses or expands a tighter Lukan sequence"
+      ],
+      "heuristic_burden": 1.971
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 1.019
+    }
+  },
+  {
+    "block_id": 6,
+    "anchors": {
+      "matt": "Matt 11:3–Matt 11:19",
+      "luke": "Luke 7:19–Luke 7:34"
+    },
+    "metrics": {
+      "pair_count": 10,
+      "mean_score": 0.617443,
+      "matt_span": 17,
+      "luke_span": 16,
+      "span_asymmetry": 1
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.7
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.7
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 1.17
+    }
+  },
+  {
+    "block_id": 7,
+    "anchors": {
+      "matt": "Matt 11:21–Matt 11:27",
+      "luke": "Luke 10:13–Luke 10:22"
+    },
+    "metrics": {
+      "pair_count": 5,
+      "mean_score": 0.682605,
+      "matt_span": 7,
+      "luke_span": 10,
+      "span_asymmetry": 3
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.48
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.48
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model must explain unusually close wording in this block"
+      ],
+      "heuristic_burden": 1.18
+    }
+  },
+  {
+    "block_id": 8,
+    "anchors": {
+      "matt": "Matt 12:28–Matt 12:45",
+      "luke": "Luke 11:20–Luke 11:26"
+    },
+    "metrics": {
+      "pair_count": 5,
+      "mean_score": 0.749141,
+      "matt_span": 18,
+      "luke_span": 7,
+      "span_asymmetry": 11
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Luke clusters or abbreviates a wider Matthean sequence"
+      ],
+      "heuristic_burden": 1.373
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Matthew disperses or expands a tighter Lukan sequence"
+      ],
+      "heuristic_burden": 1.373
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model must explain unusually close wording in this block"
+      ],
+      "heuristic_burden": 1.447
+    }
+  },
+  {
+    "block_id": 9,
+    "anchors": {
+      "matt": "Matt 23:25–Matt 23:35",
+      "luke": "Luke 11:39–Luke 11:51"
+    },
+    "metrics": {
+      "pair_count": 2,
+      "mean_score": 0.387418,
+      "matt_span": 11,
+      "luke_span": 13,
+      "span_asymmetry": 2
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.64
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.64
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.1
+    }
+  },
+  {
+    "block_id": 10,
+    "anchors": {
+      "matt": "Matt 24:43–Matt 24:50",
+      "luke": "Luke 12:39–Luke 12:46"
+    },
+    "metrics": {
+      "pair_count": 7,
+      "mean_score": 0.643259,
+      "matt_span": 8,
+      "luke_span": 8,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.577
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.577
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 1.123
+    }
+  },
+  {
+    "block_id": 11,
+    "anchors": {
+      "matt": "Matt 25:30–Matt 25:30",
+      "luke": "Luke 13:28–Luke 13:28"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.371233,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.665
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "Direct-use model must explain weak verbal conservation"
+      ],
+      "heuristic_burden": 2.665
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.05
+    }
+  },
+  {
+    "block_id": 12,
+    "anchors": {
+      "matt": "Matt 26:16–Matt 26:16",
+      "luke": "Luke 22:6–Luke 22:6"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.521526,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 2.064
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 2.064
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.336
+    }
+  },
+  {
+    "block_id": 13,
+    "anchors": {
+      "matt": "Matt 26:68–Matt 26:68",
+      "luke": "Luke 22:64–Luke 22:64"
+    },
+    "metrics": {
+      "pair_count": 1,
+      "mean_score": 0.556421,
+      "matt_span": 1,
+      "luke_span": 1,
+      "span_asymmetry": 0
+    },
+    "matt_prior_Luke_uses_Matthew": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.924
+    },
+    "luke_prior_Matthew_uses_Luke": {
+      "required_operations": [
+        "No major within-block order burden; direction depends on local transformations"
+      ],
+      "heuristic_burden": 1.924
+    },
+    "common_source_or_oral": {
+      "required_operations": [
+        "Common-source/oral model has no special burden beyond preserving gist/wording here"
+      ],
+      "heuristic_burden": 0.476
+    }
+  }
+]

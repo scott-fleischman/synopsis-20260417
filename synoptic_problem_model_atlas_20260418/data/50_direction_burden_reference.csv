@@ -1,0 +1,20 @@
+direction_id,pair,burden_model,burden_score,lower_is_better,comparison_basis,interpretive_result
+matthew_used_mark,Mark↔Matthew,direct_use,774.87,True,Mark–Matthew rerun global summary,lower burden than Mark used Matthew
+mark_used_matthew,Mark↔Matthew,direct_use,788.66,True,Mark–Matthew rerun global summary,higher burden than Matthew used Mark
+luke_used_mark,Mark↔Luke,direct_use,254.6466,True,Mark–Luke reassessment with shared-tradition order penalties,lower than Mark used Luke among direct-use alternatives; lower than adjusted shared-tradition in moderate penalty model
+mark_used_luke,Mark↔Luke,direct_use,303.1966,True,Mark–Luke reassessment with shared-tradition order penalties,higher than Luke used Mark among direct-use alternatives
+shared_mark_luke_tradition,Mark↔Luke,shared_tradition_adjusted,385.6134,True,Mark–Luke reassessment with order-retention penalties,higher than Mark-prior under moderate penalty; lower than direct models if unpenalized
+luke_used_matthew,Matthew↔Luke,full_pair_direct_use,142.559,True,"Full Matthew–Luke ledger, not Mark-masked",full pair score higher than Matthew used Luke; not clean for double tradition because Markan/non-Markan layers mixed
+matthew_used_luke,Matthew↔Luke,full_pair_direct_use,75.477,True,"Full Matthew–Luke ledger, not Mark-masked",lower in full ledger but not decisive after Mark masking
+luke_used_matthew,Matthew↔Luke masked double tradition,masked_direct_use,26.446,True,Earlier masked package direct-use symmetric burden; rerun confirms sayings/echo behavior across masks,not favored over common source/oral tradition
+matthew_used_luke,Matthew↔Luke masked double tradition,masked_direct_use,26.446,True,Earlier masked package direct-use symmetric burden; rerun confirms sayings/echo behavior across masks,not favored over common source/oral tradition
+shared_matt_luke_sayings_tradition,Matthew↔Luke masked double tradition,common_source_or_oral,8.86,True,Earlier masked package; rerun mask regimes support same qualitative behavior,lowest burden in masked double-tradition ledger
+john_used_luke,John↔Luke,anchor_direct_use,58.598,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+luke_used_john,John↔Luke,anchor_reverse_direct_use,61.698,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+shared_john_luke_anchor_tradition,John↔Luke,shared_anchor_tradition,20.8,True,Anchor-specific John/Synoptic ledgers,lowest burden
+john_used_mark,John↔Mark,anchor_direct_use,59.741,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+mark_used_john,John↔Mark,anchor_reverse_direct_use,64.041,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+shared_john_mark_anchor_tradition,John↔Mark,shared_anchor_tradition,23.5,True,Anchor-specific John/Synoptic ledgers,lowest burden
+john_used_matthew,John↔Matt,anchor_direct_use,55.862,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+matthew_used_john,John↔Matt,anchor_reverse_direct_use,60.162,True,Anchor-specific John/Synoptic ledgers,higher than shared anchor tradition
+shared_john_matthew_anchor_tradition,John↔Matt,shared_anchor_tradition,24.8,True,Anchor-specific John/Synoptic ledgers,lowest burden

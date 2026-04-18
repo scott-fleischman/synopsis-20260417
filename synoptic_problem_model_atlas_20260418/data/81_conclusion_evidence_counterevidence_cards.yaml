@@ -1,0 +1,454 @@
+- card_type: direction_hypothesis
+  claim_id: matthew_used_mark
+  claim_label: Matthew used Mark
+  current_status: supported / high confidence relative to reverse
+  pair: Mark↔Matthew
+  best_response_model: Matthean redaction of Mark-like narrative source plus additional
+    sayings, fulfillment, infancy, and discourse traditions.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: mark_used_matthew
+  claim_label: Mark used Matthew
+  current_status: possible locally, higher cumulative burden
+  pair: Mark↔Matthew
+  best_response_model: Markan epitome/abbreviation model with deliberate focus on
+    action narrative and omission of long discourse/infancy material; plausible only
+    if Mark had strong genre/theological reasons to compress Matthew.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: luke_used_mark
+  claim_label: Luke used Mark
+  current_status: supported over reverse among direct-use alternatives; medium-high
+    with order-retention penalties
+  pair: Mark↔Luke
+  best_response_model: Luke used Mark-like narrative source selectively, combining
+    it with other sources/traditions and extensive Lukan redaction; shared-tradition
+    alternatives must pay an order-retention penalty.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: mark_used_luke
+  claim_label: Mark used Luke
+  current_status: possible locally, higher burden than Luke used Mark among direct-use
+    alternatives
+  pair: Mark↔Luke
+  best_response_model: Markan epitome of Luke with radical abbreviation and narrative
+    concentration; this is a high-burden response model in the current data.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: matthew_used_luke
+  claim_label: Matthew used Luke
+  current_status: not demonstrated after Markan masking; possible locally
+  pair: Matthew↔Luke
+  best_response_model: Matthew used Luke-like sayings/tradition or Luke itself selectively,
+    reorganizing sayings into discourse blocks; strongest version requires a robust
+    explanation for displaced double-tradition order.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: luke_used_matthew
+  claim_label: Luke used Matthew
+  current_status: possible locally; not demonstrated by masked data alone
+  pair: Matthew↔Luke
+  best_response_model: Luke used Matthew selectively, deliberately de-Mattheanizing
+    discourse clusters and redistributing sayings; plausible under a strong editorial-theological
+    program but not forced by current masked data.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: john_used_mark
+  claim_label: John used Mark
+  current_status: possible locally; shared anchor tradition currently lower burden
+  pair: John↔Mark
+  best_response_model: John knew Mark or Mark-like tradition but used it selectively
+    through a theological rewriting program; strongest only for local passion/sign
+    anchors, not global dependence.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: john_used_matthew
+  claim_label: John used Matthew
+  current_status: possible locally; shared anchor tradition currently lower burden
+  pair: John↔Matthew
+  best_response_model: John used Matthew-like tradition selectively or knew Synoptic
+    tradition in a Matthean form; current evidence is better treated anchor by anchor.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: john_used_luke
+  claim_label: John used Luke
+  current_status: possible locally; shared anchor tradition currently lower burden
+  pair: John↔Luke
+  best_response_model: John knew Luke-like traditions or a shared passion/sign source;
+    direct use of canonical Luke remains a local possibility, not a global conclusion.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: mark_used_john
+  claim_label: Mark used John
+  current_status: low support; included for completeness
+  pair: John↔Mark
+  best_response_model: A radical Synoptic condensation of Johannine tradition; currently
+    a high-burden completeness hypothesis.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: matthew_used_john
+  claim_label: Matthew used John
+  current_status: low support; included for completeness
+  pair: John↔Matthew
+  best_response_model: Matthew knew a Johannine-like anchor tradition but not necessarily
+    the Gospel of John; direct use of John is not currently supported.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: direction_hypothesis
+  claim_id: luke_used_john
+  claim_label: Luke used John
+  current_status: low support; included for completeness
+  pair: John↔Luke
+  best_response_model: Luke knew a shared Johannine-like passion/sign tradition rather
+    than using canonical John; direct John→Luke is a low-priority hypothesis.
+  linked_data_files:
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/21_material_omission_addition_by_model.csv
+  - data/22_reordering_displacement_by_model.csv
+  - data/23_primary_pair_wording_change_diffs_by_model.csv.gz
+  note: Indicator card, not proof.
+- card_type: system_model
+  claim_id: markan_priority_matthew_and_luke
+  claim_label: Markan priority for Matthew and Luke
+  current_status: strong_with_mark_luke_caution
+  strongest_support: Mark-like narrative source explains most Mark-Matthew/Mark-Luke
+    core
+  strongest_contra_or_unresolved_burden: does not solve double tradition
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: does_not_decide_Q_or_Farrer
+    minor_agreements_fit: unresolved_burden
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: two_source_mark_q
+  claim_label: Two-source / Mark + Q-like sayings source
+  current_status: strong_but_Q_document_and_minor_agreement_burdens
+  strongest_support: explains Markan backbone plus non-Markan sayings layer
+  strongest_contra_or_unresolved_burden: Q/source reconstruction and minor agreements
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  - shared_matt_luke_sayings_tradition
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: strong_for_shared_sayings_low_burden
+    minor_agreements_fit: burden_needs_catalog_evaluation
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: farrer_mark_matthew_luke
+  claim_label: Farrer / Mark + Matthew → Luke
+  current_status: viable_major_alternative
+  strongest_support: avoids Q document and explains minor agreements via Luke-Matthew
+    contact
+  strongest_contra_or_unresolved_burden: must explain Lukan de-Mattheanization/dispersal
+    of sayings
+  required_directions:
+  - matthew_used_mark
+  - luke_used_mark
+  - luke_used_matthew
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: viable_if_Lukan_redistribution_model_supplied
+    minor_agreements_fit: stronger_than_strict_independent_two_source
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: matthew_used_luke_plus_mark_like
+  claim_label: Matthew used Luke plus Mark-like material
+  current_status: possible_but_high_burden
+  strongest_support: explains Matthew as organizer/collector
+  strongest_contra_or_unresolved_burden: less economical system-level pattern and
+    Matthew-Mark relationship
+  required_directions:
+  - matthew_used_luke
+  - matthew_used_mark
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: possible_if_Matthean_clustering_model_supplied
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: griesbach_two_gospel
+  claim_label: Griesbach / Two-Gospel model
+  current_status: possible_but_high_burden
+  strongest_support: direct Matthew-Luke contact explains agreements against Mark
+  strongest_contra_or_unresolved_burden: Markan omission/compression of major Matthean/Lukan
+    material
+  required_directions:
+  - luke_used_matthew
+  - mark_used_matthew
+  - mark_used_luke
+  criteria:
+    mark_matthew_fit: weak_to_medium_high_burden
+    mark_luke_fit: medium_or_component_dependent
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: strong
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: augustinian_matthew_mark_luke
+  claim_label: Augustinian sequence Matthew → Mark → Luke
+  current_status: high_burden_due_mark_from_matthew
+  strongest_support: simple canonical order tradition
+  strongest_contra_or_unresolved_burden: Mark-from-Matthew burden
+  required_directions:
+  - mark_used_matthew
+  - luke_used_mark
+  criteria:
+    mark_matthew_fit: weak_to_medium_high_burden
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: proto_mark_plus_sayings
+  claim_label: Proto-Mark/common narrative source + sayings tradition
+  current_status: plausible_lost_source_hybrid
+  strongest_support: accounts for canonical-form uncertainty and Mark-like core
+  strongest_contra_or_unresolved_burden: lost source reconstruction burden
+  required_directions:
+  - proto_mark_common_source
+  - shared_matt_luke_sayings_tradition
+  criteria:
+    mark_matthew_fit: strong
+    mark_luke_fit: medium_high
+    matt_luke_double_tradition_fit: medium_high
+    minor_agreements_fit: can_absorb_with_lost_source_but_pays_lost_source_cost
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: oral_tradition_network
+  claim_label: Stable oral/traditional network
+  current_status: good_for_sayings_john_weak_for_ordered_synoptic_narrative
+  strongest_support: explains mobile sayings and John anchors
+  strongest_contra_or_unresolved_burden: dense order and exact wording in Synoptic
+    narrative cores
+  required_directions:
+  - shared_mark_luke_tradition
+  - shared_matt_luke_sayings_tradition
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  criteria:
+    mark_matthew_fit: medium_requires_order_retention
+    mark_luke_fit: medium_requires_order_retention
+    matt_luke_double_tradition_fit: high_for_sayings
+    minor_agreements_fit: medium
+    john_anchor_fit: not_applicable
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: john_uses_mark
+  claim_label: John used Mark
+  current_status: local_possible_global_not_favored
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  required_directions:
+  - john_used_mark
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: john_uses_matthew
+  claim_label: John used Matthew
+  current_status: weak_global_direct_model
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  required_directions:
+  - john_used_matthew
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: john_uses_luke
+  claim_label: John used Luke
+  current_status: local_possible_global_not_favored
+  strongest_support: accounts for selected John/Synoptic anchor overlaps as direct
+    transformation
+  strongest_contra_or_unresolved_burden: weak continuous order and high Johannine
+    transformation
+  required_directions:
+  - john_used_luke
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: possible_local_not_lowest_global_burden
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: synoptics_use_john_or_johnlike
+  claim_label: Synoptics used John / John-like tradition
+  current_status: high_burden_if_canonical_john_source
+  strongest_support: keeps possibility of pre-Johannine shared traditions
+  strongest_contra_or_unresolved_burden: de-Johannization/compression burden
+  required_directions:
+  - mark_used_john
+  - matthew_used_john
+  - luke_used_john
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: high_burden_for_canonical_John_as_source
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
+- card_type: system_model
+  claim_id: shared_john_synoptic_anchor_tradition
+  claim_label: Shared John/Synoptic anchor tradition
+  current_status: best_current_john_global_model
+  strongest_support: explains anchors without forcing monotonic chain
+  strongest_contra_or_unresolved_burden: local exact/specific clusters may still require
+    case-level direct-dependence explanations
+  required_directions:
+  - shared_john_mark_anchor_tradition
+  - shared_john_luke_anchor_tradition
+  - shared_john_matthew_anchor_tradition
+  criteria:
+    mark_matthew_fit: not_applicable
+    mark_luke_fit: not_applicable
+    matt_luke_double_tradition_fit: not_applicable
+    minor_agreements_fit: not_applicable
+    john_anchor_fit: strong_lowest_current_burden
+  linked_data_files:
+  - data/52_system_model_comparison_scorecard.csv
+  - data/53_system_model_evidence_cards.yaml
+  - data/20_model_pericope_obligation_ledger.csv
+  - data/30_minor_agreements_catalog_triple_tradition.csv
+  - data/40_double_tradition_order_catalog_markan_masked.csv
