@@ -252,7 +252,7 @@
     const cap = 800;
     for (let i = 0; i < Math.min(shown.length, cap); i++) {
       const r = shown[i];
-      const tr = SH.el('tr');
+      const tr = SH.el('tr', { 'data-hi-ref': r.ref });
       if (r.masked_as_markan) tr.className = 'masked';
       tr.appendChild(SH.el('td', { class: 'ref' }, r.ref));
       tr.appendChild(SH.el('td', { class: 'rule' }, r.mask_rule || '—'));
@@ -269,6 +269,21 @@
     tbl.appendChild(tb);
 
     cnt.textContent = shown.length + ' rows' + (shown.length > cap ? ' (showing first ' + cap + ')' : '');
+
+    // If we arrived with ?hi=<ref>, pre-fill the ref filter so the requested
+    // verse is visible, then highlight the matching row in the (post-filter)
+    // table. Only auto-filter on the first render to avoid fighting the user.
+    if (!tbl._hiApplied) {
+      const hi = SH.getHighlightRef();
+      if (hi) {
+        const f = document.getElementById('fRef');
+        if (f && !f.value) { f.value = hi; tbl._hiApplied = true; return refreshTable(); }
+        SH.applyHighlight({ container: tbl });
+      }
+      tbl._hiApplied = true;
+    } else {
+      SH.applyHighlight({ container: tbl });
+    }
   }
   ['fBook', 'fRule', 'fMask', 'fScore', 'fRef'].forEach(id => {
     document.getElementById(id).addEventListener('input', refreshTable);

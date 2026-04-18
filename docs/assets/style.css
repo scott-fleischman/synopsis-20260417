@@ -271,3 +271,19 @@ ul.clean li:last-child { border-bottom: 0; }
   background: #d0e4e1 !important;
   border-bottom: 0 !important;
 }
+
+/* Reader → viz highlight overlay: applied by SH.applyHighlight to any
+   element with a matching data-hi-ref. A warm parchment wash with a
+   left accent bar signals "you arrived here from the reader looking for
+   this row". Works over pair rows, concept rows, anchor rows, case cards,
+   and mask-audit rows without restyling their structural chrome. */
+.ref-hi {
+  background-color: #fdf3c7 !important;
+  box-shadow: inset 4px 0 0 var(--accent) !important;
+  animation: ref-hi-flash 1.8s ease-out 1;
+}
+@keyframes ref-hi-flash {
+  0%   { background-color: #f7d66b; }
+  30%  { background-color: #fdf3c7; }
+  100% { background-color: #fdf3c7; }
+}

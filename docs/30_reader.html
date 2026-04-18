@@ -663,19 +663,32 @@
   }
 
   function vizLink(entry, ref) {
-    // Decide the best target viz for each parallel type.
+    // Decide the best target viz for each parallel type. The destination
+    // page reads ?hi=<ref> and scrolls/flashes the matching row — that's the
+    // "reader → viz highlight" handoff.
     if (entry.type === 'mm' || entry.type === 'ml' || entry.type === 'mld') {
       const key = encodeURIComponent(entry.key);
+      // Pair explorer's own hash routing already selects the right pair,
+      // so ?hi isn't needed there.
       return { href: '09_pair_explorer.html#' + entry.dataset + '/' + key, label: 'pair explorer →' };
     }
     if (entry.type && entry.type.indexOf('ec-') === 0) {
-      return { href: '11_echo_gallery.html#' + entry.dataset, label: 'echo gallery →' };
+      return {
+        href: SH.vizHrefWithHighlight('11_echo_gallery.html#' + entry.dataset, ref),
+        label: 'echo gallery →',
+      };
     }
     if (entry.type === 'mx') {
-      return { href: '14_mask_audit.html#mld', label: 'mask audit →' };
+      return {
+        href: SH.vizHrefWithHighlight('14_mask_audit.html#mld', ref),
+        label: 'mask audit →',
+      };
     }
     if (entry.type === 'an') {
-      return { href: '20_john_anchors.html', label: 'John anchors →' };
+      return {
+        href: SH.vizHrefWithHighlight('20_john_anchors.html', ref),
+        label: 'John anchors →',
+      };
     }
     return null;
   }
@@ -698,13 +711,13 @@
       for (const c of SH.conceptsForRef(v.ref)) {
         if (!seenConcept.has(c.concept_id)) {
           seenConcept.add(c.concept_id);
-          section.appendChild(pericopeBar('concept', c));
+          section.appendChild(pericopeBar('concept', c, v.ref));
         }
       }
       for (const a of SH.anchorsForRef(v.ref)) {
         if (!seenAnchor.has(a.anchor_id)) {
           seenAnchor.add(a.anchor_id);
-          section.appendChild(pericopeBar('anchor', a));
+          section.appendChild(pericopeBar('anchor', a, v.ref));
         }
       }
       section.appendChild(renderVerse(v));
@@ -712,7 +725,7 @@
     return section;
   }
 
-  function pericopeBar(kind, obj) {
+  function pericopeBar(kind, obj, ref) {
     const bar = SH.el('div', { class: 'pericope ' + kind });
     bar.appendChild(SH.el('span', { class: 'p-kind' }, kind === 'anchor' ? 'John anchor' : 'concept'));
     const name = kind === 'anchor' ? (obj.anchor_id || '—') : (obj.concept_id || '—');
@@ -725,8 +738,11 @@
       bar.appendChild(SH.el('span', { class: 'p-burden' },
         'burden · dir ' + obj.direct_literary_burden + ' · oral ' + (obj.oral_tradition_burden || '?')));
     }
-    // Link to the appropriate viz for full context
-    const vizHref = kind === 'anchor' ? '20_john_anchors.html' : '22_concept_signatures.html';
+    // Link to the appropriate viz for full context, passing the first ref
+    // that triggered the label so the destination can highlight the relevant
+    // card/row on arrival.
+    const baseHref = kind === 'anchor' ? '20_john_anchors.html' : '22_concept_signatures.html';
+    const vizHref = SH.vizHrefWithHighlight(baseHref, ref);
     const link = SH.el('a', {
       href: vizHref,
       class: 'reader-chip',
@@ -900,7 +916,7 @@
           row.appendChild(SH.evidenceBadge(match.confidence));
           if (match.case_id) {
             row.appendChild(SH.el('a', {
-              href: '19_case_studies.html#' + encodeURIComponent(match.case_id),
+              href: SH.vizHrefWithHighlight('19_case_studies.html', ref),
               style: 'font-size:10.5px;color:var(--ink-mute);text-decoration:none;' +
                      'border-bottom:1px dotted var(--ink-mute);',
               target: '_blank',

@@ -606,6 +606,50 @@
     return el_;
   }
 
+  // ---- Reader → viz highlight overlay ---------------------------------
+  // Convention: destination pages link with `?hi=<ref>` query param. Pages
+  // can mark candidate elements with `data-hi-ref="<ref>"` and call
+  // `SH.applyHighlight()` after rendering to focus + scroll the first match.
+  // Pages can opt into richer matching by passing a `match(ref, el)` predicate.
+  function getHighlightRef() {
+    try {
+      const p = new URLSearchParams(window.location.search);
+      const v = p.get('hi');
+      return v ? decodeURIComponent(v) : null;
+    } catch (e) { return null; }
+  }
+
+  function applyHighlight(opts) {
+    const ref = getHighlightRef();
+    if (!ref) return null;
+    opts = opts || {};
+    const container = opts.container || document.body;
+    let matches;
+    if (typeof opts.match === 'function') {
+      matches = Array.from(container.querySelectorAll(opts.selector || '[data-hi-ref]'))
+        .filter(el => opts.match(ref, el));
+    } else {
+      matches = Array.from(container.querySelectorAll(
+        '[data-hi-ref="' + ref.replace(/"/g, '\\"') + '"]'
+      ));
+    }
+    matches.forEach(el => el.classList.add('ref-hi'));
+    if (matches.length) {
+      const first = matches[0];
+      // Defer scroll so any just-appended DOM has settled and CSS applied.
+      setTimeout(() => first.scrollIntoView({ block: 'center', behavior: 'smooth' }), 40);
+    }
+    return { ref, count: matches.length };
+  }
+
+  // Build a viz URL that highlights a given ref when the destination page loads.
+  function vizHrefWithHighlight(href, ref) {
+    if (!ref) return href;
+    const [pre, hash] = href.split('#');
+    const sep = pre.indexOf('?') >= 0 ? '&' : '?';
+    return pre + sep + 'hi=' + encodeURIComponent(ref) + (hash ? '#' + hash : '');
+  }
+
   window.SH = {
     BUNDLE,
     get D() { return D; },
@@ -621,6 +665,8 @@
     evidenceBadge,
     conceptsForRef, anchorsForRef,
     refChip,
+    // Highlight overlay
+    getHighlightRef, applyHighlight, vizHrefWithHighlight,
   };
 
   // Auto-attach footer once DOM is ready — no need to edit every page.

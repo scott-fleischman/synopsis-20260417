@@ -63,6 +63,13 @@
     const card = document.createElement('div');
     card.className = 'anchor-card';
     card.id = 'anc_' + i;
+    // Precompute all refs this anchor covers so the highlight overlay can
+    // match on any John or Synoptic ref the reader passed through.
+    const anchorRefs = [];
+    (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean).forEach(r => anchorRefs.push(r));
+    const _syn = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+    _syn.forEach(r => anchorRefs.push(r));
+    card.setAttribute('data-hi-refs', anchorRefs.join('|'));
 
     // Header with anchor name + ref chips. Each ref chip is clickable and
     // shows Greek-on-hover so readers can scan the scene refs and jump into
@@ -133,6 +140,20 @@
   if (!anchors.length) {
     root.appendChild(SH.el('div', { class: 'small' }, 'No anchors in bundle.'));
   }
+
+  // Reader-link highlight: the reader passes ?hi=<ref> when the user jumps
+  // here from a John or Synoptic verse that lives inside one of these anchors.
+  SH.applyHighlight({
+    container: root,
+    selector: '.anchor-card',
+    match: (ref, el) => (el.getAttribute('data-hi-refs') || '').split('|').some(r => {
+      // Match by prefix so a reader ref like "John 1:29" also hits "John 1:29-34".
+      if (!r) return false;
+      if (r === ref) return true;
+      const book = ref.split(' ')[0] + ' ';
+      return r.indexOf(book) === 0 && (r.indexOf(ref + '-') === 0 || r.indexOf(ref + ',') === 0 || r === ref);
+    }),
+  });
 })();
 </script>
 </body>

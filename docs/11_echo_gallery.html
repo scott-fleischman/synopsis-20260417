@@ -105,7 +105,9 @@
     for (const e of arr) {
       const aText = e.a_text || textFor(e.a_ref, 'a');
       const bText = e.b_text || textFor(e.b_ref, 'b');
-      const card = SH.el('div', { class: 'echo-card' });
+      const card = SH.el('div', { class: 'echo-card', 'data-hi-ref': e.a_ref });
+      // Stash the b_ref too so a highlight predicate can match either side.
+      card.setAttribute('data-hi-ref-b', e.b_ref || '');
       const top = SH.el('div', { class: 'echo-top' });
       top.appendChild(SH.refChip(e.a_ref, { style: 'color:#8b2e2e;font-weight:700;', fontSize: '14px' }));
       top.appendChild(SH.el('span', { style: 'color:#aaa;' }, '↔'));
@@ -130,6 +132,13 @@
       if (!aText && !bText) card.appendChild(SH.el('div', { class: 'small' }, '(Greek text not bundled for this echo — see source files)'));
       g.appendChild(card);
     }
+
+    // If reader linked us here with ?hi=<ref>, highlight the matching echo.
+    SH.applyHighlight({
+      container: g,
+      selector: '.echo-card',
+      match: (ref, el) => el.dataset.hiRef === ref || el.getAttribute('data-hi-ref-b') === ref,
+    });
   }
 
   ['minscore', 'mindist', 'hasGreek', 'sort', 'tag'].forEach(id => {

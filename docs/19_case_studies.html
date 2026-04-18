@@ -292,8 +292,27 @@
     renderList();
   });
 
+  // Reader → viz highlight: if we arrived with ?hi=<ref>, auto-select the
+  // case whose source_ref or target_ref matches that ref, so the reader's
+  // "view case study" link lands on the right case instead of the default 0.
+  const _hi = SH.getHighlightRef();
+  if (_hi) {
+    const match = cases.findIndex(c => c.source_ref === _hi || c.target_ref === _hi);
+    if (match >= 0) activeIdx = match;
+  }
+
   renderList();
   renderDetail();
+
+  // After render, flash the active list item so the user sees which case was
+  // auto-selected. Piggybacks on the same CSS used by other pages.
+  if (_hi) {
+    const active = document.querySelector('.case-item.active');
+    if (active) {
+      active.classList.add('ref-hi');
+      setTimeout(() => active.scrollIntoView({ block: 'center', behavior: 'smooth' }), 40);
+    }
+  }
 })();
 </script>
 </body>

@@ -141,6 +141,13 @@
     const card = document.createElement('div');
     card.className = 'concept-card';
     card.id = 'c_' + i;
+    // All refs this concept spans, so reader highlight can target cards by
+    // any canonical or epistle ref it contains.
+    const conceptRefs = []
+      .concat(c.canonical_refs || [])
+      .concat(c.epistle_refs || [])
+      .map(r => String(r));
+    card.setAttribute('data-hi-refs', conceptRefs.join('|'));
 
     const head = SH.el('div', { class: 'concept-head' },
       SH.el('h3', null, (c.concept_id || '').replace(/_/g, ' ')),
@@ -190,6 +197,25 @@
     card.appendChild(bb);
 
     cards.appendChild(card);
+  });
+
+  // Reader-link highlight: scroll + flash the concept card whose refs include
+  // the verse the user clicked through from. Range refs in the registry (e.g.
+  // "Matt 7:7-8") still match a single-verse reader ref via prefix containment.
+  SH.applyHighlight({
+    container: cards,
+    selector: '.concept-card',
+    match: (ref, el) => (el.getAttribute('data-hi-refs') || '').split('|').some(r => {
+      if (!r) return false;
+      if (r === ref) return true;
+      // "Matt 7:7-8" should match ref "Matt 7:7" or "Matt 7:8".
+      const m = r.match(/^(.+\s\d+):(\d+)-(\d+)$/);
+      if (m && ref.indexOf(m[1] + ':') === 0) {
+        const n = parseInt(ref.split(':')[1], 10);
+        return n >= parseInt(m[2], 10) && n <= parseInt(m[3], 10);
+      }
+      return false;
+    }),
   });
 })();
 </script>
