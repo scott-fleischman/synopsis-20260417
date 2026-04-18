@@ -324,6 +324,11 @@ def load_missing_data_status() -> dict[str, Any]:
     return _read_yaml("72_missing_data_status.yaml") or {}
 
 
+def load_apocrypha_roadmap() -> dict[str, Any]:
+    """Apocrypha next-packages roadmap — planning artifact, not analysis."""
+    return _read_yaml("73_apocrypha_next_packages.yaml") or {}
+
+
 # ---- Top-level build ----
 
 def build_h18b() -> dict[str, Any]:
@@ -338,4 +343,5 @@ def build_h18b() -> dict[str, Any]:
         "conclusion_nav": load_conclusion_nav(),
         "priority_order": load_priority_order(),
         "missing_data_status": load_missing_data_status(),
+        "apocrypha_roadmap": load_apocrypha_roadmap(),
     }

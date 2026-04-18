@@ -18,6 +18,15 @@
   .conf-pill.low { background: #8a8a8a; }
   .conf-pill.cautionary { background: #5a5a5a; }
 
+  .review-pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; background: #eeece4; color: #4a4538; white-space: nowrap; }
+  .review-pill.self { background: #eae7d9; color: #6a5a2f; }
+  .review-pill.pending { background: #f1ebdc; color: var(--ink-mute); font-style: italic; }
+
+  .parity-strip { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--ink-mute); margin: 8px 0 4px; padding: 6px 10px; background: #fbfaf6; border: 1px solid var(--rule-soft); border-radius: 3px; }
+  .parity-strip b { color: var(--ink); font-family: var(--sans); font-weight: 600; }
+  .parity-strip .parity-bal { color: #2a5a1a; }
+  .parity-strip .parity-asym { color: #a8551a; }
+
   .concl { border: 1px solid var(--rule); border-radius: 4px; background: #fff; padding: 18px 22px; margin-bottom: 18px; }
   .concl-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
   .concl-head .num { font-family: var(--serif); font-size: 28px; color: var(--ink-mute); font-weight: 300; min-width: 36px; }
@@ -405,17 +414,43 @@
     band.appendChild(ul);
     return band;
   }
+  function reviewPill(status) {
+    if (!status) status = 'self-reviewed';
+    const cls = status.indexOf('pending') >= 0 ? 'pending' : (status.indexOf('self') >= 0 ? 'self' : '');
+    return el('span', { class: 'review-pill ' + cls, title: 'Review status: ' + status }, status);
+  }
+  function parityStrip(opts) {
+    const ev = (opts.evidence || []).length;
+    const co = (opts.contrary || []).length;
+    const wc = (opts.whatWouldChange || []).length;
+    const strip = el('div', { class: 'parity-strip' });
+    strip.appendChild(el('span', null, el('b', null, String(ev)), ' supporting observations'));
+    strip.appendChild(el('span', null, el('b', null, String(co)), ' contrary / limiting'));
+    strip.appendChild(el('span', null, el('b', null, String(wc)), ' falsifiers'));
+    const diff = Math.abs(ev - co);
+    if (ev > 0 && co > 0) {
+      const bal = diff <= 1 ? 'balanced (Δ ≤ 1)' : diff <= 3 ? 'near-balanced (Δ ≤ 3)' : 'support-heavy';
+      strip.appendChild(el('span', { class: diff <= 3 ? 'parity-bal' : 'parity-asym' }, bal));
+    } else if (ev === 0) {
+      strip.appendChild(el('span', { class: 'parity-asym' }, 'no supporting items recorded'));
+    } else if (co === 0) {
+      strip.appendChild(el('span', { class: 'parity-asym' }, 'no contrary items — add at least one'));
+    }
+    return strip;
+  }
   function section(opts) {
     const s = el('section', {class: 'concl'});
     const h = el('div', {class: 'concl-head'});
     h.appendChild(el('span', {class: 'num'}, String(opts.num) + '.'));
     h.appendChild(el('h2', null, opts.title));
     h.appendChild(pill(opts.confLabel, opts.conf));
+    h.appendChild(reviewPill(opts.reviewStatus || 'self-reviewed 2026-04'));
     s.appendChild(h);
     const claim = el('div', {class: 'concl-claim'});
     claim.appendChild(originTag('curated', 'curated', 'Authorial claim, not pipeline output'));
     claim.appendChild(document.createTextNode(' ' + opts.claim));
     s.appendChild(claim);
+    s.appendChild(parityStrip(opts));
     if (opts.why) {
       const why = el('div', {class: 'concl-why'});
       why.appendChild(originTag('curated', 'curated', 'Authorial reasoning, not pipeline output'));
@@ -449,7 +484,7 @@
   // ---- confidence table ----
   const confRows = [
     ['Mark–Matthew', 'Matthew most likely used Mark or a Mark-like written text as a major narrative source.', 'High', 'high'],
-    ['Mark–Luke (18b direct)', 'Luke shows a Mark-like narrative backbone of 183 primary pairs after excluding Mark 16:9–20; Luke-prior burden is heavier than Mark-prior.', 'Medium-high', 'mhigh'],
+    ['Mark–Luke (18b direct)', 'Luke shows a Mark-like narrative backbone of 183 primary pairs (Mark 16:9–20 excluded). Between directed hypotheses, Mark-prior (254.6) is lighter than Luke-prior (303.2); but the shared-tradition model (164.1) is lighter than either — so the directed conclusion is "Mark-prior is the lighter direction," not "Mark-prior is overall lowest-cost."', 'Medium-high', 'mhigh'],
     ['1 Timothy 5:18 / Luke 10:7', 'Strongest case for a Luke-like written Jesus saying known to 1 Timothy.', 'High', 'high'],
     ['Matthew–Luke double tradition', 'Better explained by common written/oral Jesus tradition than by simple one-way dependence.', 'Medium-high', 'mhigh'],
     ['James / Gospel sayings', 'Likely draws on Jesus tradition; direct Matthew/Luke use not demonstrated.', 'Medium-high', 'mhigh'],
@@ -479,6 +514,7 @@
   // is not directional (Q as layer vs. document).
   const dimRows = [
     ['Mark–Matthew',                          'high',   'high',    'mhigh', 'Mark→Matt backbone + 474:87 gap asymmetry.'],
+    ['Mark–Luke (18b direct)',                'mhigh',  'medium',  'low',   'Mark-like backbone of 183 pairs; directed: Mark-prior 254.6 < Luke-prior 303.2; but shared-tradition 164.1 is cheaper than either direction.'],
     ['1 Timothy 5:18 / Luke 10:7',            'high',   'high',    'medium','5-token exact run + γραφή citation; Luke vs pre-Lukan saying hard to separate.'],
     ['Matthew–Luke double tradition',         'high',   'mhigh',   'low',   'Many strong echoes; symmetric burden after Markan masking → direction not resolvable.'],
     ['James / Gospel sayings',                'medium', 'mhigh',   'low',   'Semantic convergence outruns lexical; direction indeterminate.'],

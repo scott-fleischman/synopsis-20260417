@@ -49,8 +49,9 @@
 
   <div id="groups"></div>
 
-  <div class="future-note">
+  <div class="future-note" id="roadmap_card">
     <b>Future-analysis pointers.</b> To carry the methodology from the canonical pipeline into the apocryphal corpus, three layers are needed: (1) a primary-language text base for each work (Greek fragments for <i>Protoevangelium</i>, <i>Acts of Paul and Thecla</i>, etc.; Coptic NHC tractates; Latin <i>Acts of Pilate</i>); (2) a stable reference/segmentation scheme, since apocryphal works lack the verse numbering that makes Gospel/epistle retrieval windowable; (3) alignment of sayings to the Thomas/canonical registry so that verbal or thematic overlap can be scored against a shared substrate. The present package stops at (0) — inventory — because going further without proper primary-language preparation would produce noise, not evidence.
+    <div id="roadmap_panel" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--rule-soft);"></div>
   </div>
 </div>
 
@@ -117,6 +118,38 @@
     sec.appendChild(grid);
     root.appendChild(sec);
   });
+
+  // --- 18b roadmap: render apocrypha_next_packages on the inventory page ---
+  const H = SH.BUNDLE.h18b || {};
+  const rm = H.apocrypha_roadmap || null;
+  const panel = document.getElementById('roadmap_panel');
+  if (rm && panel) {
+    const title = SH.el('div', { style: 'font-family:var(--serif);font-size:15px;color:var(--ink);margin:0 0 6px;' }, 'Next-package roadmap (analysis_update_20260418b · data/73)');
+    panel.appendChild(title);
+    const prio = SH.el('div', { style: 'margin-bottom:10px;font-size:12px;color:var(--ink-soft);line-height:1.5;' });
+    const priority = rm.priority_levels || {};
+    Object.keys(priority).forEach(level => {
+      const row = SH.el('div', { style: 'margin:4px 0;' },
+        SH.el('b', { style: 'color:var(--ink);font-family:var(--mono);font-size:11px;' }, level),
+        SH.el('span', null, ': ' + ((priority[level] || []).join(' · ') || '—')));
+      prio.appendChild(row);
+    });
+    panel.appendChild(prio);
+    const pkgs = rm.next_packages || [];
+    pkgs.forEach(p => {
+      const card = SH.el('div', { style: 'margin:8px 0;padding:8px 10px;background:#fff;border:1px solid var(--rule-soft);border-radius:3px;' });
+      card.appendChild(SH.el('div', { style: 'font-family:var(--mono);font-size:11px;color:var(--warn);font-weight:600;margin-bottom:3px;' }, p.package_id || ''));
+      if (p.planned_date) card.appendChild(SH.el('div', { style: 'font-size:11px;color:var(--ink-mute);' }, 'Planned: ' + p.planned_date));
+      const texts = (p.texts || []).map(t => t.name).filter(Boolean).join(' · ');
+      if (texts) card.appendChild(SH.el('div', { style: 'font-size:12px;color:var(--ink-soft);margin-top:4px;' }, 'Texts: ' + texts));
+      panel.appendChild(card);
+    });
+    const foot = SH.el('div', { style: 'font-size:11px;color:var(--ink-mute);font-style:italic;margin-top:8px;' },
+      'Nothing in this roadmap commits to a delivery schedule; the criterion for starting each package is that P0 prerequisites (critical primary text + license + segmentation) are in place. See ',
+      SH.el('code', null, 'analysis_update_20260418b/data/73_apocrypha_next_packages.yaml'),
+      ' for the full spec.');
+    panel.appendChild(foot);
+  }
 })();
 </script>
 </body>

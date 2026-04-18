@@ -131,7 +131,16 @@
       ['30_reader.html', 'Reader'],
       ['31_gospel_square.html', 'Gospel Square'],
     ]},
-    { id: 'synoptic', label: 'Synoptic narrative', pages: [
+    { id: 'mkl', label: 'Mark ↔ Luke (18b)', pages: [
+      ['34_mark_luke.html', 'Mark↔Luke direct'],
+      ['13_triangle.html', 'Synoptic matrix'],
+    ]},
+    { id: 'john', label: 'John pairwise (18b)', pages: [
+      ['35_john_pairwise.html', 'John pairwise'],
+      ['20_john_anchors.html', 'John anchors (legacy)'],
+      ['18_intertext_network.html', 'Intertext network'],
+    ]},
+    { id: 'synoptic', label: 'Synoptic (mm · ml · mld)', pages: [
       ['01_synoptic_map.html', 'Map', { ds: true }],
       ['02_block_ribbon.html', 'Ribbon', { ds: true }],
       ['03_burden_ledger.html', 'Burden', { ds: true }],
@@ -142,7 +151,6 @@
       ['08_stylistic_markers.html', 'Stylistic', { ds: true, availableOn: ['mm', 'ml'] }],
       ['09_pair_explorer.html', 'Pair explorer', { ds: true }],
       ['12_variants.html', 'Variants', { ds: true }],
-      ['13_triangle.html', 'Triangle', { ds: true }],
     ]},
     { id: 'q', label: 'Q & double tradition', pages: [
       ['10_displacement.html', 'Displacement', { ds: true, availableOn: ['ml', 'mld'] }],
@@ -151,20 +159,16 @@
       ['15_q_core.html', 'Q core reader', { ds: true, availableOn: ['mld'] }],
       ['16_matt_verse_card.html', 'Matt verse card ⓘ'],
     ]},
-    { id: 'john', label: 'John & Synoptics', pages: [
-      ['20_john_anchors.html', 'John anchors'],
-      ['18_intertext_network.html', 'Intertext network'],
-    ]},
-    { id: 'thomas', label: 'Thomas', pages: [
-      ['21_thomas_parallels.html', 'Thomas parallels'],
+    { id: 'thomas', label: 'Thomas (18b)', pages: [
       ['32_thomas_matrix.html', 'Thomas × canon'],
+      ['21_thomas_parallels.html', 'Thomas parallels (legacy)'],
     ]},
-    { id: 'epistles', label: 'Epistles & sayings', pages: [
-      ['19_case_studies.html', 'Case studies'],
+    { id: 'epistles', label: 'Epistles (18b)', pages: [
+      ['33_epistle_dossier.html', 'Dossier'],
+      ['19_case_studies.html', 'Case studies (legacy)'],
       ['22_concept_signatures.html', 'Concept signatures'],
       ['23_exact_hits.html', 'Exact hits'],
       ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel'],
-      ['33_epistle_dossier.html', 'Dossier'],
     ]},
     { id: 'apocrypha', label: 'Apocrypha', pages: [
       ['25_apocrypha_inventory.html', 'Inventory ⓘ'],
@@ -241,6 +245,20 @@
     };
     for (const n of allowed) {
       if (BUNDLE[n]) wrap.appendChild(mk(n, labels[n] || n));
+    }
+    // Mark↔Luke (18b) is a separate data shape; surface it as a navigation redirect
+    // rather than pretending it shares the mm/ml/mld pipeline. Hidden when `only`
+    // is set (mld-only pages, etc.) and when the h18b supplement is unavailable.
+    if (!opts.only && !opts.hideMkl && BUNDLE.h18b && BUNDLE.h18b.mkl) {
+      const sep = document.createElement('span');
+      sep.style.cssText = 'display:inline-block;width:1px;background:var(--rule);';
+      wrap.appendChild(sep);
+      const a = document.createElement('a');
+      a.href = '34_mark_luke.html';
+      a.textContent = 'Mark ↔ Luke (direct) →';
+      a.title = 'Opens the dedicated Mark↔Luke page (different data shape; not hash-switchable here)';
+      a.style.cssText = 'padding:6px 12px;background:#fdf6ea;color:var(--ink);font-size:12px;text-decoration:none;white-space:nowrap;border-left:1px dashed var(--rule);';
+      wrap.appendChild(a);
     }
     if (container) container.appendChild(wrap);
     return wrap;

@@ -1,0 +1,159 @@
+# Authoritative numbers registry
+#
+# Single source of truth for which layer controls each headline claim.
+# When a number appears in multiple packages, the entry here tells a reader
+# which one is authoritative for public-facing statements and which are kept
+# only for reproducibility or historical reasons.
+#
+# Rule of thumb:
+#   - If a rerun exists (analysis_update_20260418/), it supersedes the prior
+#     package for that pair.
+#   - The 18b supplement (analysis_update_20260418b/) is authoritative for
+#     Mark-Luke direct, John pairwise, Gospel square, Thomas matrix, epistle
+#     dossiers, and conclusion navigation.
+#   - Prior packages remain authoritative only where no rerun or supplement
+#     has been produced (currently: apocrypha inventory).
+#
+# Any prose on this site — README, CONCLUSIONS.md, visualization pages — that
+# cites a number for one of these pairs must match the `authoritative_value`
+# below, or explicitly label the figure as "prior package" with a cross-link.
+
+generated_by: Claude Opus 4.7 (as repo governance artifact; no new computation)
+last_updated: 2026-04-18
+
+version:
+  schema: 1
+  site_priority_schedule: analysis_update_20260418b/data/42_visualization_priority_order.yaml
+
+pairs:
+  mark_matthew:
+    description: Mark-Matthew narrative alignment (triple-tradition backbone).
+    headline_source: analysis_update_20260418/reruns/mark_matthew_rerun_robust
+    prior_source: mark_matthew_analysis
+    headline_claims:
+      primary_chain_pairs:
+        authoritative_value: 386
+        prior_package_value: 385
+        delta_explanation: Rerun tightened text-critical handling (Mark 16:9-20 sensitivity, variant normalization); net +1 primary pair.
+      loose_blocks:
+        authoritative_value: 27
+        prior_package_value: 27
+      tight_blocks:
+        authoritative_value: 50
+        prior_package_value: 50
+      mark_coverage_pct:
+        authoritative_value: 57.2
+        prior_package_value: 57.21
+      matthew_coverage_pct:
+        authoritative_value: 36.0
+        prior_package_value: 36.05
+    note: If prose cites 385, label it "(prior package, superseded)".
+
+  mark_luke:
+    description: Mark-Luke direct alignment (same pipeline; new 18b control).
+    headline_source: analysis_update_20260418b
+    prior_source: null
+    headline_claims:
+      primary_chain_pairs: { authoritative_value: 183 }
+      loose_blocks:        { authoritative_value: 35 }
+      tight_blocks:        { authoritative_value: 76 }
+      secondary_echoes_ge_0_22: { authoritative_value: 140 }
+      burden_mark_prior:   { authoritative_value: 254.6466 }
+      burden_luke_prior:   { authoritative_value: 303.1966 }
+      burden_shared_tradition: { authoritative_value: 164.1468 }
+    interpretive_caveat: >
+      The three-way burden ledger gives the *lowest* score to shared narrative/oral
+      tradition (164.1), not to either directed model (254.6 Mark-prior / 303.2 Luke-prior).
+      The safe claim is: "Mark-prior is the lighter directed-use hypothesis." The unsafe
+      claim (without a separate shared-tradition penalty model) is: "Mark-prior is the
+      lowest-burden hypothesis overall." See 34_mark_luke.html and the interpretive
+      caution section in 26_conclusions.html.
+
+  matt_luke_full:
+    description: Matthew-Luke full corpus (prior to Markan masking).
+    headline_source: analysis_update_20260418/reruns/matt_luke_rerun_robust
+    prior_source: matt_luke_analysis
+    headline_claims:
+      primary_chain_pairs: { authoritative_value: 102 }
+      caveat: Full Matt-Luke backbone is intentionally sparse because their double tradition is reordered; see masked package for the Q-core view.
+
+  matt_luke_masked:
+    description: Matthew-Luke with likely-Markan verses masked (Q-core view).
+    headline_source: analysis_update_20260418/reruns/matt_luke_double_masked_rerun_robust
+    prior_source: matt_luke_double_masked_analysis
+    headline_claims:
+      primary_chain_pairs_medium_regime: { authoritative_value: 64 }
+      loose_blocks_medium:                { authoritative_value: 24 }
+      tight_blocks_medium:                { authoritative_value: 30 }
+      selected_secondary_echoes:          { authoritative_value: 54 }
+    regime_note: Strict/medium/broad mask regimes and score-threshold sweeps live in the rerun's sensitivity grid.
+
+  john_synoptics:
+    description: John vs. each Synoptic (anchor-plus-low-verbatim pairwise).
+    headline_source: analysis_update_20260418b
+    prior_source: john_thomas_epistles_apocrypha_analysis
+    headline_claims:
+      john_mark_candidates_ge_0_25:    { authoritative_value: 33, anchors_registered: 10 }
+      john_matthew_candidates_ge_0_25: { authoritative_value: 33, anchors_registered: 10 }
+      john_luke_candidates_ge_0_25:    { authoritative_value: 34, anchors_registered: 9 }
+    interpretive_caveat: >
+      The burden scores across the three John pairs are templated (same three-way
+      model applied uniformly). They express methodological framing more than
+      anchor-specific evidence weight. Per-anchor ledgers are future work; until
+      then, the per-pair global ledger should not be read as dispositive on
+      direction.
+
+  thomas_canonical:
+    description: Thomas logia vs. the four Gospels (curated logion matrix).
+    headline_source: analysis_update_20260418b
+    prior_source: john_thomas_epistles_apocrypha_analysis
+    headline_claims:
+      logia_total:                { authoritative_value: 116 }
+      logia_with_curated_parallel: { authoritative_value: 46 }
+      matrix_rows:                { authoritative_value: 116 }
+    method_caveat: >
+      Thomas matrix is curated from a prior registry, not a computationally
+      independent discovery layer. Coptic-to-Greek automatic dependence scoring
+      is not implemented; relation type, matrix strength, and direct-dependence
+      burden are the three grading axes shown.
+
+  epistle_gospel:
+    description: Canonical epistles vs. the four Gospels (case-dossier layer).
+    headline_source: analysis_update_20260418b
+    prior_source: john_thomas_epistles_apocrypha_analysis
+    headline_claims:
+      total_dossiers:     { authoritative_value: 60 }
+      targeted_dossiers:  { authoritative_value: 10 }
+      ranked_candidates_top500: { authoritative_value: 500, prior_pool: 12036 }
+    strongest_direct_case:
+      ref: 1 Tim 5:18 / Luke 10:7
+      saying_form: Luke
+      max_exact_run_len: 5
+    strongest_liturgical_formula:
+      ref: 1 Cor 11 / Luke 22
+      note: Longer exact run but high formula risk — shared liturgy, not Pauline dependence.
+
+  apocrypha:
+    description: M. R. James apocryphal works (inventory only; no primary-text analysis yet).
+    headline_source: john_thomas_epistles_apocrypha_analysis
+    prior_source: null
+    headline_claims:
+      inventory_entries: { authoritative_value: 22 }
+    roadmap: analysis_update_20260418b/data/73_apocrypha_next_packages.yaml
+
+# Layers that do NOT supply headline numbers — they only annotate or synthesize:
+synthesis_only:
+  - conclusions/                      # interpretive prose; must cite one of the packages above
+  - analysis_update_20260418b/data/70_conclusion_evidence_contrary_navigation.yaml
+  - analysis_update_20260418b/data/42_visualization_priority_order.yaml
+
+# Where visualizations read authoritative numbers from (the bundle keys):
+bundle_sources:
+  mm:  bundle.mm        # (mark_matthew rerun via build/loaders_rerun.py)
+  ml:  bundle.ml        # (matt_luke rerun)
+  mld: bundle.mld       # (matt_luke masked rerun)
+  mkl: bundle.h18b.mkl  # (18b direct Mark-Luke)
+  john_pairwise: bundle.h18b.john_pairwise
+  gospel_square: bundle.h18b.gospel_square
+  thomas:        bundle.h18b.thomas
+  epistle:       bundle.h18b.epistle_dossiers

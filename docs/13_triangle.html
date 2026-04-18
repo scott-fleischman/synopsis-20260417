@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Synoptic triangle</title>
+<title>Synoptic matrix — four-way pairwise comparison</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="assets/style.css" />
 <style>
@@ -10,19 +10,45 @@
   .tri-mk { background: rgba(139,46,46,0.06); border-left: 3px solid #8b2e2e; }
   .tri-lk { background: rgba(34,80,108,0.06); border-left: 3px solid #22506c; }
   .tri-mt { background: rgba(168,85,26,0.06); border-left: 3px solid #a8551a; }
+
+  .matrix-intro { max-width: 1060px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 14px; }
+  .matrix-intro .lead { font-family: var(--serif); font-size: 16px; color: var(--ink); margin-bottom: 6px; }
+  .matrix-intro a { color: inherit; }
+  .matrix-intro code { font-size: 0.92em; }
+
+  .four-way-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .four-way-table th, .four-way-table td { border: 1px solid var(--rule); padding: 6px 10px; font-size: 12px; text-align: right; }
+  .four-way-table th { background: #fafaf7; font-weight: 600; text-align: left; white-space: nowrap; }
+  .four-way-table td.metric { text-align: left; font-family: var(--serif); color: var(--ink); }
+  .four-way-table th.ds { text-align: center; }
+  .four-way-table td.hi { background: #fdf6ea; font-weight: 600; color: var(--ink); }
+  .four-way-table .src-note { font-size: 11px; color: var(--ink-mute); font-family: var(--mono); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="page-head">
-    <h1>Synoptic triangle</h1>
-    <span class="sub">Matthew ↔ Mark · Matthew ↔ Luke · overlap</span>
+    <h1>Synoptic matrix</h1>
+    <span class="sub">Mark↔Matt · Matt↔Luke · Matt↔Luke masked · Mark↔Luke direct (18b)</span>
     <span id="dsbar" style="margin-left:auto;"></span>
   </header>
   <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
 
+  <div class="matrix-intro">
+    <div class="lead">Four Synoptic pairwise packages, read as one matrix.</div>
+    The Synoptic problem has four pairwise evidence surfaces once the 2026-04-18b supplement is added: Mark↔Matthew (<code>mm</code>), Matt↔Luke full (<code>ml</code>), Matt↔Luke with likely-Markan verses masked out (<code>mld</code>), and — as of 18b — Mark↔Luke direct (<code>mkl</code>). This page is the cross-dataset view. The first section compares all four packages head-to-head; the second section keeps the Matt-centric triple-tradition triangle (what the old "triangle" page did); the third and fourth sections are scatter and verse-by-verse tables for the Matt-join. For the full Mark↔Luke pipeline, see the dedicated <a href="34_mark_luke.html">page 34</a>.
+  </div>
+
+  <!-- Four-way comparison table -->
+  <div class="card" id="fourWaySection">
+    <h2>Four-way pairwise comparison</h2>
+    <div class="caption" style="margin:0 0 10px;max-width:1000px;">Each column is a pairwise dataset. Metrics come from the committed rerun/18b summaries; highlighted cell is the largest value in its row (or lowest for burden-style rows). Cells marked "—" are not applicable to that dataset's method (e.g. the masked package does not expose a common-source burden in the same shape as 18b's three-way ledger).</div>
+    <div class="scrollx"><table class="four-way-table" id="fourWayTable"></table></div>
+    <div class="src-note" style="margin-top:8px;">Sources: <code>bundle.mm</code>, <code>bundle.ml</code>, <code>bundle.mld</code>, <code>bundle.h18b.mkl</code>. For authoritative headline claims see <a href="../AUTHORITATIVE_NUMBERS.yaml"><code>AUTHORITATIVE_NUMBERS.yaml</code></a>.</div>
+  </div>
+
   <p class="caption">
-    For every verse in Matthew (the gospel in both datasets), the table on this page shows its best parallel in Mark and its best parallel in Luke. Where both are strong, you\'re looking at triple tradition; where only Mark is strong, it\'s Mark-Matt private material; where only Luke is strong, it\'s Q / Luke-Matt only. This is the one page that quietly joins the two datasets.
+    <b>Triple-tradition join (Matt-centric).</b> For every verse in Matthew (the gospel in both <code>mm</code> and <code>ml</code>), the sections below show its best parallel in Mark and its best parallel in Luke. Where both are strong, you're looking at triple tradition; where only Mark is strong, it's Mark-Matt private material; where only Luke is strong, it's Q / Luke-Matt only.
   </p>
 
   <div class="card">
@@ -66,8 +92,136 @@
 (function () {
   SH.buildNav('13_triangle.html');
   SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const el = SH.el;
   const mm = SH.BUNDLE.mm;
   const ml = SH.BUNDLE.ml;
+  const mld = SH.BUNDLE.mld;
+  const H = SH.BUNDLE.h18b || {};
+  const mkl = H.mkl || null;
+
+  // ---- Four-way pairwise comparison table ----
+  (function () {
+    const table = document.getElementById('fourWayTable');
+    if (!table) return;
+    const g  = (e) => (e && e.summary && e.summary.global_metrics) || {};
+    const ps = (e) => (e && e.summary && (e.summary.pair_score_summary || e.summary.primary_pair_score_summary)) || {};
+    const bd = (e) => (e && e.burden) || {};
+    const mklSum = (mkl && mkl.summary) || {};
+    const mklBur = (mkl && (mkl.burden_totals || mklSum.burden_totals)) || {};
+    // Burden total helper (sum op-counts in the ledger-row shape used by mm/ml/mld).
+    function burdenSum(obj) {
+      if (!obj) return null;
+      var sum = 0;
+      var ks = Object.keys(obj);
+      for (var i = 0; i < ks.length; i++) {
+        var v = obj[ks[i]];
+        if (typeof v === 'number') sum += v;
+        else if (v && typeof v === 'object' && typeof v.count === 'number') sum += v.count;
+      }
+      return sum > 0 ? sum : null;
+    }
+    function fmt(v, digits) {
+      if (v == null || v === '' || Number.isNaN(v)) return '—';
+      if (typeof v === 'number') return digits != null ? v.toFixed(digits) : String(v);
+      return String(v);
+    }
+    function pct(v) {
+      if (v == null || Number.isNaN(v)) return '—';
+      if (v > 1) return v.toFixed(1) + '%';
+      return (v * 100).toFixed(1) + '%';
+    }
+    // Values per dataset. For mkl, map flat summary fields into the same slots.
+    const ds = [
+      { key: 'mm',  header: 'Mark ↔ Matthew (mm)' },
+      { key: 'ml',  header: 'Matt ↔ Luke (ml)' },
+      { key: 'mld', header: 'Matt ↔ Luke masked (mld)' },
+      { key: 'mkl', header: 'Mark ↔ Luke direct (mkl · 18b)' },
+    ];
+    function val(dskey, metric) {
+      const d = SH.BUNDLE[dskey] || (dskey === 'mkl' ? mkl : null);
+      if (!d) return null;
+      switch (metric) {
+        case 'primary':
+          if (dskey === 'mkl') return mklSum.primary_chain_pairs != null ? mklSum.primary_chain_pairs : ((mkl.pairs || []).length || null);
+          return g(d).matched_pair_count || (d.pairs ? d.pairs.length : null);
+        case 'loose':
+          if (dskey === 'mkl') return mklSum.loose_blocks != null ? mklSum.loose_blocks : ((mkl.loose_blocks || []).length || null);
+          return g(d).loose_block_count;
+        case 'tight':
+          if (dskey === 'mkl') return mklSum.tight_blocks != null ? mklSum.tight_blocks : ((mkl.tight_blocks || []).length || null);
+          return g(d).tight_block_count;
+        case 'echo':
+          if (dskey === 'mkl') return mklSum.secondary_echoes_score_ge_0_22 != null ? mklSum.secondary_echoes_score_ge_0_22 : ((mkl.echoes || []).length || null);
+          return (d.echoes || []).length;
+        case 'mean':
+          if (dskey === 'mkl') return mklSum.primary_chain_mean_score != null ? mklSum.primary_chain_mean_score : null;
+          return ps(d).mean;
+        case 'ge080':
+          if (dskey === 'mkl') return mklSum.primary_chain_pairs_score_ge_0_80 != null ? mklSum.primary_chain_pairs_score_ge_0_80 : null;
+          return ps(d)['ge_0.80'];
+        case 'a_cov':
+          if (dskey === 'mkl') return null;
+          const ma = g(d);
+          return ma.mark_matched_pct != null ? ma.mark_matched_pct : (ma.matt_matched_pct != null ? ma.matt_matched_pct : (ma.a_matched_pct != null ? ma.a_matched_pct : null));
+        case 'b_cov':
+          if (dskey === 'mkl') return null;
+          const mb = g(d);
+          return mb.matt_matched_pct != null ? mb.matt_matched_pct : (mb.luke_matched_pct != null ? mb.luke_matched_pct : (mb.b_matched_pct != null ? mb.b_matched_pct : null));
+        case 'burden_a_prior':
+          if (dskey === 'mkl') return mklBur.Mark_prior_Luke_uses_Mark_or_Mark_like_source != null ? mklBur.Mark_prior_Luke_uses_Mark_or_Mark_like_source : null;
+          const b = bd(d);
+          return burdenSum(b.mark_prior) || burdenSum(b.matt_prior) || burdenSum(b.matt_prior_Luke_uses_Matthew);
+        case 'burden_b_prior':
+          if (dskey === 'mkl') return mklBur.Luke_prior_Mark_uses_Luke_or_Luke_like_source != null ? mklBur.Luke_prior_Mark_uses_Luke_or_Luke_like_source : null;
+          const b2 = bd(d);
+          return burdenSum(b2.matt_prior) || burdenSum(b2.luke_prior) || burdenSum(b2.luke_prior_Matthew_uses_Luke);
+        case 'burden_shared':
+          if (dskey === 'mkl') return mklBur.shared_narrative_or_oral_tradition_without_direct_use != null ? mklBur.shared_narrative_or_oral_tradition_without_direct_use : null;
+          const b3 = bd(d);
+          return burdenSum(b3.common_source_or_oral);
+      }
+      return null;
+    }
+    const rows = [
+      { metric: 'Primary backbone pairs',   m: 'primary', fmt: (v) => fmt(v) },
+      { metric: 'Macro / loose blocks',     m: 'loose',   fmt: (v) => fmt(v) },
+      { metric: 'Micro / tight blocks',     m: 'tight',   fmt: (v) => fmt(v) },
+      { metric: 'Secondary echoes',         m: 'echo',    fmt: (v) => fmt(v) },
+      { metric: 'a-gospel coverage (of text)', m: 'a_cov', fmt: pct },
+      { metric: 'b-gospel coverage (of text)', m: 'b_cov', fmt: pct },
+      { metric: 'Mean primary-pair score',  m: 'mean',    fmt: (v) => fmt(v, 3) },
+      { metric: 'Pairs with score ≥ 0.80',  m: 'ge080',   fmt: (v) => fmt(v) },
+      { metric: '"a is prior" burden total', m: 'burden_a_prior', fmt: (v) => fmt(v, 1), lowIsBetter: true },
+      { metric: '"b is prior" burden total', m: 'burden_b_prior', fmt: (v) => fmt(v, 1), lowIsBetter: true },
+      { metric: 'Shared-tradition burden (ledger total)', m: 'burden_shared', fmt: (v) => fmt(v, 1), lowIsBetter: true },
+    ];
+    const thead = el('thead');
+    const thr = el('tr');
+    thr.appendChild(el('th', null, 'Metric'));
+    for (const dd of ds) thr.appendChild(el('th', { class: 'ds' }, dd.header));
+    thead.appendChild(thr);
+    table.appendChild(thead);
+    const tbody = el('tbody');
+    for (const r of rows) {
+      const vals = ds.map((dd) => val(dd.key, r.m));
+      const numeric = vals.map((v) => (typeof v === 'number' ? v : null));
+      const anyNumeric = numeric.filter((v) => v != null);
+      let hiIdx = -1;
+      if (anyNumeric.length) {
+        const pick = r.lowIsBetter ? Math.min.apply(null, anyNumeric) : Math.max.apply(null, anyNumeric);
+        hiIdx = numeric.findIndex((v) => v === pick);
+      }
+      const tr = el('tr');
+      tr.appendChild(el('td', { class: 'metric' }, r.metric));
+      vals.forEach((v, i) => {
+        const td = el('td', null, r.fmt(v));
+        if (i === hiIdx && typeof v === 'number') td.className = 'hi';
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+  })();
 
   // Build Matt-verse index table
   // Matt's total verses: mm.meta.b_total_verses (Matt is b in mm); ml.meta.a_total_verses (Matt is a in ml)

@@ -1,0 +1,168 @@
+---
+# Apocrypha next-packages roadmap
+# Date: 2026-04-18
+# Purpose: Tell a reader which apocryphal works have priority for the NEXT
+#   retrieval package, what primary-language source would need to be ingested,
+#   what reference/segmentation scheme is required, and what analytic layers
+#   would become possible once the text is in. This is a planning artifact,
+#   not an analytic finding. Nothing here claims dependence one way or the
+#   other for any work listed.
+
+status: roadmap_only
+policy:
+  rationale: >
+    The current package stops at inventory for non-Thomas apocrypha because
+    running a lexical pipeline against inventories, paraphrases, or modern-
+    language summaries would produce noise, not evidence. The honest next
+    step is primary-language ingestion + segmentation, not score-publishing
+    on the inventory rows.
+  principle: Ingest critical text first, then segment, then score. Never
+    invert the order.
+  text_critical_default: Where a recension question exists (e.g., Acts of
+    Pilate short vs long), keep the shortest well-attested critical text as
+    the default primary chain and expose the longer forms as sensitivity
+    conditions (mirrors the Mark 16:9-20 handling in mkl).
+
+priority_levels:
+  P0_required_before_any_claim:
+    - Primary-language critical text with a stable reference scheme.
+    - Documented licensing (public-domain, CC-licensed, or author permission).
+  P1_recommended_first_package:
+    - Gospel of Peter (Greek, P.Oxy 2949 + Akhmim).
+    - Protevangelium of James (Greek, Tischendorf / de Strycker).
+    - Infancy Gospel of Thomas (Greek short recension, Tischendorf G1).
+  P2_second_package:
+    - Gospel of Nicodemus / Acts of Pilate (Greek + Latin, short recension).
+    - Epistle of the Apostles / Epistula Apostolorum (Ethiopic + Coptic).
+    - Gospel of the Ebionites fragments (preserved in Epiphanius).
+    - Gospel of the Hebrews / Nazarenes fragments (preserved in Jerome et al.).
+  P3_research_horizon:
+    - Gospel of Mary (Coptic BG 8502).
+    - Apocryphon of James (Coptic NHC I,2).
+    - Dialogue of the Saviour (Coptic NHC III,5).
+    - Acts of Paul and Thecla (Greek).
+    - Acts of John (Greek).
+
+next_packages:
+  - package_id: apocrypha_p1_early_narrative_supplements
+    planned_date: later in 2026
+    texts:
+      - name: Gospel of Peter
+        language_primary: Greek
+        critical_edition_pointer: P.Oxy. 2949 + Akhmim Codex; Mara 2004 (SC
+          201) is standard. Kraus & Nicklas 2004 (GCS N.F. 11) reprints.
+        segmentation_unit: Kraus-Nicklas verse numbering (1-60).
+        expected_signal_note: Passion/resurrection pericopae have narrative
+          overlap with Matt 27-28, Mark 15-16, Luke 23-24 without being
+          verbally parasitic. A pairwise-with-anchors method (like John
+          pairwise in 18b) is the right fit; a continuous monotonic chain
+          is unlikely to succeed.
+        method_template: john_synoptic_pairwise
+      - name: Protevangelium of James
+        language_primary: Greek
+        critical_edition_pointer: de Strycker 1961 (SH 33) with Bodmer V
+          collation; English in Elliott 1993 (ANT).
+        segmentation_unit: de Strycker chapter.verse.
+        expected_signal_note: Infancy-narrative material shares motifs with
+          Matt 1-2 / Luke 1-2 but is a later creative expansion. Expect
+          anchor-level overlap on annunciation, birth-in-cave, Zechariah
+          martyrdom; no verse-level chain.
+        method_template: john_synoptic_pairwise
+      - name: Infancy Gospel of Thomas
+        language_primary: Greek (short recension G1, Tischendorf)
+        critical_edition_pointer: Tischendorf 1853; Aasgaard 2009 review of
+          recensions. Syriac and Latin recensions exist but diverge
+          substantially.
+        segmentation_unit: Tischendorf chapter.verse (G1).
+        expected_signal_note: Very low overlap with canonical Gospels
+          (Jesus childhood miracle stories); the useful signal is more
+          likely within the apocryphal corpus itself (with Protevangelium).
+        method_template: logion_matrix_style
+    required_upstream_work:
+      - Commit critical Greek text file per work to sources/ with license
+        manifest.
+      - Define per-work reference scheme in a small per-work YAML so the
+        bundle loader can flatten it into canonical_units consistently.
+      - Run the Gospels-side 1-to-1 full matrix first; only then publish
+        anchor registry and pairwise support/contra summary.
+    deliverables:
+      - NN_apocrypha_p1_verse_similarity_full.csv.gz per apocryphal work ×
+        each canonical Gospel.
+      - NN_apocrypha_p1_anchor_registry.yaml (narrative anchors).
+      - NN_apocrypha_p1_pairwise_support_contra.yaml.
+      - NN_apocrypha_p1_global_summary.yaml (top-line counts,
+        method-fit note, license manifest).
+    explicitly_NOT_deliverables:
+      - A single score that resolves "is this Gospel of Peter dependent on
+        Matthew". Direction is a research question, not a package output.
+
+  - package_id: apocrypha_p2_recension_heavy
+    planned_date: after P1 has shipped and been reviewed
+    texts:
+      - name: Gospel of Nicodemus / Acts of Pilate
+        language_primary: Greek + Latin (short recension first)
+        segmentation_unit: ANT Elliott section.verse.
+        expected_signal_note: Passion-narrative expansions; recension and
+          translation history are significant. Treat the short Greek form
+          as default, long Latin as sensitivity layer.
+        method_template: john_synoptic_pairwise_with_recension_sensitivity
+      - name: Epistula Apostolorum
+        language_primary: Ethiopic + Coptic (fragmentary)
+        critical_edition_pointer: Hills 2009 (rev.); Schmidt 1919 for older
+          editions.
+        segmentation_unit: Duensing / Hills chapter.
+        expected_signal_note: Resurrection-dialogue form shares motifs with
+          John 20-21 and the Synoptic resurrection appearances; language
+          base is not Greek so direct Greek-to-Greek alignment will not
+          work without translation normalization.
+        method_template: structural_overlap_with_translation_note
+      - name: Gospel of the Ebionites fragments
+        language_primary: Greek (as quoted by Epiphanius Panarion)
+        critical_edition_pointer: Klauck 2003 / Klijn 1992.
+        segmentation_unit: fragment number (Klijn).
+        expected_signal_note: Harmonistic quotations that splice Matt +
+          Luke + Mark. Score against each canonical Gospel and flag as
+          harmonization candidates.
+        method_template: fragment_to_canonical_matrix
+      - name: Gospel of the Hebrews / Nazarenes fragments
+        language_primary: Greek / Latin patristic citations
+        critical_edition_pointer: Klijn 1992; Klauck 2003.
+        segmentation_unit: fragment number (Klijn).
+        expected_signal_note: Fragmentary, citation-mediated; formula risk
+          is high because we only see the fragments through a patristic
+          witness. Treat like epistle case dossier, not like Gospel of
+          Peter pairwise.
+        method_template: case_dossier_style
+
+  - package_id: apocrypha_p3_gnostic_coptic
+    planned_date: research horizon, not scheduled
+    texts:
+      - name: Gospel of Mary (BG 8502)
+        language_primary: Coptic
+        expected_signal_note: Low canonical overlap; interesting for
+          comparison with Thomas rather than canon.
+      - name: Apocryphon of James (NHC I,2)
+        language_primary: Coptic
+      - name: Dialogue of the Saviour (NHC III,5)
+        language_primary: Coptic
+      - name: Acts of Paul and Thecla
+        language_primary: Greek
+      - name: Acts of John
+        language_primary: Greek
+    method_warning: >
+      These works require either Coptic-Greek cross-language scoring
+      (which is not implemented in the current pipeline) or
+      structural/motif-level analysis that exceeds retrieval. Publishing
+      retrieval numbers without that infrastructure would be misleading.
+
+what_this_roadmap_is_NOT:
+  - It is NOT a claim that any apocryphal work is or is not dependent on
+    any canonical Gospel.
+  - It is NOT a commitment to ship these packages on any schedule.
+  - It is NOT a substitute for the 18b inventory layer on page 25.
+
+pointers:
+  inventory_page: visualizations/25_apocrypha_inventory.html
+  prior_brief_roadmap: analysis_update_20260418c/data/60_apocrypha_analysis_status_and_ingestion_roadmap.yaml
+  method_registry: METHODS.md
+  authoritative_claims: AUTHORITATIVE_NUMBERS.yaml

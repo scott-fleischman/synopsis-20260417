@@ -118,6 +118,17 @@
   </header>
   <nav id="topnav" class="topnav"></nav>
 
+  <div class="scholarly-shortlist" style="background:#fff;border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:3px;padding:12px 16px;margin:0 0 14px;font-size:13px;line-height:1.55;max-width:1040px;">
+    <div style="font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-mute);margin-bottom:6px;font-weight:600;">Scholarly shortlist · jump to the four most-discussed cases</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <a href="#case-1tim-luke" data-shortcut="epistle_1tim_5_18_worker_wages_luke_10_7" class="shortlist-link" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--rule);border-radius:3px;background:#fafaf7;color:var(--ink);text-decoration:none;">1 Tim 5:18 ~ Luke 10:7 <span style="color:var(--ink-mute);font-family:var(--sans);">low formula risk · high philology</span></a>
+      <a href="#case-1cor-luke" data-shortcut="epistle_1cor_11_24_lord_supper_luke_22" class="shortlist-link" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--rule);border-radius:3px;background:#fafaf7;color:var(--ink);text-decoration:none;">1 Cor 11 ~ Luke 22 <span style="color:var(--ink-mute);font-family:var(--sans);">high formula risk</span></a>
+      <a href="#case-jas-matt" data-shortcut="epistle_james_5_12_oaths_matt_5_34_37" class="shortlist-link" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--rule);border-radius:3px;background:#fafaf7;color:var(--ink);text-decoration:none;">Jas 5:12 ~ Matt 5:34–37 <span style="color:var(--ink-mute);font-family:var(--sans);">oath logion</span></a>
+      <a href="#case-1john" data-shortcut="johannine_1john_3_13_world_hates_you" class="shortlist-link" style="font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--rule);border-radius:3px;background:#fafaf7;color:var(--ink);text-decoration:none;">1 John 3:13 ~ John 15:18–19 <span style="color:var(--ink-mute);font-family:var(--sans);">intra-Johannine</span></a>
+    </div>
+    <div style="margin-top:6px;color:var(--ink-mute);font-size:11px;">These are the cases traditional scholarship debates most; the dossier separates formula risk from retrieval strength so each can be weighted independently. The 10-case targeted set below also includes Did 9–10 / Lord's Prayer, 1 Pet 2:12 / Matt 5:16, and others.</div>
+  </div>
+
   <div class="intro">
     <p>Epistle-to-Gospel evidence is assessed <b>case by case</b>, not corpus-wide. Each dossier separates three confidence axes: <em>formula risk</em> (how much of the match is liturgical/scriptural/proverbial), <em>automatic retrieval support</em> (how strong the lexical signal is), and <em>philological case strength</em> (what a qualitative reading of the pair concludes).</p>
     <div class="note method">
@@ -553,6 +564,25 @@
     const match = annotated.find(a => a.src_ref === hi || a.tgt_ref === hi);
     if (match) { state.active = match.case.case_id; renderList(); renderDossier(match); }
   }
+
+  // Scholarly-shortlist anchor links — map data-shortcut to the case_id
+  function selectByShortcut(shortcut) {
+    if (!shortcut) return false;
+    const m = annotated.find(a => a.case.case_id === shortcut);
+    if (!m) return false;
+    state.active = m.case.case_id;
+    renderList();
+    renderDossier(m);
+    const dossier = document.getElementById('dossier');
+    if (dossier && dossier.scrollIntoView) dossier.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  }
+  document.querySelectorAll('.shortlist-link').forEach((a) => {
+    a.addEventListener('click', (ev) => {
+      const sc = a.getAttribute('data-shortcut');
+      if (selectByShortcut(sc)) ev.preventDefault();
+    });
+  });
 })();
 </script>
 </body>
