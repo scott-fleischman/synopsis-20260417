@@ -1,0 +1,333 @@
+- thomas_logion: '2'
+  motif: seek/find and transformation
+  canonical_refs:
+  - Matt 7:7-8
+  - Luke 11:9-10
+  best_first_model: shared sayings tradition; Thomas expands toward revelatory sequence
+  direct_dependence_burden: moderate
+- thomas_logion: '3'
+  motif: kingdom inside/among you
+  canonical_refs:
+  - Luke 17:20-21
+  best_first_model: shared kingdom saying with divergent theological framing
+  direct_dependence_burden: moderate
+- thomas_logion: '5'
+  motif: hidden/revealed
+  canonical_refs:
+  - Mark 4:22
+  - Matt 10:26
+  - Luke 8:17
+  best_first_model: portable proverb/tradition
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '6'
+  motif: fasting/prayer/alms disclosure
+  canonical_refs:
+  - Matt 6:1-18
+  best_first_model: shared ethical tradition or anti-ritual polemic; direct dependence weak
+  direct_dependence_burden: moderate
+- thomas_logion: '8'
+  motif: fisherman/net and good fish
+  canonical_refs:
+  - Matt 13:47-50
+  best_first_model: parable tradition; Thomas compresses/gnomizes
+  direct_dependence_burden: moderate
+- thomas_logion: '9'
+  motif: sower parable
+  canonical_refs:
+  - Mark 4:3-8
+  - Matt 13:3-8
+  - Luke 8:5-8
+  best_first_model: shared parable tradition; direct dependence possible if wording clusters survive in Greek witnesses
+  direct_dependence_burden: moderate
+- thomas_logion: '10'
+  motif: fire cast on earth
+  canonical_refs:
+  - Luke 12:49
+  best_first_model: shared apocalyptic saying
+  direct_dependence_burden: moderate
+- thomas_logion: '16'
+  motif: division in household
+  canonical_refs:
+  - Matt 10:34-36
+  - Luke 12:51-53
+  best_first_model: shared apocalyptic/mission saying
+  direct_dependence_burden: moderate
+- thomas_logion: '20'
+  motif: mustard seed
+  canonical_refs:
+  - Mark 4:30-32
+  - Matt 13:31-32
+  - Luke 13:18-19
+  best_first_model: parable tradition; direct dependence hard because compact parable travels orally
+  direct_dependence_burden: moderate
+- thomas_logion: '26'
+  motif: speck and beam
+  canonical_refs:
+  - Matt 7:3-5
+  - Luke 6:41-42
+  best_first_model: portable satirical saying
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '31'
+  motif: prophet not accepted
+  canonical_refs:
+  - Mark 6:4
+  - Matt 13:57
+  - Luke 4:24
+  - John 4:44
+  best_first_model: portable proverb
+  direct_dependence_burden: low
+- thomas_logion: '32'
+  motif: city on hill
+  canonical_refs:
+  - Matt 5:14
+  best_first_model: shared saying; Matthew-context dependence possible but not forced
+  direct_dependence_burden: moderate
+- thomas_logion: '33'
+  motif: lamp not hidden
+  canonical_refs:
+  - Mark 4:21
+  - Matt 5:15
+  - Luke 8:16
+  - Luke 11:33
+  best_first_model: portable proverb
+  direct_dependence_burden: low
+- thomas_logion: '34'
+  motif: blind leading blind
+  canonical_refs:
+  - Matt 15:14
+  - Luke 6:39
+  best_first_model: portable proverb
+  direct_dependence_burden: low
+- thomas_logion: '35'
+  motif: strong man house/plunder
+  canonical_refs:
+  - Mark 3:27
+  - Matt 12:29
+  - Luke 11:21-22
+  best_first_model: shared controversy saying/tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '36'
+  motif: anxiety over clothing
+  canonical_refs:
+  - Matt 6:25-34
+  - Luke 12:22-31
+  best_first_model: shared sapiential saying cluster
+  direct_dependence_burden: moderate
+- thomas_logion: '39'
+  motif: keys/knowledge and exclusion
+  canonical_refs:
+  - Matt 23:13
+  - Luke 11:52
+  best_first_model: shared polemical saying; possible Luke/Thomas cluster
+  direct_dependence_burden: moderate
+- thomas_logion: '41'
+  motif: whoever has will receive
+  canonical_refs:
+  - Mark 4:25
+  - Matt 13:12
+  - Luke 8:18
+  - Luke 19:26
+  best_first_model: portable aphorism
+  direct_dependence_burden: low
+- thomas_logion: '44'
+  motif: blasphemy against Spirit
+  canonical_refs:
+  - Mark 3:28-29
+  - Matt 12:31-32
+  - Luke 12:10
+  best_first_model: shared controversy saying
+  direct_dependence_burden: moderate
+- thomas_logion: '45'
+  motif: tree and fruit / good and evil treasury
+  canonical_refs:
+  - Matt 7:16-20
+  - Luke 6:43-45
+  best_first_model: shared sapiential cluster
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '46'
+  motif: John the Baptist and least/greatest
+  canonical_refs:
+  - Matt 11:11
+  - Luke 7:28
+  best_first_model: shared Baptist saying
+  direct_dependence_burden: moderate
+- thomas_logion: '47'
+  motif: new wine/old wineskins; two masters?
+  canonical_refs:
+  - Mark 2:21-22
+  - Matt 9:16-17
+  - Luke 5:36-39
+  - Matt 6:24
+  - Luke 16:13
+  best_first_model: conflated saying cluster; network model better than tree model
+  direct_dependence_burden: high for any single source
+- thomas_logion: '54'
+  motif: blessed poor / kingdom
+  canonical_refs:
+  - Luke 6:20
+  - Matt 5:3
+  best_first_model: beatitude tradition; Thomas closer to Luke’s simple poor form
+  direct_dependence_burden: moderate
+- thomas_logion: '55'
+  motif: hate family and carry cross
+  canonical_refs:
+  - Luke 14:26-27
+  - Matt 10:37-38
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '57'
+  motif: weeds/tares
+  canonical_refs:
+  - Matt 13:24-30
+  best_first_model: possible Matthew-related tradition; Thomas shorter and less allegorized
+  direct_dependence_burden: moderate-to-high
+- thomas_logion: '64'
+  motif: banquet excuses
+  canonical_refs:
+  - Luke 14:16-24
+  - Matt 22:1-14
+  best_first_model: parable tradition; Luke/Thomas closer in shape than Matthew
+  direct_dependence_burden: moderate
+- thomas_logion: 65-66
+  motif: wicked tenants and rejected stone
+  canonical_refs:
+  - Mark 12:1-12
+  - Matt 21:33-46
+  - Luke 20:9-19
+  best_first_model: parable plus scripture citation tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '72'
+  motif: inheritance divider
+  canonical_refs:
+  - Luke 12:13-14
+  best_first_model: shared Lukan/Thomas-like independent saying or Thomas knowing Luke; independence burden high
+  direct_dependence_burden: moderate
+- thomas_logion: '73'
+  motif: harvest plentiful, laborers few
+  canonical_refs:
+  - Matt 9:37-38
+  - Luke 10:2
+  best_first_model: mission saying tradition
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '76'
+  motif: pearl of great value
+  canonical_refs:
+  - Matt 13:45-46
+  best_first_model: parable tradition; possible Matthean relationship but not decided by Coptic layer alone
+  direct_dependence_burden: moderate-to-high
+- thomas_logion: '78'
+  motif: reed/soft clothing in palaces
+  canonical_refs:
+  - Matt 11:7-8
+  - Luke 7:24-25
+  best_first_model: Baptist saying tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '79'
+  motif: womb/breasts blessing reversed
+  canonical_refs:
+  - Luke 11:27-28
+  best_first_model: shared or Lukan-related saying; high-value because uncommon scene
+  direct_dependence_burden: moderate
+- thomas_logion: '86'
+  motif: foxes have holes
+  canonical_refs:
+  - Matt 8:20
+  - Luke 9:58
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '89'
+  motif: clean inside/outside cup
+  canonical_refs:
+  - Matt 23:25-26
+  - Luke 11:39-41
+  best_first_model: shared polemical saying; possible Luke/Thomas form relation
+  direct_dependence_burden: moderate
+- thomas_logion: '90'
+  motif: rest and easy yoke
+  canonical_refs:
+  - Matt 11:28-30
+  best_first_model: possible Matthean/Thomas relation or shared wisdom-Christology saying
+  direct_dependence_burden: moderate-to-high
+- thomas_logion: '91'
+  motif: interpreting weather/signs but not the time
+  canonical_refs:
+  - Matt 16:2-3
+  - Luke 12:54-56
+  best_first_model: shared signs-of-the-time saying
+  direct_dependence_burden: moderate
+- thomas_logion: '92'
+  motif: seek/find
+  canonical_refs:
+  - Matt 7:7-8
+  - Luke 11:9-10
+  best_first_model: portable saying; Thomas redactional context matters more than surface wording
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '94'
+  motif: seek/find/knock/open
+  canonical_refs:
+  - Matt 7:7-8
+  - Luke 11:9-10
+  best_first_model: portable saying
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '95'
+  motif: lend without return/usury
+  canonical_refs:
+  - Luke 6:34-35
+  best_first_model: shared ethical saying; possible Lukan affinity
+  direct_dependence_burden: moderate
+- thomas_logion: '96'
+  motif: leaven
+  canonical_refs:
+  - Matt 13:33
+  - Luke 13:20-21
+  best_first_model: parable tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '99'
+  motif: true family does will of Father
+  canonical_refs:
+  - Mark 3:31-35
+  - Matt 12:46-50
+  - Luke 8:19-21
+  best_first_model: shared biographical/saying tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '100'
+  motif: Caesar’s coin
+  canonical_refs:
+  - Mark 12:13-17
+  - Matt 22:15-22
+  - Luke 20:20-26
+  best_first_model: shared controversy tradition; direct relation possible only with closer wording analysis
+  direct_dependence_burden: moderate
+- thomas_logion: '101'
+  motif: hate father/mother
+  canonical_refs:
+  - Luke 14:26
+  - Matt 10:37
+  best_first_model: discipleship saying tradition
+  direct_dependence_burden: moderate
+- thomas_logion: '103'
+  motif: thief known beforehand
+  canonical_refs:
+  - Matt 24:43
+  - Luke 12:39
+  best_first_model: apocalyptic watchfulness saying
+  direct_dependence_burden: low-to-moderate
+- thomas_logion: '107'
+  motif: lost sheep
+  canonical_refs:
+  - Matt 18:12-14
+  - Luke 15:3-7
+  best_first_model: parable tradition with divergent theological placement
+  direct_dependence_burden: moderate
+- thomas_logion: '109'
+  motif: treasure hidden in field
+  canonical_refs:
+  - Matt 13:44
+  best_first_model: parable tradition; possible Matthean relation but direct evidence limited in Coptic-only layer
+  direct_dependence_burden: moderate-to-high
+- thomas_logion: '113'
+  motif: kingdom not observable / spread on earth
+  canonical_refs:
+  - Luke 17:20-21
+  best_first_model: kingdom-saying tradition; Thomas develops realized/interiorized idiom
+  direct_dependence_burden: moderate

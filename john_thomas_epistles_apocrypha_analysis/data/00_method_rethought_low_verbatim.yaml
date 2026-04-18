@@ -1,0 +1,56 @@
+package_goal: Assess low-verbatim literary/traditional association among John, Gospel of Thomas, canonical Gospels, NT letters,
+  and selected apocryphal inventory.
+core_shift_from_synoptic_pipeline:
+- No single monotonic chain is assumed outside Synoptic narrative blocks.
+- Verse/window similarity is used only as one retrieval layer; curated saying and episode registries carry cases with low
+  lexical continuity.
+- Cross-lingual Thomas comparisons are not scored as Greek-to-Greek lexical matches; Thomas uses Coptic unit extraction plus
+  a curated parallel registry.
+- Apocryphal material from M.R. James is treated as an inventory/translation layer unless primary-language texts are supplied.
+data_layers:
+  canonical_surface_greek: SBLGNT surface text parsed by verse; normalized-token and content-token layers generated locally.
+  variant_awareness: SBLGNT inline apparatus markers counted per unit; full apparatus collation not rerun in this package.
+  window_layer: Canonical Gospel target windows of 1-4 verses to catch sayings spanning verse boundaries.
+  automatic_similarity: Weighted content-token overlap, crude stem overlap, shared n-grams, longest exact run, optional short
+    LCS.
+  negative_space_filter: Flags exact hits likely due to OT/scriptural quotations or common formulas rather than direct Gospel
+    dependence.
+  thomas_coptic_layer: Coptic Scriptorium TEI parsed by div1/logion into Coptic text, lemmas, POS-type summaries.
+  curated_semantic_layer: Manual registry of sayings/episodes where semantic/thematic continuity outruns direct wording.
+hypothesis_classes:
+- direct_literary_dependence
+- mediated_written_source_or_fixed_written_saying
+- oral_traditional_dependence
+- shared_liturgical_or_scriptural_formula
+- independent_convergence
+direction_rules:
+  direct_literary_favored_by:
+  - multiple nonfungible details
+  - long exact Greek runs not explained by scripture/liturgy
+  - same local order
+  - editorially intelligible transformation
+  oral_tradition_favored_by:
+  - stable gist with lexical drift
+  - portable aphorisms
+  - multiple contexts across witnesses
+  - weak or absent local order
+  common_written_source_favored_by:
+  - fixed wording across nonadjacent corpora with no good directional access model
+  - saying clusters without narrative seams
+  independent_convergence_favored_by:
+  - generic theme only
+  - stock ethical maxim
+  - no distinctive combined features
+  - strong negative-space explanation
+  negative_space:
+  - OT quotations
+  - scriptural prooftexts
+  - liturgical formulas
+  - stock paraenetic phrases
+  - common Jewish wisdom themes
+known_limitations:
+- This package uses a heuristic Greek stemmer, not full lemmatization.
+- Automatic lexical scores under-detect root changes such as ὀμνύετε / ὀμόσαι.
+- Coptic Thomas is not automatically aligned word-for-word to Greek; curated parallels should be treated as hypothesis registries.
+- M.R. James apocryphal material is represented as a corpus inventory, not as a primary-language comparison.
+- Candidate scores retrieve evidence; they are not posterior probabilities.

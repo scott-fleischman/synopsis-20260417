@@ -1,0 +1,40 @@
+package: john_thomas_epistles_apocrypha_analysis
+canonical_books_parsed: 27
+canonical_verses_parsed: 7939
+gospel_verses_parsed: 3768
+epistle_verses_parsed: 2764
+thomas_units_parsed: 116
+automatic_layers:
+  epistles_to_gospels:
+    candidate_rows: 12036
+    source_units_with_candidates: 1077
+    sources_with_exact_run_len_4plus: 161
+    mean_top_score: 0.1784
+    median_top_score: 0.1752
+    max_top_score: 0.9225
+  john_to_synoptics:
+    candidate_rows: 12831
+    source_units_with_candidates: 672
+    sources_with_exact_run_len_4plus: 198
+    mean_top_score: 0.198
+    median_top_score: 0.1847
+    max_top_score: 0.9814
+  exact_phrase_hits_len4plus: 11366
+  network_edges_total: 6397
+curated_layers:
+  targeted_case_studies: 10
+  john_anchor_registry: 10
+  thomas_parallel_registry: 47
+  concept_signature_registry: 16
+  apocrypha_inventory_rows: 18
+headline_findings:
+- The low-verbatim domain needs a network/saying approach, not a single order-chain model.
+- '1Tim 5:18 ~ Luke 10:7 is a high-value near-exact Greek Jesus-saying case: five-token exact run plus Luke-like μισθός form.'
+- James 5:12 ~ Matt 5:34-37 is high-value semantically but under-scored by exact matching because of compression, expansion,
+  and root/inflection differences.
+- John has many anchor episodes with Synoptics, especially in passion and sign material, but direction is underdetermined
+  by lexical matching alone.
+- Thomas should be modeled primarily as a sayings-network witness; Coptic-to-Greek direct dependence cannot be inferred from
+  semantic parallels alone.
+- Many long exact NT-letter/Gospel matches are OT/scriptural or liturgical formulas and are negative-space controls, not direct
+  Gospel-dependence evidence.

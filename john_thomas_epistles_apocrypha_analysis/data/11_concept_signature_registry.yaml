@@ -1,0 +1,210 @@
+- concept_id: worker_wages
+  canonical_refs:
+  - Luke 10:7
+  - Matt 10:10
+  epistle_refs:
+  - 1Tim 5:18
+  thomas_logia: []
+  signal_type: exact/semi-exact saying formula
+  independence_burden: very_high
+  direct_literary_burden: medium
+  oral_tradition_burden: medium
+  common_written_source_burden: low-to-medium
+- concept_id: oaths_yes_no
+  canonical_refs:
+  - Matt 5:34-37
+  epistle_refs:
+  - Jas 5:12
+  thomas_logia: []
+  signal_type: distinctive ethical cluster with lexical drift
+  independence_burden: high
+  direct_literary_burden: medium
+  oral_tradition_burden: low-to-medium
+  common_written_source_burden: low-to-medium
+- concept_id: poor_kingdom
+  canonical_refs:
+  - Luke 6:20
+  - Matt 5:3
+  epistle_refs:
+  - Jas 2:5
+  thomas_logia:
+  - '54'
+  signal_type: beatitude/kingdom semantic cluster
+  independence_burden: medium
+  direct_literary_burden: medium-to-high
+  oral_tradition_burden: low
+  common_written_source_burden: low-to-medium
+- concept_id: ask_seek_find
+  canonical_refs:
+  - Matt 7:7-8
+  - Luke 11:9-10
+  - Mark 11:24
+  epistle_refs:
+  - Jas 1:5-6
+  thomas_logia:
+  - '2'
+  - '92'
+  - '94'
+  signal_type: portable sapiential/prayer saying
+  independence_burden: medium
+  direct_literary_burden: high
+  oral_tradition_burden: low
+  common_written_source_burden: low
+- concept_id: hear_do_words
+  canonical_refs:
+  - Matt 7:24-27
+  - Luke 6:46-49
+  epistle_refs:
+  - Jas 1:22-25
+  thomas_logia: []
+  signal_type: sapiential obedience motif
+  independence_burden: medium
+  direct_literary_burden: high
+  oral_tradition_burden: low-to-medium
+  common_written_source_burden: medium
+- concept_id: humble_exalt
+  canonical_refs:
+  - Matt 23:12
+  - Luke 14:11
+  - Luke 18:14
+  epistle_refs:
+  - Jas 4:10
+  - 1Pet 5:6
+  thomas_logia: []
+  signal_type: reversal aphorism
+  independence_burden: medium
+  direct_literary_burden: high
+  oral_tradition_burden: low
+  common_written_source_burden: medium
+- concept_id: judge_not_mercy
+  canonical_refs:
+  - Matt 7:1-2
+  - Luke 6:37-38
+  - Matt 5:7
+  epistle_refs:
+  - Jas 2:13
+  - Jas 4:11-12
+  thomas_logia: []
+  signal_type: ethical motif with flexible wording
+  independence_burden: low-to-medium
+  direct_literary_burden: high
+  oral_tradition_burden: medium
+  common_written_source_burden: medium
+- concept_id: treasure_moth_rust
+  canonical_refs:
+  - Matt 6:19-21
+  - Luke 12:33-34
+  epistle_refs:
+  - Jas 5:2-3
+  thomas_logia:
+  - '76'
+  - '109'
+  signal_type: wealth/treasure imagery
+  independence_burden: medium
+  direct_literary_burden: medium-to-high
+  oral_tradition_burden: medium
+  common_written_source_burden: medium
+- concept_id: prophet_no_honor
+  canonical_refs:
+  - Mark 6:4
+  - Matt 13:57
+  - Luke 4:24
+  - John 4:44
+  epistle_refs: []
+  thomas_logia:
+  - '31'
+  signal_type: compact proverb
+  independence_burden: medium
+  direct_literary_burden: high
+  oral_tradition_burden: low
+  common_written_source_burden: medium
+- concept_id: hidden_revealed
+  canonical_refs:
+  - Mark 4:22
+  - Matt 10:26
+  - Luke 8:17
+  epistle_refs: []
+  thomas_logia:
+  - '5'
+  - '6'
+  signal_type: portable proverb
+  independence_burden: low-to-medium
+  direct_literary_burden: high
+  oral_tradition_burden: low
+  common_written_source_burden: medium
+- concept_id: mustard_seed
+  canonical_refs:
+  - Mark 4:30-32
+  - Matt 13:31-32
+  - Luke 13:18-19
+  epistle_refs: []
+  thomas_logia:
+  - '20'
+  signal_type: parable skeleton
+  independence_burden: medium
+  direct_literary_burden: medium-to-high
+  oral_tradition_burden: low-to-medium
+  common_written_source_burden: medium
+- concept_id: sower
+  canonical_refs:
+  - Mark 4:3-8
+  - Matt 13:3-8
+  - Luke 8:5-8
+  epistle_refs: []
+  thomas_logia:
+  - '9'
+  signal_type: parable skeleton with image sequence
+  independence_burden: high
+  direct_literary_burden: medium
+  oral_tradition_burden: low-to-medium
+  common_written_source_burden: medium
+- concept_id: banquet_excuses
+  canonical_refs:
+  - Luke 14:16-24
+  - Matt 22:1-14
+  epistle_refs: []
+  thomas_logia:
+  - '64'
+  signal_type: parable narrative with excuse sequence
+  independence_burden: high
+  direct_literary_burden: medium
+  oral_tradition_burden: medium
+  common_written_source_burden: low-to-medium
+- concept_id: wicked_tenants_rejected_stone
+  canonical_refs:
+  - Mark 12:1-12
+  - Matt 21:33-46
+  - Luke 20:9-19
+  epistle_refs:
+  - 1Pet 2:4-8
+  thomas_logia:
+  - 65-66
+  signal_type: parable + scriptural quotation cluster
+  independence_burden: high
+  direct_literary_burden: medium
+  oral_tradition_burden: medium
+  common_written_source_burden: medium
+- concept_id: caesar_coin
+  canonical_refs:
+  - Mark 12:13-17
+  - Matt 22:15-22
+  - Luke 20:20-26
+  epistle_refs: []
+  thomas_logia:
+  - '100'
+  signal_type: controversy scene skeleton
+  independence_burden: very_high
+  direct_literary_burden: medium
+  oral_tradition_burden: medium
+  common_written_source_burden: medium
+- concept_id: world_hates_disciples
+  canonical_refs:
+  - John 15:18-19
+  epistle_refs:
+  - 1John 3:13
+  thomas_logia: []
+  signal_type: Johannine idiom/concept
+  independence_burden: medium within Johannine school
+  direct_literary_burden: medium
+  oral_tradition_burden: not_primary
+  common_written_source_burden: low-to-medium
