@@ -1,0 +1,24 @@
+purpose: Make explicit what every proposed direction must explain, including supporting evidence, contrary evidence, plausible
+  response models, and per-pericope implications.
+what_was_missing_before_this_patch:
+- Direct per-direction obligation ledgers for each hypothesis, not just pairwise similarity outputs.
+- Pericope/block-level tables stating what must be omitted, added, relocated, abbreviated, or expanded under each direction.
+- A consolidated contrary-evidence matrix by direction.
+- A reverse-direction completeness layer for John/Synoptic directions.
+- A single cross-pair dataset linking pairwise blocks, gaps, primary pairs, and explanation models.
+now_added:
+- Direction hypotheses registry.
+- Pericope/block change ledgers for Mark↔Matthew, Mark↔Luke, Matthew↔Luke, and John↔Synoptics.
+- Material omission/addition catalog from order intervals.
+- Reordering/displacement catalog.
+- Primary-pair change diffs with source/target orientation for each direction.
+- Contrary evidence and response model ledgers.
+- Direction burden summary and evidence matrix.
+- System hypothesis space including two-source, Farrer, Griesbach/two-gospel, proto-Mark/common-source, and John shared-anchor
+  models.
+still_not_done_or_not_claimed:
+- A hand-reviewed full critical synopsis with conventional pericope titles for every unit.
+- A probabilistic posterior model calibrated on external known-dependence corpora.
+- Full automatic Coptic↔Greek semantic scoring for Thomas.
+- Primary-text analysis of apocrypha beyond Thomas.
+- Full text-critical sensitivity across every variant, beyond the currently included targeted apparatus/Mark-ending layers.

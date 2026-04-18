@@ -1,0 +1,43 @@
+package: Synoptic + John Directional Hypothesis Dossiers
+date: '2026-04-18'
+purpose: Make explicit the required explanations, contrary evidence, and best response models under each proposed direction
+  of literary/traditional dependence.
+directions_covered:
+- matthew_used_mark
+- mark_used_matthew
+- luke_used_mark
+- mark_used_luke
+- matthew_used_luke
+- luke_used_matthew
+- john_used_mark
+- john_used_matthew
+- john_used_luke
+- mark_used_john
+- matthew_used_john
+- luke_used_john
+output_counts:
+  direction_hypotheses: 12
+  synoptic_pericope_direction_rows: 184
+  directional_pericope_requirements: 508
+  john_anchor_direction_rows: 58
+  gap_material_rows: 344
+  major_gap_burdens_ge_20: 56
+  reordering_displacement_rows: 2410
+  primary_pair_change_rows: 1660
+  support_contra_direction_rows: 12
+headline_findings:
+- 'Matthew→Mark? No: Mark-used-Matthew remains higher burden than Matthew-used-Mark because of large repeated Markan non-use
+  of Matthean material.'
+- Matthew used Mark / Mark-like source remains the strongest directional conclusion.
+- Luke used Mark / Mark-like source is lower burden than Mark used Luke among direct-use alternatives, especially when shared
+  tradition is charged for order retention.
+- Matthew↔Luke double tradition remains best treated as a sayings/echo layer; neither direct direction is forced by the masked
+  data.
+- John should be assessed by anchor episodes; shared anchor tradition remains lower burden than global John-used-Mark/Matthew/Luke
+  claims.
+most_important_new_data_files:
+- data/60_contrary_evidence_and_response_models_by_direction.yaml
+- data/14_directional_pericope_explanation_dossiers.yaml
+- data/16_john_synoptic_directional_anchor_ledger.csv
+- data/20_material_omission_addition_catalog_by_direction.csv
+- data/50_primary_pair_change_diffs_all_directions.csv.gz

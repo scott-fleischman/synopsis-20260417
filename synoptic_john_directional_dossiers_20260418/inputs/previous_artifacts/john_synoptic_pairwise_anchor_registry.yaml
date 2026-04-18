@@ -1,0 +1,625 @@
+- anchor_id: john_baptist_witness_spirit_descends
+  pair: John↔Mark
+  john_refs: John 1:29-34
+  synoptic_refs: Mark 1:9-11
+  shared_features: &id001
+  - Baptist setting
+  - Spirit descends
+  - Jesus identified by divine sign
+  metrics_from_verse_matrix:
+    john_ref_count: 6
+    synoptic_ref_count: 3
+    max_score: 0.1957
+    mean_score: 0.0132
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 1:32
+      synoptic_ref: Mark 1:10
+      score: 0.1957
+      max_exact_run: ωσ περιστεραν
+  john_transformation_if_synoptics_prior: John converts baptism narrative into testimonial recognition; baptism action itself
+    is displaced/offstage.
+  synoptic_transformation_if_john_prior: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+  common_tradition_assessment: 'Low-burden: baptism/Baptist tradition likely circulated independently of exact wording.'
+  provisional_best_explanation: shared Baptist/baptism tradition; direct dependence not established
+- anchor_id: john_baptist_witness_spirit_descends
+  pair: John↔Matt
+  john_refs: John 1:29-34
+  synoptic_refs: Matt 3:13-17
+  shared_features: *id001
+  metrics_from_verse_matrix:
+    john_ref_count: 6
+    synoptic_ref_count: 5
+    max_score: 0.1831
+    mean_score: 0.0299
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 1:32
+      synoptic_ref: Matt 3:16
+      score: 0.1831
+      max_exact_run: πνευμα καταβαινον
+  john_transformation_if_synoptics_prior: John converts baptism narrative into testimonial recognition; baptism action itself
+    is displaced/offstage.
+  synoptic_transformation_if_john_prior: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+  common_tradition_assessment: 'Low-burden: baptism/Baptist tradition likely circulated independently of exact wording.'
+  provisional_best_explanation: shared Baptist/baptism tradition; direct dependence not established
+- anchor_id: john_baptist_witness_spirit_descends
+  pair: John↔Luke
+  john_refs: John 1:29-34
+  synoptic_refs: Luke 3:21-22
+  shared_features: *id001
+  metrics_from_verse_matrix:
+    john_ref_count: 6
+    synoptic_ref_count: 2
+    max_score: 0.2142
+    mean_score: 0.021
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 1:32
+      synoptic_ref: Luke 3:22
+      score: 0.2142
+      max_exact_run: ωσ περιστεραν
+  john_transformation_if_synoptics_prior: John converts baptism narrative into testimonial recognition; baptism action itself
+    is displaced/offstage.
+  synoptic_transformation_if_john_prior: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+  common_tradition_assessment: 'Low-burden: baptism/Baptist tradition likely circulated independently of exact wording.'
+  provisional_best_explanation: shared Baptist/baptism tradition; direct dependence not established
+- anchor_id: temple_action_relocated
+  pair: John↔Mark
+  john_refs: John 2:13-22
+  synoptic_refs: Mark 11:15-19
+  shared_features: &id002
+  - Temple action
+  - sellers/money-changers
+  - challenge around temple authority
+  metrics_from_verse_matrix:
+    john_ref_count: 10
+    synoptic_ref_count: 5
+    max_score: 0.1558
+    mean_score: 0.011
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 2:14
+      synoptic_ref: Mark 11:15
+      score: 0.1558
+      max_exact_run: τουσ πωλουντασ
+  john_transformation_if_synoptics_prior: John relocates the temple action to the beginning and makes it programmatic for
+    Jesus’ identity/death/resurrection.
+  synoptic_transformation_if_john_prior: Synoptics relocate the action to final week as a passion trigger.
+  common_tradition_assessment: Possible but the large order displacement must be explained in any direct-use model.
+  provisional_best_explanation: shared temple-action tradition; direct direction underdetermined
+- anchor_id: temple_action_relocated
+  pair: John↔Matt
+  john_refs: John 2:13-22
+  synoptic_refs: Matt 21:12-17
+  shared_features: *id002
+  metrics_from_verse_matrix:
+    john_ref_count: 10
+    synoptic_ref_count: 6
+    max_score: 0.1684
+    mean_score: 0.0164
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 2:15
+      synoptic_ref: Matt 21:12
+      score: 0.1684
+      max_exact_run: τασ τραπεζασ
+  john_transformation_if_synoptics_prior: John relocates the temple action to the beginning and makes it programmatic for
+    Jesus’ identity/death/resurrection.
+  synoptic_transformation_if_john_prior: Synoptics relocate the action to final week as a passion trigger.
+  common_tradition_assessment: Possible but the large order displacement must be explained in any direct-use model.
+  provisional_best_explanation: shared temple-action tradition; direct direction underdetermined
+- anchor_id: temple_action_relocated
+  pair: John↔Luke
+  john_refs: John 2:13-22
+  synoptic_refs: Luke 19:45-48
+  shared_features: *id002
+  metrics_from_verse_matrix:
+    john_ref_count: 10
+    synoptic_ref_count: 4
+    max_score: 0.1613
+    mean_score: 0.0068
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 2:14
+      synoptic_ref: Luke 19:45
+      score: 0.1613
+      max_exact_run: τουσ πωλουντασ
+  john_transformation_if_synoptics_prior: John relocates the temple action to the beginning and makes it programmatic for
+    Jesus’ identity/death/resurrection.
+  synoptic_transformation_if_john_prior: Synoptics relocate the action to final week as a passion trigger.
+  common_tradition_assessment: Possible but the large order displacement must be explained in any direct-use model.
+  provisional_best_explanation: shared temple-action tradition; direct direction underdetermined
+- anchor_id: prophet_no_honor
+  pair: John↔Mark
+  john_refs: John 4:44
+  synoptic_refs: Mark 6:4
+  shared_features: &id003
+  - A prophet lacks honor in his own homeland/country
+  metrics_from_verse_matrix:
+    john_ref_count: 1
+    synoptic_ref_count: 1
+    max_score: 0.1647
+    mean_score: 0.1647
+    max_exact_run_len: 1
+    best_pair:
+      john_ref: John 4:44
+      synoptic_ref: Mark 6:4
+      score: 0.1647
+      max_exact_run: ιησουσ
+  john_transformation_if_synoptics_prior: John abstracts a Nazareth rejection saying into a transitional travel comment.
+  synoptic_transformation_if_john_prior: Synoptics localize a general proverb into the Nazareth rejection scene.
+  common_tradition_assessment: Very plausible because it is a compact proverb.
+  provisional_best_explanation: portable proverb in Jesus tradition
+- anchor_id: prophet_no_honor
+  pair: John↔Matt
+  john_refs: John 4:44
+  synoptic_refs: Matt 13:57
+  shared_features: *id003
+  metrics_from_verse_matrix:
+    john_ref_count: 1
+    synoptic_ref_count: 1
+    max_score: 0.1648
+    mean_score: 0.1648
+    max_exact_run_len: 1
+    best_pair:
+      john_ref: John 4:44
+      synoptic_ref: Matt 13:57
+      score: 0.1648
+      max_exact_run: ιησουσ
+  john_transformation_if_synoptics_prior: John abstracts a Nazareth rejection saying into a transitional travel comment.
+  synoptic_transformation_if_john_prior: Synoptics localize a general proverb into the Nazareth rejection scene.
+  common_tradition_assessment: Very plausible because it is a compact proverb.
+  provisional_best_explanation: portable proverb in Jesus tradition
+- anchor_id: prophet_no_honor
+  pair: John↔Luke
+  john_refs: John 4:44
+  synoptic_refs: Luke 4:24
+  shared_features: *id003
+  metrics_from_verse_matrix:
+    john_ref_count: 1
+    synoptic_ref_count: 1
+    max_score: 0.0705
+    mean_score: 0.0705
+    max_exact_run_len: 0
+    best_pair:
+      john_ref: John 4:44
+      synoptic_ref: Luke 4:24
+      score: 0.0705
+      max_exact_run: ''
+  john_transformation_if_synoptics_prior: John abstracts a Nazareth rejection saying into a transitional travel comment.
+  synoptic_transformation_if_john_prior: Synoptics localize a general proverb into the Nazareth rejection scene.
+  common_tradition_assessment: Very plausible because it is a compact proverb.
+  provisional_best_explanation: portable proverb in Jesus tradition
+- anchor_id: feeding_5000
+  pair: John↔Mark
+  john_refs: John 6:1-15
+  synoptic_refs: Mark 6:30-44
+  shared_features: &id004
+  - five thousand
+  - loaves
+  - distribution
+  - leftover baskets
+  - wilderness/sea setting
+  metrics_from_verse_matrix:
+    john_ref_count: 15
+    synoptic_ref_count: 15
+    max_score: 0.1629
+    mean_score: 0.0097
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 6:11
+      synoptic_ref: Mark 6:44
+      score: 0.1629
+      max_exact_run: τουσ αρτουσ
+  john_transformation_if_synoptics_prior: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew
+    and Passover.
+  synoptic_transformation_if_john_prior: Synoptics simplify Johannine sign theology into miracle narration.
+  common_tradition_assessment: Strong common miracle tradition; direct dependence possible but not required by wording.
+  provisional_best_explanation: shared miracle tradition with possible literary contact not isolated by automatic metrics
+- anchor_id: feeding_5000
+  pair: John↔Matt
+  john_refs: John 6:1-15
+  synoptic_refs: Matt 14:13-21
+  shared_features: *id004
+  metrics_from_verse_matrix:
+    john_ref_count: 15
+    synoptic_ref_count: 9
+    max_score: 0.2187
+    mean_score: 0.0138
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 6:9
+      synoptic_ref: Matt 14:17
+      score: 0.2187
+      max_exact_run: πεντε αρτουσ
+  john_transformation_if_synoptics_prior: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew
+    and Passover.
+  synoptic_transformation_if_john_prior: Synoptics simplify Johannine sign theology into miracle narration.
+  common_tradition_assessment: Strong common miracle tradition; direct dependence possible but not required by wording.
+  provisional_best_explanation: shared miracle tradition with possible literary contact not isolated by automatic metrics
+- anchor_id: feeding_5000
+  pair: John↔Luke
+  john_refs: John 6:1-15
+  synoptic_refs: Luke 9:10-17
+  shared_features: *id004
+  metrics_from_verse_matrix:
+    john_ref_count: 15
+    synoptic_ref_count: 8
+    max_score: 0.1314
+    mean_score: 0.0116
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 6:9
+      synoptic_ref: Luke 9:16
+      score: 0.1314
+      max_exact_run: πεντε αρτουσ
+  john_transformation_if_synoptics_prior: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew
+    and Passover.
+  synoptic_transformation_if_john_prior: Synoptics simplify Johannine sign theology into miracle narration.
+  common_tradition_assessment: Strong common miracle tradition; direct dependence possible but not required by wording.
+  provisional_best_explanation: shared miracle tradition with possible literary contact not isolated by automatic metrics
+- anchor_id: walking_on_water
+  pair: John↔Mark
+  john_refs: John 6:16-21
+  synoptic_refs: Mark 6:45-52
+  shared_features: &id005
+  - disciples at sea
+  - Jesus walks on sea
+  - fear
+  - arrival/boat motif
+  metrics_from_verse_matrix:
+    john_ref_count: 6
+    synoptic_ref_count: 8
+    max_score: 0.3858
+    mean_score: 0.0415
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 6:20
+      synoptic_ref: Mark 6:50
+      score: 0.3858
+      max_exact_run: ειμι φοβεισθε
+  john_transformation_if_synoptics_prior: John drastically compresses the scene and drops Peter/Matthean expansion.
+  synoptic_transformation_if_john_prior: Synoptics expand compressed Johannine episode into a theophany/narrative scene.
+  common_tradition_assessment: Plausible miracle tradition; direction difficult without sequence clusters.
+  provisional_best_explanation: shared miracle tradition
+- anchor_id: walking_on_water
+  pair: John↔Matt
+  john_refs: John 6:16-21
+  synoptic_refs: Matt 14:22-33
+  shared_features: *id005
+  metrics_from_verse_matrix:
+    john_ref_count: 6
+    synoptic_ref_count: 12
+    max_score: 0.4579
+    mean_score: 0.0299
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 6:20
+      synoptic_ref: Matt 14:27
+      score: 0.4579
+      max_exact_run: ειμι φοβεισθε
+  john_transformation_if_synoptics_prior: John drastically compresses the scene and drops Peter/Matthean expansion.
+  synoptic_transformation_if_john_prior: Synoptics expand compressed Johannine episode into a theophany/narrative scene.
+  common_tradition_assessment: Plausible miracle tradition; direction difficult without sequence clusters.
+  provisional_best_explanation: shared miracle tradition
+- anchor_id: anointing_bethany
+  pair: John↔Mark
+  john_refs: John 12:1-8
+  synoptic_refs: Mark 14:3-9
+  shared_features: &id006
+  - woman/anointing
+  - costly ointment
+  - objection over value
+  - Jesus interprets action
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 7
+    max_score: 0.5195
+    mean_score: 0.0273
+    max_exact_run_len: 3
+    best_pair:
+      john_ref: John 12:8
+      synoptic_ref: Mark 14:7
+      score: 0.5195
+      max_exact_run: εχετε μεθ εαυτων
+  john_transformation_if_synoptics_prior: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+  synoptic_transformation_if_john_prior: Mark/Matthew anonymize named characters and strip Lazarus setting.
+  common_tradition_assessment: Moderate; multiple anointing traditions or conflation likely.
+  provisional_best_explanation: tradition cluster with possible literary and memory contamination
+- anchor_id: anointing_bethany
+  pair: John↔Matt
+  john_refs: John 12:1-8
+  synoptic_refs: Matt 26:6-13
+  shared_features: *id006
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 8
+    max_score: 0.8571
+    mean_score: 0.0268
+    max_exact_run_len: 6
+    best_pair:
+      john_ref: John 12:8
+      synoptic_ref: Matt 26:11
+      score: 0.8571
+      max_exact_run: εχετε μεθ εαυτων εμε παντοτε εχετε
+  john_transformation_if_synoptics_prior: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+  synoptic_transformation_if_john_prior: Mark/Matthew anonymize named characters and strip Lazarus setting.
+  common_tradition_assessment: Moderate; multiple anointing traditions or conflation likely.
+  provisional_best_explanation: tradition cluster with possible literary and memory contamination
+- anchor_id: anointing_bethany
+  pair: John↔Luke
+  john_refs: John 12:1-8
+  synoptic_refs: Luke 7:36-50
+  shared_features: *id006
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 15
+    max_score: 0.2024
+    mean_score: 0.0108
+    max_exact_run_len: 3
+    best_pair:
+      john_ref: John 12:3
+      synoptic_ref: Luke 7:46
+      score: 0.2024
+      max_exact_run: ηλειψεν τουσ ποδασ
+  john_transformation_if_synoptics_prior: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+  synoptic_transformation_if_john_prior: Mark/Matthew anonymize named characters and strip Lazarus setting.
+  common_tradition_assessment: Moderate; multiple anointing traditions or conflation likely.
+  provisional_best_explanation: tradition cluster with possible literary and memory contamination
+- anchor_id: triumphal_entry
+  pair: John↔Mark
+  john_refs: John 12:12-19
+  synoptic_refs: Mark 11:1-10
+  shared_features: &id007
+  - entry to Jerusalem
+  - branches/garments
+  - Hosanna/blessed coming one
+  - king motif
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 10
+    max_score: 0.3353
+    mean_score: 0.0151
+    max_exact_run_len: 4
+    best_pair:
+      john_ref: John 12:13
+      synoptic_ref: Mark 11:9
+      score: 0.3353
+      max_exact_run: ωσαννα ευλογημενοσ ερχομενοσ ονοματι
+  john_transformation_if_synoptics_prior: John compresses preparation and explicitly adds interpretive memory after glorification.
+  synoptic_transformation_if_john_prior: Synoptics expand logistics of colt acquisition and public acclamation.
+  common_tradition_assessment: Strong passion-entry tradition; exact Hosanna phrase produces lexical evidence but not direction
+    alone.
+  provisional_best_explanation: shared passion tradition; direct relation possible but underdetermined
+- anchor_id: triumphal_entry
+  pair: John↔Matt
+  john_refs: John 12:12-19
+  synoptic_refs: Matt 21:1-11
+  shared_features: *id007
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 11
+    max_score: 0.3527
+    mean_score: 0.0168
+    max_exact_run_len: 4
+    best_pair:
+      john_ref: John 12:15
+      synoptic_ref: Matt 21:5
+      score: 0.3527
+      max_exact_run: σιων ιδου βασιλευσ ερχεται
+  john_transformation_if_synoptics_prior: John compresses preparation and explicitly adds interpretive memory after glorification.
+  synoptic_transformation_if_john_prior: Synoptics expand logistics of colt acquisition and public acclamation.
+  common_tradition_assessment: Strong passion-entry tradition; exact Hosanna phrase produces lexical evidence but not direction
+    alone.
+  provisional_best_explanation: shared passion tradition; direct relation possible but underdetermined
+- anchor_id: triumphal_entry
+  pair: John↔Luke
+  john_refs: John 12:12-19
+  synoptic_refs: Luke 19:28-40
+  shared_features: *id007
+  metrics_from_verse_matrix:
+    john_ref_count: 8
+    synoptic_ref_count: 13
+    max_score: 0.1855
+    mean_score: 0.0087
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 12:13
+      synoptic_ref: Luke 19:38
+      score: 0.1855
+      max_exact_run: ευλογημενοσ ερχομενοσ
+  john_transformation_if_synoptics_prior: John compresses preparation and explicitly adds interpretive memory after glorification.
+  synoptic_transformation_if_john_prior: Synoptics expand logistics of colt acquisition and public acclamation.
+  common_tradition_assessment: Strong passion-entry tradition; exact Hosanna phrase produces lexical evidence but not direction
+    alone.
+  provisional_best_explanation: shared passion tradition; direct relation possible but underdetermined
+- anchor_id: peter_denial
+  pair: John↔Mark
+  john_refs: John 18:15-27
+  synoptic_refs: Mark 14:66-72
+  shared_features: &id008
+  - Peter denies three times
+  - courtyard/fire setting
+  - cock crow motif
+  metrics_from_verse_matrix:
+    john_ref_count: 13
+    synoptic_ref_count: 7
+    max_score: 0.2619
+    mean_score: 0.0133
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 18:27
+      synoptic_ref: Mark 14:68
+      score: 0.2619
+      max_exact_run: αλεκτωρ εφωνησεν
+  john_transformation_if_synoptics_prior: John interweaves denial with trial scenes and adds beloved-disciple access.
+  synoptic_transformation_if_john_prior: Synoptics make a compact escalating denial narrative.
+  common_tradition_assessment: Strong passion tradition; direction requires local-seam analysis.
+  provisional_best_explanation: shared passion tradition; possible literary shaping
+- anchor_id: peter_denial
+  pair: John↔Matt
+  john_refs: John 18:15-27
+  synoptic_refs: Matt 26:69-75
+  shared_features: *id008
+  metrics_from_verse_matrix:
+    john_ref_count: 13
+    synoptic_ref_count: 7
+    max_score: 0.38
+    mean_score: 0.0134
+    max_exact_run_len: 3
+    best_pair:
+      john_ref: John 18:27
+      synoptic_ref: Matt 26:74
+      score: 0.38
+      max_exact_run: ευθεωσ αλεκτωρ εφωνησεν
+  john_transformation_if_synoptics_prior: John interweaves denial with trial scenes and adds beloved-disciple access.
+  synoptic_transformation_if_john_prior: Synoptics make a compact escalating denial narrative.
+  common_tradition_assessment: Strong passion tradition; direction requires local-seam analysis.
+  provisional_best_explanation: shared passion tradition; possible literary shaping
+- anchor_id: peter_denial
+  pair: John↔Luke
+  john_refs: John 18:15-27
+  synoptic_refs: Luke 22:54-62
+  shared_features: *id008
+  metrics_from_verse_matrix:
+    john_ref_count: 13
+    synoptic_ref_count: 9
+    max_score: 0.2025
+    mean_score: 0.0147
+    max_exact_run_len: 1
+    best_pair:
+      john_ref: John 18:27
+      synoptic_ref: Luke 22:60
+      score: 0.2025
+      max_exact_run: πετροσ
+  john_transformation_if_synoptics_prior: John interweaves denial with trial scenes and adds beloved-disciple access.
+  synoptic_transformation_if_john_prior: Synoptics make a compact escalating denial narrative.
+  common_tradition_assessment: Strong passion tradition; direction requires local-seam analysis.
+  provisional_best_explanation: shared passion tradition; possible literary shaping
+- anchor_id: sword_ear_arrest
+  pair: John↔Mark
+  john_refs: John 18:10-11
+  synoptic_refs: Mark 14:47
+  shared_features: &id009
+  - sword blow
+  - servant of high priest
+  - ear cut off
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 1
+    max_score: 0.1854
+    mean_score: 0.1184
+    max_exact_run_len: 1
+    best_pair:
+      john_ref: John 18:10
+      synoptic_ref: Mark 14:47
+      score: 0.1854
+      max_exact_run: μαχαιραν
+  john_transformation_if_synoptics_prior: John names Peter and Malchus and adds cup theology.
+  synoptic_transformation_if_john_prior: Synoptics anonymize names and modify theological response; Luke adds healing.
+  common_tradition_assessment: Specific detail cluster makes pure independence unlikely.
+  provisional_best_explanation: shared passion arrest tradition; direct direction unresolved
+- anchor_id: sword_ear_arrest
+  pair: John↔Matt
+  john_refs: John 18:10-11
+  synoptic_refs: Matt 26:51-52
+  shared_features: *id009
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 2
+    max_score: 0.17
+    mean_score: 0.0852
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 18:11
+      synoptic_ref: Matt 26:52
+      score: 0.17
+      max_exact_run: μαχαιραν εισ
+  john_transformation_if_synoptics_prior: John names Peter and Malchus and adds cup theology.
+  synoptic_transformation_if_john_prior: Synoptics anonymize names and modify theological response; Luke adds healing.
+  common_tradition_assessment: Specific detail cluster makes pure independence unlikely.
+  provisional_best_explanation: shared passion arrest tradition; direct direction unresolved
+- anchor_id: sword_ear_arrest
+  pair: John↔Luke
+  john_refs: John 18:10-11
+  synoptic_refs: Luke 22:49-51
+  shared_features: *id009
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 3
+    max_score: 0.1694
+    mean_score: 0.037
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 18:10
+      synoptic_ref: Luke 22:50
+      score: 0.1694
+      max_exact_run: αρχιερεωσ δουλον
+  john_transformation_if_synoptics_prior: John names Peter and Malchus and adds cup theology.
+  synoptic_transformation_if_john_prior: Synoptics anonymize names and modify theological response; Luke adds healing.
+  common_tradition_assessment: Specific detail cluster makes pure independence unlikely.
+  provisional_best_explanation: shared passion arrest tradition; direct direction unresolved
+- anchor_id: garment_division_scripture
+  pair: John↔Mark
+  john_refs: John 19:23-24
+  synoptic_refs: Mark 15:24
+  shared_features: &id010
+  - division of garments
+  - casting lots
+  - scriptural frame
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 1
+    max_score: 0.0337
+    mean_score: 0.0254
+    max_exact_run_len: 0
+    best_pair:
+      john_ref: John 19:24
+      synoptic_ref: Mark 15:24
+      score: 0.0337
+      max_exact_run: ''
+  john_transformation_if_synoptics_prior: John splits garments/tunic and makes scriptural fulfillment explicit.
+  synoptic_transformation_if_john_prior: Synoptics compress to lot-casting formula.
+  common_tradition_assessment: Strong passion tradition plus Psalm 22 scripturalization.
+  provisional_best_explanation: shared passion-scripture tradition; John’s elaboration likely secondary at this local level
+- anchor_id: garment_division_scripture
+  pair: John↔Matt
+  john_refs: John 19:23-24
+  synoptic_refs: Matt 27:35
+  shared_features: *id010
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 1
+    max_score: 0.2096
+    mean_score: 0.1149
+    max_exact_run_len: 2
+    best_pair:
+      john_ref: John 19:24
+      synoptic_ref: Matt 27:35
+      score: 0.2096
+      max_exact_run: διεμερισαντο ιματια
+  john_transformation_if_synoptics_prior: John splits garments/tunic and makes scriptural fulfillment explicit.
+  synoptic_transformation_if_john_prior: Synoptics compress to lot-casting formula.
+  common_tradition_assessment: Strong passion tradition plus Psalm 22 scripturalization.
+  provisional_best_explanation: shared passion-scripture tradition; John’s elaboration likely secondary at this local level
+- anchor_id: garment_division_scripture
+  pair: John↔Luke
+  john_refs: John 19:23-24
+  synoptic_refs: Luke 23:34
+  shared_features: *id010
+  metrics_from_verse_matrix:
+    john_ref_count: 2
+    synoptic_ref_count: 1
+    max_score: 0.0383
+    mean_score: 0.0274
+    max_exact_run_len: 0
+    best_pair:
+      john_ref: John 19:24
+      synoptic_ref: Luke 23:34
+      score: 0.0383
+      max_exact_run: ''
+  john_transformation_if_synoptics_prior: John splits garments/tunic and makes scriptural fulfillment explicit.
+  synoptic_transformation_if_john_prior: Synoptics compress to lot-casting formula.
+  common_tradition_assessment: Strong passion tradition plus Psalm 22 scripturalization.
+  provisional_best_explanation: shared passion-scripture tradition; John’s elaboration likely secondary at this local level

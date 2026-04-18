@@ -1,0 +1,80 @@
+direct_pairwise_models:
+- matthew_used_mark
+- mark_used_matthew
+- luke_used_mark
+- mark_used_luke
+- matthew_used_luke
+- luke_used_matthew
+- john_used_mark
+- john_used_matthew
+- john_used_luke
+- mark_used_john
+- matthew_used_john
+- luke_used_john
+key_additional_synoptic_system_models:
+  two_source_or_mark_plus_q_like:
+    assumptions:
+    - Matthew used Mark or Mark-like source
+    - Luke used Mark or Mark-like source
+    - Matthew and Luke share sayings/tradition material not derived from Mark
+    must_explain:
+    - Strong Mark–Matthew and Mark–Luke narrative chains
+    - Matthew–Luke double tradition with weak monotonic order
+    - Minor agreements and non-Markan shared sayings
+    contrary_evidence:
+    - Q-like layer is not proven as one document
+    - Mark–Luke alone needs order-retention penalty against shared tradition
+    - Matthew–Luke direct-use hypotheses remain possible locally
+    best_response: Treat Q as a shared sayings/tradition layer unless discrete-document evidence is independently strengthened.
+  farrer_or_luke_uses_matthew_plus_mark:
+    assumptions:
+    - Matthew used Mark
+    - Luke used Mark
+    - Luke also used Matthew
+    must_explain:
+    - Luke’s redistribution of Matthean discourse material
+    - Luke’s omission/reworking of Matthean fulfillment and infancy material
+    - Double-tradition agreement without Q
+    contrary_evidence:
+    - Masked Matthew–Luke direct-use burden not lower than shared tradition
+    - Displaced sayings often look tradition-like
+    - Some Lukan order/material does not naturally follow Matthew
+    best_response: Argue that Luke had a deliberate editorial program of dispersing and de-Mattheanizing sayings.
+  griesbach_two_gospel_mark_uses_matthew_and_luke:
+    assumptions:
+    - Matthew prior
+    - Luke used Matthew
+    - Mark used Matthew and Luke
+    must_explain:
+    - Mark’s omission of both Matthean and Lukan infancy/teaching material
+    - Mark’s rougher/vivid style as a deliberate epitome
+    - Mark’s preservation of triple-tradition order
+    contrary_evidence:
+    - Mark–Matthew and Mark–Luke direct-use burdens favor Mark-prior over reverse among direct models
+    - Mark-like source best explains shared narrative chain
+    - Cumulative omission burden is high
+    best_response: Treat Mark as a deliberate abridging conflation/epitome focused on action narrative.
+  proto_mark_or_common_narrative_source:
+    assumptions:
+    - Matthew, Mark, and Luke draw on a Mark-like narrative source not identical with canonical Mark
+    must_explain:
+    - Close Mark–Matthew/Mark–Luke order and wording
+    - Places where canonical Mark is not simplest direct source
+    - Relationship of canonical Mark to the source
+    contrary_evidence:
+    - Existing Mark itself fits much of the narrative-source role
+    - Requires a lost source without direct manuscript evidence
+    - May under-explain Mark’s distinctive features
+    best_response: Use where extant Mark-specific direction is strained but Mark-like narrative sequence remains strong.
+  john_shared_anchor_tradition:
+    assumptions:
+    - John shares passion/sign/anchor traditions with Synoptics without requiring direct Gospel-to-Gospel copying
+    must_explain:
+    - Shared anchor details such as temple action, feeding, anointing, passion/arrest/denial/garments
+    - Low lexical continuity and weak continuous order
+    - Johannine theological reframing
+    contrary_evidence:
+    - Some anchors are too specific for pure independent convergence
+    - Direct local use may still occur
+    - Anchor traditions may include written sources
+    best_response: Use anchor-level judgments rather than global John-used-X claims.

@@ -1,0 +1,176 @@
+status: data-analysis patch authoritative-number reconciliation
+date: '2026-04-18'
+rule: Use rerun/patch artifacts for headline numbers when available; older package numbers remain prior-package comparanda.
+units:
+  Mark_Matthew:
+    headline_source: synopsis_repro_patch_20260418/reruns/mark_matthew_rerun_robust/data/16_global_summary.yaml
+    primary_pairs: 386
+    loose_blocks: 27
+    tight_blocks: 50
+    secondary_echoes: 22
+    directional_burden_totals:
+      mark_prior_Matt_uses_Mark: 774.87
+      matt_prior_Mark_uses_Matt: 788.66
+  Mark_Luke:
+    headline_source: synopsis_high_priority_missing_20260418/data/19_mark_luke_global_summary.yaml
+    primary_pairs: 183
+    loose_blocks: 35
+    tight_blocks: 76
+    secondary_echoes_score_ge_0_22: 140
+    directional_burden_totals_original:
+      Mark_prior_Luke_uses_Mark_or_Mark_like_source: 254.6466
+      Luke_prior_Mark_uses_Luke_or_Luke_like_source: 303.1966
+      shared_narrative_or_oral_tradition_without_direct_use: 164.1468
+  Matthew_Luke_full:
+    headline_source: matt_luke_analysis/data/16_global_summary.yaml
+    primary_pairs: 233
+    loose_blocks: 32
+    tight_blocks: 66
+    secondary_echoes: 1033
+  Matthew_Luke_masked_double_tradition:
+    headline_source: synopsis_repro_patch_20260418/reruns/matt_luke_double_masked_rerun_robust/data/16_global_summary.yaml
+    default_mask_regime: medium
+    primary_pairs_default_medium: 64
+    loose_blocks_default_medium: 24
+    tight_blocks_default_medium: 30
+    secondary_echoes_default_medium: 54
+    mask_regimes:
+      strict: 0.4
+      medium: 0.355
+      broad: 0.325
+  John_Synoptic_pairwise:
+    headline_source: synopsis_high_priority_missing_20260418/data/38_john_synoptic_pairwise_global_summary.yaml
+    pair_summaries:
+    - pair: John↔Mark
+      method_class: anchor_plus_low_verbatim_pairwise
+      john_verses: 878
+      comparison_verses: 661
+      verse_matrix_rows: 580358
+      candidate_pairs_score_ge_0_25: 33
+      candidate_pairs_score_ge_0_35: 7
+      exact_run_pairs_ge_4: 5
+      anchors_registered: 10
+      anchors_with_local_matrix_signal: 4
+      top_pair:
+        john_ref: John 12:8
+        synoptic_ref: Mark 14:7
+        score: 0.5195
+        max_exact_run_len: 3
+        max_exact_run: εχετε μεθ εαυτων
+        shared_content_tokens: εαυτων εμε εχετε μεθ παντοτε πτωχουσ τουσ
+        evidence_value: local lexical/saying overlap; inspect in context before inferring direct dependence
+      burden_ledger:
+        John_uses_Mark_or_Mark_like_source:
+          burden_score: 11.617
+          must_explain:
+          - why John radically reorders/reframes the material
+          - why continuous lexical/order alignment is weak
+          - why a few exact local agreements survive
+        Mark_uses_John_or_John_like_source:
+          burden_score: 11.171
+          must_explain:
+          - why the Synoptic narrative would simplify or relocate Johannine theological framing
+          - why John-like discourse disappears from Synoptic context
+        shared_passion_sign_or_sayings_tradition:
+          burden_score: 7.6
+          must_explain:
+          - close local agreements and distinctive detail clusters without direct Gospel-to-Gospel use
+          - why anchor episodes cluster in passion/sign material
+        independent_convergence:
+          burden_score: 30.53
+          must_explain:
+          - too many shared anchors and distinctive detail clusters as coincidence
+      interpretive_reading: Pair should be read by anchor and local case, not as a continuous chain; weak global alignment
+        does not negate shared tradition.
+    - pair: John↔Matthew
+      method_class: anchor_plus_low_verbatim_pairwise
+      john_verses: 878
+      comparison_verses: 1068
+      verse_matrix_rows: 937704
+      candidate_pairs_score_ge_0_25: 33
+      candidate_pairs_score_ge_0_35: 10
+      exact_run_pairs_ge_4: 5
+      anchors_registered: 10
+      anchors_with_local_matrix_signal: 4
+      top_pair:
+        john_ref: John 12:8
+        synoptic_ref: Matt 26:11
+        score: 0.8571
+        max_exact_run_len: 6
+        max_exact_run: εχετε μεθ εαυτων εμε παντοτε εχετε
+        shared_content_tokens: εαυτων εμε εχετε μεθ παντοτε πτωχουσ τουσ
+        evidence_value: local lexical/saying overlap; inspect in context before inferring direct dependence
+      burden_ledger:
+        John_uses_Matthew_or_Matthew_like_source:
+          burden_score: 11.617
+          must_explain:
+          - why John radically reorders/reframes the material
+          - why continuous lexical/order alignment is weak
+          - why a few exact local agreements survive
+        Matthew_uses_John_or_John_like_source:
+          burden_score: 11.171
+          must_explain:
+          - why the Synoptic narrative would simplify or relocate Johannine theological framing
+          - why John-like discourse disappears from Synoptic context
+        shared_passion_sign_or_sayings_tradition:
+          burden_score: 7.6
+          must_explain:
+          - close local agreements and distinctive detail clusters without direct Gospel-to-Gospel use
+          - why anchor episodes cluster in passion/sign material
+        independent_convergence:
+          burden_score: 30.53
+          must_explain:
+          - too many shared anchors and distinctive detail clusters as coincidence
+      interpretive_reading: Pair should be read by anchor and local case, not as a continuous chain; weak global alignment
+        does not negate shared tradition.
+    - pair: John↔Luke
+      method_class: anchor_plus_low_verbatim_pairwise
+      john_verses: 878
+      comparison_verses: 1149
+      verse_matrix_rows: 1008822
+      candidate_pairs_score_ge_0_25: 34
+      candidate_pairs_score_ge_0_35: 3
+      exact_run_pairs_ge_4: 3
+      anchors_registered: 9
+      anchors_with_local_matrix_signal: 1
+      top_pair:
+        john_ref: John 8:1
+        synoptic_ref: Luke 22:39
+        score: 0.4476
+        max_exact_run_len: 3
+        max_exact_run: εισ οροσ ελαιων
+        shared_content_tokens: εισ ελαιων επορευθη οροσ
+        evidence_value: local lexical/saying overlap; inspect in context before inferring direct dependence
+      burden_ledger:
+        John_uses_Luke_or_Luke_like_source:
+          burden_score: 14.555
+          must_explain:
+          - why John radically reorders/reframes the material
+          - why continuous lexical/order alignment is weak
+          - why a few exact local agreements survive
+        Luke_uses_John_or_John_like_source:
+          burden_score: 13.733
+          must_explain:
+          - why the Synoptic narrative would simplify or relocate Johannine theological framing
+          - why John-like discourse disappears from Synoptic context
+        shared_passion_sign_or_sayings_tradition:
+          burden_score: 6.38
+          must_explain:
+          - close local agreements and distinctive detail clusters without direct Gospel-to-Gospel use
+          - why anchor episodes cluster in passion/sign material
+        independent_convergence:
+          burden_score: 25.08
+          must_explain:
+          - too many shared anchors and distinctive detail clusters as coincidence
+      interpretive_reading: Pair should be read by anchor and local case, not as a continuous chain; weak global alignment
+        does not negate shared tradition.
+  Thomas:
+    headline_source: synopsis_high_priority_missing_20260418/data/50_thomas_gospel_logion_matrix.csv
+    total_logion_units: 116
+    logia_with_curated_canonical_parallels: 46
+    automatic_coptic_greek_scoring: false
+  Epistles_Gospels:
+    headline_source: synopsis_high_priority_missing_20260418/data/62_epistle_gospel_ranked_candidate_cases_top500.csv
+    top500_rows: 500
+    targeted_case_rows: 10
+    candidate_rows_prior_layer: 12036

@@ -1,0 +1,378 @@
+project: Matthew–Luke literary dependence case study
+method_summary:
+  text_base: Faithlife SBLGNT text + apparatus; MorphGNT lemma/morph data
+  pipeline:
+  - negative-space flagging
+  - full verse similarity matrix
+  - 3-verse contextual windows
+  - global monotonic primary chain (conservative backbone)
+  - loose/tight block segmentation
+  - pair-level surface and lemma diffs
+  - variant attachment
+  - directional burden ledger in both directions
+  - secondary-echo recovery for non-monotonic parallels
+  primary_chain_note: Primary chain is intentionally conservative and monotonic. Strong reordered material, especially in
+    the double tradition, is expected to surface in the secondary-echo layer rather than being forced into the backbone.
+global_metrics:
+  matched_pair_count: 233
+  matt_matched_verse_count: 233
+  luke_matched_verse_count: 233
+  matt_total_verse_count: 1068
+  luke_total_verse_count: 1149
+  matt_matched_pct: 0.2182
+  luke_matched_pct: 0.2028
+  loose_block_count: 32
+  tight_block_count: 66
+  secondary_echo_count: 1033
+global_style:
+  matched_matt_tote: 24
+  matched_luke_tote: 4
+  matched_matt_simeron: 0
+  matched_luke_simeron: 1
+  matched_matt_kingdom_god: 1
+  matched_matt_kingdom_heaven: 4
+  matched_luke_kingdom_god: 10
+  matched_luke_kingdom_heaven: 0
+  matched_matt_pleroo: 0
+  matched_luke_pleroo: 1
+  matched_matt_grapho: 6
+  matched_luke_grapho: 7
+  matched_matt_present_indicative_ratio: 0.3638
+  matched_luke_present_indicative_ratio: 0.3023
+variant_global:
+  matt_variant_verses_in_primary_pairs: 147
+  luke_variant_verses_in_primary_pairs: 150
+  matt_variant_notes_in_primary_pairs: 210
+  luke_variant_notes_in_primary_pairs: 235
+pair_score_summary:
+  mean: 0.352441
+  median: 0.29381
+  min: 0.11005
+  max: 1.0
+  ge_0.80: 9
+  ge_0.70: 16
+  ge_0.60: 25
+  ge_0.50: 54
+  lt_0.40: 148
+pair_class_counts:
+  luke_expands: 64
+  reordering: 84
+  matt_expands: 93
+  substitution: 113
+  close_match: 5
+  partial_overlap: 24
+top_matt_only_content_lemmas_in_primary_pairs:
+- - λέγω
+  - 41
+- - Ἰησοῦς
+  - 35
+- - εἰμί
+  - 27
+- - πᾶς
+  - 22
+- - οὗτος
+  - 21
+- - τότε
+  - 21
+- - οὐ
+  - 16
+- - μαθητής
+  - 15
+- - ἄνθρωπος
+  - 14
+- - ὁράω
+  - 13
+- - οὐρανός
+  - 13
+- - υἱός
+  - 12
+- - προσέρχομαι
+  - 12
+- - γίνομαι
+  - 12
+- - τίς
+  - 12
+- - ὄχλος
+  - 9
+- - κύριος
+  - 9
+- - ἐκεῖνος
+  - 9
+- - εἷς
+  - 9
+- - θεός
+  - 8
+- - ἔρχομαι
+  - 8
+- - ἀκούω
+  - 8
+- - μή
+  - 8
+- - ποιέω
+  - 8
+- - ἀρχιερεύς
+  - 7
+- - ἔχω
+  - 6
+- - πολύς
+  - 6
+- - πνεῦμα
+  - 6
+- - δίδωμι
+  - 6
+- - πορεύομαι
+  - 6
+top_luke_only_content_lemmas_in_primary_pairs:
+- - λέγω
+  - 44
+- - εἰμί
+  - 33
+- - οὗτος
+  - 28
+- - γίνομαι
+  - 19
+- - θεός
+  - 18
+- - μή
+  - 16
+- - πᾶς
+  - 13
+- - Ἰησοῦς
+  - 12
+- - ὁράω
+  - 12
+- - τις
+  - 12
+- - τίς
+  - 11
+- - οὐ
+  - 10
+- - οὐδείς
+  - 10
+- - λαός
+  - 9
+- - ποιέω
+  - 9
+- - καί
+  - 9
+- - ἀποκρίνομαι
+  - 9
+- - ἡμέρα
+  - 9
+- - πορεύομαι
+  - 9
+- - ἄνθρωπος
+  - 8
+- - ἀκούω
+  - 8
+- - λόγος
+  - 7
+- - ἕτερος
+  - 7
+- - γυνή
+  - 6
+- - Ἰωάννης
+  - 6
+- - ἐπερωτάω
+  - 6
+- - εὑρίσκω
+  - 6
+- - ἄρχω
+  - 5
+- - ἐκεῖνος
+  - 5
+- - υἱός
+  - 5
+top_lemma_replacement_pairs:
+- - οὐρανός -> θεός
+  - 4
+- - ὁράω -> καί
+  - 3
+- - προσέρχομαι -> δέ
+  - 3
+- - δέ -> Ἰησοῦς
+  - 3
+- - ὁ -> πορεύομαι
+  - 3
+- - ὁ -> οὗτος
+  - 3
+- - λέγω -> καί
+  - 3
+- - ἐπί -> ἐν
+  - 3
+- - τότε -> καί
+  - 3
+- - αὐτός -> οὗτος
+  - 3
+- - ὁράω -> λέγω
+  - 2
+- - ὅς -> σύ
+  - 2
+- - καί -> λέγω
+  - 2
+- - ἐγώ -> σύ
+  - 2
+- - ἕτερος -> ἄλλος
+  - 2
+- - ὁ -> οὐδείς
+  - 2
+- - δέ -> ἕτερος
+  - 2
+- - καί -> ἐπερωτάω
+  - 2
+- - ἀκούω -> οὗτος
+  - 2
+- - πᾶς -> ὁ
+  - 2
+- - εἷς -> τις
+  - 2
+- - ἐάν -> ἄν
+  - 2
+- - δέ -> γίνομαι
+  - 2
+- - σύ -> αὐτός
+  - 2
+- - τότε -> λέγω
+  - 2
+- - σύ -> ὁ
+  - 2
+- - εὐθέως -> παραχρῆμα
+  - 2
+- - ἐκεῖνος -> δέ
+  - 2
+- - λέγω -> ὁ
+  - 2
+- - τίκτω -> λέγω
+  - 1
+- - Ἰησοῦς -> Ἰωάννης
+  - 1
+- - ἰδού -> πρός
+  - 1
+- - ἐν -> Μαριάμ
+  - 1
+- - οὐ -> ἰδού
+  - 1
+- - γινώσκω -> συλλαμβάνω
+  - 1
+- - ἕως -> γαστήρ
+  - 1
+- - δέ -> λέγω
+  - 1
+- - ἀστήρ -> ἄγγελος
+  - 1
+- - χαίρω -> μή
+  - 1
+- - σφόδρα -> ὅστις
+  - 1
+- - οὗτος -> ὡς
+  - 1
+- - γάρ -> γράφω
+  - 1
+- - ὁ -> βίβλος
+  - 1
+- - λέγω -> λόγος
+  - 1
+- - Φαρισαῖος -> ἐκπορεύομαι
+  - 1
+- - καί -> ὄχλος
+  - 1
+- - Σαδδουκαῖος -> βαπτίζω
+  - 1
+- - ἔρχομαι -> ὑπό
+  - 1
+- - δοκέω -> ἄρχω
+  - 1
+- - βαπτίζω -> ἔρχομαι
+  - 1
+top_matt_only_gap_stretches:
+- start_ref: Matt 4:24
+  end_ref: Matt 7:27
+  verse_count: 111
+- start_ref: Matt 24:36
+  end_ref: Matt 26:2
+  verse_count: 64
+- start_ref: Matt 15:11
+  end_ref: Matt 16:13
+  verse_count: 42
+- start_ref: Matt 8:5
+  end_ref: Matt 9:1
+  verse_count: 31
+- start_ref: Matt 12:5
+  end_ref: Matt 12:30
+  verse_count: 26
+- start_ref: Matt 14:21
+  end_ref: Matt 15:9
+  verse_count: 25
+- start_ref: Matt 23:20
+  end_ref: Matt 24:1
+  verse_count: 21
+- start_ref: Matt 1:1
+  end_ref: Matt 1:20
+  verse_count: 20
+- start_ref: Matt 10:25
+  end_ref: Matt 11:1
+  verse_count: 19
+- start_ref: Matt 19:30
+  end_ref: Matt 20:17
+  verse_count: 18
+- start_ref: Matt 10:5
+  end_ref: Matt 10:21
+  verse_count: 17
+- start_ref: Matt 9:18
+  end_ref: Matt 9:33
+  verse_count: 16
+- start_ref: Matt 21:46
+  end_ref: Matt 22:15
+  verse_count: 16
+- start_ref: Matt 2:11
+  end_ref: Matt 3:2
+  verse_count: 15
+- start_ref: Matt 4:8
+  end_ref: Matt 4:22
+  verse_count: 15
+top_luke_only_gap_stretches:
+- start_ref: Luke 9:49
+  end_ref: Luke 15:2
+  verse_count: 241
+- start_ref: Luke 1:32
+  end_ref: Luke 2:9
+  verse_count: 58
+- start_ref: Luke 15:8
+  end_ref: Luke 17:1
+  verse_count: 57
+- start_ref: Luke 2:11
+  end_ref: Luke 3:3
+  verse_count: 45
+- start_ref: Luke 19:1
+  end_ref: Luke 19:28
+  verse_count: 28
+- start_ref: Luke 6:41
+  end_ref: Luke 7:17
+  verse_count: 26
+- start_ref: Luke 4:33
+  end_ref: Luke 5:11
+  verse_count: 23
+- start_ref: Luke 8:22
+  end_ref: Luke 8:44
+  verse_count: 23
+- start_ref: Luke 17:14
+  end_ref: Luke 17:33
+  verse_count: 20
+- start_ref: Luke 22:19
+  end_ref: Luke 22:38
+  verse_count: 20
+- start_ref: Luke 24:29
+  end_ref: Luke 24:46
+  verse_count: 18
+- start_ref: Luke 6:23
+  end_ref: Luke 6:39
+  verse_count: 17
+- start_ref: Luke 8:46
+  end_ref: Luke 9:6
+  verse_count: 17
+- start_ref: Luke 3:23
+  end_ref: Luke 3:38
+  verse_count: 16
+- start_ref: Luke 4:16
+  end_ref: Luke 4:31
+  verse_count: 16

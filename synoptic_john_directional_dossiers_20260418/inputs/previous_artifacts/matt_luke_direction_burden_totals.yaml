@@ -1,0 +1,34 @@
+matt_prior:
+  operation_type_counts:
+    expansion: 15
+    lexical_paraphrase: 24
+    reordering_or_redistribution: 22
+    matthean_diction_reduced: 15
+    compression: 15
+    scriptural_framing_reduced: 1
+  numeric_totals:
+    transformation: 302.113
+    residual: 110.218
+    coincidence: 15.349
+    overall: 142.559
+  overall_strain_block_counts:
+    low: 16
+    medium: 5
+    high: 11
+luke_prior:
+  operation_type_counts:
+    expansion: 15
+    lexical_paraphrase: 24
+    reordering_or_redistribution: 22
+    compression: 15
+    lukan_diction_reworked: 9
+    scripturalization_added: 1
+  numeric_totals:
+    transformation: 100.863
+    residual: 110.218
+    coincidence: 15.349
+    overall: 75.477
+  overall_strain_block_counts:
+    low: 14
+    medium: 14
+    high: 4

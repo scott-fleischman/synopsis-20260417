@@ -1,0 +1,48 @@
+directional_conclusions_ranked:
+- rank: 1
+  claim: Matthew used Mark or a Mark-like written narrative source.
+  supported_directions:
+  - matthew_used_mark
+  confidence: high
+  limitation: Mark is likely Mark-like source, not necessarily identical to our printed text.
+- rank: 2
+  claim: Luke used Mark or a Mark-like written narrative source, when shared-tradition order-retention burden is charged.
+  supported_directions:
+  - luke_used_mark
+  confidence: medium-high
+  limitation: Mark–Luke alone is less decisive than Mark–Matthew; shared tradition needs explicit order-retention penalties.
+- rank: 3
+  claim: Matthew–Luke double tradition is better modeled as a shared sayings/tradition layer than a simple direct direction.
+  supported_directions:
+  - shared_matt_luke_sayings_tradition
+  confidence: medium-high
+  limitation: Does not by itself prove one discrete Q document.
+- rank: 4
+  claim: John shares anchor traditions with Synoptics but direct use of Mark/Matthew/Luke is not currently lowest-burden.
+  supported_directions:
+  - john_used_mark
+  - john_used_matthew
+  - john_used_luke
+  confidence: medium
+  limitation: Local direct use remains possible anchor by anchor.
+- rank: 5
+  claim: Reverse directions Mark used Matthew/Luke and Synoptics used John are completeness hypotheses with higher burden.
+  supported_directions:
+  - mark_used_matthew
+  - mark_used_luke
+  - mark_used_john
+  - matthew_used_john
+  - luke_used_john
+  confidence: medium as negative assessment
+  limitation: Local cases can still be argued separately.
+directions_not_in_user_list_but_key_to_include:
+- mark_used_luke
+- mark_used_john
+- matthew_used_john
+- luke_used_john
+- shared_matt_luke_sayings_tradition
+- shared_john_synoptic_anchor_tradition
+- proto_mark_or_common_narrative_source
+- two_source_or_mark_plus_q_like
+- farrer_or_luke_uses_matthew_plus_mark
+- griesbach_two_gospel_mark_uses_matthew_and_luke

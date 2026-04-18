@@ -1,0 +1,41 @@
+files:
+  00_scope_and_missing_data_map.yaml: States what was missing and what this patch adds.
+  01_direction_hypotheses_registry.yaml/csv: Defines every directional hypothesis, including source/target, required explanations,
+    contrary evidence, and best response model.
+  03_direction_burden_summary.csv: Collects comparable burden scores from prior and new analyses by direction.
+  04_system_hypothesis_space.yaml: Defines broader Synoptic system models beyond pairwise directions.
+  10_synoptic_pericope_directional_change_ledger.csv: Main block/pericope-level table for Mark↔Matthew, Mark↔Luke, and Matthew↔Luke
+    in both directions.
+  11/12/13_*_directional_pericope_ledger.csv: Pair-specific slices of the main pericope ledger.
+  14_directional_pericope_explanation_dossiers.yaml: YAML dossiers grouped by direction, with required explanations and response
+    models for each block.
+  15_directional_model_requirements_by_pericope.csv: Flattened one-row-per-required-explanation table.
+  16_john_synoptic_directional_anchor_ledger.csv: John↔Synoptic anchor-level directional ledger, including reverse directions.
+  17_john_synoptic_directional_anchor_dossiers.yaml: YAML dossiers for John and reverse Synoptic/Johannine directions.
+  20_material_omission_addition_catalog_by_direction.csv: Gap/interval catalog showing what material is added, omitted, or
+    left unexplained under each direction.
+  21_top_major_gap_and_material_burdens.csv: Largest material-gap burdens.
+  22_major_material_burdens_by_direction.yaml: YAML version of major gap burdens.
+  30_reordering_and_displacement_catalog.csv: Block and echo-level reordering/displacement obligations.
+  31_top_reordering_displacement_cases.csv: Top displacement/reordering cases.
+  32_order_preservation_and_displacement_summary.csv: Summary of order/echo behavior by pair.
+  50_primary_pair_change_diffs_all_directions.csv.gz: Full primary-pair source/target-oriented change table for all directions.
+  51_top_primary_pair_change_cases.csv: Selected high-signal pair-level cases.
+  52_primary_pair_change_summary_by_direction.csv: Aggregated pair-level metrics by direction.
+  60_contrary_evidence_and_response_models_by_direction.yaml: Main answer to what each direction must explain against contrary
+    evidence.
+  61_support_contra_evidence_matrix.csv: Flat matrix of supporting/contrary indicators by direction.
+  62_directional_conclusion_ranking_and_missing_key_directions.yaml: Current ranked conclusions plus additional key directions
+    beyond the user list.
+key_field_definitions:
+  direction_id: Machine-readable name for a directional hypothesis.
+  source: Text assumed to be used or transformed.
+  target: Text assumed to use or transform the source.
+  source_range/target_range: Pericope/block ranges under the directional assumption.
+  required_explanations: Specific operations the model must explain for a block, anchor, or pair.
+  contrary_evidence: What counts against that direction in the current data.
+  plausible_response_model: Best redactional/tradition-history response available under that direction.
+  burden_score: Heuristic burden value from the underlying ledgers; lower is better, not a probability.
+  contrary_evidence_value: Absolute asymmetry in gap/material counts; larger values are higher explanatory burden.
+interpretive_warning: These are burden-audit datasets, not posterior probabilities. They make explanatory obligations explicit
+  so specialists can inspect, contest, or revise them.

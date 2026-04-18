@@ -1,0 +1,1019 @@
+john_used_luke:
+  anchor_count: 9
+  anchors:
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Luke
+    target: John
+    source_refs: Luke 3:21-22
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.415
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.835
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Luke 3:22", "score": 0.2142, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: temple_action_relocated
+    source: Luke
+    target: John
+    source_refs: Luke 19:45-48
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.232
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.018
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Luke 19:45", "score": 0.1613, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: prophet_no_honor
+    source: Luke
+    target: John
+    source_refs: Luke 4:24
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.577
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 6.173
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Luke 4:24", "score": 0.0705, "max_exact_run": ""}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: feeding_5000
+    source: Luke
+    target: John
+    source_refs: Luke 9:10-17
+    target_refs: John 6:1-15
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.912
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.838
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Luke 9:16", "score": 0.1314, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew and
+      Passover.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: anointing_bethany
+    source: Luke
+    target: John
+    source_refs: Luke 7:36-50
+    target_refs: John 12:1-8
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.286
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 12.664
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:3", "synoptic_ref": "Luke 7:46", "score": 0.2024, "max_exact_run": "ηλειψεν τουσ ποδασ"}'
+    required_explanation_if_direction: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: triumphal_entry
+    source: Luke
+    target: John
+    source_refs: Luke 19:28-40
+    target_refs: John 12:12-19
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.587
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 11.913
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:13", "synoptic_ref": "Luke 19:38", "score": 0.1855, "max_exact_run": "ευλογημενοσ ερχομενοσ"}'
+    required_explanation_if_direction: John compresses preparation and explicitly adds interpretive memory after glorification.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: peter_denial
+    source: Luke
+    target: John
+    source_refs: Luke 22:54-62
+    target_refs: John 18:15-27
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.135
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 9.115
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Luke 22:60", "score": 0.2025, "max_exact_run": "πετροσ"}'
+    required_explanation_if_direction: John interweaves denial with trial scenes and adds beloved-disciple access.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: sword_ear_arrest
+    source: Luke
+    target: John
+    source_refs: Luke 22:49-51
+    target_refs: John 18:10-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.684
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.066
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Luke 22:50", "score": 0.1694, "max_exact_run": "αρχιερεωσ δουλον"}'
+    required_explanation_if_direction: John names Peter and Malchus and adds cup theology.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_luke
+    pair: John↔Luke
+    anchor_id: garment_division_scripture
+    source: Luke
+    target: John
+    source_refs: Luke 23:34
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.77
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.98
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Luke 23:34", "score": 0.0383, "max_exact_run": ""}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+john_used_mark:
+  anchor_count: 10
+  anchors:
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Mark
+    target: John
+    source_refs: Mark 1:9-11
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.526
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.724
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Mark 1:10", "score": 0.1957, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: temple_action_relocated
+    source: Mark
+    target: John
+    source_refs: Mark 11:15-19
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.265
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 10.985
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Mark 11:15", "score": 0.1558, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: prophet_no_honor
+    source: Mark
+    target: John
+    source_refs: Mark 6:4
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.362
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.388
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Mark 6:4", "score": 0.1647, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: feeding_5000
+    source: Mark
+    target: John
+    source_refs: Mark 6:30-44
+    target_refs: John 6:1-15
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.723
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.027
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:11", "synoptic_ref": "Mark 6:44", "score": 0.1629, "max_exact_run": "τουσ αρτουσ"}'
+    required_explanation_if_direction: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew and
+      Passover.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: walking_on_water
+    source: Mark
+    target: John
+    source_refs: Mark 6:45-52
+    target_refs: John 6:16-21
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.7
+    shared_tradition_burden: 2.05
+    independent_convergence_burden: 13.115
+    specific_features: disciples at sea; Jesus walks on sea; fear; arrival/boat motif
+    best_pair: '{"john_ref": "John 6:20", "synoptic_ref": "Mark 6:50", "score": 0.3858, "max_exact_run": "ειμι φοβεισθε"}'
+    required_explanation_if_direction: John drastically compresses the scene and drops Peter/Matthean expansion.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: anointing_bethany
+    source: Mark
+    target: John
+    source_refs: Mark 14:3-9
+    target_refs: John 12:1-8
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.5
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 14.567
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:8", "synoptic_ref": "Mark 14:7", "score": 0.5195, "max_exact_run": "εχετε μεθ εαυτων"}'
+    required_explanation_if_direction: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: triumphal_entry
+    source: Mark
+    target: John
+    source_refs: Mark 11:1-10
+    target_refs: John 12:12-19
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.5
+    shared_tradition_burden: 3.7
+    independent_convergence_burden: 14.612
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:13", "synoptic_ref": "Mark 11:9", "score": 0.3353, "max_exact_run": "ωσαννα ευλογημενοσ
+      ερχομενοσ ονοματι"}'
+    required_explanation_if_direction: John compresses preparation and explicitly adds interpretive memory after glorification.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: peter_denial
+    source: Mark
+    target: John
+    source_refs: Mark 14:66-72
+    target_refs: John 18:15-27
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.129
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 10.121
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Mark 14:68", "score": 0.2619, "max_exact_run": "αλεκτωρ εφωνησεν"}'
+    required_explanation_if_direction: John interweaves denial with trial scenes and adds beloved-disciple access.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: sword_ear_arrest
+    source: Mark
+    target: John
+    source_refs: Mark 14:47
+    target_refs: John 18:10-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.238
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.512
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Mark 14:47", "score": 0.1854, "max_exact_run": "μαχαιραν"}'
+    required_explanation_if_direction: John names Peter and Malchus and adds cup theology.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_mark
+    pair: John↔Mark
+    anchor_id: garment_division_scripture
+    source: Mark
+    target: John
+    source_refs: Mark 15:24
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.798
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.952
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Mark 15:24", "score": 0.0337, "max_exact_run": ""}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+john_used_matthew:
+  anchor_count: 10
+  anchors:
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: john_baptist_witness_spirit_descends
+    source: Matthew
+    target: John
+    source_refs: Matt 3:13-17
+    target_refs: John 1:29-34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.601
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.649
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Matt 3:16", "score": 0.1831, "max_exact_run": "πνευμα καταβαινον"}'
+    required_explanation_if_direction: John converts baptism narrative into testimonial recognition; baptism action itself
+      is displaced/offstage.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: temple_action_relocated
+    source: Matthew
+    target: John
+    source_refs: Matt 21:12-17
+    target_refs: John 2:13-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.19
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.06
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:15", "synoptic_ref": "Matt 21:12", "score": 0.1684, "max_exact_run": "τασ τραπεζασ"}'
+    required_explanation_if_direction: John relocates the temple action to the beginning and makes it programmatic for Jesus’
+      identity/death/resurrection.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: prophet_no_honor
+    source: Matthew
+    target: John
+    source_refs: Matt 13:57
+    target_refs: John 4:44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.361
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.389
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Matt 13:57", "score": 0.1648, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: John abstracts a Nazareth rejection saying into a transitional travel comment.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: feeding_5000
+    source: Matthew
+    target: John
+    source_refs: Matt 14:13-21
+    target_refs: John 6:1-15
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.388
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.362
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Matt 14:17", "score": 0.2187, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: John develops discourse theology from the sign and adds/foregrounds Philip/Andrew and
+      Passover.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: walking_on_water
+    source: Matthew
+    target: John
+    source_refs: Matt 14:22-33
+    target_refs: John 6:16-21
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.7
+    shared_tradition_burden: 2.05
+    independent_convergence_burden: 13.547
+    specific_features: disciples at sea; Jesus walks on sea; fear; arrival/boat motif
+    best_pair: '{"john_ref": "John 6:20", "synoptic_ref": "Matt 14:27", "score": 0.4579, "max_exact_run": "ειμι φοβεισθε"}'
+    required_explanation_if_direction: John drastically compresses the scene and drops Peter/Matthean expansion.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: anointing_bethany
+    source: Matthew
+    target: John
+    source_refs: Matt 26:6-13
+    target_refs: John 12:1-8
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.5
+    shared_tradition_burden: 4.35
+    independent_convergence_burden: 17.9
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:8", "synoptic_ref": "Matt 26:11", "score": 0.8571, "max_exact_run": "εχετε μεθ εαυτων
+      εμε παντοτε εχετε"}'
+    required_explanation_if_direction: John names Mary/Judas and integrates Lazarus context; chronologically near passion.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: triumphal_entry
+    source: Matthew
+    target: John
+    source_refs: Matt 21:1-11
+    target_refs: John 12:12-19
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.5
+    shared_tradition_burden: 3.7
+    independent_convergence_burden: 14.716
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:15", "synoptic_ref": "Matt 21:5", "score": 0.3527, "max_exact_run": "σιων ιδου βασιλευσ
+      ερχεται"}'
+    required_explanation_if_direction: John compresses preparation and explicitly adds interpretive memory after glorification.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: peter_denial
+    source: Matthew
+    target: John
+    source_refs: Matt 26:69-75
+    target_refs: John 18:15-27
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 4.5
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 11.48
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Matt 26:74", "score": 0.38, "max_exact_run": "ευθεωσ αλεκτωρ εφωνησεν"}'
+    required_explanation_if_direction: John interweaves denial with trial scenes and adds beloved-disciple access.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: sword_ear_arrest
+    source: Matthew
+    target: John
+    source_refs: Matt 26:51-52
+    target_refs: John 18:10-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.68
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.07
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:11", "synoptic_ref": "Matt 26:52", "score": 0.17, "max_exact_run": "μαχαιραν εισ"}'
+    required_explanation_if_direction: John names Peter and Malchus and adds cup theology.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+  - direction_id: john_used_matthew
+    pair: John↔Matt
+    anchor_id: garment_division_scripture
+    source: Matthew
+    target: John
+    source_refs: Matt 27:35
+    target_refs: John 19:23-24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.442
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.308
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Matt 27:35", "score": 0.2096, "max_exact_run": "διεμερισαντο ιματια"}'
+    required_explanation_if_direction: John splits garments/tunic and makes scriptural fulfillment explicit.
+    contrary_evidence: Shared anchor tradition is lower burden; lexical/order signal is weak or local rather than continuous.
+    plausible_response_model: Johannine theological transformation of selected Synoptic/Synoptic-like anchor material.
+luke_used_john:
+  anchor_count: 9
+  anchors:
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: john_baptist_witness_spirit_descends
+    source: John
+    target: Luke
+    source_refs: John 1:29-34
+    target_refs: Luke 3:21-22
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.015
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.835
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Luke 3:22", "score": 0.2142, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: temple_action_relocated
+    source: John
+    target: Luke
+    source_refs: John 2:13-22
+    target_refs: Luke 19:45-48
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.332
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.018
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Luke 19:45", "score": 0.1613, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: Synoptics relocate the action to final week as a passion trigger.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: prophet_no_honor
+    source: John
+    target: Luke
+    source_refs: John 4:44
+    target_refs: Luke 4:24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.177
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 6.173
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Luke 4:24", "score": 0.0705, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: feeding_5000
+    source: John
+    target: Luke
+    source_refs: John 6:1-15
+    target_refs: Luke 9:10-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.112
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.838
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Luke 9:16", "score": 0.1314, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: anointing_bethany
+    source: John
+    target: Luke
+    source_refs: John 12:1-8
+    target_refs: Luke 7:36-50
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.886
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 12.664
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:3", "synoptic_ref": "Luke 7:46", "score": 0.2024, "max_exact_run": "ηλειψεν τουσ ποδασ"}'
+    required_explanation_if_direction: Mark/Matthew anonymize named characters and strip Lazarus setting.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: triumphal_entry
+    source: John
+    target: Luke
+    source_refs: John 12:12-19
+    target_refs: Luke 19:28-40
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.187
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 11.913
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:13", "synoptic_ref": "Luke 19:38", "score": 0.1855, "max_exact_run": "ευλογημενοσ ερχομενοσ"}'
+    required_explanation_if_direction: Synoptics expand logistics of colt acquisition and public acclamation.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: peter_denial
+    source: John
+    target: Luke
+    source_refs: John 18:15-27
+    target_refs: Luke 22:54-62
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.735
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 9.115
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Luke 22:60", "score": 0.2025, "max_exact_run": "πετροσ"}'
+    required_explanation_if_direction: Synoptics make a compact escalating denial narrative.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Luke
+    source_refs: John 18:10-11
+    target_refs: Luke 22:49-51
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.884
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.066
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Luke 22:50", "score": 0.1694, "max_exact_run": "αρχιερεωσ δουλον"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: luke_used_john
+    pair: John↔Luke
+    anchor_id: garment_division_scripture
+    source: John
+    target: Luke
+    source_refs: John 19:23-24
+    target_refs: Luke 23:34
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.37
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.98
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Luke 23:34", "score": 0.0383, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics compress to lot-casting formula.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+mark_used_john:
+  anchor_count: 10
+  anchors:
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: john_baptist_witness_spirit_descends
+    source: John
+    target: Mark
+    source_refs: John 1:29-34
+    target_refs: Mark 1:9-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.126
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.724
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Mark 1:10", "score": 0.1957, "max_exact_run": "ωσ περιστεραν"}'
+    required_explanation_if_direction: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: temple_action_relocated
+    source: John
+    target: Mark
+    source_refs: John 2:13-22
+    target_refs: Mark 11:15-19
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.365
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 10.985
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:14", "synoptic_ref": "Mark 11:15", "score": 0.1558, "max_exact_run": "τουσ πωλουντασ"}'
+    required_explanation_if_direction: Synoptics relocate the action to final week as a passion trigger.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: prophet_no_honor
+    source: John
+    target: Mark
+    source_refs: John 4:44
+    target_refs: Mark 6:4
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.962
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.388
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Mark 6:4", "score": 0.1647, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: feeding_5000
+    source: John
+    target: Mark
+    source_refs: John 6:1-15
+    target_refs: Mark 6:30-44
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.923
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.027
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:11", "synoptic_ref": "Mark 6:44", "score": 0.1629, "max_exact_run": "τουσ αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: walking_on_water
+    source: John
+    target: Mark
+    source_refs: John 6:16-21
+    target_refs: Mark 6:45-52
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.9
+    shared_tradition_burden: 2.05
+    independent_convergence_burden: 13.115
+    specific_features: disciples at sea; Jesus walks on sea; fear; arrival/boat motif
+    best_pair: '{"john_ref": "John 6:20", "synoptic_ref": "Mark 6:50", "score": 0.3858, "max_exact_run": "ειμι φοβεισθε"}'
+    required_explanation_if_direction: Synoptics expand compressed Johannine episode into a theophany/narrative scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: anointing_bethany
+    source: John
+    target: Mark
+    source_refs: John 12:1-8
+    target_refs: Mark 14:3-9
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.1
+    shared_tradition_burden: 3.05
+    independent_convergence_burden: 14.567
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:8", "synoptic_ref": "Mark 14:7", "score": 0.5195, "max_exact_run": "εχετε μεθ εαυτων"}'
+    required_explanation_if_direction: Mark/Matthew anonymize named characters and strip Lazarus setting.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: triumphal_entry
+    source: John
+    target: Mark
+    source_refs: John 12:12-19
+    target_refs: Mark 11:1-10
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.1
+    shared_tradition_burden: 3.7
+    independent_convergence_burden: 14.612
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:13", "synoptic_ref": "Mark 11:9", "score": 0.3353, "max_exact_run": "ωσαννα ευλογημενοσ
+      ερχομενοσ ονοματι"}'
+    required_explanation_if_direction: Synoptics expand logistics of colt acquisition and public acclamation.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: peter_denial
+    source: John
+    target: Mark
+    source_refs: John 18:15-27
+    target_refs: Mark 14:66-72
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.729
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 10.121
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Mark 14:68", "score": 0.2619, "max_exact_run": "αλεκτωρ εφωνησεν"}'
+    required_explanation_if_direction: Synoptics make a compact escalating denial narrative.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Mark
+    source_refs: John 18:10-11
+    target_refs: Mark 14:47
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 7.438
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 10.512
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:10", "synoptic_ref": "Mark 14:47", "score": 0.1854, "max_exact_run": "μαχαιραν"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: mark_used_john
+    pair: John↔Mark
+    anchor_id: garment_division_scripture
+    source: John
+    target: Mark
+    source_refs: John 19:23-24
+    target_refs: Mark 15:24
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 8.398
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 8.952
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Mark 15:24", "score": 0.0337, "max_exact_run": ""}'
+    required_explanation_if_direction: Synoptics compress to lot-casting formula.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+matthew_used_john:
+  anchor_count: 10
+  anchors:
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: john_baptist_witness_spirit_descends
+    source: John
+    target: Matthew
+    source_refs: John 1:29-34
+    target_refs: Matt 3:13-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.201
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 9.649
+    specific_features: Baptist setting; Spirit descends; Jesus identified by divine sign
+    best_pair: '{"john_ref": "John 1:32", "synoptic_ref": "Matt 3:16", "score": 0.1831, "max_exact_run": "πνευμα καταβαινον"}'
+    required_explanation_if_direction: Synoptics would narrativize John’s testimony into a baptism scene with heavenly voice.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: temple_action_relocated
+    source: John
+    target: Matthew
+    source_refs: John 2:13-22
+    target_refs: Matt 21:12-17
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.29
+    shared_tradition_burden: 3.125
+    independent_convergence_burden: 11.06
+    specific_features: Temple action; sellers/money-changers; challenge around temple authority
+    best_pair: '{"john_ref": "John 2:15", "synoptic_ref": "Matt 21:12", "score": 0.1684, "max_exact_run": "τασ τραπεζασ"}'
+    required_explanation_if_direction: Synoptics relocate the action to final week as a passion trigger.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: prophet_no_honor
+    source: John
+    target: Matthew
+    source_refs: John 4:44
+    target_refs: Matt 13:57
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.961
+    shared_tradition_burden: 1.0
+    independent_convergence_burden: 7.389
+    specific_features: A prophet lacks honor in his own homeland/country
+    best_pair: '{"john_ref": "John 4:44", "synoptic_ref": "Matt 13:57", "score": 0.1648, "max_exact_run": "ιησουσ"}'
+    required_explanation_if_direction: Synoptics localize a general proverb into the Nazareth rejection scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: feeding_5000
+    source: John
+    target: Matthew
+    source_refs: John 6:1-15
+    target_refs: Matt 14:13-21
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.588
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.362
+    specific_features: five thousand; loaves; distribution; leftover baskets; wilderness/sea setting
+    best_pair: '{"john_ref": "John 6:9", "synoptic_ref": "Matt 14:17", "score": 0.2187, "max_exact_run": "πεντε αρτουσ"}'
+    required_explanation_if_direction: Synoptics simplify Johannine sign theology into miracle narration.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: walking_on_water
+    source: John
+    target: Matthew
+    source_refs: John 6:16-21
+    target_refs: Matt 14:22-33
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.9
+    shared_tradition_burden: 2.05
+    independent_convergence_burden: 13.547
+    specific_features: disciples at sea; Jesus walks on sea; fear; arrival/boat motif
+    best_pair: '{"john_ref": "John 6:20", "synoptic_ref": "Matt 14:27", "score": 0.4579, "max_exact_run": "ειμι φοβεισθε"}'
+    required_explanation_if_direction: Synoptics expand compressed Johannine episode into a theophany/narrative scene.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: anointing_bethany
+    source: John
+    target: Matthew
+    source_refs: John 12:1-8
+    target_refs: Matt 26:6-13
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.1
+    shared_tradition_burden: 4.35
+    independent_convergence_burden: 17.9
+    specific_features: woman/anointing; costly ointment; objection over value; Jesus interprets action
+    best_pair: '{"john_ref": "John 12:8", "synoptic_ref": "Matt 26:11", "score": 0.8571, "max_exact_run": "εχετε μεθ εαυτων
+      εμε παντοτε εχετε"}'
+    required_explanation_if_direction: Mark/Matthew anonymize named characters and strip Lazarus setting.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: triumphal_entry
+    source: John
+    target: Matthew
+    source_refs: John 12:12-19
+    target_refs: Matt 21:1-11
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.1
+    shared_tradition_burden: 3.7
+    independent_convergence_burden: 14.716
+    specific_features: entry to Jerusalem; branches/garments; Hosanna/blessed coming one; king motif
+    best_pair: '{"john_ref": "John 12:15", "synoptic_ref": "Matt 21:5", "score": 0.3527, "max_exact_run": "σιων ιδου βασιλευσ
+      ερχεται"}'
+    required_explanation_if_direction: Synoptics expand logistics of colt acquisition and public acclamation.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: peter_denial
+    source: John
+    target: Matthew
+    source_refs: John 18:15-27
+    target_refs: Matt 26:69-75
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 5.1
+    shared_tradition_burden: 2.0
+    independent_convergence_burden: 11.48
+    specific_features: Peter denies three times; courtyard/fire setting; cock crow motif
+    best_pair: '{"john_ref": "John 18:27", "synoptic_ref": "Matt 26:74", "score": 0.38, "max_exact_run": "ευθεωσ αλεκτωρ εφωνησεν"}'
+    required_explanation_if_direction: Synoptics make a compact escalating denial narrative.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: sword_ear_arrest
+    source: John
+    target: Matthew
+    source_refs: John 18:10-11
+    target_refs: Matt 26:51-52
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.88
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.07
+    specific_features: sword blow; servant of high priest; ear cut off
+    best_pair: '{"john_ref": "John 18:11", "synoptic_ref": "Matt 26:52", "score": 0.17, "max_exact_run": "μαχαιραν εισ"}'
+    required_explanation_if_direction: Synoptics anonymize names and modify theological response; Luke adds healing.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.
+  - direction_id: matthew_used_john
+    pair: John↔Matt
+    anchor_id: garment_division_scripture
+    source: John
+    target: Matthew
+    source_refs: John 19:23-24
+    target_refs: Matt 27:35
+    best_current_model: shared_anchor_tradition
+    direct_use_burden: 6.042
+    shared_tradition_burden: 2.525
+    independent_convergence_burden: 11.308
+    specific_features: division of garments; casting lots; scriptural frame
+    best_pair: '{"john_ref": "John 19:24", "synoptic_ref": "Matt 27:35", "score": 0.2096, "max_exact_run": "διεμερισαντο ιματια"}'
+    required_explanation_if_direction: Synoptics compress to lot-casting formula.
+    contrary_evidence: Shared anchor tradition is lower burden; Synoptic target would have to omit or de-Johannize major Johannine
+      theology/discourses.
+    plausible_response_model: Synoptic condensation/narrativization of Johannine-like anchor traditions; currently high-burden
+      and included for completeness.

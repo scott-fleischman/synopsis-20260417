@@ -1,0 +1,339 @@
+- before_block: 1
+  matt_gap:
+    start_ref: Matt 1:1
+    end_ref: Matt 1:20
+    verse_count: 20
+  luke_gap:
+    start_ref: Luke 1:1
+    end_ref: Luke 1:12
+    verse_count: 12
+  interpretation:
+  - Matthew has 8 more gap verses than Luke at this boundary.
+- before_block: 2
+  matt_gap:
+    start_ref: Matt 1:22
+    end_ref: Matt 1:22
+    verse_count: 1
+  luke_gap:
+    start_ref: Luke 1:14
+    end_ref: Luke 1:26
+    verse_count: 13
+  interpretation:
+  - Luke has 12 more gap verses than Matthew at this boundary.
+- before_block: 3
+  matt_gap:
+    start_ref: Matt 2:1
+    end_ref: Matt 2:9
+    verse_count: 9
+  luke_gap:
+    start_ref: Luke 1:32
+    end_ref: Luke 2:9
+    verse_count: 58
+  interpretation:
+  - Luke has 49 more gap verses than Matthew at this boundary.
+- before_block: 4
+  matt_gap:
+    start_ref: Matt 2:11
+    end_ref: Matt 3:2
+    verse_count: 15
+  luke_gap:
+    start_ref: Luke 2:11
+    end_ref: Luke 3:3
+    verse_count: 45
+  interpretation:
+  - Luke has 30 more gap verses than Matthew at this boundary.
+- before_block: 5
+  matt_gap: null
+  luke_gap:
+    start_ref: Luke 3:23
+    end_ref: Luke 3:38
+    verse_count: 16
+  interpretation:
+  - Luke has 16 more gap verses than Matthew at this boundary.
+- before_block: 6
+  matt_gap:
+    start_ref: Matt 4:8
+    end_ref: Matt 4:22
+    verse_count: 15
+  luke_gap:
+    start_ref: Luke 4:13
+    end_ref: Luke 4:14
+    verse_count: 2
+  interpretation:
+  - Matthew has 13 more gap verses than Luke at this boundary.
+- before_block: 7
+  matt_gap:
+    start_ref: Matt 4:24
+    end_ref: Matt 7:27
+    verse_count: 111
+  luke_gap:
+    start_ref: Luke 4:16
+    end_ref: Luke 4:31
+    verse_count: 16
+  interpretation:
+  - Matthew has 95 more gap verses than Luke at this boundary.
+- before_block: 8
+  matt_gap:
+    start_ref: Matt 7:29
+    end_ref: Matt 8:1
+    verse_count: 2
+  luke_gap:
+    start_ref: Luke 4:33
+    end_ref: Luke 5:11
+    verse_count: 23
+  interpretation:
+  - Luke has 21 more gap verses than Matthew at this boundary.
+- before_block: 9
+  matt_gap:
+    start_ref: Matt 8:5
+    end_ref: Matt 9:1
+    verse_count: 31
+  luke_gap:
+    start_ref: Luke 5:15
+    end_ref: Luke 5:19
+    verse_count: 5
+  interpretation:
+  - Matthew has 26 more gap verses than Luke at this boundary.
+- before_block: 10
+  matt_gap:
+    start_ref: Matt 9:18
+    end_ref: Matt 9:33
+    verse_count: 16
+  luke_gap:
+    start_ref: Luke 5:38
+    end_ref: Luke 6:1
+    verse_count: 3
+  interpretation:
+  - Matthew has 13 more gap verses than Luke at this boundary.
+- before_block: 11
+  matt_gap:
+    start_ref: Matt 10:5
+    end_ref: Matt 10:21
+    verse_count: 17
+  luke_gap:
+    start_ref: Luke 6:17
+    end_ref: Luke 6:21
+    verse_count: 5
+  interpretation:
+  - Matthew has 12 more gap verses than Luke at this boundary.
+- before_block: 12
+  matt_gap:
+    start_ref: Matt 10:23
+    end_ref: Matt 10:23
+    verse_count: 1
+  luke_gap:
+    start_ref: Luke 6:23
+    end_ref: Luke 6:39
+    verse_count: 17
+  interpretation:
+  - Luke has 16 more gap verses than Matthew at this boundary.
+- before_block: 13
+  matt_gap:
+    start_ref: Matt 10:25
+    end_ref: Matt 11:1
+    verse_count: 19
+  luke_gap:
+    start_ref: Luke 6:41
+    end_ref: Luke 7:17
+    verse_count: 26
+  interpretation:
+  - Luke has 7 more gap verses than Matthew at this boundary.
+- before_block: 14
+  matt_gap:
+    start_ref: Matt 11:20
+    end_ref: Matt 12:3
+    verse_count: 14
+  luke_gap:
+    start_ref: Luke 7:35
+    end_ref: Luke 7:35
+    verse_count: 1
+  interpretation:
+  - Matthew has 13 more gap verses than Luke at this boundary.
+- before_block: 15
+  matt_gap:
+    start_ref: Matt 12:5
+    end_ref: Matt 12:30
+    verse_count: 26
+  luke_gap:
+    start_ref: Luke 7:37
+    end_ref: Luke 7:46
+    verse_count: 10
+  interpretation:
+  - Matthew has 16 more gap verses than Luke at this boundary.
+- before_block: 16
+  matt_gap:
+    start_ref: Matt 13:24
+    end_ref: Matt 13:36
+    verse_count: 13
+  luke_gap:
+    start_ref: Luke 8:16
+    end_ref: Luke 8:20
+    verse_count: 5
+  interpretation:
+  - Matthew has 8 more gap verses than Luke at this boundary.
+- before_block: 17
+  matt_gap:
+    start_ref: Matt 13:38
+    end_ref: Matt 13:50
+    verse_count: 13
+  luke_gap:
+    start_ref: Luke 8:22
+    end_ref: Luke 8:44
+    verse_count: 23
+  interpretation:
+  - Luke has 10 more gap verses than Matthew at this boundary.
+- before_block: 18
+  matt_gap:
+    start_ref: Matt 13:52
+    end_ref: Matt 13:58
+    verse_count: 7
+  luke_gap:
+    start_ref: Luke 8:46
+    end_ref: Luke 9:6
+    verse_count: 17
+  interpretation:
+  - Luke has 10 more gap verses than Matthew at this boundary.
+- before_block: 19
+  matt_gap:
+    start_ref: Matt 14:21
+    end_ref: Matt 15:9
+    verse_count: 25
+  luke_gap: null
+  interpretation:
+  - Matthew has 25 more gap verses than Luke at this boundary.
+- before_block: 20
+  matt_gap:
+    start_ref: Matt 15:11
+    end_ref: Matt 16:13
+    verse_count: 42
+  luke_gap: null
+  interpretation:
+  - Matthew has 42 more gap verses than Luke at this boundary.
+- before_block: 21
+  matt_gap:
+    start_ref: Matt 18:6
+    end_ref: Matt 18:9
+    verse_count: 4
+  luke_gap:
+    start_ref: Luke 9:49
+    end_ref: Luke 15:2
+    verse_count: 241
+  interpretation:
+  - Luke has 237 more gap verses than Matthew at this boundary.
+- before_block: 22
+  matt_gap: null
+  luke_gap:
+    start_ref: Luke 15:8
+    end_ref: Luke 17:1
+    verse_count: 57
+  interpretation:
+  - Luke has 57 more gap verses than Matthew at this boundary.
+- before_block: 23
+  matt_gap:
+    start_ref: Matt 18:34
+    end_ref: Matt 19:4
+    verse_count: 6
+  luke_gap:
+    start_ref: Luke 17:14
+    end_ref: Luke 17:33
+    verse_count: 20
+  interpretation:
+  - Luke has 14 more gap verses than Matthew at this boundary.
+- before_block: 24
+  matt_gap:
+    start_ref: Matt 19:7
+    end_ref: Matt 19:12
+    verse_count: 6
+  luke_gap:
+    start_ref: Luke 17:37
+    end_ref: Luke 18:14
+    verse_count: 15
+  interpretation:
+  - Luke has 9 more gap verses than Matthew at this boundary.
+- before_block: 25
+  matt_gap:
+    start_ref: Matt 19:30
+    end_ref: Matt 20:17
+    verse_count: 18
+  luke_gap:
+    start_ref: Luke 18:30
+    end_ref: Luke 18:30
+    verse_count: 1
+  interpretation:
+  - Matthew has 17 more gap verses than Luke at this boundary.
+- before_block: 26
+  matt_gap: null
+  luke_gap:
+    start_ref: Luke 19:1
+    end_ref: Luke 19:28
+    verse_count: 28
+  interpretation:
+  - Luke has 28 more gap verses than Matthew at this boundary.
+- before_block: 27
+  matt_gap:
+    start_ref: Matt 21:46
+    end_ref: Matt 22:15
+    verse_count: 16
+  luke_gap:
+    start_ref: Luke 20:20
+    end_ref: Luke 20:20
+    verse_count: 1
+  interpretation:
+  - Matthew has 15 more gap verses than Luke at this boundary.
+- before_block: 28
+  matt_gap:
+    start_ref: Matt 23:20
+    end_ref: Matt 24:1
+    verse_count: 21
+  luke_gap:
+    start_ref: Luke 21:2
+    end_ref: Luke 21:5
+    verse_count: 4
+  interpretation:
+  - Matthew has 17 more gap verses than Luke at this boundary.
+- before_block: 29
+  matt_gap:
+    start_ref: Matt 24:36
+    end_ref: Matt 26:2
+    verse_count: 64
+  luke_gap:
+    start_ref: Luke 21:34
+    end_ref: Luke 22:1
+    verse_count: 6
+  interpretation:
+  - Matthew has 58 more gap verses than Luke at this boundary.
+- before_block: 30
+  matt_gap: null
+  luke_gap:
+    start_ref: Luke 22:19
+    end_ref: Luke 22:38
+    verse_count: 20
+  interpretation:
+  - Luke has 20 more gap verses than Matthew at this boundary.
+- before_block: 31
+  matt_gap:
+    start_ref: Matt 28:9
+    end_ref: Matt 28:15
+    verse_count: 7
+  luke_gap:
+    start_ref: Luke 24:13
+    end_ref: Luke 24:27
+    verse_count: 15
+  interpretation:
+  - Luke has 8 more gap verses than Matthew at this boundary.
+- before_block: 32
+  matt_gap:
+    start_ref: Matt 28:17
+    end_ref: Matt 28:18
+    verse_count: 2
+  luke_gap:
+    start_ref: Luke 24:29
+    end_ref: Luke 24:46
+    verse_count: 18
+  interpretation:
+  - Luke has 16 more gap verses than Matthew at this boundary.
+- after_last_block: 32
+  matt_gap: null
+  luke_gap: null
+  interpretation:
+  - 'Tail gap difference: Matthew 0, Luke 0.'

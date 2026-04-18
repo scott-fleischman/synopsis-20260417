@@ -1,0 +1,228 @@
+- direction_id: matthew_used_mark
+  short_label: Matthew used Mark
+  source: Mark
+  target: Matthew
+  pair: Mark↔Matthew
+  model_family: direct written narrative dependence
+  current_status: supported / high confidence relative to reverse
+  core_required_explanations:
+  - Matthew preserves a Mark-like narrative backbone while inserting large non-Markan blocks.
+  - Matthew omits, abbreviates, regularizes, or rephrases some Markan details.
+  - Matthew relocates or collects sayings into discourse structures.
+  - Matthew adds fulfillment, infancy, genealogy, and ecclesial/teaching material from other sources or composition.
+  core_contrary_evidence:
+  - Matthew has major additional material, so Mark cannot be the only source.
+  - Some Markan vividness and roughness could look secondary if judged locally.
+  - Some agreements could be mediated by shared tradition rather than direct copying.
+  - Text-critical variation and pericope-level displacement complicate strict one-source claims.
+  best_response_model: Matthean redaction of Mark-like narrative source plus additional sayings, fulfillment, infancy, and
+    discourse traditions.
+- direction_id: mark_used_matthew
+  short_label: Mark used Matthew
+  source: Matthew
+  target: Mark
+  pair: Mark↔Matthew
+  model_family: direct written narrative dependence, reverse direction
+  current_status: possible locally, higher cumulative burden
+  core_required_explanations:
+  - 'Mark repeatedly omits large Matthean blocks: infancy, genealogy, Sermon, discourse collections, fulfillment material.'
+  - Mark often makes the narrative shorter but also rougher, more vivid, and less discourse-organized.
+  - Mark removes or transforms Matthean theological markers such as kingdom-of-heaven language.
+  - Mark preserves enough Matthean order to create extensive alignment while discarding much Matthean material.
+  core_contrary_evidence:
+  - The repeated omission of high-value Matthean material has high cumulative burden.
+  - Mark’s shorter form is often easier to explain as source than as drastic abridgment of Matthew.
+  - Matthean discourse clustering looks like expansion/organization rather than material Mark split apart.
+  - The global Mark–Matthew alignment favors Mark-like source priority under the current burden model.
+  best_response_model: Markan epitome/abbreviation model with deliberate focus on action narrative and omission of long discourse/infancy
+    material; plausible only if Mark had strong genre/theological reasons to compress Matthew.
+- direction_id: luke_used_mark
+  short_label: Luke used Mark
+  source: Mark
+  target: Luke
+  pair: Mark↔Luke
+  model_family: direct written narrative dependence
+  current_status: supported over reverse among direct-use alternatives; medium-high with order-retention penalties
+  core_required_explanations:
+  - Luke preserves many Mark-like narrative sequences but adds infancy, travel narrative, and distinctive teaching material.
+  - Luke omits/compresses some Markan blocks and relocates or reframes others.
+  - Luke regularizes diction and style while retaining local exact or near-exact Markan phrases in some places.
+  - Luke’s non-Markan material must be explained as additional source/tradition/composition rather than evidence against all
+    Markan use.
+  core_contrary_evidence:
+  - An unpenalized shared-tradition model had lower burden than either direct-use direction.
+  - Luke has major non-Markan blocks and different theological/narrative aims.
+  - Some Mark–Luke parallels are low-score or could reflect common tradition.
+  - The Mark–Luke data alone is not as decisive as Mark–Matthew.
+  best_response_model: Luke used Mark-like narrative source selectively, combining it with other sources/traditions and extensive
+    Lukan redaction; shared-tradition alternatives must pay an order-retention penalty.
+- direction_id: mark_used_luke
+  short_label: Mark used Luke
+  source: Luke
+  target: Mark
+  pair: Mark↔Luke
+  model_family: direct written narrative dependence, reverse direction
+  current_status: possible locally, higher burden than Luke used Mark among direct-use alternatives
+  core_required_explanations:
+  - Mark omits Luke’s infancy narratives, travel narrative, and large teaching blocks.
+  - Mark compresses or removes Lukan universalizing and historiographical framing.
+  - Mark turns some Lukan smoother discourse into shorter, rougher narrative.
+  - Mark preserves enough Lukan order and wording to create the observed Mark–Luke chain.
+  core_contrary_evidence:
+  - Mark must omit more distinctive Lukan material than Luke must add under Mark-prior.
+  - Luke-prior direct-use burden is higher in the Mark–Luke ledger.
+  - Mark’s style and order fit better as a shorter narrative source in the broader Synoptic system.
+  - Matthew’s relation to Mark independently supports a Mark-like source before both Matthew and Luke.
+  best_response_model: Markan epitome of Luke with radical abbreviation and narrative concentration; this is a high-burden
+    response model in the current data.
+- direction_id: matthew_used_luke
+  short_label: Matthew used Luke
+  source: Luke
+  target: Matthew
+  pair: Matthew↔Luke
+  model_family: direct written dependence in double tradition / infancy / sayings
+  current_status: not demonstrated after Markan masking; possible locally
+  core_required_explanations:
+  - Matthew relocates Lukan sayings into large discourse clusters, especially Sermon-style teaching.
+  - Matthew rewrites or replaces Lukan infancy material with genealogy, Joseph/Magi/fulfillment framing.
+  - Matthew adds characteristic scriptural fulfillment, kingdom-of-heaven language, and Jewish/Matthean structuring.
+  - Matthew omits substantial Lukan material such as much travel narrative and distinctive parables.
+  core_contrary_evidence:
+  - After Markan masking, direct-dependence burdens were symmetric and common source/oral tradition lower.
+  - Many double-tradition items are displaced rather than arranged in a simple Luke-to-Matthew chain.
+  - The material behaves more like sayings/tradition than narrative source copying.
+  - Matthew’s order and grouping often look like independent topical clustering rather than rewriting Luke’s sequence.
+  best_response_model: Matthew used Luke-like sayings/tradition or Luke itself selectively, reorganizing sayings into discourse
+    blocks; strongest version requires a robust explanation for displaced double-tradition order.
+- direction_id: luke_used_matthew
+  short_label: Luke used Matthew
+  source: Matthew
+  target: Luke
+  pair: Matthew↔Luke
+  model_family: direct written dependence in double tradition / Farrer-type direction
+  current_status: possible locally; not demonstrated by masked data alone
+  core_required_explanations:
+  - Luke disperses Matthean discourse material into narrative and travel contexts.
+  - Luke reduces Matthean fulfillment framing and kingdom-of-heaven diction.
+  - Luke rewrites or replaces Matthean infancy material with a different infancy framework.
+  - Luke omits or rearranges large Matthean blocks while preserving some sayings closely.
+  core_contrary_evidence:
+  - The masked double-tradition result favors common source/oral tradition under the current ledger.
+  - Luke must intentionally break up highly organized Matthean discourses.
+  - Some Matt/Luke agreements are short portable sayings compatible with shared tradition.
+  - The full Matthew–Luke numeric result is not clean because it includes non-double-tradition material.
+  best_response_model: Luke used Matthew selectively, deliberately de-Mattheanizing discourse clusters and redistributing
+    sayings; plausible under a strong editorial-theological program but not forced by current masked data.
+- direction_id: john_used_mark
+  short_label: John used Mark
+  source: Mark
+  target: John
+  pair: John↔Mark
+  model_family: anchor/episode dependence or shared passion/sign tradition
+  current_status: possible locally; shared anchor tradition currently lower burden
+  core_required_explanations:
+  - John transforms Markan narrative episodes into theological sign/testimony scenes.
+  - John relocates some material, most notably the temple action, and omits many Markan units.
+  - John expands discourses and identity claims while preserving selected passion/sign anchor details.
+  - John’s low continuous lexical/order signal must be explained as heavy rewriting or selective use.
+  core_contrary_evidence:
+  - Anchor-specific ledgers favor shared anchor tradition over direct John-use-of-Mark.
+  - John lacks a continuous Markan narrative chain.
+  - Many shared anchors are passion/sign traditions that could circulate independently.
+  - Lexical overlap is often low and exact runs are short or formulaic.
+  best_response_model: John knew Mark or Mark-like tradition but used it selectively through a theological rewriting program;
+    strongest only for local passion/sign anchors, not global dependence.
+- direction_id: john_used_matthew
+  short_label: John used Matthew
+  source: Matthew
+  target: John
+  pair: John↔Matthew
+  model_family: anchor/episode dependence or shared tradition
+  current_status: possible locally; shared anchor tradition currently lower burden
+  core_required_explanations:
+  - John transforms Matthean/Synoptic material into signs, testimonies, and long discourses.
+  - John omits much Matthean teaching structure, infancy material, and fulfillment framing.
+  - John relocates or reframes shared passion/entry/anointing/temple material.
+  - John’s low lexical signal must be explained as radical paraphrase rather than lack of direct use.
+  core_contrary_evidence:
+  - Anchor-specific ledgers favor shared tradition.
+  - John does not preserve Matthew’s discourse architecture.
+  - Some overlap is generic Gospel tradition or scriptural/passion formula.
+  - A Matthew-specific source signal is weaker than a shared Synoptic/passion-tradition signal.
+  best_response_model: John used Matthew-like tradition selectively or knew Synoptic tradition in a Matthean form; current
+    evidence is better treated anchor by anchor.
+- direction_id: john_used_luke
+  short_label: John used Luke
+  source: Luke
+  target: John
+  pair: John↔Luke
+  model_family: anchor/episode dependence or shared tradition
+  current_status: possible locally; shared anchor tradition currently lower burden
+  core_required_explanations:
+  - John transforms Lukan/Synoptic anchor scenes into independent theological narrative.
+  - John omits Lukan infancy, travel, parables, and distinctive Lukan resurrection/travel material.
+  - John retains or reworks selected passion/sign details that overlap with Luke.
+  - John’s low lexical and order signal must be explained by selective, non-sequential use.
+  core_contrary_evidence:
+  - John↔Luke anchor ledger favors shared tradition.
+  - Many overlaps are passion tradition rather than Lukan-specific wording.
+  - John lacks Luke’s narrative order and distinctive Lukan framing.
+  - Low exact-run evidence weakens direct literary dependence.
+  best_response_model: John knew Luke-like traditions or a shared passion/sign source; direct use of canonical Luke remains
+    a local possibility, not a global conclusion.
+- direction_id: mark_used_john
+  short_label: Mark used John
+  source: John
+  target: Mark
+  pair: John↔Mark
+  model_family: reverse John/Synoptic direction
+  current_status: low support; included for completeness
+  core_required_explanations:
+  - Mark would have had to narrativize Johannine testimony/discourse into compact Synoptic scenes.
+  - Mark would omit Johannine long discourses, I-am language, Lazarus, and much theological framing.
+  - Mark would move or recontextualize Johannine anchors such as the temple action.
+  - Mark would produce a much shorter, rougher narrative while retaining only selected anchor material.
+  core_contrary_evidence:
+  - Synoptic style and structure do not look like abridged John.
+  - Shared anchor tradition has lower burden than reverse direct use.
+  - The Synoptic triple tradition is better explained without making John prior to Mark.
+  - Mark lacks central Johannine features that would be costly to omit if John were the source.
+  best_response_model: A radical Synoptic condensation of Johannine tradition; currently a high-burden completeness hypothesis.
+- direction_id: matthew_used_john
+  short_label: Matthew used John
+  source: John
+  target: Matthew
+  pair: John↔Matthew
+  model_family: reverse John/Synoptic direction
+  current_status: low support; included for completeness
+  core_required_explanations:
+  - Matthew would convert Johannine anchors into Synoptic form while omitting Johannine discourses and signs.
+  - Matthew would add or preserve Mark-like narrative sequence independently of John.
+  - Matthew would replace Johannine theology with fulfillment/discourse architecture.
+  - Matthew would use John very selectively only in shared anchor zones.
+  core_contrary_evidence:
+  - Matthew’s strongest literary relation is Mark-like, not Johannine.
+  - Shared anchor tradition lower burden than direct Matthew-use-of-John.
+  - Matthew lacks central Johannine structure and vocabulary.
+  - No continuous John-to-Matthew chain is evident.
+  best_response_model: Matthew knew a Johannine-like anchor tradition but not necessarily the Gospel of John; direct use of
+    John is not currently supported.
+- direction_id: luke_used_john
+  short_label: Luke used John
+  source: John
+  target: Luke
+  pair: John↔Luke
+  model_family: reverse John/Synoptic direction
+  current_status: low support; included for completeness
+  core_required_explanations:
+  - Luke would turn Johannine anchors into Lukan/Synoptic narrative contexts.
+  - Luke would omit Johannine discourses and signs while retaining only selected anchor material.
+  - Luke would combine John-derived anchors with Mark-like narrative sequence and distinctive Lukan material.
+  - Luke would de-Johannize vocabulary and theology almost completely.
+  core_contrary_evidence:
+  - Luke’s Mark-like narrative relationship is stronger than any John-like relation.
+  - John↔Luke anchor ledger favors shared tradition.
+  - Luke lacks Johannine discourse architecture.
+  - No continuous John-to-Luke chain is evident.
+  best_response_model: Luke knew a shared Johannine-like passion/sign tradition rather than using canonical John; direct John→Luke
+    is a low-priority hypothesis.

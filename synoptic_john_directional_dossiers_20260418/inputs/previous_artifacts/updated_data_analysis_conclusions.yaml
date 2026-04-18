@@ -1,0 +1,25 @@
+scope: data-analysis conclusions after this patch; visualization changes not included
+claims:
+- claim_id: mark_matthew_mark_like_priority
+  confidence: high
+  conclusion: Matthew most likely used Mark or a Mark-like written narrative source.
+- claim_id: mark_luke_mark_prior_direct_model
+  confidence: medium_high for Mark-prior over Luke-prior among direct-use models; medium for direct-use over shared-tradition
+    alone
+  conclusion: Mark-prior is lower burden than Luke-prior among direct-use explanations. Direct Mark-like source dependence
+    becomes lower than shared tradition only when shared tradition is charged for dense narrative order and bridge sequences.
+- claim_id: matt_luke_double_tradition
+  confidence: medium_high for shared non-Markan sayings/tradition; medium for any discrete Q-document claim
+  conclusion: After Markan masking, the retained Matthew-Luke material remains a non-Markan sayings/echo problem rather than
+    a stable narrative-chain relationship.
+- claim_id: john_synoptic_pairwise
+  confidence: medium
+  conclusion: John shares anchor traditions with the Synoptics; aggregate anchor ledgers favor shared anchor/passion/sign
+    tradition over simple Gospel-to-Gospel copying.
+- claim_id: thomas
+  confidence: medium for overlapping sayings tradition, low for global direction
+  conclusion: Thomas remains a curated logion-level sayings-network witness; current data cannot support automatic Greek-Coptic
+    direct-dependence.
+- claim_id: epistles_gospels
+  confidence: high for selected targeted cases, exploratory for top-500
+  conclusion: 1Tim 5:18/Luke 10:7 remains a high-value Luke-like saying case; formula-risk filtering remains essential.
