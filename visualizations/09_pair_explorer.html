@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pair explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .pair-grid { display:grid; grid-template-columns: 380px 1fr; gap: 18px; align-items: start; }
+  .pair-list { max-height: 78vh; overflow-y: auto; border:1px solid var(--rule); padding: 6px; background:#fff; border-radius:3px; }
+  .pair-row { padding: 7px 10px; border-bottom: 1px solid #eee; cursor:pointer; font-size:12px; display:flex; gap:8px; align-items:center; }
+  .pair-row:hover { background: #f4efdf; }
+  .pair-row.active { background: #ede8d6; border-left: 4px solid #8b2e2e; }
+  .pair-row.active .refa { font-weight: 700; }
+  .pair-row .score { margin-left:auto; font-variant-numeric: tabular-nums; padding:1px 6px; border-radius:2px; color:#fff; font-size:11px; }
+  .refa { color:#8b2e2e; }
+  .refb { color:#22506c; }
+  .vtext { font-family: Cardo, "Gentium Plus", "Times New Roman", serif; font-size: 18px; line-height: 1.6; padding: 10px; background:#fbfaf6; border-radius:3px; }
+  .tok-ins { background: rgba(15,118,110,0.18); color: #064e46; padding: 0 2px; border-radius: 2px; }
+  .tok-del { background: rgba(139,46,46,0.18); color: #5a1f1f; padding: 0 2px; border-radius: 2px; text-decoration: line-through; }
+  .tok-rep-a { background: rgba(168,85,26,0.18); color: #5a2e08; padding: 0 2px; border-radius: 2px; }
+  .tok-rep-b { background: rgba(168,85,26,0.18); color: #5a2e08; padding: 0 2px; border-radius: 2px; border-bottom: 2px solid #a8551a; }
+  .tok-eq { color:#1f1e1a; }
+  .bookhead { font-weight: 700; font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .lemlist .lem { display:inline-block; margin: 2px 4px; padding: 1px 6px; border-radius: 2px; font-size: 13px; font-family: Cardo, serif; }
+  .lem.ins { background: rgba(15,118,110,0.15); color: #064e46; }
+  .lem.del { background: rgba(139,46,46,0.15); color: #5a1f1f; }
+  .lem.rep { background: rgba(168,85,26,0.18); color: #5a2e08; }
+  .lem.com { background: rgba(0,0,0,0.05); color: #1f1e1a; }
+  .rendered-diff { font-family: Cardo, serif; font-size: 15px; line-height: 1.6; background: #fdf5eb; padding: 10px 14px; border-radius: 3px; border-left: 3px solid #a8551a; white-space: pre-wrap; }
+  .rendered-diff .arrow { color: #a8551a; font-weight: 700; padding: 0 4px; }
+  .tag-chip { display:inline-block; font-size: 11px; padding: 1px 7px; border-radius: 2px; background:#eaddca; color:#5a2e08; margin-right: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Pair explorer</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="pair-grid">
+    <div>
+      <div style="display:flex;gap:8px;margin-bottom:8px;">
+        <input id="q" placeholder="filter by reference or text..." style="flex:1;padding:6px 10px;font-size:12px;border:1px solid var(--rule);border-radius:3px;" />
+        <select id="sort" style="padding:6px 10px;font-size:12px;border:1px solid var(--rule);border-radius:3px;">
+          <option value="order">gospel order</option>
+          <option value="score_desc">score ↓</option>
+          <option value="score_asc">score ↑</option>
+          <option value="ins">most insertions</option>
+          <option value="del">most deletions</option>
+        </select>
+      </div>
+      <div class="pair-list" id="pairlist"></div>
+    </div>
+    <div>
+      <div id="pairview"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('09_pair_explorer.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — Greek-level diffs';
+
+  const captions = {
+    mm: 'Click any primary pair on the left to see Mark vs Matthew side-by-side with surface-word diff coloring, the lemma-level insertions/deletions/replacements, variant apparatus notes, and the edit classification. Green = inserted on the opposite side; dashed-red = deleted; orange = substitution. This is where the abstract scores become concrete Greek edits.',
+    ml: 'Matt vs Luke at the verse level, over the 233 primary-backbone pairs. Because Matt↔Luke is so heavily paraphrased, most pairs show heavy ins/del and only a minority preserve shared surface words. The opcode coloring here is computed from lemma differences (surface alignment is often broken for these pairs). Use the sort controls to find the cleanest cores (score ↓) or the most edit-heavy (ins ↓).',
+    mld: 'Matt vs Luke after Markan masking — just 49 primary pairs. Token-level opcodes are not reconstructed for this dataset (the pipeline outputs rendered diff strings instead), so the side-by-side text is shown plain; the lemma partition (shared / Matt-only / Luke-only) and the rendered diff strings below give you everything needed for close reading. For a more reader-optimized layout of the same 49 pairs, use the dedicated Q core reader.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  // Build list
+  const pairs = D.pairs.map(p => {
+    const key = p.a_ref + '|' + p.b_ref;
+    const det = (D.detailed || {})[key] || null;
+    return { p, det, key };
+  });
+
+  function renderList() {
+    const q = document.getElementById('q').value.trim().toLowerCase();
+    const sort = document.getElementById('sort').value;
+    let arr = pairs;
+    if (q) {
+      arr = arr.filter(it => {
+        return it.p.a_ref.toLowerCase().includes(q) ||
+               it.p.b_ref.toLowerCase().includes(q) ||
+               (it.p.a_text || '').toLowerCase().includes(q) ||
+               (it.p.b_text || '').toLowerCase().includes(q);
+      });
+    }
+    const copy = arr.slice();
+    if (sort === 'score_desc') copy.sort((x, y) => y.p.score - x.p.score);
+    else if (sort === 'score_asc') copy.sort((x, y) => x.p.score - y.p.score);
+    else if (sort === 'ins') copy.sort((x, y) => (y.p.ins || 0) - (x.p.ins || 0));
+    else if (sort === 'del') copy.sort((x, y) => (y.p.del || 0) - (x.p.del || 0));
+
+    const list = document.getElementById('pairlist');
+    while (list.firstChild) list.removeChild(list.firstChild);
+    for (const it of copy) {
+      const row = SH.el('div', { class: 'pair-row', 'data-key': it.key });
+      row.appendChild(SH.el('span', { class: 'refa' }, it.p.a_ref.replace(/^[A-Za-z]+ /, '')));
+      row.appendChild(SH.el('span', { style: 'color:#aaa;' }, '↔'));
+      row.appendChild(SH.el('span', { class: 'refb' }, it.p.b_ref.replace(/^[A-Za-z]+ /, '')));
+      row.appendChild(SH.el('span', { class: 'score', style: `background:${SH.scoreColor(it.p.score)};` }, it.p.score.toFixed(2)));
+      row.addEventListener('click', () => showPair(it.key));
+      list.appendChild(row);
+    }
+    markActive();
+  }
+  function markActive() {
+    const active = window.location.hash.split('/')[1] || '';
+    document.querySelectorAll('.pair-row').forEach(r => {
+      if (r.dataset.key === active) r.classList.add('active');
+      else r.classList.remove('active');
+    });
+  }
+
+  function tokens(text) { return (text || '').split(/\s+/).filter(Boolean); }
+
+  function showPair(key) {
+    window.location.hash = D.name + '/' + key;
+    markActive();
+    const found = pairs.find(x => x.key === key);
+    const view = document.getElementById('pairview');
+    while (view.firstChild) view.removeChild(view.firstChild);
+    if (!found) {
+      view.appendChild(SH.el('div', { class: 'small' }, '(pair not found)'));
+      return;
+    }
+    const { p, det } = found;
+
+    // Header
+    const card = SH.el('div', { class: 'card' });
+    card.appendChild(SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;' },
+      SH.el('div', { style: 'font-size:18px;font-weight:700;color:#8b2e2e;' }, p.a_ref),
+      SH.el('div', { style: 'font-size:18px;font-weight:700;color:#22506c;' }, p.b_ref),
+      SH.el('span', { class: 'chip', style: `background:${SH.scoreColor(p.score)};color:#fff;` }, 'score ' + p.score.toFixed(3)),
+      (p.classes || []).length ? SH.el('span', { class: 'chip' }, (p.classes || []).join(' · ')) : null,
+      p.macro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'macro #' + p.macro) : null,
+      p.micro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'micro #' + p.micro) : null,
+    ));
+
+    // Side-by-side verses with token diff
+    const grid = SH.el('div', { class: 'grid cols-2', style: 'margin-top:12px;' });
+
+    function tokenSpan(text, cls) {
+      return SH.el('span', { class: 'tok-' + cls }, text);
+    }
+
+    function renderAText() {
+      const holder = SH.el('div', { class: 'vtext' });
+      holder.appendChild(SH.el('div', { class: 'bookhead', style: 'color:#8b2e2e;margin-bottom:6px;' }, p.a_ref + (p.a_var ? ' · ' + p.a_var + ' variant' + (p.a_var === 1 ? '' : 's') : '')));
+      const inner = SH.el('div');
+      const ops = (det && det.surface_opcodes) || [];
+      if (ops.length) {
+        const aTokens = tokens(p.a_text);
+        for (const op of ops) {
+          const [aL, aR] = op.a_idx || [0, 0];
+          if (op.op === 'equal') {
+            inner.appendChild(tokenSpan((op.a_tokens || []).join(' ') + ' ', 'eq'));
+          } else if (op.op === 'delete') {
+            inner.appendChild(tokenSpan((op.a_tokens || []).join(' ') + ' ', 'del'));
+          } else if (op.op === 'replace') {
+            inner.appendChild(tokenSpan((op.a_tokens || []).join(' ') + ' ', 'rep-a'));
+          } else if (op.op === 'insert') {
+            // nothing on a-side
+          }
+        }
+      } else {
+        inner.appendChild(document.createTextNode(p.a_text || ''));
+      }
+      holder.appendChild(inner);
+      return holder;
+    }
+
+    function renderBText() {
+      const holder = SH.el('div', { class: 'vtext' });
+      holder.appendChild(SH.el('div', { class: 'bookhead', style: 'color:#22506c;margin-bottom:6px;' }, p.b_ref + (p.b_var ? ' · ' + p.b_var + ' variant' + (p.b_var === 1 ? '' : 's') : '')));
+      const inner = SH.el('div');
+      const ops = (det && det.surface_opcodes) || [];
+      if (ops.length) {
+        for (const op of ops) {
+          if (op.op === 'equal') {
+            inner.appendChild(tokenSpan((op.b_tokens || op.a_tokens || []).join(' ') + ' ', 'eq'));
+          } else if (op.op === 'insert') {
+            inner.appendChild(tokenSpan((op.b_tokens || []).join(' ') + ' ', 'ins'));
+          } else if (op.op === 'replace') {
+            inner.appendChild(tokenSpan((op.b_tokens || []).join(' ') + ' ', 'rep-b'));
+          } else if (op.op === 'delete') {
+            // nothing on b-side
+          }
+        }
+      } else {
+        inner.appendChild(document.createTextNode(p.b_text || ''));
+      }
+      holder.appendChild(inner);
+      return holder;
+    }
+
+    grid.appendChild(renderAText());
+    grid.appendChild(renderBText());
+    card.appendChild(grid);
+
+    // Lemma-level diff summary
+    const lemBox = SH.el('div', { class: 'card', style: 'margin-top:14px;' });
+    lemBox.appendChild(SH.el('h3', { style: 'margin-bottom:8px;font-size:14px;' }, 'Lemma-level differences'));
+
+    const aOnly = (det && det.a_only) || p.a_only_lemmas || [];
+    const bOnly = (det && det.b_only) || p.b_only_lemmas || [];
+    const common = (det && det.common_lemmas) || p.common || [];
+    const insLem = (det && det.lemma_insertions) || [];
+    const delLem = (det && det.lemma_deletions) || [];
+    const repLem = (det && det.lemma_replacements) || [];
+
+    const grid2 = SH.el('div', { class: 'grid cols-2' });
+    grid2.appendChild(SH.el('div', null,
+      SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:#5a1f1f;font-weight:bold;' }, D.a_book + '-only lemmas (' + aOnly.length + ')'),
+      SH.el('div', { class: 'lemlist' }, ...aOnly.map(l => SH.el('span', { class: 'lem del' }, l))),
+    ));
+    grid2.appendChild(SH.el('div', null,
+      SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:#064e46;font-weight:bold;' }, D.b_book + '-only lemmas (' + bOnly.length + ')'),
+      SH.el('div', { class: 'lemlist' }, ...bOnly.map(l => SH.el('span', { class: 'lem ins' }, l))),
+    ));
+    lemBox.appendChild(grid2);
+
+    if (common.length) {
+      lemBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:10px;margin-bottom:4px;font-weight:bold;' }, 'Shared lemmas (' + common.length + ')'));
+      lemBox.appendChild(SH.el('div', { class: 'lemlist' }, ...common.map(l => SH.el('span', { class: 'lem com' }, l))));
+    }
+
+    if (repLem.length) {
+      lemBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:10px;margin-bottom:4px;font-weight:bold;color:#5a2e08;' }, 'Lemma replacements (' + repLem.length + ')'));
+      const box = SH.el('div', { class: 'lemlist' });
+      for (const r of repLem) {
+        if (Array.isArray(r) && r.length === 2) {
+          box.appendChild(SH.el('span', { class: 'lem rep' }, r[0] + ' → ' + r[1]));
+        } else if (typeof r === 'string') {
+          box.appendChild(SH.el('span', { class: 'lem rep' }, r));
+        }
+      }
+      lemBox.appendChild(box);
+    }
+
+    card.appendChild(lemBox);
+
+    // Rendered diffs (mld ships pre-rendered lemma_diff / surface_diff strings
+    // instead of structured opcodes; render them here with styled arrows)
+    if (p.lemma_diff || p.surface_diff) {
+      const diffBox = SH.el('div', { class: 'card', style: 'margin-top:14px;' });
+      diffBox.appendChild(SH.el('h3', { style: 'margin-bottom:8px;font-size:14px;' }, 'Rendered diffs'));
+      const fmtArrowString = (s) => {
+        const node = SH.el('div', { class: 'rendered-diff' });
+        let remainder = String(s || '');
+        while (remainder.length) {
+          const idx = remainder.indexOf('→');
+          if (idx < 0) { node.appendChild(document.createTextNode(remainder)); break; }
+          node.appendChild(document.createTextNode(remainder.slice(0, idx)));
+          node.appendChild(SH.el('span', { class: 'arrow' }, '→'));
+          remainder = remainder.slice(idx + 1);
+        }
+        return node;
+      };
+      if (p.lemma_diff) {
+        diffBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:6px;margin-bottom:4px;font-weight:bold;' }, 'Lemma diff'));
+        diffBox.appendChild(fmtArrowString(p.lemma_diff));
+      }
+      if (p.surface_diff) {
+        diffBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:10px;margin-bottom:4px;font-weight:bold;' }, 'Surface diff'));
+        diffBox.appendChild(fmtArrowString(p.surface_diff));
+      }
+      card.appendChild(diffBox);
+    }
+
+    // Tag chips (mld uses tags in place of pair_classes)
+    if ((p.tags || []).length) {
+      const tagBox = SH.el('div', { style: 'margin-top:10px;' });
+      for (const t of p.tags) tagBox.appendChild(SH.el('span', { class: 'tag-chip' }, t.replace(/_/g, ' ')));
+      card.appendChild(tagBox);
+    }
+
+    // Variant notes if any
+    const aVarNotes = (det && det.a_variant_notes) || [];
+    const bVarNotes = (det && det.b_variant_notes) || [];
+    if (aVarNotes.length || bVarNotes.length) {
+      const vBox = SH.el('div', { class: 'card', style: 'margin-top:14px;' });
+      vBox.appendChild(SH.el('h3', { style: 'margin-bottom:8px;font-size:14px;' }, 'Textual variants (SBLGNT apparatus)'));
+      if (aVarNotes.length) {
+        vBox.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:#8b2e2e;font-weight:bold;' }, D.a_book + ' variants'));
+        for (const n of aVarNotes) {
+          vBox.appendChild(SH.el('div', { class: 'greek', style: 'background:rgba(139,46,46,0.06);padding:6px 10px;margin-bottom:4px;border-left:3px solid #8b2e2e;font-size:13px;' }, n));
+        }
+      }
+      if (bVarNotes.length) {
+        vBox.appendChild(SH.el('div', { class: 'small', style: 'margin-top:8px;margin-bottom:4px;color:#22506c;font-weight:bold;' }, D.b_book + ' variants'));
+        for (const n of bVarNotes) {
+          vBox.appendChild(SH.el('div', { class: 'greek', style: 'background:rgba(34,80,108,0.06);padding:6px 10px;margin-bottom:4px;border-left:3px solid #22506c;font-size:13px;' }, n));
+        }
+      }
+      card.appendChild(vBox);
+    }
+
+    // Numeric panel
+    const num = SH.el('div', { class: 'card', style: 'margin-top:14px;' });
+    num.appendChild(SH.el('h3', { style: 'margin-bottom:8px;font-size:14px;' }, 'Pair numerics'));
+    const rows = [];
+    if (p.wj_content != null) rows.push(['weighted Jaccard (content)', p.wj_content.toFixed(3)]);
+    if (p.wj_bigram != null) rows.push(['weighted Jaccard (bigram)', p.wj_bigram.toFixed(3)]);
+    if (p.sr_content != null) rows.push(['shared-rare content', p.sr_content.toFixed(3)]);
+    if (p.rare_inter != null) rows.push(['rare lemma intersection', p.rare_inter.toFixed(3)]);
+    if (p.score_content != null) rows.push(['score (content)', p.score_content.toFixed(3)]);
+    if (p.score_all != null) rows.push(['score (all tokens)', p.score_all.toFixed(3)]);
+    if (p.neighbor_support != null) rows.push(['neighbor support', p.neighbor_support.toFixed(3)]);
+    rows.push(['ins / del / rep', (p.ins || 0) + ' · ' + (p.del || 0) + ' · ' + (p.rep || 0)]);
+    if (rows.length) {
+      const t = SH.el('table', { class: 'data-table' });
+      const tb = SH.el('tbody');
+      for (const r of rows) {
+        const tr = SH.el('tr');
+        tr.appendChild(SH.el('td', { style: 'color:var(--ink-mute);width:220px;' }, r[0]));
+        tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, r[1]));
+        tb.appendChild(tr);
+      }
+      t.appendChild(tb);
+      num.appendChild(t);
+    }
+    card.appendChild(num);
+
+    // Cross-links between datasets (if the same pair exists elsewhere)
+    const xlinks = [];
+    if (D.name === 'mld') {
+      xlinks.push(SH.el('a', { href: '15_q_core.html#mld/' + encodeURIComponent(p.a_ref + '|' + p.b_ref) },
+        'open in Q core reader'));
+      if (SH.BUNDLE.ml) {
+        const mlMatch = SH.BUNDLE.ml.pairs.find(x => x.a_ref === p.a_ref && x.b_ref === p.b_ref);
+        if (mlMatch) {
+          xlinks.push(SH.el('a', { href: '09_pair_explorer.html#ml/' + encodeURIComponent(p.a_ref + '|' + p.b_ref) },
+            'open in unmasked Matt↔Luke'));
+        }
+      }
+    } else if (D.name === 'ml' && SH.BUNDLE.mld) {
+      const mldMatch = SH.BUNDLE.mld.pairs.find(x => x.a_ref === p.a_ref && x.b_ref === p.b_ref);
+      if (mldMatch) {
+        xlinks.push(SH.el('a', { href: '09_pair_explorer.html#mld/' + encodeURIComponent(p.a_ref + '|' + p.b_ref) },
+          'also on masked primary chain →'));
+        xlinks.push(SH.el('a', { href: '15_q_core.html#mld/' + encodeURIComponent(p.a_ref + '|' + p.b_ref) },
+          'Q core reader'));
+      }
+    }
+    if (xlinks.length) {
+      const xlinkBox = SH.el('div', { class: 'small', style: 'margin-top:14px;color:var(--ink-mute);display:flex;gap:14px;flex-wrap:wrap;' });
+      for (const l of xlinks) xlinkBox.appendChild(l);
+      card.appendChild(xlinkBox);
+    }
+
+    view.appendChild(card);
+  }
+
+  document.getElementById('q').addEventListener('input', renderList);
+  document.getElementById('sort').addEventListener('change', renderList);
+  renderList();
+
+  // Auto-load first pair from hash or default. Incoming hrefs encode the key
+  // (refs contain spaces, e.g. "Matt 5:3|Luke 6:20") so decode before lookup.
+  const hashParts = window.location.hash.split('/');
+  let fromHash = null;
+  if (hashParts[1]) {
+    try { fromHash = decodeURIComponent(hashParts[1]); }
+    catch { fromHash = hashParts[1]; }
+  }
+  const initKey = (fromHash && pairs.find(x => x.key === fromHash)) ? fromHash : (pairs[0] && pairs[0].key);
+  if (initKey) showPair(initKey);
+})();
+</script>
+</body>
+</html>

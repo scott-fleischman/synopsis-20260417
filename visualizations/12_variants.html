@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Textual variants</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .vrow { border:1px solid var(--rule); border-radius:3px; padding:10px 14px; margin-bottom:10px; background:#fff; }
+  .vhead { display:flex; flex-wrap:wrap; gap:10px; align-items:baseline; margin-bottom:6px; }
+  .vblk { margin-top:6px; padding:6px 12px; border-radius:3px; font-family: Cardo, "Gentium Plus", serif; font-size:14px; line-height:1.55; }
+  .vblk.a { background: rgba(139,46,46,0.06); border-left:3px solid #8b2e2e; }
+  .vblk.b { background: rgba(34,80,108,0.06); border-left:3px solid #22506c; }
+  .vnote { margin: 4px 0; }
+  .witness { color:#5a5a5a; font-size: 11.5px; font-family: var(--mono); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Textual variants</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <h2>Aggregate coverage</h2>
+    <div class="grid cols-4" id="statgrid"></div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+      <label>Side <select id="side"><option value="">(either)</option><option value="a">a-side only</option><option value="b">b-side only</option><option value="both">both</option></select></label>
+      <label>Witness contains <input type="text" id="wit" placeholder="WH / Treg / NA28 / RP" size="18" /></label>
+      <label><input type="checkbox" id="onlyvar" checked /> only pairs with variants</label>
+      <span class="small" id="showing" style="margin-left:auto;"></span>
+    </div>
+  </div>
+
+  <div id="varrows"></div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('12_variants.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — SBLGNT apparatus in parallel';
+
+  const captions = {
+    mm: 'For every primary pair where either side carries an SBLGNT apparatus note, the reading and editorial witnesses appear here. The witnesses are WH (Westcott–Hort), Treg (Tregelles), NA28 (Nestle–Aland 28), and RP (Robinson–Pierpont Byzantine). When both sides have variants at the same point, the variant problem becomes a synoptic question: did the text-critical decision diverge between the parallels?',
+    ml: 'Variants for Matt↔Luke primary pairs. Notice that variants are nearly equally distributed between the two sides (roughly 210–235 notes each), suggesting the critical issues are distributed rather than concentrated in one evangelist.',
+    mld: 'SBLGNT apparatus notes on the 49 masked primary pairs. 41 records total: 25 carry Matthean variants, 31 carry Lukan variants. Because this slice is narrow (Q-core only), each pair is worth looking at closely — this is where the textual history of the double-tradition intersects the synoptic reconstruction.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  // Aggregate stats — prefer summary.variant_global if present; fall back to counting from D.variants.
+  (function () {
+    const vg = (D.summary || {}).variant_global || {};
+    // mld summary has no variant_global — synthesize from the variants array.
+    const rows = D.variants || [];
+    const aKey = D.name === 'mm' ? 'mark_variant_notes' : 'matt_variant_notes';
+    const bKey = D.name === 'mm' ? 'matt_variant_notes' : 'luke_variant_notes';
+    const aVerses = rows.filter(r => (r[aKey] || []).length).length;
+    const bVerses = rows.filter(r => (r[bKey] || []).length).length;
+    const aNotes = rows.reduce((s, r) => s + (r[aKey] || []).length, 0);
+    const bNotes = rows.reduce((s, r) => s + (r[bKey] || []).length, 0);
+
+    const st = document.getElementById('statgrid');
+    function mk(k, n, extra) {
+      st.appendChild(SH.el('div', { class: 'card' },
+        SH.el('div', { class: 'stat' },
+          SH.el('div', { class: 'n' }, String(n)),
+          SH.el('div', { class: 'k' }, k),
+          extra ? SH.el('div', { class: 'small' }, extra) : null)));
+    }
+    if (D.name === 'mm') {
+      mk('Mark verses w/ variants', vg.mark_variant_verses_in_primary_pairs || aVerses || '—', 'in primary pairs');
+      mk('Matt verses w/ variants', vg.matt_variant_verses_in_primary_pairs || bVerses || '—', 'in primary pairs');
+      mk('Mark apparatus notes', vg.mark_variant_notes_in_primary_pairs || aNotes || '—', 'total');
+      mk('Matt apparatus notes', vg.matt_variant_notes_in_primary_pairs || bNotes || '—', 'total');
+    } else {
+      mk('Matt verses w/ variants', vg.matt_variant_verses_in_primary_pairs || aVerses || '—', 'in primary pairs');
+      mk((D.name === 'mld' ? 'Luke' : 'Luke') + ' verses w/ variants', vg.luke_variant_verses_in_primary_pairs || bVerses || '—', 'in primary pairs');
+      mk('Matt apparatus notes', vg.matt_variant_notes_in_primary_pairs || aNotes || '—', 'total');
+      mk('Luke apparatus notes', vg.luke_variant_notes_in_primary_pairs || bNotes || '—', 'total');
+    }
+  })();
+
+  function render() {
+    const sideFilter = document.getElementById('side').value;
+    const witFilter = document.getElementById('wit').value.trim().toLowerCase();
+    const onlyVar = document.getElementById('onlyvar').checked;
+
+    const rows = (D.variants || []).slice();
+    const cont = document.getElementById('varrows');
+    while (cont.firstChild) cont.removeChild(cont.firstChild);
+
+    let shown = 0;
+    for (const r of rows) {
+      const realA = (D.name === 'mm') ? r.mark_ref : r.matt_ref;
+      const realB = (D.name === 'mm') ? r.matt_ref : r.luke_ref;
+      const realANotes = (D.name === 'mm') ? (r.mark_variant_notes || []) : (r.matt_variant_notes || []);
+      const realBNotes = (D.name === 'mm') ? (r.matt_variant_notes || []) : (r.luke_variant_notes || []);
+
+      if (onlyVar && !realANotes.length && !realBNotes.length) continue;
+      if (sideFilter === 'a' && !realANotes.length) continue;
+      if (sideFilter === 'b' && !realBNotes.length) continue;
+      if (sideFilter === 'both' && (!realANotes.length || !realBNotes.length)) continue;
+
+      if (witFilter) {
+        const allText = [...realANotes, ...realBNotes].join(' ').toLowerCase();
+        if (!allText.includes(witFilter)) continue;
+      }
+
+      shown += 1;
+      if (shown > 400) break;
+      const card = SH.el('div', { class: 'vrow' });
+      const head = SH.el('div', { class: 'vhead' });
+      head.appendChild(SH.el('span', { style: 'color:#8b2e2e;font-weight:700;' }, realA));
+      head.appendChild(SH.el('span', { style: 'color:#aaa;' }, '↔'));
+      head.appendChild(SH.el('span', { style: 'color:#22506c;font-weight:700;' }, realB));
+      head.appendChild(SH.el('span', { class: 'chip' }, (r.score != null ? 'score ' + r.score.toFixed(3) : '')));
+      if (r.macro_block) head.appendChild(SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'macro #' + r.macro_block));
+      if (realANotes.length) head.appendChild(SH.el('span', { class: 'chip', style: 'background:rgba(139,46,46,0.15);color:#5a1f1f;' }, realANotes.length + ' · ' + D.a_book));
+      if (realBNotes.length) head.appendChild(SH.el('span', { class: 'chip', style: 'background:rgba(34,80,108,0.15);color:#183a50;' }, realBNotes.length + ' · ' + D.b_book));
+
+      head.appendChild(SH.el('a', {
+        href: '09_pair_explorer.html#' + D.name + '/' + realA + '|' + realB,
+        style: 'margin-left:auto;font-size:11px;color:#5a5a5a;text-decoration:underline;',
+      }, 'open pair →'));
+
+      card.appendChild(head);
+
+      if (realANotes.length) {
+        const box = SH.el('div', { class: 'vblk a' });
+        box.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:#8b2e2e;font-weight:bold;' }, D.a_book + ' variants'));
+        for (const n of realANotes) box.appendChild(SH.el('div', { class: 'vnote' }, n));
+        card.appendChild(box);
+      }
+      if (realBNotes.length) {
+        const box = SH.el('div', { class: 'vblk b' });
+        box.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:4px;color:#22506c;font-weight:bold;' }, D.b_book + ' variants'));
+        for (const n of realBNotes) box.appendChild(SH.el('div', { class: 'vnote' }, n));
+        card.appendChild(box);
+      }
+      cont.appendChild(card);
+    }
+    document.getElementById('showing').textContent = shown + (shown >= 400 ? '+' : '') + ' of ' + rows.length + ' pairs';
+  }
+  ['side', 'wit', 'onlyvar'].forEach(id => {
+    document.getElementById(id).addEventListener('input', render);
+    document.getElementById(id).addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Echo gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .echo-card { border:1px solid var(--rule); border-radius:3px; padding:10px 14px; margin-bottom:10px; background:#fff; }
+  .echo-top { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+  .echo-a, .echo-b { font-family: Cardo, "Gentium Plus", serif; font-size:16px; line-height:1.55; padding:6px 10px; border-radius:3px; }
+  .echo-a { background: rgba(139,46,46,0.06); border-left:3px solid #8b2e2e; }
+  .echo-b { background: rgba(34,80,108,0.06); border-left:3px solid #22506c; margin-top:4px; }
+  .echo-tag { display:inline-block; background:#ede8d6; color:#5a4a1a; padding:1px 6px; border-radius:2px; font-size:10.5px; margin-right:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Echo gallery</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+      <label>Min score <input type="range" id="minscore" min="0" max="1" step="0.05" value="0.80" /> <span id="minscorev">0.80</span></label>
+      <label>Min distance <input type="range" id="mindist" min="0" max="300" step="5" value="0" /> <span id="mindistv">0</span></label>
+      <label><input type="checkbox" id="hasGreek" checked /> only echoes with Greek text</label>
+      <label>Sort
+        <select id="sort">
+          <option value="score_desc">score ↓</option>
+          <option value="comp_desc">composite ↓</option>
+          <option value="nonloc_desc">distance ↓</option>
+          <option value="order">a-ref order</option>
+        </select>
+      </label>
+      <label>Tag <input type="text" id="tag" placeholder="e.g. strong_window_echo" size="22" /></label>
+      <span class="small" id="shown" style="margin-left:auto;"></span>
+    </div>
+  </div>
+
+  <div id="gallery"></div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('11_echo_gallery.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — high-signal non-chain parallels';
+
+  const captions = {
+    mm: 'Secondary echoes are pairs the chain did not claim. Because the Mark↔Matt primary chain is tight (385 pairs), echoes here are relatively sparse (231) and many are local "near misses" rather than true dislocations. Filter by min-distance to isolate the true structural echoes.',
+    ml: 'Echo gallery for Matt↔Luke — this is where most of the double-tradition evidence lives. Of 1,033 echoes, dozens score above 0.80 and sit hundreds of verses away from the chain position: these are Q-parallels reordered. The richer ML echoes carry Greek text directly, so you can read them here without switching pages.',
+    mld: '60 secondary echoes on the masked matrix, 38 tagged nonlocal_reorder. Because the primary chain is tiny (49 anchors), every echo reads as a richly preserved double-tradition parallel that the chain could not monotonically take — the characteristic Q-dislocation pattern. Greek is bundled directly on each card, so you can read both sides without switching pages. Try sorting by distance to surface the long-range parallels (e.g. Matt 25 talents ↔ Luke 19 pounds, reordered across ~700 verses of Lukan travel narrative).',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  const echoes = D.echoes.slice();
+
+  // also pull from detailed if available
+  function textFor(ref, side) {
+    // Find any pair or detailed entry that uses this ref on the correct side
+    for (const p of D.pairs) {
+      if (side === 'a' && p.a_ref === ref) return p.a_text;
+      if (side === 'b' && p.b_ref === ref) return p.b_text;
+    }
+    return '';
+  }
+
+  function render() {
+    const min = parseFloat(document.getElementById('minscore').value);
+    const minDist = parseFloat(document.getElementById('mindist').value);
+    const onlyGreek = document.getElementById('hasGreek').checked;
+    const sort = document.getElementById('sort').value;
+    const tag = document.getElementById('tag').value.trim().toLowerCase();
+    document.getElementById('minscorev').textContent = min.toFixed(2);
+    document.getElementById('mindistv').textContent = minDist.toFixed(0);
+
+    let arr = echoes.filter(e => e.score >= min);
+    if (minDist > 0) arr = arr.filter(e => (e.nonlocality || 0) >= minDist);
+    if (onlyGreek) arr = arr.filter(e => (e.a_text && e.b_text) || textFor(e.a_ref, 'a') || textFor(e.b_ref, 'b'));
+    if (tag) arr = arr.filter(e => (e.tags || []).some(t => t.toLowerCase().includes(tag)));
+
+    if (sort === 'score_desc') arr.sort((x, y) => y.score - x.score);
+    else if (sort === 'comp_desc') arr.sort((x, y) => (y.composite_score || y.score) - (x.composite_score || x.score));
+    else if (sort === 'nonloc_desc') arr.sort((x, y) => (y.nonlocality || 0) - (x.nonlocality || 0));
+    else arr.sort((x, y) => x.a_idx - y.a_idx);
+
+    arr = arr.slice(0, 200);
+
+    document.getElementById('shown').textContent = arr.length + ' of ' + echoes.length + ' echoes';
+
+    const g = document.getElementById('gallery');
+    while (g.firstChild) g.removeChild(g.firstChild);
+    for (const e of arr) {
+      const aText = e.a_text || textFor(e.a_ref, 'a');
+      const bText = e.b_text || textFor(e.b_ref, 'b');
+      const card = SH.el('div', { class: 'echo-card' });
+      const top = SH.el('div', { class: 'echo-top' });
+      top.appendChild(SH.el('span', { style: 'color:#8b2e2e;font-weight:700;' }, e.a_ref));
+      top.appendChild(SH.el('span', { style: 'color:#aaa;' }, '↔'));
+      top.appendChild(SH.el('span', { style: 'color:#22506c;font-weight:700;' }, e.b_ref));
+      top.appendChild(SH.el('span', { class: 'chip', style: `background:${SH.scoreColor(e.score)};color:#fff;` }, 'score ' + e.score.toFixed(3)));
+      if (e.composite_score != null) top.appendChild(SH.el('span', { class: 'chip' }, 'comp ' + e.composite_score.toFixed(3)));
+      if (e.nonlocality != null) top.appendChild(SH.el('span', { class: 'chip' }, 'dist ' + e.nonlocality.toFixed(0)));
+      if (e.tags) for (const tg of e.tags) top.appendChild(SH.el('span', { class: 'echo-tag' }, tg));
+      card.appendChild(top);
+      if (aText) card.appendChild(SH.el('div', { class: 'echo-a greek' }, aText));
+      if (bText) card.appendChild(SH.el('div', { class: 'echo-b greek' }, bText));
+      if (!aText && !bText) card.appendChild(SH.el('div', { class: 'small' }, '(Greek text not bundled for this echo — see source files)'));
+      g.appendChild(card);
+    }
+  }
+
+  ['minscore', 'mindist', 'hasGreek', 'sort', 'tag'].forEach(id => {
+    const el = document.getElementById(id);
+    const ev = (el.type === 'range' || el.type === 'checkbox' || el.tagName === 'SELECT') ? 'input' : 'input';
+    el.addEventListener('input', render);
+    if (el.tagName === 'SELECT') el.addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

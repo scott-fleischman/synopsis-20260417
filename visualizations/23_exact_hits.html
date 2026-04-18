@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Exact-phrase hits · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .layout { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .scatter-box { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 12px 16px; }
+  .scatter-box svg { width: 100%; height: 420px; }
+  .scatter-box svg text.axis-label { font-size: 11px; fill: var(--ink-mute); }
+  .scatter-box svg .grid-line { stroke: var(--rule-soft); stroke-width: 1; }
+  .scatter-box svg .axis { stroke: var(--rule); stroke-width: 1; }
+  .scatter-box svg circle.dot { cursor: pointer; transition: r 0.1s; }
+  .scatter-box svg circle.dot:hover { stroke: var(--ink); stroke-width: 1.5; }
+  .scatter-box .legend-row { display: flex; gap: 12px; font-size: 11px; color: var(--ink-mute); margin-top: 6px; }
+  .hit-filter { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 12px; }
+  .hit-filter label { display: flex; gap: 6px; align-items: center; color: var(--ink-soft); }
+  .hit-filter input[type=text] { width: 200px; }
+  .hit-filter .meter { font-family: var(--mono); color: var(--ink-mute); font-size: 11px; min-width: 40px; }
+  .hits-table { background: #fff; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+  .hits-table .data-table { font-family: var(--sans); }
+  .hits-table .data-table td.greek-cell { font-family: var(--greek); font-size: 13px; max-width: 360px; line-height: 1.4; }
+  .hits-table .data-table td.shared-cell { font-family: var(--greek); font-size: 11px; color: var(--ink-mute); max-width: 260px; }
+  .hits-table .data-table td.n { font-family: var(--mono); text-align: right; font-size: 11px; }
+  .tally-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 14px; }
+  .tally-grid .cell { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; }
+  .tally-grid .cell .n { font-family: var(--serif); font-size: 20px; color: var(--mark); }
+  .tally-grid .cell .k { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; }
+  .layer-tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 2px; }
+  .layer-tag.ets { background: #dee8f0; color: var(--matt); }
+  .layer-tag.jts { background: #f5e2e2; color: var(--mark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Exact-phrase hits</h1>
+    <span class="sub">200 highest-value automatic hits · filtered for scripture/liturgy noise</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    This is the <code>15_filtered_high_value_exact_hits.csv</code> table: candidate rows with score ≥ 0.35 <em>or</em> longest exact normalized Greek run ≥ 6 tokens, deduplicated and pattern-filtered to suppress the most common Septuagint prooftexts and liturgical formulas. Each dot in the scatter is a single source→target candidate, plotted by score (x) vs. longest exact run length (y). The far upper-right is where you find cases like <b>1Tim 5:18 ~ Luke 10:7</b> and <b>John 12:8 ~ Matt 26:11</b> — strong verbal agreement that survives the scripture/liturgy filter. Hover to see the shared Greek run.
+  </p>
+
+  <div class="tally-grid" id="tally"></div>
+
+  <div class="hit-filter">
+    <label>Layer:
+      <select id="layer_sel">
+        <option value="">all</option>
+        <option value="epistle_to_gospel">epistles → Gospels</option>
+        <option value="john_to_synoptic">John → Synoptics</option>
+      </select>
+    </label>
+    <label>Min score:
+      <input id="score_slider" type="range" min="0" max="100" value="35" step="1" />
+      <span class="meter" id="score_meter">0.35</span>
+    </label>
+    <label>Min run:
+      <input id="run_input" type="number" min="1" max="30" value="1" style="width:56px;" />
+    </label>
+    <label>Search:
+      <input id="q" type="text" placeholder="book, ref, or Greek run…" />
+    </label>
+    <span id="counter" class="meter" style="margin-left:auto;"></span>
+  </div>
+
+  <div class="scatter-box">
+    <div style="font-size:12px;color:var(--ink-mute);margin-bottom:4px;">Score × exact-run scatter</div>
+    <svg id="scatter"></svg>
+    <div class="legend-row">
+      <span><span class="sw" style="background:#8b2e2e;display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;"></span> John → Synoptic</span>
+      <span><span class="sw" style="background:#22506c;display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;"></span> Epistles → Gospels</span>
+      <span>· Dot size ∝ exact run length</span>
+    </div>
+  </div>
+
+  <div class="hits-table">
+    <div style="padding:10px 14px;border-bottom:1px solid var(--rule);background:#fbfaf6;display:flex;justify-content:space-between;align-items:center;">
+      <div><b>Filtered hits</b> <span class="small" id="table_note"></span></div>
+      <label class="small">Sort:
+        <select id="sort_sel">
+          <option value="score">score ↓</option>
+          <option value="run">run ↓</option>
+          <option value="source">source ref</option>
+          <option value="target">target ref</option>
+        </select>
+      </label>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr>
+          <th>Layer</th><th>Source</th><th>Target</th><th>Score</th><th>Run</th><th>Max exact run (Greek)</th><th>Shared content tokens</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('23_exact_hits.html');
+  const J = SH.BUNDLE.jtea;
+  const hits = J.exact_hits || [];
+  const total = hits.length;
+
+  // --- Tally
+  const byLayer = {};
+  let maxRun = 0, maxScore = 0;
+  let strongN = 0;
+  hits.forEach(h => {
+    byLayer[h.layer] = (byLayer[h.layer] || 0) + 1;
+    if (h.max_exact_run_len > maxRun) maxRun = h.max_exact_run_len;
+    if (h.score > maxScore) maxScore = h.score;
+    if (h.score >= 0.5 && h.max_exact_run_len >= 4) strongN++;
+  });
+  const ty = document.getElementById('tally');
+  [
+    ['Hits', total, ''],
+    ['Epistles→Gospels', byLayer['epistle_to_gospel'] || 0, ''],
+    ['John→Synoptics', byLayer['john_to_synoptic'] || 0, ''],
+    ['Max run length', maxRun, 'tokens'],
+    ['Score ≥ 0.5 & run ≥ 4', strongN, 'strong overlap'],
+  ].forEach(([k, v, s]) => {
+    ty.appendChild(SH.el('div', { class: 'cell' },
+      SH.el('div', { class: 'n' }, String(v)),
+      SH.el('div', { class: 'k' }, k),
+      SH.el('div', { class: 'small' }, s)));
+  });
+
+  // --- State
+  const state = { layer: '', score: 0.35, run: 1, q: '', sort: 'score' };
+  const bind = () => {
+    state.layer = document.getElementById('layer_sel').value;
+    state.score = parseInt(document.getElementById('score_slider').value, 10) / 100;
+    state.run = parseInt(document.getElementById('run_input').value, 10) || 1;
+    state.q = document.getElementById('q').value.toLowerCase();
+    state.sort = document.getElementById('sort_sel').value;
+    document.getElementById('score_meter').textContent = state.score.toFixed(2);
+    renderAll();
+  };
+  ['layer_sel', 'score_slider', 'run_input', 'q', 'sort_sel'].forEach(id => {
+    document.getElementById(id).addEventListener('input', bind);
+    document.getElementById(id).addEventListener('change', bind);
+  });
+
+  function filtered() {
+    return hits.filter(h => {
+      if (state.layer && h.layer !== state.layer) return false;
+      if (h.score < state.score) return false;
+      if (h.max_exact_run_len < state.run) return false;
+      if (state.q) {
+        const hay = (h.source_ref + ' ' + h.target_ref + ' ' + (h.max_exact_run || '') + ' ' + (h.shared_content_tokens || '')).toLowerCase();
+        if (hay.indexOf(state.q) < 0) return false;
+      }
+      return true;
+    });
+  }
+
+  function sortedFilt() {
+    const f = filtered();
+    if (state.sort === 'score') f.sort((a, b) => b.score - a.score);
+    else if (state.sort === 'run') f.sort((a, b) => b.max_exact_run_len - a.max_exact_run_len);
+    else if (state.sort === 'source') f.sort((a, b) => a.source_ref.localeCompare(b.source_ref));
+    else if (state.sort === 'target') f.sort((a, b) => a.target_ref.localeCompare(b.target_ref));
+    return f;
+  }
+
+  function renderScatter(f) {
+    const svg = document.getElementById('scatter');
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const W = svg.clientWidth || 1200;
+    const H = 420;
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    const pad = { l: 60, r: 20, t: 20, b: 40 };
+
+    const sx = SH.scale(0, 1, pad.l, W - pad.r);
+    const sy = SH.scale(0, maxRun || 1, H - pad.b, pad.t);
+
+    // Gridlines
+    for (let s = 0; s <= 1; s += 0.1) {
+      const x = sx(s);
+      const line = SH.svgEl('line', { class: 'grid-line', x1: x, x2: x, y1: pad.t, y2: H - pad.b });
+      svg.appendChild(line);
+      const label = SH.svgEl('text', { class: 'axis-label', x: x, y: H - pad.b + 14, 'text-anchor': 'middle' });
+      label.textContent = s.toFixed(1);
+      svg.appendChild(label);
+    }
+    for (let r = 0; r <= maxRun; r += Math.max(1, Math.ceil(maxRun / 10))) {
+      const y = sy(r);
+      const line = SH.svgEl('line', { class: 'grid-line', x1: pad.l, x2: W - pad.r, y1: y, y2: y });
+      svg.appendChild(line);
+      const label = SH.svgEl('text', { class: 'axis-label', x: pad.l - 8, y: y + 4, 'text-anchor': 'end' });
+      label.textContent = String(r);
+      svg.appendChild(label);
+    }
+
+    // Axes
+    svg.appendChild(SH.svgEl('line', { class: 'axis', x1: pad.l, x2: W - pad.r, y1: H - pad.b, y2: H - pad.b }));
+    svg.appendChild(SH.svgEl('line', { class: 'axis', x1: pad.l, x2: pad.l, y1: pad.t, y2: H - pad.b }));
+
+    const xl = SH.svgEl('text', { class: 'axis-label', x: W / 2, y: H - 6, 'text-anchor': 'middle' });
+    xl.textContent = 'Retrieval score';
+    svg.appendChild(xl);
+    const yl = SH.svgEl('text', { class: 'axis-label', x: 16, y: H / 2, 'text-anchor': 'middle', transform: 'rotate(-90 16 ' + (H / 2) + ')' });
+    yl.textContent = 'Longest exact run (tokens)';
+    svg.appendChild(yl);
+
+    // Dots
+    f.forEach(h => {
+      const x = sx(h.score);
+      const y = sy(h.max_exact_run_len);
+      const r = 3 + Math.sqrt(h.max_exact_run_len);
+      const color = h.layer === 'john_to_synoptic' ? '#8b2e2e' : '#22506c';
+      const c = SH.svgEl('circle', { class: 'dot', cx: x, cy: y, r: r, fill: color, opacity: 0.55 });
+      c.addEventListener('mouseenter', (ev) => {
+        const rect = svg.getBoundingClientRect();
+        SH.showTip([
+          SH.tipLine(h.source_ref + ' → ' + h.target_ref),
+          SH.tipRow('Score', h.score.toFixed(3)),
+          SH.tipRow('Run', h.max_exact_run_len + ' tokens'),
+          SH.tipGreek(h.max_exact_run || ''),
+        ], rect.left + x, rect.top + y);
+      });
+      c.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(c);
+    });
+  }
+
+  function renderTable(f) {
+    const tbody = document.getElementById('tbody');
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    const slice = f.slice(0, 400);
+    slice.forEach(h => {
+      const tr = document.createElement('tr');
+      tr.appendChild(SH.el('td', null, SH.el('span', { class: 'layer-tag ' + (h.layer === 'john_to_synoptic' ? 'jts' : 'ets') }, h.layer === 'john_to_synoptic' ? 'J→Syn' : 'Ep→Gsp')));
+      tr.appendChild(SH.el('td', null, h.source_ref));
+      tr.appendChild(SH.el('td', null, h.target_ref));
+      tr.appendChild(SH.el('td', { class: 'n' }, h.score.toFixed(3)));
+      tr.appendChild(SH.el('td', { class: 'n' }, String(h.max_exact_run_len)));
+      tr.appendChild(SH.el('td', { class: 'greek-cell' }, h.max_exact_run || ''));
+      tr.appendChild(SH.el('td', { class: 'shared-cell' }, h.shared_content_tokens || ''));
+      tbody.appendChild(tr);
+    });
+    document.getElementById('table_note').textContent = '(' + slice.length + ' of ' + f.length + ')';
+  }
+
+  function renderAll() {
+    const f = sortedFilt();
+    renderScatter(f);
+    renderTable(f);
+    document.getElementById('counter').textContent = f.length + ' / ' + total;
+  }
+
+  bind();
+  window.addEventListener('resize', () => renderScatter(sortedFilt()));
+})();
+</script>
+</body>
+</html>

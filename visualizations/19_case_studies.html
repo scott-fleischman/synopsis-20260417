@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Case studies · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .case-layout { display: grid; grid-template-columns: 320px 1fr; gap: 18px; align-items: start; }
+  .case-list { border: 1px solid var(--rule); border-radius: 3px; background: #fff; max-height: 78vh; overflow: auto; }
+  .case-item { padding: 10px 12px; border-bottom: 1px solid var(--rule-soft); cursor: pointer; }
+  .case-item:hover { background: #f4efdf; }
+  .case-item.active { background: #efe8d4; border-left: 3px solid var(--mark); padding-left: 9px; }
+  .case-item .ref { font-family: var(--serif); font-size: 14px; font-weight: 500; }
+  .case-item .feat { font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+  .section { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 18px; margin-bottom: 12px; }
+  .section h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 15px; }
+  .section .sub { color: var(--ink-mute); font-size: 12px; margin-bottom: 6px; }
+  .greek { font-family: var(--greek); font-size: 16px; line-height: 1.55; color: var(--ink); }
+  .greek.src { color: var(--mark); }
+  .greek.tgt { color: var(--matt); }
+  .hypotheses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hypo-card { border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; background: #fcfaf3; }
+  .hypo-card h5 { margin: 0 0 4px; font-size: 13px; color: var(--mark); font-family: var(--sans); text-transform: uppercase; letter-spacing: .02em; }
+  .hypo-card .body { font-size: 13px; line-height: 1.45; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .metric { background: #fbfaf6; border: 1px solid var(--rule); border-radius: 3px; padding: 8px 10px; }
+  .metric .n { font-family: var(--serif); font-size: 18px; color: var(--mark); }
+  .metric .k { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; }
+  .align-row { display: flex; align-items: stretch; gap: 0; font-family: var(--greek); font-size: 15px; min-height: 1.8em; margin-bottom: 4px; border-bottom: 1px dotted var(--rule-soft); padding-bottom: 3px; }
+  .align-row .label { width: 50px; flex-shrink: 0; font-family: var(--sans); font-size: 11px; color: var(--ink-mute); padding-right: 6px; padding-top: 2px; }
+  .align-row .content { flex: 1; }
+  .op { display: inline; padding: 1px 3px; border-radius: 2px; margin: 0 1px; }
+  .op.equal { background: transparent; }
+  .op.insert { background: #dbe8d5; color: #2a5a1a; }
+  .op.delete { background: #f0d0c8; color: #8b2e2e; text-decoration: line-through; }
+  .op.replace-a { background: #f0d0c8; color: #8b2e2e; }
+  .op.replace-b { background: #d6e1ec; color: #22506c; }
+  .best-expl { background: #efe8d4; border-left: 4px solid var(--accent); padding: 10px 14px; font-family: var(--serif); font-size: 15px; color: var(--ink); border-radius: 0 3px 3px 0; }
+  .filter-bar { display: flex; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--rule); background: #fbfaf6; align-items: center; }
+  .filter-bar input { padding: 4px 8px; font-size: 13px; border: 1px solid var(--rule); border-radius: 2px; flex: 1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Case studies</h1>
+    <span class="sub">Ten high-value cases with full Greek, token alignment, and per-hypothesis burden</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:900px;">
+    Each case pairs a source (usually an epistle or John) with a target (usually a Synoptic Gospel). The full Greek texts are shown with <span style="color:var(--mark);">source</span> and <span style="color:var(--matt);">target</span> colored; the token alignment below renders the same texts as an edit script (<span class="op equal" style="padding:1px 4px;">equal</span>, <span class="op insert" style="padding:1px 4px;">insert</span>, <span class="op delete" style="padding:1px 4px;">delete</span>, <span class="op replace-a" style="padding:1px 4px;">replace-a</span> / <span class="op replace-b" style="padding:1px 4px;">replace-b</span>) so you can see exactly how the two differ. Each hypothesis card carries the analyst's narrative estimate of its burden. The <em>provisional best explanation</em> is the model the case most strongly supports — not a final verdict.
+  </p>
+
+  <div class="case-layout">
+    <aside>
+      <div class="case-list">
+        <div class="filter-bar">
+          <input id="q" type="text" placeholder="Filter by ref or feature…" />
+        </div>
+        <div id="list"></div>
+      </div>
+    </aside>
+    <main id="detail"></main>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('19_case_studies.html');
+  const J = SH.BUNDLE.jtea;
+  const cases = J.case_studies || [];
+  if (!cases.length) { document.getElementById('detail').textContent = 'No case studies.'; return; }
+
+  let activeIdx = 0;
+  let filterStr = '';
+
+  function renderList() {
+    const q = filterStr.toLowerCase();
+    const list = document.getElementById('list');
+    while (list.firstChild) list.removeChild(list.firstChild);
+    cases.forEach((c, i) => {
+      const hay = [c.case_id, c.source_ref, c.target_ref, c.feature].join(' ').toLowerCase();
+      if (q && hay.indexOf(q) < 0) return;
+      const d = SH.el('div', { class: 'case-item' + (i === activeIdx ? ' active' : ''), onclick: () => { activeIdx = i; renderList(); renderDetail(); } },
+        SH.el('div', { class: 'ref' }, c.source_ref + ' → ' + c.target_ref),
+        SH.el('div', { class: 'feat' }, c.feature || c.case_id));
+      list.appendChild(d);
+    });
+  }
+
+  function renderHypotheses(hyp) {
+    const grid = document.createElement('div');
+    grid.className = 'hypotheses-grid';
+    if (!hyp) return grid;
+    Object.keys(hyp).forEach(k => {
+      const card = SH.el('div', { class: 'hypo-card' },
+        SH.el('h5', null, k.replace(/_/g, ' ')),
+        SH.el('div', { class: 'body' }, hyp[k]));
+      grid.appendChild(card);
+    });
+    return grid;
+  }
+
+  function renderAlignment(ops) {
+    const host = document.createElement('div');
+    if (!ops || !ops.length) { host.textContent = '(no alignment script)'; return host; }
+    const rowA = SH.el('div', { class: 'align-row' },
+      SH.el('div', { class: 'label' }, 'source'),
+      SH.el('div', { class: 'content' }));
+    const rowB = SH.el('div', { class: 'align-row' },
+      SH.el('div', { class: 'label' }, 'target'),
+      SH.el('div', { class: 'content' }));
+    const contA = rowA.querySelector('.content');
+    const contB = rowB.querySelector('.content');
+
+    ops.forEach(op => {
+      if (op.op === 'equal') {
+        if (op.a) contA.appendChild(SH.el('span', { class: 'op equal' }, op.a + ' '));
+        if (op.b) contB.appendChild(SH.el('span', { class: 'op equal' }, op.b + ' '));
+      } else if (op.op === 'insert') {
+        contA.appendChild(SH.el('span', { class: 'op', style: 'color:#b0a998;' }, '— '));
+        if (op.b) contB.appendChild(SH.el('span', { class: 'op insert' }, op.b + ' '));
+      } else if (op.op === 'delete') {
+        if (op.a) contA.appendChild(SH.el('span', { class: 'op delete' }, op.a + ' '));
+        contB.appendChild(SH.el('span', { class: 'op', style: 'color:#b0a998;' }, '— '));
+      } else if (op.op === 'replace') {
+        if (op.a) contA.appendChild(SH.el('span', { class: 'op replace-a' }, op.a + ' '));
+        if (op.b) contB.appendChild(SH.el('span', { class: 'op replace-b' }, op.b + ' '));
+      }
+    });
+    host.appendChild(rowA);
+    host.appendChild(rowB);
+    return host;
+  }
+
+  function boldLabel(labelText, bodyText) {
+    const el = SH.el('div', { style: 'margin-top:8px;color:var(--ink-soft);font-size:13px;' });
+    el.appendChild(SH.el('b', null, labelText));
+    el.appendChild(document.createTextNode(' ' + bodyText));
+    return el;
+  }
+
+  function renderDetail() {
+    const c = cases[activeIdx];
+    const d = document.getElementById('detail');
+    while (d.firstChild) d.removeChild(d.firstChild);
+
+    const h = SH.el('section', { class: 'section' });
+    h.appendChild(SH.el('h3', null, c.source_ref + ' ~ ' + c.target_ref + (c.feature ? ' — ' + c.feature : '')));
+    h.appendChild(SH.el('div', { class: 'sub' }, c.case_id));
+    if (c.why_high_value) h.appendChild(SH.el('div', null, c.why_high_value));
+    if (c.prima_facie_signal) h.appendChild(boldLabel('Prima facie:', c.prima_facie_signal));
+    d.appendChild(h);
+
+    const tx = SH.el('section', { class: 'section' });
+    tx.appendChild(SH.el('h3', null, 'Full Greek'));
+    if (c.source_text) {
+      const r = SH.el('div', { style: 'margin-bottom:8px;' });
+      r.appendChild(SH.el('div', { class: 'sub' }, c.source_ref));
+      r.appendChild(SH.el('div', { class: 'greek src' }, c.source_text));
+      tx.appendChild(r);
+    }
+    if (c.target_text) {
+      const r = SH.el('div', null);
+      r.appendChild(SH.el('div', { class: 'sub' }, c.target_ref));
+      r.appendChild(SH.el('div', { class: 'greek tgt' }, c.target_text));
+      tx.appendChild(r);
+    }
+    d.appendChild(tx);
+
+    if (c.automatic_metrics) {
+      const m = c.automatic_metrics;
+      const mx = SH.el('section', { class: 'section' });
+      mx.appendChild(SH.el('h3', null, 'Automatic metrics'));
+      const grid = SH.el('div', { class: 'metrics' });
+      const cells = [
+        ['Score', (m.score || 0).toFixed(3)],
+        ['Exact run', m.max_exact_run_len || 0],
+        ['LCS len', m.lcs_len || 0],
+        ['Shared fourgrams', m.shared_fourgrams || 0],
+        ['Token Jaccard', (m.token_weighted_jaccard || 0).toFixed(3)],
+        ['Stem Jaccard', (m.stem_weighted_jaccard || 0).toFixed(3)],
+        ['Shared bigrams', m.shared_bigrams || 0],
+        ['Shared trigrams', m.shared_trigrams || 0],
+      ];
+      cells.forEach(([k, n]) => {
+        grid.appendChild(SH.el('div', { class: 'metric' },
+          SH.el('div', { class: 'n' }, n),
+          SH.el('div', { class: 'k' }, k)));
+      });
+      mx.appendChild(grid);
+      if (m.max_exact_run) {
+        const row = SH.el('div', { style: 'margin-top:10px;font-family:var(--greek);font-size:14px;' });
+        row.appendChild(SH.el('span', { style: 'color:var(--ink-mute);font-family:var(--sans);font-size:11px;' }, 'LONGEST EXACT: '));
+        row.appendChild(SH.el('b', null, m.max_exact_run));
+        mx.appendChild(row);
+      }
+      if (m.shared_content_tokens) {
+        const row = SH.el('div', { style: 'margin-top:4px;font-family:var(--greek);font-size:13px;' });
+        row.appendChild(SH.el('span', { style: 'color:var(--ink-mute);font-family:var(--sans);font-size:11px;' }, 'SHARED CONTENT: '));
+        row.appendChild(document.createTextNode(m.shared_content_tokens));
+        mx.appendChild(row);
+      }
+      d.appendChild(mx);
+    }
+
+    if (c.token_alignment_ops && c.token_alignment_ops.length) {
+      const tk = SH.el('section', { class: 'section' });
+      tk.appendChild(SH.el('h3', null, 'Token alignment'));
+      tk.appendChild(SH.el('div', { class: 'sub' }, 'Each row shows one side of the edit script. Green chips are insertions (on target only); red struck chips are deletions (on source only); colored replace pairs show substitutions.'));
+      tk.appendChild(renderAlignment(c.token_alignment_ops));
+      d.appendChild(tk);
+    }
+
+    if (c.hypotheses) {
+      const hp = SH.el('section', { class: 'section' });
+      hp.appendChild(SH.el('h3', null, 'Hypothesis burdens'));
+      hp.appendChild(renderHypotheses(c.hypotheses));
+      d.appendChild(hp);
+    }
+
+    if (c.provisional_best_explanation) {
+      const bx = SH.el('div', { class: 'best-expl' });
+      bx.appendChild(SH.el('b', null, 'Provisional best explanation:'));
+      bx.appendChild(document.createTextNode(' ' + c.provisional_best_explanation));
+      d.appendChild(bx);
+    }
+  }
+
+  document.getElementById('q').addEventListener('input', e => {
+    filterStr = e.target.value;
+    renderList();
+  });
+
+  renderList();
+  renderDetail();
+})();
+</script>
+</body>
+</html>

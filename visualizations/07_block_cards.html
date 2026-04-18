@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Block cards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Block cards</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
+      <label style="font-size:12px;">Sort by
+        <select id="sortby" style="padding:4px 8px;font-size:12px;margin-left:6px;">
+          <option value="id">block id (order in gospel)</option>
+          <option value="score">avg score (high → low)</option>
+          <option value="score_asc">avg score (low → high)</option>
+          <option value="pairs">pair count</option>
+          <option value="tokenDelta">|token delta|</option>
+          <option value="variants">variant notes</option>
+          <option value="strain">direction strain (ML)</option>
+        </select>
+      </label>
+      <label style="font-size:12px;">Confidence
+        <select id="filtercon" style="padding:4px 8px;font-size:12px;margin-left:6px;">
+          <option value="">(all)</option>
+          <option value="high">high</option>
+          <option value="medium">medium</option>
+          <option value="low">low</option>
+        </select>
+      </label>
+      <label style="font-size:12px;">Operations contain
+        <input id="filterop" placeholder="e.g. expansion" style="padding:4px 8px;font-size:12px;margin-left:6px;width:160px;" />
+      </label>
+      <span class="small" id="showingcount" style="margin-left:auto;"></span>
+    </div>
+  </div>
+
+  <div id="cards"></div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('07_block_cards.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — macro blocks in full';
+
+  const captions = {
+    mm: 'Every macro block in Mark↔Matthew laid out as an individual card: reference span, pair count, average score, variant counts, top common lemmas, ins/del/rep totals, and both-direction "what must each hypothesis explain" notes. Sort by score to see the high-confidence cores; sort by pair count to see the largest zones (block 6 Mark 4:35–6:1 is Galilean miracles, block 9 Mark 8:1–9:1 is the second feeding through Peter\'s confession).',
+    ml: 'Macro blocks in Matt↔Luke are smaller and sparser — most have 1–3 pairs because the Q-material is so rewritten that only the strongest verbal cores survive as primary. But the ML dataset carries richer direction-burden numerics: every block has "numeric_strain" values for each hypothesis (Matt-prior vs Luke-prior). Sort by "direction strain" to rank blocks by how hard either direction is to defend.',
+    mld: 'Macro blocks on the Markan-masked Matt↔Luke backbone — there are only 13, because after removing likely-Markan verses very little remains as stable backbone. Block 2 (Matt 3:7–4:7 / Luke 3:7–4:12, the Baptist-and-temptation cluster) is by far the densest. Each card shows the 3-hypothesis heuristic burden: Luke-uses-Matthew, Matthew-uses-Luke, and common source/oral.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  // Normalize mld block shape to look like mm/ml block shape for the render layer.
+  function normalizeBlock(b) {
+    if (D.name !== 'mld') return b;
+    return {
+      ...b,
+      id: b.block_id,
+      avg_score: b.mean_score,
+      matt_start_ref: b.matt_start,
+      matt_end_ref: b.matt_end,
+      luke_start_ref: b.luke_start,
+      luke_end_ref: b.luke_end,
+      matt_token_count: 0,  // not in mld loose_full
+      luke_token_count: 0,
+      variant_matt_count: 0,
+      variant_luke_count: 0,
+      confidence: b.mean_score >= 0.7 ? 'high' : (b.mean_score >= 0.5 ? 'medium' : 'low'),
+      aggregate_diff: {},
+      matched_pairs: (b.pairs || []).map(p => ({
+        matt_ref: p.matt_ref,
+        luke_ref: p.luke_ref,
+        score: p.score,
+      })),
+    };
+  }
+  const blocks = (D.loose_full || []).map(normalizeBlock);
+  const ledgerByBlockId = {};
+  for (const entry of (D.ledger || [])) {
+    const id = entry.block_id || entry.id;
+    if (id != null) ledgerByBlockId[id] = entry;
+  }
+
+  function strainOf(b) {
+    const le = ledgerByBlockId[b.id];
+    if (!le) return null;
+    if (D.name === 'mld') {
+      // mld ledger puts heuristic_burden under each hypothesis key at top level.
+      const a = le.matt_prior_Luke_uses_Matthew?.heuristic_burden;
+      const cBur = le.luke_prior_Matthew_uses_Luke?.heuristic_burden;
+      return { a: a, b: cBur, full: le };
+    }
+    if (D.name === 'ml') {
+      const dl = le.direction_ledger || {};
+      const n = (k) => dl[k]?.burden_summary?.numeric?.overall;
+      return { a: n('matt_prior'), b: n('luke_prior'), full: dl };
+    }
+    // mm has no numeric strain — surface a stable proxy (operation count) so the
+    // sort is meaningful rather than silently ordering by 0.
+    const aN = (le.mark_prior_operations || []).length;
+    const bN = (le.matt_prior_operations || []).length;
+    return { a: aN, b: bN, full: le };
+  }
+
+  const state = { sortby: 'id', filtercon: '', filterop: '' };
+
+  function render() {
+    const cont = document.getElementById('cards');
+    while (cont.firstChild) cont.removeChild(cont.firstChild);
+    let arr = blocks.slice();
+
+    if (state.filtercon) arr = arr.filter(b => b.confidence === state.filtercon);
+    if (state.filterop) {
+      const needle = state.filterop.toLowerCase();
+      arr = arr.filter(b => {
+        const le = ledgerByBlockId[b.id];
+        if (!le) return false;
+        // Haystack must cover all three dataset shapes:
+        //   mm  — mark_prior_operations / matt_prior_operations arrays at top level
+        //   ml  — direction_ledger.{matt|luke}_prior.operation_profile[].type
+        //   mld — {matt|luke|common}_... keys with required_operations[] at top level
+        const parts = [];
+        if (D.name === 'mm') {
+          parts.push(...(le.mark_prior_operations || []));
+          parts.push(...(le.matt_prior_operations || []));
+          parts.push(...(le.mark_prior_notes || []));
+          parts.push(...(le.matt_prior_notes || []));
+        } else if (D.name === 'ml') {
+          const dl = le.direction_ledger || {};
+          for (const k of ['matt_prior', 'luke_prior']) {
+            const side = dl[k] || {};
+            parts.push(...(side.operation_profile || []).map(o => o.type || ''));
+            parts.push(...(side.concise_reasoning || []));
+          }
+        } else {
+          for (const k of ['matt_prior_Luke_uses_Matthew', 'luke_prior_Matthew_uses_Luke', 'common_source_or_oral']) {
+            parts.push(...(le[k]?.required_operations || []));
+          }
+        }
+        return parts.join(' ').toLowerCase().indexOf(needle) >= 0;
+      });
+    }
+
+    arr.sort((x, y) => {
+      switch (state.sortby) {
+        case 'score': return y.avg_score - x.avg_score;
+        case 'score_asc': return x.avg_score - y.avg_score;
+        case 'pairs': return y.pair_count - x.pair_count;
+        case 'tokenDelta': {
+          const dX = Math.abs((x.b_token_count ?? x.matt_token_count ?? x.luke_token_count ?? 0) - (x.a_token_count ?? x.mark_token_count ?? x.matt_token_count ?? 0));
+          const dY = Math.abs((y.b_token_count ?? y.matt_token_count ?? y.luke_token_count ?? 0) - (y.a_token_count ?? y.mark_token_count ?? y.matt_token_count ?? 0));
+          return dY - dX;
+        }
+        case 'variants': {
+          const vX = (x.variant_mark_count || 0) + (x.variant_matt_count || 0) + (x.variant_luke_count || 0);
+          const vY = (y.variant_mark_count || 0) + (y.variant_matt_count || 0) + (y.variant_luke_count || 0);
+          return vY - vX;
+        }
+        case 'strain': {
+          const sx = strainOf(x), sy = strainOf(y);
+          const mx = sx ? Math.max(sx.a || 0, sx.b || 0) : 0;
+          const my = sy ? Math.max(sy.a || 0, sy.b || 0) : 0;
+          return my - mx;
+        }
+        default: return x.id - y.id;
+      }
+    });
+
+    document.getElementById('showingcount').textContent = arr.length + ' of ' + blocks.length + ' blocks';
+
+    for (const b of arr) cont.appendChild(makeCard(b));
+  }
+
+  function makeCard(b) {
+    const aStartRef = b.mark_start_ref || b.matt_start_ref;
+    const aEndRef = b.mark_end_ref || b.matt_end_ref;
+    const bStartRef = b.matt_start_ref || b.luke_start_ref;
+    const bEndRef = b.matt_end_ref || b.luke_end_ref;
+    const aStart = (D.name === 'mm') ? b.mark_start_ref : b.matt_start_ref;
+    const aEnd = (D.name === 'mm') ? b.mark_end_ref : b.matt_end_ref;
+    const bStart = (D.name === 'mm') ? b.matt_start_ref : b.luke_start_ref;
+    const bEnd = (D.name === 'mm') ? b.matt_end_ref : b.luke_end_ref;
+
+    const aTok = (D.name === 'mm') ? b.mark_token_count : b.matt_token_count;
+    const bTok = (D.name === 'mm') ? b.matt_token_count : b.luke_token_count;
+
+    const aVar = (D.name === 'mm') ? b.variant_mark_count : b.variant_matt_count;
+    const bVar = (D.name === 'mm') ? b.variant_matt_count : b.variant_luke_count;
+
+    const agg = b.aggregate_diff || {};
+
+    const card = SH.el('div', { class: 'card', style: 'margin-bottom:14px;' });
+    // Header
+    const head = SH.el('div', { style: 'display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;' },
+      SH.el('div', { style: 'font-size:18px;font-weight:700;' }, 'Block ' + b.id),
+      SH.el('div', { style: 'color:#8b2e2e;font-weight:600;' }, aStart + (aStart === aEnd ? '' : ' – ' + aEnd)),
+      SH.el('div', { style: 'color:#22506c;font-weight:600;' }, bStart + (bStart === bEnd ? '' : ' – ' + bEnd)),
+      SH.el('div', { class: 'chip', style: `background:${SH.scoreColor(b.avg_score)};color:#fff;` }, 'score ' + b.avg_score.toFixed(3)),
+      SH.el('div', { class: 'chip' }, b.confidence + ' · ' + b.pair_count + ' pairs'),
+    );
+    card.appendChild(head);
+
+    // Stats row
+    const stats = SH.el('div', { class: 'grid cols-4', style: 'margin-top:10px;' });
+    const mkStat = (k, v, extra) => SH.el('div', { class: 'stat', style: 'padding:8px 10px;' },
+      SH.el('div', { class: 'n', style: 'font-size:20px;' }, String(v)),
+      SH.el('div', { class: 'k' }, k),
+      extra ? SH.el('div', { class: 'small' }, extra) : null);
+    stats.appendChild(mkStat(D.a_book + ' tokens', aTok, aVar ? aVar + ' variant notes' : ''));
+    stats.appendChild(mkStat(D.b_book + ' tokens', bTok, bVar ? bVar + ' variant notes' : ''));
+    stats.appendChild(mkStat('ins / del / rep', (agg.lemma_insertions || 0) + ' · ' + (agg.lemma_deletions || 0) + ' · ' + (agg.lemma_replacements || 0), 'lemma ops across pairs'));
+    const unm = (b.unmatched_mark_refs || b.unmatched_matt_refs || []).length + '/' + (b.unmatched_matt_refs || b.unmatched_luke_refs || []).length;
+    stats.appendChild(mkStat('unmatched a/b', unm, 'verses with no partner in block'));
+    card.appendChild(stats);
+
+    // Common lemmas
+    if (agg.common_lemmas_top && agg.common_lemmas_top.length) {
+      const box = SH.el('div', { style: 'margin-top:10px;' },
+        SH.el('div', { class: 'small', style: 'margin-bottom:4px;' }, 'Top shared lemmas in this block:'));
+      const lemRow = SH.el('div', { style: 'display:flex;flex-wrap:wrap;gap:8px;line-height:1.9;' });
+      for (const pair of agg.common_lemmas_top.slice(0, 14)) {
+        const lem = pair[0], n = pair[1];
+        lemRow.appendChild(SH.el('span', { class: 'greek', style: 'background:rgba(168,85,26,0.1);padding:2px 6px;border-radius:3px;font-size:13px;' },
+          lem, SH.el('span', { class: 'small', style: 'margin-left:4px;color:#7a7a7a;' }, n)));
+      }
+      box.appendChild(lemRow);
+      card.appendChild(box);
+    }
+
+    // Ledger / direction burden
+    const le = ledgerByBlockId[b.id];
+    if (D.name === 'mld' && le) {
+      const hypos = [
+        { key: 'matt_prior_Luke_uses_Matthew', color: '#8b2e2e', title: 'Matt-prior (Luke uses Matt)' },
+        { key: 'luke_prior_Matthew_uses_Luke', color: '#22506c', title: 'Luke-prior (Matt uses Luke)' },
+        { key: 'common_source_or_oral',        color: '#0f766e', title: 'Common source / oral' },
+      ];
+      const ledgerBox = SH.el('div', { class: 'grid cols-3', style: 'margin-top:12px;' });
+      for (const h of hypos) {
+        const s = le[h.key];
+        const box = SH.el('div', { style: `border-left:4px solid ${h.color};padding:6px 14px;background:#fbfaf6;` });
+        box.appendChild(SH.el('div', { style: `color:${h.color};font-weight:700;font-size:13px;` }, h.title));
+        if (s) {
+          const hb = typeof s.heuristic_burden === 'number' ? s.heuristic_burden.toFixed(3) : '—';
+          box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:4px;' },
+            'heuristic burden: ', SH.el('b', null, hb)));
+          for (const op of (s.required_operations || [])) {
+            box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:4px;line-height:1.4;' }, '• ' + op));
+          }
+        }
+        // Also surface metrics from the block anchors
+        if (le.metrics) {
+          box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:6px;color:var(--ink-mute);' },
+            'pairs ' + le.metrics.pair_count + ' · span-asym ' + le.metrics.span_asymmetry));
+        }
+        ledgerBox.appendChild(box);
+      }
+      card.appendChild(ledgerBox);
+    } else if (le && le.direction_ledger) {
+      const dl = le.direction_ledger;
+      const aKey = (D.name === 'mm') ? 'mark_prior' : 'matt_prior';
+      const bKey = (D.name === 'mm') ? 'matt_prior' : 'luke_prior';
+
+      const ledgerBox = SH.el('div', { class: 'grid cols-2', style: 'margin-top:12px;' });
+      function sideBox(key, color, title) {
+        const s = dl[key];
+        if (!s) return SH.el('div', null, '(no ledger)');
+        const box = SH.el('div', { style: `border-left:4px solid ${color};padding:6px 14px;background:#fbfaf6;` });
+        box.appendChild(SH.el('div', { style: `color:${color};font-weight:700;font-size:13px;` }, title));
+        box.appendChild(SH.el('div', { class: 'small' }, s.hypothesis || ''));
+        const ops = (s.operation_profile || []).map(o => o.type + (o.strength ? ' (' + o.strength + ')' : '')).join(', ');
+        if (ops) box.appendChild(SH.el('div', { style: 'margin-top:6px;' }, 'Operations: ', SH.el('b', null, ops)));
+        const bs = s.burden_summary || {};
+        if (bs.numeric) {
+          const n = bs.numeric;
+          const line = SH.el('div', { class: 'small', style: 'margin-top:4px;' });
+          line.appendChild(document.createTextNode(
+            `strain: ${n.overall?.toFixed(2) ?? '—'} (tr=${n.transformation?.toFixed(2) ?? '—'}, res=${n.residual?.toFixed(2) ?? '—'}, coinc=${n.coincidence?.toFixed(2) ?? '—'})`
+          ));
+          box.appendChild(line);
+        } else if (bs.overall_directional_strain) {
+          box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:4px;' }, 'strain: ' + bs.overall_directional_strain));
+        }
+        const cr = s.concise_reasoning || [];
+        for (const r of cr) box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:4px;line-height:1.4;' }, '• ' + r));
+        const notesKey = (D.name === 'mm') ? (key + '_notes') : null;
+        if (notesKey && le[notesKey]) {
+          for (const n of le[notesKey].slice(0, 3)) box.appendChild(SH.el('div', { class: 'small', style: 'margin-top:4px;color:#5a5a5a;line-height:1.4;' }, '– ' + n));
+        }
+        return box;
+      }
+      ledgerBox.appendChild(sideBox(aKey, '#8b2e2e', (D.name === 'mm' ? 'Mark-prior' : 'Matt-prior') + ' hypothesis'));
+      ledgerBox.appendChild(sideBox(bKey, '#22506c', (D.name === 'mm' ? 'Matt-prior' : 'Luke-prior') + ' hypothesis'));
+      card.appendChild(ledgerBox);
+    }
+
+    // Matched pairs
+    if (b.matched_pairs && b.matched_pairs.length) {
+      const detBox = SH.el('details', { style: 'margin-top:10px;' },
+        SH.el('summary', { style: 'cursor:pointer;font-size:12px;color:var(--ink-soft);' }, b.matched_pairs.length + ' matched pair' + (b.matched_pairs.length === 1 ? '' : 's') + ' in this block'));
+      const t = SH.el('table', { class: 'data-table', style: 'margin-top:6px;' });
+      const thead = SH.el('thead');
+      const thr = SH.el('tr');
+      ['a-ref', 'b-ref', 'score'].forEach(h => thr.appendChild(SH.el('th', null, h)));
+      thead.appendChild(thr);
+      t.appendChild(thead);
+      const tb = SH.el('tbody');
+      for (const mp of b.matched_pairs) {
+        const tr = SH.el('tr');
+        const aR = mp.mark_ref || mp.matt_ref;
+        const bR = mp.matt_ref || mp.luke_ref;
+        const realA = (D.name === 'mm') ? mp.mark_ref : mp.matt_ref;
+        const realB = (D.name === 'mm') ? mp.matt_ref : mp.luke_ref;
+        tr.appendChild(SH.el('td', { style: 'color:#8b2e2e;' }, realA));
+        tr.appendChild(SH.el('td', { style: 'color:#22506c;' }, realB));
+        tr.appendChild(SH.el('td', null, mp.score.toFixed(3)));
+        tb.appendChild(tr);
+      }
+      t.appendChild(tb);
+      detBox.appendChild(t);
+      card.appendChild(detBox);
+    }
+
+    return card;
+  }
+
+  document.getElementById('sortby').addEventListener('change', e => { state.sortby = e.target.value; render(); });
+  document.getElementById('filtercon').addEventListener('change', e => { state.filtercon = e.target.value; render(); });
+  document.getElementById('filterop').addEventListener('input', e => { state.filterop = e.target.value; render(); });
+  render();
+})();
+</script>
+</body>
+</html>

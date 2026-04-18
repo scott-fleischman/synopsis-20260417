@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Direction burden</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Direction burden</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="grid" id="hypothesesGrid"></div>
+
+  <div class="card">
+    <h2>Per-block fingerprint</h2>
+    <div class="caption" style="margin:0 0 10px;">Each block is a column. Rows group operations. Cells are filled when the operation is invoked under the given hypothesis. Click a block id to lock; click again to release.</div>
+    <div class="scrollx"><div id="heatmap"></div></div>
+  </div>
+
+  <div class="card">
+    <h2>Burden totals</h2>
+    <div class="caption" id="burdenCaption" style="margin:0 0 10px;"></div>
+    <div id="burdenTotals"></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('03_burden_ledger.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — what each hypothesis must explain';
+
+  const captions = {
+    mm: 'The 25 Mark↔Matthew blocks decomposed into the editing operations each direction-hypothesis demands. An "expansion" chip under Matt-prior means Mark would have had to expand that block; under Mark-prior it means Matthew did. The aggregate shape is broadly symmetric because operations are labels — but the per-block fingerprints differ, and the gap totals (visible on the Overview page) are asymmetric.',
+    ml: 'The 32 Matt↔Luke blocks. Under Matt-prior, Luke must have reordered substantial sermon material and re-distributed sayings between its "great insertion" (9:49–15:2) and other blocks. Under Luke-prior, Matthew must have clustered free-standing sayings into the Sermon on the Mount. The numeric totals are dramatically weighted: Matt-prior strain ≈ 142.6, Luke-prior ≈ 75.5 — because Matthean clustering is a lighter hypothesis than Lukan dispersion.',
+    mld: 'The 13 masked-double-tradition blocks, after Markan material has been removed from both Matthew and Luke. Three hypotheses are scored, not two: Luke-uses-Matthew, Matthew-uses-Luke, and a common-source/oral model. The common-source column does not have to account for directional redaction, so its heuristic burden is strictly smaller (8.86 total) than the directional totals (26.45 each); this is a reminder that masking isolates the Q question rather than solving it.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  // Hypothesis descriptors. For mm/ml the ledger is derived from macro.a_prior_ops / b_prior_ops.
+  // For mld each ledger record carries three sub-objects with `required_operations`.
+  const HYPOS = D.name === 'mld' ? [
+    { key: 'matt_prior_Luke_uses_Matthew', label: 'Matt-prior (Luke uses Matt)', color: '#8b2e2e' },
+    { key: 'luke_prior_Matthew_uses_Luke', label: 'Luke-prior (Matt uses Luke)', color: '#22506c' },
+    { key: 'common_source_or_oral',       label: 'Common source / oral',        color: '#0f766e' },
+  ] : [
+    { key: 'a_prior_ops', label: D.a_book + '-prior (' + D.b_book + ' uses ' + D.a_book + ')', color: '#8b2e2e' },
+    { key: 'b_prior_ops', label: D.b_book + '-prior (' + D.a_book + ' uses ' + D.b_book + ')', color: '#22506c' },
+  ];
+
+  // Unified ops-per-hypothesis-per-block lookup. Returns ops list for (block_id, hypothesis key).
+  // mm: macro block has a_prior_ops/b_prior_ops already (from mark_prior_operations CSV column).
+  // ml: macro has strain but not ops — read operation_profile[] from ledger.
+  // mld: ledger record has required_operations[] under each hypothesis key.
+  function opsForBlock(hypoKey, block, ledgerRec) {
+    if (D.name === 'mld') {
+      const sub = ledgerRec && ledgerRec[hypoKey];
+      return sub ? (sub.required_operations || []) : [];
+    }
+    if (D.name === 'ml') {
+      const ledgerKey = hypoKey === 'a_prior_ops' ? 'matt_prior' : 'luke_prior';
+      const sub = ledgerRec && ledgerRec.direction_ledger && ledgerRec.direction_ledger[ledgerKey];
+      if (!sub || !Array.isArray(sub.operation_profile)) return [];
+      return sub.operation_profile.map(o => o.type).filter(Boolean);
+    }
+    return block[hypoKey] || [];
+  }
+
+  const blocks = D.macro;
+  const ledgerByBlock = new Map();
+  for (const r of (D.ledger || [])) ledgerByBlock.set(r.block_id, r);
+
+  // Aggregate operations across blocks for a hypothesis.
+  function aggOps(hypo) {
+    const counts = new Map();
+    for (const b of blocks) {
+      const ops = opsForBlock(hypo.key, b, ledgerByBlock.get(b.id));
+      for (const op of ops) counts.set(op, (counts.get(op) || 0) + 1);
+    }
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  }
+
+  const grid = document.getElementById('hypothesesGrid');
+  grid.className = HYPOS.length === 3 ? 'grid cols-3' : 'grid cols-2';
+
+  function drawBars(cont, data, color) {
+    if (!data.length) { cont.appendChild(SH.el('div', { class: 'small' }, '(no operations recorded)')); return; }
+    const W = 520, rowH = 20, pad = 8;
+    const H = pad + data.length * rowH + pad;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.display = 'block';
+    const max = Math.max(1, ...data.map(d => d[1]));
+    const labelW = 180;
+    const fx = SH.scale(0, max, labelW + 6, W - 40);
+    data.forEach((d, i) => {
+      const y = pad + i * rowH;
+      const label = d[0].replace(/_/g, ' ');
+      const short = label.length > 38 ? label.slice(0, 37) + '…' : label;
+      const lab = SH.svgEl('text', { x: labelW, y: y + rowH / 2 + 4, 'font-size': 10, 'text-anchor': 'end', fill: '#4a4a4a' });
+      lab.textContent = short;
+      const ttl = SH.svgEl('title'); ttl.textContent = label; lab.appendChild(ttl);
+      svg.appendChild(lab);
+      const bar = SH.svgEl('rect', { x: labelW + 6, y: y + 3, width: fx(d[1]) - (labelW + 6), height: rowH - 6, fill: color, 'fill-opacity': 0.82 });
+      svg.appendChild(bar);
+      const val = SH.svgEl('text', { x: fx(d[1]) + 4, y: y + rowH / 2 + 4, 'font-size': 11, fill: '#1a1a1a' });
+      val.textContent = d[1];
+      svg.appendChild(val);
+    });
+    cont.appendChild(svg);
+  }
+
+  HYPOS.forEach(h => {
+    const data = aggOps(h);
+    const side = D.name === 'mld'
+      ? (h.key === 'common_source_or_oral' ? 'No direction asserted.' : 'Operations required if this hypothesis is true.')
+      : (h.key === 'a_prior_ops' ? 'Operations a redactor moving a → b would have to invoke.' : 'Operations a redactor moving b → a would have to invoke.');
+    const card = SH.el('div', { class: 'card', style: 'border-top:3px solid ' + h.color + ';' });
+    card.appendChild(SH.el('h3', { style: 'color:' + h.color }, h.label));
+    card.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:8px;' }, side));
+    const barHost = SH.el('div');
+    drawBars(barHost, data, h.color);
+    card.appendChild(barHost);
+    grid.appendChild(card);
+  });
+
+  // Heatmap per block — each row group is an operation with one row per hypothesis.
+  const opSet = new Set();
+  HYPOS.forEach(h => aggOps(h).forEach(e => opSet.add(e[0])));
+  const allOps = [...opSet];
+  const rowsPerOp = HYPOS.length;
+  const cellW = Math.max(14, Math.floor(900 / Math.max(1, blocks.length)));
+  const cellH = 13;
+  const leftW = 240;
+  const topH = 60;
+  const W = leftW + blocks.length * cellW + 20;
+  const H = topH + (allOps.length * rowsPerOp + 2) * cellH + 40;
+  const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+  svg.style.background = '#fff';
+
+  blocks.forEach((b, i) => {
+    const x = leftW + i * cellW + cellW / 2;
+    const t = SH.svgEl('text', { x, y: topH - 6, 'font-size': 9, 'text-anchor': 'middle', fill: '#7a7a7a' });
+    t.textContent = b.id;
+    svg.appendChild(t);
+    const t2 = SH.svgEl('text', { x, y: topH - 18, 'font-size': 8, 'text-anchor': 'middle', fill: SH.scoreColor(b.avg_score) });
+    t2.textContent = b.avg_score.toFixed(2);
+    svg.appendChild(t2);
+  });
+  blocks.forEach((b, i) => {
+    const x = leftW + i * cellW;
+    const r = SH.svgEl('rect', { x, y: topH - 30, width: cellW - 1, height: 8, fill: SH.scoreColor(b.avg_score) });
+    svg.appendChild(r);
+  });
+
+  allOps.forEach((op, oi) => {
+    const groupY = topH + (oi * rowsPerOp) * cellH;
+    // Alternating band for the whole op group
+    svg.appendChild(SH.svgEl('rect', {
+      x: leftW, y: groupY, width: blocks.length * cellW, height: cellH * rowsPerOp,
+      fill: oi % 2 === 0 ? '#fbfaf6' : '#fff',
+    }));
+    const labelFull = op.replace(/_/g, ' ');
+    const label = labelFull.length > 44 ? labelFull.slice(0, 43) + '…' : labelFull;
+    const lab = SH.svgEl('text', {
+      x: leftW - 6,
+      y: groupY + (cellH * rowsPerOp) / 2 + 3,
+      'font-size': 10,
+      'text-anchor': 'end',
+      fill: '#1a1a1a',
+    });
+    lab.textContent = label;
+    const ttl = SH.svgEl('title'); ttl.textContent = labelFull; lab.appendChild(ttl);
+    svg.appendChild(lab);
+
+    HYPOS.forEach((h, hi) => {
+      const y = groupY + hi * cellH;
+      const hLab = SH.svgEl('text', {
+        x: leftW - 6, y: y + cellH / 2 + 4,
+        'font-size': 8, 'text-anchor': 'end', fill: h.color,
+      });
+      hLab.textContent = D.name === 'mld'
+        ? (h.key === 'common_source_or_oral' ? 'common' : h.key.startsWith('matt_') ? 'matt-prior' : 'luke-prior')
+        : (h.key === 'a_prior_ops' ? 'a-prior' : 'b-prior');
+      // Only put the side-label next to the per-hypothesis row (offset from the group label)
+      hLab.setAttribute('x', String(leftW - 124));
+      svg.appendChild(hLab);
+
+      blocks.forEach((b, i) => {
+        const x = leftW + i * cellW;
+        const ops = opsForBlock(h.key, b, ledgerByBlock.get(b.id));
+        if (ops.includes(op)) {
+          svg.appendChild(SH.svgEl('rect', {
+            x: x + 1, y: y + 2, width: cellW - 2, height: cellH - 3,
+            fill: h.color, 'fill-opacity': 0.85,
+          }));
+        }
+      });
+    });
+  });
+  document.getElementById('heatmap').appendChild(svg);
+
+  // Burden totals
+  const bcap = document.getElementById('burdenCaption');
+  const bt = document.getElementById('burdenTotals');
+  const burden = D.burden;
+  if (D.name === 'mld') {
+    bcap.textContent = 'Masked Matt↔Luke burden uses heuristic numeric totals for three hypotheses. The Matt-prior and Luke-prior totals are identical (26.45) because the masked blocks are small and the operations mirror each other; the common-source/oral hypothesis totals only 8.86 because it does not bear a directional burden. These are audit aids, not posterior probabilities.';
+    const wrap = SH.el('div', { style: 'display:grid;grid-template-columns:repeat(3,1fr);gap:18px;' });
+    const defs = [
+      { key: 'matt_prior_Luke_uses_Matthew', label: 'Matt-prior (Luke uses Matt)', color: '#8b2e2e' },
+      { key: 'luke_prior_Matthew_uses_Luke', label: 'Luke-prior (Matt uses Luke)', color: '#22506c' },
+      { key: 'common_source_or_oral',       label: 'Common source / oral',        color: '#0f766e' },
+    ];
+    for (const d of defs) {
+      const src = burden[d.key] || {};
+      const ops = src.operation_type_counts || {};
+      const opArr = Object.entries(ops).sort((a, b) => b[1] - a[1]);
+      const card = SH.el('div', { class: 'card', style: 'border-left:4px solid ' + d.color + ';margin:0;' });
+      card.appendChild(SH.el('h3', { style: 'color:' + d.color + ';' }, d.label));
+      card.appendChild(SH.el('div', { style: 'font-size:13px;line-height:1.7;margin:8px 0;' },
+        SH.el('div', null, 'Heuristic total: ',
+          SH.el('b', null, typeof src.numeric_total === 'number' ? src.numeric_total.toFixed(2) : '—'))));
+      if (opArr.length) {
+        card.appendChild(SH.el('h3', { style: 'font-size:12px;margin-top:10px;color:var(--ink-mute);' }, 'Operation types'));
+        const opSvg = SH.svgEl('svg', { viewBox: `0 0 420 ${opArr.length * 20 + 8}`, width: 420 });
+        const max = Math.max(1, ...opArr.map(x => x[1]));
+        const fx = SH.scale(0, max, 200, 380);
+        opArr.forEach((op, i) => {
+          const y = i * 20;
+          const lab = SH.svgEl('text', { x: 192, y: y + 14, 'font-size': 11, 'text-anchor': 'end', fill: '#4a4a4a' });
+          lab.textContent = op[0].replace(/_/g, ' ');
+          opSvg.appendChild(lab);
+          opSvg.appendChild(SH.svgEl('rect', { x: 204, y: y + 4, width: fx(op[1]) - 204, height: 12, fill: d.color, 'fill-opacity': 0.82 }));
+          const v = SH.svgEl('text', { x: fx(op[1]) + 4, y: y + 14, 'font-size': 11, fill: '#1a1a1a' });
+          v.textContent = op[1];
+          opSvg.appendChild(v);
+        });
+        card.appendChild(opSvg);
+      } else {
+        card.appendChild(SH.el('div', { class: 'small', style: 'margin-top:8px;' }, 'No block-level operation counts — uniform burden across blocks.'));
+      }
+      wrap.appendChild(card);
+    }
+    // Per-block heuristic burden numerics (the "burden per block" view, unique to mld)
+    const perBlockCard = SH.el('div', { class: 'card', style: 'grid-column:1/-1;margin:0;' });
+    perBlockCard.appendChild(SH.el('h3', null, 'Per-block heuristic burden'));
+    perBlockCard.appendChild(SH.el('div', { class: 'small', style: 'margin-bottom:8px;' },
+      'Heuristic burden per block under each hypothesis. Closer values across hypotheses mean the block does not discriminate between them.'));
+    const rows = D.ledger || [];
+    if (rows.length) {
+      const bw = 900, bh = Math.max(160, rows.length * 22);
+      const svg = SH.svgEl('svg', { viewBox: `0 0 ${bw} ${bh}`, width: bw });
+      // One row per block, three ticks (matt/luke/common).
+      const maxVal = Math.max(0.5, ...rows.flatMap(r => [
+        r.matt_prior_Luke_uses_Matthew?.heuristic_burden || 0,
+        r.luke_prior_Matthew_uses_Luke?.heuristic_burden || 0,
+        r.common_source_or_oral?.heuristic_burden || 0,
+      ]));
+      const fx = SH.scale(0, maxVal, 150, bw - 30);
+      rows.forEach((r, i) => {
+        const y = i * 22 + 14;
+        svg.appendChild(SH.svgEl('line', { x1: 150, y1: y, x2: bw - 30, y2: y, stroke: '#ece9dc' }));
+        const lab = SH.svgEl('text', { x: 144, y: y + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#4a4a4a' });
+        lab.textContent = 'block ' + r.block_id + ' — ' + (r.anchors?.matt || '');
+        svg.appendChild(lab);
+        defs.forEach((dd, di) => {
+          const v = r[dd.key]?.heuristic_burden || 0;
+          const cx = fx(v);
+          const c = SH.svgEl('circle', { cx, cy: y, r: 5, fill: dd.color, 'fill-opacity': 0.9 });
+          const ttl = SH.svgEl('title');
+          ttl.textContent = dd.label + ': ' + v.toFixed(3);
+          c.appendChild(ttl);
+          svg.appendChild(c);
+        });
+      });
+      perBlockCard.appendChild(svg);
+    }
+    wrap.appendChild(perBlockCard);
+    bt.appendChild(wrap);
+  } else if (D.name === 'mm') {
+    bcap.textContent = 'Mark↔Matthew burden totals are labelled by operation type. The total pair-count is identical for each side (because every operation in one direction has its mirror), but the per-block distribution differs.';
+    const dirs = [['mark_prior', 'Mark-prior (Matt uses Mark)', '#8b2e2e'], ['matt_prior', 'Matt-prior (Mark uses Matt)', '#22506c']];
+    const data = dirs.map(([k, label, color]) => ({
+      label, color,
+      ops: Object.entries(burden.direction_operation_counts[k] || {}).sort((a,b) => b[1]-a[1]),
+    }));
+    const W = 1100, rowH = 22;
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${Math.max(data[0].ops.length, data[1].ops.length)*rowH + 40}`, width: W });
+    svg.style.display = 'block';
+    const panelW = (W - 20) / 2;
+    data.forEach((d, col) => {
+      const baseX = col * panelW + 10;
+      const title = SH.svgEl('text', { x: baseX, y: 14, 'font-size': 12, fill: d.color, 'font-weight': 'bold' });
+      title.textContent = d.label;
+      svg.appendChild(title);
+      const max = Math.max(1, ...d.ops.map(x => x[1]));
+      const fx = SH.scale(0, max, baseX + 190, baseX + panelW - 30);
+      d.ops.forEach((op, i) => {
+        const y = 36 + i * rowH;
+        const lab = SH.svgEl('text', { x: baseX + 180, y: y + rowH / 2 + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#4a4a4a' });
+        lab.textContent = op[0].replace(/_/g, ' ');
+        svg.appendChild(lab);
+        svg.appendChild(SH.svgEl('rect', { x: baseX + 195, y: y + 4, width: fx(op[1]) - (baseX + 195), height: rowH - 8, fill: d.color, 'fill-opacity': 0.82 }));
+        const v = SH.svgEl('text', { x: fx(op[1]) + 4, y: y + rowH / 2 + 4, 'font-size': 11, fill: '#1a1a1a' });
+        v.textContent = op[1];
+        svg.appendChild(v);
+      });
+    });
+    bt.appendChild(svg);
+  } else {
+    bcap.textContent = 'Matt↔Luke burden uses numeric strain totals. The Matt-prior hypothesis carries a heavier overall strain (142.6) than Luke-prior (75.5) in this quantification — mainly because, under Matt-prior, Luke must disperse Matthew\'s sermons into his travel narrative, whereas under Luke-prior, Matthew "merely" clusters.';
+    const wrap = SH.el('div', { style: 'display:grid;grid-template-columns:1fr 1fr;gap:20px;' });
+    for (const [key, label, color] of [['matt_prior', 'Matt-prior (Luke uses Matt)', '#8b2e2e'], ['luke_prior', 'Luke-prior (Matt uses Luke)', '#22506c']]) {
+      const src = burden[key] || {};
+      const num = src.numeric_totals || {};
+      const ops = src.operation_type_counts || {};
+      const strainBlocks = src.overall_strain_block_counts || {};
+      const col = SH.el('div', { class: 'card', style: 'border-left:4px solid ' + color + ';' },
+        SH.el('h3', { style: 'color:' + color }, label),
+        SH.el('div', { style: 'font-size:13px;line-height:1.7;margin:8px 0' },
+          SH.el('div', null, 'Overall strain: ', SH.el('b', null, String(num.overall ?? '–'))),
+          SH.el('div', null, 'Transformation: ', String(num.transformation ?? '–')),
+          SH.el('div', null, 'Residual: ', String(num.residual ?? '–')),
+          SH.el('div', null, 'Coincidence: ', String(num.coincidence ?? '–'))),
+        SH.el('h3', null, 'Strain block counts'),
+        SH.el('div', { class: 'small', style: 'display:flex;gap:14px;' },
+          SH.el('span', null, 'low ', SH.el('b', null, String(strainBlocks.low ?? 0))),
+          SH.el('span', null, 'med ', SH.el('b', null, String(strainBlocks.medium ?? 0))),
+          SH.el('span', null, 'high ', SH.el('b', null, String(strainBlocks.high ?? 0)))),
+        SH.el('h3', { style: 'margin-top:12px' }, 'Operation types'));
+      const opSvg = SH.svgEl('svg', { viewBox: `0 0 480 ${Math.max(1, Object.keys(ops).length)*22 + 8}`, width: 480 });
+      const opArr = Object.entries(ops).sort((a, b) => b[1] - a[1]);
+      const max = Math.max(1, ...opArr.map(x => x[1]));
+      const fx = SH.scale(0, max, 200, 440);
+      opArr.forEach((op, i) => {
+        const y = i * 22;
+        const lab = SH.svgEl('text', { x: 192, y: y + 16, 'font-size': 11, 'text-anchor': 'end', fill: '#4a4a4a' });
+        lab.textContent = op[0].replace(/_/g, ' ');
+        opSvg.appendChild(lab);
+        opSvg.appendChild(SH.svgEl('rect', { x: 204, y: y + 6, width: fx(op[1]) - 204, height: 14, fill: color, 'fill-opacity': 0.82 }));
+        const v = SH.svgEl('text', { x: fx(op[1]) + 4, y: y + 16, 'font-size': 11, fill: '#1a1a1a' });
+        v.textContent = op[1];
+        opSvg.appendChild(v);
+      });
+      col.appendChild(opSvg);
+      wrap.appendChild(col);
+    }
+    bt.appendChild(wrap);
+  }
+})();
+</script>
+</body>
+</html>

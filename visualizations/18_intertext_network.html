@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Intertext network · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .net-stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 16px; }
+  .net-stats .cell { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 8px 10px; }
+  .net-stats .cell .n { font-family: var(--serif); font-size: 18px; color: var(--mark); }
+  .net-stats .cell .k { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .06em; }
+  .controls { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; margin-bottom: 14px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 12px; }
+  .controls label { display: flex; align-items: center; gap: 6px; color: var(--ink-soft); }
+  .controls input[type=text] { width: 180px; }
+  .controls input[type=range] { width: 120px; }
+  .controls .meter { font-family: var(--mono); color: var(--ink-mute); font-size: 11px; min-width: 40px; }
+  .arc-box { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px; margin-bottom: 14px; overflow-x: auto; }
+  .arc-svg text.book-label { font-family: var(--serif); font-size: 11px; fill: var(--ink-soft); }
+  .arc-svg text.book-label.source { fill: var(--mark); font-weight: 500; }
+  .arc-svg text.book-label.target { fill: var(--matt); font-weight: 500; }
+  .arc-svg path.edge { fill: none; opacity: 0.35; cursor: pointer; }
+  .arc-svg path.edge:hover { opacity: 1; stroke-width: 2; }
+  .arc-svg .node-dot { cursor: pointer; }
+  .table-box { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 0; overflow: hidden; }
+  .table-box .table-head { padding: 10px 14px; border-bottom: 1px solid var(--rule); background: #fbfaf6; display: flex; justify-content: space-between; align-items: center; }
+  .table-box .data-table { font-family: var(--sans); }
+  .table-box .data-table td.greek-run { font-family: var(--greek); font-size: 13px; }
+  .table-box .data-table td.score-cell { font-family: var(--mono); font-size: 11px; text-align: right; }
+  .table-box .data-table .flag-chip { background: #f3e2ce; color: var(--warn); font-size: 10px; padding: 1px 5px; border-radius: 2px; margin-right: 3px; display: inline-block; }
+  .layer-tag { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 2px; font-family: var(--sans); }
+  .layer-tag.ets { background: #dee8f0; color: var(--matt); }
+  .layer-tag.jts { background: #f5e2e2; color: var(--mark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Intertext network</h1>
+    <span class="sub">6,397 candidate edges · epistles → Gospels and John → Synoptics</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    The edge table combines automatic Greek retrieval (layers <em>epistles_to_gospels</em> and <em>john_to_synoptics</em>) into a single network. Each edge is a candidate — a source verse paired with a windowed target — scored by normalized token overlap plus longest exact run. Most edges are <em>noise</em> (shared scriptural formulas, stock paraenesis, or thin lexical matches) and carry a <code>flags</code> field marking why. The arc diagram below shows book-to-book aggregation above the top filtered edges; the table is the drill-down. Use the controls to isolate high-score, long-run, or unflagged subsets.
+  </p>
+
+  <div class="net-stats" id="net_stats"></div>
+
+  <div class="controls">
+    <label>Layer:
+      <select id="layer_sel">
+        <option value="">all</option>
+        <option value="epistles_to_gospels">epistles → Gospels</option>
+        <option value="john_to_synoptics">John → Synoptics</option>
+      </select>
+    </label>
+    <label>Min score:
+      <input id="score_slider" type="range" min="0" max="100" value="0" step="1" />
+      <span class="meter" id="score_meter">0.00</span>
+    </label>
+    <label>Min exact run:
+      <input id="run_input" type="number" min="1" max="20" value="1" style="width:56px;" />
+    </label>
+    <label><input id="unflagged_only" type="checkbox" /> Hide flagged</label>
+    <label>Filter:
+      <input id="text_filter" type="text" placeholder="book or ref or run text…" />
+    </label>
+    <span id="counter" class="meter" style="margin-left:auto;"></span>
+  </div>
+
+  <div class="arc-box">
+    <div style="font-size:12px;color:var(--ink-mute);margin-bottom:6px;">Book-level arc diagram — epistle/John books on left, Gospel books on right. Arc weight ∝ count of filtered edges between the two books.</div>
+    <svg id="arc_svg" class="arc-svg" width="1300" height="440"></svg>
+    <div style="font-size:11px;color:var(--ink-mute);margin-top:4px;">Hover an arc for edge count and mean score. <span class="layer-tag jts" style="margin:0 4px;">John→Syn</span> <span class="layer-tag ets">Ep→Gsp</span></div>
+  </div>
+
+  <div class="table-box">
+    <div class="table-head">
+      <div><b>Top filtered edges</b> <span class="small" id="table_note">(up to 400 rows)</span></div>
+      <div><label class="small">Sort:
+        <select id="sort_sel">
+          <option value="score">score ↓</option>
+          <option value="run">exact run ↓</option>
+          <option value="source">source ref</option>
+          <option value="target">target ref</option>
+        </select>
+      </label></div>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="data-table" id="edge_table">
+        <thead><tr>
+          <th>Layer</th><th>Source</th><th>Target</th><th>Score</th><th>Run</th><th>Greek run</th><th>Flags</th>
+        </tr></thead>
+        <tbody id="edge_tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('18_intertext_network.html');
+  const J = SH.BUNDLE.jtea;
+  const edges = J.network_edges || [];
+
+  function bookOf(ref) {
+    const s = String(ref || '');
+    const m = s.match(/^([1-3]?[A-Za-z]+)/);
+    return m ? m[1] : s;
+  }
+
+  edges.forEach(e => {
+    e._src_book = bookOf(e.source_ref);
+    e._tgt_book = bookOf(e.target_ref);
+    e._flag_count = e.flags ? e.flags.split('|').filter(Boolean).length : 0;
+  });
+
+  // --- Stats
+  const total = edges.length;
+  const layerCounts = {};
+  const scoreBuckets = { hi: 0, mid: 0, lo: 0 };
+  const runBuckets = { r4: 0, r6: 0, r8: 0 };
+  let flaggedCount = 0;
+  edges.forEach(e => {
+    layerCounts[e.layer] = (layerCounts[e.layer] || 0) + 1;
+    if (e.score >= 0.35) scoreBuckets.hi++;
+    else if (e.score >= 0.2) scoreBuckets.mid++;
+    else scoreBuckets.lo++;
+    if (e.max_exact_run_len >= 4) runBuckets.r4++;
+    if (e.max_exact_run_len >= 6) runBuckets.r6++;
+    if (e.max_exact_run_len >= 8) runBuckets.r8++;
+    if (e._flag_count > 0) flaggedCount++;
+  });
+
+  const stats = [
+    ['Total edges', total.toLocaleString(), 'all candidates'],
+    ['Epistles→Gospels', (layerCounts['epistles_to_gospels'] || 0).toLocaleString(), ''],
+    ['John→Synoptics', (layerCounts['john_to_synoptics'] || 0).toLocaleString(), ''],
+    ['Score ≥ 0.35', scoreBuckets.hi.toLocaleString(), 'strong retrieval'],
+    ['Exact run ≥ 4', runBuckets.r4.toLocaleString(), '·6: ' + runBuckets.r6 + ' ·8: ' + runBuckets.r8],
+    ['Flagged', flaggedCount.toLocaleString(), 'scripture/formula/noise'],
+  ];
+  const ns = document.getElementById('net_stats');
+  for (const [k, n, s] of stats) {
+    ns.appendChild(SH.el('div', { class: 'cell' },
+      SH.el('div', { class: 'n' }, n),
+      SH.el('div', { class: 'k' }, k),
+      SH.el('div', { class: 'small' }, s)));
+  }
+
+  // --- Controls state
+  const state = { layer: '', score: 0, run: 1, unflagged: false, q: '', sort: 'score' };
+  const bindRender = () => {
+    state.layer = document.getElementById('layer_sel').value;
+    state.score = parseInt(document.getElementById('score_slider').value, 10) / 100;
+    state.run = parseInt(document.getElementById('run_input').value, 10) || 1;
+    state.unflagged = document.getElementById('unflagged_only').checked;
+    state.q = document.getElementById('text_filter').value.toLowerCase();
+    state.sort = document.getElementById('sort_sel').value;
+    document.getElementById('score_meter').textContent = state.score.toFixed(2);
+    renderAll();
+  };
+  ['layer_sel', 'score_slider', 'run_input', 'unflagged_only', 'text_filter', 'sort_sel'].forEach(id => {
+    document.getElementById(id).addEventListener('input', bindRender);
+    document.getElementById(id).addEventListener('change', bindRender);
+  });
+
+  function filtered() {
+    return edges.filter(e => {
+      if (state.layer && e.layer !== state.layer) return false;
+      if (e.score < state.score) return false;
+      if (e.max_exact_run_len < state.run) return false;
+      if (state.unflagged && e._flag_count > 0) return false;
+      if (state.q) {
+        const hay = (e.source_ref + ' ' + e.target_ref + ' ' + (e.max_exact_run || '')).toLowerCase();
+        if (hay.indexOf(state.q) < 0) return false;
+      }
+      return true;
+    });
+  }
+
+  function sortedFilt() {
+    const f = filtered();
+    if (state.sort === 'score') f.sort((a, b) => b.score - a.score);
+    else if (state.sort === 'run') f.sort((a, b) => b.max_exact_run_len - a.max_exact_run_len);
+    else if (state.sort === 'source') f.sort((a, b) => a.source_ref.localeCompare(b.source_ref));
+    else if (state.sort === 'target') f.sort((a, b) => a.target_ref.localeCompare(b.target_ref));
+    return f;
+  }
+
+  // --- Arc diagram
+  const SOURCE_BOOK_ORDER = ['John', 'Rom', '1Cor', '2Cor', 'Gal', 'Eph', 'Phil', 'Col', '1Thess', '2Thess', '1Tim', '2Tim', 'Titus', 'Phlm', 'Heb', 'Jas', '1Pet', '2Pet', '1John', '2John', '3John', 'Jude', 'Rev'];
+  const TARGET_BOOK_ORDER = ['Matt', 'Mark', 'Luke', 'John'];
+
+  function renderArc(f) {
+    const svg = document.getElementById('arc_svg');
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const W = 1300, H = 440;
+    const srcBooks = SOURCE_BOOK_ORDER.filter(b => f.some(e => e._src_book === b));
+    const tgtBooks = TARGET_BOOK_ORDER.filter(b => f.some(e => e._tgt_book === b));
+    const srcX = 120, tgtX = W - 120;
+
+    const srcYscale = (i) => 30 + (i + 0.5) * ((H - 60) / Math.max(srcBooks.length, 1));
+    const tgtYscale = (i) => 30 + (i + 0.5) * ((H - 60) / Math.max(tgtBooks.length, 1));
+
+    const srcPos = {};
+    srcBooks.forEach((b, i) => { srcPos[b] = srcYscale(i); });
+    const tgtPos = {};
+    tgtBooks.forEach((b, i) => { tgtPos[b] = tgtYscale(i); });
+
+    // Aggregate
+    const agg = {};
+    f.forEach(e => {
+      const k = e._src_book + '→' + e._tgt_book;
+      if (!agg[k]) agg[k] = { src: e._src_book, tgt: e._tgt_book, count: 0, sumScore: 0, maxScore: 0, layer: e.layer };
+      agg[k].count++;
+      agg[k].sumScore += e.score;
+      if (e.score > agg[k].maxScore) agg[k].maxScore = e.score;
+    });
+    const aggList = Object.values(agg).sort((a, b) => a.count - b.count); // draw light first
+    const maxC = Math.max(1, ...aggList.map(a => a.count));
+
+    // Arcs
+    aggList.forEach(a => {
+      const y1 = srcPos[a.src], y2 = tgtPos[a.tgt];
+      if (y1 == null || y2 == null) return;
+      const path = SH.svgEl('path', {
+        class: 'edge',
+        d: `M ${srcX} ${y1} C ${(srcX + tgtX) / 2} ${y1}, ${(srcX + tgtX) / 2} ${y2}, ${tgtX} ${y2}`,
+        stroke: a.layer === 'john_to_synoptics' ? '#8b2e2e' : '#22506c',
+        'stroke-width': 1 + Math.sqrt(a.count / maxC) * 4,
+      });
+      path.addEventListener('mouseenter', (ev) => {
+        const rect = svg.getBoundingClientRect();
+        SH.showTip([
+          SH.tipLine(a.src + ' → ' + a.tgt, 'g'),
+          SH.tipRow('Edges', String(a.count)),
+          SH.tipRow('Mean score', (a.sumScore / a.count).toFixed(3)),
+          SH.tipRow('Max score', a.maxScore.toFixed(3)),
+        ], rect.left + ev.offsetX, rect.top + ev.offsetY);
+      });
+      path.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(path);
+    });
+
+    // Book labels
+    srcBooks.forEach((b, i) => {
+      const y = srcYscale(i);
+      const dot = SH.svgEl('circle', { class: 'node-dot', cx: srcX, cy: y, r: 3, fill: '#8b2e2e' });
+      svg.appendChild(dot);
+      const text = SH.svgEl('text', { class: 'book-label source', x: srcX - 8, y: y + 4, 'text-anchor': 'end' });
+      text.textContent = b;
+      svg.appendChild(text);
+    });
+    tgtBooks.forEach((b, i) => {
+      const y = tgtYscale(i);
+      const dot = SH.svgEl('circle', { class: 'node-dot', cx: tgtX, cy: y, r: 4, fill: '#22506c' });
+      svg.appendChild(dot);
+      const text = SH.svgEl('text', { class: 'book-label target', x: tgtX + 8, y: y + 4, 'text-anchor': 'start' });
+      text.textContent = b;
+      svg.appendChild(text);
+    });
+
+    // Column titles
+    const st = SH.svgEl('text', { class: 'book-label source', x: srcX, y: 16, 'text-anchor': 'middle' });
+    st.textContent = 'source';
+    svg.appendChild(st);
+    const tt = SH.svgEl('text', { class: 'book-label target', x: tgtX, y: 16, 'text-anchor': 'middle' });
+    tt.textContent = 'target';
+    svg.appendChild(tt);
+  }
+
+  function renderTable(f) {
+    const tbody = document.getElementById('edge_tbody');
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    const slice = f.slice(0, 400);
+    slice.forEach(e => {
+      const tr = document.createElement('tr');
+      tr.appendChild(SH.el('td', null, SH.el('span', { class: 'layer-tag ' + (e.layer === 'john_to_synoptics' ? 'jts' : 'ets') }, e.layer === 'john_to_synoptics' ? 'J→Syn' : 'Ep→Gsp')));
+      tr.appendChild(SH.el('td', null, e.source_ref));
+      tr.appendChild(SH.el('td', null, e.target_ref));
+      tr.appendChild(SH.el('td', { class: 'score-cell' }, e.score.toFixed(3)));
+      tr.appendChild(SH.el('td', { class: 'score-cell' }, String(e.max_exact_run_len)));
+      tr.appendChild(SH.el('td', { class: 'greek-run' }, e.max_exact_run || ''));
+      const flagsTd = document.createElement('td');
+      (e.flags || '').split('|').filter(Boolean).forEach(fl => {
+        flagsTd.appendChild(SH.el('span', { class: 'flag-chip', title: fl }, fl.replace(/_/g, ' ')));
+      });
+      tr.appendChild(flagsTd);
+      tbody.appendChild(tr);
+    });
+    document.getElementById('table_note').textContent = '(' + slice.length + ' of ' + f.length + ' filtered)';
+  }
+
+  function renderAll() {
+    const f = sortedFilt();
+    renderArc(f);
+    renderTable(f);
+    document.getElementById('counter').textContent = f.length.toLocaleString() + ' / ' + total.toLocaleString();
+  }
+
+  bindRender();
+})();
+</script>
+</body>
+</html>

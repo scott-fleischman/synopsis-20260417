@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Displacement &amp; reorder map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Displacement &amp; reorder map</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <h2>Arc diagram of nonlocal echoes</h2>
+    <div class="caption" style="margin:0 0 10px;">Each arc connects a verse in <b id="aLabel"></b> to a high-similarity echo in <b id="bLabel"></b> that is not on the primary chain — i.e. material that appears at different narrative positions in the two gospels. Thicker arcs = higher score; color scales with score. Chapter boundaries are tick marks; hover an arc for details.</div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;font-size:12px;">
+      <label><input type="checkbox" id="strong" checked /> score ≥ 0.80 only</label>
+      <label><input type="checkbox" id="hi_nonloc" /> nonlocality ≥ 100 verses</label>
+      <label>color <select id="colorby" style="font-size:12px;padding:2px 6px;"><option value="score">score</option><option value="nonloc">distance</option></select></label>
+      <span id="arcCount" class="small" style="margin-left:auto;"></span>
+    </div>
+    <div id="arc"></div>
+  </div>
+
+  <div class="card">
+    <h2>Displacement histogram</h2>
+    <div class="caption" style="margin:0 0 10px;">|b_idx − expected_b_idx| distance for every echo. The long right tail is the signature of systematic reordering (Luke\'s Great Insertion pulls Matthew material far from its canonical position).</div>
+    <div id="hist"></div>
+  </div>
+
+  <div class="card">
+    <h2>Top-50 nonlocal echoes</h2>
+    <div class="caption" style="margin:0 0 10px;">Sorted by score. Click a row to open the pair in the explorer (when a primary-pair key exists for these refs).</div>
+    <div class="scrollx"><table class="data-table" id="echotbl"></table></div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('10_displacement.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  document.getElementById('sub').textContent = D.label + ' — nonlocal parallels';
+  document.getElementById('aLabel').textContent = D.a_book;
+  document.getElementById('bLabel').textContent = D.b_book;
+
+  const captions = {
+    mm: 'Secondary echoes in Mark↔Matthew are the pairs the chain could not take. Many of them are local (same content, minor position shift). The ones at large distance are Matthew\'s structural remix — a Markan eschatological line landing in Matt 24, or Matt\'s Olivet section borrowing from Mark\'s little apocalypse with reshuffled order. There are 231 echoes total; with the "strong" filter you see only the high-signal ones.',
+    ml: 'Matt↔Luke has 1,033 echoes — 4× the primary chain. This is the evidence for reordering in the double tradition: Matthew\'s Sermon on the Mount material lives in Luke\'s Sermon on the Plain, but also scattered across Luke 10–13. The arc diagram shows the "Great Insertion" clearly — many arcs reach far into Luke 9–15 from Matthean positions. The long right tail in the distance histogram is the quantitative fingerprint of this reordering.',
+    mld: 'Markan-masked Matt↔Luke has 60 secondary echoes, 38 of them tagged nonlocal_reorder. Because the primary chain is tiny (49 pairs), the distance measure here is computed from the 49 anchors by linear interpolation — long arcs are verses where the double-tradition echo lands far from where chain geometry would place it. Classic examples: Matt 8:20 (foxes-have-holes) echoing Luke 9:58 in Luke\'s Travel Narrative; Matt 25 talents parables reaching into Luke 19. Click any arc to jump into the pair explorer.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  // --- Arc diagram
+  const W = 1160, H = 420, pad = 40;
+  const aY = H - 80;
+  const bY = aY;
+  const aStart = pad, aEnd = W / 2 - 60;
+  const bStart = W / 2 + 60, bEnd = W - pad;
+  const aTot = D.meta.a_total_verses;
+  const bTot = D.meta.b_total_verses;
+  const fxA = SH.scale(0, aTot - 1, aStart, aEnd);
+  const fxB = SH.scale(0, bTot - 1, bStart, bEnd);
+  const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+  svg.style.background = '#fbfaf6';
+
+  // Baselines
+  svg.appendChild(SH.svgEl('line', { x1: aStart, x2: aEnd, y1: aY, y2: aY, stroke: '#8b2e2e', 'stroke-width': 2 }));
+  svg.appendChild(SH.svgEl('line', { x1: bStart, x2: bEnd, y1: bY, y2: bY, stroke: '#22506c', 'stroke-width': 2 }));
+  // Labels
+  const aL = SH.svgEl('text', { x: aStart, y: aY + 22, 'font-size': 12, fill: '#8b2e2e', 'font-weight': 'bold' });
+  aL.textContent = D.a_book;
+  svg.appendChild(aL);
+  const bL = SH.svgEl('text', { x: bEnd, y: bY + 22, 'font-size': 12, 'text-anchor': 'end', fill: '#22506c', 'font-weight': 'bold' });
+  bL.textContent = D.b_book;
+  svg.appendChild(bL);
+
+  // Chapter ticks
+  for (const c of D.meta.a_chapters) {
+    const x = fxA(c.offset);
+    svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: aY, y2: aY + 6, stroke: '#c7b787' }));
+    if (c.chapter === 1 || c.chapter % 2 === 1) {
+      const t = SH.svgEl('text', { x, y: aY + 16, 'font-size': 9, 'text-anchor': 'middle', fill: '#8b2e2e' });
+      t.textContent = c.chapter;
+      svg.appendChild(t);
+    }
+  }
+  for (const c of D.meta.b_chapters) {
+    const x = fxB(c.offset);
+    svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: bY, y2: bY + 6, stroke: '#c7b787' }));
+    if (c.chapter === 1 || c.chapter % 2 === 1) {
+      const t = SH.svgEl('text', { x, y: bY + 16, 'font-size': 9, 'text-anchor': 'middle', fill: '#22506c' });
+      t.textContent = c.chapter;
+      svg.appendChild(t);
+    }
+  }
+
+  // Arcs
+  const arcs = D.echoes.filter(e => e.nonlocal || e.category === 'nonlocal_echo');
+  const maxNon = Math.max(1, ...arcs.map(a => a.nonlocality || 0));
+
+  const arcGroup = SH.svgEl('g');
+  svg.appendChild(arcGroup);
+
+  function drawArcs() {
+    while (arcGroup.firstChild) arcGroup.removeChild(arcGroup.firstChild);
+    const strong = document.getElementById('strong').checked;
+    const hiNon = document.getElementById('hi_nonloc').checked;
+    const colorby = document.getElementById('colorby').value;
+    let shown = 0;
+    const filtered = arcs.filter(a => {
+      if (strong && a.score < 0.80) return false;
+      if (hiNon && (a.nonlocality || 0) < 100) return false;
+      return true;
+    });
+    filtered.sort((x, y) => x.score - y.score);
+    for (const a of filtered) {
+      const xa = fxA(a.a_idx);
+      const xb = fxB(a.b_idx);
+      const mx = (xa + xb) / 2;
+      // Arc control — dip above the line
+      const dip = Math.min(300, 30 + (Math.abs(xa - xb) * 0.25));
+      const path = `M ${xa} ${aY} Q ${mx} ${aY - dip} ${xb} ${bY}`;
+      const c = (colorby === 'score')
+        ? SH.scoreColor(a.score)
+        : SH.scoreColor(Math.min(1, (a.nonlocality || 0) / maxNon));
+      const el = SH.svgEl('path', {
+        d: path, fill: 'none', stroke: c,
+        'stroke-width': 0.6 + a.score * 2.2, 'stroke-opacity': 0.55,
+      });
+      el.style.cursor = 'pointer';
+      el.addEventListener('mousemove', ev => SH.showTip([
+        SH.tipRow(D.a_book, a.a_ref),
+        SH.tipRow(D.b_book, a.b_ref),
+        SH.tipRow('score', a.score.toFixed(3)),
+        SH.tipRow('distance', (a.nonlocality || 0).toFixed(1)),
+        a.composite_score != null ? SH.tipRow('composite', a.composite_score.toFixed(3)) : null,
+        a.tags && a.tags.length ? SH.tipRow('tags', a.tags.join(', ')) : null,
+      ].filter(Boolean), ev.clientX, ev.clientY));
+      el.addEventListener('mouseleave', SH.hideTip);
+      el.addEventListener('click', () => {
+        window.location.href = '09_pair_explorer.html#' + D.name + '/' + encodeURIComponent(a.a_ref + '|' + a.b_ref);
+      });
+      arcGroup.appendChild(el);
+      shown += 1;
+    }
+    document.getElementById('arcCount').textContent = shown + ' of ' + arcs.length + ' nonlocal echoes';
+  }
+  document.getElementById('arc').appendChild(svg);
+  document.getElementById('strong').addEventListener('change', drawArcs);
+  document.getElementById('hi_nonloc').addEventListener('change', drawArcs);
+  document.getElementById('colorby').addEventListener('change', drawArcs);
+  drawArcs();
+
+  // Histogram
+  (function () {
+    const dists = arcs.map(a => a.nonlocality || 0).filter(v => v > 0);
+    dists.sort((a, b) => a - b);
+    const maxD = dists[dists.length - 1] || 1;
+    const W2 = 1160, H2 = 220, pad2 = { l: 40, r: 20, t: 14, b: 32 };
+    const iw = W2 - pad2.l - pad2.r;
+    const ih = H2 - pad2.t - pad2.b;
+    const bins = 40;
+    const step = maxD / bins;
+    const hist = new Array(bins).fill(0);
+    for (const v of dists) {
+      const i = Math.min(bins - 1, Math.floor(v / step));
+      hist[i] += 1;
+    }
+    const maxH = Math.max(1, ...hist);
+    const svg2 = SH.svgEl('svg', { viewBox: `0 0 ${W2} ${H2}`, width: W2, height: H2 });
+    svg2.style.background = '#fbfaf6';
+    const fx = SH.scale(0, bins, pad2.l, pad2.l + iw);
+    const fy = SH.scale(0, maxH, pad2.t + ih, pad2.t);
+    for (let i = 0; i < bins; i++) {
+      const x = fx(i);
+      const x2 = fx(i + 1);
+      const y = fy(hist[i]);
+      const b = SH.svgEl('rect', { x: x + 0.5, y, width: x2 - x - 1, height: fy(0) - y, fill: '#a8551a', 'fill-opacity': 0.7 });
+      b.addEventListener('mousemove', ev => SH.showTip([
+        SH.tipRow('dist', (i * step).toFixed(0) + '–' + ((i + 1) * step).toFixed(0)),
+        SH.tipRow('echoes', hist[i]),
+      ], ev.clientX, ev.clientY));
+      b.addEventListener('mouseleave', SH.hideTip);
+      svg2.appendChild(b);
+    }
+    svg2.appendChild(SH.svgEl('line', { x1: pad2.l, x2: pad2.l + iw, y1: fy(0), y2: fy(0), stroke: '#c7b787' }));
+    // x ticks
+    for (let t = 0; t <= bins; t += Math.max(1, Math.floor(bins / 8))) {
+      const x = fx(t);
+      const tt = SH.svgEl('text', { x, y: H2 - 8, 'font-size': 10, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      tt.textContent = Math.round(t * step);
+      svg2.appendChild(tt);
+    }
+    const xl = SH.svgEl('text', { x: pad2.l + iw / 2, y: H2 - 2, 'font-size': 11, 'text-anchor': 'middle', fill: '#5a5a5a' });
+    xl.textContent = 'distance from chain position (verses)';
+    svg2.appendChild(xl);
+    document.getElementById('hist').appendChild(svg2);
+  })();
+
+  // Top echoes table
+  (function () {
+    const top = arcs.slice().sort((a, b) => b.score - a.score).slice(0, 50);
+    const t = document.getElementById('echotbl');
+    const thead = SH.el('thead');
+    const thr = SH.el('tr');
+    [D.a_book + ' ref', D.b_book + ' ref', 'score', 'composite', 'distance', 'tags'].forEach(h => thr.appendChild(SH.el('th', null, h)));
+    thead.appendChild(thr);
+    t.appendChild(thead);
+    const tb = SH.el('tbody');
+    for (const e of top) {
+      const tr = SH.el('tr', { style: 'cursor:pointer;' });
+      tr.addEventListener('click', () => {
+        window.location.href = '09_pair_explorer.html#' + D.name + '/' + encodeURIComponent(e.a_ref + '|' + e.b_ref);
+      });
+      tr.appendChild(SH.el('td', { style: 'color:#8b2e2e;font-weight:600;' }, e.a_ref));
+      tr.appendChild(SH.el('td', { style: 'color:#22506c;font-weight:600;' }, e.b_ref));
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, e.score.toFixed(3)));
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, e.composite_score != null ? e.composite_score.toFixed(3) : '—'));
+      tr.appendChild(SH.el('td', { style: 'font-family:var(--mono);' }, (e.nonlocality || 0).toFixed(0)));
+      tr.appendChild(SH.el('td', { style: 'font-size:11px;color:#5a5a5a;' }, (e.tags || []).join(', ')));
+      tb.appendChild(tr);
+    }
+    t.appendChild(tb);
+  })();
+})();
+</script>
+</body>
+</html>

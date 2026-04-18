@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Synoptic map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Synoptic map</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
+      <label class="small"><input type="checkbox" id="togEchoes" checked /> Secondary echoes</label>
+      <label class="small"><input type="checkbox" id="togBlocks" checked /> Macro block bands</label>
+      <label class="small"><input type="checkbox" id="togNonlocal" /> Only nonlocal echoes</label>
+      <label class="small"><input type="checkbox" id="togChainLine" /> Connect primary chain</label>
+      <div class="legend" style="margin-left:auto;">
+        <span><span class="sw" style="background:#f4efdf;"></span>score 0.1</span>
+        <span><span class="sw" style="background:#b98050;"></span>0.5</span>
+        <span><span class="sw" style="background:#5c240c;"></span>1.0</span>
+        <span><span class="sw" style="background:#0f766e;"></span>echo</span>
+      </div>
+    </div>
+    <div id="plot" style="position:relative;"></div>
+  </div>
+
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>Highest-scoring primary pairs</h3>
+      <table class="data-table" id="topPairs"></table>
+    </div>
+    <div class="card">
+      <h3>Most striking nonlocal echoes</h3>
+      <table class="data-table" id="nonlocalEchoes"></table>
+      <div class="small" style="margin-top:8px;">
+        A nonlocal echo — a near-identical verse pair <em>not</em> on the primary chain — is a trace of deliberate reuse across contexts, or of shared source material independent of direct local copying.
+      </div>
+    </div>
+    <div class="card">
+      <h3>Off-diagonal residuals</h3>
+      <div class="small">For every primary pair, distance from the best-fit line. Positive (blue, above) means the b-gospel runs later than expected for that a-verse; negative (red, below) means earlier.</div>
+      <div id="offdiag" style="margin-top:8px;"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('01_synoptic_map.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+
+  document.getElementById('sub').textContent = D.label + ' — every primary pair and every echo on the verse grid';
+
+  const captionByDs = {
+    mm: 'x-axis: Mark 1:1 (left) → 16:20 (right). y-axis: Matthew 1:1 (top) → 28:20 (bottom). The 385 primary pairs form a near-monotonic diagonal chain; the 231 secondary echoes pick up alternate local matches and nonlocal reuse. The deep right side of Matthew (its first several chapters and the Sermon on the Mount) has no Markan parallel — visible as an empty band at the top of the plot.',
+    ml: 'x-axis: Matthew. y-axis: Luke. Only 233 primary pairs form the intentionally conservative backbone — but 1,033 secondary echoes fill in the displaced double tradition. Hover any teal dot to read the saying; many Sermon-on-the-Mount sayings (Matt 5–7) here appear in Luke 11–12 rather than Luke 6, a hallmark of the Q/double-tradition dislocation.',
+    mld: 'x-axis: Matthew (full 1,068 verses, though 389 are algorithmically masked as Markan). y-axis: Luke (full 1,149 verses, 226 masked). The 49 primary pairs that survive masking form a much sparser diagonal — roughly a fifth of the unmasked backbone. The 60 secondary echoes (many nonlocal, e.g. Matt 8:20 ↔ Luke 9:58 "foxes have holes") reveal the Q dislocation pattern. Everything remaining here is, by construction, a double-tradition candidate not owed to Mark.',
+  };
+  document.getElementById('caption').textContent = captionByDs[D.name];
+
+  const meta = D.meta;
+  const W = 1180, H = 920;
+  const MT = 38, MR = 64, MB = 40, ML = 64;
+  const iw = W - ML - MR, ih = H - MT - MB;
+
+  const fx = SH.scale(0, meta.a_total_verses, ML, ML + iw);
+  const fy = SH.scale(0, meta.b_total_verses, MT, MT + ih);
+
+  const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+  svg.style.background = '#fbfaf6';
+  svg.appendChild(SH.svgEl('rect', { x: ML, y: MT, width: iw, height: ih, fill: '#fff', stroke: '#d9d4c2' }));
+
+  // Gridlines
+  const gridLayer = SH.svgEl('g');
+  for (const c of meta.a_chapters) {
+    if (c.chapter === 1) continue;
+    const x = fx(c.offset);
+    gridLayer.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: MT, y2: MT + ih, stroke: '#ede8d6' }));
+  }
+  for (const c of meta.b_chapters) {
+    if (c.chapter === 1) continue;
+    const y = fy(c.offset);
+    gridLayer.appendChild(SH.svgEl('line', { x1: ML, x2: ML + iw, y1: y, y2: y, stroke: '#ede8d6' }));
+  }
+  svg.appendChild(gridLayer);
+
+  for (const c of meta.a_chapters) {
+    const mid = (fx(c.offset) + fx(c.offset + c.length)) / 2;
+    const t = SH.svgEl('text', { x: mid, y: MT - 12, 'font-size': 10, 'text-anchor': 'middle', fill: '#8b2e2e' });
+    t.textContent = c.chapter;
+    svg.appendChild(t);
+  }
+  for (const c of meta.b_chapters) {
+    const mid = (fy(c.offset) + fy(c.offset + c.length)) / 2;
+    const t = SH.svgEl('text', { x: ML + iw + 8, y: mid + 3, 'font-size': 10, fill: '#22506c' });
+    t.textContent = c.chapter;
+    svg.appendChild(t);
+  }
+  const lx = SH.svgEl('text', { x: ML + iw / 2, y: H - 10, 'font-size': 12, 'text-anchor': 'middle', fill: '#8b2e2e' });
+  lx.textContent = D.a_book + ' — chapter';
+  svg.appendChild(lx);
+  const ly = SH.svgEl('text', { x: ML + iw + 44, y: MT + ih / 2, 'font-size': 12, 'text-anchor': 'middle', fill: '#22506c', transform: `rotate(90 ${ML + iw + 44} ${MT + ih / 2})` });
+  ly.textContent = D.b_book + ' — chapter';
+  svg.appendChild(ly);
+
+  // Bands for macro blocks
+  const bandLayer = SH.svgEl('g');
+  for (const b of D.macro) {
+    if (b.a_start_idx < 0 || b.b_start_idx < 0) continue;
+    const x = fx(b.a_start_idx);
+    const x2 = fx(b.a_end_idx + 1);
+    const y = fy(b.b_start_idx);
+    const y2 = fy(b.b_end_idx + 1);
+    const r = SH.svgEl('rect', {
+      x, y, width: Math.max(x2 - x, 2), height: Math.max(y2 - y, 2),
+      fill: '#f0e9d4', 'fill-opacity': 0.45, stroke: '#d9b96a', 'stroke-opacity': 0.6, 'stroke-width': 1,
+    });
+    r.style.cursor = 'pointer';
+    r.addEventListener('mousemove', ev => {
+      SH.showTip([
+        SH.tipRow(`Block ${b.id}`, `pairs ${b.pair_count} · score ${b.avg_score.toFixed(3)}` + (b.confidence ? ' · ' + b.confidence : '')),
+        SH.tipLine(`${b.a_start} – ${b.a_end}`),
+        SH.tipLine(`${b.b_start} – ${b.b_end}`),
+        SH.tipLine(`Tokens — ${D.a_book} ${b.a_tokens} / ${D.b_book} ${b.b_tokens}`),
+      ], ev.clientX, ev.clientY);
+    });
+    r.addEventListener('mouseleave', SH.hideTip);
+    const lab = SH.svgEl('text', { x: x + 3, y: y + 11, 'font-size': 9, fill: '#a6741c', 'font-weight': 'bold' });
+    lab.textContent = b.id;
+    bandLayer.appendChild(r);
+    bandLayer.appendChild(lab);
+  }
+  svg.appendChild(bandLayer);
+
+  // Echoes
+  const echoLayer = SH.svgEl('g');
+  for (const e of D.echoes) {
+    if (e.a_idx < 0 || e.b_idx < 0) continue;
+    const cx = fx(e.a_idx + 0.5);
+    const cy = fy(e.b_idx + 0.5);
+    const color = e.nonlocal ? '#0f766e' : '#8aae84';
+    const c = SH.svgEl('circle', { cx, cy, r: 2.2, fill: color, 'fill-opacity': 0.75 });
+    c.dataset.nonlocal = e.nonlocal ? '1' : '0';
+    c.classList.add('echo');
+    c.addEventListener('mousemove', ev => {
+      const nodes = [
+        SH.tipLine('Secondary echo', 'small'),
+        SH.tipRow(e.a_ref + ' ↔ ' + e.b_ref, 'score ' + e.score.toFixed(3)),
+        SH.tipLine((e.category || e.tags?.join(', ') || '').replace(/_/g, ' ') + (e.nonlocal ? ' · nonlocal' : ' · local')),
+      ];
+      if (e.a_text) nodes.push(SH.tipGreek(e.a_text));
+      if (e.b_text) nodes.push(SH.tipGreek(e.b_text));
+      SH.showTip(nodes, ev.clientX, ev.clientY);
+    });
+    c.addEventListener('mouseleave', SH.hideTip);
+    echoLayer.appendChild(c);
+  }
+  svg.appendChild(echoLayer);
+
+  // Chain connector line (optional)
+  const chainLayer = SH.svgEl('g');
+  const sortedPairs = [...D.pairs].sort((a, b) => a.a_idx - b.a_idx);
+  let path = '';
+  for (let i = 0; i < sortedPairs.length; i++) {
+    const p = sortedPairs[i];
+    const x = fx(p.a_idx + 0.5);
+    const y = fy(p.b_idx + 0.5);
+    path += (i === 0 ? 'M' : 'L') + x + ',' + y + ' ';
+  }
+  const chainPath = SH.svgEl('path', { d: path, fill: 'none', stroke: '#a6741c', 'stroke-width': 1, 'stroke-opacity': 0.35 });
+  chainPath.style.display = 'none';
+  chainLayer.appendChild(chainPath);
+  svg.appendChild(chainLayer);
+
+  // Primary pairs
+  const pairLayer = SH.svgEl('g');
+  let sxx=0, sxy=0, sumx=0, sumy=0, n=D.pairs.length;
+  for (const p of D.pairs) { sumx += p.a_idx; sumy += p.b_idx; }
+  const mx = sumx/n, my = sumy/n;
+  for (const p of D.pairs) { sxx += (p.a_idx - mx) ** 2; sxy += (p.a_idx - mx) * (p.b_idx - my); }
+  const slope = sxx === 0 ? 1 : sxy / sxx;
+  const intercept = my - slope * mx;
+
+  for (const p of D.pairs) {
+    const cx = fx(p.a_idx + 0.5);
+    const cy = fy(p.b_idx + 0.5);
+    const r = 2.6 + p.score * 2.8;
+    const c = SH.svgEl('circle', { cx, cy, r, fill: SH.scoreColor(p.score), stroke: '#1a1a1a', 'stroke-opacity': 0.25, 'stroke-width': 0.5 });
+    c.addEventListener('mousemove', ev => {
+      const nodes = [
+        SH.tipRow(p.a_ref + ' ↔ ' + p.b_ref, 'score ' + p.score.toFixed(3)),
+        SH.tipLine('classes: ' + (p.classes.length ? p.classes.join(', ') : '—')),
+        SH.tipLine(`ins ${p.ins} · del ${p.del} · rep ${p.rep}`),
+      ];
+      if (p.a_text) nodes.push(SH.tipGreek(p.a_text));
+      if (p.b_text) nodes.push(SH.tipGreek(p.b_text));
+      SH.showTip(nodes, ev.clientX, ev.clientY);
+    });
+    c.addEventListener('mouseleave', SH.hideTip);
+    pairLayer.appendChild(c);
+  }
+  svg.appendChild(pairLayer);
+
+  document.getElementById('plot').appendChild(svg);
+
+  document.getElementById('togEchoes').addEventListener('change', apply);
+  document.getElementById('togBlocks').addEventListener('change', apply);
+  document.getElementById('togNonlocal').addEventListener('change', apply);
+  document.getElementById('togChainLine').addEventListener('change', apply);
+
+  function apply() {
+    const e = document.getElementById('togEchoes').checked;
+    const b = document.getElementById('togBlocks').checked;
+    const nl = document.getElementById('togNonlocal').checked;
+    const cl = document.getElementById('togChainLine').checked;
+    echoLayer.style.display = e ? '' : 'none';
+    bandLayer.style.display = b ? '' : 'none';
+    chainPath.style.display = cl ? '' : 'none';
+    echoLayer.querySelectorAll('circle.echo').forEach(c => {
+      c.style.display = !e ? 'none' : (nl && c.dataset.nonlocal !== '1' ? 'none' : '');
+    });
+  }
+  apply();
+
+  // Top pairs
+  const topPairs = [...D.pairs].sort((a, b) => b.score - a.score).slice(0, 14);
+  const tp = document.getElementById('topPairs');
+  const thA = SH.el('tr', null,
+    SH.el('th', null, D.a_book),
+    SH.el('th', null, D.b_book),
+    SH.el('th', null, 'score'),
+    SH.el('th', null, 'classes'));
+  tp.appendChild(SH.el('thead', null, thA));
+  const tpBody = SH.el('tbody');
+  for (const p of topPairs) {
+    tpBody.appendChild(SH.el('tr', null,
+      SH.el('td', { style: 'color:#8b2e2e' }, p.a_ref),
+      SH.el('td', { style: 'color:#22506c' }, p.b_ref),
+      SH.el('td', null, p.score.toFixed(3)),
+      SH.el('td', null, p.classes.join(', '))));
+  }
+  tp.appendChild(tpBody);
+
+  // Nonlocal echoes
+  const nonlocal = D.echoes.filter(e => e.nonlocal).sort((a, b) => b.score - a.score).slice(0, 14);
+  const nl = document.getElementById('nonlocalEchoes');
+  const nlh = SH.el('tr', null,
+    SH.el('th', null, D.a_book),
+    SH.el('th', null, D.b_book),
+    SH.el('th', null, 'score'),
+    SH.el('th', null, D.name === 'mm' ? 'category' : 'tags'));
+  nl.appendChild(SH.el('thead', null, nlh));
+  const nlBody = SH.el('tbody');
+  for (const e of nonlocal) {
+    const meta = D.name === 'mm'
+      ? (e.category || '').replace(/_/g,' ')
+      : (e.tags || []).join(', ').replace(/_/g,' ');
+    nlBody.appendChild(SH.el('tr', null,
+      SH.el('td', { style: 'color:#8b2e2e' }, e.a_ref),
+      SH.el('td', { style: 'color:#22506c' }, e.b_ref),
+      SH.el('td', null, e.score.toFixed(3)),
+      SH.el('td', null, meta)));
+  }
+  nl.appendChild(nlBody);
+
+  // Off-diagonal residuals
+  const residuals = D.pairs.map(p => ({
+    idx: p.a_idx,
+    resid: p.b_idx - (slope * p.a_idx + intercept),
+    p,
+  }));
+  const w2 = 360, h2 = 210, pad = 22;
+  const rx = SH.scale(0, meta.a_total_verses, pad, w2 - pad);
+  const absMax = Math.max(1, ...residuals.map(r => Math.abs(r.resid)));
+  const ry = SH.scale(-absMax, absMax, h2 - pad, pad);
+  const s2 = SH.svgEl('svg', { viewBox: `0 0 ${w2} ${h2}`, width: w2, height: h2 });
+  s2.appendChild(SH.svgEl('rect', { x: 0, y: 0, width: w2, height: h2, fill: '#fff' }));
+  s2.appendChild(SH.svgEl('line', { x1: pad, x2: w2-pad, y1: ry(0), y2: ry(0), stroke: '#d9d4c2' }));
+  for (const r of residuals) {
+    const c = SH.svgEl('circle', { cx: rx(r.idx), cy: ry(r.resid), r: 1.6, fill: r.resid > 0 ? '#22506c' : '#8b2e2e', 'fill-opacity': 0.65 });
+    s2.appendChild(c);
+  }
+  const labAbove = SH.svgEl('text', { x: pad, y: pad - 8, 'font-size': 10, fill: '#22506c' });
+  labAbove.textContent = '↑ ' + D.b_book + ' runs later than expected';
+  s2.appendChild(labAbove);
+  const labBelow = SH.svgEl('text', { x: pad, y: h2 - 4, 'font-size': 10, fill: '#8b2e2e' });
+  labBelow.textContent = '↓ ' + D.b_book + ' runs earlier than expected';
+  s2.appendChild(labBelow);
+  document.getElementById('offdiag').appendChild(s2);
+})();
+</script>
+</body>
+</html>

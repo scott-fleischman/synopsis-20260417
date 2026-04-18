@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Block ribbon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Block ribbon</h1>
+    <span class="sub" id="sub"></span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" id="caption"></p>
+
+  <div class="card">
+    <div style="display:flex;gap:14px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
+      <label class="small"><input type="radio" name="align" id="align_self" checked /> Align to own scripture (proportional)</label>
+      <label class="small"><input type="radio" name="align" id="align_block" /> Align to block index (compact parallel)</label>
+      <span class="legend" style="margin-left:auto;">
+        <span><span class="sw" style="background:#8b2e2e;"></span> <span id="label_a"></span></span>
+        <span><span class="sw" style="background:#22506c;"></span> <span id="label_b"></span></span>
+        <span><span class="sw" style="background:#f0e9d4;"></span> aligned block</span>
+        <span><span class="sw" style="background:#ede8d6;"></span> gap</span>
+      </span>
+    </div>
+    <div id="plot"></div>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3 id="leftChartTitle">Token balance inside aligned blocks</h3>
+      <div class="small" id="leftChartCaption">Δ = b-tokens − a-tokens in each block. Positive (blue) = b-gospel longer; negative (red) = a-gospel longer.</div>
+      <div id="tokenDelta"></div>
+    </div>
+    <div class="card">
+      <h3>Gap imbalance at boundaries</h3>
+      <div class="small">Per-boundary: number of extra non-parallel verses on each side before the block starts.</div>
+      <div id="gapImbal"></div>
+    </div>
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('02_block_ribbon.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+
+  document.getElementById('sub').textContent = D.label + ' — macro blocks as paired bands';
+  document.getElementById('label_a').textContent = D.a_book;
+  document.getElementById('label_b').textContent = D.b_book;
+  const captions = {
+    mm: '25 loose blocks. Top band: Mark (673 verses, 16 chapters). Bottom band: Matthew (1,068 verses, 28 chapters). Amber segments are aligned material, pale segments are gap verses. Lines connect each block to its paired block. Matthew\'s long non-aligned stretches — especially before block 4 (Sermon on the Mount) and before block 7 (Q-material, ch. 10–11) — are the iconic Markan priority puzzles.',
+    ml: '32 loose blocks. Top band: Matthew. Bottom band: Luke (1,149 verses, 24 chapters). The huge gap in Luke around chapters 9–15 is the Lukan travel narrative (known traditionally as the "Great Insertion"). The small pale lattice before block 1 is the two birth narratives, each going their own way.',
+    mld: '13 loose blocks drawn on the Markan-masked Matt/Luke pair chain (only 49 primary pairs survive). Top band: Matthew\'s 679 unmasked verses. Bottom band: Luke\'s 923 unmasked verses. Band positions are indexed against the full gospels (including the pale masked-Markan remainder shown as gap). Because per-block token counts aren\'t exported for this dataset, the second chart shows score spread (min/mean/max) instead of token balance.',
+  };
+  document.getElementById('caption').textContent = captions[D.name];
+
+  const meta = D.meta;
+
+  const W = 1200, H = 340;
+  const margin = { l: 34, r: 20, t: 30, b: 56 };
+  const iw = W - margin.l - margin.r;
+  const aY = margin.t + 10;
+  const bY = H - margin.b - 36;
+  const bandH = 30;
+
+  function draw(alignMode) {
+    const plot = document.getElementById('plot');
+    while (plot.firstChild) plot.removeChild(plot.firstChild);
+    const svg = SH.svgEl('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H });
+    svg.style.background = '#fbfaf6';
+    svg.style.display = 'block';
+
+    let fxa, fxb;
+    if (alignMode === 'self') {
+      fxa = SH.scale(0, meta.a_total_verses, margin.l, margin.l + iw);
+      fxb = SH.scale(0, meta.b_total_verses, margin.l, margin.l + iw);
+    } else {
+      // Compact: lay out blocks side by side with tiny gaps
+      const total = D.macro.length;
+      fxa = i => margin.l + i * (iw / total);
+      fxb = i => margin.l + i * (iw / total);
+    }
+
+    // a-band base (grey)
+    svg.appendChild(SH.svgEl('rect', { x: margin.l, y: aY, width: iw, height: bandH, fill: '#ede8d6' }));
+    svg.appendChild(SH.svgEl('rect', { x: margin.l, y: bY, width: iw, height: bandH, fill: '#ede8d6' }));
+
+    // Chapter ticks
+    if (alignMode === 'self') {
+      for (const c of meta.a_chapters) {
+        const x = fxa(c.offset);
+        svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: aY - 3, y2: aY, stroke: '#c7b787' }));
+        if (c.chapter % 2 === 1 || c.chapter === 1) {
+          const t = SH.svgEl('text', { x: x + 1, y: aY - 5, 'font-size': 9, fill: '#8b2e2e' });
+          t.textContent = c.chapter; svg.appendChild(t);
+        }
+      }
+      for (const c of meta.b_chapters) {
+        const x = fxb(c.offset);
+        svg.appendChild(SH.svgEl('line', { x1: x, x2: x, y1: bY + bandH, y2: bY + bandH + 3, stroke: '#8ca6c0' }));
+        if (c.chapter % 2 === 1 || c.chapter === 1) {
+          const t = SH.svgEl('text', { x: x + 1, y: bY + bandH + 13, 'font-size': 9, fill: '#22506c' });
+          t.textContent = c.chapter; svg.appendChild(t);
+        }
+      }
+    }
+
+    // Gospel labels
+    const la = SH.svgEl('text', { x: margin.l - 4, y: aY + bandH / 2 + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#8b2e2e', 'font-weight': 'bold' });
+    la.textContent = D.a_book; svg.appendChild(la);
+    const lb = SH.svgEl('text', { x: margin.l - 4, y: bY + bandH / 2 + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#22506c', 'font-weight': 'bold' });
+    lb.textContent = D.b_book; svg.appendChild(lb);
+
+    // Block bands
+    D.macro.forEach((b, i) => {
+      let ax1, ax2, bx1, bx2;
+      if (alignMode === 'self') {
+        ax1 = fxa(b.a_start_idx);
+        ax2 = fxa(b.a_end_idx + 1);
+        bx1 = fxb(b.b_start_idx);
+        bx2 = fxb(b.b_end_idx + 1);
+      } else {
+        ax1 = fxa(i);
+        ax2 = fxa(i + 1) - 2;
+        bx1 = fxb(i);
+        bx2 = fxb(i + 1) - 2;
+      }
+      const color = SH.scoreColor(b.avg_score);
+      svg.appendChild(SH.svgEl('rect', {
+        x: ax1, y: aY, width: Math.max(ax2 - ax1, 1.5), height: bandH, fill: color, 'fill-opacity': 0.9, stroke: '#8b2e2e', 'stroke-opacity': 0.35,
+      }));
+      svg.appendChild(SH.svgEl('rect', {
+        x: bx1, y: bY, width: Math.max(bx2 - bx1, 1.5), height: bandH, fill: color, 'fill-opacity': 0.9, stroke: '#22506c', 'stroke-opacity': 0.35,
+      }));
+      // Connector
+      const mx1 = (ax1 + ax2) / 2;
+      const mx2 = (bx1 + bx2) / 2;
+      const path = `M${ax1},${aY + bandH} L${ax2},${aY + bandH} L${bx2},${bY} L${bx1},${bY} Z`;
+      svg.appendChild(SH.svgEl('path', { d: path, fill: color, 'fill-opacity': 0.15, stroke: 'none' }));
+      // Center line
+      svg.appendChild(SH.svgEl('line', { x1: mx1, x2: mx2, y1: aY + bandH, y2: bY, stroke: '#a6741c', 'stroke-opacity': 0.4, 'stroke-width': 0.6 }));
+      // Label
+      if (ax2 - ax1 > 12 || alignMode === 'block') {
+        const lab = SH.svgEl('text', { x: mx1, y: aY + bandH / 2 + 4, 'font-size': 10, 'text-anchor': 'middle', fill: '#fff', 'font-weight': 'bold' });
+        lab.textContent = b.id;
+        svg.appendChild(lab);
+      }
+      // Interaction
+      const hit = SH.svgEl('rect', {
+        x: Math.min(ax1, bx1) - 2, y: aY - 2,
+        width: Math.max(ax2, bx2) - Math.min(ax1, bx1) + 4,
+        height: bY + bandH - aY + 4,
+        fill: 'transparent',
+      });
+      hit.style.cursor = 'pointer';
+      hit.addEventListener('mousemove', ev => {
+        const lines = [
+          SH.tipRow(`Block ${b.id}`, `${b.avg_score.toFixed(3)}${b.confidence ? ' · ' + b.confidence : ''} · ${b.pair_count} pairs`),
+          SH.tipLine(`${D.a_book} ${b.a_start}${b.a_start === b.a_end ? '' : ' – ' + b.a_end}` + (b.a_tokens ? ` (${b.a_tokens} tokens)` : '')),
+          SH.tipLine(`${D.b_book} ${b.b_start}${b.b_start === b.b_end ? '' : ' – ' + b.b_end}` + (b.b_tokens ? ` (${b.b_tokens} tokens)` : '')),
+        ];
+        if (b.a_unmatched || b.b_unmatched) {
+          lines.push(SH.tipLine(`Unmatched within: ${D.a_book} ${b.a_unmatched} / ${D.b_book} ${b.b_unmatched}`));
+        }
+        if ((b.a_prior_ops || []).length) lines.push(SH.tipLine('Ops: a-prior ' + b.a_prior_ops.join(', '), 'small'));
+        if ((b.b_prior_ops || []).length) lines.push(SH.tipLine('Ops: b-prior ' + b.b_prior_ops.join(', '), 'small'));
+        if (b.min_score != null && b.max_score != null) lines.push(SH.tipLine('score range ' + b.min_score.toFixed(3) + ' – ' + b.max_score.toFixed(3), 'small'));
+        SH.showTip(lines, ev.clientX, ev.clientY);
+      });
+      hit.addEventListener('mouseleave', SH.hideTip);
+      svg.appendChild(hit);
+    });
+
+    plot.appendChild(svg);
+  }
+
+  draw('self');
+  document.getElementById('align_self').addEventListener('change', () => draw('self'));
+  document.getElementById('align_block').addEventListener('change', () => draw('block'));
+
+  // Left chart — token delta for mm/ml, score spread for mld (where per-block tokens aren't exported)
+  const hasTokens = D.macro.some(b => b.a_tokens || b.b_tokens);
+  const tdSvg = SH.svgEl('svg', { viewBox: `0 0 720 220`, width: 720, height: 220 });
+
+  if (hasTokens) {
+    const deltas = D.macro.map(b => ({ id: b.id, delta: b.b_tokens - b.a_tokens, avg: b.avg_score, conf: b.confidence }));
+    const max = Math.max(1, ...deltas.map(d => Math.abs(d.delta)));
+    const bw = 720 / deltas.length;
+    for (const d of deltas) {
+      const x = (d.id - 1) * bw;
+      const h = (Math.abs(d.delta) / max) * 90;
+      const y = d.delta > 0 ? (110 - h) : 110;
+      const color = d.delta > 0 ? '#22506c' : '#8b2e2e';
+      const r = SH.svgEl('rect', { x: x + 2, y, width: bw - 4, height: h, fill: color, 'fill-opacity': 0.8 });
+      r.addEventListener('mousemove', ev => {
+        SH.showTip([
+          SH.tipRow('Block ' + d.id, (d.delta > 0 ? '+' : '') + d.delta + ' tokens (' + D.b_book + ' heavier)'),
+          SH.tipLine('avg score ' + d.avg.toFixed(3) + (d.conf ? ' · ' + d.conf : '')),
+        ], ev.clientX, ev.clientY);
+      });
+      r.addEventListener('mouseleave', SH.hideTip);
+      tdSvg.appendChild(r);
+      const t = SH.svgEl('text', { x: x + bw / 2, y: 212, 'font-size': 8, 'text-anchor': 'middle', fill: '#7a7a7a' });
+      t.textContent = d.id;
+      tdSvg.appendChild(t);
+    }
+    tdSvg.appendChild(SH.svgEl('line', { x1: 0, x2: 720, y1: 110, y2: 110, stroke: '#d9d4c2' }));
+    tdSvg.appendChild(SH.svgElText(D.b_book + ' heavier', { x: 4, y: 16, 'font-size': 10, fill: '#22506c' }));
+    tdSvg.appendChild(SH.svgElText(D.a_book + ' heavier', { x: 4, y: 200, 'font-size': 10, fill: '#8b2e2e' }));
+  } else {
+    // Score spread chart (min/mean/max) — for mld where tokens aren't stored per block
+    document.getElementById('leftChartTitle').textContent = 'Score spread by block';
+    document.getElementById('leftChartCaption').textContent = 'For each block: range from min to max pair score, with mean marked. Tight ranges at high mean = cleanly matched clusters; wide ranges = heterogeneous blocks.';
+    const spreads = D.macro.map(b => ({ id: b.id, min: b.min_score ?? b.avg_score, avg: b.avg_score, max: b.max_score ?? b.avg_score, pairs: b.pair_count }));
+    const yTop = 30, yBot = 190;
+    const bw = 720 / spreads.length;
+    const yScale = s => yBot - s * (yBot - yTop);
+    // Gridlines
+    [0, 0.25, 0.5, 0.75, 1].forEach(v => {
+      tdSvg.appendChild(SH.svgEl('line', { x1: 28, x2: 720, y1: yScale(v), y2: yScale(v), stroke: '#eee3c5', 'stroke-dasharray': '2 3' }));
+      tdSvg.appendChild(SH.svgElText(v.toFixed(2), { x: 4, y: yScale(v) + 3, 'font-size': 9, fill: '#7a7a7a' }));
+    });
+    for (const s of spreads) {
+      const x = 28 + (s.id - 1) * ((720 - 28) / spreads.length);
+      const cx = x + ((720 - 28) / spreads.length) / 2;
+      // Range line
+      tdSvg.appendChild(SH.svgEl('line', { x1: cx, x2: cx, y1: yScale(s.min), y2: yScale(s.max), stroke: '#a8551a', 'stroke-width': 2, 'stroke-opacity': 0.55 }));
+      // Tick at min/max
+      tdSvg.appendChild(SH.svgEl('line', { x1: cx - 5, x2: cx + 5, y1: yScale(s.min), y2: yScale(s.min), stroke: '#a8551a', 'stroke-width': 1.5 }));
+      tdSvg.appendChild(SH.svgEl('line', { x1: cx - 5, x2: cx + 5, y1: yScale(s.max), y2: yScale(s.max), stroke: '#a8551a', 'stroke-width': 1.5 }));
+      // Mean circle
+      const c = SH.svgEl('circle', { cx, cy: yScale(s.avg), r: 4, fill: SH.scoreColor(s.avg), stroke: '#7c3a0a', 'stroke-width': 1 });
+      c.addEventListener('mousemove', ev => {
+        SH.showTip([
+          SH.tipRow('Block ' + s.id, s.pairs + ' pairs'),
+          SH.tipLine('min ' + s.min.toFixed(3) + ' · mean ' + s.avg.toFixed(3) + ' · max ' + s.max.toFixed(3)),
+        ], ev.clientX, ev.clientY);
+      });
+      c.addEventListener('mouseleave', SH.hideTip);
+      tdSvg.appendChild(c);
+      tdSvg.appendChild(SH.svgElText(String(s.id), { x: cx, y: 212, 'font-size': 9, 'text-anchor': 'middle', fill: '#7a7a7a' }));
+    }
+  }
+  document.getElementById('tokenDelta').appendChild(tdSvg);
+
+  // Gap imbalance
+  const giSvg = SH.svgEl('svg', { viewBox: `0 0 720 220`, width: 720, height: 220 });
+  const gaps = D.gaps.filter(g => g.a_gap || g.b_gap);
+  const gbw = 720 / Math.max(gaps.length, 1);
+  const gmax = Math.max(1, ...gaps.map(g => Math.max((g.a_gap?.verse_count||0), (g.b_gap?.verse_count||0))));
+  gaps.forEach((g, i) => {
+    const x = i * gbw;
+    const aV = g.a_gap?.verse_count || 0;
+    const bV = g.b_gap?.verse_count || 0;
+    const ha = (aV / gmax) * 90;
+    const hb = (bV / gmax) * 90;
+    const ra = SH.svgEl('rect', { x: x + 2, y: 110 - ha, width: (gbw - 4) / 2, height: ha, fill: '#8b2e2e', 'fill-opacity': 0.75 });
+    const rb = SH.svgEl('rect', { x: x + 2 + (gbw - 4) / 2, y: 110, width: (gbw - 4) / 2, height: hb, fill: '#22506c', 'fill-opacity': 0.75 });
+    const hit = SH.svgEl('rect', { x, y: 0, width: gbw, height: 220, fill: 'transparent' });
+    hit.addEventListener('mousemove', ev => {
+      SH.showTip([
+        SH.tipRow('Before block ' + (g.before_block || '—'), ''),
+        SH.tipLine(D.a_book + ' gap: ' + (g.a_gap ? aV + ' verses · ' + g.a_gap.start_ref + ' – ' + g.a_gap.end_ref : 'none')),
+        SH.tipLine(D.b_book + ' gap: ' + (g.b_gap ? bV + ' verses · ' + g.b_gap.start_ref + ' – ' + g.b_gap.end_ref : 'none')),
+        SH.tipLine((g.interpretation || []).join(' | ')),
+      ], ev.clientX, ev.clientY);
+    });
+    hit.addEventListener('mouseleave', SH.hideTip);
+    giSvg.appendChild(ra); giSvg.appendChild(rb); giSvg.appendChild(hit);
+  });
+  giSvg.appendChild(SH.svgEl('line', { x1: 0, x2: 720, y1: 110, y2: 110, stroke: '#d9d4c2' }));
+  document.getElementById('gapImbal').appendChild(giSvg);
+})();
+</script>
+</body>
+</html>

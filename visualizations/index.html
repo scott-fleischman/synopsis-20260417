@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Synoptic Visualizations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Synoptic Visualizations</h1>
+    <span class="sub">Mark ↔ Matthew · Matthew ↔ Luke · Markan-masked Matthew ↔ Luke</span>
+    <span id="dsbar" style="margin-left:auto;"></span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:24px;"></nav>
+
+  <p class="caption" style="max-width:900px;">
+    Quantitative synoptic dependence across three paired corpora. Every primary verse pair is aligned, scored, and diffed at surface &amp; lemma; every loose block carries a both-directions editing ledger. The <em>Markan-masked</em> dataset removes verses likely owed to Mark from both Matthew and Luke and reruns the pipeline on the remaining material — isolating the double tradition for direct inspection without triple-tradition confounds. None of these views settle the <em>direction</em> of dependence. They quantify what each direction-hypothesis must explain.
+  </p>
+
+  <h2 style="margin-top:6px;"><span id="pair_label"></span></h2>
+  <div class="grid cols-4" id="statgrid"></div>
+
+  <section class="card">
+    <h2>Cross-comparison at a glance</h2>
+    <div class="caption" style="margin:0 0 14px;">Same pipeline, very different shapes. The sparseness of the Matt↔Luke backbone is the whole story: their double tradition is <em>reordered</em>, not retained in situ.</div>
+    <div class="scrollx"><table class="data-table" id="compareTable"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Views</h2>
+    <div class="grid cols-2" id="cardgrid"></div>
+  </section>
+
+  <section class="card" id="jteaSection" style="border-top:3px solid var(--focus);">
+    <h2 style="color:var(--focus);">Low-verbatim package — John, Thomas, epistles, apocrypha</h2>
+    <div class="caption" style="margin:0 0 14px;max-width:900px;">
+      A sister package that steps outside the Synoptic backbone. John, Thomas, the NT letters, and apocrypha require a <em>network</em> model — not a monotonic chain. Exact-Greek retrieval, windowed sayings, negative-space flags, and curated semantic registries, combined with a hypothesis-burden ledger across five transmission scenarios. Nine dedicated views.
+    </div>
+    <div class="grid cols-2" id="jteaCards"></div>
+  </section>
+
+  <section class="card">
+    <h2>How to read</h2>
+    <div class="split">
+      <div>
+        <h3>Colors</h3>
+        <ul class="clean">
+          <li>In Mark↔Matt: <span class="kmark">Mark</span> is brick-red, <span class="kmatt">Matthew</span> slate-blue.</li>
+          <li>In Matt↔Luke: <span class="kmark">Matthew</span> takes the "source" red, <span class="kmatt">Luke</span> the "target" blue.</li>
+          <li>Score heat: <span style="background:#f4efdf;padding:0 6px;">cream</span> (0.1) → <span style="background:#5c240c;color:#fff;padding:0 6px;">umber</span> (1.0).</li>
+          <li>Secondary echoes: <span style="background:#0f766e;color:#fff;padding:0 6px;">teal</span>.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Units</h3>
+        <ul class="clean">
+          <li><b>Primary chain</b> — one monotonic 1-to-1 alignment.</li>
+          <li><b>Secondary echo</b> — a non-primary high-similarity pair.</li>
+          <li><b>Micro / tight block</b> — adjacent high-confidence pairs.</li>
+          <li><b>Macro / loose block</b> — a larger coherent aligned span.</li>
+          <li><b>Nonlocal echo</b> — a strong match not positioned on the chain.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    Built from <code>mark_matthew_analysis/</code>, <code>matt_luke_analysis/</code>, and <code>matt_luke_double_masked_analysis/</code>. Text base: SBLGNT + SBLGNT apparatus; morphology: MorphGNT.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('index.html');
+  SH.buildDatasetSwitcher(document.getElementById('dsbar'));
+  const D = SH.D;
+  const BUNDLE = SH.BUNDLE;
+
+  document.getElementById('pair_label').textContent = D.label + ' — summary';
+
+  const sum = D.summary;
+  const gm = sum.global_metrics;
+  // mld uses `primary_pair_score_summary`; mm/ml use `pair_score_summary`.
+  const pss = sum.pair_score_summary || sum.primary_pair_score_summary;
+
+  // Per-dataset "matched coverage" vs total verses. mld carries verses-unmasked
+  // as the relevant denominator and does not expose a matched_pct.
+  function coverage(bundleEntry) {
+    const g = bundleEntry.summary.global_metrics;
+    if (bundleEntry.name === 'mm') {
+      return {
+        a: { matched: g.mark_matched_verse_count, total: g.mark_total_verse_count, pct: g.mark_matched_pct },
+        b: { matched: g.matt_matched_verse_count, total: g.matt_total_verse_count, pct: g.matt_matched_pct },
+      };
+    }
+    if (bundleEntry.name === 'ml') {
+      return {
+        a: { matched: g.matt_matched_verse_count, total: g.matt_total_verse_count, pct: g.matt_matched_pct },
+        b: { matched: g.luke_matched_verse_count, total: g.luke_total_verse_count, pct: g.luke_matched_pct },
+      };
+    }
+    // mld: matched pairs rely on the unmasked subset.
+    const aTotal = g.matt_unmasked_count;
+    const bTotal = g.luke_unmasked_count;
+    const matched = g.matched_pair_count;
+    return {
+      a: { matched, total: aTotal, pct: matched / aTotal, masked: g.matt_masked_markan_count, rawTotal: g.matt_total_verse_count },
+      b: { matched, total: bTotal, pct: matched / bTotal, masked: g.luke_masked_markan_count, rawTotal: g.luke_total_verse_count },
+    };
+  }
+
+  const aBook = D.a_book, bBook = D.b_book;
+  const cov = coverage(D);
+
+  const statCards = [
+    ['Primary pairs', gm.matched_pair_count, 'aligned 1:1'],
+    ['Macro blocks', gm.loose_block_count, 'coarse segmentation'],
+    ['Micro blocks', gm.tight_block_count, 'fine segmentation'],
+    ['Secondary echoes', D.echoes.length, 'non-primary matches'],
+    [aBook + (D.name === 'mld' ? ' matched / unmasked' : ' matched'),
+      cov.a.matched + ' / ' + cov.a.total,
+      (cov.a.pct * 100).toFixed(1) + '%' + (D.name === 'mld' ? ` · ${cov.a.masked} masked` : ' of ' + aBook)],
+    [bBook + (D.name === 'mld' ? ' matched / unmasked' : ' matched'),
+      cov.b.matched + ' / ' + cov.b.total,
+      (cov.b.pct * 100).toFixed(1) + '%' + (D.name === 'mld' ? ` · ${cov.b.masked} masked` : ' of ' + bBook)],
+    ['Mean pair score', pss.mean.toFixed(3), 'median ' + pss.median.toFixed(3) + ' · max ' + pss.max.toFixed(3)],
+    ['Score ≥ 0.80', pss['ge_0.80'], '≥ 0.50 → ' + pss['ge_0.50']],
+  ];
+  const sg = document.getElementById('statgrid');
+  for (const [k, n, extra] of statCards) {
+    const c = SH.el('div', { class: 'card' },
+      SH.el('div', { class: 'stat' },
+        SH.el('div', { class: 'n' }, n),
+        SH.el('div', { class: 'k' }, k),
+        SH.el('div', { class: 'small' }, extra)));
+    sg.appendChild(c);
+  }
+
+  // Compact mld-specific mask breakdown card.
+  if (D.name === 'mld' && sum.markan_mask_summary) {
+    const ms = sum.markan_mask_summary;
+    const card = SH.el('section', { class: 'card' });
+    card.appendChild(SH.el('h2', null, 'Markan mask summary'));
+    card.appendChild(SH.el('div', { class: 'caption' },
+      'Matthew and Luke verses are removed if their best Markan parallel meets a strict threshold, '
+      + 'if they fall in a local cluster of such verses, or if they extend a Markan chain. '
+      + 'Remaining verses are the basis of the masked double-tradition analysis above.'));
+    const tbl = SH.el('table', { class: 'data-table' });
+    const th = SH.el('thead'); const thr = SH.el('tr');
+    ['Book', 'Total', 'Masked', 'Unmasked', 'Strict', 'Chain context', 'Local cluster']
+      .forEach(h => thr.appendChild(SH.el('th', null, h)));
+    th.appendChild(thr); tbl.appendChild(th);
+    const tb = SH.el('tbody');
+    for (const bk of ['Matt', 'Luke']) {
+      const m = ms[bk]; const c = m.mask_rule_counts;
+      const tr = SH.el('tr');
+      [bk, m.total_verses, m.masked_markan_verses, m.remaining_unmasked_verses,
+        c.strict_verse || 0, c.chain_context || 0, c.local_cluster || 0]
+        .forEach((v, i) => tr.appendChild(SH.el('td', i === 0 ? { style: 'color:var(--ink-mute)' } : null, v)));
+      tb.appendChild(tr);
+    }
+    tbl.appendChild(tb);
+    card.appendChild(SH.el('div', { class: 'scrollx' }, tbl));
+    const host = document.querySelector('section.card');
+    host.parentNode.insertBefore(card, host);
+  }
+
+  // Three-way comparison table across all datasets.
+  const mm = BUNDLE.mm, ml = BUNDLE.ml, mld = BUNDLE.mld;
+  const g = (e) => e.summary.global_metrics;
+  const pairScore = (e) => e.summary.pair_score_summary || e.summary.primary_pair_score_summary;
+  const cov_mm = coverage(mm), cov_ml = coverage(ml), cov_mld = mld ? coverage(mld) : null;
+
+  function burdenTotal(b) {
+    if (!b) return '—';
+    if (b.numeric_totals && typeof b.numeric_totals.overall === 'number') {
+      return b.numeric_totals.overall.toFixed(1);
+    }
+    if (typeof b.numeric_total === 'number') return b.numeric_total.toFixed(1);
+    return '—';
+  }
+
+  // Pull matching hypothesis burden sub-objects by name.
+  const mmB = mm.burden || {};
+  const mlB = ml.burden || {};
+  const mldB = mld ? (mld.burden || {}) : {};
+
+  const rows = [
+    ['Metric', 'Mark ↔ Matthew', 'Matt ↔ Luke', 'Matt ↔ Luke (masked)'],
+    ['Primary backbone pairs', g(mm).matched_pair_count, g(ml).matched_pair_count, mld ? g(mld).matched_pair_count : '—'],
+    ['Macro / loose blocks', g(mm).loose_block_count, g(ml).loose_block_count, mld ? g(mld).loose_block_count : '—'],
+    ['Micro / tight blocks', g(mm).tight_block_count, g(ml).tight_block_count, mld ? g(mld).tight_block_count : '—'],
+    ['Secondary echoes', mm.echoes.length, ml.echoes.length, mld ? mld.echoes.length : '—'],
+    ['a-gospel denominator', cov_mm.a.total + ' ' + mm.a_book, cov_ml.a.total + ' ' + ml.a_book,
+      cov_mld ? (cov_mld.a.total + ' unmasked ' + mld.a_book) : '—'],
+    ['b-gospel denominator', cov_mm.b.total + ' ' + mm.b_book, cov_ml.b.total + ' ' + ml.b_book,
+      cov_mld ? (cov_mld.b.total + ' unmasked ' + mld.b_book) : '—'],
+    ['a-gospel coverage', (cov_mm.a.pct*100).toFixed(1) + '%', (cov_ml.a.pct*100).toFixed(1) + '%',
+      cov_mld ? (cov_mld.a.pct*100).toFixed(1) + '% of unmasked' : '—'],
+    ['b-gospel coverage', (cov_mm.b.pct*100).toFixed(1) + '%', (cov_ml.b.pct*100).toFixed(1) + '%',
+      cov_mld ? (cov_mld.b.pct*100).toFixed(1) + '% of unmasked' : '—'],
+    ['Mean pair score', pairScore(mm).mean.toFixed(3), pairScore(ml).mean.toFixed(3),
+      mld ? pairScore(mld).mean.toFixed(3) : '—'],
+    ['Median pair score', pairScore(mm).median.toFixed(3), pairScore(ml).median.toFixed(3),
+      mld ? pairScore(mld).median.toFixed(3) : '—'],
+    ['Pairs with score ≥ 0.80', pairScore(mm)['ge_0.80'], pairScore(ml)['ge_0.80'],
+      mld ? pairScore(mld)['ge_0.80'] : '—'],
+    ['Pairs with score < 0.40', pairScore(mm)['lt_0.40'], pairScore(ml)['lt_0.40'],
+      mld ? pairScore(mld)['lt_0.40'] : '—'],
+    ['"a is prior" burden total', burdenTotal(mmB.mark_prior) || '—', burdenTotal(mlB.matt_prior) || '—',
+      mld ? burdenTotal(mldB.matt_prior_Luke_uses_Matthew) : '—'],
+    ['"b is prior" burden total', burdenTotal(mmB.matt_prior) || '—', burdenTotal(mlB.luke_prior) || '—',
+      mld ? burdenTotal(mldB.luke_prior_Matthew_uses_Luke) : '—'],
+    ['Common-source/oral burden', '—', '—',
+      mld ? burdenTotal(mldB.common_source_or_oral) : '—'],
+  ];
+
+  const t = document.getElementById('compareTable');
+  const thead = SH.el('thead');
+  const thr = SH.el('tr');
+  rows[0].forEach((h, idx) => {
+    const th = SH.el('th', null, h);
+    if (idx > 0 && rows[0][idx].indexOf(D.label.split(' ')[0]) === 0) th.style.color = 'var(--mark)';
+    thr.appendChild(th);
+  });
+  thead.appendChild(thr); t.appendChild(thead);
+  const tb = SH.el('tbody');
+  for (let i = 1; i < rows.length; i++) {
+    const tr = SH.el('tr');
+    rows[i].forEach((v, idx) => tr.appendChild(SH.el('td', idx === 0 ? { style: 'color:var(--ink-mute)' } : null, v)));
+    tb.appendChild(tr);
+  }
+  t.appendChild(tb);
+
+  const views = [
+    ['01_synoptic_map.html', 'Synoptic map',
+      'Every primary pair and secondary echo on the full verse grid. The diagonal is the chain; off-diagonal teal dots are echoes — especially telling in Matt↔Luke.'],
+    ['02_block_ribbon.html', 'Block ribbon',
+      'Paired bands showing aligned blocks and gap verses between them. Matthew\'s sermons balloon over Mark; Luke\'s central travel narrative balloons over Matthew.'],
+    ['03_burden_ledger.html', 'Direction burden',
+      'What each direction-hypothesis must invoke — expansion, abbreviation, scripturalization, reordering. Two-hypothesis for mm/ml, three-hypothesis (Luke-uses-Matt · Matt-uses-Luke · common source/oral) for the masked dataset.'],
+    ['04_gap_timeline.html', 'Gap timeline',
+      'Linear timelines annotating the largest non-parallel stretches on each side. Luke 9:49–15:2 (241 verses) is visible as the "Great Insertion."'],
+    ['05_lexical_drift.html', 'Lexical drift',
+      'Top insertable/deletable content lemmas in matched material. The fingerprint of redaction in Greek.'],
+    ['06_score_classes.html', 'Pair classes',
+      'Score distribution overlaid by pair class (expansion, substitution, reordering, close match).'],
+    ['07_block_cards.html', 'Block cards',
+      'Sortable cards for every macro block: confidence, token deltas, variants, operation fingerprints.'],
+    ['08_stylistic_markers.html', 'Stylistic markers',
+      'Per-block plots of εὐθύς/τότε, kingdom-of-God vs kingdom-of-heaven, present-indicative ratio.'],
+    ['09_pair_explorer.html', 'Pair explorer',
+      'Click any primary pair; read both Greek texts aligned with diff coloring, lemma ins/del/rep, and variant notes.'],
+    ['10_displacement.html', 'Displacement',
+      'Arc diagram of nonlocal secondary echoes, showing where Matthew\'s material surfaces in Luke (and vice versa).'],
+    ['11_echo_gallery.html', 'Echo gallery',
+      'Browsable table of the highest-scoring secondary echoes, with side-by-side Greek when available.'],
+    ['12_variants.html', 'Variants',
+      'Every primary pair where the SBLGNT apparatus carries a variant note, with the readings and editorial witnesses.'],
+    ['13_triangle.html', 'Synoptic triangle',
+      'For every verse in Matthew, its best parallel in Mark and in Luke. Reveals the three-way alignment and what lands on only one side.'],
+    ['14_mask_audit.html', 'Mask audit · masked only',
+      'Per-verse audit of the Markan mask: which verses were removed, why (strict / chain / cluster), and where their nearest Markan parallel lies. Data inspection, not a Q-hypothesis commitment.'],
+    ['15_q_core.html', 'Q core reader · masked only',
+      'The 49 primary pairs that survive Markan masking, laid out for close Greek reading: full texts, lemma partition (shared / Matt-only / Luke-only), lemma and surface diffs, variant notes.'],
+    ['16_matt_verse_card.html', 'Matthew verse card · cross-dataset',
+      'For each of Matthew\'s 1,068 verses, the best Mark parallel, the best Luke parallel, and the Markan-mask verdict — all on one page. Surfaces "masked-but-Q-like" verses where the mask decision and the Luke evidence disagree.'],
+  ];
+  const cg = document.getElementById('cardgrid');
+  for (const [h, t, desc] of views) {
+    const a = SH.el('a', {
+      href: h + '#' + D.name,
+      style: 'display:block;border:1px solid var(--rule);border-radius:4px;padding:14px 18px;text-decoration:none;color:var(--ink);background:#fff;',
+    },
+      SH.el('h3', { style: 'margin-bottom:6px;' }, t),
+      SH.el('div', { style: 'font-size:13px;color:var(--ink-soft);line-height:1.55;' }, desc));
+    cg.appendChild(a);
+  }
+
+  // jtea section
+  const J = BUNDLE.jtea;
+  if (J) {
+    const jteaViews = [
+      ['17_jtea_overview.html', 'Low-verbatim overview',
+        'Scope stats, the six data layers, the five hypothesis-burden classes, and headline findings (1Tim 5:18 ~ Luke 10:7, Jas 5:12 ~ Matt 5:34–37, 1Cor 11:24 ~ Luke 22:19, and more).'],
+      ['18_intertext_network.html', 'Intertext network',
+        J.network_edges.length.toLocaleString() + ' candidate edges as an arc diagram with filterable drill-down table. Layer, score, run-length, and negative-space filters.'],
+      ['19_case_studies.html', 'Case studies',
+        J.case_studies.length + ' curated cases with full Greek, token-level alignment ops, per-hypothesis burdens, and provisional best explanations.'],
+      ['20_john_anchors.html', 'John / Synoptic anchors',
+        J.anchors.length + ' shared narrative episodes. Each anchor with shared features, if-Synoptics-prior and if-John-prior transformation analyses, and tradition assessment.'],
+      ['21_thomas_parallels.html', 'Thomas parallels',
+        J.thomas_registry.length + ' Thomas logia mapped to canonical motifs, with Coptic text lookup (' + (J.thomas_units?.length || 0) + ' Coptic Scriptorium units) and direct-dependence burden.'],
+      ['22_concept_signatures.html', 'Concept signatures',
+        J.concepts.length + ' cross-corpus motif clusters spanning Gospels, epistles, and Thomas. Four-axis burden scores per cluster.'],
+      ['23_exact_hits.html', 'Exact-phrase hits',
+        J.exact_hits.length + ' highest-value automatic hits in a score × run scatter, pre-filtered for scripture/liturgy noise. Surfaces the strongest candidate pairs.'],
+      ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel heatmap',
+        J.book_matrix.length + ' book-to-book cells with toggleable metrics: total candidates, score ≥ 0.35, exact run ≥ 4, and best score.'],
+      ['25_apocrypha_inventory.html', 'Apocrypha inventory',
+        J.apocrypha.length + ' M.R. James apocryphal works enumerated by corpus group — infancy gospels, apocryphal acts, NHC tractates — as future-analysis targets.'],
+    ];
+    const jcg = document.getElementById('jteaCards');
+    for (const [h, t, desc] of jteaViews) {
+      const a = SH.el('a', {
+        href: h,
+        style: 'display:block;border:1px solid var(--rule);border-radius:4px;padding:14px 18px;text-decoration:none;color:var(--ink);background:#fff;',
+      },
+        SH.el('h3', { style: 'margin-bottom:6px;color:var(--focus);' }, t),
+        SH.el('div', { style: 'font-size:13px;color:var(--ink-soft);line-height:1.55;' }, desc));
+      jcg.appendChild(a);
+    }
+  } else {
+    document.getElementById('jteaSection').style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>

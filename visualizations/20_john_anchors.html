@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>John / Synoptic anchors · jtea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .anchor-card { background: #fff; border: 1px solid var(--rule); border-radius: 4px; padding: 16px 20px; margin-bottom: 14px; }
+  .anchor-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; border-bottom: 1px solid var(--rule-soft); padding-bottom: 8px; }
+  .anchor-title { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ink); }
+  .anchor-refs { display: flex; gap: 14px; font-family: var(--mono); font-size: 12px; }
+  .anchor-refs .rj { color: var(--mark); }
+  .anchor-refs .rs { color: var(--matt); }
+  .shared-features { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+  .feat-chip { background: #efe8d4; color: var(--accent); font-size: 12px; padding: 3px 9px; border-radius: 11px; font-family: var(--serif); }
+  .hypo-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+  .hypo-col { background: #fbfaf6; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; }
+  .hypo-col h5 { margin: 0 0 4px; font-size: 12px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: .04em; font-family: var(--sans); }
+  .hypo-col.j h5 { color: var(--mark); }
+  .hypo-col.s h5 { color: var(--matt); }
+  .hypo-col .body { font-size: 13px; line-height: 1.5; }
+  .common-assess { background: #efe8d4; padding: 8px 12px; border-radius: 3px; font-size: 13px; margin-top: 10px; border-left: 3px solid var(--accent); }
+  .best-expl { background: #f4efdf; border-left: 4px solid var(--mark); padding: 10px 14px; font-family: var(--serif); font-size: 14px; margin-top: 10px; border-radius: 0 3px 3px 0; }
+  .quick-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 14px; }
+  .quick-nav a { font-size: 12px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink-soft); background: #fbfaf6; }
+  .quick-nav a:hover { background: var(--rule-soft); color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>John / Synoptic anchor episodes</h1>
+    <span class="sub">Ten shared narrative scenes, reviewed as <em>anchors</em> rather than verse-aligned pairs</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:980px;">
+    John shares a core set of narrative moments with the Synoptics — the Baptist witness, a temple action, a feeding, a walk on water, an anointing, an entry, an arrest, a denial, the crucifixion and garments — but each is transformed so thoroughly that verse-level alignment usually fails. The honest analytic unit is the <em>anchor</em>: a shared episode whose structural features can be compared even when the lexical texture diverges. For each anchor below, the registry records what the episode <em>shares</em>, how John would transform it <em>if the Synoptics were prior</em>, how Synoptics would transform it <em>if John were prior</em>, a shared-tradition assessment, and a provisional best explanation. These are structured reasoning prompts, not final verdicts.
+  </p>
+
+  <div class="quick-nav" id="quick_nav"></div>
+  <div id="anchors"></div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('20_john_anchors.html');
+  const J = SH.BUNDLE.jtea;
+  const anchors = J.anchors || [];
+
+  const qn = document.getElementById('quick_nav');
+  anchors.forEach((a, i) => {
+    const id = 'anc_' + i;
+    const label = (a.anchor_id || '').replace(/_/g, ' ');
+    qn.appendChild(SH.el('a', { href: '#' + id }, label));
+  });
+
+  const root = document.getElementById('anchors');
+  anchors.forEach((a, i) => {
+    const card = document.createElement('div');
+    card.className = 'anchor-card';
+    card.id = 'anc_' + i;
+
+    const head = SH.el('div', { class: 'anchor-head' },
+      SH.el('div', { class: 'anchor-title' }, (a.anchor_id || '').replace(/_/g, ' ')),
+      SH.el('div', { class: 'anchor-refs' },
+        SH.el('span', { class: 'rj' }, 'John: ' + (a.john_refs || '')),
+        SH.el('span', { class: 'rs' }, 'Syn: ' + (Array.isArray(a.synoptic_refs) ? a.synoptic_refs.join(' · ') : a.synoptic_refs || ''))));
+    card.appendChild(head);
+
+    if (a.shared_features && a.shared_features.length) {
+      const feats = SH.el('div', { class: 'shared-features' });
+      (Array.isArray(a.shared_features) ? a.shared_features : [a.shared_features]).forEach(f => {
+        feats.appendChild(SH.el('span', { class: 'feat-chip' }, f));
+      });
+      const wrap = SH.el('div', null,
+        SH.el('div', { class: 'small', style: 'color:var(--ink-mute);margin-bottom:4px;' }, 'Shared features'),
+        feats);
+      card.appendChild(wrap);
+    }
+
+    const hypo = SH.el('div', { class: 'hypo-two' },
+      SH.el('div', { class: 'hypo-col j' },
+        SH.el('h5', null, 'If Synoptics are prior, John transforms by…'),
+        SH.el('div', { class: 'body' }, a.john_transformation_if_synoptics_prior || '—')),
+      SH.el('div', { class: 'hypo-col s' },
+        SH.el('h5', null, 'If John is prior, Synoptics transform by…'),
+        SH.el('div', { class: 'body' }, a.synoptic_transformation_if_john_prior || '—')));
+    card.appendChild(hypo);
+
+    if (a.common_tradition_assessment) {
+      const ca = SH.el('div', { class: 'common-assess' },
+        SH.el('b', null, 'Shared-tradition assessment: '),
+        a.common_tradition_assessment);
+      card.appendChild(ca);
+    }
+
+    if (a.provisional_best_explanation) {
+      const be = SH.el('div', { class: 'best-expl' },
+        SH.el('b', null, 'Provisional best explanation: '),
+        a.provisional_best_explanation);
+      card.appendChild(be);
+    }
+
+    root.appendChild(card);
+  });
+
+  if (!anchors.length) {
+    root.appendChild(SH.el('div', { class: 'small' }, 'No anchors in bundle.'));
+  }
+})();
+</script>
+</body>
+</html>

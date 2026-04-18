@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Low-verbatim overview · John · Thomas · Epistles · Apocrypha</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .scope-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+  .scope-stats .card { padding: 14px 16px; }
+  .layers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .layer-card { border: 1px solid var(--rule); border-radius: 3px; padding: 12px 14px; background: #fff; }
+  .layer-card h4 { margin: 0 0 4px; font-family: var(--serif); font-size: 15px; }
+  .layer-card .meta { color: var(--ink-mute); font-size: 12px; margin-bottom: 6px; }
+  .burden-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .burden-card { background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 3px; padding: 12px; font-size: 13px; line-height: 1.4; }
+  .burden-card.direct { border-left-color: #8b2e2e; }
+  .burden-card.fixed { border-left-color: #a8551a; }
+  .burden-card.oral { border-left-color: #a6741c; }
+  .burden-card.formula { border-left-color: #5c7a8b; }
+  .burden-card.ind { border-left-color: #5a5a5a; }
+  .burden-card h5 { margin: 0 0 4px; font-family: var(--serif); font-size: 14px; }
+  .headline { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 16px; margin-bottom: 10px; line-height: 1.5; }
+  .headline b { color: var(--mark); }
+  .views-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .view-card { display: block; border: 1px solid var(--rule); border-radius: 4px; padding: 14px 18px; background: #fff; }
+  .view-card h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 16px; }
+  .view-card .desc { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Low-verbatim package</h1>
+    <span class="sub">John · Thomas · NT epistles · apocrypha — a network-model sister package to the Synoptic analyses</span>
+  </header>
+  <nav id="topnav" class="topnav" style="margin-bottom:20px;"></nav>
+
+  <p class="caption" style="max-width:960px;">
+    This package steps outside the Synoptic backbone into material where verbal agreement is thinner, sayings migrate independently, and "parallels" are often <em>thematic</em> rather than verbatim. Unlike <code>mm</code> / <code>ml</code> / <code>mld</code>, a single monotonic order-chain is the <em>wrong</em> tool here. Instead the package uses a <b>multi-layer network model</b>: exact Greek retrieval, windowed sayings matching, negative-space flagging for scripture/liturgy false positives, curated semantic registries for John, Thomas, James, and the Pastorals, and a hypothesis-burden ledger that tracks <em>which tradition-transmission model</em> best fits each case.
+  </p>
+
+  <div class="scope-stats" id="scope_stats"></div>
+
+  <section class="card">
+    <h2>The six data layers</h2>
+    <div class="caption" style="margin:0 0 14px;">Stacked from raw Greek surface forms to curated semantic judgment. Later layers get progressively more human-reviewed; earlier layers are automatic and noisy but exhaustive.</div>
+    <div class="layers-grid" id="layers"></div>
+  </section>
+
+  <section class="card">
+    <h2>The five hypothesis-burden classes</h2>
+    <div class="caption" style="margin:0 0 14px;">For each potential literary dependency, one of these five transmission scenarios is usually the best fit. The <em>burden ledger</em> quantifies how large the lift is to defend each scenario for a given case.</div>
+    <div class="burden-grid" id="burden_classes"></div>
+  </section>
+
+  <section class="card">
+    <h2>Headline findings</h2>
+    <div id="headlines"></div>
+  </section>
+
+  <section class="card">
+    <h2>Views</h2>
+    <div class="caption" style="margin:0 0 14px;">Each page is a distinct lens — the network view for structural browsing, the case studies for deep Greek reading, the concept signatures for cross-corpus motif tracking.</div>
+    <div class="views-grid" id="views"></div>
+  </section>
+
+  <section class="card">
+    <h2>Important limitations</h2>
+    <ul class="clean" id="limitations"></ul>
+  </section>
+
+  <div class="footer">
+    Source: <code>john_thomas_epistles_apocrypha_analysis/</code>. Canonical text base: SBLGNT. Coptic Thomas: Coptic Scriptorium (TEI + CoNLL-U). Apocrypha inventory: M.R. James.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildJteaNav('17_jtea_overview.html');
+  const J = SH.BUNDLE.jtea;
+  if (!J) { console.error('jtea bundle missing'); return; }
+
+  const s = J.summary;
+  const al = s.automatic_layers || {};
+  const cl = s.curated_layers || {};
+
+  // --- Stats row
+  const stats = [
+    ['Canonical verses', (s.canonical_verses_parsed || 0).toLocaleString(), `${s.gospel_verses_parsed || 0} Gospel · ${s.epistle_verses_parsed || 0} epistle`],
+    ['Thomas Coptic units', s.thomas_units_parsed || 0, 'parsed from Coptic Scriptorium'],
+    ['Automatic candidate rows',
+      ((al.epistles_to_gospels?.candidate_rows || 0) + (al.john_to_synoptics?.candidate_rows || 0)).toLocaleString(),
+      `${al.epistles_to_gospels?.candidate_rows || 0} ep→gsp · ${al.john_to_synoptics?.candidate_rows || 0} john→syn`],
+    ['Exact 4+ token runs', (al.exact_phrase_hits_len4plus || 0).toLocaleString(), 'before negative-space filtering'],
+    ['Curated case studies', J.case_studies.length, 'high-value findings'],
+    ['John/Synoptic anchors', J.anchors.length, 'narrative episodes'],
+    ['Thomas registry', J.thomas_registry.length, 'logia with canonical motifs'],
+    ['Concept signatures', J.concepts.length, 'cross-corpus motif clusters'],
+  ];
+  const g = document.getElementById('scope_stats');
+  for (const [k, n, extra] of stats) {
+    const c = SH.el('div', { class: 'card' },
+      SH.el('div', { class: 'stat' },
+        SH.el('div', { class: 'n' }, n),
+        SH.el('div', { class: 'k' }, k),
+        SH.el('div', { class: 'small' }, extra)));
+    g.appendChild(c);
+  }
+
+  // --- Layers glossary (from 00 method YAML if present; else static)
+  const layers = [
+    ['1. Greek surface retrieval', 'automatic', 'Normalized token retrieval across all canonical verses with stem-weighted scoring. Output: 04_epistles_to_gospels_candidates, 05_john_to_synoptics_candidates.'],
+    ['2. Windowed sayings', 'automatic', '1-to-4 verse target windows catch sayings that straddle Gospel verse boundaries. Important for parable cores and composite instructions.'],
+    ['3. Exact run / n-gram', 'automatic', 'Longest contiguous exact token run and shared 2/3/4-gram counts. Used to surface near-verbatim matches like 1Tim 5:18 ~ Luke 10:7.'],
+    ['4. Negative-space flags', 'heuristic', 'OT quotations, liturgical formulas, common paraenesis — matches that are explained by shared scripture rather than Gospel dependence. Tracked in 10 + 13.'],
+    ['5. Curated semantic registries', 'human-reviewed', 'For John anchors, Thomas logia, James paraenesis, Pastoral sayings — where verbal agreement is thin but topical fit is strong, human judgment structures the evidence.'],
+    ['6. Burden ledger', 'structured reasoning', 'Each case assessed on five transmission scenarios with scale indicators (very_high → low). Not a probability; a structured reasoning aid.'],
+  ];
+  const lg = document.getElementById('layers');
+  for (const [name, tag, body] of layers) {
+    const c = SH.el('div', { class: 'layer-card' },
+      SH.el('h4', null, name),
+      SH.el('div', { class: 'meta' }, tag),
+      SH.el('div', null, body));
+    lg.appendChild(c);
+  }
+
+  // --- Burden classes
+  const burdenClasses = [
+    ['direct', 'Direct literary dependence', 'One author reads and adapts another\'s written text. Evidence: long exact runs, shared local order, systematic transformation patterns.'],
+    ['fixed', 'Fixed written saying', 'A specific verbal formulation — possibly from a lost written source, a logia collection, or an early church document — shared without direct text dependence.'],
+    ['oral', 'Oral / traditional transmission', 'Stable gist with lexical drift. Portable sayings, parable cores, wisdom aphorisms that circulate orally and crystallize differently in different texts.'],
+    ['formula', 'Shared scripture / liturgy', 'OT prooftexts, baptismal or Eucharistic formulas, common paraenesis. Long matches can be explained entirely by common cultural material.'],
+    ['ind', 'Independent convergence', 'Generic theme + stock wisdom + no distinctive combined features. Hardest to defend against: requires a good negative-space explanation.'],
+  ];
+  const bg = document.getElementById('burden_classes');
+  for (const [key, name, desc] of burdenClasses) {
+    const c = SH.el('div', { class: 'burden-card ' + key },
+      SH.el('h5', null, name),
+      SH.el('div', null, desc));
+    bg.appendChild(c);
+  }
+
+  // --- Headlines
+  const hd = document.getElementById('headlines');
+  (s.headline_findings || []).forEach(h => {
+    const div = document.createElement('div');
+    div.className = 'headline';
+    div.textContent = h;
+    hd.appendChild(div);
+  });
+
+  // --- Views grid
+  const views = [
+    ['18_intertext_network.html', 'Intertext network',
+      'The 6,397 edges from John-to-Synoptic and epistle-to-Gospel retrieval, rendered as an interactive source→target graph. Filter by layer, score, and negative-space flags. Nodes are Bible verses; edges are potential dependency candidates.'],
+    ['19_case_studies.html', 'Case study reader',
+      'Ten high-value cases — 1Tim 5:18 ~ Luke 10:7, Jas 5:12 ~ Matt 5:34–37, 1Cor 11:24 ~ Luke 22:19, and seven more — with full Greek texts, token-level alignment ops (insert/delete/replace/equal), and structured hypothesis burdens for every major transmission model.'],
+    ['20_john_anchors.html', 'John / Synoptic anchors',
+      'Ten shared narrative episodes (Baptist, feeding, walking on water, anointing, entry, arrest, denial…). For each anchor: what\'s shared, how John transforms if the Synoptics are prior, how Synoptics transform if John is prior, and a common-tradition assessment.'],
+    ['21_thomas_parallels.html', 'Thomas parallels',
+      'Forty-seven Thomas logia mapped to canonical Gospel parallels, with Coptic text, English motif, direct-dependence burden grade, and saying-transmission model. Coptic-to-Greek dependence is modeled conservatively as a network, not a proof of literary copying.'],
+    ['22_concept_signatures.html', 'Concept signatures',
+      'Sixteen thematic concept clusters that span Gospels, epistles, and Thomas (worker-wages, ask-seek-find, oaths-yes-no, mustard-seed, humble-exalt, hear-do-words…). Each shown as a cross-corpus matrix with its four burden scores.'],
+    ['23_exact_hits.html', 'Exact-phrase hits',
+      'The 200 highest-value automatic hits (score ≥ 0.35 or exact run ≥ 6 tokens), pre-filtered for scripture/liturgy false positives. Score × run-length scatter plus filterable table.'],
+    ['24_epistle_gospel_heatmap.html', 'Epistle × Gospel heatmap',
+      'Book-to-book aggregated view: which NT letters produce the most lexical candidates against each Gospel, how much of that survives the 0.35 threshold, and where the longest exact runs live. Reveals Paul-vs-Matt vs. James-vs-Matt patterns at a glance.'],
+    ['25_apocrypha_inventory.html', 'Apocrypha inventory',
+      'The M.R. James corpus inventory: eighteen apocryphal works grouped by corpus type (infancy, passion, apocryphal acts), with expected-signal notes and future-analysis pointers.'],
+  ];
+  const vg = document.getElementById('views');
+  for (const [href, title, desc] of views) {
+    const a = SH.el('a', { class: 'view-card', href },
+      SH.el('h3', null, title),
+      SH.el('div', { class: 'desc' }, desc));
+    vg.appendChild(a);
+  }
+
+  // --- Limitations (from method YAML)
+  const lim = document.getElementById('limitations');
+  const limits = (J.method && J.method.known_limitations) || [
+    'Greek lexical layer uses normalized surface forms and a heuristic stemmer, not full morphological parsing.',
+    'Thomas parsing from Coptic TEI does not provide word-level Greek↔Coptic alignment — Greek-to-Coptic dependence is not automatically scored.',
+    'The apocrypha file is inventory only, not a full primary-language comparison.',
+    'Candidate scores are retrieval scores, not probabilities.',
+    'Scriptural and liturgical formulas can create long exact matches without proving Gospel dependence.',
+  ];
+  limits.forEach(l => {
+    const li = document.createElement('li');
+    li.textContent = typeof l === 'string' ? l : JSON.stringify(l);
+    lim.appendChild(li);
+  });
+})();
+</script>
+</body>
+</html>
