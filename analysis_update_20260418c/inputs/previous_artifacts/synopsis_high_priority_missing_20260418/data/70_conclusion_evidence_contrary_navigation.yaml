@@ -1,0 +1,121 @@
+- claim_id: markan_source_for_matthew_and_luke
+  claim: Mark or a Mark-like written narrative source is a major source-level explanation for Matthew and Luke.
+  confidence: high for Matthew; medium-high for Luke after this Mark-Luke supplement
+  top_supporting_visualizations:
+  - canonical_gospel_square
+  - Mark-Matthew Synoptic map from prior package
+  - mark_luke_direct
+  - Mark-Luke burden ledger
+  top_supporting_data_files:
+  - prior mark_matthew_analysis/data/16_global_summary.yaml
+  - data/19_mark_luke_global_summary.yaml
+  - data/11_mark_luke_primary_chain_pairs.csv
+  - data/17_mark_luke_direction_ledger_by_loose_block.yaml
+  top_supporting_observations:
+  - Mark-Matthew has 385 primary pairs and a large narrative backbone in the prior package.
+  - Mark-Luke supplement has 183 primary pairs with Mark 16:9-20 excluded by default.
+  - The Mark-Luke direction ledger makes Luke-prior/Mark-use-Luke more costly than Mark-prior/Luke-use-Mark in the coded block
+    analysis.
+  contrary_or_limiting_data:
+  - data/14_mark_luke_order_intervals.yaml
+  - data/15_mark_luke_secondary_echoes.yaml
+  - data/20_mark_luke_sensitivity_score_grid.csv
+  - data/21_mark_luke_mark_ending_sensitivity.yaml
+  contrary_or_limiting_observations:
+  - Luke contains extensive non-Markan material, especially infancy, travel, and resurrection material.
+  - Common narrative/oral tradition remains a live model for some local agreements.
+  - Threshold choice changes chain density; inspect sensitivity grid.
+  what_would_change_the_conclusion: A robust alternative model would need to explain both Mark-Matthew and Mark-Luke narrative
+    alignment with lower cumulative transformation burden.
+- claim_id: matthew_luke_double_tradition_not_simple_one_way
+  claim: The Matthew-Luke double tradition is better treated as a sayings/tradition layer than a simple one-way direct-copy
+    sequence.
+  confidence: medium-high
+  top_supporting_visualizations:
+  - Q core from prior masked package
+  - displacement/echo gallery from prior package
+  - canonical_gospel_square
+  top_supporting_data_files:
+  - prior matt_luke_double_masked_analysis/data/16_global_summary.yaml
+  - prior matt_luke_double_masked_analysis/data/12_secondary_echoes.yaml
+  - data/40_canonical_gospel_relationship_square.csv
+  top_supporting_observations:
+  - Strong masked parallels are often nonlocal and saying-like.
+  - Prior masked burden totals did not produce a robust directional advantage for Matthew→Luke or Luke→Matthew.
+  contrary_or_limiting_data:
+  - prior matt_luke_double_masked_analysis/data/01_markan_mask_by_verse.csv
+  - prior matt_luke_double_masked_analysis/data/15_direction_burden_totals.yaml
+  contrary_or_limiting_observations:
+  - Markan mask choices are high leverage.
+  - Local direct dependence remains possible in individual sayings.
+  what_would_change_the_conclusion: A direct-dependence model with a stable redactional program for displaced sayings would
+    increase directional confidence.
+- claim_id: john_synoptics_shared_tradition_not_continuous_chain
+  claim: John shares multiple anchor traditions with the Synoptics, but the evidence is not a continuous Synoptic-style copying
+    chain.
+  confidence: medium
+  top_supporting_visualizations:
+  - john_pairwise
+  - canonical_gospel_square
+  - Greek reader overlays
+  top_supporting_data_files:
+  - data/37_john_synoptic_pairwise_anchor_registry.yaml
+  - data/38_john_synoptic_pairwise_global_summary.yaml
+  - data/39_john_synoptic_pairwise_support_contra.yaml
+  top_supporting_observations:
+  - John pairwise layer registers Baptist, temple, feeding, sea, anointing, entry, passion, denial, and garment anchors.
+  - Top lexical cases include John 12:8/Matt 26:11 and John 5:8/Mark 2:9-11 type local overlaps.
+  contrary_or_limiting_data:
+  - data/30_john_mark_verse_similarity_full.csv.gz
+  - data/31_john_matthew_verse_similarity_full.csv.gz
+  - data/32_john_luke_verse_similarity_full.csv.gz
+  contrary_or_limiting_observations:
+  - Global one-to-one lexical matches are sparse.
+  - Shared passion/sign tradition explains many anchors without direct Gospel-to-Gospel use.
+  - Direction remains anchor-specific.
+  what_would_change_the_conclusion: A cluster of context-breaking Johannine details that make better sense as transformations
+    of a specific Synoptic Gospel would increase direct-use confidence.
+- claim_id: thomas_logion_network
+  claim: Thomas should be studied as a logion-level sayings-network witness, not as a single global dependence claim.
+  confidence: medium
+  top_supporting_visualizations:
+  - thomas_logion_matrix
+  - Thomas parallel dossiers
+  top_supporting_data_files:
+  - data/50_thomas_gospel_logion_matrix.csv
+  - data/51_thomas_logion_dossiers.yaml
+  - data/52_thomas_global_summary.yaml
+  top_supporting_observations:
+  - 46 Thomas logia have curated canonical parallels in the current registry.
+  - Parallel density is much stronger for Matthew/Luke than John.
+  contrary_or_limiting_data:
+  - sources/thomas_units_from_jtea_20260418.csv
+  contrary_or_limiting_observations:
+  - The Thomas text is Coptic; this package does not implement automatic Greek-Coptic dependence scoring.
+  - Short sayings are portable and can reflect oral or collection-based transmission.
+  what_would_change_the_conclusion: A Greek reconstruction with stable lexical agreements across logia could support stronger
+    literary claims.
+- claim_id: epistle_gospel_high_value_cases
+  claim: Epistle-Gospel relationships should be presented as case dossiers; 1Tim 5:18/Luke 10:7 is strongest, James is Jesus-tradition
+    likely, and 1Cor/Luke Eucharist is formula-rich.
+  confidence: high for 1Tim/Luke-like saying; medium-high for James as Jesus tradition; low for broad epistle-Gospel direct
+    dependence
+  top_supporting_visualizations:
+  - epistle_case_dossiers
+  - case-first targeted table
+  - ranked candidate list
+  top_supporting_data_files:
+  - data/60_epistle_gospel_case_dossiers.yaml
+  - data/61_epistle_gospel_targeted_case_table.csv
+  - data/62_epistle_gospel_ranked_candidate_cases_top500.csv
+  top_supporting_observations:
+  - 1Tim 5:18 has a five-token exact worker/wages run close to Luke 10:7.
+  - James oath material is conceptually strong but not high lexical proof of Matthew dependence.
+  - 1Cor/Luke Eucharist has long exact formula but high liturgical-formula risk.
+  contrary_or_limiting_data:
+  - data/63_epistle_gospel_global_summary.yaml
+  contrary_or_limiting_observations:
+  - Heatmap/retrieval ranking is not a dependence proof.
+  - Scriptural/liturgical formulas require negative-space filtering.
+  what_would_change_the_conclusion: More nonformulaic high-exact-run epistle-Gospel cases with contextual fit would strengthen
+    direct-Gospel-use claims.

@@ -1,0 +1,6 @@
+required_fields:
+- anchor_id
+- pair
+- burdens
+- best_lowest_burden_model
+type: john_anchor_burden_ledger

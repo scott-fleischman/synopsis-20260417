@@ -1,0 +1,4 @@
+regime,pair_count_min,pair_count_max,loose_block_count_min,loose_block_count_max,matt_masked,matt_unmasked,luke_masked,luke_unmasked,threshold
+broad,57,69,23,25,431,637,268,881,0.325
+medium,58,71,23,25,387,681,232,917,0.355
+strict,60,76,25,29,337,731,173,976,0.4

@@ -1,0 +1,16 @@
+total_logia: 116
+curation_status_counts:
+  no_curated_canonical_parallel_in_prior_registry: 70
+  curated_from_prior_registry: 46
+parallel_certainty_counts:
+  not_assessed: 70
+  medium: 35
+  high: 8
+  medium_high: 3
+relation_type_counts:
+  no_curated_canonical_parallel_in_prior_registry: 70
+  overlapping_jesus_tradition_uncertain_direction: 28
+  shared_sayings_or_parable_tradition: 14
+  possible_synoptic_influence_or_harmonization: 4
+directional_claim_ready_count: 3
+methodological_warning: curated logion statuses; no automatic Greek-Coptic dependence score

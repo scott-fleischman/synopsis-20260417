@@ -1,0 +1,335 @@
+project: Matthew–Luke masked double-tradition rerun with reproducibility patch
+method_summary:
+  masking: Likely Markan verses removed from Matthew and Luke under three explicit
+    score-threshold regimes; default regime is medium.
+  updates_in_this_rerun:
+  - multiple mask regimes (strict/medium/broad) with provenance
+  - actual verse rows separated from canonical verse-slot counts
+  - claim/evidence mapping added
+  - directional totals now presented explicitly as heuristic audit prompts rather
+    than directional proof
+  default_parameters:
+    mask_regime_default: medium
+    primary_chain_min_score: 0.32
+    gap_penalty: 0.05
+    loose_gap_matt: 4
+    loose_gap_luke: 4
+    tight_gap_matt: 2
+    tight_gap_luke: 2
+    secondary_echo_min_score: 0.45
+    secondary_echo_top_n: 120
+  mask_regimes:
+    strict: 0.4
+    medium: 0.355
+    broad: 0.325
+markan_mask_summary:
+  strict:
+    Matt:
+      total_verses: 1068
+      masked_markan_verses: 337
+      remaining_unmasked_verses: 731
+      mask_rule_counts:
+        unmasked: 731
+        score_ge_threshold: 327
+        local_bridge: 10
+    Luke:
+      total_verses: 1149
+      masked_markan_verses: 173
+      remaining_unmasked_verses: 976
+      mask_rule_counts:
+        unmasked: 976
+        score_ge_threshold: 172
+        local_bridge: 1
+  medium:
+    Matt:
+      total_verses: 1068
+      masked_markan_verses: 387
+      remaining_unmasked_verses: 681
+      mask_rule_counts:
+        unmasked: 681
+        score_ge_threshold: 382
+        local_bridge: 5
+    Luke:
+      total_verses: 1149
+      masked_markan_verses: 232
+      remaining_unmasked_verses: 917
+      mask_rule_counts:
+        unmasked: 917
+        score_ge_threshold: 228
+        local_bridge: 4
+  broad:
+    Matt:
+      total_verses: 1068
+      masked_markan_verses: 431
+      remaining_unmasked_verses: 637
+      mask_rule_counts:
+        unmasked: 637
+        score_ge_threshold: 425
+        local_bridge: 6
+    Luke:
+      total_verses: 1149
+      masked_markan_verses: 268
+      remaining_unmasked_verses: 881
+      mask_rule_counts:
+        unmasked: 881
+        score_ge_threshold: 265
+        local_bridge: 3
+global_metrics:
+  matt_total_verse_count: 1068
+  luke_total_verse_count: 1149
+  matt_masked_markan_count_default_medium: 387
+  luke_masked_markan_count_default_medium: 232
+  matt_unmasked_count_default_medium: 681
+  luke_unmasked_count_default_medium: 917
+  full_masked_matrix_rows: 624477
+  matched_pair_count_default_medium: 64
+  loose_block_count_default_medium: 24
+  tight_block_count_default_medium: 30
+  secondary_echo_count_default_medium: 54
+primary_pair_score_summary:
+  mean: 0.581914
+  median: 0.568019
+  min: 0.322939
+  max: 0.943357
+  ge_0.80: 11
+  ge_0.70: 19
+  ge_0.60: 28
+  ge_0.50: 40
+  lt_0.40: 18
+top_secondary_echoes:
+- a_ref: Matt 7:8
+  b_ref: Luke 11:10
+  a_idx: 158
+  b_idx: 416
+  score: 0.9784719347953796
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:7
+  b_ref: Luke 11:9
+  a_idx: 157
+  b_idx: 415
+  score: 0.9138877391815186
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:20
+  b_ref: Luke 9:58
+  a_idx: 193
+  b_idx: 363
+  score: 0.8944393992424011
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 12:41
+  b_ref: Luke 11:32
+  a_idx: 301
+  b_idx: 435
+  score: 0.8881125450134277
+  tags:
+  - strong_verbal_echo
+- a_ref: Matt 12:42
+  b_ref: Luke 11:31
+  a_idx: 302
+  b_idx: 434
+  score: 0.8047777414321899
+  tags:
+  - strong_verbal_echo
+- a_ref: Matt 6:24
+  b_ref: Luke 16:13
+  a_idx: 141
+  b_idx: 623
+  score: 0.7899556756019592
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:27
+  b_ref: Luke 12:25
+  a_idx: 144
+  b_idx: 480
+  score: 0.7779704332351685
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 23:37
+  b_ref: Luke 13:34
+  a_idx: 539
+  b_idx: 544
+  score: 0.7299086451530457
+  tags:
+  - strong_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:30
+  b_ref: Luke 12:28
+  a_idx: 147
+  b_idx: 483
+  score: 0.6961929798126221
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:21
+  b_ref: Luke 12:34
+  a_idx: 138
+  b_idx: 489
+  score: 0.691831648349762
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 21:44
+  b_ref: Luke 20:18
+  a_idx: 477
+  b_idx: 736
+  score: 0.6850923299789429
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 7:11
+  b_ref: Luke 11:13
+  a_idx: 161
+  b_idx: 419
+  score: 0.6794857382774353
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 6:29
+  b_ref: Luke 12:27
+  a_idx: 146
+  b_idx: 482
+  score: 0.6760314106941223
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 8:21
+  b_ref: Luke 9:59
+  a_idx: 194
+  b_idx: 364
+  score: 0.6749038100242615
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 13:17
+  b_ref: Luke 10:24
+  a_idx: 312
+  b_idx: 390
+  score: 0.6596546173095703
+  tags:
+  - moderate_verbal_echo
+- a_ref: Matt 10:26
+  b_ref: Luke 12:2
+  a_idx: 232
+  b_idx: 457
+  score: 0.6537418365478516
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 22:45
+  b_ref: Luke 20:44
+  a_idx: 505
+  b_idx: 745
+  score: 0.6499873399734497
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 10:27
+  b_ref: Luke 12:3
+  a_idx: 233
+  b_idx: 458
+  score: 0.6305451393127441
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 5:26
+  b_ref: Luke 12:59
+  a_idx: 99
+  b_idx: 514
+  score: 0.6126886010169983
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+- a_ref: Matt 9:38
+  b_ref: Luke 10:2
+  a_idx: 214
+  b_idx: 369
+  score: 0.6117947697639465
+  tags:
+  - moderate_verbal_echo
+  - nonlocal_reorder
+directional_burden_totals:
+  matt_prior_Luke_uses_Matt: 97.16
+  luke_prior_Matt_uses_Luke: 101.68
+  common_source_or_oral_heuristic_relative_total: 34.978
+actual_vs_canonical:
+  Matt:
+    actual_unit_count: 1068
+    canonical_slot_count: 1071
+    missing_canonical_slots:
+    - Matt 17:21
+    - Matt 18:11
+    - Matt 23:14
+    chapter_max_verses:
+      1: 25
+      2: 23
+      3: 17
+      4: 25
+      5: 48
+      6: 34
+      7: 29
+      8: 34
+      9: 38
+      10: 42
+      11: 30
+      12: 50
+      13: 58
+      14: 36
+      15: 39
+      16: 28
+      17: 27
+      18: 35
+      19: 30
+      20: 34
+      21: 46
+      22: 46
+      23: 39
+      24: 51
+      25: 46
+      26: 75
+      27: 66
+      28: 20
+  Luke:
+    actual_unit_count: 1149
+    canonical_slot_count: 1151
+    missing_canonical_slots:
+    - Luke 17:36
+    - Luke 23:17
+    chapter_max_verses:
+      1: 80
+      2: 52
+      3: 38
+      4: 44
+      5: 39
+      6: 49
+      7: 50
+      8: 56
+      9: 62
+      10: 42
+      11: 54
+      12: 59
+      13: 35
+      14: 35
+      15: 32
+      16: 31
+      17: 37
+      18: 43
+      19: 48
+      20: 47
+      21: 38
+      22: 71
+      23: 56
+      24: 53
+notes:
+- This rerun does not claim to settle Matthew-use-Luke versus Luke-use-Matthew.
+- After explicit Markan masking, the strongest evidence remains the density of high-scoring
+  nonlocal echoes, which is more consistent with a shared sayings/tradition layer
+  than with a single clean monotonic dependence chain.
+- The default medium regime is one auditable choice among several, not the only defensible
+  mask.

@@ -1,0 +1,1540 @@
+- source_ref: Mark 1:2
+  target_ref: Luke 7:27
+  score: 0.6372
+  source_idx: 2
+  target_idx: 329
+  max_exact_run_len: 8
+  max_exact_run: ιδου αποστελλω αγγελον προ προσωπου οσ κατασκευασει οδον
+  shared_content_tokens: αγγελον αποστελλω γεγραπται ιδου κατασκευασει οδον οσ προ προσωπου
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:4
+  target_ref: Luke 3:3
+  score: 0.4955
+  source_idx: 4
+  target_idx: 135
+  max_exact_run_len: 6
+  max_exact_run: κηρυσσων βαπτισμα μετανοιασ εισ αφεσιν αμαρτιων
+  shared_content_tokens: αμαρτιων αφεσιν βαπτισμα εισ κηρυσσων μετανοιασ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 2:22
+  target_ref: Luke 5:38
+  score: 0.5113
+  source_idx: 67
+  target_idx: 252
+  max_exact_run_len: 6
+  max_exact_run: αλλα οινον νεον εισ ασκουσ καινουσ
+  shared_content_tokens: αλλα ασκουσ εισ καινουσ νεον οινον
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:22
+  target_ref: Luke 11:15
+  score: 0.5086
+  source_idx: 95
+  target_idx: 527
+  max_exact_run_len: 4
+  max_exact_run: αρχοντι δαιμονιων εκβαλλει δαιμονια
+  shared_content_tokens: αρχοντι βεελζεβουλ δαιμονια δαιμονιων εκβαλλει
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:29
+  target_ref: Luke 20:8
+  score: 0.4669
+  source_idx: 450
+  target_idx: 893
+  max_exact_run_len: 4
+  max_exact_run: ποια εξουσια ταυτα ποιω
+  shared_content_tokens: αυτοισ εξουσια ιησουσ ποια ποιω ταυτα
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:25
+  target_ref: Luke 22:18
+  score: 0.432
+  source_idx: 560
+  target_idx: 988
+  max_exact_run_len: 4
+  max_exact_run: γενηματοσ τησ αμπελου εωσ
+  shared_content_tokens: αμπελου βασιλεια γενηματοσ εωσ λεγω πιω τησ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:30
+  target_ref: Luke 10:27
+  score: 0.3683
+  source_idx: 484
+  target_idx: 497
+  max_exact_run_len: 6
+  max_exact_run: αγαπησεισ κυριον θεον ολησ τησ καρδιασ
+  shared_content_tokens: αγαπησεισ θεον καρδιασ κυριον ολησ τησ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:36
+  target_ref: Luke 20:42
+  score: 0.4323
+  source_idx: 490
+  target_idx: 927
+  max_exact_run_len: 4
+  max_exact_run: κυριοσ κυριω καθου δεξιων
+  shared_content_tokens: αυτοσ δαυιδ δεξιων καθου κυριοσ κυριω
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:21
+  target_ref: Luke 22:22
+  score: 0.3958
+  source_idx: 556
+  target_idx: 992
+  max_exact_run_len: 4
+  max_exact_run: ουαι ανθρωπω εκεινω δι
+  shared_content_tokens: ανθρωπου ανθρωπω δι εκεινω ουαι παραδιδοται υιοσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:30
+  target_ref: Luke 9:55
+  score: 0.4221
+  source_idx: 314
+  target_idx: 463
+  max_exact_run_len: 2
+  max_exact_run: επετιμησεν αυτοισ
+  shared_content_tokens: αυτοισ επετιμησεν
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:38
+  target_ref: Luke 20:46
+  score: 0.3951
+  source_idx: 492
+  target_idx: 931
+  max_exact_run_len: 3
+  max_exact_run: ασπασμουσ ταισ αγοραισ
+  shared_content_tokens: αγοραισ ασπασμουσ γραμματεων θελοντων περιπατειν στολαισ ταισ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:31
+  target_ref: Luke 13:30
+  score: 0.3684
+  source_idx: 401
+  target_idx: 655
+  max_exact_run_len: 2
+  max_exact_run: εσονται πρωτοι
+  shared_content_tokens: εσονται εσχατοι πρωτοι
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:12
+  target_ref: Luke 15:3
+  score: 0.3934
+  source_idx: 466
+  target_idx: 698
+  max_exact_run_len: 3
+  max_exact_run: προσ αυτουσ παραβολην
+  shared_content_tokens: αυτουσ παραβολην προσ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 7:17
+  target_ref: Luke 1:40
+  score: 0.3314
+  source_idx: 264
+  target_idx: 40
+  max_exact_run_len: 3
+  max_exact_run: εισηλθεν εισ οικον
+  shared_content_tokens: εισ εισηλθεν οικον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:18
+  target_ref: Luke 5:11
+  score: 0.3403
+  source_idx: 18
+  target_idx: 225
+  max_exact_run_len: 2
+  max_exact_run: ηκολουθησαν αυτω
+  shared_content_tokens: αυτω αφεντεσ ηκολουθησαν
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:16
+  target_ref: Luke 19:32
+  score: 0.3405
+  source_idx: 551
+  target_idx: 869
+  max_exact_run_len: 3
+  max_exact_run: ευρον καθωσ αυτοισ
+  shared_content_tokens: αυτοισ ευρον καθωσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:23
+  target_ref: Luke 14:35
+  score: 0.3082
+  source_idx: 131
+  target_idx: 695
+  max_exact_run_len: 3
+  max_exact_run: ωτα ακουειν ακουετω
+  shared_content_tokens: ακουειν ακουετω ωτα
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 20:23
+  score: 0.3248
+  source_idx: 338
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:27
+  target_ref: Luke 8:54
+  score: 0.3341
+  source_idx: 349
+  target_idx: 406
+  max_exact_run_len: 3
+  max_exact_run: κρατησασ τησ χειροσ
+  shared_content_tokens: κρατησασ τησ χειροσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:46
+  target_ref: Luke 6:12
+  score: 0.3012
+  source_idx: 238
+  target_idx: 265
+  max_exact_run_len: 3
+  max_exact_run: εισ οροσ προσευξασθαι
+  shared_content_tokens: εισ οροσ προσευξασθαι
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:3
+  target_ref: Luke 8:5
+  score: 0.3308
+  source_idx: 111
+  target_idx: 357
+  max_exact_run_len: 3
+  max_exact_run: εξηλθεν σπειρων σπειραι
+  shared_content_tokens: εξηλθεν σπειραι σπειρων
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:20
+  target_ref: Luke 11:45
+  score: 0.3304
+  source_idx: 390
+  target_idx: 557
+  max_exact_run_len: 3
+  max_exact_run: αυτω διδασκαλε ταυτα
+  shared_content_tokens: αυτω διδασκαλε ταυτα
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:16
+  target_ref: Luke 20:14
+  score: 0.3145
+  source_idx: 300
+  target_idx: 899
+  max_exact_run_len: 3
+  max_exact_run: διελογιζοντο προσ αλληλουσ
+  shared_content_tokens: αλληλουσ διελογιζοντο προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:48
+  target_ref: Luke 18:38
+  score: 0.3422
+  source_idx: 418
+  target_idx: 832
+  max_exact_run_len: 3
+  max_exact_run: υιε δαυιδ ελεησον
+  shared_content_tokens: δαυιδ ελεησον υιε
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 5:24
+  target_ref: Luke 9:37
+  score: 0.2821
+  source_idx: 173
+  target_idx: 445
+  max_exact_run_len: 3
+  max_exact_run: αυτω οχλοσ πολυσ
+  shared_content_tokens: αυτω οχλοσ πολυσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 13:37
+  target_ref: Luke 12:44
+  score: 0.3012
+  source_idx: 535
+  target_idx: 610
+  max_exact_run_len: 2
+  max_exact_run: λεγω πασιν
+  shared_content_tokens: λεγω πασιν
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:9
+  target_ref: Luke 14:35
+  score: 0.3081
+  source_idx: 117
+  target_idx: 695
+  max_exact_run_len: 3
+  max_exact_run: ωτα ακουειν ακουετω
+  shared_content_tokens: ακουειν ακουετω ωτα
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 15:3
+  score: 0.3262
+  source_idx: 338
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:30
+  target_ref: Luke 23:43
+  score: 0.2691
+  source_idx: 565
+  target_idx: 1083
+  max_exact_run_len: 3
+  max_exact_run: αμην λεγω σημερον
+  shared_content_tokens: αμην αυτω λεγω σημερον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 13:16
+  target_ref: Luke 17:31
+  score: 0.2636
+  source_idx: 514
+  target_idx: 789
+  max_exact_run_len: 3
+  max_exact_run: επιστρεψατω εισ οπισω
+  shared_content_tokens: αραι εισ επιστρεψατω οπισω
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:35
+  target_ref: Luke 17:33
+  score: 0.2924
+  source_idx: 319
+  target_idx: 791
+  max_exact_run_len: 3
+  max_exact_run: απολεσει αυτην οσ
+  shared_content_tokens: απολεσει αυτην οσ ψυχην
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:42
+  target_ref: Luke 17:2
+  score: 0.2821
+  source_idx: 364
+  target_idx: 760
+  max_exact_run_len: 2
+  max_exact_run: μικρων τουτων
+  shared_content_tokens: αυτω εισ ενα θαλασσαν μικρων περικειται σκανδαλιση τουτων τραχηλον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 15:30
+  target_ref: Luke 23:37
+  score: 0.3118
+  source_idx: 636
+  target_idx: 1077
+  max_exact_run_len: 2
+  max_exact_run: σωσον σεαυτον
+  shared_content_tokens: σεαυτον σωσον
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:25
+  target_ref: Luke 13:13
+  score: 0.2598
+  source_idx: 309
+  target_idx: 638
+  max_exact_run_len: 3
+  max_exact_run: επεθηκεν τασ χειρασ
+  shared_content_tokens: επεθηκεν τασ χειρασ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:18
+  target_ref: Luke 23:43
+  score: 0.2794
+  source_idx: 553
+  target_idx: 1083
+  max_exact_run_len: 2
+  max_exact_run: αμην λεγω
+  shared_content_tokens: αμην εμου λεγω μετ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:51
+  target_ref: Luke 4:12
+  score: 0.2882
+  source_idx: 421
+  target_idx: 182
+  max_exact_run_len: 3
+  max_exact_run: αποκριθεισ αυτω ιησουσ
+  shared_content_tokens: αποκριθεισ αυτω ιησουσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:23
+  target_ref: Luke 8:8
+  score: 0.2872
+  source_idx: 131
+  target_idx: 360
+  max_exact_run_len: 3
+  max_exact_run: ωτα ακουειν ακουετω
+  shared_content_tokens: ακουειν ακουετω ωτα
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 5:34
+  target_ref: Luke 7:50
+  score: 0.3056
+  source_idx: 183
+  target_idx: 352
+  max_exact_run_len: 2
+  max_exact_run: πιστισ σεσωκεν
+  shared_content_tokens: ειρηνην εισ πιστισ σεσωκεν
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:46
+  target_ref: Luke 9:28
+  score: 0.253
+  source_idx: 238
+  target_idx: 436
+  max_exact_run_len: 3
+  max_exact_run: εισ οροσ προσευξασθαι
+  shared_content_tokens: εισ οροσ προσευξασθαι
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 2:17
+  target_ref: Luke 5:31
+  score: 0.2992
+  source_idx: 62
+  target_idx: 245
+  max_exact_run_len: 2
+  max_exact_run: χρειαν εχουσιν
+  shared_content_tokens: αλλα εχοντεσ εχουσιν ιατρου ιησουσ κακωσ χρειαν
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 5:24
+  target_ref: Luke 5:28
+  score: 0.2673
+  source_idx: 173
+  target_idx: 242
+  max_exact_run_len: 2
+  max_exact_run: ηκολουθει αυτω
+  shared_content_tokens: αυτω ηκολουθει
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 13:23
+  target_ref: Luke 10:24
+  score: 0.2672
+  source_idx: 521
+  target_idx: 494
+  max_exact_run_len: 2
+  max_exact_run: υμεισ βλεπετε
+  shared_content_tokens: βλεπετε υμεισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:32
+  target_ref: Luke 8:20
+  score: 0.2623
+  source_idx: 105
+  target_idx: 372
+  max_exact_run_len: 2
+  max_exact_run: μητηρ αδελφοι
+  shared_content_tokens: αδελφοι αυτω εξω μητηρ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:11
+  target_ref: Luke 11:16
+  score: 0.2616
+  source_idx: 295
+  target_idx: 528
+  max_exact_run_len: 2
+  max_exact_run: σημειον ουρανου
+  shared_content_tokens: ουρανου παρ πειραζοντεσ σημειον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:2
+  target_ref: Luke 13:10
+  score: 0.2591
+  source_idx: 75
+  target_idx: 635
+  max_exact_run_len: 2
+  max_exact_run: τοισ σαββασιν
+  shared_content_tokens: σαββασιν τοισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:16
+  target_ref: Luke 24:14
+  score: 0.2591
+  source_idx: 300
+  target_idx: 1110
+  max_exact_run_len: 2
+  max_exact_run: προσ αλληλουσ
+  shared_content_tokens: αλληλουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:3
+  target_ref: Luke 19:31
+  score: 0.2678
+  source_idx: 425
+  target_idx: 868
+  max_exact_run_len: 3
+  max_exact_run: κυριοσ χρειαν εχει
+  shared_content_tokens: εχει κυριοσ τισ χρειαν
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:25
+  target_ref: Luke 24:40
+  score: 0.2357
+  source_idx: 309
+  target_idx: 1136
+  max_exact_run_len: 3
+  max_exact_run: τασ χειρασ τουσ
+  shared_content_tokens: τασ τουσ χειρασ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:32
+  target_ref: Luke 4:42
+  score: 0.2347
+  source_idx: 224
+  target_idx: 212
+  max_exact_run_len: 3
+  max_exact_run: εισ ερημον τοπον
+  shared_content_tokens: εισ ερημον τοπον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:19
+  target_ref: Luke 4:29
+  score: 0.2341
+  source_idx: 441
+  target_idx: 199
+  max_exact_run_len: 3
+  max_exact_run: εξω τησ πολεωσ
+  shared_content_tokens: εξω πολεωσ τησ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:52
+  target_ref: Luke 17:19
+  score: 0.2828
+  source_idx: 422
+  target_idx: 777
+  max_exact_run_len: 2
+  max_exact_run: πιστισ σεσωκεν
+  shared_content_tokens: αυτω πιστισ σεσωκεν
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 3:13
+  score: 0.2512
+  source_idx: 338
+  target_idx: 145
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:4
+  target_ref: Luke 20:23
+  score: 0.2504
+  source_idx: 458
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:18
+  target_ref: Luke 22:2
+  score: 0.3104
+  source_idx: 440
+  target_idx: 972
+  max_exact_run_len: 2
+  max_exact_run: αρχιερεισ γραμματεισ
+  shared_content_tokens: αρχιερεισ γραμματεισ εζητουν εφοβουντο πωσ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:24
+  target_ref: Luke 11:17
+  score: 0.228
+  source_idx: 97
+  target_idx: 529
+  max_exact_run_len: 3
+  max_exact_run: βασιλεια εφ εαυτην
+  shared_content_tokens: βασιλεια εαυτην εφ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:8
+  target_ref: Luke 3:16
+  score: 0.2756
+  source_idx: 8
+  target_idx: 148
+  max_exact_run_len: 2
+  max_exact_run: πνευματι αγιω
+  shared_content_tokens: αγιω αυτοσ βαπτισει πνευματι υδατι υμασ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 7:30
+  target_ref: Luke 1:56
+  score: 0.225
+  source_idx: 277
+  target_idx: 56
+  max_exact_run_len: 3
+  max_exact_run: εισ οικον αυτησ
+  shared_content_tokens: αυτησ εισ οικον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:38
+  target_ref: Luke 11:43
+  score: 0.2246
+  source_idx: 492
+  target_idx: 555
+  max_exact_run_len: 3
+  max_exact_run: ασπασμουσ ταισ αγοραισ
+  shared_content_tokens: αγοραισ ασπασμουσ ταισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:29
+  target_ref: Luke 4:24
+  score: 0.2542
+  source_idx: 399
+  target_idx: 194
+  max_exact_run_len: 3
+  max_exact_run: αμην λεγω ουδεισ
+  shared_content_tokens: αμην εστιν λεγω ουδεισ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:14
+  target_ref: Luke 22:45
+  score: 0.2236
+  source_idx: 336
+  target_idx: 1015
+  max_exact_run_len: 3
+  max_exact_run: προσ τουσ μαθητασ
+  shared_content_tokens: αυτουσ μαθητασ προσ τουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:14
+  target_ref: Luke 9:14
+  score: 0.2233
+  source_idx: 336
+  target_idx: 422
+  max_exact_run_len: 3
+  max_exact_run: προσ τουσ μαθητασ
+  shared_content_tokens: αυτουσ μαθητασ προσ τουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:31
+  target_ref: Luke 10:27
+  score: 0.2222
+  source_idx: 485
+  target_idx: 497
+  max_exact_run_len: 3
+  max_exact_run: πλησιον ωσ σεαυτον
+  shared_content_tokens: αγαπησεισ πλησιον σεαυτον ωσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:33
+  target_ref: Luke 8:21
+  score: 0.2418
+  source_idx: 106
+  target_idx: 373
+  max_exact_run_len: 2
+  max_exact_run: μητηρ αδελφοι
+  shared_content_tokens: αδελφοι αποκριθεισ μητηρ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:9
+  target_ref: Luke 13:35
+  score: 0.2516
+  source_idx: 431
+  target_idx: 660
+  max_exact_run_len: 3
+  max_exact_run: ευλογημενοσ ερχομενοσ ονοματι
+  shared_content_tokens: ερχομενοσ ευλογημενοσ ονοματι
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:31
+  target_ref: Luke 17:25
+  score: 0.2496
+  source_idx: 315
+  target_idx: 783
+  max_exact_run_len: 3
+  max_exact_run: πολλα παθειν αποδοκιμασθηναι
+  shared_content_tokens: αποδοκιμασθηναι δει παθειν πολλα
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 13:23
+  score: 0.2362
+  source_idx: 338
+  target_idx: 648
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 7:17
+  target_ref: Luke 8:9
+  score: 0.2361
+  source_idx: 264
+  target_idx: 361
+  max_exact_run_len: 2
+  max_exact_run: επηρωτων μαθηται
+  shared_content_tokens: επηρωτων μαθηται
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 14:25
+  score: 0.236
+  source_idx: 338
+  target_idx: 685
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:26
+  target_ref: Luke 22:23
+  score: 0.2453
+  source_idx: 396
+  target_idx: 993
+  max_exact_run_len: 3
+  max_exact_run: προσ εαυτουσ τισ
+  shared_content_tokens: εαυτουσ προσ τισ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 2:18
+  score: 0.2353
+  source_idx: 338
+  target_idx: 98
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:62
+  target_ref: Luke 22:69
+  score: 0.2342
+  source_idx: 597
+  target_idx: 1039
+  max_exact_run_len: 2
+  max_exact_run: τησ δυναμεωσ
+  shared_content_tokens: ανθρωπου δεξιων δυναμεωσ τησ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:6
+  target_ref: Luke 9:16
+  score: 0.2417
+  source_idx: 290
+  target_idx: 424
+  max_exact_run_len: 3
+  max_exact_run: εδιδου τοισ μαθηταισ
+  shared_content_tokens: αρτουσ εδιδου λαβων μαθηταισ οχλω τοισ τουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 19:33
+  score: 0.2315
+  source_idx: 338
+  target_idx: 870
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:4
+  target_ref: Luke 6:2
+  score: 0.2711
+  source_idx: 77
+  target_idx: 255
+  max_exact_run_len: 3
+  max_exact_run: εξεστιν τοισ σαββασιν
+  shared_content_tokens: εξεστιν σαββασιν τοισ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 7:10
+  target_ref: Luke 18:20
+  score: 0.2387
+  source_idx: 258
+  target_idx: 814
+  max_exact_run_len: 3
+  max_exact_run: τιμα πατερα μητερα
+  shared_content_tokens: μητερα πατερα τιμα
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:17
+  target_ref: Luke 10:25
+  score: 0.2382
+  source_idx: 387
+  target_idx: 495
+  max_exact_run_len: 3
+  max_exact_run: ζωην αιωνιον κληρονομησω
+  shared_content_tokens: αιωνιον διδασκαλε ζωην κληρονομησω
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:26
+  target_ref: Luke 21:37
+  score: 0.2581
+  source_idx: 561
+  target_idx: 969
+  max_exact_run_len: 2
+  max_exact_run: εισ οροσ
+  shared_content_tokens: εισ ελαιων οροσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:25
+  target_ref: Luke 19:26
+  score: 0.258
+  source_idx: 133
+  target_idx: 863
+  max_exact_run_len: 2
+  max_exact_run: εχει αρθησεται
+  shared_content_tokens: αρθησεται δοθησεται εχει
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 5:37
+  target_ref: Luke 6:14
+  score: 0.2279
+  source_idx: 186
+  target_idx: 267
+  max_exact_run_len: 2
+  max_exact_run: ιακωβον ιωαννην
+  shared_content_tokens: αδελφον ιακωβον ιωαννην πετρον
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:3
+  target_ref: Luke 3:11
+  score: 0.2276
+  source_idx: 373
+  target_idx: 143
+  max_exact_run_len: 2
+  max_exact_run: αποκριθεισ αυτοισ
+  shared_content_tokens: αποκριθεισ αυτοισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:46
+  target_ref: Luke 13:13
+  score: 0.2276
+  source_idx: 581
+  target_idx: 638
+  max_exact_run_len: 2
+  max_exact_run: τασ χειρασ
+  shared_content_tokens: τασ χειρασ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:9
+  target_ref: Luke 20:45
+  score: 0.2272
+  source_idx: 82
+  target_idx: 930
+  max_exact_run_len: 2
+  max_exact_run: τοισ μαθηταισ
+  shared_content_tokens: μαθηταισ τοισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:34
+  target_ref: Luke 24:14
+  score: 0.2272
+  source_idx: 356
+  target_idx: 1110
+  max_exact_run_len: 2
+  max_exact_run: προσ αλληλουσ
+  shared_content_tokens: αλληλουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:16
+  target_ref: Luke 6:11
+  score: 0.2271
+  source_idx: 300
+  target_idx: 264
+  max_exact_run_len: 2
+  max_exact_run: προσ αλληλουσ
+  shared_content_tokens: αλληλουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:22
+  target_ref: Luke 17:17
+  score: 0.2269
+  source_idx: 444
+  target_idx: 775
+  max_exact_run_len: 2
+  max_exact_run: αποκριθεισ ιησουσ
+  shared_content_tokens: αποκριθεισ ιησουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:18
+  target_ref: Luke 6:14
+  score: 0.2561
+  source_idx: 91
+  target_idx: 267
+  max_exact_run_len: 2
+  max_exact_run: φιλιππον βαρθολομαιον
+  shared_content_tokens: ανδρεαν βαρθολομαιον ιακωβον σιμωνα φιλιππον
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:25
+  target_ref: Luke 18:37
+  score: 0.256
+  source_idx: 25
+  target_idx: 831
+  max_exact_run_len: 2
+  max_exact_run: αυτω ιησουσ
+  shared_content_tokens: αυτω ιησουσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:23
+  target_ref: Luke 18:42
+  score: 0.2558
+  source_idx: 345
+  target_idx: 836
+  max_exact_run_len: 2
+  max_exact_run: ιησουσ αυτω
+  shared_content_tokens: αυτω ιησουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 13:10
+  target_ref: Luke 24:47
+  score: 0.2255
+  source_idx: 508
+  target_idx: 1143
+  max_exact_run_len: 2
+  max_exact_run: εισ εθνη
+  shared_content_tokens: εθνη εισ κηρυχθηναι
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:14
+  target_ref: Luke 20:23
+  score: 0.2253
+  source_idx: 336
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:15
+  target_ref: Luke 11:18
+  score: 0.2251
+  source_idx: 88
+  target_idx: 530
+  max_exact_run_len: 2
+  max_exact_run: εκβαλλειν δαιμονια
+  shared_content_tokens: δαιμονια εκβαλλειν
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:23
+  target_ref: Luke 22:48
+  score: 0.2248
+  source_idx: 345
+  target_idx: 1018
+  max_exact_run_len: 2
+  max_exact_run: ιησουσ αυτω
+  shared_content_tokens: αυτω ιησουσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 5:24
+  target_ref: Luke 5:29
+  score: 0.2243
+  source_idx: 173
+  target_idx: 243
+  max_exact_run_len: 2
+  max_exact_run: οχλοσ πολυσ
+  shared_content_tokens: αυτω μετ οχλοσ πολυσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:34
+  target_ref: Luke 9:57
+  score: 0.2235
+  source_idx: 356
+  target_idx: 465
+  max_exact_run_len: 2
+  max_exact_run: οδω τισ
+  shared_content_tokens: οδω προσ τισ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:42
+  target_ref: Luke 21:3
+  score: 0.2533
+  source_idx: 496
+  target_idx: 935
+  max_exact_run_len: 2
+  max_exact_run: χηρα πτωχη
+  shared_content_tokens: εβαλεν πτωχη χηρα
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:39
+  target_ref: Luke 9:50
+  score: 0.2531
+  source_idx: 361
+  target_idx: 458
+  max_exact_run_len: 2
+  max_exact_run: ιησουσ κωλυετε
+  shared_content_tokens: εστιν ιησουσ κωλυετε οσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 20:3
+  score: 0.2229
+  source_idx: 338
+  target_idx: 888
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:30
+  target_ref: Luke 8:56
+  score: 0.2526
+  source_idx: 314
+  target_idx: 408
+  max_exact_run_len: 2
+  max_exact_run: αυτοισ μηδενι
+  shared_content_tokens: αυτοισ μηδενι
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 2:49
+  score: 0.2226
+  source_idx: 338
+  target_idx: 129
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 12:16
+  score: 0.2222
+  source_idx: 338
+  target_idx: 582
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:51
+  target_ref: Luke 20:23
+  score: 0.2217
+  source_idx: 243
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:4
+  target_ref: Luke 15:3
+  score: 0.2508
+  source_idx: 458
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:24
+  target_ref: Luke 18:25
+  score: 0.2283
+  source_idx: 394
+  target_idx: 819
+  max_exact_run_len: 3
+  max_exact_run: εισ βασιλειαν εισελθειν
+  shared_content_tokens: βασιλειαν εισ εισελθειν εστιν
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:40
+  target_ref: Luke 2:11
+  score: 0.2479
+  source_idx: 362
+  target_idx: 91
+  max_exact_run_len: 2
+  max_exact_run: οσ εστιν
+  shared_content_tokens: εστιν οσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 2:26
+  target_ref: Luke 1:40
+  score: 0.2273
+  source_idx: 71
+  target_idx: 40
+  max_exact_run_len: 3
+  max_exact_run: εισηλθεν εισ οικον
+  shared_content_tokens: εισ εισηλθεν οικον
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:31
+  target_ref: Luke 8:54
+  score: 0.2565
+  source_idx: 31
+  target_idx: 406
+  max_exact_run_len: 3
+  max_exact_run: κρατησασ τησ χειροσ
+  shared_content_tokens: κρατησασ τησ χειροσ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:11
+  target_ref: Luke 21:13
+  score: 0.2463
+  source_idx: 203
+  target_idx: 945
+  max_exact_run_len: 2
+  max_exact_run: εισ μαρτυριον
+  shared_content_tokens: εισ μαρτυριον
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:12
+  target_ref: Luke 21:32
+  score: 0.2455
+  source_idx: 296
+  target_idx: 964
+  max_exact_run_len: 2
+  max_exact_run: αμην λεγω
+  shared_content_tokens: αμην γενεα λεγω
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 4:13
+  target_ref: Luke 15:3
+  score: 0.2439
+  source_idx: 121
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: παραβολην ταυτην
+  shared_content_tokens: παραβολην ταυτην
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:39
+  target_ref: Luke 4:15
+  score: 0.2433
+  source_idx: 493
+  target_idx: 185
+  max_exact_run_len: 2
+  max_exact_run: ταισ συναγωγαισ
+  shared_content_tokens: συναγωγαισ ταισ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 15:26
+  target_ref: Luke 23:37
+  score: 0.2432
+  source_idx: 633
+  target_idx: 1077
+  max_exact_run_len: 2
+  max_exact_run: βασιλευσ ιουδαιων
+  shared_content_tokens: βασιλευσ ιουδαιων
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:42
+  target_ref: Luke 5:13
+  score: 0.2426
+  source_idx: 42
+  target_idx: 227
+  max_exact_run_len: 2
+  max_exact_run: απηλθεν απ
+  shared_content_tokens: απ απηλθεν λεπρα
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:23
+  target_ref: Luke 22:19
+  score: 0.2392
+  source_idx: 558
+  target_idx: 989
+  max_exact_run_len: 2
+  max_exact_run: εδωκεν αυτοισ
+  shared_content_tokens: αυτοισ εδωκεν ευχαριστησασ λαβων
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:30
+  target_ref: Luke 22:61
+  score: 0.239
+  source_idx: 565
+  target_idx: 1031
+  max_exact_run_len: 2
+  max_exact_run: αλεκτορα φωνησαι
+  shared_content_tokens: αλεκτορα απαρνηση αυτω πριν σημερον τρισ φωνησαι
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:26
+  target_ref: Luke 4:33
+  score: 0.2389
+  source_idx: 26
+  target_idx: 203
+  max_exact_run_len: 2
+  max_exact_run: φωνη μεγαλη
+  shared_content_tokens: μεγαλη πνευμα φωνη
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 2:11
+  target_ref: Luke 5:24
+  score: 0.2385
+  source_idx: 56
+  target_idx: 238
+  max_exact_run_len: 2
+  max_exact_run: λεγω εγειρε
+  shared_content_tokens: εγειρε εισ λεγω οικον
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:52
+  target_ref: Luke 5:28
+  score: 0.2384
+  source_idx: 422
+  target_idx: 242
+  max_exact_run_len: 2
+  max_exact_run: ηκολουθει αυτω
+  shared_content_tokens: αυτω ηκολουθει
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 20:25
+  score: 0.2351
+  source_idx: 338
+  target_idx: 910
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:21
+  target_ref: Luke 13:10
+  score: 0.2314
+  source_idx: 21
+  target_idx: 635
+  max_exact_run_len: 2
+  max_exact_run: τοισ σαββασιν
+  shared_content_tokens: σαββασιν τοισ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 15:2
+  target_ref: Luke 23:37
+  score: 0.2303
+  source_idx: 609
+  target_idx: 1077
+  max_exact_run_len: 2
+  max_exact_run: βασιλευσ ιουδαιων
+  shared_content_tokens: βασιλευσ ιουδαιων
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:12
+  target_ref: Luke 20:23
+  score: 0.2298
+  source_idx: 466
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 13:17
+  target_ref: Luke 5:35
+  score: 0.239
+  source_idx: 515
+  target_idx: 249
+  max_exact_run_len: 3
+  max_exact_run: εκειναισ ταισ ημεραισ
+  shared_content_tokens: εκειναισ ημεραισ ταισ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:62
+  target_ref: Luke 21:27
+  score: 0.2281
+  source_idx: 597
+  target_idx: 959
+  max_exact_run_len: 2
+  max_exact_run: υιον ανθρωπου
+  shared_content_tokens: ανθρωπου δυναμεωσ ερχομενον υιον
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 3:2
+  target_ref: Luke 6:2
+  score: 0.228
+  source_idx: 75
+  target_idx: 255
+  max_exact_run_len: 2
+  max_exact_run: τοισ σαββασιν
+  shared_content_tokens: σαββασιν τοισ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 11:28
+  target_ref: Luke 20:8
+  score: 0.2379
+  source_idx: 449
+  target_idx: 893
+  max_exact_run_len: 3
+  max_exact_run: ποια εξουσια ταυτα
+  shared_content_tokens: εξουσια ποια ταυτα
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:6
+  target_ref: Luke 20:23
+  score: 0.2272
+  source_idx: 460
+  target_idx: 908
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 10:10
+  target_ref: Luke 9:4
+  score: 0.2271
+  source_idx: 380
+  target_idx: 412
+  max_exact_run_len: 2
+  max_exact_run: εισ οικιαν
+  shared_content_tokens: εισ οικιαν
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:39
+  target_ref: Luke 11:43
+  score: 0.2266
+  source_idx: 493
+  target_idx: 555
+  max_exact_run_len: 2
+  max_exact_run: ταισ συναγωγαισ
+  shared_content_tokens: συναγωγαισ ταισ τοισ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 8:8
+  target_ref: Luke 9:17
+  score: 0.2257
+  source_idx: 292
+  target_idx: 425
+  max_exact_run_len: 2
+  max_exact_run: εφαγον εχορτασθησαν
+  shared_content_tokens: εφαγον εχορτασθησαν κλασματων
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:14
+  target_ref: Luke 15:3
+  score: 0.2256
+  source_idx: 336
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:25
+  target_ref: Luke 4:12
+  score: 0.225
+  source_idx: 25
+  target_idx: 182
+  max_exact_run_len: 2
+  max_exact_run: αυτω ιησουσ
+  shared_content_tokens: αυτω ιησουσ
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 14:38
+  target_ref: Luke 22:40
+  score: 0.2236
+  source_idx: 573
+  target_idx: 1010
+  max_exact_run_len: 2
+  max_exact_run: εισ πειρασμον
+  shared_content_tokens: εισ πειρασμον προσευχεσθε
+  source_in_primary_chain: true
+  target_in_primary_chain: false
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:16
+  target_ref: Luke 20:41
+  score: 0.2229
+  source_idx: 338
+  target_idx: 926
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 15:2
+  target_ref: Luke 23:38
+  score: 0.2528
+  source_idx: 609
+  target_idx: 1078
+  max_exact_run_len: 2
+  max_exact_run: βασιλευσ ιουδαιων
+  shared_content_tokens: αυτω βασιλευσ ιουδαιων
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 6:51
+  target_ref: Luke 15:3
+  score: 0.222
+  source_idx: 243
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 9:9
+  target_ref: Luke 6:5
+  score: 0.2201
+  source_idx: 331
+  target_idx: 258
+  max_exact_run_len: 2
+  max_exact_run: υιοσ ανθρωπου
+  shared_content_tokens: ανθρωπου αυτοισ υιοσ
+  source_in_primary_chain: false
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:11
+  target_ref: Luke 9:35
+  score: 0.2391
+  source_idx: 11
+  target_idx: 443
+  max_exact_run_len: 2
+  max_exact_run: φωνη εγενετο
+  shared_content_tokens: εγενετο υιοσ φωνη
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 1:44
+  target_ref: Luke 21:13
+  score: 0.2375
+  source_idx: 44
+  target_idx: 945
+  max_exact_run_len: 2
+  max_exact_run: εισ μαρτυριον
+  shared_content_tokens: εισ μαρτυριον
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:6
+  target_ref: Luke 15:3
+  score: 0.2276
+  source_idx: 460
+  target_idx: 698
+  max_exact_run_len: 2
+  max_exact_run: προσ αυτουσ
+  shared_content_tokens: αυτουσ προσ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.
+- source_ref: Mark 12:35
+  target_ref: Luke 20:44
+  score: 0.228
+  source_idx: 489
+  target_idx: 929
+  max_exact_run_len: 1
+  max_exact_run: πωσ
+  shared_content_tokens: δαυιδ εστιν πωσ υιοσ
+  source_in_primary_chain: true
+  target_in_primary_chain: true
+  note: High-scoring non-primary echo. Use as displaced/secondary evidence, not as an independent chain pair.

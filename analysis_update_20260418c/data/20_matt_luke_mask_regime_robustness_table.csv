@@ -1,0 +1,13 @@
+regime,primary_chain_min_score,pair_count,loose_block_count,threshold,matt_masked,matt_unmasked,matt_reason_counts,luke_masked,luke_unmasked,luke_reason_counts
+strict,0.28,76,29,0.4,337,731,"{'unmasked': 731, 'score_ge_threshold': 327, 'local_bridge': 10}",173,976,"{'unmasked': 976, 'score_ge_threshold': 172, 'local_bridge': 1}"
+strict,0.3,70,28,0.4,337,731,"{'unmasked': 731, 'score_ge_threshold': 327, 'local_bridge': 10}",173,976,"{'unmasked': 976, 'score_ge_threshold': 172, 'local_bridge': 1}"
+strict,0.32,67,27,0.4,337,731,"{'unmasked': 731, 'score_ge_threshold': 327, 'local_bridge': 10}",173,976,"{'unmasked': 976, 'score_ge_threshold': 172, 'local_bridge': 1}"
+strict,0.34,60,25,0.4,337,731,"{'unmasked': 731, 'score_ge_threshold': 327, 'local_bridge': 10}",173,976,"{'unmasked': 976, 'score_ge_threshold': 172, 'local_bridge': 1}"
+medium,0.28,71,25,0.355,387,681,"{'unmasked': 681, 'score_ge_threshold': 382, 'local_bridge': 5}",232,917,"{'unmasked': 917, 'score_ge_threshold': 228, 'local_bridge': 4}"
+medium,0.3,66,25,0.355,387,681,"{'unmasked': 681, 'score_ge_threshold': 382, 'local_bridge': 5}",232,917,"{'unmasked': 917, 'score_ge_threshold': 228, 'local_bridge': 4}"
+medium,0.32,64,24,0.355,387,681,"{'unmasked': 681, 'score_ge_threshold': 382, 'local_bridge': 5}",232,917,"{'unmasked': 917, 'score_ge_threshold': 228, 'local_bridge': 4}"
+medium,0.34,58,23,0.355,387,681,"{'unmasked': 681, 'score_ge_threshold': 382, 'local_bridge': 5}",232,917,"{'unmasked': 917, 'score_ge_threshold': 228, 'local_bridge': 4}"
+broad,0.28,69,25,0.325,431,637,"{'unmasked': 637, 'score_ge_threshold': 425, 'local_bridge': 6}",268,881,"{'unmasked': 881, 'score_ge_threshold': 265, 'local_bridge': 3}"
+broad,0.3,65,25,0.325,431,637,"{'unmasked': 637, 'score_ge_threshold': 425, 'local_bridge': 6}",268,881,"{'unmasked': 881, 'score_ge_threshold': 265, 'local_bridge': 3}"
+broad,0.32,63,24,0.325,431,637,"{'unmasked': 637, 'score_ge_threshold': 425, 'local_bridge': 6}",268,881,"{'unmasked': 881, 'score_ge_threshold': 265, 'local_bridge': 3}"
+broad,0.34,57,23,0.325,431,637,"{'unmasked': 637, 'score_ge_threshold': 425, 'local_bridge': 6}",268,881,"{'unmasked': 881, 'score_ge_threshold': 265, 'local_bridge': 3}"

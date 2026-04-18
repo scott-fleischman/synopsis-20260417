@@ -1,0 +1,7 @@
+required_fields:
+- sample_stratum
+- machine_audit_class
+- source_ref
+- target_ref
+- validation_status
+type: epistle_validation_sample_row

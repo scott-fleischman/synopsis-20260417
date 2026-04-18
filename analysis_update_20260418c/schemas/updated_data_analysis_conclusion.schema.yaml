@@ -1,0 +1,6 @@
+required_fields:
+- claim_id
+- confidence
+- conclusion
+- limits
+type: updated_conclusion_claim

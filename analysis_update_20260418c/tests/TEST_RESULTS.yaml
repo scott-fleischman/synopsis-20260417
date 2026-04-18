@@ -1,0 +1,26 @@
+overall_pass: true
+tests:
+- test: authoritative_numbers_exists
+  passed: true
+  detail: ''
+- test: mark_luke_penalty_grid_has_shared_and_mark_prior_outcomes
+  passed: true
+  detail: '{''Mark_prior_Luke_uses_Mark_or_Mark_like_source'': 211, ''shared_tradition_adjusted_for_order_retention'': 34}'
+- test: john_anchor_ledger_count_matches_registry
+  passed: true
+  detail: 29 vs 29
+- test: thomas_status_rows_116
+  passed: true
+  detail: '116'
+- test: epistle_validation_includes_targeted_10
+  passed: true
+  detail: '10'
+- test: morphgnt_token_layer_nonempty
+  passed: true
+  detail: (85364, 13)
+- test: morphology_candidate_pairs_nonempty
+  passed: true
+  detail: (2772, 32)
+- test: q_mask_regime_table_has_three_regimes
+  passed: true
+  detail: '[''broad'', ''medium'', ''strict'']'

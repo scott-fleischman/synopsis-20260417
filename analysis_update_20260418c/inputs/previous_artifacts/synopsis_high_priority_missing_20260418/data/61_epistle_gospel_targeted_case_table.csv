@@ -1,0 +1,11 @@
+case_id,source_ref,target_ref,feature,formula_risk,automatic_retrieval_support,philological_case_strength,best_current_model,max_exact_run_len,score
+epistle_1tim_5_18_worker_wages_luke_10_7,1Tim 5:18,Luke 10:7,worker worthy/deserving of wages,low,strong,high,direct written or fixed written-saying tradition; strong evidence against independent convergence,5,0.3436
+epistle_1tim_5_18_worker_wages_matt_10_10,1Tim 5:18,Matt 10:10,worker worthy/deserving motif,low,weak,medium,supports Jesus-saying tradition; less specifically supports Matthew than Luke,2,0.1673
+epistle_james_5_12_oaths_matt_5_34_37,Jas 5:12,Matt 5:34-37,no oaths; heaven/earth; yes/yes and no/no,low,weak,medium,"shared Jesus tradition, possibly written or oral; direct Matthew dependence not required by the data",2,0.105
+epistle_james_2_5_poor_kingdom_luke_6_20,Jas 2:5,Luke 6:20,poor as heirs/possessors of kingdom,low,weak,medium,shared beatitude/Jesus tradition rather than demonstrable direct literary dependence,1,0.0331
+epistle_james_1_5_6_ask_given_faith,Jas 1:5-6,Matt 7:7-8,ask and it will be given; ask in confidence,low,weak,medium,shared sapiential prayer tradition with possible Jesus-saying influence,2,0.0622
+epistle_james_1_22_25_hear_do_words,Jas 1:22-25,Matt 7:24-27,hearing and doing the word/words,low,weak,medium,common sapiential/Jesus tradition; direct dependence unproven,2,0.0473
+epistle_james_4_10_humble_exalt,Jas 4:10,Luke 14:11,humble oneself / be exalted,low,weak,medium,portable Jesus/reversal saying; not enough for direct literary dependence,1,0.03
+epistle_1cor_11_24_lord_supper_luke_22,1Cor 11:24,Luke 22:19,Lord’s Supper words: do this in remembrance,high,strong,medium,shared formula/tradition more likely than direct Gospel dependence,6,0.6228
+epistle_2tim_2_12_denying_christ,2Tim 2:12,Matt 10:33,deny him / he will deny us,low,weak,medium,shared saying/confessional tradition,0,0.0
+johannine_1john_3_13_world_hates_you,1John 3:13,John 15:18-19,world hates disciples,low,medium,medium,shared Johannine tradition/idiolect; direction requires broader corpus modeling,4,0.3705

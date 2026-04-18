@@ -1,0 +1,11 @@
+formula_risk_definition:
+  high: known scriptural/liturgical/formulaic overlap risk
+  medium: some formula/common-tradition risk
+  low: less likely formula-only but still needs close reading
+top500_formula_counts:
+  low: 317
+  high: 166
+  medium: 17
+targeted_formula_counts:
+  low: 9
+  high: 1

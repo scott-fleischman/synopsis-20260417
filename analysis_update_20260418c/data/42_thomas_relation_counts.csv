@@ -1,0 +1,8 @@
+relation_type,matrix_strength,parallel_certainty,count
+no_curated_canonical_parallel_in_prior_registry,none,not_assessed,70
+overlapping_jesus_tradition_uncertain_direction,high,high,4
+overlapping_jesus_tradition_uncertain_direction,medium,medium,24
+possible_synoptic_influence_or_harmonization,high,medium_high,3
+possible_synoptic_influence_or_harmonization,medium,medium,1
+shared_sayings_or_parable_tradition,high,high,4
+shared_sayings_or_parable_tradition,medium,medium,10

@@ -1,0 +1,18 @@
+token_layer_rows: 85364
+verse_unit_rows: 5060
+mark_luke_primary_chain:
+  pairs_audited: 183
+  surface_score_mean: 0.4042
+  lemma_score_mean: 0.4836
+  lemma_improves_or_retains_count: 153
+  lemma_worse_count: 30
+  mean_lemma_minus_surface_score: 0.0795
+mark_luke_candidate_threshold_comparison_score_ge_0_25:
+  surface_high_pairs: 216
+  lemma_high_pairs: 416
+  overlap_pairs: 185
+  surface_only_pairs: 31
+  lemma_only_pairs: 231
+limitations:
+- lemma score is audit metric, not replacement pipeline
+- no full morphology-based chain rebuild is claimed

@@ -1,0 +1,36 @@
+default_medium_mask:
+  matched_pair_count: 64
+  loose_block_count: 24
+regime_summary:
+- regime: broad
+  pair_count_min: 57
+  pair_count_max: 69
+  loose_block_count_min: 23
+  loose_block_count_max: 25
+  matt_masked: 431
+  matt_unmasked: 637
+  luke_masked: 268
+  luke_unmasked: 881
+  threshold: 0.325
+- regime: medium
+  pair_count_min: 58
+  pair_count_max: 71
+  loose_block_count_min: 23
+  loose_block_count_max: 25
+  matt_masked: 387
+  matt_unmasked: 681
+  luke_masked: 232
+  luke_unmasked: 917
+  threshold: 0.355
+- regime: strict
+  pair_count_min: 60
+  pair_count_max: 76
+  loose_block_count_min: 25
+  loose_block_count_max: 29
+  matt_masked: 337
+  matt_unmasked: 731
+  luke_masked: 173
+  luke_unmasked: 976
+  threshold: 0.4
+interpretation: Strict/medium/broad masks alter counts, but the retained material remains a sayings/echo problem rather than
+  a stable narrative-chain relationship.

@@ -1,0 +1,15 @@
+package: synopsis_data_analysis_patch_20260418
+created: '2026-04-18T22:18:21.929541'
+major_findings:
+- Authoritative headline numbers are now reconciled in data/01_authoritative_numbers.yaml.
+- Mark-Luke direct-use comparison favors Mark-prior over Luke-prior, but direct-use over shared-tradition depends on explicit
+  order-retention penalties.
+- Matthew-Luke masked double tradition is robust as a sayings/echo problem across strict/medium/broad masks, though pair counts
+  vary.
+- John pairwise burden is now anchor-specific, avoiding the previous templated global score problem.
+- Thomas logia now carry curation-status and parallel-certainty fields.
+- Epistle-Gospel candidates now include a stratified machine-audit validation sample and targeted MorphGNT lemma audit.
+- MorphGNT lemma layer generally retains/improves Mark-Luke primary-chain signal but is an audit layer, not a full replacement
+  pipeline.
+- Apocrypha beyond Thomas remains inventory/roadmap only; no primary-text comparison is claimed.
+new_file_count_estimate: null

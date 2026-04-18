@@ -1,0 +1,30 @@
+- pair: John↔Luke
+  anchor_count: 9
+  total_burdens:
+    john_uses_synoptic_or_synoptic_like_source: 58.598
+    synoptic_uses_john_or_john_like_source: 61.698
+    shared_anchor_tradition: 20.8
+    independent_convergence: 91.602
+  lowest_total_burden_model: shared_anchor_tradition
+  anchors_best_model_counts:
+    shared_anchor_tradition: 9
+- pair: John↔Mark
+  anchor_count: 10
+  total_burdens:
+    john_uses_synoptic_or_synoptic_like_source: 59.741
+    synoptic_uses_john_or_john_like_source: 64.041
+    shared_anchor_tradition: 23.5
+    independent_convergence: 111.003
+  lowest_total_burden_model: shared_anchor_tradition
+  anchors_best_model_counts:
+    shared_anchor_tradition: 10
+- pair: John↔Matt
+  anchor_count: 10
+  total_burdens:
+    john_uses_synoptic_or_synoptic_like_source: 55.862
+    synoptic_uses_john_or_john_like_source: 60.162
+    shared_anchor_tradition: 24.8
+    independent_convergence: 119.481
+  lowest_total_burden_model: shared_anchor_tradition
+  anchors_best_model_counts:
+    shared_anchor_tradition: 10

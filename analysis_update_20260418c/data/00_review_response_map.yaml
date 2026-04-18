@@ -1,0 +1,44 @@
+review_items_addressed:
+- review_item: authoritative numbers not harmonized
+  output: data/01_authoritative_numbers.yaml
+- review_item: 18b reproducibility levels unclear
+  output: data/02_reproducibility_levels.yaml
+- review_item: Mark-Luke conclusion overstates direct-use result
+  outputs:
+  - data/10_mark_luke_direct_burden_reassessment.yaml
+  - data/11_mark_luke_shared_tradition_penalty_sensitivity.csv
+  - data/12_mark_luke_revised_interpretive_claim.yaml
+- review_item: Mark-Luke shared-tradition score needs order-retention penalty
+  outputs:
+  - data/10_mark_luke_tradition_retention_audit_by_block.csv
+  - data/11_mark_luke_shared_tradition_penalty_sensitivity.csv
+- review_item: Matthew-Luke masked analysis needs mask-regime robustness
+  outputs:
+  - data/20_matt_luke_mask_regime_robustness_table.csv
+  - data/21_matt_luke_mask_regime_robustness_summary.csv
+  - data/22_matt_luke_double_tradition_robustness.yaml
+- review_item: John pairwise burden scores too templated
+  outputs:
+  - data/30_john_anchor_specific_burden_ledgers.yaml
+  - data/31_john_anchor_specific_burden_ledgers_flat.csv
+  - data/32_john_anchor_specific_aggregate_summary.yaml
+- review_item: Thomas matrix needs curation status
+  outputs:
+  - data/40_thomas_logion_matrix_with_curation_status.csv
+  - data/41_thomas_curation_status_summary.yaml
+- review_item: Epistle top-500 ranking needs validation sample
+  outputs:
+  - data/50_epistle_candidate_validation_sample.csv
+  - data/51_epistle_candidate_validation_summary.yaml
+- review_item: Apocrypha remains underdeveloped
+  output: data/60_apocrypha_analysis_status_and_ingestion_roadmap.yaml
+- review_item: Need morphology-aware rerun/audit layer
+  outputs:
+  - data/80_morphgnt_token_layer_selected_books.csv.gz
+  - data/81_morphgnt_verse_units_selected_books.csv
+  - data/82_mark_luke_primary_chain_morphology_audit.csv
+  - data/83_mark_luke_morphology_candidate_pairs.csv.gz
+  - data/84_morphology_rerun_summary.yaml
+  - data/85_epistle_targeted_cases_morphology_audit.csv
+data_analysis_only_note: Visualization-presentation recommendations from the review are not implemented here except insofar
+  as the new data layers can feed future visualizations.
