@@ -121,6 +121,12 @@
     <div class="note"><b>What this page answers.</b> Does Luke's relationship to Mark look like Matthew's? <em>Partly.</em> Luke has <b>183 primary-chain pairs</b> versus Matthew's 385 — still a monotonic backbone, but narrower. Between the two direct-use models, <b>Mark-prior</b> (254.6) is lighter than <b>Luke-prior</b> (303.2). The unpenalized <b>shared-tradition</b> figure (164.1) looks cheaper than either direction — but shared tradition still has to account for the narrative <em>order</em>, <em>cluster density</em>, and <em>bridge sequences</em> it produces, which the unpenalized baseline does not charge it for. Under the 18c order-retention penalty (moderate weights 0.75/1.0/1.0) shared tradition adjusts to <b>385.6</b>, and <b>Mark-prior becomes the lowest-burden model overall</b> (Mark-prior wins in 211 of 245 grid cells). Read that as: Luke plausibly uses Mark or a Mark-like source for the common backbone; Lukan expansions (travel narrative, infancy, resurrection) sit outside Markan sequence and leave real headroom for additional sources, but shared tradition is not by itself cheaper than Mark-prior once order-retention is priced.</div>
   </div>
 
+  <section class="card" id="directionalContextSection">
+    <h2>Directional obligations · 2026-04-18 dossiers</h2>
+    <div class="caption" style="margin:0 0 10px;">Cross-reference into the direction-by-direction obligation layer. Each direction's burden-vs-alternative and top required explanations link into the per-direction dossier (page 37) where the full gap ledger, response model, and strengthen/weaken lists live.</div>
+    <div id="directionalBanner" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;"></div>
+  </section>
+
   <section class="card">
     <h2>Direct counts</h2>
     <div class="caption" style="margin:0 0 10px;">Six numbers that frame the entire Mark↔Luke relationship. All computed from the full 773,277-row verse matrix after excluding Mark 16:9–20 by default.</div>
@@ -209,6 +215,58 @@
   SH.buildNav('34_mark_luke.html');
   const el = SH.el;
   const B = SH.BUNDLE;
+  const DD = B.dir_dossiers || {};
+
+  // ---- Directional obligations banner (2026-04-18 dossiers) ----
+  (function () {
+    const registry = DD.registry || [];
+    const burdenSum = DD.burden_summary || [];
+    const pairMetrics = DD.pair_change_summary || [];
+    const supportContra = DD.support_contra_matrix || [];
+    const host = document.getElementById('directionalBanner');
+    if (!host) return;
+    function findBurden(did) {
+      const rows = burdenSum.filter(function (x) { return x.direction_id === did; });
+      const direct = rows.find(function (r) { return (r.burden_model || '').indexOf('direct_use') === 0; });
+      return direct || rows[0] || null;
+    }
+    function card(did) {
+      const r = registry.find(function (x) { return x.direction_id === did; });
+      if (!r) return null;
+      const b = findBurden(did);
+      const pm = pairMetrics.find(function (x) { return x.direction_id === did; }) || {};
+      const sc = supportContra.find(function (x) { return x.direction_id === did; }) || {};
+      const wrap = el('div', { style: 'border:1px solid var(--rule);border-left:4px solid var(--mark-soft,#8a5340);background:#fff;border-radius:3px;padding:12px 14px;' });
+      wrap.appendChild(el('div', { style: 'font-family:var(--serif);font-size:15px;color:var(--ink);' }, r.short_label || did));
+      wrap.appendChild(el('div', { style: 'font-family:var(--mono);font-size:10.5px;color:var(--ink-mute);margin-bottom:6px;' }, did + '  ·  pair: ' + r.pair));
+      wrap.appendChild(el('div', { style: 'font-size:11.5px;color:var(--ink-soft);line-height:1.45;margin-bottom:8px;' }, 'Status: ' + (r.current_status || '—')));
+      if (b) {
+        const burdenLine = el('div', { style: 'font-size:12.5px;color:var(--ink);margin:6px 0;font-variant-numeric:tabular-nums;font-family:var(--mono);' });
+        burdenLine.appendChild(document.createTextNode('Direct-use burden: '));
+        burdenLine.appendChild(el('b', { style: 'color:var(--accent);font-family:var(--serif);font-size:14px;' }, typeof b.burden_score === 'number' ? b.burden_score.toFixed(2) : '—'));
+        if (b.notes) burdenLine.appendChild(el('span', { style: 'color:var(--ink-mute);margin-left:8px;font-family:var(--sans);' }, b.notes));
+        wrap.appendChild(burdenLine);
+      }
+      const metricsRow = el('div', { style: 'display:flex;flex-wrap:wrap;gap:10px;font-size:10.5px;color:var(--ink-mute);margin:4px 0 8px;font-family:var(--mono);' });
+      function m(k, v) { if (v == null || v === '') return; metricsRow.appendChild(el('span', null, k + ' ' + v)); }
+      m('pairs', pm.pair_count);
+      m('mean score', typeof pm.mean_score === 'number' ? pm.mean_score.toFixed(3) : null);
+      m('major gaps ≥20', sc.major_gap_count_abs_diff_ge_20);
+      m('support', sc.primary_support_count);
+      m('contra', sc.primary_contra_count);
+      wrap.appendChild(metricsRow);
+      const drill = el('div', { style: 'display:flex;gap:6px;margin-top:6px;' });
+      drill.appendChild(el('a', { href: '37_direction_dossier.html#' + did, style: 'font-size:10.5px;padding:3px 9px;background:var(--ink);color:#fff;border-radius:2px;text-decoration:none;font-family:var(--mono);' }, 'Obligation dossier →'));
+      drill.appendChild(el('a', { href: '36_directional_registry.html', style: 'font-size:10.5px;padding:3px 9px;background:#fafaf7;border:1px solid var(--rule);color:var(--ink-soft);border-radius:2px;text-decoration:none;font-family:var(--mono);' }, 'Registry (all 12)'));
+      wrap.appendChild(drill);
+      return wrap;
+    }
+    const f = card('luke_used_mark');
+    const r = card('mark_used_luke');
+    if (f) host.appendChild(f);
+    if (r) host.appendChild(r);
+  })();
+
   const MKL = (B.h18b && B.h18b.mkl) || {};
   const summary = MKL.summary || {};
   const burden = MKL.burden_totals || {};

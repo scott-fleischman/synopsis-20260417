@@ -188,6 +188,82 @@ Across the entire top-500 pool, formula-risk distribution is **317 low / 17 medi
 
 ---
 
+## 11b. Directional-obligation dossiers (2026-04-18)
+
+Pairwise similarity ledgers answer *how close* two Gospels are; they do not answer *what a particular direction of dependence must explain*. The `synoptic_john_directional_dossiers_20260418/` package fills that gap. For every proposed direction of dependence — twelve in total, including reverse and John-related directions — it records the explicit explanatory obligation:
+
+1. What the target text must have *changed* (local wording).
+2. What it must have *omitted* (gap intervals where the source has material the target does not).
+3. What it must have *added* (gap intervals where the target has material the source does not).
+4. What *pericopes* must have been reordered or displaced.
+5. What *evidence counts against* the direction.
+6. What the *best response model* would be if one still wanted to defend the direction under that contrary evidence.
+
+### 11b.1 Directions documented
+
+`01_direction_hypotheses_registry.yaml` enumerates twelve directions with source/target, pair, model family, current status, required explanations, contrary evidence, and best response model:
+
+- `matthew_used_mark`, `mark_used_matthew`
+- `luke_used_mark`, `mark_used_luke`
+- `matthew_used_luke`, `luke_used_matthew`
+- `john_used_mark`, `mark_used_john`
+- `john_used_matthew`, `matthew_used_john`
+- `john_used_luke`, `luke_used_john`
+
+### 11b.2 Burden score (what it is, and what it is not)
+
+`03_direction_burden_summary.csv` gives a single *burden score* per (direction, burden_model) cell. **Lower is better.** The burden score is **not a probability**; it is a cumulative explanatory-obligation tally — it sums what the direction must account for under a shared, comparable burden model. Scores are therefore comparable *within a pair* (e.g., `matthew_used_mark` 774.87 vs. `mark_used_matthew` 788.66; `luke_used_mark` 254.6466 vs. `mark_used_luke` 303.1966) but **should not be compared across unrelated pairs** as if they were posterior odds. The pair-filter on visualization page 36 enforces this comparison discipline.
+
+### 11b.3 Material-gap burden (per-direction top-5)
+
+`21_top_major_gap_and_material_burdens.csv` and the embedded `top_material_gap_burdens` lists in `60_contrary_evidence_and_response_models_by_direction.yaml` document, for every direction, the five largest material-gap burdens ordered by absolute source/target gap difference. Each row carries:
+
+- `source_gap_range`, `target_gap_range` (e.g., Matt 4:24–Matt 7:28 = Sermon on Mount addition under `matthew_used_mark`)
+- `source_gap_count`, `target_gap_count` (verse counts)
+- `dominant_material_issue` (`target_addition` · `target_omission_of_source` · `both_have_gap_material`)
+- `directional_implication` (what the direction must do)
+- `plausible_response` (best redactional move to absorb the burden)
+- `contrary_evidence_value` (the gap Δ used as the burden proxy)
+
+### 11b.4 John anchor-level directional ledger
+
+Because John is too transformational for a continuous alignment chain, every direction involving John is scored *anchor by anchor* in `17_john_synoptic_directional_anchor_dossiers.yaml` / `16_john_synoptic_directional_anchor_ledger.csv`. Each anchor row compares three burden hypotheses — `direct_use_burden`, `shared_tradition_burden`, `independent_convergence_burden` — and marks the lowest-burden model per anchor. Aggregate behaviour (across all 29 unique anchors × 6 John-related directions = 58 ledger rows) favours `shared_anchor_tradition` at every anchor on every pair, consistent with the 18c anchor-specific aggregate from §9.
+
+### 11b.5 Ranked directional conclusions
+
+`62_directional_conclusion_ranking_and_missing_key_directions.yaml` gives a 5-rank evidence-ordering ladder with confidence labels and explicit limitations:
+
+1. Matthew used Mark or a Mark-like written narrative source — **high**.
+2. Luke used Mark or a Mark-like written narrative source, when shared-tradition order-retention burden is charged — **medium-high** (this matches the 18c moderate-penalty result, and cites the same `luke_used_mark` = 254.6466 number).
+3. Matthew–Luke double tradition is better modelled as a shared sayings/tradition layer than a simple direct direction — **medium-high**.
+4. John shares anchor traditions with Synoptics but direct use is not currently lowest-burden — **medium**.
+5. Reverse directions (Mark used Matthew/Luke; Synoptics used John) are completeness hypotheses with higher burden — **medium as negative assessment**.
+
+### 11b.6 System hypothesis space
+
+`04_system_hypothesis_space.yaml` lifts the pairwise directions into five system-level models — two-source (Mark + Q-like), Farrer (Luke uses Matthew + Mark), Griesbach / two-gospel (Mark uses Matthew + Luke), proto-Mark / common narrative source, and John shared-anchor tradition. Each has its assumptions, must-explain obligations, contrary evidence, and best response. System models inherit the pairwise burden scores; the evidence view on visualization page 38 shows which pairwise directions each system-level package commits to.
+
+### 11b.7 Reproducibility
+
+The package does not fetch external sources at build time. It is a derivative analysis over snapshots of the prior artifacts under `synoptic_john_directional_dossiers_20260418/inputs/previous_artifacts/`. Burden ledgers are audit prompts, not probabilistic posteriors, so the reproducibility tier is **regenerated from prior artifacts** (tier 2 of `REPRODUCIBILITY_LEVELS.md`).
+
+### 11b.8 Where burden numbers live
+
+| Claim | Source file in `synoptic_john_directional_dossiers_20260418/data/` |
+| - | - |
+| Direct-use burden per direction | `03_direction_burden_summary.csv` |
+| Core required explanations / contrary evidence / best response | `01_direction_hypotheses_registry.yaml` |
+| Top-5 material-gap burdens per direction | `60_contrary_evidence_and_response_models_by_direction.yaml` · `21_top_major_gap_and_material_burdens.csv` |
+| John anchor-level burdens and required explanations | `17_john_synoptic_directional_anchor_dossiers.yaml` · `16_john_synoptic_directional_anchor_ledger.csv` |
+| Support/contra counts and major-gap counts | `61_support_contra_evidence_matrix.csv` |
+| Pair-level token metrics per direction | `52_primary_pair_change_summary_by_direction.csv` |
+| Ranked directional conclusions | `62_directional_conclusion_ranking_and_missing_key_directions.yaml` |
+| System-level model obligations | `04_system_hypothesis_space.yaml` |
+
+Visualization pages 36 (registry), 37 (per-direction dossier), and 38 (system hypothesis space) are the expert-facing surfaces for these files.
+
+---
+
 ## 12. Text-critical policy
 
 - Mark 16:9–20 is **excluded from the default primary chain** in both the Mark-Matthew rerun and the 18b Mark-Luke package. It is retained as a sensitivity condition (see `21_mark_luke_mark_ending_sensitivity.yaml`).
@@ -211,6 +287,7 @@ See `README.md` for the full limitations list. The headline ones:
 - **Thomas** lacks automatic Coptic-Greek dependence scoring; the matrix is curated. 18c adds parallel-certainty labels — only 3 of 116 logia are directional-claim-ready.
 - **Epistle top-500 ranking** still requires human philological review. 18c's validation sample is machine triage over 160 stratified rows; manual review is not done in this repository.
 - **Apocrypha** beyond Thomas is inventory only. See `analysis_update_20260418b/data/73_apocrypha_next_packages.yaml` and `analysis_update_20260418c/data/60_apocrypha_analysis_status_and_ingestion_roadmap.yaml` for the future-ingestion roadmap.
+- **Directional burden scores are audit prompts, not probabilities.** The `synoptic_john_directional_dossiers_20260418/` package makes explanatory obligations comparable *within* a pair (e.g., `matthew_used_mark` 774.87 vs. `mark_used_matthew` 788.66) but the numbers are not posterior probabilities and should not be compared across unrelated pairs. Ranked conclusions there are evidence-orderings, not probabilistic rankings. Specialists are invited to inspect, contest, or revise the burden model; the burden audit is not a replacement for philological judgement.
 
 ---
 

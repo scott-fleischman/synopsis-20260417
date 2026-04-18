@@ -2,9 +2,9 @@
 
 **Live visualizations: <https://scott-fleischman.github.io/synopsis-20260417/>** · Source: <https://github.com/scott-fleischman/synopsis-20260417>
 
-A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha. Eight analysis packages feed a single browser-native visualization site with 35 views; every headline number is traceable to a specific `data/*.yaml` line in its package.
+A layered, auditable workbench for studying literary dependence and intertextuality across the New Testament Gospels, Thomas, the canonical epistles, and the broader apocryphal corpus. Built from the SBLGNT Greek text and apparatus, MorphGNT morphology, Coptic Scriptorium Thomas, and an inventory of the M. R. James apocrypha. Nine analysis packages — including a per-direction explanatory-obligation layer that makes the twelve pairwise dependence hypotheses auditable side by side — feed a single browser-native visualization site with 38 views; every headline number is traceable to a specific `data/*.yaml` line in its package.
 
-The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized around the `analysis_update_20260418b` supplement's eight-rank priority-of-interpretation schedule — Conclusions · Canonical Gospel square · Mark↔Luke direct · John pairwise · Matt↔Luke masked Q core · Thomas matrix · Epistle case dossiers · Audit and sensitivity — rather than as a flat list of pages. Supporting Synoptic narrative views live under the Audit and reproducibility umbrella.
+The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end. The site is organized around the `analysis_update_20260418b` supplement's eight-rank priority-of-interpretation schedule — Conclusions · Canonical Gospel square · Mark↔Luke direct · John pairwise · Matt↔Luke masked Q core · Thomas matrix · Epistle case dossiers · Audit and sensitivity — with a cross-cutting **Directional obligations** band (pages 36/37/38) that re-exposes every pairwise direction as an explanatory-burden ledger. Supporting Synoptic narrative views live under the Audit and reproducibility umbrella.
 
 ## Licenses and attribution
 
@@ -29,6 +29,7 @@ All content in this repository was produced by LLMs under human direction. The h
 - **Reproducibility-patch rerun** — `analysis_update_20260418/` (multi-regime masking, sensitivity grids, claim/evidence linkage, three-axis confidence scoring) — produced by **GPT-5.4 Pro**.
 - **High-priority supplement** — `analysis_update_20260418b/` (direct Mark↔Luke, three John pairwise layers, canonical Gospel relationship square, Thomas logion matrix, 60 epistle case dossiers, conclusion → evidence → contrary navigation) — produced by **GPT-5.4 Pro**.
 - **Data-analysis patch** — `analysis_update_20260418c/` (Mark↔Luke order-retention penalty model, Matthew↔Luke mask-regime robustness, John anchor-specific burden ledgers, Thomas curation status, epistle validation sample, MorphGNT lemma audit, revised data-only conclusions with nuanced confidence) — produced by **GPT-5.4 Pro**.
+- **Directional-obligation dossiers** — `synoptic_john_directional_dossiers_20260418/` (twelve pairwise directional hypotheses with per-direction required-explanations, material-gap burden catalog, John anchor-level three-way burden comparison, reordering catalog, and five system-level hypothesis models with stance labels) — produced by **GPT-5.4 Pro**.
 - **Interpretive conclusions** — the prose argument in `conclusions/CONCLUSIONS.md` — produced by **GPT-5.4 Pro**.
 - **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `docs/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
 
@@ -43,14 +44,15 @@ synopsis-20260417/
 ├── analysis_update_20260418/            # Reproducibility-patch rerun — the authoritative headline numbers
 ├── analysis_update_20260418b/           # High-priority supplement — direct Mark↔Luke, John pairwise, Gospel square, Thomas matrix, epistle dossiers, conclusion nav
 ├── analysis_update_20260418c/           # Data-analysis patch — order-retention penalty, mask-regime robustness, anchor-specific John ledgers, Thomas curation status, epistle validation, MorphGNT lemma audit
+├── synoptic_john_directional_dossiers_20260418/  # Per-direction obligation layer — 12 directions, required explanations, burden catalog, John anchor ledger, 5 system-level models
 ├── conclusions/                         # Author-authored synthesis across all packages
-├── visualizations/                      # 35 browser views, organised by the 18b 8-rank priority schedule + Python build step + tests
+├── visualizations/                      # 38 browser views, organised by the 18b 8-rank priority schedule + cross-cutting directional-obligations band + Python build step + tests
 └── docs/                                # Committed deployment snapshot (the GitHub Pages output dir)
 ```
 
 All three layers — data, code, and rendered output — are committed, and a fourth layer (interpretive conclusions) sits alongside them in its own directory. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
 
-## The seven data packages
+## The eight data packages
 
 ### 1. `mark_matthew_analysis/` — triple-tradition backbone
 
@@ -113,6 +115,22 @@ Addresses the interpretive-burden issues flagged after 18b. It does not reshape 
 
 See `analysis_update_20260418c/README.md` and `EXECUTIVE_SUMMARY.yaml` for the full patch specification, and `AUTHORITATIVE_NUMBERS.yaml` at the repo root for which number supersedes which.
 
+### 8. `synoptic_john_directional_dossiers_20260418/` — per-direction explanatory-obligation layer
+
+Addresses what the prior packages left underdeveloped: a **direction-by-direction obligation model**. Pairwise similarity, monotonic chains, burden ledgers, gap catalogs, and anchor episodes all existed already — but selecting a direction like "Matthew used Mark" or "John used Luke" and getting a single, comparable readout of what that direction must explain, what contrary evidence counts against it, and what the best response model would look like under that hypothesis, did not. This package adds that layer.
+
+- **Twelve directional hypotheses registered**: `matthew_used_mark`, `mark_used_matthew`, `luke_used_mark`, `mark_used_luke`, `matthew_used_luke`, `luke_used_matthew`, `john_used_mark`, `john_used_matthew`, `john_used_luke`, `mark_used_john`, `matthew_used_john`, `luke_used_john`. Each direction carries an explicit status label (e.g. "supported", "viable", "minority", "structural"), the core required explanations, the contrary evidence already visible in the data, and the best response model a defender would need to adopt.
+- **Direct-use burden scores by direction** (lower = lower explanatory obligation; burden scores are audit prompts, **not posterior probabilities**): Mark↔Matthew **774.87** (M→Mk) vs. **788.66** (Mk→M); Mark↔Luke **254.65** (Lk→Mk) vs. **303.20** (Mk→Lk); Matt↔Luke **303.20** (Mt→Lk) vs. **303.20** (Lk→Mt) — symmetric on direct-use because the masked double-tradition package does not force either direction.
+- **Per-direction top material-gap burdens** (100 rows across the 12 directions): for each direction, the five largest gap-derived explanatory obligations (source range, target range, Δ in verse-verse counts, directional implication, plausible response). Visible in page 37's per-direction dossier.
+- **John anchor-level three-way burden comparison** (58 rows): for every John/Synoptic anchor episode, a side-by-side ledger of `direct_use` vs. `shared_tradition` vs. `independent_convergence` burden values, with the lowest-cell highlighted and the best current model named. Across all three John/Synoptic pairs, `shared_anchor_tradition` is the lowest-burden model at every anchor (9/9, 10/10, 10/10) — independently corroborating the 18c anchor-specific result.
+- **Ranked directional conclusions** (5 ranks): rank 1 "Matthew used Mark or a Mark-like written source"; rank 2 "Luke used Mark or a Mark-like written source (penalty-aware)"; rank 3 "Shared sayings/tradition layer for Matt–Luke double tradition"; rank 4 "Shared anchor tradition for John ↔ Synoptics"; rank 5 "Direct synoptic use of John not supported globally".
+- **Five system-level hypothesis models**: Two-Source / Mark + Q-like (supported), Farrer / Luke-used-Matthew-plus-Mark (viable), Griesbach / Mark-used-Matthew-and-Luke (minority), Proto-Mark / common narrative source (structural), and John shared-anchor tradition (structural). Each system card carries assumptions, must-explain list, contrary evidence, and best response model.
+- **Reordering and displacement catalog** (2,410 rows) and **primary-pair change diffs across all directions** (1,660 rows, gzipped CSV): the raw evidence behind the material-gap burdens at sub-pericope granularity.
+
+Surfaced in the visualization site at pages **36 Directional registry**, **37 Per-direction dossier** (hash-deep-linkable to any of the 12 directions), and **38 System hypothesis space**, with cross-link bands added to the conclusions page (26), Mark↔Luke (34), John pairwise (35), and the landing page (index). The package is **not** a probabilistic-posterior estimator; it is a burden-audit prompt that makes explanatory obligations explicit so specialists can inspect, contest, or revise them.
+
+See `synoptic_john_directional_dossiers_20260418/README.md`, `EXECUTIVE_SUMMARY.yaml`, and the data dictionary at `data/99_data_dictionary.yaml`. The `dir_dossiers` key on the visualization bundle reads directly from this package.
+
 ## Methodological note on burden
 
 No layer in this repository claims to compute posterior probability of a given dependency hypothesis. Every score is a retrieval score, every ledger is a burden audit, and scriptural/liturgical formulas are flagged separately so they do not masquerade as Gospel dependence. See each package's `EXECUTIVE_SUMMARY.md` for the specifics.
@@ -135,7 +153,9 @@ No layer in this repository claims to compute posterior probability of a given d
 
 See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
 
-## Visualizations (35 browser views, 18b priority-ranked)
+The directional-dossiers package (`synoptic_john_directional_dossiers_20260418/`) restates this ladder as a direction-by-direction explanatory-obligation ranking: rank 1 (Matthew used Mark) is supported; rank 2 (Luke used Mark, penalty-aware) is supported; rank 3 (shared sayings/tradition for Matt–Luke) is supported; rank 4 (shared anchor tradition for John ↔ Synoptics) is supported at every anchor; rank 5 (direct synoptic use of John) is explicitly **not** supported at a global level. The burden numbers feeding the ladder are duplicated into `AUTHORITATIVE_NUMBERS.yaml` so the same value has a single authoritative definition in both the prose conclusions and the burden-audit layer.
+
+## Visualizations (38 browser views, 18b priority-ranked with directional-obligations band)
 
 `visualizations/` is a static HTML/CSS/SVG site with no framework. A single Python build step reads the five analysis packages and the rerun, then writes a compact bundle that every page consumes. The landing page and this README are both organized by the 18b **priority-of-interpretation** schedule (rank 1 Conclusions → rank 8 Audit) so a reader with a question ("is there a direct Mark↔Luke link?", "what is the Q burden?", "what can Thomas tell us?") can land in the right section without needing to know which CSV produced which number.
 
@@ -146,6 +166,16 @@ See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argu
 | 26 | Conclusions | Leads with the **h18b claim-navigation model**: five headline claims with supporting and contrary evidence and what-would-change hooks, then the existing 10 curated-conclusion cards with dataset-linked evidence and falsifiability panels. |
 | 29 | Claim → evidence | 67 interpretive claims each mapped to supporting artifacts with a three-axis confidence ladder (retrieval, philological, formula-risk). |
 | 30 | Reader | Full SBLGNT text for Matt · Mark · Luke · John with per-verse parallel badges, mask striping, and bidirectional links into every viz page. **The primary entry surface for verse-level inspection.** |
+
+### Directional obligations · 2026-04-18 dossiers (cross-cutting)
+
+| # | View | What it shows |
+| - | - | - |
+| 36 | Directional registry | All 12 directional hypotheses in one table — status (supported · viable · minority · structural), burden score, model family, direct-use-vs-other headline comparison per pair, best-in-pair highlighted. Entry point for the per-direction layer. |
+| 37 | Per-direction dossier | Hash-deep-linkable dossier (`#matthew_used_mark`, `#luke_used_mark`, `#john_used_luke`, …) with quantitative indicator sidebar, required explanations, supporting vs. contrary evidence columns, best response model, top 5 material-gap burdens, John anchor-level three-way burden comparison (where applicable), support/contra metric grid, and strengthen-vs-weaken lists. **The primary surface for expert inspection of a single direction.** |
+| 38 | System hypothesis space | Five system-level models (Two-Source, Farrer, Griesbach, Proto-Mark, John shared-anchor) with stance labels, assumptions, must-explain list, contrary evidence, best response model, and drill-links to the pairwise directions each system commits to. Burden-comparison compact table with best-in-pair highlighted. |
+
+These three views sit *beside* the 18b priority schedule rather than inside it: they re-expose every Mark↔Matthew, Mark↔Luke, Matt↔Luke, and John↔Synoptic direction as an explanatory-obligation ledger, regardless of which rank hosts the narrative view of that pair. Cross-link bands on pages 26, 34, 35, and the landing page deep-link into page 37 so the directional layer is one click away from the pairwise narrative layer.
 
 ### Rank 2 · Canonical Gospel relationship square (18b)
 

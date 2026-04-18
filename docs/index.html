@@ -72,7 +72,7 @@
   </p>
   <p class="hero-note">
     <b>This workbench does not settle the direction of dependence.</b> It quantifies what each direction-hypothesis must explain, and flags shared Old Testament/liturgical formulas so they do not masquerade as Gospel dependence. The <a href="26_conclusions.html" style="color:inherit;text-decoration:underline;">Conclusions page</a> is the only surface that makes directional claims; every other page is neutral evidence.
-    Five analysis packages feed the bundle — <code>mark_matthew</code>, <code>matt_luke</code>, <code>matt_luke_double_masked</code>, <code>john_thomas_epistles_apocrypha</code>, and the <code>2026-04-18b high-priority supplement</code> that supplies direct Mark↔Luke, three John pairwise layers, a canonical Gospel relationship square, a Thomas logion matrix, 60 epistle case dossiers, and a conclusion ↔ evidence ↔ contrary-evidence navigation model. The evidence ordering below follows the supplement's <a href="26_conclusions.html#navClaims" style="color:inherit;text-decoration:underline;">priority-of-interpretation</a> schedule: start with claims, then the Gospel square, then pairwise evidence, then audit.
+    Nine analysis packages feed the bundle — <code>mark_matthew</code>, <code>matt_luke</code>, <code>matt_luke_double_masked</code>, <code>john_thomas_epistles_apocrypha</code>, the <code>2026-04-18b high-priority supplement</code> (direct Mark↔Luke · three John pairwise layers · canonical Gospel square · Thomas logion matrix · 60 epistle case dossiers · conclusion ↔ evidence navigation), the <code>2026-04-18c reassessment</code> (Mark-Luke order-retention penalty grid), the <code>morphgnt_lemma_supplement</code>, and the <code>2026-04-18 directional dossiers</code> that answer <em>direction by direction</em> what every proposed dependence must explain, what counts against it, and the best response model under each direction. The evidence ordering below follows the supplement's <a href="26_conclusions.html#navClaims" style="color:inherit;text-decoration:underline;">priority-of-interpretation</a> schedule: start with claims, then the Gospel square, then pairwise evidence, then direction-specific obligation dossiers, then audit.
   </p>
   <nav id="topnav" class="topnav"></nav>
 
@@ -90,6 +90,16 @@
     </div>
     <p class="caption" style="margin-top:0;max-width:1000px;">Start with claims, not metrics. Work down from the canonical Gospel square to Synoptic pairwise evidence, then to the low-verbatim sayings and epistle layers. Audit and sensitivity sit last on purpose — they let the reader test whether conclusions are robust after the substantive evidence has been seen.</p>
     <ol id="priorityList" class="priority-list"></ol>
+  </section>
+
+  <!-- Directional hypotheses (2026-04-18 dossiers) -->
+  <section class="card" id="directionalSection" style="border-left:3px solid #6b1f0a;margin-top:12px;">
+    <div class="snapshot-head">
+      <h2>Directional obligations · twelve hypothesis dossiers</h2>
+      <span class="hint">Source: <code>synoptic_john_directional_dossiers_20260418/</code></span>
+    </div>
+    <p class="caption" style="margin-top:0;max-width:1000px;">Pairwise similarity matrices answer "how close is A to B?" Directional dossiers answer the harder question: <em>if A used B, what exactly must A have changed, omitted, added, or reordered — and what evidence counts against that direction?</em> Twelve directions are documented (six forward Synoptic/John · six reverse), each with its required explanations, core contrary evidence, best response model, and a direct-use burden comparable to the alternative direction. Ranked conclusions and burden comparisons are on <a href="36_directional_registry.html">page 36</a>; the per-direction deep dive is on <a href="37_direction_dossier.html">page 37</a>; the five system-level packages (two-source · Farrer · Griesbach · proto-Mark · John shared-anchor) are on <a href="38_system_hypotheses.html">page 38</a>.</p>
+    <div id="directionalIndexPanel"></div>
   </section>
 
   <!-- 7 research questions -->
@@ -146,6 +156,81 @@
   // Ordered to match the 2026-04-18b priority schedule: claims first, then the
   // Gospel square, then pairwise evidence (Mark-Luke, John pairwise).
   const H = B.h18b || {};
+  const DD = B.dir_dossiers || {};
+
+  // ---- Directional obligations panel (2026-04-18 dossiers) ----
+  (function () {
+    const host = document.getElementById('directionalIndexPanel');
+    if (!host) return;
+    const rankObj = DD.conclusion_ranking || {};
+    const ranked = rankObj.directional_conclusions_ranked || [];
+    const registry = DD.registry || [];
+    const burdenSum = DD.burden_summary || [];
+
+    // Three pair-burden headlines: pick the lowest direct_use per pair
+    const PAIRS = [
+      { pair: 'Mark↔Matthew', dirs: ['matthew_used_mark', 'mark_used_matthew'] },
+      { pair: 'Mark↔Luke', dirs: ['luke_used_mark', 'mark_used_luke'] },
+      { pair: 'Matthew↔Luke', dirs: ['luke_used_matthew', 'matthew_used_luke'] },
+    ];
+    function findScore(did) {
+      const r = burdenSum.find(function (x) { return x.direction_id === did && (x.burden_model || '').indexOf('direct_use') === 0; });
+      return r ? r.burden_score : null;
+    }
+    const wrap = el('div', { style: 'display:grid;grid-template-columns:2fr 3fr;gap:18px;margin-top:8px;' });
+    // Left — rank 1 conclusion + registry counts
+    const left = el('div');
+    if (ranked[0]) {
+      const r = ranked[0];
+      const card = el('div', { style: 'border:1px solid var(--rule);border-left:4px solid #6b1f0a;background:#fff;padding:12px 14px;border-radius:3px;' });
+      card.appendChild(el('div', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);font-weight:600;' }, 'Rank 1 · ' + (r.confidence || '')));
+      card.appendChild(el('div', { style: 'font-family:var(--serif);font-size:14.5px;color:var(--ink);margin-top:6px;line-height:1.45;' }, r.claim || ''));
+      if (r.limitation) {
+        card.appendChild(el('div', { style: 'font-size:11.5px;color:var(--ink-mute);margin-top:6px;font-style:italic;' }, 'Limitation: ' + r.limitation));
+      }
+      left.appendChild(card);
+    }
+    const meta = el('div', { style: 'margin-top:10px;font-size:11.5px;color:var(--ink-soft);line-height:1.6;' });
+    meta.appendChild(document.createTextNode(
+      registry.length + ' directions registered · ' +
+      ranked.length + ' ranked conclusions · ' +
+      (DD.top_gap_burdens || []).length + ' top gap-burden rows · ' +
+      (DD.john_anchor_ledger || []).length + ' John-anchor ledger rows.'
+    ));
+    left.appendChild(meta);
+
+    // Right — three direct-use headline comparisons
+    const right = el('div');
+    right.appendChild(el('div', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);font-weight:600;margin-bottom:8px;' }, 'Direct-use burden headlines · lower is lighter (not a probability)'));
+    const grid = el('div', { style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;' });
+    for (const p of PAIRS) {
+      const s0 = findScore(p.dirs[0]);
+      const s1 = findScore(p.dirs[1]);
+      if (s0 == null && s1 == null) continue;
+      const pairCard = el('div', { style: 'border:1px solid var(--rule);background:#fff;padding:10px 12px;border-radius:3px;' });
+      pairCard.appendChild(el('div', { style: 'font-family:var(--serif);font-size:13px;color:var(--ink);' }, p.pair));
+      function line(did, score, isWinner) {
+        const row = el('div', { style: 'display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;font-family:var(--mono);font-size:11.5px;' + (isWinner ? 'font-weight:600;color:var(--ink);' : 'color:var(--ink-soft);') });
+        const a = el('a', {
+          href: '37_direction_dossier.html#' + did,
+          style: 'color:inherit;text-decoration:none;border-bottom:1px dotted var(--rule);',
+        }, did);
+        row.appendChild(a);
+        row.appendChild(el('span', { style: (isWinner ? 'color:var(--accent);font-variant-numeric:tabular-nums;' : 'font-variant-numeric:tabular-nums;') }, typeof score === 'number' ? score.toFixed(2) : '—'));
+        return row;
+      }
+      const winner = (s0 != null && s1 != null) ? (s0 < s1 ? p.dirs[0] : p.dirs[1]) : null;
+      pairCard.appendChild(line(p.dirs[0], s0, winner === p.dirs[0]));
+      pairCard.appendChild(line(p.dirs[1], s1, winner === p.dirs[1]));
+      grid.appendChild(pairCard);
+    }
+    right.appendChild(grid);
+    right.appendChild(el('div', { style: 'margin-top:8px;font-size:11px;color:var(--ink-mute);' }, 'See page 36 for the sortable full burden table with pair filter; page 37 for per-direction obligations; page 38 for system-level models.'));
+    wrap.appendChild(left);
+    wrap.appendChild(right);
+    host.appendChild(wrap);
+  })();
+
   const MKL = H.mkl || {};
   const mklSummary = MKL.summary || {};
   const mklPairs = (MKL.pairs || []).length;
@@ -540,6 +625,11 @@
       ['26_conclusions.html', 'Conclusions · interpretive synthesis (h18b nav)'],
       ['29_jtea_claim_evidence.html', 'Claim → evidence · 67 rerun-audited claims'],
       ['30_reader.html', 'Reader · Greek Gospels with parallel overlays'],
+    ]],
+    ['Directional obligations · 2026-04-18 dossiers', [
+      ['36_directional_registry.html', '36 · Directional hypothesis registry · 12 directions + burden comparison'],
+      ['37_direction_dossier.html', '37 · Per-direction obligation dossier · top gap burdens + response models'],
+      ['38_system_hypotheses.html', '38 · System hypothesis space · two-source · Farrer · Griesbach · proto-Mark · John shared-anchor'],
     ]],
     ['Rank 2 · Canonical Gospel square', [
       ['31_gospel_square.html', '31 · Gospel Square · 4-Gospel relationship matrix'],

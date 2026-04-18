@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Per-direction obligation dossier · what each direction must explain</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .picker-wrap { display: flex; flex-direction: column; gap: 6px; margin: 0 0 18px; padding: 12px 14px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 3px; }
+  .picker-wrap .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); font-weight: 600; }
+  .picker-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .picker-chips .chip { font-size: 11px; padding: 5px 10px; border: 1px solid var(--rule); border-radius: 14px; background: #fff; color: var(--ink-soft); cursor: pointer; user-select: none; font-family: var(--mono); }
+  .picker-chips .chip:hover { border-color: var(--accent); background: #fdfaf0; color: var(--ink); }
+  .picker-chips .chip.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .picker-chips .chip.mm.active { background: var(--mark); border-color: var(--mark); }
+  .picker-chips .chip.mlk.active { background: #8a5340; border-color: #8a5340; }
+  .picker-chips .chip.ml.active { background: var(--matt); border-color: var(--matt); }
+  .picker-chips .chip.john.active { background: var(--focus); border-color: var(--focus); color: var(--ink); }
+
+  .dossier { display: flex; flex-direction: column; gap: 18px; }
+  .dossier-hd { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 18px 20px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; border-left-width: 6px; }
+  .dossier-hd.mm { border-left-color: var(--mark); }
+  .dossier-hd.mlk { border-left-color: #8a5340; }
+  .dossier-hd.ml { border-left-color: var(--matt); }
+  .dossier-hd.john { border-left-color: var(--focus); }
+  .dossier-hd h2 { margin: 0; font-family: var(--serif); font-size: 22px; color: var(--ink); line-height: 1.3; }
+  .dossier-hd .id { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); margin-top: 4px; }
+  .dossier-hd .subtitle { font-size: 13px; color: var(--ink-soft); margin-top: 6px; line-height: 1.5; }
+  .dossier-hd .status-box { font-size: 11px; padding: 4px 12px; background: #fafaf7; border-left: 3px solid var(--accent); color: var(--ink); line-height: 1.5; margin-top: 10px; }
+  .dossier-hd .model-family { font-size: 11px; color: var(--ink-mute); font-style: italic; margin-top: 4px; }
+  .dossier-hd .qi { display: flex; flex-direction: column; gap: 4px; font-size: 11px; text-align: right; min-width: 200px; }
+  .dossier-hd .qi .row { display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); }
+  .dossier-hd .qi .row .k { color: var(--ink-mute); }
+  .dossier-hd .qi .row .v { color: var(--ink); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .dossier-hd .qi .burden-lead { font-family: var(--serif); font-size: 16px; color: var(--accent); margin-bottom: 2px; text-align: right; }
+
+  .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 900px) { .col2 { grid-template-columns: 1fr; } }
+
+  .block { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 16px; }
+  .block h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 15px; color: var(--ink); }
+  .block .lead { font-size: 12px; color: var(--ink-mute); line-height: 1.45; margin: 0 0 8px; }
+  .block ul { margin: 4px 0; padding-left: 18px; font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); }
+  .block ul li { margin-bottom: 4px; }
+  .block ul li b { color: var(--ink); }
+  .block.strong { border-left: 4px solid #6b1f0a; }
+  .block.contra { border-left: 4px solid #a8551a; }
+  .block.response { background: #faf6ec; border-left: 4px solid var(--accent); }
+  .block.response .text { font-size: 13px; color: var(--ink); line-height: 1.55; }
+  .block.strengthen { border-left: 4px solid #4d6f4b; }
+  .block.weaken { border-left: 4px solid #864747; }
+
+  .gap-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 4px; }
+  .gap-table thead th { background: #fafaf7; padding: 6px 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule); text-align: left; }
+  .gap-table thead th.n { text-align: right; }
+  .gap-table tbody td { padding: 7px 8px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .gap-table tbody td.idx { color: var(--ink-mute); font-family: var(--mono); font-size: 10px; width: 28px; }
+  .gap-table tbody td.ref { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); white-space: nowrap; }
+  .gap-table tbody td.n { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-family: var(--mono); font-weight: 600; }
+  .gap-table tbody td.issue { font-size: 11px; }
+  .gap-table tbody td.issue .tag { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; color: #fff; background: var(--ink-soft); white-space: nowrap; }
+  .gap-table tbody td.issue .tag.target_addition { background: #6b1f0a; }
+  .gap-table tbody td.issue .tag.target_omission_of_source { background: #b07a3a; }
+  .gap-table tbody td.issue .tag.both_have_gap_material { background: #5c7a8b; }
+  .gap-table tbody td.resp { font-size: 11px; color: var(--ink-soft); line-height: 1.45; max-width: 360px; }
+  .gap-table tbody td.resp b { color: var(--ink); }
+
+  .anchor-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
+  .anchor-table thead th { background: #fafaf7; padding: 6px 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule); text-align: left; }
+  .anchor-table thead th.n { text-align: right; }
+  .anchor-table tbody td { padding: 7px 8px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  .anchor-table tbody td.name { font-family: var(--serif); font-size: 12.5px; color: var(--ink); }
+  .anchor-table tbody td.name .anc-id { display: block; font-family: var(--mono); font-size: 9px; color: var(--ink-mute); margin-top: 2px; }
+  .anchor-table tbody td.ref { font-family: var(--mono); font-size: 10px; color: var(--ink-soft); white-space: nowrap; }
+  .anchor-table tbody td.n { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); font-weight: 600; }
+  .anchor-table tbody td.n.lowest { background: #fdf6ea; color: var(--accent); }
+  .anchor-table tbody td.model { font-size: 10px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; }
+  .anchor-table tbody td.req { font-size: 11px; color: var(--ink-soft); line-height: 1.45; }
+  .anchor-table tbody tr:hover td { background: #fbf7ea; }
+  .anchor-table tbody tr:hover td.n.lowest { background: #fbe7c8; }
+
+  .muted-row { color: var(--ink-mute); font-size: 11px; font-style: italic; margin-top: 6px; }
+
+  .nav-dirs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .nav-dirs a { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; font-family: var(--mono); }
+  .nav-dirs a:hover { background: #fbf7ea; color: var(--ink); border-color: var(--accent); }
+  .nav-dirs a.current { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .empty { padding: 20px; text-align: center; color: var(--ink-mute); font-size: 13px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Per-direction obligation dossier</h1>
+    <span class="sub">top gap burdens · response models · John anchors · strengthen/weaken tests</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>Pick a direction. You get: the hypothesis and current status, the top five material-gap burdens ordered by contrary-evidence weight, the best available response model under that direction, the quantitative indicators that define the burden, and the tests that would strengthen or weaken the direction if run again with better data. For John-related directions you also get every anchor episode with its direct-use vs shared-tradition burden.</p>
+    <div class="note">
+      <b>How to read this page:</b> a <em>required explanation</em> is something the direction must explain if it is true — an addition, omission, or reordering. A <em>plausible response</em> is the best redactional move that would accommodate that burden. The direction is not "disproved" by any single burden — the cumulative weight is what matters. Burden scores are audit prompts, <b>not probabilities</b>.<br>
+      Sources: <code>60_contrary_evidence_and_response_models_by_direction.yaml</code>, <code>21_top_major_gap_and_material_burdens.csv</code>, <code>17_john_synoptic_directional_anchor_dossiers.yaml</code>, <code>01_direction_hypotheses_registry.yaml</code>.
+    </div>
+  </div>
+
+  <div class="picker-wrap">
+    <span class="lbl">Choose a direction (link-safe: <code>#direction_id</code>)</span>
+    <div class="picker-chips" id="dirPicker"></div>
+  </div>
+
+  <div class="dossier" id="dossier"></div>
+
+  <div class="footer">
+    Companion pages: <a href="36_directional_registry.html">36 · Registry</a> ·
+    <a href="38_system_hypotheses.html">38 · System hypothesis space</a> ·
+    <a href="26_conclusions.html">26 · Conclusions</a> ·
+    <a href="34_mark_luke.html">34 · Mark↔Luke direct</a> ·
+    <a href="35_john_pairwise.html">35 · John pairwise</a>.
+    Data package: <code>synoptic_john_directional_dossiers_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('37_direction_dossier.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const DD = B.dir_dossiers || {};
+  const registry = DD.registry || [];
+  const responseModels = DD.response_models || {};
+  const topGaps = DD.top_gap_burdens || [];
+  const johnDossiers = DD.john_anchor_dossiers || {};
+  const supportContra = DD.support_contra_matrix || [];
+  const pairMetrics = DD.pair_change_summary || [];
+
+  const registryById = {};
+  for (const r of registry) registryById[r.direction_id] = r;
+
+  const supportContraById = {};
+  for (const r of supportContra) supportContraById[r.direction_id] = r;
+
+  const pairMetricsById = {};
+  for (const r of pairMetrics) pairMetricsById[r.direction_id] = r;
+
+  function dirClass(pair) {
+    if (pair === 'Mark↔Matthew') return 'mm';
+    if (pair === 'Mark↔Luke') return 'mlk';
+    if (pair === 'Matthew↔Luke') return 'ml';
+    if ((pair || '').indexOf('John') >= 0) return 'john';
+    return '';
+  }
+  function prettyRef(r) { return (r == null || r === '' || r === '.nan' || r === 'nan') ? '—' : r; }
+
+  function renderPicker(active) {
+    const host = document.getElementById('dirPicker');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    for (const r of registry) {
+      const c = dirClass(r.pair);
+      const chip = el('span', { class: 'chip ' + c + (r.direction_id === active ? ' active' : '') }, r.direction_id);
+      chip.addEventListener('click', function () {
+        window.location.hash = r.direction_id;
+        render(r.direction_id);
+      });
+      host.appendChild(chip);
+    }
+  }
+
+  function buildHeader(reg, rm) {
+    const hd = el('div', { class: 'dossier-hd ' + dirClass(reg.pair) });
+    const left = el('div');
+    left.appendChild(el('h2', null, (rm && rm.hypothesis) || reg.short_label || reg.direction_id));
+    left.appendChild(el('div', { class: 'id' }, reg.direction_id + '  ·  source: ' + (reg.source || '—') + '  ·  target: ' + (reg.target || '—') + '  ·  pair: ' + (reg.pair || '—')));
+    if (reg.model_family) left.appendChild(el('div', { class: 'model-family' }, reg.model_family));
+    const status = (rm && rm.current_status) || reg.current_status || '—';
+    left.appendChild(el('div', { class: 'status-box' }, 'Current status: ' + status));
+    hd.appendChild(left);
+
+    // Quantitative indicator sidebar
+    const qi = el('div', { class: 'qi' });
+    const qInd = (rm && rm.quantitative_indicators) || {};
+    const burdenArr = qInd.burden_scores || [];
+    if (burdenArr.length) {
+      const lead = burdenArr[0];
+      qi.appendChild(el('div', { class: 'burden-lead' }, 'Burden ' + (typeof lead.burden_score === 'number' ? lead.burden_score.toFixed(2) : lead.burden_score)));
+      qi.appendChild(el('div', { class: 'row' },
+        el('span', { class: 'k' }, 'model'),
+        el('span', { class: 'v' }, lead.burden_model || '—')));
+      if (lead.interpretive_result) {
+        qi.appendChild(el('div', { style: 'font-size:10px;color:var(--ink-mute);text-align:right;font-style:italic;margin-top:2px;' }, lead.interpretive_result));
+      }
+    }
+    const fields = [
+      ['gap intervals', qInd.gap_interval_count],
+      ['major gaps ≥20', qInd.major_gap_count_abs_diff_ge_20],
+      ['max gap Δ', qInd.max_gap_abs_difference],
+      ['reordering rows', qInd.reordering_or_secondary_echo_rows],
+      ['primary pairs', qInd.primary_pair_count],
+      ['mean pair score', typeof qInd.mean_primary_pair_score === 'number' ? qInd.mean_primary_pair_score.toFixed(4) : qInd.mean_primary_pair_score],
+      ['mean Jaccard', typeof qInd.mean_token_jaccard === 'number' ? qInd.mean_token_jaccard.toFixed(4) : qInd.mean_token_jaccard],
+    ];
+    for (const [k, v] of fields) {
+      if (v === null || v === undefined || v === '') continue;
+      qi.appendChild(el('div', { class: 'row' },
+        el('span', { class: 'k' }, k),
+        el('span', { class: 'v' }, String(v))));
+    }
+    if (qInd.john_anchor_count) {
+      qi.appendChild(el('div', { class: 'row' },
+        el('span', { class: 'k' }, 'John anchors'),
+        el('span', { class: 'v' }, String(qInd.john_anchor_count))));
+    }
+    hd.appendChild(qi);
+    return hd;
+  }
+
+  function buildBullets(items) {
+    const ul = el('ul');
+    for (const s of items || []) ul.appendChild(el('li', null, s));
+    return ul;
+  }
+
+  function buildEvidencePair(rm, reg) {
+    const wrap = el('div', { class: 'col2' });
+    const sup = el('div', { class: 'block strong' });
+    sup.appendChild(el('h3', null, 'Supporting evidence'));
+    sup.appendChild(el('div', { class: 'lead' }, 'What counts in favor of this direction in the current data.'));
+    sup.appendChild(buildBullets((rm && rm.supporting_evidence) || []));
+    wrap.appendChild(sup);
+
+    const con = el('div', { class: 'block contra' });
+    con.appendChild(el('h3', null, 'Contrary evidence'));
+    con.appendChild(el('div', { class: 'lead' }, 'What counts against this direction; these are the explanations the response model must absorb.'));
+    const items = (rm && rm.contrary_evidence) || reg.core_contrary_evidence || [];
+    con.appendChild(buildBullets(items));
+    wrap.appendChild(con);
+    return wrap;
+  }
+
+  function buildResponseBlock(rm, reg) {
+    const wrap = el('div', { class: 'block response' });
+    wrap.appendChild(el('h3', null, 'Best response model under this direction'));
+    wrap.appendChild(el('div', { class: 'lead' }, 'If a specialist still wants to defend this direction against the contrary evidence, this is the most parsimonious redactional/tradition-history model available.'));
+    const text = (rm && rm.best_response_model) || reg.best_response_model || '—';
+    wrap.appendChild(el('div', { class: 'text' }, text));
+    return wrap;
+  }
+
+  function buildStrengthenWeakenPair(rm) {
+    const wrap = el('div', { class: 'col2' });
+    const str = el('div', { class: 'block strengthen' });
+    str.appendChild(el('h3', null, 'What would strengthen this hypothesis'));
+    str.appendChild(el('div', { class: 'lead' }, 'Observations that would, if found, raise confidence in this direction over the alternatives.'));
+    str.appendChild(buildBullets((rm && rm.what_would_strengthen_this_hypothesis) || []));
+    wrap.appendChild(str);
+
+    const wk = el('div', { class: 'block weaken' });
+    wk.appendChild(el('h3', null, 'What would weaken this hypothesis'));
+    wk.appendChild(el('div', { class: 'lead' }, 'Observations or analyses that, if obtained, would lower confidence in this direction.'));
+    wk.appendChild(buildBullets((rm && rm.what_would_weaken_this_hypothesis) || []));
+    wrap.appendChild(wk);
+    return wrap;
+  }
+
+  function issueTagClass(s) {
+    if (!s) return '';
+    return s.replace(/[^a-z_]/g, '');
+  }
+
+  function buildGapTable(dirId, rm) {
+    const wrap = el('div', { class: 'block' });
+    wrap.appendChild(el('h3', null, 'Top material-gap burdens'));
+    wrap.appendChild(el('div', { class: 'lead' }, 'Ordered by contrary-evidence weight (absolute gap difference). Each row is a specific pericope-boundary interval that the direction must account for.'));
+    let rows = (rm && rm.top_material_gap_burdens) || [];
+    if (!rows.length) {
+      rows = topGaps.filter(function (r) { return r.direction_id === dirId; })
+        .sort(function (a, b) { return (b.contrary_evidence_value || 0) - (a.contrary_evidence_value || 0); })
+        .slice(0, 5);
+    }
+    if (!rows.length) {
+      wrap.appendChild(el('div', { class: 'empty' }, 'No gap-burden rows indexed for this direction.'));
+      return wrap;
+    }
+    const tbl = el('table', { class: 'gap-table' });
+    const thead = el('thead');
+    thead.appendChild(el('tr', null,
+      el('th', null, '#'),
+      el('th', null, 'Source range'),
+      el('th', null, 'Target range'),
+      el('th', { class: 'n' }, 'Src vv'),
+      el('th', { class: 'n' }, 'Tgt vv'),
+      el('th', { class: 'n' }, 'Δ'),
+      el('th', null, 'Issue'),
+      el('th', null, 'Plausible response')));
+    tbl.appendChild(thead);
+    const tbody = el('tbody');
+    let i = 1;
+    for (const r of rows) {
+      const tr = el('tr');
+      tr.appendChild(el('td', { class: 'idx' }, String(i++)));
+      tr.appendChild(el('td', { class: 'ref' }, prettyRef(r.source_gap_range)));
+      tr.appendChild(el('td', { class: 'ref' }, prettyRef(r.target_gap_range)));
+      tr.appendChild(el('td', { class: 'n' }, String(r.source_gap_count)));
+      tr.appendChild(el('td', { class: 'n' }, String(r.target_gap_count)));
+      tr.appendChild(el('td', { class: 'n' }, String(r.contrary_evidence_value)));
+      const issueCell = el('td', { class: 'issue' });
+      issueCell.appendChild(el('span', { class: 'tag ' + issueTagClass(r.dominant_material_issue) }, (r.dominant_material_issue || '').replace(/_/g, ' ')));
+      issueCell.appendChild(el('div', { style: 'margin-top:4px;font-size:10.5px;color:var(--ink-soft);line-height:1.4;' }, r.directional_implication || ''));
+      tr.appendChild(issueCell);
+      tr.appendChild(el('td', { class: 'resp' }, r.plausible_response || '—'));
+      tbody.appendChild(tr);
+    }
+    tbl.appendChild(tbody);
+    wrap.appendChild(tbl);
+    wrap.appendChild(el('div', { class: 'muted-row' }, 'Source: top_material_gap_burdens per 60_contrary_evidence_and_response_models_by_direction.yaml; full ledger: 21_top_major_gap_and_material_burdens.csv.'));
+    return wrap;
+  }
+
+  function buildJohnAnchorTable(dirId) {
+    const group = johnDossiers[dirId];
+    if (!group) return null;
+    const anchors = group.anchors || [];
+    if (!anchors.length) return null;
+
+    const wrap = el('div', { class: 'block' });
+    wrap.appendChild(el('h3', null, 'John anchor-level obligations (' + anchors.length + ' episodes)'));
+    wrap.appendChild(el('div', { class: 'lead' }, 'For every shared anchor episode, the three candidate burdens (direct use, shared tradition, independent convergence) are compared. Lowest-burden cell is highlighted. When shared tradition wins, the direct-use direction is carrying additional obligation.'));
+
+    const tbl = el('table', { class: 'anchor-table' });
+    const thead = el('thead');
+    thead.appendChild(el('tr', null,
+      el('th', null, 'Anchor'),
+      el('th', null, 'Source ref'),
+      el('th', null, 'Target ref'),
+      el('th', { class: 'n' }, 'Direct use'),
+      el('th', { class: 'n' }, 'Shared trad.'),
+      el('th', { class: 'n' }, 'Indep. conv.'),
+      el('th', null, 'Best current model'),
+      el('th', null, 'Required explanation if direction holds')));
+    tbl.appendChild(thead);
+    const tbody = el('tbody');
+    for (const a of anchors) {
+      const tr = el('tr');
+      const nameCell = el('td', { class: 'name' });
+      const anchorName = (a.anchor_id || '').replace(/_/g, ' ');
+      nameCell.appendChild(document.createTextNode(anchorName));
+      nameCell.appendChild(el('span', { class: 'anc-id' }, a.anchor_id || ''));
+      tr.appendChild(nameCell);
+      tr.appendChild(el('td', { class: 'ref' }, a.source_refs || '—'));
+      tr.appendChild(el('td', { class: 'ref' }, a.target_refs || '—'));
+
+      const du = typeof a.direct_use_burden === 'number' ? a.direct_use_burden : Number(a.direct_use_burden);
+      const sh = typeof a.shared_tradition_burden === 'number' ? a.shared_tradition_burden : Number(a.shared_tradition_burden);
+      const ic = typeof a.independent_convergence_burden === 'number' ? a.independent_convergence_burden : Number(a.independent_convergence_burden);
+      const vals = [du, sh, ic];
+      const finiteVals = vals.filter(function (v) { return typeof v === 'number' && !isNaN(v); });
+      const minVal = finiteVals.length ? Math.min.apply(null, finiteVals) : null;
+      function td(val) {
+        const is = (typeof val === 'number' && !isNaN(val) && val === minVal);
+        return el('td', { class: 'n' + (is ? ' lowest' : '') }, (typeof val === 'number' && !isNaN(val)) ? val.toFixed(3) : '—');
+      }
+      tr.appendChild(td(du));
+      tr.appendChild(td(sh));
+      tr.appendChild(td(ic));
+
+      const bcm = (a.best_current_model || '').replace(/_/g, ' ');
+      tr.appendChild(el('td', { class: 'model' }, bcm));
+      tr.appendChild(el('td', { class: 'req' }, a.required_explanation_if_direction || '—'));
+      tbody.appendChild(tr);
+    }
+    tbl.appendChild(tbody);
+    wrap.appendChild(tbl);
+    wrap.appendChild(el('div', { class: 'muted-row' }, 'Source: 17_john_synoptic_directional_anchor_dossiers.yaml (anchor_count: ' + (group.anchor_count || anchors.length) + '). Flat version: 16_john_synoptic_directional_anchor_ledger.csv.'));
+    return wrap;
+  }
+
+  function buildSupportContraMetrics(dirId) {
+    const sc = supportContraById[dirId];
+    const pm = pairMetricsById[dirId];
+    if (!sc && !pm) return null;
+    const wrap = el('div', { class: 'block' });
+    wrap.appendChild(el('h3', null, 'Quantitative indicator strip'));
+    wrap.appendChild(el('div', { class: 'lead' }, 'Support and contra counts from the full ledgers (not just the top-5 burdens shown above).'));
+    const grid = el('div', { class: 'metric-grid', style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;font-size:12px;' });
+    function cell(label, value, note) {
+      if (value === undefined || value === null || value === '') return;
+      const c = el('div', { style: 'padding:8px 10px;background:#fafaf7;border:1px solid var(--rule-soft);border-radius:2px;' });
+      c.appendChild(el('div', { style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-mute);' }, label));
+      c.appendChild(el('div', { style: 'font-family:var(--serif);font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums;' }, String(value)));
+      if (note) c.appendChild(el('div', { style: 'font-size:10px;color:var(--ink-mute);margin-top:2px;' }, note));
+      grid.appendChild(c);
+    }
+    if (sc) {
+      cell('Primary support', sc.primary_support_count);
+      cell('Primary contra', sc.primary_contra_count);
+      cell('Gap intervals', sc.gap_interval_count);
+      cell('Major gaps ≥20', sc.major_gap_count_abs_diff_ge_20);
+      cell('Max gap Δ', sc.max_gap_abs_difference);
+      cell('Reordering rows', sc.reordering_or_secondary_echo_rows);
+      if (sc.john_anchor_count) {
+        cell('John anchors', sc.john_anchor_count, (sc.john_anchors_where_shared_tradition_best != null ? (sc.john_anchors_where_shared_tradition_best + ' best under shared tradition') : null));
+      }
+    }
+    if (pm) {
+      cell('Primary pairs (52)', pm.pair_count);
+      cell('Mean pair score', pm.mean_score ? pm.mean_score.toFixed(4) : null);
+      cell('Mean Jaccard', pm.mean_token_jaccard ? pm.mean_token_jaccard.toFixed(4) : null);
+      cell('Mean exact-run', pm.mean_exact_run_len ? pm.mean_exact_run_len.toFixed(3) : null);
+      cell('Max exact-run', pm.max_exact_run_len);
+      cell('Target longer %', typeof pm.target_longer_pct === 'number' ? pm.target_longer_pct.toFixed(1) + '%' : null);
+    }
+    wrap.appendChild(grid);
+    wrap.appendChild(el('div', { class: 'muted-row' }, 'Source: 61_support_contra_evidence_matrix.csv and 52_primary_pair_change_summary_by_direction.csv.'));
+    return wrap;
+  }
+
+  function buildRequiredExplanations(reg) {
+    const wrap = el('div', { class: 'block' });
+    wrap.appendChild(el('h3', null, 'Core required explanations (from registry)'));
+    wrap.appendChild(el('div', { class: 'lead' }, 'High-level obligations that frame every specific gap burden below; these are the direction\u2019s non-negotiable deliverables.'));
+    wrap.appendChild(buildBullets(reg.core_required_explanations || []));
+    return wrap;
+  }
+
+  function buildDirectionNav(active) {
+    const wrap = el('div', { class: 'nav-dirs' });
+    for (const r of registry) {
+      const a = el('a', { href: '#' + r.direction_id, class: (r.direction_id === active ? 'current' : '') }, r.direction_id);
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.hash = r.direction_id;
+        render(r.direction_id);
+      });
+      wrap.appendChild(a);
+    }
+    return wrap;
+  }
+
+  function render(dirId) {
+    const host = document.getElementById('dossier');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const reg = registryById[dirId];
+    if (!reg) {
+      host.appendChild(el('div', { class: 'empty' }, 'Unknown direction id: ' + dirId));
+      return;
+    }
+    const rm = responseModels[dirId] || null;
+
+    host.appendChild(buildHeader(reg, rm));
+    host.appendChild(buildRequiredExplanations(reg));
+    host.appendChild(buildEvidencePair(rm, reg));
+    host.appendChild(buildResponseBlock(rm, reg));
+    host.appendChild(buildGapTable(dirId, rm));
+    const jat = buildJohnAnchorTable(dirId);
+    if (jat) host.appendChild(jat);
+    const sc = buildSupportContraMetrics(dirId);
+    if (sc) host.appendChild(sc);
+    host.appendChild(buildStrengthenWeakenPair(rm));
+    host.appendChild(buildDirectionNav(dirId));
+
+    renderPicker(dirId);
+    document.title = 'Dossier · ' + (reg.short_label || dirId);
+  }
+
+  function initial() {
+    const h = (window.location.hash || '').replace('#', '');
+    if (h && registryById[h]) return h;
+    return (registry[0] && registry[0].direction_id) || 'matthew_used_mark';
+  }
+  window.addEventListener('hashchange', function () {
+    const h = (window.location.hash || '').replace('#', '');
+    if (registryById[h]) render(h);
+  });
+  render(initial());
+})();
+</script>
+</body>
+</html>

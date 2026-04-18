@@ -131,6 +131,11 @@
       ['30_reader.html', 'Reader'],
       ['31_gospel_square.html', 'Gospel Square'],
     ]},
+    { id: 'directional', label: 'Directional hypotheses (20260418)', pages: [
+      ['36_directional_registry.html', 'Registry · 12 directions'],
+      ['37_direction_dossier.html', 'Per-direction dossier'],
+      ['38_system_hypotheses.html', 'System hypothesis space'],
+    ]},
     { id: 'mkl', label: 'Mark ↔ Luke (18b)', pages: [
       ['34_mark_luke.html', 'Mark↔Luke direct'],
       ['13_triangle.html', 'Synoptic matrix'],

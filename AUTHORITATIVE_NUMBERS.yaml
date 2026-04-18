@@ -17,6 +17,14 @@
 #     burdens, Matt-Luke mask-regime robustness, Thomas curation-status
 #     annotations, epistle validation-sample strata, and the MorphGNT
 #     lemma audit.
+#   - The directional-dossiers package
+#     (synoptic_john_directional_dossiers_20260418/) is authoritative for
+#     per-direction *explanatory-obligation* scores (direct-use burden by
+#     direction; support/contra counts; ranked directional conclusions; per-
+#     direction top material-gap burdens; John anchor-level direct-use vs.
+#     shared-tradition vs. independent-convergence burdens). It does not
+#     replace the 18b/18c retrieval or penalty layers; it overlays a
+#     direction-by-direction "must-explain" layer on top of them.
 #   - Prior packages remain authoritative only where no rerun or supplement
 #     has been produced (currently: apocrypha inventory).
 #
@@ -237,6 +245,67 @@ pairs:
     analysis_status_18c: analysis_update_20260418c/data/60_apocrypha_analysis_status_and_ingestion_roadmap.yaml
     analysis_status_note: 18c reconfirms "not a completed primary-text analysis layer"; next priorities (high → medium) are Gospel of Peter, Protevangelium of James, Infancy Gospel of Thomas, Gospel of Nicodemus / Acts of Pilate.
 
+  directional_dossiers:
+    description: >
+      Per-direction explanatory-obligation layer for the Synoptic Problem
+      including John. Answers, for each proposed dependence direction, what
+      the target text must have changed, omitted, added, or reordered, what
+      evidence counts against the direction, and the best response model
+      available under that direction.
+    headline_source: synoptic_john_directional_dossiers_20260418/
+    prior_source: null
+    directions_registered: 12
+    ranked_conclusions_count: 5
+    top_material_gap_burden_rows: 100
+    john_anchor_ledger_rows: 58
+    headline_claims:
+      # Direct-use burden scores from
+      # synoptic_john_directional_dossiers_20260418/data/03_direction_burden_summary.csv
+      # (lower = lower cumulative explanatory obligation; NOT a probability).
+      direct_use_burden_by_direction:
+        matthew_used_mark: 774.87
+        mark_used_matthew: 788.66
+        luke_used_mark:    254.6466
+        mark_used_luke:    303.1966
+        matthew_used_luke: 303.1966
+        luke_used_matthew: 303.1966
+      best_direction_by_pair:
+        Mark_↔_Matthew: matthew_used_mark  # 774.87 vs 788.66
+        Mark_↔_Luke:    luke_used_mark     # 254.6466 vs 303.1966 (matches 18c Mark-prior under moderate penalty)
+        Matthew_↔_Luke: tied_or_shared_tradition_better  # 303.2 vs 303.2 direct; shared-tradition layer lower-burden
+      primary_pair_count_by_direction_family:
+        Mark_Matthew_pairs: 385
+        Mark_Luke_pairs:    183
+        Matthew_Luke_pairs: 102
+        John_Mark_anchors:  10
+        John_Matthew_anchors: 10
+        John_Luke_anchors:  9
+      john_anchor_lowest_burden_model_count:
+        shared_anchor_tradition_best_of_all_anchors: true
+      ranked_directional_conclusions:
+        rank_1: { claim: Matthew used Mark or a Mark-like written narrative source, confidence: high }
+        rank_2: { claim: Luke used Mark or a Mark-like written narrative source under order-retention penalty, confidence: medium-high }
+        rank_3: { claim: Matt-Luke double tradition better modeled as shared sayings/tradition than one-way direct, confidence: medium-high }
+        rank_4: { claim: John shares anchor traditions with Synoptics; direct use is not currently lowest-burden, confidence: medium }
+        rank_5: { claim: Reverse directions (Mark used Matt/Luke; Synoptics used John) are completeness hypotheses with higher burden, confidence: medium as negative assessment }
+    interpretive_caveat: >
+      Burden scores are audit prompts, not probabilities. They make explanatory
+      obligations comparable across competing directions on the same pair, but
+      they should not be compared across unrelated pairs as if they were
+      posterior odds. The pair-filter burden table on visualization page 36
+      enforces this by grouping comparisons by pair. Per-direction detail
+      (top 5 material-gap burdens, response model, strengthen/weaken tests)
+      lives on visualization page 37; system-level models (two-source,
+      Farrer, Griesbach, proto-Mark, John shared-anchor) on page 38.
+    cross_reference_to_18c:
+      mark_luke_moderate_penalty_winner: Mark_prior_Luke_uses_Mark_or_Mark_like_source (254.6466)
+      john_anchor_best_model_all_pairs: shared_anchor_tradition
+      note: >
+        The 18c moderate-penalty Mark-Luke winner and the directional-dossiers
+        luke_used_mark burden (254.6466) are the same number. The directional
+        package also encodes the reverse (mark_used_luke = 303.1966) and five
+        other directions not covered by the 18c patch.
+
   morphology_audit:
     description: MorphGNT lemma audit of the Mark-Luke primary chain (18c).
     headline_source: analysis_update_20260418c/data/84_morphology_rerun_summary.yaml
@@ -285,3 +354,14 @@ bundle_sources:
   epistle_validation:        bundle.h18c.epistle_validation_summary
   morphology_audit:          bundle.h18c.morphology_rerun_summary
   updated_conclusions_18c:   bundle.h18c.updated_conclusions
+  # 2026-04-18 directional-dossiers package — 12-direction explanatory-obligation layer:
+  directional_registry:          bundle.dir_dossiers.registry
+  directional_burden_summary:    bundle.dir_dossiers.burden_summary
+  directional_ranked_conclusions: bundle.dir_dossiers.conclusion_ranking
+  directional_top_gap_burdens:   bundle.dir_dossiers.top_gap_burdens
+  directional_response_models:   bundle.dir_dossiers.response_models
+  directional_john_anchors:      bundle.dir_dossiers.john_anchor_dossiers
+  directional_john_anchor_ledger: bundle.dir_dossiers.john_anchor_ledger
+  directional_system_models:     bundle.dir_dossiers.system_hypothesis_space
+  directional_pair_change_summary: bundle.dir_dossiers.pair_change_summary
+  directional_support_contra:    bundle.dir_dossiers.support_contra_matrix

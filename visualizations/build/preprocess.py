@@ -96,6 +96,7 @@ if __package__ in (None, ""):
     )
     from build.loaders_h18b import build_h18b  # type: ignore[no-redef]
     from build.loaders_h18c import build_h18c  # type: ignore[no-redef]
+    from build.loaders_dir_dossiers import build_dir_dossiers  # type: ignore[no-redef]
     from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
     from build.loaders_morph import load_morph_for_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
@@ -161,6 +162,7 @@ else:  # imported as a package member
     )
     from .loaders_h18b import build_h18b
     from .loaders_h18c import build_h18c
+    from .loaders_dir_dossiers import build_dir_dossiers
     from .loaders_reader import load_reader_books
     from .loaders_morph import load_morph_for_books
     from .preprocess_paths import OUT, ROOT
@@ -428,6 +430,19 @@ def main() -> None:
         f"epistle validation sample {(h18c.get('epistle_validation_summary') or {}).get('sample_rows', 0)} rows"
     )
 
+    print("Building dir_dossiers (2026-04-18 Synoptic+John directional hypothesis dossiers)...")
+    dir_dossiers = build_dir_dossiers()
+    _reg = dir_dossiers.get("registry") or []
+    _bsum = dir_dossiers.get("burden_summary") or []
+    _tgb = dir_dossiers.get("top_gap_burdens") or []
+    _jal = dir_dossiers.get("john_anchor_ledger") or []
+    _cr = dir_dossiers.get("conclusion_ranking") or {}
+    print(
+        f"  {len(_reg)} directions registered; {len(_bsum)} burden rows; "
+        f"{len(_tgb)} top gap-burden rows; {len(_jal)} John-anchor rows; "
+        f"{len((_cr.get('directional_conclusions_ranked') or []))} ranked conclusions"
+    )
+
     print("Building h18b (2026-04-18b high-priority supplement)...")
     h18b = build_h18b()
     _mkl = h18b.get("mkl") or {}
@@ -469,6 +484,7 @@ def main() -> None:
         "jtea": jtea,
         "h18b": h18b,
         "h18c": h18c,
+        "dir_dossiers": dir_dossiers,
         "conclusions": conclusions,
         "reader": reader,
         "morph": morph,

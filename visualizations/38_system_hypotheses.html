@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>System hypothesis space · five canonical Synoptic+John models compared</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .direct-rail { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; font-size: 11px; }
+  .direct-rail .t { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; padding: 5px 10px 4px 0; }
+  .direct-rail a { font-size: 10.5px; font-family: var(--mono); padding: 4px 10px; border: 1px solid var(--rule); border-radius: 14px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .direct-rail a:hover { background: #fbf7ea; border-color: var(--accent); color: var(--ink); }
+
+  .sys-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 8px; }
+  .sys-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 0; overflow: hidden; }
+  .sys-card .sys-hd { padding: 14px 18px; border-bottom: 1px solid var(--rule-soft); display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: baseline; background: #fafaf7; }
+  .sys-card .sys-hd .n { font-family: var(--serif); font-size: 28px; color: var(--accent); font-weight: 600; line-height: 1; }
+  .sys-card .sys-hd .title { font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.3; }
+  .sys-card .sys-hd .title .id { display: block; font-family: var(--mono); font-size: 11px; color: var(--ink-mute); margin-top: 3px; }
+  .sys-card .sys-hd .stance { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 2px; color: #fff; font-weight: 600; white-space: nowrap; align-self: start; }
+  .sys-card .sys-hd .stance.supported { background: #6b1f0a; }
+  .sys-card .sys-hd .stance.viable { background: #a8551a; }
+  .sys-card .sys-hd .stance.contested { background: #5c7a8b; }
+  .sys-card .sys-hd .stance.minority { background: #864747; }
+  .sys-card .sys-hd .stance.structural { background: #4d6f4b; }
+
+  .sys-body { padding: 16px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 900px) { .sys-body { grid-template-columns: 1fr; } }
+  .sys-panel { display: flex; flex-direction: column; gap: 6px; }
+  .sys-panel h4 { margin: 0; font-family: var(--serif); font-size: 13px; color: var(--ink); border-left: 3px solid var(--rule); padding: 2px 0 2px 8px; }
+  .sys-panel.assumptions h4 { border-left-color: var(--accent); }
+  .sys-panel.must-explain h4 { border-left-color: #6b1f0a; }
+  .sys-panel.contrary h4 { border-left-color: #a8551a; }
+  .sys-panel.best-response h4 { border-left-color: #4d6f4b; }
+  .sys-panel ul { margin: 0; padding-left: 20px; font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); }
+  .sys-panel ul li { margin-bottom: 3px; }
+  .sys-panel .text { font-size: 12.5px; line-height: 1.55; color: var(--ink-soft); }
+  .sys-panel .text b { color: var(--ink); }
+
+  .sys-card .sys-ft { padding: 10px 18px; background: #faf6ec; border-top: 1px solid var(--rule-soft); font-size: 11px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+  .sys-card .sys-ft .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; margin-right: 6px; }
+  .sys-card .sys-ft a { font-size: 10.5px; font-family: var(--mono); padding: 3px 8px; border: 1px solid var(--rule); border-radius: 2px; background: #fff; color: var(--ink-soft); text-decoration: none; }
+  .sys-card .sys-ft a:hover { background: #fbf7ea; color: var(--ink); border-color: var(--accent); }
+
+  .burden-panel { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 18px; margin: 20px 0; }
+  .burden-panel h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 15px; color: var(--ink); }
+  .burden-panel .lead { font-size: 12px; color: var(--ink-mute); line-height: 1.45; margin: 0 0 10px; }
+  .burden-compact { font-size: 12px; border-collapse: collapse; width: 100%; }
+  .burden-compact thead th { background: #fafaf7; padding: 6px 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; border-bottom: 1px solid var(--rule); text-align: left; }
+  .burden-compact thead th.n { text-align: right; }
+  .burden-compact tbody td { padding: 5px 8px; border-bottom: 1px solid var(--rule-soft); }
+  .burden-compact tbody td.n { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); color: var(--ink); font-weight: 600; }
+  .burden-compact tbody td.lead { font-family: var(--serif); color: var(--ink); }
+  .burden-compact tbody tr.best td { background: #fdf6ea; }
+  .burden-compact tbody td .note { font-size: 10.5px; color: var(--ink-mute); margin-top: 2px; }
+
+  .section-lead { font-size: 13px; color: var(--ink-soft); line-height: 1.55; max-width: 1060px; margin: 0 0 8px; }
+  .section-lead b { color: var(--ink); }
+
+  .empty { padding: 20px; text-align: center; color: var(--ink-mute); font-size: 13px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>System hypothesis space</h1>
+    <span class="sub">five system-level models · pairwise burden comparison · cross-links to per-direction dossiers</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>Pairwise direction registries (page 36) tell you what <em>one</em> direction must explain. System models tell you what coherent packages of directions claim collectively. This page documents the five canonical system models actively debated for the Synoptics and John, each with its assumptions, must-explain obligations, contrary evidence, and the best response available if one still wants to hold the model together.</p>
+    <div class="note">
+      <b>How the five relate.</b> <em>Two-source</em>, <em>Farrer</em>, and <em>Griesbach/two-gospel</em> are three mutually-exclusive accounts of Matthew↔Luke↔Mark. <em>Proto-Mark</em> relaxes the assumption that canonical Mark is the Mark-like source. <em>John shared-anchor tradition</em> addresses the John↔Synoptic question without presupposing direct Gospel-to-Gospel use. The same burden scores on page 36 evaluate pairwise pieces of these models — see the burden comparison below.<br>
+      Sources: <code>04_system_hypothesis_space.yaml</code>, <code>03_direction_burden_summary.csv</code>, <code>62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>.
+    </div>
+    <div class="direct-rail">
+      <span class="t">Twelve pairwise directions</span>
+      <span id="directRail"></span>
+    </div>
+  </div>
+
+  <section class="card">
+    <h2>Five system-level models</h2>
+    <p class="section-lead">Each card states what the model assumes about directionality, what the combined package must explain given those assumptions, what contrary evidence the current data shows, and the best available response if one still wants to defend the model. Ordering matches the source YAML; the "current stance" label summarizes how the directional-dossiers package judges each model.</p>
+    <div class="sys-grid" id="sysGrid"></div>
+  </section>
+
+  <section class="burden-panel">
+    <h3>How pairwise burden scores inform each system model</h3>
+    <p class="lead">Each row is one direct-use burden score from <code>03_direction_burden_summary.csv</code>. Best-in-pair (lowest burden given the same model and burden definition) is highlighted. System models inherit these pairwise obligations: for instance, Farrer must defend both <code>matthew_used_mark</code> (low burden, supportive) <em>and</em> <code>luke_used_matthew</code> (higher burden against shared-tradition alternatives).</p>
+    <div style="overflow-x:auto;">
+      <table class="burden-compact" id="burdenCompact">
+        <thead><tr>
+          <th class="lead">Direction</th>
+          <th>Pair</th>
+          <th>Burden model</th>
+          <th class="n">Score</th>
+          <th>Interpretation</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div style="margin-top:8px;font-size:11px;color:var(--ink-mute);">Lower is better, but not a probability. See <a href="36_directional_registry.html#burdenSection">page 36 · Burden comparison</a> for the sortable full table with pair filter.</div>
+  </section>
+
+  <section class="card">
+    <h2>Current ranked conclusions (evidence-ordering)</h2>
+    <p class="section-lead">The five-rank ladder from <code>62_directional_conclusion_ranking_and_missing_key_directions.yaml</code> applies to the system models: rank 1 (Matthew used Mark) supports every system model that assumes it; rank 2 (Luke used Mark) supports two-source, Farrer, and proto-Mark; rank 4 (John shared anchor tradition) directly supports the John shared-anchor system model over a global John-used-X claim.</p>
+    <div id="rankSummary" style="display:flex;flex-direction:column;gap:6px;"></div>
+  </section>
+
+  <div class="footer">
+    Companion pages: <a href="36_directional_registry.html">36 · Registry</a> ·
+    <a href="37_direction_dossier.html">37 · Per-direction dossier</a> ·
+    <a href="26_conclusions.html">26 · Conclusions</a> ·
+    <a href="34_mark_luke.html">34 · Mark↔Luke</a> ·
+    <a href="35_john_pairwise.html">35 · John pairwise</a>.
+    Data package: <code>synoptic_john_directional_dossiers_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('38_system_hypotheses.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const DD = B.dir_dossiers || {};
+  const sys = DD.system_hypothesis_space || {};
+  const directPairwise = sys.direct_pairwise_models || [];
+  const models = sys.key_additional_synoptic_system_models || {};
+  const burden = DD.burden_summary || [];
+  const rankObj = DD.conclusion_ranking || {};
+  const ranked = rankObj.directional_conclusions_ranked || [];
+
+  // ---- Direct pairwise rail ----
+  const rail = document.getElementById('directRail');
+  for (const d of directPairwise) {
+    rail.appendChild(el('a', { href: '37_direction_dossier.html#' + d }, d));
+  }
+
+  // ---- System cards ----
+  const grid = document.getElementById('sysGrid');
+  const ORDER = [
+    'two_source_or_mark_plus_q_like',
+    'farrer_or_luke_uses_matthew_plus_mark',
+    'griesbach_two_gospel_mark_uses_matthew_and_luke',
+    'proto_mark_or_common_narrative_source',
+    'john_shared_anchor_tradition',
+  ];
+  const DISPLAY = {
+    two_source_or_mark_plus_q_like: { title: 'Two-source (Mark + Q-like)', stance: 'supported', stanceLabel: 'Supported under ranks 1–3', drillTo: ['matthew_used_mark', 'luke_used_mark', 'shared_matt_luke_sayings_tradition'] },
+    farrer_or_luke_uses_matthew_plus_mark: { title: 'Farrer (Luke uses Matthew + Mark)', stance: 'viable', stanceLabel: 'Viable, burden from Luke↔Matthew carries', drillTo: ['matthew_used_mark', 'luke_used_mark', 'luke_used_matthew'] },
+    griesbach_two_gospel_mark_uses_matthew_and_luke: { title: 'Griesbach / two-gospel (Mark uses Matthew + Luke)', stance: 'minority', stanceLabel: 'Minority, higher cumulative burden', drillTo: ['mark_used_matthew', 'mark_used_luke', 'luke_used_matthew'] },
+    proto_mark_or_common_narrative_source: { title: 'Proto-Mark / common narrative source', stance: 'structural', stanceLabel: 'Structural — retires canonical-Mark assumption', drillTo: ['matthew_used_mark', 'luke_used_mark'] },
+    john_shared_anchor_tradition: { title: 'John shared anchor tradition', stance: 'supported', stanceLabel: 'Supported at rank 4 — lower burden than global John-used-X', drillTo: ['john_used_mark', 'john_used_matthew', 'john_used_luke'] },
+  };
+
+  function buildBullets(items) {
+    const ul = el('ul');
+    for (const s of (items || [])) ul.appendChild(el('li', null, s));
+    return ul;
+  }
+
+  let n = 1;
+  for (const id of ORDER) {
+    const m = models[id];
+    if (!m) continue;
+    const d = DISPLAY[id] || {};
+    const card = el('div', { class: 'sys-card' });
+
+    const hd = el('div', { class: 'sys-hd' });
+    hd.appendChild(el('div', { class: 'n' }, String(n++)));
+    hd.appendChild(el('div', { class: 'title' },
+      (d.title || id),
+      el('span', { class: 'id' }, id)));
+    hd.appendChild(el('span', { class: 'stance ' + (d.stance || 'viable') }, d.stanceLabel || 'Viable'));
+    card.appendChild(hd);
+
+    const body = el('div', { class: 'sys-body' });
+    const ap = el('div', { class: 'sys-panel assumptions' });
+    ap.appendChild(el('h4', null, 'Assumptions'));
+    ap.appendChild(buildBullets(m.assumptions));
+    body.appendChild(ap);
+
+    const me = el('div', { class: 'sys-panel must-explain' });
+    me.appendChild(el('h4', null, 'Must explain'));
+    me.appendChild(buildBullets(m.must_explain));
+    body.appendChild(me);
+
+    const co = el('div', { class: 'sys-panel contrary' });
+    co.appendChild(el('h4', null, 'Contrary evidence'));
+    co.appendChild(buildBullets(m.contrary_evidence));
+    body.appendChild(co);
+
+    const br = el('div', { class: 'sys-panel best-response' });
+    br.appendChild(el('h4', null, 'Best response model'));
+    br.appendChild(el('div', { class: 'text' }, m.best_response || '—'));
+    body.appendChild(br);
+    card.appendChild(body);
+
+    const ft = el('div', { class: 'sys-ft' });
+    ft.appendChild(el('span', { class: 'lbl' }, 'Pairwise dossiers'));
+    for (const did of (d.drillTo || [])) {
+      ft.appendChild(el('a', { href: '37_direction_dossier.html#' + did }, did));
+    }
+    card.appendChild(ft);
+
+    grid.appendChild(card);
+  }
+
+  // ---- Burden compact table ----
+  const directUseOnly = burden.filter(function (r) { return (r.burden_model || '').indexOf('direct_use') === 0 || (r.burden_model || '') === 'direct_use'; });
+  const pairOrder = ['Mark↔Matthew', 'Mark↔Luke', 'Matthew↔Luke'];
+  const rows = directUseOnly.slice().sort(function (a, b) {
+    const ai = pairOrder.indexOf(a.pair);
+    const bi = pairOrder.indexOf(b.pair);
+    if (ai !== bi) {
+      if (ai < 0) return 1;
+      if (bi < 0) return -1;
+      return ai - bi;
+    }
+    return (a.burden_score || 0) - (b.burden_score || 0);
+  });
+  const bestKey = {};
+  for (const r of rows) {
+    const k = r.pair + '||' + r.burden_model;
+    if (!bestKey[k] || r.burden_score < bestKey[k].burden_score) bestKey[k] = r;
+  }
+  const tbody = document.querySelector('#burdenCompact tbody');
+  for (const r of rows) {
+    const k = r.pair + '||' + r.burden_model;
+    const isBest = bestKey[k] === r;
+    const tr = el('tr', isBest ? { class: 'best' } : null);
+    tr.appendChild(el('td', { class: 'lead' }, r.direction_id));
+    tr.appendChild(el('td', null, r.pair));
+    tr.appendChild(el('td', null, r.burden_model));
+    tr.appendChild(el('td', { class: 'n' }, typeof r.burden_score === 'number' ? r.burden_score.toFixed(2) : '—'));
+    const notesCell = el('td', null, r.notes || '');
+    tr.appendChild(notesCell);
+    tbody.appendChild(tr);
+  }
+  if (!rows.length) {
+    const empty = el('tr');
+    empty.appendChild(el('td', { colspan: '5', class: 'empty', style: 'text-align:center;' }, 'No direct-use burden rows available.'));
+    tbody.appendChild(empty);
+  }
+
+  // ---- Ranked conclusions summary ----
+  const rankHost = document.getElementById('rankSummary');
+  for (const r of ranked) {
+    const row = el('div', { style: 'padding:8px 12px;border:1px solid var(--rule);border-radius:2px;background:#fff;display:grid;grid-template-columns:40px 1fr auto;gap:14px;align-items:baseline;' });
+    row.appendChild(el('div', { style: 'font-family:var(--serif);font-size:20px;color:var(--accent);font-weight:600;text-align:center;' }, String(r.rank)));
+    const claim = el('div');
+    claim.appendChild(el('div', { style: 'font-family:var(--serif);font-size:13.5px;color:var(--ink);line-height:1.4;' }, r.claim || ''));
+    const chipRow = el('div', { style: 'display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;' });
+    for (const d of (r.supported_directions || [])) {
+      chipRow.appendChild(el('a', {
+        href: '37_direction_dossier.html#' + d,
+        style: 'font-size:10px;font-family:var(--mono);padding:2px 7px;background:#fafaf7;border:1px solid var(--rule);border-radius:10px;color:var(--ink-soft);text-decoration:none;',
+      }, d));
+    }
+    claim.appendChild(chipRow);
+    if (r.limitation) {
+      claim.appendChild(el('div', { style: 'font-size:11px;color:var(--ink-mute);margin-top:4px;font-style:italic;' }, 'Limitation: ' + r.limitation));
+    }
+    row.appendChild(claim);
+    const confColors = { high: '#6b1f0a', 'medium-high': '#a8551a', medium: '#5c7a8b', 'medium as negative assessment': '#5a5a5a' };
+    const c = (r.confidence || '').toLowerCase();
+    const color = confColors[c] || '#5c7a8b';
+    row.appendChild(el('span', {
+      style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.08em;padding:3px 9px;border-radius:2px;background:' + color + ';color:#fff;font-weight:600;white-space:nowrap;align-self:flex-start;',
+    }, r.confidence || ''));
+    rankHost.appendChild(row);
+  }
+})();
+</script>
+</body>
+</html>

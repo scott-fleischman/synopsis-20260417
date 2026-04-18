@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Directional hypothesis registry · explanatory obligations, contrary evidence, response models</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .rank-wrap { display: flex; flex-direction: column; gap: 10px; margin: 8px 0 24px; }
+  .rank-row { display: grid; grid-template-columns: 40px 1fr auto; gap: 14px; padding: 12px 16px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; align-items: baseline; }
+  .rank-row .rank-n { font-family: var(--serif); font-size: 26px; color: var(--accent); font-weight: 600; line-height: 1; text-align: center; }
+  .rank-row .claim { font-family: var(--serif); font-size: 14px; line-height: 1.45; color: var(--ink); }
+  .rank-row .claim .dir-chips { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .rank-row .claim .dir-chip { font-size: 10px; font-family: var(--mono); padding: 2px 7px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 10px; color: var(--ink-soft); }
+  .rank-row .claim .lim { font-size: 12px; color: var(--ink-mute); font-style: italic; margin-top: 6px; }
+  .rank-row .conf { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 2px; color: #fff; font-weight: 600; white-space: nowrap; align-self: flex-start; }
+  .rank-row .conf.high { background: #6b1f0a; }
+  .rank-row .conf.mhigh { background: #a8551a; }
+  .rank-row .conf.medium { background: #5c7a8b; }
+  .rank-row .conf.medium-negative { background: #5a5a5a; }
+
+  .burden-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 10px 0 20px; }
+  .burden-table thead th { background: #fafaf7; padding: 8px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); font-weight: 600; border-bottom: 2px solid var(--rule); text-align: left; cursor: pointer; user-select: none; white-space: nowrap; }
+  .burden-table thead th.n { text-align: right; }
+  .burden-table thead th.sorted .arrow { opacity: 1; color: var(--ink); }
+  .burden-table thead th .arrow { display: inline-block; margin-left: 3px; font-size: 9px; color: var(--ink-mute); opacity: 0.5; }
+  .burden-table tbody td { padding: 6px 10px; border-bottom: 1px solid var(--rule-soft); font-variant-numeric: tabular-nums; }
+  .burden-table tbody td.lead { font-family: var(--serif); font-size: 13px; color: var(--ink); text-align: left; font-variant-numeric: normal; }
+  .burden-table tbody td.n { text-align: right; color: var(--ink-soft); }
+  .burden-table tbody tr.best-in-pair td { background: #fdf6ea; }
+  .burden-table tbody tr:hover td { background: #fbf7ea; }
+  .burden-table tbody td.pair { color: var(--ink-mute); font-family: var(--mono); font-size: 11px; }
+  .burden-table tbody td.model { font-size: 11px; color: var(--ink-soft); }
+  .burden-table tbody td.notes { font-size: 11px; color: var(--ink-soft); max-width: 340px; line-height: 1.4; white-space: normal; }
+
+  .dir-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 14px; margin-top: 10px; }
+  .dir-card { border: 1px solid var(--rule); border-radius: 3px; background: #fff; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .dir-card.mm { border-left: 4px solid var(--mark); }
+  .dir-card.ml { border-left: 4px solid var(--matt); }
+  .dir-card.mlk { border-left: 4px solid var(--mark-soft); }
+  .dir-card.john { border-left: 4px solid var(--focus); }
+  .dir-card .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .dir-card .title { font-family: var(--serif); font-size: 15px; color: var(--ink); line-height: 1.3; }
+  .dir-card .id { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); }
+  .dir-card .family { font-size: 11px; color: var(--ink-mute); font-style: italic; }
+  .dir-card .status { font-size: 11px; padding: 4px 8px; background: #fafaf7; border-left: 2px solid var(--accent); color: var(--ink-soft); line-height: 1.4; }
+  .dir-card .status.strong { border-left-color: #6b1f0a; }
+  .dir-card .status.weak { border-left-color: #5a5a5a; }
+  .dir-card details { font-size: 12px; line-height: 1.45; color: var(--ink-soft); }
+  .dir-card details summary { cursor: pointer; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; padding: 3px 0; }
+  .dir-card details summary:hover { color: var(--ink-soft); }
+  .dir-card details[open] summary { color: var(--ink); }
+  .dir-card details ul { margin: 4px 0 8px; padding-left: 18px; }
+  .dir-card details li { margin-bottom: 3px; }
+  .dir-card .response { font-size: 12px; line-height: 1.5; color: var(--ink-soft); background: #faf6ec; border-left: 2px solid var(--accent); padding: 6px 10px; margin-top: 4px; }
+  .dir-card .response b { color: var(--ink); }
+  .dir-card .metrics { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--ink-mute); margin-top: 4px; padding-top: 6px; border-top: 1px dotted var(--rule-soft); }
+  .dir-card .metrics .m { font-family: var(--mono); }
+  .dir-card .metrics .m b { color: var(--ink); font-family: var(--serif); font-variant-numeric: tabular-nums; }
+  .dir-card .drill { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+  .dir-card .drill a { font-size: 10px; padding: 2px 7px; border: 1px solid var(--rule); border-radius: 2px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .dir-card .drill a:hover { background: #fbf7ea; border-color: var(--accent); color: var(--ink); }
+
+  .pair-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 14px; font-size: 11px; }
+  .pair-filter .fl { padding: 4px 11px; border: 1px solid var(--rule); border-radius: 14px; background: #fafaf7; color: var(--ink-soft); cursor: pointer; user-select: none; }
+  .pair-filter .fl.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .section-lead { font-size: 13px; color: var(--ink-soft); line-height: 1.55; max-width: 1060px; margin: 0 0 8px; }
+  .section-lead b { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Directional hypothesis registry</h1>
+    <span class="sub">twelve Synoptic+John direction hypotheses · current ranked conclusions · burden scores</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>A direction-by-direction catalog of the explanatory obligations each proposed dependence direction must carry. <em>Every direction</em> is represented — including the reverses (Mark used Matthew, Mark used Luke, Matthew used Luke, Synoptics used John) — because the question <b>"what must this direction explain?"</b> is only well-posed when the alternative direction is equally visible. Burden scores are audit prompts, not probabilities; they make explanatory obligations comparable, not probabilistically rank-ordered.</p>
+    <div class="note">
+      <b>Package:</b> <code>synoptic_john_directional_dossiers_20260418/</code>. Ranked conclusions are from <code>62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>; burden comparisons from <code>03_direction_burden_summary.csv</code>; per-direction obligations from <code>01_direction_hypotheses_registry.yaml</code>. See <a href="37_direction_dossier.html">page 37 (per-direction dossier)</a> for the top gap burdens and response-model detail per direction, and <a href="38_system_hypotheses.html">page 38 (system hypothesis space)</a> for the five system-level models beyond pairwise directions.
+    </div>
+  </div>
+
+  <section class="card" id="rankedSection">
+    <h2>Current ranked conclusions</h2>
+    <p class="section-lead">Five ranked claims, each with the specific direction-ids it would support, a confidence label, and the limitation that keeps the claim from being stronger. The ranking is an <b>evidence-ordering exercise</b>, not a theorem; the limitations are load-bearing.</p>
+    <div class="rank-wrap" id="rankWrap"></div>
+    <p class="caption" style="font-size:11px;color:var(--ink-mute);margin:6px 0 0;">Source: <code>62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>.</p>
+  </section>
+
+  <section class="card" id="burdenSection">
+    <h2>Burden comparison across directions</h2>
+    <p class="section-lead">Direct-use burden scores from <code>03_direction_burden_summary.csv</code>. Lower is better, but these are <b>not probabilities</b> — they are comparable totals across directions that share a pair. The best-in-pair row is highlighted; compare each direction to its own reverse, not across unrelated pairs.</p>
+    <div class="pair-filter" id="pairFilter"></div>
+    <div style="overflow-x:auto;">
+      <table class="burden-table" id="burdenTable">
+        <thead>
+          <tr>
+            <th class="lead" data-sort="direction_id">Direction<span class="arrow">↕</span></th>
+            <th class="pair" data-sort="pair">Pair<span class="arrow">↕</span></th>
+            <th class="model" data-sort="burden_model">Burden model<span class="arrow">↕</span></th>
+            <th class="n" data-sort="burden_score">Burden score<span class="arrow">↕</span></th>
+            <th class="notes">Interpretation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="registrySection">
+    <h2>Twelve directional hypotheses · required explanations &amp; response models</h2>
+    <p class="section-lead">Each card distills one direction into: status, required explanations, core contrary evidence, and the best-available response model if one still wants to defend that direction. Toggle <em>required / contrary</em> to read the explicit obligation list. Every entry is auditable against its source YAML. Numeric metrics below each card are from <code>52_primary_pair_change_summary_by_direction.csv</code> — token-level pair metrics for the primary pairs on which the direction is scored.</p>
+    <div class="dir-grid" id="dirGrid"></div>
+    <p class="caption" style="font-size:11px;color:var(--ink-mute);margin:12px 0 0;">Source: <code>01_direction_hypotheses_registry.yaml</code>. Pair-level metrics: <code>52_primary_pair_change_summary_by_direction.csv</code>. Support/contra counts: <code>61_support_contra_evidence_matrix.csv</code>.</p>
+  </section>
+
+  <div class="footer">
+    Source data: <code>synoptic_john_directional_dossiers_20260418/data/01_direction_hypotheses_registry.yaml</code>,
+    <code>03_direction_burden_summary.csv</code>,
+    <code>52_primary_pair_change_summary_by_direction.csv</code>,
+    <code>61_support_contra_evidence_matrix.csv</code>,
+    <code>62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>.
+    Continue: <a href="37_direction_dossier.html">37 · Per-direction obligation dossier</a> ·
+    <a href="38_system_hypotheses.html">38 · System hypothesis space</a> ·
+    <a href="26_conclusions.html">26 · Conclusions</a>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('36_directional_registry.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const DD = B.dir_dossiers || {};
+  const registry = DD.registry || [];
+  const burden = DD.burden_summary || [];
+  const rankObj = DD.conclusion_ranking || {};
+  const ranked = rankObj.directional_conclusions_ranked || [];
+  const pairMetrics = DD.pair_change_summary || [];
+  const supportContra = DD.support_contra_matrix || [];
+
+  // ---- Ranked conclusions ----
+  const rankWrap = document.getElementById('rankWrap');
+  function confClass(c) {
+    const s = (c || '').toLowerCase();
+    if (s === 'high') return 'high';
+    if (s.indexOf('medium-high') >= 0) return 'mhigh';
+    if (s.indexOf('negative') >= 0) return 'medium-negative';
+    if (s.indexOf('medium') >= 0) return 'medium';
+    return 'medium';
+  }
+  for (const r of ranked) {
+    const claim = el('div', { class: 'claim' });
+    claim.appendChild(document.createTextNode(r.claim || ''));
+    const chipWrap = el('div', { class: 'dir-chips' });
+    for (const d of (r.supported_directions || [])) {
+      chipWrap.appendChild(el('span', { class: 'dir-chip' }, d));
+    }
+    claim.appendChild(chipWrap);
+    if (r.limitation) {
+      claim.appendChild(el('div', { class: 'lim' }, 'Limitation: ' + r.limitation));
+    }
+    const row = el('div', { class: 'rank-row' },
+      el('div', { class: 'rank-n' }, String(r.rank || '')),
+      claim,
+      el('span', { class: 'conf ' + confClass(r.confidence) }, r.confidence || ''));
+    rankWrap.appendChild(row);
+  }
+
+  // ---- Burden table ----
+  const pairOrder = ['Mark↔Matthew', 'Mark↔Luke', 'Matthew↔Luke', 'John↔Mark', 'John↔Matthew', 'John↔Luke'];
+  const pairs = Array.from(new Set(burden.map(function (r) { return r.pair; }).filter(Boolean)))
+    .sort(function (a, b) {
+      const ai = pairOrder.indexOf(a), bi = pairOrder.indexOf(b);
+      if (ai >= 0 && bi >= 0) return ai - bi;
+      if (ai >= 0) return -1;
+      if (bi >= 0) return 1;
+      return a.localeCompare(b);
+    });
+  let activePair = 'all';
+  const pfWrap = document.getElementById('pairFilter');
+  function renderFilter() {
+    while (pfWrap.firstChild) pfWrap.removeChild(pfWrap.firstChild);
+    const allBtn = el('span', { class: 'fl' + (activePair === 'all' ? ' active' : '') }, 'All directions');
+    allBtn.addEventListener('click', function () { activePair = 'all'; renderFilter(); renderTable(); });
+    pfWrap.appendChild(allBtn);
+    for (const p of pairs) {
+      const b = el('span', { class: 'fl' + (activePair === p ? ' active' : '') }, p);
+      b.addEventListener('click', function () { activePair = p; renderFilter(); renderTable(); });
+      pfWrap.appendChild(b);
+    }
+  }
+
+  // Find best-in-pair (lowest burden_score per pair+burden_model group)
+  const bestKey = {};
+  for (const r of burden) {
+    const k = r.pair + '||' + r.burden_model;
+    if (!bestKey[k] || r.burden_score < bestKey[k].burden_score) bestKey[k] = r;
+  }
+  let sortField = 'burden_score';
+  let sortDir = 1;
+  function renderTable() {
+    const tbody = document.querySelector('#burdenTable tbody');
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    let rows = burden.slice();
+    if (activePair !== 'all') rows = rows.filter(function (r) { return r.pair === activePair; });
+    rows.sort(function (a, b) {
+      const va = a[sortField], vb = b[sortField];
+      if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * sortDir;
+      return String(va || '').localeCompare(String(vb || '')) * sortDir;
+    });
+    for (const r of rows) {
+      const k = r.pair + '||' + r.burden_model;
+      const isBest = bestKey[k] === r;
+      const tr = el('tr', isBest ? { class: 'best-in-pair' } : null);
+      tr.appendChild(el('td', { class: 'lead' }, r.direction_id));
+      tr.appendChild(el('td', { class: 'pair' }, r.pair));
+      tr.appendChild(el('td', { class: 'model' }, r.burden_model));
+      tr.appendChild(el('td', { class: 'n' }, typeof r.burden_score === 'number' ? r.burden_score.toFixed(2) : '—'));
+      tr.appendChild(el('td', { class: 'notes' }, r.notes || ''));
+      tbody.appendChild(tr);
+    }
+    document.querySelectorAll('#burdenTable thead th').forEach(function (th) {
+      th.classList.remove('sorted');
+      if (th.getAttribute('data-sort') === sortField) th.classList.add('sorted');
+    });
+  }
+  document.querySelectorAll('#burdenTable thead th').forEach(function (th) {
+    const f = th.getAttribute('data-sort');
+    if (!f) return;
+    th.addEventListener('click', function () {
+      if (sortField === f) sortDir = -sortDir;
+      else { sortField = f; sortDir = 1; }
+      renderTable();
+    });
+  });
+  renderFilter();
+  renderTable();
+
+  // ---- Registry cards ----
+  const grid = document.getElementById('dirGrid');
+  function dirClass(pair) {
+    if (pair === 'Mark↔Matthew') return 'mm';
+    if (pair === 'Mark↔Luke') return 'mlk';
+    if (pair === 'Matthew↔Luke') return 'ml';
+    if ((pair || '').indexOf('John') >= 0) return 'john';
+    return '';
+  }
+  function statusClass(st) {
+    const s = (st || '').toLowerCase();
+    if (s.indexOf('high confidence') >= 0 || s.indexOf('strong') >= 0) return 'strong';
+    if (s.indexOf('higher burden') >= 0 || s.indexOf('not demonstrated') >= 0 || s.indexOf('higher cumulative') >= 0) return 'weak';
+    return '';
+  }
+  function metricsFor(did) {
+    const pm = pairMetrics.find(function (r) { return r.direction_id === did; }) || {};
+    const sc = supportContra.find(function (r) { return r.direction_id === did; }) || {};
+    return {
+      pair_count: pm.pair_count,
+      mean_score: pm.mean_score,
+      mean_jaccard: pm.mean_token_jaccard,
+      max_exact_run: pm.max_exact_run_len,
+      support: sc.primary_support_count,
+      contra: sc.primary_contra_count,
+      major_gaps: sc.major_gap_count_abs_diff_ge_20,
+      john_anchors: sc.john_anchor_count,
+      john_shared_best: sc.john_anchors_where_shared_tradition_best,
+    };
+  }
+  for (const d of registry) {
+    const card = el('div', { class: 'dir-card ' + dirClass(d.pair) });
+    const hd = el('div', { class: 'hd' },
+      el('div', null,
+        el('div', { class: 'title' }, d.short_label || d.direction_id),
+        el('div', { class: 'id' }, d.direction_id)),
+      el('div', { class: 'family' }, d.pair || ''));
+    card.appendChild(hd);
+    if (d.model_family) {
+      card.appendChild(el('div', { class: 'family' }, d.model_family));
+    }
+    card.appendChild(el('div', { class: 'status ' + statusClass(d.current_status) }, 'Status: ' + (d.current_status || '—')));
+
+    const req = el('details');
+    req.appendChild(el('summary', null, 'Required explanations (' + (d.core_required_explanations || []).length + ')'));
+    const reqUl = el('ul');
+    for (const s of (d.core_required_explanations || [])) reqUl.appendChild(el('li', null, s));
+    req.appendChild(reqUl);
+    card.appendChild(req);
+
+    const contra = el('details');
+    contra.appendChild(el('summary', null, 'Core contrary evidence (' + (d.core_contrary_evidence || []).length + ')'));
+    const contraUl = el('ul');
+    for (const s of (d.core_contrary_evidence || [])) contraUl.appendChild(el('li', null, s));
+    contra.appendChild(contraUl);
+    card.appendChild(contra);
+
+    if (d.best_response_model) {
+      const resp = el('div', { class: 'response' });
+      resp.appendChild(el('b', null, 'Best response model: '));
+      resp.appendChild(document.createTextNode(d.best_response_model));
+      card.appendChild(resp);
+    }
+
+    const m = metricsFor(d.direction_id);
+    const metricsEl = el('div', { class: 'metrics' });
+    function addMetric(label, value) {
+      if (value === undefined || value === null || value === '') return;
+      const span = el('span', { class: 'm' });
+      span.appendChild(document.createTextNode(label + ' '));
+      span.appendChild(el('b', null, String(value)));
+      metricsEl.appendChild(span);
+    }
+    addMetric('pairs', m.pair_count);
+    addMetric('mean score', typeof m.mean_score === 'number' ? m.mean_score.toFixed(3) : m.mean_score);
+    addMetric('max exact run', m.max_exact_run);
+    addMetric('support', m.support);
+    addMetric('contra', m.contra);
+    addMetric('major gaps ≥20', m.major_gaps);
+    if (m.john_anchors) {
+      const jlbl = 'John anchors · shared best';
+      const jv = (m.john_shared_best != null ? m.john_shared_best : 0) + ' / ' + m.john_anchors;
+      addMetric(jlbl, jv);
+    }
+    card.appendChild(metricsEl);
+
+    const drill = el('div', { class: 'drill' },
+      el('a', { href: '37_direction_dossier.html#' + d.direction_id }, 'Obligation dossier →'),
+      el('a', { href: '38_system_hypotheses.html' }, 'System view →'));
+    card.appendChild(drill);
+
+    grid.appendChild(card);
+  }
+})();
+</script>
+</body>
+</html>
