@@ -1,0 +1,33 @@
+synoptic_model_inferred_from_packages:
+  mark_matthew:
+    best_model: Matthew uses Mark or Mark-like written narrative source
+    evidence_type:
+      - broad narrative alignment
+      - many primary chain pairs
+      - coherent Matthean expansion/discourse clustering
+      - lower burden than Mark omitting major Matthean blocks
+  matthew_luke_double_tradition:
+    best_model: shared sayings source/tradition
+    evidence_type:
+      - strong verbal echoes
+      - nonlocal placement
+      - weak monotonic order
+      - symmetric direct-dependence burden after Mark masking
+  implication:
+    q_question: supports a shared sayings layer, not necessarily a single recoverable document
+
+john_synoptic_relation:
+  global_model: overlapping tradition network
+  direct_literary_dependence:
+    possible_locally: true
+    globally_demonstrated: false
+  strongest_zones:
+    - passion narrative
+    - feeding / sea material
+    - anointing
+    - triumphal entry
+    - arrest and denial details
+  weakest_evidence:
+    - broad theology alone
+    - generic shared phrases
+    - scriptural/liturgical formulas

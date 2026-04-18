@@ -1,0 +1,34 @@
+- case: 1Tim 5:18 ~ Luke 10:7
+  exact_run: "ο εργατης του μισθου αυτου"
+  max_exact_run_len: 5
+  best_explanation:
+    - direct use of Luke-like written form
+    - or fixed written Jesus-saying tradition close to Luke
+  disfavored:
+    - independent convergence
+  note: 1 Timothy agrees more closely with Luke's μισθός form than with Matthew's worker-worthy-of-food form.
+
+- case: Jas 5:12 ~ Matt 5:34-37
+  shared_features:
+    - no oaths
+    - heaven / earth
+    - yes / yes and no / no
+  best_explanation: shared Jesus tradition
+  direct_matthew_use: possible but not required
+  independence: high burden
+
+- case: 1Cor 11:24 ~ Luke 22:19
+  exact_run: "τουτο ποιειτε εις την εμην αναμνησιν"
+  max_exact_run_len: 6
+  best_explanation:
+    - shared liturgical tradition
+    - or Luke using a tradition also represented by Paul
+  not_best_explanation:
+    - Paul simply copied Luke
+
+- case: 1John 3:13 ~ John 15:18-19
+  shared_features:
+    - world hates (disciples / brothers)
+    - Johannine world/hate idiom
+  best_explanation: shared Johannine school/idiolect
+  direct_gospel_use: not determinable from one motif

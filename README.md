@@ -12,11 +12,12 @@ synopsis-20260417/
 ├── matt_luke_analysis/                  # Matthew ↔ Luke (full corpus)
 ├── matt_luke_double_masked_analysis/    # Matthew ↔ Luke with likely-Markan verses masked out
 ├── john_thomas_epistles_apocrypha_analysis/   # Low-verbatim network: John, Thomas, NT letters, apocrypha
+├── conclusions/                         # Author-authored synthesis across all four packages
 ├── visualizations/                      # 25 browser views + Python build step + tests
 └── dist/                                # Committed deployment snapshot (static site, zero build step)
 ```
 
-All three layers — data, code, and rendered output — are committed. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
+All three layers — data, code, and rendered output — are committed, and a fourth layer (interpretive conclusions) sits alongside them in its own directory. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
 
 ## The four data packages
 
@@ -48,6 +49,23 @@ Coverage: 27 canonical books, 7,939 verses, 116 Coptic Thomas units, 12,036 epis
 ## Methodological note on burden
 
 No layer in this repository claims to compute posterior probability of a given dependency hypothesis. Every score is a retrieval score, every ledger is a burden audit, and scriptural/liturgical formulas are flagged separately so they do not masquerade as Gospel dependence. See each package's `EXECUTIVE_SUMMARY.md` for the specifics.
+
+## Interpretive conclusions
+
+`conclusions/` is the only directory in the repo that makes directional claims. It is author-authored synthesis across all four packages, kept physically separate from the data so the burden-audit discipline stays intact. Headline findings (descending confidence):
+
+| Question | Conclusion | Confidence |
+| - | - | - |
+| Mark–Matthew | Matthew most likely used Mark or a Mark-like written source. | High |
+| 1 Timothy 5:18 / Luke 10:7 | Strongest case for a Luke-like written Jesus saying known to 1 Timothy. | High |
+| Matthew–Luke double tradition | Shared tradition layer, not simple one-way dependence. | Medium-high |
+| James / Gospel sayings | Jesus-tradition dependence likely; direct Matthew/Luke use not demonstrated. | Medium-high |
+| Q | Supports a shared sayings/tradition layer; doesn't prove one discrete Q document. | Medium |
+| John–Synoptics | Shared tradition, especially passion/sign; not a simple copy model. | Medium |
+| Thomas–Synoptics | Sayings-network witness, not cleanly dependent on one canonical Gospel. | Medium |
+| Other apocrypha | Inventory only; not enough data yet for firm conclusions. | Low |
+
+See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
 
 ## Visualizations (25 browser views)
 

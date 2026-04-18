@@ -1,0 +1,34 @@
+best_current_model_from_generated_data:
+  mark:
+    role: major written narrative source
+    relation_to_matthew: Matthew probably uses Mark or Mark-like source
+  matthew_luke_double_tradition:
+    role: shared sayings/tradition layer
+    best_explanation: common written/oral Jesus tradition
+    q_implication: supports Q-like layer, not necessarily a single recoverable Q document
+  john:
+    role: independent literary-theological Gospel using overlapping Jesus/passion/sign traditions
+    direct_synoptic_use: possible locally, not globally proven
+  thomas:
+    role: sayings-network witness
+    direct_dependence_on_canonical_gospels: varies by logion, not globally established
+  james:
+    role: epistolary paraenesis saturated with Jesus-tradition motifs
+    direct_gospel_use: not demonstrated
+  first_timothy:
+    role: strong witness to a Luke-like fixed Jesus saying
+    independent_convergence: very unlikely
+  paul_lord_supper:
+    role: liturgical/traditional formula
+    direct_luke_dependence: not the best explanation
+
+methodological_conclusion: >
+  The early Christian textual field is not one tree. It is a mixed network:
+  one strong written narrative backbone around Mark, a sayings/tradition layer
+  behind Matthew–Luke material, shared passion and sign traditions overlapping
+  John, and epistolary reuse of fixed Jesus sayings and liturgical formulas.
+
+strongest_individual_findings:
+  directional: Matthew's dependence on Mark or a Mark-like source
+  non_gospel_saying: 1 Timothy 5:18's dependence on a Luke-like worker/wages saying
+  cautionary: exact verbal agreement can indicate liturgy or shared tradition rather than direct literary copying (1 Corinthians 11 / Luke 22)
