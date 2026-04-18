@@ -1,5 +1,7 @@
 # Matthew-Luke masked double-tradition analysis package
 
+> *Produced by GPT-5.4 Pro under human direction (prompting only). See the repo-level README for the full authorship breakdown.*
+
 This package filters Matthew-Luke comparison data after explicitly masking likely Markan material from Matthew and Luke. It then rebuilds the primary chain, blocks, secondary echoes, pair diffs, apparatus notes, and directional burden ledger on the remaining Matthew-Luke material.
 
 ## Core counts

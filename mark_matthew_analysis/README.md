@@ -1,5 +1,7 @@
 # Mark–Matthew literary dependence case study
 
+> *Produced by GPT-5.4 Pro under human direction (prompting only). See the repo-level README for the full authorship breakdown.*
+
 ## What this package contains
 
 This package implements a layered comparison of Mark and Matthew using the Greek text and apparatus from the Faithlife SBLGNT repository and MorphGNT morphology/lemma data.

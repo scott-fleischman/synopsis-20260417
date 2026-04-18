@@ -1,6 +1,8 @@
 # Conclusions from the generated packages
 
-These are interpretive conclusions drawn from the four analysis packages. They are author-authored synthesis, not automated pipeline output. The underlying data supports these claims at the stated confidence levels; the inferences themselves are the reader's.
+> *This prose argument was produced by **GPT-5.4 Pro** under human direction (prompting only). The four analysis packages it builds on were also produced by GPT-5.4 Pro; the machine-readable extracts in `data/` were produced by Claude Opus 4.7. See the repo-level README for the full breakdown.*
+
+These are LLM-authored interpretive conclusions drawn from the four analysis packages. They are synthesis, not automated pipeline output. The underlying data supports these claims at the stated confidence levels; the inferences themselves are the reader's.
 
 | Question | Conclusion I would draw | Confidence |
 | - | - | - |

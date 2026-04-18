@@ -1,6 +1,8 @@
 # conclusions/ — interpretive synthesis across all four packages
 
-This directory holds **author-authored conclusions** drawn from the four analysis packages. It is the only directory in this repo that is *inference*, not data or code. Every claim here builds on specific artifacts in the other packages and cites them by path.
+> *The prose argument (`CONCLUSIONS.md`) was produced by **GPT-5.4 Pro**; the machine-readable extracts in `data/`, this README, and `EXECUTIVE_SUMMARY.md` were produced by **Claude Opus 4.7**. Human role: prompting only. See the repo-level README for the full breakdown.*
+
+This directory holds **LLM-authored conclusions** drawn from the four analysis packages. It is the only directory in this repo that is *inference*, not data or code. Every claim here builds on specific artifacts in the other packages and cites them by path.
 
 ## Why this is a separate directory
 

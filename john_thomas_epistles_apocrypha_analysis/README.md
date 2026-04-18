@@ -1,5 +1,7 @@
 # John, Thomas, Epistles, and Apocrypha Dependence Analysis
 
+> *Produced by GPT-5.4 Pro under human direction (prompting only). See the repo-level README for the full authorship breakdown.*
+
 This package extends the earlier Synoptic-style pipeline to lower-verbatim material:
 John vs. the Synoptics, Gospel of Thomas vs. canonical sayings, NT letters vs. the Gospels,
 and a first-pass inventory of other apocryphal texts.

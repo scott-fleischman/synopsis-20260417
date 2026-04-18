@@ -1,5 +1,7 @@
 # dist/ — deployment snapshot
 
+> *Snapshot of a site produced by **Claude Opus 4.7** (visualizations + build infrastructure) from data produced by **GPT-5.4 Pro** (the four analysis packages). Human role: prompting only. See the repo-level README for the full authorship breakdown.*
+
 This directory is a committed build artifact: everything a static host needs to serve the visualizations, with no build step required.
 
 **Do not edit files here directly.** The source of truth is `visualizations/`. Rebuild this directory from source after any change (see below).

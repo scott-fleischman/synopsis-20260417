@@ -4,6 +4,14 @@ A layered, auditable study of literary dependence in the New Testament Gospels a
 
 The repository does **not** settle the direction of dependence. It quantifies what each direction-hypothesis must explain, and exposes every intermediate artifact so a reviewer can audit the pipeline end-to-end.
 
+## Authorship
+
+All content in this repository was produced by LLMs under human direction. The human role (Scott Fleischman) was **prompting and direction only** — no manual authoring of code, data, or prose.
+
+- **Analysis packages** — the CSV/YAML artifacts, pipeline logic, and per-package documentation in `mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, and `john_thomas_epistles_apocrypha_analysis/` — produced by **GPT-5.4 Pro**.
+- **Interpretive conclusions** — the prose argument in `conclusions/CONCLUSIONS.md` — produced by **GPT-5.4 Pro**.
+- **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `dist/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
+
 ## What is here
 
 ```

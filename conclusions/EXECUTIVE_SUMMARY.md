@@ -1,5 +1,7 @@
 # Executive summary
 
+> *Source prose in [`CONCLUSIONS.md`](CONCLUSIONS.md) produced by **GPT-5.4 Pro**; this summary by **Claude Opus 4.7**. Human role: prompting only. See the repo-level README for the full authorship breakdown.*
+
 Conclusions drawn from the four analysis packages, in descending confidence.
 
 | Question | Conclusion | Confidence |

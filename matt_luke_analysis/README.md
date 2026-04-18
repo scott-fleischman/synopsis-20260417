@@ -1,5 +1,7 @@
 # Matthew–Luke literary dependence case study package
 
+> *Produced by GPT-5.4 Pro under human direction (prompting only). See the repo-level README for the full authorship breakdown.*
+
 This package mirrors the earlier Mark–Matthew package structure but expands it into a fuller multi-layer set.
 
 ## Scope
