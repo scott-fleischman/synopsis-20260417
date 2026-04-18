@@ -10,7 +10,7 @@ All content in this repository was produced by LLMs under human direction. The h
 
 - **Analysis packages** — the CSV/YAML artifacts, pipeline logic, and per-package documentation in `mark_matthew_analysis/`, `matt_luke_analysis/`, `matt_luke_double_masked_analysis/`, and `john_thomas_epistles_apocrypha_analysis/` — produced by **GPT-5.4 Pro**.
 - **Interpretive conclusions** — the prose argument in `conclusions/CONCLUSIONS.md` — produced by **GPT-5.4 Pro**.
-- **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `dist/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
+- **Visualizations and infrastructure** — the HTML pages in `visualizations/` and `docs/`, the `preprocess.py` build step, the test suite, the top-level and `conclusions/` READMEs, and the structured data extracts in `conclusions/data/` — produced by **Claude Opus 4.7**.
 
 ## What is here
 
@@ -22,7 +22,7 @@ synopsis-20260417/
 ├── john_thomas_epistles_apocrypha_analysis/   # Low-verbatim network: John, Thomas, NT letters, apocrypha
 ├── conclusions/                         # Author-authored synthesis across all four packages
 ├── visualizations/                      # 25 browser views + Python build step + tests
-└── dist/                                # Committed deployment snapshot (static site, zero build step)
+└── docs/                                # Committed deployment snapshot (also the GitHub Pages output dir)
 ```
 
 All three layers — data, code, and rendered output — are committed, and a fourth layer (interpretive conclusions) sits alongside them in its own directory. Each analysis package is self-contained: it owns its raw sources (where applicable), its derived CSV/YAML artifacts, a `MANIFEST.yaml` with file hashes, a `README.md`, and an `EXECUTIVE_SUMMARY.md`.
@@ -123,11 +123,11 @@ Prerequisites: Python 3.11+. No Node, no framework, no database.
 ### Quickest path — serve the committed snapshot
 
 ```bash
-cd dist
+cd docs
 python3 -m http.server 8000
 ```
 
-Open <http://localhost:8000/index.html>. No build step needed; `dist/` is a committed artifact. See `dist/README.md` for what's inside.
+Open <http://localhost:8000/index.html>. No build step needed; `docs/` is a committed artifact. See `docs/README.md` for what's inside.
 
 The full development workflow below is for when you change the pages, the bundle, or the source data.
 
