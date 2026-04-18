@@ -209,24 +209,14 @@
     const det = detailed[p.a_ref + '|' + p.b_ref] || {};
     const vnotes = variantsByPair.get(p.pair_id) || {};
 
-    const header = SH.el('div', { class: 'pair-refs' },
-      SH.el('span', { class: 'mt' }, p.a_ref),
-      SH.el('span', { style: 'color:var(--ink-mute)' }, '↔'),
-      SH.el('span', { class: 'lk' }, p.b_ref),
-      SH.el('span', { class: 'small', style: 'margin-left:12px;font-family:var(--sans);color:var(--ink-mute);' },
-        'pair #' + p.pair_id),
-      SH.el('a', {
-        href: '30_reader.html#Matt/' + encodeURIComponent(p.a_ref),
-        class: 'small',
-        style: 'margin-left:10px;color:var(--focus);font-family:var(--sans);',
-        title: 'Open ' + p.a_ref + ' in the full-text reader',
-      }, 'read Matt →'),
-      SH.el('a', {
-        href: '30_reader.html#Luke/' + encodeURIComponent(p.b_ref),
-        class: 'small',
-        style: 'margin-left:4px;color:var(--focus);font-family:var(--sans);',
-        title: 'Open ' + p.b_ref + ' in the full-text reader',
-      }, 'read Luke →'));
+    const header = SH.el('div', { class: 'pair-refs' });
+    header.appendChild(SH.refChip(p.a_ref, { style: 'color:var(--mark);', fontSize: '18px' }));
+    header.appendChild(SH.el('span', { style: 'color:var(--ink-mute)' }, '↔'));
+    header.appendChild(SH.refChip(p.b_ref, { style: 'color:var(--matt);', fontSize: '18px' }));
+    header.appendChild(SH.el('span', { class: 'small', style: 'margin-left:12px;font-family:var(--sans);color:var(--ink-mute);' },
+      'pair #' + p.pair_id));
+    header.appendChild(SH.readerLink(p.a_ref, 'read ' + p.a_ref + ' →'));
+    header.appendChild(SH.readerLink(p.b_ref, 'read ' + p.b_ref + ' →'));
     detailHost.appendChild(header);
 
     const stats = SH.el('div', { class: 'stat-bar' },

@@ -147,23 +147,32 @@
       SH.el('div', { class: 'signal' }, c.signal_type || ''));
     card.appendChild(head);
 
-    // Corpus rows
-    const mkRow = (cls, label, refs) => {
+    // Corpus rows — each canonical/epistle chip is clickable if it's a gospel
+    // ref (via SH.refChip); epistle and thomas chips stay plain since those
+    // corpora aren't in the reader. Coloring is preserved by opts.plain.
+    const mkRow = (cls, label, refs, clickable) => {
       const row = SH.el('div', { class: 'corpus-row ' + cls },
         SH.el('span', { class: 'label' }, label));
       const refsDiv = document.createElement('div');
       refsDiv.className = 'refs';
       if (refs && refs.length) {
-        refs.forEach(r => refsDiv.appendChild(SH.el('span', { class: 'ref-chip' }, String(r))));
+        refs.forEach(r => {
+          const s = String(r);
+          if (clickable) {
+            refsDiv.appendChild(SH.refChip(s, { plain: true, className: 'ref-chip' }));
+          } else {
+            refsDiv.appendChild(SH.el('span', { class: 'ref-chip' }, s));
+          }
+        });
       } else {
         refsDiv.appendChild(SH.el('span', { class: 'empty' }, '—'));
       }
       row.appendChild(refsDiv);
       return row;
     };
-    card.appendChild(mkRow('canon', 'Canonical', c.canonical_refs || []));
-    card.appendChild(mkRow('epistle', 'Epistle', c.epistle_refs || []));
-    card.appendChild(mkRow('thomas', 'Thomas', (c.thomas_logia || []).map(t => 'Th ' + t)));
+    card.appendChild(mkRow('canon', 'Canonical', c.canonical_refs || [], true));
+    card.appendChild(mkRow('epistle', 'Epistle', c.epistle_refs || [], false));
+    card.appendChild(mkRow('thomas', 'Thomas', (c.thomas_logia || []).map(t => 'Th ' + t), false));
 
     // Burden bars
     const bb = SH.el('div', { class: 'burden-bars' });

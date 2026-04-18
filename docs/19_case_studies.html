@@ -175,10 +175,35 @@
     while (d.firstChild) d.removeChild(d.firstChild);
 
     const h = SH.el('section', { class: 'section curated' });
-    h.appendChild(titleWithTag(c.source_ref + ' ~ ' + c.target_ref + (c.feature ? ' — ' + c.feature : ''), 'curated', 'curated'));
+    // Clickable/hoverable refs in the header. Flow: chip → chip → subtitle.
+    const hTitle = SH.el('h3', null);
+    hTitle.appendChild(SH.refChip(c.source_ref, { style: 'font-weight:700;color:var(--mark);', fontSize: '15px' }));
+    hTitle.appendChild(document.createTextNode(' ~ '));
+    hTitle.appendChild(SH.refChip(c.target_ref, { style: 'font-weight:700;color:var(--matt);', fontSize: '15px' }));
+    if (c.feature) hTitle.appendChild(document.createTextNode(' — ' + c.feature));
+    hTitle.appendChild(SH.el('span', { class: 'origin-tag curated', title: tagLabelTooltip('curated') }, 'curated'));
+    h.appendChild(hTitle);
     h.appendChild(SH.el('div', { class: 'sub' }, c.case_id));
     if (c.why_high_value) h.appendChild(SH.el('div', null, c.why_high_value));
     if (c.prima_facie_signal) h.appendChild(boldLabel('Prima facie:', c.prima_facie_signal));
+    // Evidence ladder (three-way confidence) — looks up the rerun claim graph
+    // for this case, renders the per-dimension dots, and falls back silently
+    // if there is no matching claim (many cases are pre-rerun curated rows).
+    const reEL = (J.rerun && J.rerun.claim_evidence_links) || [];
+    const cl = reEL.find(x => x.case_id === c.case_id);
+    if (cl && cl.confidence) {
+      const row = SH.el('div', { style: 'margin-top:8px;display:flex;gap:10px;align-items:center;' });
+      row.appendChild(SH.el('span', { style: 'font-size:11px;color:var(--ink-mute);' }, 'Rerun confidence:'));
+      row.appendChild(SH.evidenceBadge(cl.confidence));
+      h.appendChild(row);
+    }
+    // Quick-jump: reader chips for each side when it's a canonical Gospel ref.
+    const jumps = SH.el('div', { style: 'margin-top:8px;' });
+    const rsrc = SH.readerLink(c.source_ref);
+    const rtgt = SH.readerLink(c.target_ref);
+    if (rsrc) jumps.appendChild(rsrc);
+    if (rtgt) jumps.appendChild(rtgt);
+    if (rsrc || rtgt) h.appendChild(jumps);
     d.appendChild(h);
 
     const tx = SH.el('section', { class: 'section' });
@@ -186,13 +211,17 @@
     if (c.source_text) {
       const r = SH.el('div', { style: 'margin-bottom:8px;' });
       r.appendChild(SH.el('div', { class: 'sub' }, c.source_ref));
-      r.appendChild(SH.el('div', { class: 'greek src' }, c.source_text));
+      const gbox = SH.el('div', { class: 'greek src' });
+      gbox.appendChild(SH.greekVerseFragment(c.source_ref, c.source_text));
+      r.appendChild(gbox);
       tx.appendChild(r);
     }
     if (c.target_text) {
       const r = SH.el('div', null);
       r.appendChild(SH.el('div', { class: 'sub' }, c.target_ref));
-      r.appendChild(SH.el('div', { class: 'greek tgt' }, c.target_text));
+      const gbox = SH.el('div', { class: 'greek tgt' });
+      gbox.appendChild(SH.greekVerseFragment(c.target_ref, c.target_text));
+      r.appendChild(gbox);
       tx.appendChild(r);
     }
     d.appendChild(tx);

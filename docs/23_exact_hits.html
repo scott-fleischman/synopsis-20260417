@@ -61,6 +61,12 @@
   </p>
 
   <div class="hit-filter">
+    <label>Dataset:
+      <select id="ds_sel">
+        <option value="curated">curated (200)</option>
+        <option value="rerun">rerun full (all rows)</option>
+      </select>
+    </label>
     <label>Layer:
       <select id="layer_sel">
         <option value="">all</option>
@@ -131,48 +137,72 @@
 (function () {
   SH.buildJteaNav('23_exact_hits.html');
   const J = SH.BUNDLE.jtea;
-  const hits = J.exact_hits || [];
+  const curatedHits = J.exact_hits || [];
+  const rerunHits = (J.rerun && J.rerun.rich_exact_hits) || [];
   const flagsByRef = J.exact_hit_flags_by_ref || {};
-  const total = hits.length;
+  let hits = curatedHits;
+  let total = curatedHits.length;
 
+  // Risk resolution has two sources: the orig package's per-pair negative-
+  // space flags CSV (rich: carries the human-readable flag names) and the
+  // rerun's per-row formula_risk column (comprehensive: all 11K rows). We
+  // prefer the former when the row appears in it, then fall back to the
+  // row's own formula_risk for rerun-only rows.
   function riskOf(h) {
     const rec = flagsByRef[h.source_ref + '|' + h.target_ref];
-    return rec ? (rec.risk || 'none') : 'none';
+    if (rec && rec.risk) return rec.risk;
+    const r = (h.formula_risk || '').toLowerCase();
+    return r || 'none';
   }
   function flagsOf(h) {
     const rec = flagsByRef[h.source_ref + '|' + h.target_ref];
-    return rec ? (rec.flags || []) : [];
+    if (rec && rec.flags) return rec.flags;
+    if (h.formula_risk) return [h.formula_risk + ' (rerun tag)'];
+    return [];
   }
 
-  // --- Tally
-  const byLayer = {};
-  const byRisk = { high: 0, medium: 0, low: 0, none: 0 };
+  // --- Tally — recomputed on dataset toggle so counts track the active set.
   let maxRun = 0, maxScore = 0;
-  let strongN = 0;
-  hits.forEach(h => {
-    byLayer[h.layer] = (byLayer[h.layer] || 0) + 1;
-    byRisk[riskOf(h)] = (byRisk[riskOf(h)] || 0) + 1;
-    if (h.max_exact_run_len > maxRun) maxRun = h.max_exact_run_len;
-    if (h.score > maxScore) maxScore = h.score;
-    if (h.score >= 0.5 && h.max_exact_run_len >= 4) strongN++;
-  });
-  const ty = document.getElementById('tally');
-  [
-    ['Hits', total, ''],
-    ['Epistles→Gospels', byLayer['epistle_to_gospel'] || 0, ''],
-    ['John→Synoptics', byLayer['john_to_synoptic'] || 0, ''],
-    ['Max run length', maxRun, 'tokens'],
-    ['High formula-risk', byRisk.high, 'OT / liturgy noise'],
-  ].forEach(([k, v, s]) => {
-    ty.appendChild(SH.el('div', { class: 'cell' },
-      SH.el('div', { class: 'n' }, String(v)),
-      SH.el('div', { class: 'k' }, k),
-      SH.el('div', { class: 'small' }, s)));
-  });
+  function recomputeTally() {
+    const byLayer = {};
+    const byRisk = { high: 0, medium: 0, low: 0, none: 0 };
+    maxRun = 0; maxScore = 0;
+    hits.forEach(h => {
+      byLayer[h.layer] = (byLayer[h.layer] || 0) + 1;
+      byRisk[riskOf(h)] = (byRisk[riskOf(h)] || 0) + 1;
+      if (h.max_exact_run_len > maxRun) maxRun = h.max_exact_run_len;
+      if (h.score > maxScore) maxScore = h.score;
+    });
+    const ty = document.getElementById('tally');
+    while (ty.firstChild) ty.removeChild(ty.firstChild);
+    [
+      ['Hits', total, state.ds === 'rerun' ? 'rerun full set' : 'curated top-200'],
+      ['Epistles→Gospels', byLayer['epistle_to_gospel'] || 0, ''],
+      ['John→Synoptics', byLayer['john_to_synoptic'] || 0, ''],
+      ['Max run length', maxRun, 'tokens'],
+      ['High formula-risk', byRisk.high, 'OT / liturgy noise'],
+    ].forEach(([k, v, s]) => {
+      ty.appendChild(SH.el('div', { class: 'cell' },
+        SH.el('div', { class: 'n' }, String(v)),
+        SH.el('div', { class: 'k' }, k),
+        SH.el('div', { class: 'small' }, s)));
+    });
+  }
+  recomputeTally();
 
   // --- State
-  const state = { layer: '', risk: '', score: 0.35, run: 1, q: '', sort: 'score' };
+  const state = { ds: 'curated', layer: '', risk: '', score: 0.35, run: 1, q: '', sort: 'score' };
   const bind = () => {
+    const prevDs = state.ds;
+    state.ds = document.getElementById('ds_sel').value;
+    // Swap the active hits array on dataset toggle. The rerun set is large
+    // (>10K) so filtering remains fast but rendering is capped at 400 via
+    // table pagination. Dataset changes also invalidate tally counts.
+    if (state.ds !== prevDs) {
+      hits = state.ds === 'rerun' ? rerunHits : curatedHits;
+      total = hits.length;
+      recomputeTally();
+    }
     state.layer = document.getElementById('layer_sel').value;
     state.risk = document.getElementById('risk_sel').value;
     state.score = parseInt(document.getElementById('score_slider').value, 10) / 100;
@@ -182,7 +212,7 @@
     document.getElementById('score_meter').textContent = state.score.toFixed(2);
     renderAll();
   };
-  ['layer_sel', 'risk_sel', 'score_slider', 'run_input', 'q', 'sort_sel'].forEach(id => {
+  ['ds_sel', 'layer_sel', 'risk_sel', 'score_slider', 'run_input', 'q', 'sort_sel'].forEach(id => {
     document.getElementById(id).addEventListener('input', bind);
     document.getElementById(id).addEventListener('change', bind);
   });
@@ -296,10 +326,13 @@
         SH.el('span', { class: 'risk-tag ' + risk, title: flags.join(', ') },
           risk === 'none' ? '—' : risk));
       tr.appendChild(riskCell);
-      tr.appendChild(SH.el('td', null, h.source_ref));
-      tr.appendChild(SH.el('td', null, h.target_ref));
+      // Source/target refs as clickable chips (hover = Greek preview).
+      tr.appendChild(SH.el('td', null, SH.refChip(h.source_ref)));
+      tr.appendChild(SH.el('td', null, SH.refChip(h.target_ref)));
       tr.appendChild(SH.el('td', { class: 'n' }, h.score.toFixed(3)));
       tr.appendChild(SH.el('td', { class: 'n' }, String(h.max_exact_run_len)));
+      // Greek exact-run cell: plain text (not word-hoverable because it's a
+      // fragment, not a full verse, and the MorphGNT index keys by full ref).
       tr.appendChild(SH.el('td', { class: 'greek-cell' }, h.max_exact_run || ''));
       tr.appendChild(SH.el('td', { class: 'shared-cell' }, h.shared_content_tokens || ''));
       tbody.appendChild(tr);

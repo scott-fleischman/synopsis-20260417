@@ -64,38 +64,34 @@
     card.className = 'anchor-card';
     card.id = 'anc_' + i;
 
-    const head = SH.el('div', { class: 'anchor-head' },
-      SH.el('div', { class: 'anchor-title' }, (a.anchor_id || '').replace(/_/g, ' ')),
-      SH.el('div', { class: 'anchor-refs' },
-        SH.el('span', { class: 'rj' }, 'John: ' + (a.john_refs || '')),
-        SH.el('span', { class: 'rs' }, 'Syn: ' + (Array.isArray(a.synoptic_refs) ? a.synoptic_refs.join(' · ') : a.synoptic_refs || ''))));
+    // Header with anchor name + ref chips. Each ref chip is clickable and
+    // shows Greek-on-hover so readers can scan the scene refs and jump into
+    // the reader without building the href themselves.
+    const head = SH.el('div', { class: 'anchor-head' });
+    head.appendChild(SH.el('div', { class: 'anchor-title' }, (a.anchor_id || '').replace(/_/g, ' ')));
+    const refsRow = SH.el('div', { class: 'anchor-refs' });
+    const johnList = (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+    const synList = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+    if (johnList.length) {
+      const j = SH.el('span', { class: 'rj' });
+      j.appendChild(document.createTextNode('John: '));
+      johnList.forEach((r, idx) => {
+        if (idx > 0) j.appendChild(document.createTextNode(' · '));
+        j.appendChild(SH.refChip(r, { style: 'color:var(--mark);', fontSize: '12px' }));
+      });
+      refsRow.appendChild(j);
+    }
+    if (synList.length) {
+      const s = SH.el('span', { class: 'rs' });
+      s.appendChild(document.createTextNode('Syn: '));
+      synList.forEach((r, idx) => {
+        if (idx > 0) s.appendChild(document.createTextNode(' · '));
+        s.appendChild(SH.refChip(r, { style: 'color:var(--matt);', fontSize: '12px' }));
+      });
+      refsRow.appendChild(s);
+    }
+    head.appendChild(refsRow);
     card.appendChild(head);
-
-    // Read-in-reader links: one per referenced verse range. The reader
-    // expands ranges and scrolls to the first verse; the anchor overlay
-    // is automatically shown when the reader loads.
-    const readerLinks = SH.el('div', { style: 'margin:6px 0 10px;font-size:11px;color:var(--ink-mute);' });
-    const jFirst = (a.john_refs || '').split(';')[0].trim();
-    if (jFirst) {
-      const m = jFirst.match(/^([1-3A-Za-z]+)\s+(\d+):(\d+)/);
-      if (m) readerLinks.appendChild(SH.el('a', {
-        href: '30_reader.html#' + m[1] + '/' + encodeURIComponent(m[1] + ' ' + m[2] + ':' + m[3]),
-        class: 'chip',
-        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;margin-right:6px;',
-      }, 'read ' + jFirst + ' →'));
-    }
-    const synList = Array.isArray(a.synoptic_refs) ? a.synoptic_refs : [a.synoptic_refs || ''];
-    for (const sr of synList) {
-      if (!sr) continue;
-      const m = sr.match(/^([1-3A-Za-z]+)\s+(\d+):(\d+)/);
-      if (!m) continue;
-      readerLinks.appendChild(SH.el('a', {
-        href: '30_reader.html#' + m[1] + '/' + encodeURIComponent(m[1] + ' ' + m[2] + ':' + m[3]),
-        class: 'chip',
-        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;margin-right:6px;',
-      }, 'read ' + sr + ' →'));
-    }
-    if (readerLinks.firstChild) card.appendChild(readerLinks);
 
     if (a.shared_features && a.shared_features.length) {
       const feats = SH.el('div', { class: 'shared-features' });

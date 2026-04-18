@@ -144,6 +144,32 @@ def load_mld_rerun_actual_vs_canonical() -> Any:
     return _yaml(MLD_ROOT / "18_actual_vs_canonical_slots.yaml")
 
 
+def load_mld_rerun_mask_audit_rows() -> list[dict[str, Any]]:
+    """Parse 01b_mask_audit_default_medium.csv with typed columns.
+
+    The rerun's per-verse mask audit carries the top-Mark score and ref that
+    drove the masking decision — strictly richer than the orig package, which
+    only labels verses boolean-wise without the supporting evidence.
+    """
+    rows: list[dict[str, Any]] = []
+    for r in _csv_rows(MLD_ROOT / "01b_mask_audit_default_medium.csv"):
+        try:
+            score = float(r.get("top_mark_score") or 0)
+        except ValueError:
+            score = 0.0
+        masked_str = (r.get("masked_default_medium") or "").strip().lower()
+        rows.append({
+            "book": r.get("book", ""),
+            "idx": int(r.get("idx") or 0),
+            "ref": r.get("ref", ""),
+            "top_mark_score": score,
+            "top_mark_ref": r.get("top_mark_ref", ""),
+            "masked": masked_str == "true",
+            "mask_reason": r.get("mask_reason_default_medium", ""),
+        })
+    return rows
+
+
 def load_mld_rerun() -> dict[str, Any]:
     return {
         "summary": load_mld_rerun_summary(),
@@ -151,6 +177,7 @@ def load_mld_rerun() -> dict[str, Any]:
         "regime_comparison": load_mld_rerun_regime_comparison(),
         "regime_sensitivity": load_mld_rerun_regime_sensitivity(),
         "actual_vs_canonical": load_mld_rerun_actual_vs_canonical(),
+        "mask_audit_medium": load_mld_rerun_mask_audit_rows(),
     }
 
 
@@ -165,8 +192,42 @@ def load_jtea_rerun_method() -> Any:
 
 
 def load_jtea_rerun_claim_evidence_links() -> list[dict[str, Any]]:
+    """Normalize the rerun's 17_claim_evidence_links.yaml into a viz-friendly shape.
+
+    Raw YAML has ``claim_id``, ``confidence_dimensions.{automatic_retrieval_confidence,
+    philological_case_strength, formula_risk}``, and a ``supports`` list where one
+    entry carries ``case_id``. The viz layer wants a flat ``{claim_id, case_id,
+    confidence:{retrieval, philological, formula_risk}, provisional_best_explanation,
+    supports}`` shape keyed on ``case_id`` for pair lookup.
+    """
     data = _yaml(JTEA_ROOT / "17_claim_evidence_links.yaml") or []
-    return list(data) if isinstance(data, list) else []
+    if not isinstance(data, list):
+        return []
+    out: list[dict[str, Any]] = []
+    for row in data:
+        if not isinstance(row, dict):
+            continue
+        supports = row.get("supports") or []
+        case_id = ""
+        for s in supports:
+            if isinstance(s, dict) and s.get("case_id"):
+                case_id = str(s["case_id"])
+                break
+        dims = row.get("confidence_dimensions") or {}
+        confidence = {
+            "retrieval": dims.get("automatic_retrieval_confidence", ""),
+            "philological": dims.get("philological_case_strength", ""),
+            "formula_risk": dims.get("formula_risk", ""),
+        }
+        out.append({
+            "claim_id": row.get("claim_id", ""),
+            "claim_type": row.get("claim_type", ""),
+            "case_id": case_id,
+            "confidence": confidence,
+            "provisional_best_explanation": row.get("provisional_best_explanation", ""),
+            "supports": supports,
+        })
+    return out
 
 
 def load_jtea_rerun_formula_risk_summary() -> list[dict[str, Any]]:
@@ -180,12 +241,58 @@ def load_jtea_rerun_formula_risk_summary() -> list[dict[str, Any]]:
     return rows
 
 
+def load_jtea_rerun_rich_exact_hits() -> list[dict[str, Any]]:
+    """Load the rerun's ``15_filtered_high_value_exact_hits.csv`` in full.
+
+    This is the authoritative high-value exact-hit set: ~11K rows with
+    ``formula_risk``, ``evidence_origin``, full Greek ``source_text`` and
+    ``target_text``, plus token/bigram/trigram/fourgram overlap counts. The
+    orig jtea package only shipped a 200-row curated subset; this is the
+    full automatic retrieval layer with formula-risk classification.
+    """
+    rows: list[dict[str, Any]] = []
+    path = JTEA_ROOT / "15_filtered_high_value_exact_hits.csv"
+    if not path.exists():
+        return rows
+    for r in _csv_rows(path):
+        try:
+            score = float(r.get("score") or 0)
+        except ValueError:
+            score = 0.0
+        try:
+            run = int(r.get("max_exact_run_len") or 0)
+        except ValueError:
+            run = 0
+        try:
+            lcs_len = int(r.get("lcs_len") or 0)
+        except ValueError:
+            lcs_len = 0
+        rows.append({
+            "layer": r.get("layer", ""),
+            "source_book": r.get("source_book", ""),
+            "source_ref": r.get("source_ref", ""),
+            "target_book": r.get("target_book", ""),
+            "target_ref": r.get("target_ref", ""),
+            "score": score,
+            "max_exact_run_len": run,
+            "max_exact_run": r.get("max_exact_run", ""),
+            "lcs_len": lcs_len,
+            "source_text": r.get("source_text", ""),
+            "target_text": r.get("target_text", ""),
+            "formula_risk": r.get("formula_risk", ""),
+            "evidence_origin": r.get("evidence_origin", ""),
+        })
+    rows.sort(key=lambda x: (-x["max_exact_run_len"], -x["score"]))
+    return rows
+
+
 def load_jtea_rerun() -> dict[str, Any]:
     return {
         "summary": load_jtea_rerun_summary(),
         "method": load_jtea_rerun_method(),
         "claim_evidence_links": load_jtea_rerun_claim_evidence_links(),
         "formula_risk_summary": load_jtea_rerun_formula_risk_summary(),
+        "rich_exact_hits": load_jtea_rerun_rich_exact_hits(),
     }
 
 

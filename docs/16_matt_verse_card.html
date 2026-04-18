@@ -345,31 +345,37 @@
     const m = mldMask[i];
     const p = mldPair[i];
 
-    const head = SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;margin-bottom:10px;' },
-      SH.el('span', { style: 'font-size:22px;font-weight:700;color:#a8551a;' }, ref.ref),
-      SH.el('span', { class: 'v-chip ' + cat.cls, title: cat.help }, cat.label),
-      mldPair[i] ? SH.el('a', {
+    const head = SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;margin-bottom:10px;' });
+    // Big header ref doubles as a reader link. Uses refChip with 22px so the
+    // hover preview shows the Greek before the user clicks through.
+    head.appendChild(SH.refChip(ref.ref, { style: 'font-weight:700;color:#a8551a;', fontSize: '22px' }));
+    head.appendChild(SH.el('span', { class: 'v-chip ' + cat.cls, title: cat.help }, cat.label));
+    if (mldPair[i]) {
+      head.appendChild(SH.el('a', {
         href: '09_pair_explorer.html#mld/' + encodeURIComponent(mldPair[i].a_ref + '|' + mldPair[i].b_ref),
         style: 'font-size:12px;color:#22506c;',
-      }, 'open in masked pair explorer →') : null,
-      mldPair[i] ? SH.el('a', {
+      }, 'open in masked pair explorer →'));
+      head.appendChild(SH.el('a', {
         href: '15_q_core.html#mld/' + encodeURIComponent(mldPair[i].a_ref + '|' + mldPair[i].b_ref),
         style: 'font-size:12px;color:#0f766e;',
-      }, 'Q core reader →') : null,
-      SH.el('a', {
-        href: '30_reader.html#Matt/' + encodeURIComponent(ref.ref),
-        style: 'font-size:12px;color:#0f766e;',
-      }, 'read in context →'),
-    );
+      }, 'Q core reader →'));
+    }
     host.appendChild(head);
 
     const grid = SH.el('div', { class: 'v-grid' });
 
-    // Matt column
+    // Matt column — Greek with per-word morph hover so each inflected word is
+    // parseable without leaving the page.
     const mattBox = SH.el('div', { class: 'v-col matt' });
     mattBox.appendChild(SH.el('div', { class: 'v-head', style: 'color:#a8551a' }, 'Matthew'));
     mattBox.appendChild(SH.el('div', { class: 'v-score' }, ref.ref));
-    mattBox.appendChild(SH.el('div', { class: 'v-greek' }, mattText[i] || SH.el('span', { class: 'v-none' }, '(no Greek text available for this verse)')));
+    if (mattText[i]) {
+      const gbox = SH.el('div', { class: 'v-greek' });
+      gbox.appendChild(SH.greekVerseFragment(ref.ref, mattText[i]));
+      mattBox.appendChild(gbox);
+    } else {
+      mattBox.appendChild(SH.el('div', { class: 'v-greek' }, SH.el('span', { class: 'v-none' }, '(no Greek text available for this verse)')));
+    }
     grid.appendChild(mattBox);
 
     // Mark column
@@ -391,7 +397,9 @@
         for (const c of mk.classes) cr.appendChild(SH.el('span', { class: 'chip', style: 'margin-right:3px;' }, c));
         markBox.appendChild(cr);
       }
-      markBox.appendChild(SH.el('div', { class: 'v-greek' }, mk.text || ''));
+      const gbox = SH.el('div', { class: 'v-greek' });
+      gbox.appendChild(SH.greekVerseFragment(mk.ref, mk.text || ''));
+      markBox.appendChild(gbox);
     } else {
       markBox.appendChild(SH.el('div', { class: 'v-none' }, 'No Mark parallel in the mm primary chain or secondary echoes.'));
     }
@@ -416,7 +424,9 @@
         for (const c of lk.classes) cr.appendChild(SH.el('span', { class: 'chip', style: 'margin-right:3px;' }, c));
         lukeBox.appendChild(cr);
       }
-      lukeBox.appendChild(SH.el('div', { class: 'v-greek' }, lk.text || ''));
+      const gbox = SH.el('div', { class: 'v-greek' });
+      gbox.appendChild(SH.greekVerseFragment(lk.ref, lk.text || ''));
+      lukeBox.appendChild(gbox);
     } else {
       lukeBox.appendChild(SH.el('div', { class: 'v-none' }, 'No Luke parallel in the ml primary chain or secondary echoes.'));
     }

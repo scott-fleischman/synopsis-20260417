@@ -161,6 +161,35 @@
     line-height: 1.7;
     color: var(--ink);
   }
+  /* Word-level morph span. Overrides .gw from global stylesheet inside verse text. */
+  .verse-text .gw:hover { background: #f8eecf; border-bottom-color: var(--accent); }
+  /* Highlight-mode dim: verses without a matching layer fade out. */
+  .verse.layer-hidden { opacity: 0.22; }
+  .verse.layer-hidden .verse-text { color: var(--ink-mute); }
+  /* Pericope label bar: shows before the first verse of a recognized concept/anchor. */
+  .pericope {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px 6px 48px;
+    margin: 8px 0 4px;
+    background: linear-gradient(90deg, #fdf5e8 0%, transparent 92%);
+    border-left: 3px solid var(--accent);
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+  .pericope .p-kind {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  .pericope .p-name { color: var(--accent); font-weight: 500; }
+  .pericope .p-burden { margin-left: auto; font-size: 10px; color: var(--ink-mute); }
+  .pericope.concept { border-left-color: var(--accent); }
+  .pericope.anchor { border-left-color: var(--mark); background: linear-gradient(90deg, #f7e7e4 0%, transparent 92%); }
   .verse-chips {
     flex: 0 0 auto;
     display: flex;
@@ -328,6 +357,19 @@
     <label><input type="checkbox" id="tEc" checked><span class="key" style="background:#0f766e;"></span>Echoes</label>
     <label><input type="checkbox" id="tMx" checked><span class="key" style="background:#a8551a;"></span>Masked-as-Markan</label>
     <label><input type="checkbox" id="tAn" checked><span class="key" style="background:#9a7500;"></span>John anchors</label>
+    <label style="margin-left:auto;">Highlight
+      <select id="hMode" style="font-size:11px;padding:2px 6px;">
+        <option value="">all verses (no highlight)</option>
+        <option value="any">any parallel</option>
+        <option value="mm">MM primary</option>
+        <option value="ml">ML primary</option>
+        <option value="mld">MLD primary</option>
+        <option value="ec">echoes</option>
+        <option value="mx">masked-as-Markan</option>
+        <option value="an">John anchors</option>
+        <option value="concept">concept-signature</option>
+      </select>
+    </label>
     <input type="search" id="q" placeholder="filter: text or ch:verse (e.g. 5:3)" style="min-width:180px;" />
     <button id="clearSel" type="button" style="font-size:11px;padding:3px 10px;">Clear selection</button>
   </div>
@@ -402,6 +444,26 @@
   addEchoes('mm');
   addEchoes('ml');
   addEchoes('mld');
+
+  // Build an index of (source_ref, target_ref) → { case_id, confidence } from
+  // the jtea case studies + rerun claim_evidence_links. Used to decorate
+  // detail-panel parallels with the three-way evidence badge when a parallel
+  // matches a curated case. Keyed both ways so direction doesn't matter.
+  const caseByPair = new Map();
+  if (BUNDLE.jtea) {
+    const caseStudies = BUNDLE.jtea.case_studies || [];
+    const rerunLinks = (BUNDLE.jtea.rerun && BUNDLE.jtea.rerun.claim_evidence_links) || [];
+    const confByCaseId = new Map();
+    for (const l of rerunLinks) {
+      if (l.case_id && l.confidence) confByCaseId.set(l.case_id, l.confidence);
+    }
+    for (const c of caseStudies) {
+      if (!c.source_ref || !c.target_ref) continue;
+      const rec = { case_id: c.case_id, confidence: confByCaseId.get(c.case_id) || null };
+      caseByPair.set(c.source_ref + '|' + c.target_ref, rec);
+      caseByPair.set(c.target_ref + '|' + c.source_ref, rec);
+    }
+  }
 
   // Masked-as-Markan flags (mld.mask_audit)
   const maskedRefs = new Map();
@@ -627,8 +689,51 @@
       SH.el('span', { class: 'ch-num' }, String(ch.chapter)),
       'Chapter ' + ch.chapter);
     section.appendChild(h);
-    for (const v of ch.verses) section.appendChild(renderVerse(v));
+    // Inline pericope labels: if a verse is the first member of a concept-signature
+    // or anchor group in this chapter, insert a labelled band before it so the
+    // reader can SEE the scholarly thematic structure overlaid on the Greek text.
+    const seenConcept = new Set();
+    const seenAnchor = new Set();
+    for (const v of ch.verses) {
+      for (const c of SH.conceptsForRef(v.ref)) {
+        if (!seenConcept.has(c.concept_id)) {
+          seenConcept.add(c.concept_id);
+          section.appendChild(pericopeBar('concept', c));
+        }
+      }
+      for (const a of SH.anchorsForRef(v.ref)) {
+        if (!seenAnchor.has(a.anchor_id)) {
+          seenAnchor.add(a.anchor_id);
+          section.appendChild(pericopeBar('anchor', a));
+        }
+      }
+      section.appendChild(renderVerse(v));
+    }
     return section;
+  }
+
+  function pericopeBar(kind, obj) {
+    const bar = SH.el('div', { class: 'pericope ' + kind });
+    bar.appendChild(SH.el('span', { class: 'p-kind' }, kind === 'anchor' ? 'John anchor' : 'concept'));
+    const name = kind === 'anchor' ? (obj.anchor_id || '—') : (obj.concept_id || '—');
+    const displayName = name.replace(/_/g, ' ');
+    bar.appendChild(SH.el('span', { class: 'p-name' }, displayName));
+    if (obj.signal_type) bar.appendChild(SH.el('span', { class: 'small' }, '· ' + obj.signal_type));
+    if (obj.common_tradition_assessment) bar.appendChild(SH.el('span', { class: 'small' }, '· ' + obj.common_tradition_assessment));
+    // Burden hint for concepts (compact)
+    if (kind === 'concept' && obj.direct_literary_burden) {
+      bar.appendChild(SH.el('span', { class: 'p-burden' },
+        'burden · dir ' + obj.direct_literary_burden + ' · oral ' + (obj.oral_tradition_burden || '?')));
+    }
+    // Link to the appropriate viz for full context
+    const vizHref = kind === 'anchor' ? '20_john_anchors.html' : '22_concept_signatures.html';
+    const link = SH.el('a', {
+      href: vizHref,
+      class: 'reader-chip',
+      style: 'margin-left:8px;',
+    }, 'view →');
+    bar.appendChild(link);
+    return bar;
   }
 
   function renderVerse(v) {
@@ -644,7 +749,12 @@
       'data-heat': heatBucket(maxScore),
     });
     row.appendChild(SH.el('span', { class: 'verse-num' }, String(v.verse)));
-    row.appendChild(SH.el('span', { class: 'verse-text' }, v.text));
+    // Word-level Greek with lemma+morph hovers, falling back to plain text when
+    // morphgnt data isn't available (e.g. a bundle built without morph).
+    const textSpan = document.createElement('span');
+    textSpan.className = 'verse-text';
+    textSpan.appendChild(SH.greekVerseFragment(v.ref, v.text));
+    row.appendChild(textSpan);
 
     // Chips: one per distinct (type, otherRef) — but dedupe identical types
     // to avoid a clutter of "MM MM MM" when the same verse matches multiple
@@ -733,7 +843,9 @@
     }
     d.appendChild(SH.el('div', { class: 'ref' }, 'Selected verse'));
     d.appendChild(SH.el('h3', null, ref));
-    d.appendChild(SH.el('div', { class: 'src' }, srcText));
+    const srcBox = SH.el('div', { class: 'src' });
+    srcBox.appendChild(SH.greekVerseFragment(ref, srcText));
+    d.appendChild(srcBox);
 
     // If masked, surface the reason
     const mrow = maskedRefs.get(ref);
@@ -776,7 +888,34 @@
         }, p.score.toFixed(2)));
       }
       wrap.appendChild(title);
-      if (p.otherRef) wrap.appendChild(SH.el('div', { class: 'pref' }, p.otherRef));
+
+      // Three-way evidence badge (retrieval / philological / formula_risk) when
+      // this (ref, otherRef) pair matches a curated jtea case study.
+      if (p.otherRef && caseByPair.size) {
+        const match = caseByPair.get(ref + '|' + p.otherRef);
+        if (match && match.confidence) {
+          const row = SH.el('div', {
+            style: 'display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:4px 0 2px;',
+          });
+          row.appendChild(SH.evidenceBadge(match.confidence));
+          if (match.case_id) {
+            row.appendChild(SH.el('a', {
+              href: '19_case_studies.html#' + encodeURIComponent(match.case_id),
+              style: 'font-size:10.5px;color:var(--ink-mute);text-decoration:none;' +
+                     'border-bottom:1px dotted var(--ink-mute);',
+              target: '_blank',
+              rel: 'noopener',
+            }, 'case: ' + match.case_id));
+          }
+          wrap.appendChild(row);
+        }
+      }
+
+      if (p.otherRef) {
+        const prefRow = SH.el('div', { class: 'pref', style: 'display:flex;align-items:center;gap:6px;flex-wrap:wrap;' });
+        prefRow.appendChild(SH.refChip(p.otherRef, { plain: true, fontSize: '12.5px' }));
+        wrap.appendChild(prefRow);
+      }
 
       // Show the Greek of the counterpart if we have it
       let otherText = '';
@@ -785,7 +924,11 @@
         if (p.a_text && p.otherRef !== ref) otherText = p.a_text;
         else if (p.b_text && p.otherRef !== ref) otherText = p.b_text;
       }
-      if (otherText) wrap.appendChild(SH.el('div', { class: 'ptext' }, otherText));
+      if (otherText) {
+        const ptext = SH.el('div', { class: 'ptext' });
+        ptext.appendChild(SH.greekVerseFragment(p.otherRef, otherText));
+        wrap.appendChild(ptext);
+      }
 
       if (p.tags && p.tags.length) {
         const tagBar = SH.el('div', { style: 'margin:4px 0;' });
@@ -839,7 +982,16 @@
     renderDetailEmpty();
   });
 
-  // ----- Layer toggles --------------------------------------------------
+  // ----- Layer toggles + highlight mode ---------------------------------
+  function verseMatchesMode(ref, mode) {
+    if (!mode) return true;
+    if (mode === 'concept') return SH.conceptsForRef(ref).length > 0;
+    const parallels = byRef.get(ref) || [];
+    if (mode === 'any') return parallels.length > 0;
+    if (mode === 'ec') return parallels.some(p => p.type && p.type.indexOf('ec-') === 0);
+    return parallels.some(p => p.type === mode);
+  }
+
   function applyLayerFilter() {
     const keys = { tMM: 'mm', tML: 'ml', tMLD: 'mld', tEc: 'ec', tMx: 'mx', tAn: 'an' };
     const on = {};
@@ -852,14 +1004,20 @@
     // Also hide/show the masked striping
     document.querySelectorAll('.verse.masked').forEach(r => {
       r.style.setProperty('--mx-visible', on.mx ? '1' : '0');
-      // keep the class; CSS uses it regardless, but stripping the visual
-      // effect when filtered is done by an extra class:
       if (on.mx) r.classList.remove('mx-hidden');
       else r.classList.add('mx-hidden');
+    });
+    // Highlight mode: dim non-matching verses.
+    const hMode = document.getElementById('hMode').value;
+    document.querySelectorAll('.verse').forEach(row => {
+      const ref = row.getAttribute('data-ref');
+      if (verseMatchesMode(ref, hMode)) row.classList.remove('layer-hidden');
+      else row.classList.add('layer-hidden');
     });
   }
   ['tMM','tML','tMLD','tEc','tMx','tAn'].forEach(id =>
     document.getElementById(id).addEventListener('change', applyLayerFilter));
+  document.getElementById('hMode').addEventListener('change', applyLayerFilter);
 
   // ----- Search --------------------------------------------------------
   function applySearch() {

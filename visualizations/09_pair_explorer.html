@@ -142,32 +142,15 @@
 
     // Header
     const card = SH.el('div', { class: 'card' });
-    const aBookName = (p.a_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
-    const bBookName = (p.b_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
-    const readerA = aBookName
-      ? SH.el('a', {
-          href: '30_reader.html#' + aBookName + '/' + encodeURIComponent(p.a_ref),
-          class: 'chip',
-          style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
-          title: 'Open ' + p.a_ref + ' in the full-text reader',
-        }, 'read ' + p.a_ref + ' →')
-      : null;
-    const readerB = bBookName
-      ? SH.el('a', {
-          href: '30_reader.html#' + bBookName + '/' + encodeURIComponent(p.b_ref),
-          class: 'chip',
-          style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
-          title: 'Open ' + p.b_ref + ' in the full-text reader',
-        }, 'read ' + p.b_ref + ' →')
-      : null;
     card.appendChild(SH.el('div', { style: 'display:flex;gap:14px;flex-wrap:wrap;align-items:baseline;' },
-      SH.el('div', { style: 'font-size:18px;font-weight:700;color:#8b2e2e;' }, p.a_ref),
-      SH.el('div', { style: 'font-size:18px;font-weight:700;color:#22506c;' }, p.b_ref),
+      SH.refChip(p.a_ref, { style: 'font-size:18px;font-weight:700;color:#8b2e2e;', fontSize: '18px' }),
+      SH.refChip(p.b_ref, { style: 'font-size:18px;font-weight:700;color:#22506c;', fontSize: '18px' }),
       SH.el('span', { class: 'chip', style: `background:${SH.scoreColor(p.score)};color:#fff;` }, 'score ' + p.score.toFixed(3)),
       (p.classes || []).length ? SH.el('span', { class: 'chip' }, (p.classes || []).join(' · ')) : null,
       p.macro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'macro #' + p.macro) : null,
       p.micro != null ? SH.el('span', { class: 'chip', style: 'background:#ede8d6;' }, 'micro #' + p.micro) : null,
-      readerA, readerB,
+      SH.readerLink(p.a_ref, 'read ' + p.a_ref + ' →'),
+      SH.readerLink(p.b_ref, 'read ' + p.b_ref + ' →'),
     ));
 
     // Side-by-side verses with token diff
@@ -230,6 +213,25 @@
     grid.appendChild(renderAText());
     grid.appendChild(renderBText());
     card.appendChild(grid);
+
+    // Word-level Greek with per-word lemma+morph hover. Sits below the diff so
+    // the diff coloring stays intact; readers can still inspect individual words.
+    const aMorph = SH.morphWords(p.a_ref);
+    const bMorph = SH.morphWords(p.b_ref);
+    if (aMorph || bMorph) {
+      const morphGrid = SH.el('div', { class: 'grid cols-2', style: 'margin-top:10px;' });
+      const mkSide = (ref, text, accent) => {
+        const box = SH.el('div', { class: 'vtext', style: 'font-size:16px;' });
+        box.appendChild(SH.el('div', { class: 'bookhead', style: `color:${accent};margin-bottom:6px;` }, ref + ' · per-word morph'));
+        const inner = SH.el('div');
+        inner.appendChild(SH.greekVerseFragment(ref, text));
+        box.appendChild(inner);
+        return box;
+      };
+      morphGrid.appendChild(mkSide(p.a_ref, p.a_text, '#8b2e2e'));
+      morphGrid.appendChild(mkSide(p.b_ref, p.b_text, '#22506c'));
+      card.appendChild(morphGrid);
+    }
 
     // Lemma-level diff summary
     const lemBox = SH.el('div', { class: 'card', style: 'margin-top:14px;' });

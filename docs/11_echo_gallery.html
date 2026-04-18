@@ -107,31 +107,26 @@
       const bText = e.b_text || textFor(e.b_ref, 'b');
       const card = SH.el('div', { class: 'echo-card' });
       const top = SH.el('div', { class: 'echo-top' });
-      top.appendChild(SH.el('span', { style: 'color:#8b2e2e;font-weight:700;' }, e.a_ref));
+      top.appendChild(SH.refChip(e.a_ref, { style: 'color:#8b2e2e;font-weight:700;', fontSize: '14px' }));
       top.appendChild(SH.el('span', { style: 'color:#aaa;' }, '↔'));
-      top.appendChild(SH.el('span', { style: 'color:#22506c;font-weight:700;' }, e.b_ref));
+      top.appendChild(SH.refChip(e.b_ref, { style: 'color:#22506c;font-weight:700;', fontSize: '14px' }));
       top.appendChild(SH.el('span', { class: 'chip', style: `background:${SH.scoreColor(e.score)};color:#fff;` }, 'score ' + e.score.toFixed(3)));
       if (e.composite_score != null) top.appendChild(SH.el('span', { class: 'chip' }, 'comp ' + e.composite_score.toFixed(3)));
       if (e.nonlocality != null) top.appendChild(SH.el('span', { class: 'chip' }, 'dist ' + e.nonlocality.toFixed(0)));
       if (e.tags) for (const tg of e.tags) top.appendChild(SH.el('span', { class: 'echo-tag' }, tg));
-      // Bidirectional: open either side in the full-text reader.
-      const aBk = (e.a_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
-      const bBk = (e.b_ref.match(/^([1-3A-Za-z]+)\s/) || [])[1];
-      if (aBk) top.appendChild(SH.el('a', {
-        href: '30_reader.html#' + aBk + '/' + encodeURIComponent(e.a_ref),
-        class: 'chip',
-        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
-        title: 'Open ' + e.a_ref + ' in the reader',
-      }, 'read a →'));
-      if (bBk) top.appendChild(SH.el('a', {
-        href: '30_reader.html#' + bBk + '/' + encodeURIComponent(e.b_ref),
-        class: 'chip',
-        style: 'background:#e7f1ef;color:#0f766e;text-decoration:none;',
-        title: 'Open ' + e.b_ref + ' in the reader',
-      }, 'read b →'));
+      top.appendChild(SH.readerLink(e.a_ref, 'read ' + e.a_ref + ' →'));
+      top.appendChild(SH.readerLink(e.b_ref, 'read ' + e.b_ref + ' →'));
       card.appendChild(top);
-      if (aText) card.appendChild(SH.el('div', { class: 'echo-a greek' }, aText));
-      if (bText) card.appendChild(SH.el('div', { class: 'echo-b greek' }, bText));
+      if (aText) {
+        const box = SH.el('div', { class: 'echo-a greek' });
+        box.appendChild(SH.greekVerseFragment(e.a_ref, aText));
+        card.appendChild(box);
+      }
+      if (bText) {
+        const box = SH.el('div', { class: 'echo-b greek' });
+        box.appendChild(SH.greekVerseFragment(e.b_ref, bText));
+        card.appendChild(box);
+      }
       if (!aText && !bText) card.appendChild(SH.el('div', { class: 'small' }, '(Greek text not bundled for this echo — see source files)'));
       g.appendChild(card);
     }

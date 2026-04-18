@@ -95,6 +95,7 @@ if __package__ in (None, ""):
         load_mm_rerun,
     )
     from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
+    from build.loaders_morph import load_morph_for_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
 else:  # imported as a package member
     from .dataset import Dataset
@@ -157,6 +158,7 @@ else:  # imported as a package member
         load_mm_rerun,
     )
     from .loaders_reader import load_reader_books
+    from .loaders_morph import load_morph_for_books
     from .preprocess_paths import OUT, ROOT
 
 
@@ -416,6 +418,14 @@ def main() -> None:
     )
     print(f"  {len(reader)} books, {_reader_verse_ct} verses")
 
+    print("Loading MorphGNT word-level data for reader hover...")
+    morph = load_morph_for_books(["Matt", "Mark", "Luke", "John"])
+    _morph_verse_ct = sum(len(v) for v in morph.values())
+    _morph_word_ct = sum(
+        len(s.split()) for v in morph.values() for s in v.values()
+    )
+    print(f"  {len(morph)} books, {_morph_verse_ct} verses with morph, {_morph_word_ct} tokens")
+
     bundle = {
         "mm": mm,
         "ml": ml,
@@ -423,6 +433,7 @@ def main() -> None:
         "jtea": jtea,
         "conclusions": conclusions,
         "reader": reader,
+        "morph": morph,
     }
 
     jsfile = OUT / "bundle.js"

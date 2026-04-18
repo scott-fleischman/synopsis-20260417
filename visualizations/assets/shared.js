@@ -300,6 +300,312 @@
     document.body.appendChild(foot);
   }
 
+  // ---- Reader links: turn any "Matt 13:3" / "John 1:29-34" into a clickable ----
+  // chip that jumps into 30_reader.html with a scroll target. Non-gospel refs
+  // (epistles, Rev, etc.) return null so callers can decide what to render.
+  const READER_BOOKS = new Set(['Matt', 'Mark', 'Luke', 'John']);
+
+  function refBook(ref) {
+    const m = (ref || '').match(/^([1-3]?[A-Za-z]+)\s+\d/);
+    return m ? m[1] : null;
+  }
+
+  function readerHref(ref) {
+    const bk = refBook(ref);
+    if (!bk || !READER_BOOKS.has(bk)) return null;
+    // Strip any verse range (e.g. "John 1:29-34" → jump to first verse).
+    const first = (ref.match(/^([1-3]?[A-Za-z]+\s+\d+:\d+)/) || [])[1] || ref;
+    return '30_reader.html#' + bk + '/' + encodeURIComponent(first);
+  }
+
+  function readerLink(ref, label) {
+    const href = readerHref(ref);
+    if (!href) return null;
+    const a = document.createElement('a');
+    a.href = href;
+    a.className = 'reader-chip';
+    a.textContent = label || ('read ' + ref + ' →');
+    a.style.cssText = 'display:inline-block;font-size:11px;padding:1px 7px;' +
+      'background:#e7f1ef;color:#0f766e;border-radius:2px;text-decoration:none;' +
+      'margin-left:4px;vertical-align:middle;';
+    return a;
+  }
+
+  // ---- MorphGNT word-level rendering for Matt/Mark/Luke/John ----
+  // Called by readers and by any viz that wants per-word lemma hovers.
+  // ``BUNDLE.morph[book][ref]`` is a space-separated string where each
+  // space-delimited token is ``surface|lemma|code`` (code is 10 chars:
+  // 2-char POS + 8-slot morph). See loaders_morph.py for the encoding.
+  function morphWords(ref) {
+    const bk = refBook(ref);
+    if (!bk || !BUNDLE.morph || !BUNDLE.morph[bk]) return null;
+    const s = BUNDLE.morph[bk][ref];
+    if (!s) return null;
+    return s.split(' ').map(tok => {
+      const parts = tok.split('|');
+      return { surface: parts[0] || '', lemma: parts[1] || '', code: parts[2] || '' };
+    });
+  }
+
+  // Decode a MorphGNT 10-char parse code to a short human description.
+  // POS (first 2 chars) determines which slots in the remaining 8 are used.
+  const _POS_NAME = {
+    'A-': 'adj', 'C-': 'conj', 'D-': 'adv', 'I-': 'interj',
+    'N-': 'noun', 'P-': 'prep',
+    'RA': 'art', 'RD': 'demon', 'RI': 'interr', 'RP': 'pers',
+    'RR': 'rel', 'RS': 'poss',
+    'V-': 'verb', 'X-': 'part',
+  };
+  const _TENSE = { P: 'pres', I: 'impf', F: 'fut', A: 'aor', X: 'perf', Y: 'pluperf' };
+  const _VOICE = { A: 'act', M: 'mid', P: 'pass', E: 'mid/pass', D: 'mid-dep', O: 'pass-dep', N: 'mid/pass-dep' };
+  const _MOOD  = { I: 'ind', D: 'imp', S: 'subj', O: 'opt', N: 'inf', P: 'ptc' };
+  const _PERS  = { '1': '1', '2': '2', '3': '3' };
+  const _NUM   = { S: 'sg', P: 'pl', D: 'du' };
+  const _CASE  = { N: 'nom', G: 'gen', D: 'dat', A: 'acc', V: 'voc' };
+  const _GEND  = { M: 'masc', F: 'fem', N: 'neut' };
+
+  function morphDecode(code) {
+    if (!code || code.length < 4) return '';
+    const pos = code.slice(0, 2);
+    const slot = code.slice(2);
+    const label = _POS_NAME[pos] || pos;
+    // Slot order: person, tense, voice, mood, case|number, number|case, gender, degree
+    // For verbs we read tense at slot[1], voice slot[2], mood slot[3], person slot[0], number slot[4].
+    // For nouns/adj/article/pron, case is slot[4], number slot[5], gender slot[6].
+    const p = slot[0], t = slot[1], v = slot[2], m = slot[3];
+    const n = slot[4], cs = slot[5], g = slot[6];
+    const parts = [];
+    if (pos === 'V-') {
+      if (t && t !== '-') parts.push(_TENSE[t] || t);
+      if (v && v !== '-') parts.push(_VOICE[v] || v);
+      if (m && m !== '-') parts.push(_MOOD[m] || m);
+      if (p && p !== '-') parts.push(_PERS[p] || p);
+      if (n && n !== '-') parts.push(_NUM[n] || n);
+      if (cs && cs !== '-') parts.push(_CASE[cs] || cs);
+      if (g && g !== '-') parts.push(_GEND[g] || g);
+    } else {
+      if (n && n !== '-') parts.push(_CASE[n] || n);
+      if (cs && cs !== '-') parts.push(_NUM[cs] || cs);
+      if (g && g !== '-') parts.push(_GEND[g] || g);
+    }
+    return label + (parts.length ? ' · ' + parts.join(' ') : '');
+  }
+
+  // Wrap a Greek verse with per-word spans so each word is hoverable for
+  // lemma + morph. Returns a DocumentFragment. If morph data is unavailable
+  // (non-gospel, or ref lookup fails), returns a plain text node instead.
+  function greekVerseFragment(ref, fallbackText) {
+    const words = morphWords(ref);
+    if (!words || !words.length) return document.createTextNode(fallbackText || '');
+    const frag = document.createDocumentFragment();
+    // Walk fallbackText character-by-character, emitting word spans that match
+    // each morphgnt surface in order; characters between surfaces (punctuation,
+    // whitespace, critical marks ⸀ ⸂ ⸃ etc.) pass through as-is. This lets us
+    // preserve the SBLGNT's text-critical punctuation while making each
+    // morphgnt-tokenized word a hover target.
+    const ft = fallbackText || words.map(w => w.surface).join(' ');
+    let ftIdx = 0;
+    for (const w of words) {
+      const s = w.surface;
+      const found = ft.indexOf(s, ftIdx);
+      if (found < 0) {
+        // Surface not present — fall back to naive inter-word space.
+        if (ftIdx > 0) frag.appendChild(document.createTextNode(' '));
+        const span = _makeLemmaSpan(w);
+        frag.appendChild(span);
+        continue;
+      }
+      if (found > ftIdx) frag.appendChild(document.createTextNode(ft.slice(ftIdx, found)));
+      frag.appendChild(_makeLemmaSpan(w));
+      ftIdx = found + s.length;
+    }
+    if (ftIdx < ft.length) frag.appendChild(document.createTextNode(ft.slice(ftIdx)));
+    return frag;
+  }
+
+  function _makeLemmaSpan(w) {
+    const span = document.createElement('span');
+    span.className = 'gw';
+    span.textContent = w.surface;
+    span.setAttribute('data-lemma', w.lemma);
+    span.setAttribute('data-code', w.code);
+    span.addEventListener('mouseenter', (e) => {
+      const wrap = document.createElement('div');
+      wrap.appendChild(tipLine(w.lemma, 'g'));
+      const parse = morphDecode(w.code);
+      if (parse) wrap.appendChild(tipLine(parse, 'small'));
+      wrap.appendChild(tipLine('lemma · hover ✳ click nothing', 'small'));
+      showTip(wrap, e.clientX, e.clientY);
+    });
+    span.addEventListener('mouseleave', hideTip);
+    return span;
+  }
+
+  // ---- Evidence ladder: three-way confidence from the rerun ----
+  // (retrieval, philological, formula_risk). Renders a compact badge with
+  // three coloured dots + a chip summarizing the best-case label. Used by
+  // pair explorer, echo gallery, case studies, concept signatures — anywhere
+  // a single rerun claim drives the view.
+  function _levelColor(level, isRisk) {
+    const l = (level || '').toLowerCase();
+    if (l === 'strong')  return '#0f766e';
+    if (l === 'medium')  return isRisk ? '#a35d1a' : '#22506c';
+    if (l === 'weak')    return '#8b2e2e';
+    if (l === 'low')     return '#0f766e';   // low formula risk = good
+    if (l === 'high')    return '#8b2e2e';   // high formula risk = bad
+    if (l.indexOf('n/a') === 0) return '#9a7500';
+    return '#bdb095';
+  }
+
+  function evidenceBadge(dims) {
+    const d = document.createElement('span');
+    d.className = 'ev-badge';
+    d.style.cssText = 'display:inline-flex;align-items:center;gap:5px;font-size:10px;' +
+      'color:var(--ink-mute);white-space:nowrap;line-height:1;';
+    const mkDot = (level, isRisk, title) => {
+      const dot = document.createElement('span');
+      dot.style.cssText = 'width:10px;height:10px;border-radius:50%;display:inline-block;' +
+        'background:' + _levelColor(level, isRisk) + ';' +
+        'border:1px solid rgba(0,0,0,.18);';
+      dot.title = title + ': ' + (level || '—');
+      return dot;
+    };
+    d.appendChild(mkDot(dims.retrieval, false, 'retrieval'));
+    d.appendChild(mkDot(dims.philological, false, 'philological'));
+    d.appendChild(mkDot(dims.formula_risk, true, 'formula risk'));
+    const lbl = document.createElement('span');
+    lbl.textContent = 'ret/phil/risk';
+    lbl.style.cssText = 'font-variant:all-small-caps;letter-spacing:0.05em;';
+    d.appendChild(lbl);
+    d.addEventListener('mouseenter', (e) => {
+      const wrap = document.createElement('div');
+      wrap.appendChild(tipLine('Evidence ladder', null));
+      wrap.appendChild(tipRow('retrieval', dims.retrieval || '—'));
+      wrap.appendChild(tipRow('philological', dims.philological || '—'));
+      wrap.appendChild(tipRow('formula risk', dims.formula_risk || '—'));
+      wrap.appendChild(tipLine('automatic · close reading · formulaic overlap', 'small'));
+      showTip(wrap, e.clientX, e.clientY);
+    });
+    d.addEventListener('mouseleave', hideTip);
+    return d;
+  }
+
+  // ---- Concept + anchor lookups: turn a ref into its pericope/theme ----
+  // Used by reader and by any viz that wants to surface "this verse is part
+  // of the 'worker_wages' concept cluster" or "…of the 'feeding_5000' anchor".
+  let _conceptByRef = null;
+  function _buildConceptByRef() {
+    const map = new Map();
+    const concepts = (BUNDLE.jtea && BUNDLE.jtea.concepts) || [];
+    for (const c of concepts) {
+      const refs = []
+        .concat(c.canonical_refs || [])
+        .concat(c.epistle_refs || []);
+      for (const r of refs) {
+        for (const ref of _expandRange(r)) {
+          if (!map.has(ref)) map.set(ref, []);
+          map.get(ref).push(c);
+        }
+      }
+    }
+    return map;
+  }
+
+  let _anchorByRef = null;
+  function _buildAnchorByRef() {
+    const map = new Map();
+    const anchors = (BUNDLE.jtea && BUNDLE.jtea.anchors) || [];
+    for (const a of anchors) {
+      const johnRefs = (a.john_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+      const synRefs = Array.isArray(a.synoptic_refs) ? a.synoptic_refs :
+                      (a.synoptic_refs || '').split(';').map(s => s.trim()).filter(Boolean);
+      for (const g of johnRefs.concat(synRefs)) {
+        for (const ref of _expandRange(g)) {
+          if (!map.has(ref)) map.set(ref, []);
+          map.get(ref).push(a);
+        }
+      }
+    }
+    return map;
+  }
+
+  function _expandRange(s) {
+    const m = (s || '').match(/^([1-3]?[A-Za-z]+)\s+(\d+):(\d+)(?:-(\d+))?$/);
+    if (!m) return [s];
+    const book = m[1], ch = m[2], v1 = parseInt(m[3], 10);
+    const v2 = m[4] ? parseInt(m[4], 10) : v1;
+    const out = [];
+    for (let v = v1; v <= v2; v++) out.push(book + ' ' + ch + ':' + v);
+    return out;
+  }
+
+  function conceptsForRef(ref) {
+    if (!_conceptByRef) _conceptByRef = _buildConceptByRef();
+    return _conceptByRef.get(ref) || [];
+  }
+
+  function anchorsForRef(ref) {
+    if (!_anchorByRef) _anchorByRef = _buildAnchorByRef();
+    return _anchorByRef.get(ref) || [];
+  }
+
+  // ---- Ref chip: standardized clickable reference with Greek-on-hover ----
+  // Every viz that surfaces a reference should render it this way, so users
+  // have one consistent mental model: hover = Greek text preview, click =
+  // jump to the reader anchored at that verse.
+  function refChip(ref, opts) {
+    opts = opts || {};
+    const href = readerHref(ref);
+    const el_ = document.createElement(href ? 'a' : 'span');
+    el_.className = 'ref-chip' + (opts.className ? ' ' + opts.className : '');
+    if (href) el_.href = href;
+    el_.textContent = opts.label || ref;
+    // Order matters: defaults first, caller style last so a caller-supplied
+    // color/border can override. `opts.plain` suppresses the default focus
+    // color + dotted underline (useful when the ref chip inherits its styling
+    // from a surrounding CSS class, e.g. .corpus-row.canon .ref-chip).
+    const plain = !!opts.plain;
+    el_.style.cssText =
+      'font-variant-numeric:tabular-nums;font-size:' + (opts.fontSize || '12px') + ';' +
+      (href && !plain ? 'color:var(--focus);text-decoration:none;border-bottom:1px dotted var(--focus);' : 'text-decoration:none;') +
+      'cursor:' + (href ? 'pointer' : 'default') + ';' +
+      (opts.style || '');
+    if (href) {
+      el_.addEventListener('mouseenter', (e) => {
+        const words = morphWords(ref);
+        const reader = BUNDLE.reader || [];
+        let text = '';
+        const bk = refBook(ref);
+        if (bk) {
+          const book = reader.find(b => b.book === bk);
+          if (book) {
+            for (const ch of book.chapters) {
+              for (const v of ch.verses) if (v.ref === ref) { text = v.text; break; }
+              if (text) break;
+            }
+          }
+        }
+        const wrap = document.createElement('div');
+        wrap.appendChild(tipLine(ref, null));
+        if (text) {
+          const g = document.createElement('div');
+          g.className = 'g';
+          g.style.marginTop = '4px';
+          g.style.maxWidth = '420px';
+          g.textContent = text;
+          wrap.appendChild(g);
+        }
+        if (words && !text) {
+          wrap.appendChild(tipGreek(words.map(w => w.surface).join(' ')));
+        }
+        wrap.appendChild(tipLine('click · open reader at this verse', 'small'));
+        showTip(wrap, e.clientX, e.clientY);
+      });
+      el_.addEventListener('mouseleave', hideTip);
+    }
+    return el_;
+  }
+
   window.SH = {
     BUNDLE,
     get D() { return D; },
@@ -309,6 +615,12 @@
     scoreColor, buildNav, buildJteaNav, buildDatasetSwitcher, buildFooter, svgEl, svgElText, scale, clamp,
     chapterLookup,
     el,
+    // Reader + morph + evidence helpers
+    READER_BOOKS, refBook, readerHref, readerLink,
+    morphWords, morphDecode, greekVerseFragment,
+    evidenceBadge,
+    conceptsForRef, anchorsForRef,
+    refChip,
   };
 
   // Auto-attach footer once DOM is ready — no need to edit every page.

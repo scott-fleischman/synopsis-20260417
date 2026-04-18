@@ -237,3 +237,37 @@ ul.clean li:last-child { border-bottom: 0; }
   font-size: 11px;
   color: var(--ink-mute);
 }
+
+/* Word-level greek span (hover → lemma tooltip). Used by SH.greekVerseFragment. */
+.gw {
+  cursor: help;
+  border-bottom: 1px dotted transparent;
+  transition: border-color 120ms, background-color 120ms;
+}
+.gw:hover {
+  background: #f3eecf;
+  border-bottom-color: var(--accent);
+}
+
+/* Standardized ref chip across all viz pages. */
+.ref-chip:hover {
+  border-bottom-color: var(--focus) !important;
+  background: #dcece9;
+  border-radius: 2px;
+  padding: 0 3px;
+  margin: 0 -3px;
+}
+
+/* Three-dot evidence badge used by pair explorer, case studies, etc. */
+.ev-badge .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,.18);
+}
+
+/* "read in reader" chip. Consistent teal background across pages. */
+.reader-chip:hover {
+  background: #d0e4e1 !important;
+  border-bottom: 0 !important;
+}
