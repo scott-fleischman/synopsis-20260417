@@ -1,0 +1,85 @@
+created_utc: '2026-04-18T13:28:08.604647+00:00'
+canonical_greek:
+  source: Faithlife SBLGNT GitHub repository
+  license: CC BY 4.0
+  version_note: Repository README lists v1.2, dated 2023-07-10.
+  books_used:
+  - Matt
+  - Mark
+  - Luke
+  - John
+  - Acts
+  - Rom
+  - 1Cor
+  - 2Cor
+  - Gal
+  - Eph
+  - Phil
+  - Col
+  - 1Thess
+  - 2Thess
+  - 1Tim
+  - 2Tim
+  - Titus
+  - Phlm
+  - Heb
+  - Jas
+  - 1Pet
+  - 2Pet
+  - 1John
+  - 2John
+  - 3John
+  - Jude
+  - Rev
+  downloaded_files:
+  - Matt.txt
+  - Mark.txt
+  - Luke.txt
+  - John.txt
+  - Acts.txt
+  - Rom.txt
+  - 1Cor.txt
+  - 2Cor.txt
+  - Gal.txt
+  - Eph.txt
+  - Phil.txt
+  - Col.txt
+  - 1Thess.txt
+  - 2Thess.txt
+  - 1Tim.txt
+  - 2Tim.txt
+  - Titus.txt
+  - Phlm.txt
+  - Heb.txt
+  - Jas.txt
+  - 1Pet.txt
+  - 2Pet.txt
+  - 1John.txt
+  - 2John.txt
+  - 3John.txt
+  - Jude.txt
+  - Rev.txt
+thomas_coptic:
+  source: Coptic Scriptorium corpora repository, thomas-gospel TEI and CoNLL-U
+  license: TEI header lists CC-BY 4.0; repository documentation says corpus formats include CoNLL-U/TEI and other formats.
+  local_files:
+  - thomas_gospel.xml
+  - thomas_gospel.conllu
+  units_parsed: 116
+apocrypha_inventory:
+  source: Internet Archive full text of M.R. James, The Apocryphal New Testament
+  use: Inventory only; no full text redistributed in package.
+  works_indexed: selected table-of-contents sections relevant to Gospel/NT dependence questions
+generated_layers:
+- canonical units
+- Thomas units
+- epistles-to-Gospels automatic candidates
+- John-to-Synoptics automatic candidates
+- exact phrase hits
+- negative-space flags
+- targeted case studies with token diffs
+- John anchor registry
+- Thomas parallel registry
+- concept signature registry
+- apocrypha inventory
+- burden ledger

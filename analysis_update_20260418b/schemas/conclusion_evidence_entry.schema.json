@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conclusion evidence navigation entry",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "claim",
+    "confidence",
+    "top_supporting_data_files",
+    "contrary_or_limiting_data"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string"
+    },
+    "claim": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    },
+    "top_supporting_data_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contrary_or_limiting_data": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,1408 @@
+- case_id: epistle_1tim_5_18_worker_wages_luke_10_7
+  source_ref: 1Tim 5:18
+  target_ref: Luke 10:7
+  feature: worker worthy/deserving of wages
+  why_high_value: The epistle explicitly introduces the material as γραφή and juxtaposes Deut 25:4 with a Jesus-saying form
+    closest to Luke.
+  formula_risk: low
+  negative_space_flags: nonfungible_phrase_candidate
+  automatic_retrieval_support: strong
+  philological_case_strength: high
+  best_current_model: direct written or fixed written-saying tradition; strong evidence against independent convergence
+  hypotheses:
+    direct_use_of_luke: Moderate-to-high signal; strong lexical match to Luke over Matthew, but access and date remain debated.
+    shared_written_sayings_source: Plausible; a fixed Jesus-saying could have circulated in a catena or instruction source.
+    oral_tradition: Possible but must explain near-verbatim Greek wording and the μισθός rather than τροφή form.
+    independent_convergence: Very high burden; phrase and topic are too specific.
+  automatic_metrics:
+    score: 0.3436
+    token_weighted_jaccard: 0.2009
+    stem_weighted_jaccard: 0.1861
+    lcs_len: 7
+    lcs_ratio: 0.4667
+    max_exact_run_len: 5
+    max_exact_run: ο εργατησ του μισθου αυτου
+    shared_bigrams: 4
+    shared_trigrams: 3
+    shared_fourgrams: 2
+    shared_content_tokens: αξιοσ εργατησ μισθου
+    shared_content_token_count: 3
+  best_candidate_row:
+    source_ref: 1Tim 5:18
+    target_ref: Luke 10:7
+    score: 0.3436
+    max_exact_run_len: 5
+    max_exact_run: ο εργατησ του μισθου αυτου
+    shared_content_tokens: αξιοσ εργατησ μισθου
+    source_text: λέγει γὰρ ἡ γραφή· Βοῦν ἀλοῶντα οὐ φιμώσεις, καί· Ἄξιος ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ.
+    target_text: ἐν αὐτῇ δὲ τῇ οἰκίᾳ μένετε, ἐσθίοντες καὶ πίνοντες τὰ παρʼ αὐτῶν, ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ ⸀αὐτοῦ.
+      μὴ μεταβαίνετε ἐξ οἰκίας εἰς οἰκίαν.
+  supporting_evidence:
+  - 'The saying segment has a five-token exact run: ο εργατης του μισθου αυτου. Luke has γάρ after ἄξιος; 1 Timothy has γάρ
+    earlier in λέγει γὰρ ἡ γραφή, not inside the quoted saying segment.'
+  - 'max exact run=5: ο εργατησ του μισθου αυτου'
+  - shared content tokens=αξιοσ εργατησ μισθου
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_1tim_5_18_worker_wages_matt_10_10
+  source_ref: 1Tim 5:18
+  target_ref: Matt 10:10
+  feature: worker worthy/deserving motif
+  why_high_value: Matthew preserves the same opening wording but has τροφῆς rather than μισθοῦ.
+  formula_risk: low
+  negative_space_flags: nonfungible_phrase_candidate
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: supports Jesus-saying tradition; less specifically supports Matthew than Luke
+  hypotheses:
+    direct_use_of_matthew: Lower than Luke because the object noun differs.
+    shared_tradition: Very plausible; Matthew and Luke themselves preserve variant forms.
+    independent_convergence: Moderate-to-high burden.
+  automatic_metrics:
+    score: 0.1673
+    token_weighted_jaccard: 0.1267
+    stem_weighted_jaccard: 0.1291
+    lcs_len: 4
+    lcs_ratio: 0.2667
+    max_exact_run_len: 2
+    max_exact_run: ο εργατησ
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: αξιοσ εργατησ
+    shared_content_token_count: 2
+  best_candidate_row:
+    source_ref: 1Tim 5:18
+    target_ref: Luke 10:7
+    score: 0.3436
+    max_exact_run_len: 5
+    max_exact_run: ο εργατησ του μισθου αυτου
+    shared_content_tokens: αξιοσ εργατησ μισθου
+    source_text: λέγει γὰρ ἡ γραφή· Βοῦν ἀλοῶντα οὐ φιμώσεις, καί· Ἄξιος ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ.
+    target_text: ἐν αὐτῇ δὲ τῇ οἰκίᾳ μένετε, ἐσθίοντες καὶ πίνοντες τὰ παρʼ αὐτῶν, ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ ⸀αὐτοῦ.
+      μὴ μεταβαίνετε ἐξ οἰκίας εἰς οἰκίαν.
+  supporting_evidence:
+  - Motif and opening phrase agree, but lexical object differs.
+  - 'max exact run=2: ο εργατησ'
+  - shared content tokens=αξιοσ εργατησ
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_james_5_12_oaths_matt_5_34_37
+  source_ref: Jas 5:12
+  target_ref: Matt 5:34-37
+  feature: no oaths; heaven/earth; yes/yes and no/no
+  why_high_value: This is one of the strongest James–Jesus-tradition overlaps, but exact roots differ at the oath verb.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: shared Jesus tradition, possibly written or oral; direct Matthew dependence not required by the data
+  hypotheses:
+    direct_use_of_matthew: Possible but requires James to compress and rephrase substantially.
+    shared_written_sayings_source: Plausible; compact legal/ethical saying could circulate as a unit.
+    oral_tradition: Very plausible; stable ethical gist and memorable yes/no formula with lexical drift.
+    independent_convergence: High burden because the combined heaven/earth/oath/yes-no pattern is not a generic maxim.
+  automatic_metrics:
+    score: 0.105
+    token_weighted_jaccard: 0.0483
+    stem_weighted_jaccard: 0.0503
+    lcs_len: 11
+    lcs_ratio: 0.3438
+    max_exact_run_len: 2
+    max_exact_run: ναι ναι
+    shared_bigrams: 2
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: μητε ναι
+    shared_content_token_count: 2
+  best_candidate_row: null
+  supporting_evidence:
+  - Shared oath prohibition frame plus yes/no closure; low exact-score because Matthew expands and uses different inflected
+    roots.
+  - 'max exact run=2: ναι ναι'
+  - shared content tokens=μητε ναι
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_james_2_5_poor_kingdom_luke_6_20
+  source_ref: Jas 2:5
+  target_ref: Luke 6:20
+  feature: poor as heirs/possessors of kingdom
+  why_high_value: Combines poverty and kingdom language in an ethical paraenetic context.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: shared beatitude/Jesus tradition rather than demonstrable direct literary dependence
+  hypotheses:
+    direct_use_of_luke: Possible but weak lexically.
+    shared_beatitude_tradition: Plausible and lower burden.
+    oral_tradition: Plausible; beatitude concepts are portable.
+    independent_convergence: Not impossible because poverty/kingdom are common themes, but combined pattern raises burden.
+  automatic_metrics:
+    score: 0.0331
+    token_weighted_jaccard: 0.0184
+    stem_weighted_jaccard: 0.019
+    lcs_len: 1
+    lcs_ratio: 0.0476
+    max_exact_run_len: 1
+    max_exact_run: τουσ
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: τουσ
+    shared_content_token_count: 1
+  best_candidate_row: null
+  supporting_evidence:
+  - Semantic rather than exact verbal agreement; Luke is closer than Matthew’s poor-in-spirit form.
+  - 'max exact run=1: τουσ'
+  - shared content tokens=τουσ
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_james_1_5_6_ask_given_faith
+  source_ref: Jas 1:5-6
+  target_ref: Matt 7:7-8
+  feature: ask and it will be given; ask in confidence
+  why_high_value: Shows how a concept can connect to multiple Jesus-saying clusters without exact quotation.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: shared sapiential prayer tradition with possible Jesus-saying influence
+  hypotheses:
+    direct_use_of_matthew: Weak-to-moderate; needs thematic recomposition.
+    shared_sapiential_and_Jesus_tradition: Plausible.
+    oral_tradition: Plausible.
+    independent_convergence: Plausible if reduced to asking/giving alone; less so when faith/non-doubt is included with Mark
+      11/Matt 21.
+  automatic_metrics:
+    score: 0.0622
+    token_weighted_jaccard: 0.0272
+    stem_weighted_jaccard: 0.0275
+    lcs_len: 4
+    lcs_ratio: 0.1667
+    max_exact_run_len: 2
+    max_exact_run: και δοθησεται
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: δοθησεται
+    shared_content_token_count: 1
+  best_candidate_row: null
+  supporting_evidence:
+  - The ask/give motif is shared, but James frames wisdom and non-doubting.
+  - 'max exact run=2: και δοθησεται'
+  - shared content tokens=δοθησεται
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_james_1_22_25_hear_do_words
+  source_ref: Jas 1:22-25
+  target_ref: Matt 7:24-27
+  feature: hearing and doing the word/words
+  why_high_value: The conceptual agreement is stronger than the wording.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: common sapiential/Jesus tradition; direct dependence unproven
+  hypotheses:
+    direct_use_of_matthew: Possible but not compelling without the house image.
+    shared_Jesus_tradition: Plausible.
+    independent_convergence: Moderate burden; hearing/doing is common in Jewish wisdom.
+  automatic_metrics:
+    score: 0.0473
+    token_weighted_jaccard: 0.0136
+    stem_weighted_jaccard: 0.0138
+    lcs_len: 8
+    lcs_ratio: 0.1231
+    max_exact_run_len: 2
+    max_exact_run: και μη
+    shared_bigrams: 1
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ανδρι
+    shared_content_token_count: 1
+  best_candidate_row: null
+  supporting_evidence:
+  - James abstracts the hear/do contrast into paraenesis; Matthew/Luke narrativize it with house-building imagery.
+  - 'max exact run=2: και μη'
+  - shared content tokens=ανδρι
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_james_4_10_humble_exalt
+  source_ref: Jas 4:10
+  target_ref: Luke 14:11
+  feature: humble oneself / be exalted
+  why_high_value: A compact aphorism found in multiple Gospel contexts.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: portable Jesus/reversal saying; not enough for direct literary dependence
+  hypotheses:
+    direct_use_of_luke: Possible but weak; aphorism migrates easily.
+    shared_saying: Plausible and low burden.
+    independent_convergence: Moderate burden because the reversal aphorism is widespread.
+  automatic_metrics:
+    score: 0.03
+    token_weighted_jaccard: 0.0
+    stem_weighted_jaccard: 0.0
+    lcs_len: 1
+    lcs_ratio: 0.1667
+    max_exact_run_len: 1
+    max_exact_run: και
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ''
+    shared_content_token_count: 0
+  best_candidate_row: null
+  supporting_evidence:
+  - Semantic high, exact lower because James uses imperative paraenesis.
+  - 'max exact run=1: και'
+  - shared content tokens=
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_1cor_11_24_lord_supper_luke_22
+  source_ref: 1Cor 11:24
+  target_ref: Luke 22:19
+  feature: 'Lord’s Supper words: do this in remembrance'
+  why_high_value: Clear formulaic tradition with long exact run; direction cannot be inferred naively because Paul is earlier
+    than Luke on conventional datings.
+  formula_risk: high
+  negative_space_flags: lord_supper_remembrance
+  automatic_retrieval_support: strong
+  philological_case_strength: medium
+  best_current_model: shared formula/tradition more likely than direct Gospel dependence
+  hypotheses:
+    luke_uses_paul_or_pauline_liturgy: Plausible on chronology and formulaic wording.
+    paul_uses_luke: High chronological/access burden on standard datings.
+    shared_liturgical_tradition: Very plausible; formula could predate both forms.
+    independent_convergence: Very high burden.
+  automatic_metrics:
+    score: 0.6228
+    token_weighted_jaccard: 0.6396
+    stem_weighted_jaccard: 0.6396
+    lcs_len: 17
+    lcs_ratio: 0.8947
+    max_exact_run_len: 6
+    max_exact_run: τουτο ποιειτε εισ την εμην αναμνησιν
+    shared_bigrams: 11
+    shared_trigrams: 7
+    shared_fourgrams: 3
+    shared_content_tokens: αναμνησιν εισ εκλασεν εμην εστιν ευχαριστησασ ποιειτε σωμα τουτο
+    shared_content_token_count: 9
+  best_candidate_row:
+    source_ref: 1Cor 11:24
+    target_ref: Luke 22:19
+    score: 0.6228
+    max_exact_run_len: 6
+    max_exact_run: τουτο ποιειτε εισ την εμην αναμνησιν
+    shared_content_tokens: αναμνησιν εισ εκλασεν εμην εστιν ευχαριστησασ ποιειτε σωμα τουτο
+    source_text: καὶ εὐχαριστήσας ἔκλασεν καὶ ⸀εἶπεν· Τοῦτό μού ἐστιν τὸ σῶμα τὸ ὑπὲρ ⸀ὑμῶν· τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.
+    target_text: καὶ λαβὼν ἄρτον εὐχαριστήσας ἔκλασεν καὶ ἔδωκεν αὐτοῖς λέγων· Τοῦτό ἐστιν τὸ σῶμά μου ⸂[τὸ ὑπὲρ ὑμῶν διδόμενον·
+      τοῦτο ποιεῖτε εἰς τὴν ἐμὴν ἀνάμνησιν.
+  supporting_evidence:
+  - Long exact sequence τουτο ποιειτε εις την εμην αναμνησιν.
+  - 'max exact run=6: τουτο ποιειτε εισ την εμην αναμνησιν'
+  - shared content tokens=αναμνησιν εισ εκλασεν εμην εστιν ευχαριστησασ ποιειτε σωμα τουτο
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: epistle_2tim_2_12_denying_christ
+  source_ref: 2Tim 2:12
+  target_ref: Matt 10:33
+  feature: deny him / he will deny us
+  why_high_value: Compact conditional saying with close semantic shape.
+  formula_risk: low
+  negative_space_flags: ''
+  automatic_retrieval_support: weak
+  philological_case_strength: medium
+  best_current_model: shared saying/confessional tradition
+  hypotheses:
+    direct_use_of_matthew: Possible but weak lexically.
+    shared_saying_or_confessional_formula: Plausible.
+    independent_convergence: Moderate burden.
+  automatic_metrics:
+    score: 0.0
+    token_weighted_jaccard: 0.0
+    stem_weighted_jaccard: 0.0
+    lcs_len: 0
+    lcs_ratio: 0.0
+    max_exact_run_len: 0
+    max_exact_run: ''
+    shared_bigrams: 0
+    shared_trigrams: 0
+    shared_fourgrams: 0
+    shared_content_tokens: ''
+    shared_content_token_count: 0
+  best_candidate_row: null
+  supporting_evidence:
+  - Shared denial motif, but phraseology is formulaic and confession/martyrdom context can generate similarity.
+  - 'max exact run=0: '
+  - shared content tokens=
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: johannine_1john_3_13_world_hates_you
+  source_ref: 1John 3:13
+  target_ref: John 15:18-19
+  feature: world hates disciples
+  why_high_value: Tests dependence inside the Johannine corpus, where conceptual and idiolectal continuity matter more than
+    exact quotation.
+  formula_risk: low
+  negative_space_flags: nonfungible_phrase_candidate
+  automatic_retrieval_support: medium
+  philological_case_strength: medium
+  best_current_model: shared Johannine tradition/idiolect; direction requires broader corpus modeling
+  hypotheses:
+    epistle_depends_on_gospel: Plausible but not proven by one motif.
+    gospel_depends_on_epistle_or_shared_school: Possible in a Johannine-community model.
+    shared_johannine_tradition: Very plausible.
+    independent_convergence: Lower burden than Gospel parallels because same school/idiolect may explain.
+  automatic_metrics:
+    score: 0.3705
+    token_weighted_jaccard: 0.1648
+    stem_weighted_jaccard: 0.1677
+    lcs_len: 5
+    lcs_ratio: 0.625
+    max_exact_run_len: 4
+    max_exact_run: μισει υμασ ο κοσμοσ
+    shared_bigrams: 3
+    shared_trigrams: 2
+    shared_fourgrams: 1
+    shared_content_tokens: κοσμοσ μισει υμασ
+    shared_content_token_count: 3
+  best_candidate_row:
+    source_ref: 1John 3:13
+    target_ref: John 15:18-19
+    score: 0.3705
+    max_exact_run_len: 4
+    max_exact_run: μισει υμασ ο κοσμοσ
+    shared_content_tokens: κοσμοσ μισει υμασ
+    source_text: ⸀μὴ θαυμάζετε, ⸀ἀδελφοί, εἰ μισεῖ ὑμᾶς ὁ κόσμος.
+    target_text: Εἰ ὁ κόσμος ὑμᾶς μισεῖ, γινώσκετε ὅτι ἐμὲ πρῶτον ⸀ὑμῶν μεμίσηκεν. εἰ ἐκ τοῦ κόσμου ἦτε, ὁ κόσμος ἂν τὸ ἴδιον
+      ἐφίλει· ὅτι δὲ ἐκ τοῦ κόσμου οὐκ ἐστέ, ἀλλʼ ἐγὼ ἐξελεξάμην ὑμᾶς ἐκ τοῦ κόσμου, διὰ τοῦτο μισεῖ ὑμᾶς ὁ κόσμος.
+  supporting_evidence:
+  - 'Shared Johannine idiom: κόσμος and hate language.'
+  - 'max exact run=4: μισει υμασ ο κοσμοσ'
+  - shared content tokens=κοσμοσ μισει υμασ
+  contrary_or_limiting_evidence:
+  - A high retrieval score is not a posterior probability.
+  - Formula/scriptural/liturgical risk must be assessed separately.
+  - Direction requires access/date/context arguments in addition to lexical agreement.
+- case_id: screened_Eph_5_31_Matt_19_5
+  source_ref: Eph 5:31
+  target_ref: Matt 19:5
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.8524
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.4874
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_42_43
+  source_ref: Heb 1:13
+  target_ref: Luke 20:42-43
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.7035
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.4135
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_41_43
+  source_ref: Heb 1:13
+  target_ref: Luke 20:41-43
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6648
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων προσ τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.3748
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_42_44
+  source_ref: Heb 1:13
+  target_ref: Luke 20:42-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6604
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.3704
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_41_44
+  source_ref: Heb 1:13
+  target_ref: Luke 20:41-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.64
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων προσ τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.35
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_5_6
+  source_ref: Eph 5:31
+  target_ref: Matt 19:5-6
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.7146
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.3496
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_4_5
+  source_ref: Eph 5:31
+  target_ref: Matt 19:4-5
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.7105
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.3455
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_40_43
+  source_ref: Heb 1:13
+  target_ref: Luke 20:40-43
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6312
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων προσ τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.3412
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_42_45
+  source_ref: Heb 1:13
+  target_ref: Luke 20:42-45
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand|ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.627
+    max_exact_run_len: 14
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.337
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_43
+  source_ref: Heb 1:13
+  target_ref: Luke 20:43
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.9225
+    max_exact_run_len: 10
+    max_exact_run: εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: εχθρουσ εωσ θω ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=1.3325
+  - exact run=εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_5_7
+  source_ref: Eph 5:31
+  target_ref: Matt 19:5-7
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6525
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2875
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_4_6
+  source_ref: Eph 5:31
+  target_ref: Matt 19:4-6
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6502
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2852
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_3_5
+  source_ref: Eph 5:31
+  target_ref: Matt 19:3-5
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6431
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2781
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_2_5
+  source_ref: Eph 5:31
+  target_ref: Matt 19:2-5
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6247
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2597
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_5_8
+  source_ref: Eph 5:31
+  target_ref: Matt 19:5-8
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6161
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2511
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_4_7
+  source_ref: Eph 5:31
+  target_ref: Matt 19:4-7
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6157
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2507
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Matt_19_3_6
+  source_ref: Eph 5:31
+  target_ref: Matt 19:3-6
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6111
+    max_exact_run_len: 10
+    max_exact_run: τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ γυναικι δυο εισ εσονται καταλειψει μητερα μιαν πατερα σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.2461
+  - exact run=τη γυναικι αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_7_8
+  source_ref: Eph 5:31
+  target_ref: Mark 10:7-8
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6793
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.1093
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_7_9
+  source_ref: Eph 5:31
+  target_ref: Mark 10:7-9
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6362
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.0662
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_44
+  source_ref: Heb 1:13
+  target_ref: Matt 22:44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6328
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=1.0578
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_19_20
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:19-20
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5695
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=1.0445
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_7_10
+  source_ref: Eph 5:31
+  target_ref: Mark 10:7-10
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6113
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.0413
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_6_8
+  source_ref: Eph 5:31
+  target_ref: Mark 10:6-8
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6092
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.0392
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_6_9
+  source_ref: Eph 5:31
+  target_ref: Mark 10:6-9
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5841
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.0141
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_20
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:20
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5805
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι δειπνησαι διαθηκη καινη ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=1.0055
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_5_8
+  source_ref: Eph 5:31
+  target_ref: Mark 10:5-8
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: gen2_one_flesh
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.573
+    max_exact_run_len: 8
+    max_exact_run: αυτου και εσονται οι δυο εισ σαρκα μιαν
+    shared_content_tokens: ανθρωποσ δυο εισ εσονται καταλειψει μητερα μιαν πατερα προσκολληθησεται σαρκα τουτου
+  supporting_evidence:
+  - candidate priority score=1.003
+  - exact run=αυτου και εσονται οι δυο εισ σαρκα μιαν
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_19_21
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:19-21
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5158
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=0.9908
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_18_20
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:18-20
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5113
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=0.9863
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Mark_12_36
+  source_ref: Heb 1:13
+  target_ref: Mark 12:36
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5565
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9815
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_44_45
+  source_ref: Heb 1:13
+  target_ref: Matt 22:44-45
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5436
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9686
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_43_44
+  source_ref: Heb 1:13
+  target_ref: Matt 22:43-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5412
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9662
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_17_20
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:17-20
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4871
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=0.9621
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_43_45
+  source_ref: Heb 1:13
+  target_ref: Matt 22:43-45
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5318
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9568
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_18_21
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:18-21
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.48
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=0.955
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_43_44
+  source_ref: Heb 1:13
+  target_ref: Luke 20:43-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5449
+    max_exact_run_len: 10
+    max_exact_run: εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: εχθρουσ εωσ θω ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=0.9549
+  - exact run=εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Pet_2_7_Mark_12_10
+  source_ref: 1Pet 2:7
+  target_ref: Mark 12:10
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps118_rejected_stone_short
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.6159
+    max_exact_run_len: 9
+    max_exact_run: ον απεδοκιμασαν οι οικοδομουντεσ ουτοσ εγενηθη εισ κεφαλην γωνιασ
+    shared_content_tokens: απεδοκιμασαν γωνιασ εγενηθη εισ κεφαλην οικοδομουντεσ ουτοσ
+  supporting_evidence:
+  - candidate priority score=0.9509
+  - exact run=ον απεδοκιμασαν οι οικοδομουντεσ ουτοσ εγενηθη εισ κεφαλην γωνιασ
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Cor_11_25_Luke_22_19_22
+  source_ref: 1Cor 11:25
+  target_ref: Luke 22:19-22
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: cup_new_covenant
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4748
+    max_exact_run_len: 10
+    max_exact_run: μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+    shared_content_tokens: αιματι αναμνησιν δειπνησαι διαθηκη εισ εμην εστιν καινη ποιειτε ποτηριον τουτο ωσαυτωσ
+  supporting_evidence:
+  - candidate priority score=0.9498
+  - exact run=μετα το δειπνησαι λεγων τουτο το ποτηριον η καινη διαθηκη
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_42_45
+  source_ref: Heb 1:13
+  target_ref: Matt 22:42-45
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5092
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9342
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_42_44
+  source_ref: Heb 1:13
+  target_ref: Matt 22:42-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5092
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9342
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Mark_12_36_37
+  source_ref: Heb 1:13
+  target_ref: Mark 12:36-37
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5009
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9259
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Mark_12_35_36
+  source_ref: Heb 1:13
+  target_ref: Mark 12:35-36
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5005
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9255
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_41_44
+  source_ref: Heb 1:13
+  target_ref: Matt 22:41-44
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4907
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.9157
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Eph_5_31_Mark_10_7
+  source_ref: Eph 5:31
+  target_ref: Mark 10:7
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: low
+  negative_space_flags: nonfungible_phrase_candidate
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5409
+    max_exact_run_len: 5
+    max_exact_run: τουτου καταλειψει ανθρωποσ τον πατερα
+    shared_content_tokens: ανθρωποσ καταλειψει μητερα πατερα προσκολληθησεται τουτου
+  supporting_evidence:
+  - candidate priority score=0.9109
+  - exact run=τουτου καταλειψει ανθρωποσ τον πατερα
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Luke_20_43_45
+  source_ref: Heb 1:13
+  target_ref: Luke 20:43-45
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_enemies_footstool
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4926
+    max_exact_run_len: 10
+    max_exact_run: εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+    shared_content_tokens: εχθρουσ εωσ θω ποδων τουσ υποποδιον
+  supporting_evidence:
+  - candidate priority score=0.9026
+  - exact run=εωσ αν θω τουσ εχθρουσ σου υποποδιον των ποδων σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Mark_12_35_37
+  source_ref: Heb 1:13
+  target_ref: Mark 12:35-37
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4734
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.8984
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_44_46
+  source_ref: Heb 1:13
+  target_ref: Matt 22:44-46
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4729
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.8979
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_1Pet_2_7_Luke_20_17
+  source_ref: 1Pet 2:7
+  target_ref: Luke 20:17
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps118_rejected_stone_short
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.5619
+    max_exact_run_len: 9
+    max_exact_run: ον απεδοκιμασαν οι οικοδομουντεσ ουτοσ εγενηθη εισ κεφαλην γωνιασ
+    shared_content_tokens: απεδοκιμασαν γωνιασ εγενηθη εισ κεφαλην οικοδομουντεσ ουτοσ
+  supporting_evidence:
+  - candidate priority score=0.8969
+  - exact run=ον απεδοκιμασαν οι οικοδομουντεσ ουτοσ εγενηθη εισ κεφαλην γωνιασ
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_43_46
+  source_ref: Heb 1:13
+  target_ref: Matt 22:43-46
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4684
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.8934
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Mark_12_36_38
+  source_ref: Heb 1:13
+  target_ref: Mark 12:36-38
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4618
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.8868
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation
+- case_id: screened_Heb_1_13_Matt_22_44_23_1
+  source_ref: Heb 1:13
+  target_ref: Matt 22:44-23:1
+  feature: automatic high-priority epistle→Gospel candidate
+  formula_risk: high
+  negative_space_flags: ps110_right_hand
+  automatic_retrieval_support: strong
+  philological_case_strength: unassessed_screening_candidate
+  best_current_model: requires human review; do not infer dependence from retrieval alone
+  automatic_metrics:
+    score: 0.4609
+    max_exact_run_len: 10
+    max_exact_run: καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+    shared_content_tokens: δεξιων εχθρουσ εωσ θω καθου ποδων τουσ
+  supporting_evidence:
+  - candidate priority score=0.8859
+  - exact run=καθου εκ δεξιων μου εωσ αν θω τουσ εχθρουσ σου
+  contrary_or_limiting_evidence:
+  - screened automatically; may be formulaic/scriptural/common phrase
+  - needs context-level evaluation

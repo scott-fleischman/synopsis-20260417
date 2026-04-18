@@ -1,0 +1,53 @@
+all_eight_high_priority_points:
+- item: Mark ↔ Luke direct package
+  status: done
+  primary_files:
+  - 10_mark_luke_verse_similarity_full.csv.gz
+  - 11_mark_luke_primary_chain_pairs.csv
+  - 17_mark_luke_direction_ledger_by_loose_block.yaml
+- item: John ↔ Mark pairwise dashboard/data
+  status: done
+  primary_files:
+  - 30_john_mark_verse_similarity_full.csv.gz
+  - 37_john_synoptic_pairwise_anchor_registry.yaml
+  - 38_john_synoptic_pairwise_global_summary.yaml
+- item: John ↔ Matthew pairwise dashboard/data
+  status: done
+  primary_files:
+  - 31_john_matthew_verse_similarity_full.csv.gz
+  - 37_john_synoptic_pairwise_anchor_registry.yaml
+  - 38_john_synoptic_pairwise_global_summary.yaml
+- item: John ↔ Luke pairwise dashboard/data
+  status: done
+  primary_files:
+  - 32_john_luke_verse_similarity_full.csv.gz
+  - 37_john_synoptic_pairwise_anchor_registry.yaml
+  - 38_john_synoptic_pairwise_global_summary.yaml
+- item: Canonical Gospel relationship square
+  status: done
+  primary_files:
+  - 40_canonical_gospel_relationship_square.csv
+  - 41_canonical_gospel_relationship_square.yaml
+- item: Thomas × Gospel logion matrix
+  status: done
+  primary_files:
+  - 50_thomas_gospel_logion_matrix.csv
+  - 51_thomas_logion_dossiers.yaml
+- item: Epistle–Gospel case dossier view/data
+  status: done
+  primary_files:
+  - 60_epistle_gospel_case_dossiers.yaml
+  - 61_epistle_gospel_targeted_case_table.csv
+  - 62_epistle_gospel_ranked_candidate_cases_top500.csv
+- item: Conclusion → evidence → contrary-evidence navigation
+  status: done
+  primary_files:
+  - 70_conclusion_evidence_contrary_navigation.yaml
+  - 42_visualization_priority_order.yaml
+remaining_limitations:
+- This supplement uses the canonical_units and Thomas units already generated in the prior JTEA package as source snapshots;
+  it does not newly fetch SBLGNT/MorphGNT from the internet.
+- John pairwise analysis is anchor/candidate-based, not a claim of continuous verse-order dependence.
+- Thomas remains curated/logion-level because automatic Coptic-Greek dependence scoring is not implemented.
+- Apocrypha beyond Thomas remains outside this high-priority supplement except through prior inventory; Gospel of Peter and
+  Protevangelium would require separate source ingestion.

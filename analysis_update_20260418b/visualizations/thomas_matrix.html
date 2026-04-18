@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thomas Gospel matrix</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;margin:2rem;max-width:1200px}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92rem}
+td,th{border:1px solid #ddd;padding:0.35rem;vertical-align:top}
+th{background:#f6f6f6;text-align:left}
+code{background:#f3f3f3;padding:0.1rem 0.25rem}
+.card{border:1px solid #ddd;padding:1rem;margin:1rem 0;border-radius:6px}
+.small{color:#555;font-size:0.9rem}
+</style>
+</head>
+<body>
+
+<h1>Thomas × Gospel logion matrix</h1>
+<p>Coptic Thomas is treated logion-by-logion. This is curated/logion-level evidence, not automatic Greek-Coptic dependence scoring.</p>
+<div class="card">
+<p><b>Total Thomas units:</b> 116<br>
+<b>Registered parallel logia:</b> 46<br>
+<b>Matthew/Luke/Mark/John parallel logia:</b> 40 / 39 / 11 / 1</p>
+</div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>thomas_logion</th>
+      <th>motifs</th>
+      <th>matthew_refs</th>
+      <th>mark_refs</th>
+      <th>luke_refs</th>
+      <th>john_refs</th>
+      <th>relation_type</th>
+      <th>matrix_strength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>seek/find and transformation</td>
+      <td>Matt 7:7-8</td>
+      <td></td>
+      <td>Luke 11:9-10</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>kingdom inside/among you</td>
+      <td></td>
+      <td></td>
+      <td>Luke 17:20-21</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>hidden/revealed</td>
+      <td>Matt 10:26</td>
+      <td>Mark 4:22</td>
+      <td>Luke 8:17</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>fasting/prayer/alms disclosure</td>
+      <td>Matt 6:1-18</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>fisherman/net and good fish</td>
+      <td>Matt 13:47-50</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>sower parable</td>
+      <td>Matt 13:3-8</td>
+      <td>Mark 4:3-8</td>
+      <td>Luke 8:5-8</td>
+      <td></td>
+      <td>possible_synoptic_influence_or_harmonization</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>fire cast on earth</td>
+      <td></td>
+      <td></td>
+      <td>Luke 12:49</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>division in household</td>
+      <td>Matt 10:34-36</td>
+      <td></td>
+      <td>Luke 12:51-53</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>mustard seed</td>
+      <td>Matt 13:31-32</td>
+      <td>Mark 4:30-32</td>
+      <td>Luke 13:18-19</td>
+      <td></td>
+      <td>possible_synoptic_influence_or_harmonization</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>speck and beam</td>
+      <td>Matt 7:3-5</td>
+      <td></td>
+      <td>Luke 6:41-42</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>prophet not accepted</td>
+      <td>Matt 13:57</td>
+      <td>Mark 6:4</td>
+      <td>Luke 4:24</td>
+      <td>John 4:44</td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>city on hill</td>
+      <td>Matt 5:14</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>lamp not hidden</td>
+      <td>Matt 5:15</td>
+      <td>Mark 4:21</td>
+      <td>Luke 11:33; Luke 8:16</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>blind leading blind</td>
+      <td>Matt 15:14</td>
+      <td></td>
+      <td>Luke 6:39</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>strong man house/plunder</td>
+      <td>Matt 12:29</td>
+      <td>Mark 3:27</td>
+      <td>Luke 11:21-22</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>anxiety over clothing</td>
+      <td>Matt 6:25-34</td>
+      <td></td>
+      <td>Luke 12:22-31</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>keys/knowledge and exclusion</td>
+      <td>Matt 23:13</td>
+      <td></td>
+      <td>Luke 11:52</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>whoever has will receive</td>
+      <td>Matt 13:12</td>
+      <td>Mark 4:25</td>
+      <td>Luke 19:26; Luke 8:18</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>blasphemy against Spirit</td>
+      <td>Matt 12:31-32</td>
+      <td>Mark 3:28-29</td>
+      <td>Luke 12:10</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>tree and fruit / good and evil treasury</td>
+      <td>Matt 7:16-20</td>
+      <td></td>
+      <td>Luke 6:43-45</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>John the Baptist and least/greatest</td>
+      <td>Matt 11:11</td>
+      <td></td>
+      <td>Luke 7:28</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>new wine/old wineskins; two masters?</td>
+      <td>Matt 6:24; Matt 9:16-17</td>
+      <td>Mark 2:21-22</td>
+      <td>Luke 16:13; Luke 5:36-39</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>blessed poor / kingdom</td>
+      <td>Matt 5:3</td>
+      <td></td>
+      <td>Luke 6:20</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>hate family and carry cross</td>
+      <td>Matt 10:37-38</td>
+      <td></td>
+      <td>Luke 14:26-27</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>weeds/tares</td>
+      <td>Matt 13:24-30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>banquet excuses</td>
+      <td>Matt 22:1-14</td>
+      <td></td>
+      <td>Luke 14:16-24</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>inheritance divider</td>
+      <td></td>
+      <td></td>
+      <td>Luke 12:13-14</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>harvest plentiful, laborers few</td>
+      <td>Matt 9:37-38</td>
+      <td></td>
+      <td>Luke 10:2</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>pearl of great value</td>
+      <td>Matt 13:45-46</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>reed/soft clothing in palaces</td>
+      <td>Matt 11:7-8</td>
+      <td></td>
+      <td>Luke 7:24-25</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>womb/breasts blessing reversed</td>
+      <td></td>
+      <td></td>
+      <td>Luke 11:27-28</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>foxes have holes</td>
+      <td>Matt 8:20</td>
+      <td></td>
+      <td>Luke 9:58</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>clean inside/outside cup</td>
+      <td>Matt 23:25-26</td>
+      <td></td>
+      <td>Luke 11:39-41</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>rest and easy yoke</td>
+      <td>Matt 11:28-30</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>interpreting weather/signs but not the time</td>
+      <td>Matt 16:2-3</td>
+      <td></td>
+      <td>Luke 12:54-56</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>seek/find</td>
+      <td>Matt 7:7-8</td>
+      <td></td>
+      <td>Luke 11:9-10</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>seek/find/knock/open</td>
+      <td>Matt 7:7-8</td>
+      <td></td>
+      <td>Luke 11:9-10</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>lend without return/usury</td>
+      <td></td>
+      <td></td>
+      <td>Luke 6:34-35</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>leaven</td>
+      <td>Matt 13:33</td>
+      <td></td>
+      <td>Luke 13:20-21</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>true family does will of Father</td>
+      <td>Matt 12:46-50</td>
+      <td>Mark 3:31-35</td>
+      <td>Luke 8:19-21</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>Caesar’s coin</td>
+      <td>Matt 22:15-22</td>
+      <td>Mark 12:13-17</td>
+      <td>Luke 20:20-26</td>
+      <td></td>
+      <td>possible_synoptic_influence_or_harmonization</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>hate father/mother</td>
+      <td>Matt 10:37</td>
+      <td></td>
+      <td>Luke 14:26</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>thief known beforehand</td>
+      <td>Matt 24:43</td>
+      <td></td>
+      <td>Luke 12:39</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>lost sheep</td>
+      <td>Matt 18:12-14</td>
+      <td></td>
+      <td>Luke 15:3-7</td>
+      <td></td>
+      <td>shared_sayings_or_parable_tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>treasure hidden in field</td>
+      <td>Matt 13:44</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>possible_synoptic_influence_or_harmonization</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td>kingdom not observable / spread on earth</td>
+      <td></td>
+      <td></td>
+      <td>Luke 17:20-21</td>
+      <td></td>
+      <td>overlapping_jesus_tradition_uncertain_direction</td>
+      <td>medium</td>
+    </tr>
+  </tbody>
+</table>
+<p>Full data: <code>data/50_thomas_gospel_logion_matrix.csv</code>.</p>
+
+</body>
+</html>

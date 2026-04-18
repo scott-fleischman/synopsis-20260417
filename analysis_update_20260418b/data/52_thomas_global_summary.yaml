@@ -1,0 +1,15 @@
+method_class: logion_by_gospel_curated_matrix
+thomas_units_total: 116
+registered_parallel_logia: 46
+registry_entries: 47
+matthew_parallel_logia: 40
+mark_parallel_logia: 11
+luke_parallel_logia: 39
+john_parallel_logia: 1
+relation_type_counts:
+  no_curated_canonical_parallel_in_prior_registry: 70
+  overlapping_jesus_tradition_uncertain_direction: 28
+  shared_sayings_or_parable_tradition: 14
+  possible_synoptic_influence_or_harmonization: 4
+interpretive_reading: Thomas should be visualized as a logion × Gospel matrix. Corpus-level claims are weaker than logion-level
+  dossiers.

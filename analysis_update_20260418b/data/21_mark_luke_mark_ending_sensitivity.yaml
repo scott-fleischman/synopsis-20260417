@@ -1,0 +1,18 @@
+default_policy: exclude Mark 16:9-20 from primary Mark-Luke chain; retain rows in matrix with text-critical flag
+exclude_mark_16_9_20:
+  source_verse_count: 661
+  primary_chain_pair_count: 183
+  chain_score_sum: 73.9635
+  last_primary_pair:
+    source_ref: Mark 15:43
+    target_ref: Luke 23:52
+include_mark_16_9_20:
+  source_verse_count: 673
+  primary_chain_pair_count: 184
+  chain_score_sum: 74.1745
+  long_ending_pairs_in_chain: 1
+  last_primary_pair:
+    source_ref: Mark 16:13
+    target_ref: Luke 24:9
+interpretive_note: The default exclusion prevents later Markan ending material from becoming primary evidence for Luke/Mark
+  direction. Inclusion adds any long-ending alignments only as a sensitivity condition.

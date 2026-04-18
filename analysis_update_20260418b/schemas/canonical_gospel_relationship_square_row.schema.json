@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Gospel relationship square row",
+  "type": "object",
+  "required": [
+    "pair",
+    "method_class",
+    "dominant_interpretive_model",
+    "confidence"
+  ],
+  "properties": {
+    "pair": {
+      "type": "string"
+    },
+    "method_class": {
+      "type": "string"
+    },
+    "dominant_interpretive_model": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "string"
+    }
+  }
+}

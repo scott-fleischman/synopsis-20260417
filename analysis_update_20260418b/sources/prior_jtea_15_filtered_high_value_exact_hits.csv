@@ -1,0 +1,201 @@
+layer,source_ref,target_ref,score,max_exact_run_len,max_exact_run,shared_content_tokens,note
+john_to_synoptic,John 13:21,Matt 26:21,0.612,9,αμην λεγω υμιν οτι εισ εξ υμων παραδωσει με,αμην εισ λεγω παραδωσει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:8,Matt 26:11,0.9814,8,εχετε μεθ εαυτων εμε δε ου παντοτε εχετε,εαυτων εμε εχετε μεθ παντοτε πτωχουσ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:27,Matt 16:16,0.386,8,συ ει ο χριστοσ ο υιοσ του θεου,υιοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:13,Mark 11:9,0.4694,7,ωσαννα ευλογημενοσ ο ερχομενοσ εν ονοματι κυριου,ερχομενοσ ευλογημενοσ ονοματι ωσαννα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:2,Mark 8:27,0.3847,7,ο ιησουσ και οι μαθηται αυτου εισ,εισ ιησουσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:13,Matt 23:39-24:1,0.2981,7,ευλογημενοσ ο ερχομενοσ εν ονοματι κυριου και,αυτω ερχομενοσ ευλογημενοσ ονοματι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:27,Mark 14:61,0.2972,7,συ ει ο χριστοσ ο υιοσ του,αυτω υιοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:22,Mark 8:27,0.2483,7,ο ιησουσ και οι μαθηται αυτου εισ,εισ ιησουσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 5:8,Mark 2:11,0.5733,6,εγειρε αρον τον κραβαττον σου και,αρον εγειρε κραβαττον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 5:8,Mark 2:9,0.5636,6,αρον τον κραβαττον σου και περιπατει,αρον εγειρε κραβαττον περιπατει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:15,Matt 21:5,0.4567,6,σιων ιδου ο βασιλευσ σου ερχεται,βασιλευσ ερχεται ιδου πωλον σιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:39,Mark 15:9,0.446,6,απολυσω υμιν τον βασιλεα των ιουδαιων,απολυσω βασιλεα ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 10:16,John 12:38-39,0.4164,6,κυριε τισ επιστευσεν τη ακοη ημων,ακοη επιστευσεν ησαιασ κυριε τισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:33,Mark 15:2,0.4149,6,συ ει ο βασιλευσ των ιουδαιων,αυτω βασιλευσ ιουδαιων πιλατοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 5:11,Mark 2:9,0.3748,6,αρον τον κραβαττον σου και περιπατει,αρον κραβαττον περιπατει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Eph 5:31,Matt 19:19,0.3227,6,τον πατερα και την μητερα και,μητερα πατερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:13,Matt 23:39,0.3164,6,ευλογημενοσ ο ερχομενοσ εν ονοματι κυριου,ερχομενοσ ευλογημενοσ ονοματι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:31,Matt 16:16,0.2894,6,ο χριστοσ ο υιοσ του θεου,υιοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:12,Mark 3:31,0.2738,6,η μητηρ αυτου και οι αδελφοι,αδελφοι μητηρ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:3,Luke 6:7,0.2729,6,δε οι γραμματεισ και οι φαρισαιοι,γραμματεισ φαρισαιοι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:29,Mark 14:21-24,0.2546,6,και ειπεν αυτοισ τουτο εστιν το,αυτοισ εκεινοσ εστιν τουτο,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:14,John 5:24,0.2425,6,εκ του θανατου εισ την ζωην,εισ ζωην θανατου,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:5,Mark 9:47,0.2378,6,εισελθειν εισ την βασιλειαν του θεου,βασιλειαν εισ εισελθειν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:19,Mark 3:3-4,0.1766,6,εισ το μεσον και λεγει αυτοισ,αυτοισ εισ μεσον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:1,Luke 22:39,0.6093,5,εισ το οροσ των ελαιων,εισ ελαιων επορευθη οροσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:8,Mark 14:7,0.5923,5,εμε δε ου παντοτε εχετε,εαυτων εμε εχετε μεθ παντοτε πτωχουσ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Eph 5:31,Mark 10:7,0.5409,5,τουτου καταλειψει ανθρωποσ τον πατερα,ανθρωποσ καταλειψει μητερα πατερα προσκολληθησεται τουτου,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Cor 6:16,Mark 10:8,0.3871,5,οι δυο εισ σαρκα μιαν,δυο εισ εσονται μιαν σαρκα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:4,John 8:34,0.3711,5,πασ ο ποιων την αμαρτιαν,αμαρτιαν εστιν πασ ποιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 2:15,Luke 12:11,0.3541,5,τασ αρχασ και τασ εξουσιασ,αρχασ εξουσιασ τασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:1,Luke 18:33,0.3525,5,και τη ημερα τη τριτη,ημερα τριτη,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Tim 5:18,Luke 10:7,0.3436,5,ο εργατησ του μισθου αυτου,αξιοσ εργατησ μισθου,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:2,Matt 27:29,0.3429,5,πλεξαντεσ στεφανον εξ ακανθων επεθηκαν,ακανθων επεθηκαν πλεξαντεσ στεφανον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Gal 5:14,Luke 10:27,0.3373,5,τον πλησιον σου ωσ σεαυτον,αγαπησεισ πλησιον σεαυτον ωσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,2Pet 1:17,Matt 3:17,0.3356,5,ο υιοσ μου ο αγαπητοσ,αγαπητοσ εστιν ευδοκησα ουτοσ υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 5:11,Mark 2:11,0.3295,5,αρον τον κραβαττον σου και,αρον κραβαττον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Jas 2:8,Luke 10:27,0.3202,5,τον πλησιον σου ωσ σεαυτον,αγαπησεισ πλησιον σεαυτον ωσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:13,John 1:12,0.3124,5,τοισ πιστευουσιν εισ το ονομα,εισ ονομα πιστευουσιν τοισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:3,Matt 23:2,0.3088,5,οι γραμματεισ και οι φαρισαιοι,γραμματεισ φαρισαιοι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:5,Matt 21:31,0.2975,5,εισ την βασιλειαν του θεου,αμην βασιλειαν εισ ιησουσ λεγω τισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:14,Matt 21:11-12,0.2926,5,ιησουσ εισ το ιερον και,εισ ιερον ιησουσ τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:29,John 8:34,0.2914,5,οτι πασ ο ποιων την,εστιν πασ ποιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 13:38,Matt 5:26,0.2849,5,αμην λεγω σοι ου μη,αμην εωσ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 21:21,Mark 9:5-7,0.2801,5,ο πετροσ λεγει τω ιησου,ιησου ουτοσ πετροσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:1,Luke 24:1-2,0.2756,5,τη δε μια των σαββατων,λιθον μια μνημειου σαββατων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:57,Luke 23:10,0.275,5,δε οι αρχιερεισ και οι,αρχιερεισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:69,Mark 1:24,0.2739,5,ει ο αγιοσ του θεου,αγιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:42,Matt 19:19,0.2734,5,τον πατερα και την μητερα,μητερα πατερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 17:1,Luke 6:20,0.2688,5,επαρασ τουσ οφθαλμουσ αυτου εισ,εισ επαρασ οφθαλμουσ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:15,Matt 26:3,0.2683,5,εισ την αυλην του αρχιερεωσ,αρχιερεωσ αυλην εισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:3,Mark 15:26-27,0.2612,5,ο βασιλευσ των ιουδαιων και,αυτω βασιλευσ ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:12,Luke 8:20-23,0.2604,5,και οι μαθηται αυτου και,αδελφοι αυτοσ εισ κατεβη μαθηται μητηρ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:14,Luke 9:22,0.2585,5,δει τον υιον του ανθρωπου,ανθρωπου δει υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:57,Matt 27:62,0.257,5,οι αρχιερεισ και οι φαρισαιοι,αρχιερεισ εστιν φαρισαιοι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:32,Matt 21:45,0.2547,5,οι αρχιερεισ και οι φαρισαιοι,αρχιερεισ φαρισαιοι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 14:17,Luke 13:18,0.2515,5,εστιν η βασιλεια του θεου,βασιλεια εστιν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:47,Matt 21:45,0.2508,5,οι αρχιερεισ και οι φαρισαιοι,αρχιερεισ φαρισαιοι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 13:9,Luke 10:27,0.2501,5,τον πλησιον σου ωσ σεαυτον,αγαπησεισ πλησιον σεαυτον ωσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:9,John 3:8-9,0.2497,5,πασ ο γεγεννημενοσ εκ του,αυτω γεγεννημενοσ δυναται πασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 1:43,Mark 14:28-30,0.2488,5,και λεγει αυτω ο ιησουσ,αυτω γαλιλαιαν εισ ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:16,Luke 16:27,0.248,5,τον οικον του πατροσ μου,οικον πατροσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:40,Matt 7:21,0.2474,5,το θελημα του πατροσ μου,εισ θελημα πασ πατροσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 16:13,Matt 2:21,0.2469,5,και την μητερα αυτου και,μητερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:10,John 3:36,0.2455,5,ο πιστευων εισ τον υιον,εισ εχει πιστευων υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:18,John 3:8-11,0.24,5,πασ ο γεγεννημενοσ εκ του,αλλ γεγεννημενοσ οιδαμεν πασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:35,Luke 12:10,0.2378,5,εισ τον υιον του ανθρωπου,ανθρωπου εισ υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 13:31,Mark 2:25-28,0.2336,5,ο υιοσ του ανθρωπου και,ανθρωπου αυτω οτε υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:34,Matt 5:26-28,0.225,5,λεγω υμιν οτι πασ ο,αμην λεγω πασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 1:51,Mark 9:12-14,0.2205,5,επι τον υιον του ανθρωπου,ανθρωπου αυτω λεγω τουσ υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:12,John 7:7,0.2171,5,οτι τα εργα αυτου πονηρα,εργα πονηρα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:27,Luke 22:67-70,0.2169,5,ο υιοσ του θεου ο,υιοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:11,John 1:18-19,0.2146,5,και αυτη εστιν η μαρτυρια,εστιν θεοσ μαρτυρια,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Eph 5:31,John 6:42-45,0.2129,5,τον πατερα και την μητερα,εσονται μητερα πατερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:10,Matt 4:20-21,0.2126,5,τον αδελφον αυτου εν τω,αδελφον αυτω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:38,Luke 23:50-53,0.2099,5,το σωμα του ιησου και,αριμαθαιασ ιησου ιουδαιων ιωσηφ σωμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 4:11,Luke 18:24,0.207,5,εισ την βασιλειαν του θεου,βασιλειαν εισ ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 11:1,Luke 7:14-16,0.2002,5,ο θεοσ τον λαον αυτου,θεοσ λαον λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:1,John 20:31,0.1956,5,οτι ιησουσ εστιν ο χριστοσ,εστιν ιησουσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:24,Matt 18:3,0.195,5,αμην λεγω υμιν εαν μη,αμην εισ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:17,Luke 15:18,0.1934,5,προσ τον πατερα μου και,πατερα προσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:40,Luke 23:52-53,0.1883,5,το σωμα του ιησου και,ιησου σωμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:31,Mark 14:61-62,0.1865,5,ο χριστοσ ο υιοσ του,ιησουσ υιοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:9,John 1:19,0.1863,5,αυτη εστιν η μαρτυρια του,εστιν μαρτυρια,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,2Tim 1:18,Luke 6:23,0.1841,5,εν εκεινη τη ημερα και,εκεινη ημερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 11:2,Luke 7:16,0.1821,5,ο θεοσ τον λαον αυτου,θεοσ λαον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 10:24,Luke 22:67,0.181,5,ει συ ει ο χριστοσ,χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:3,Mark 7:25-26,0.1777,5,τουσ ποδασ αυτου η δε,αυτησ ποδασ τησ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:6,Luke 24:20,0.1777,5,αυτον οι αρχιερεισ και οι,αρχιερεισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:53,Matt 18:3,0.1755,5,αμην λεγω υμιν εαν μη,αμην λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:3,Luke 8:35-37,0.1655,5,τουσ ποδασ του ιησου και,ιησου ποδασ τησ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:4,Luke 18:22-25,0.157,5,ακουσασ δε ο ιησουσ ειπεν,ακουσασ εστιν ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:20,Luke 24:40,0.5133,4,και τουτο ειπων εδειξεν,αυτοισ εδειξεν ειπων τασ τουτο χειρασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:20,Matt 14:27,0.4703,4,εγω ειμι μη φοβεισθε,αυτοισ ειμι φοβεισθε,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:27,Matt 26:74,0.4485,4,και ευθεωσ αλεκτωρ εφωνησεν,αλεκτωρ ευθεωσ εφωνησεν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:13,John 15:19,0.3979,4,μισει υμασ ο κοσμοσ,κοσμοσ μισει υμασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:41,Matt 21:11,0.3919,4,ελεγον ουτοσ εστιν ο,γαλιλαιασ ελεγον εστιν ουτοσ τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:53,Matt 9:7,0.3905,4,εισ τον οικον αυτου,εισ οικον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,2Cor 13:1,Matt 18:16,0.3787,4,επι στοματοσ δυο μαρτυρων,δυο μαρτυρων ρημα στοματοσ τριων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:24,Matt 26:57,0.3699,4,προσ καιαφαν τον αρχιερεα,αρχιερεα καιαφαν προσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:1,Mark 11:1,0.3654,4,το οροσ των ελαιων,εισ ελαιων οροσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 1:38,Luke 22:9,0.3606,4,οι δε ειπαν αυτω,αυτω ειπαν που,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:23,John 15:12,0.3475,4,αυτη εστιν η εντολη,αλληλουσ εντολη εστιν καθωσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:5,Matt 26:25,0.3415,4,ιουδασ ο παραδιδουσ αυτον,αυτω ειμι ιουδασ παραδιδουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:29,Luke 18:3,0.3367,4,και ηρχετο προσ αυτον,εκεινη ηρχετο προσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:33,Luke 23:38,0.3233,4,ο βασιλευσ των ιουδαιων,αυτω βασιλευσ ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Cor 1:15,Matt 18:20,0.3221,4,εισ το εμον ονομα,εισ εμον ονομα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:40,Matt 13:15,0.3179,4,ιδωσιν τοισ οφθαλμοισ και,αυτουσ ιασομαι ιδωσιν καρδια οφθαλμοισ οφθαλμουσ τοισ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Cor 15:4,Luke 18:33,0.3019,4,τη ημερα τη τριτη,ημερα τριτη,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:3,Luke 23:38,0.3002,4,ο βασιλευσ των ιουδαιων,αυτω βασιλευσ ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:19,Matt 27:40,0.2986,4,και εν τρισιν ημεραισ,ημεραισ ναον τρισιν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Pet 1:25,John 8:35,0.2962,4,μενει εισ τον αιωνα,αιωνα εισ μενει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 4:9,John 3:17,0.2957,4,εισ τον κοσμον ινα,δι εισ θεοσ κοσμον υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Eph 3:17,Luke 21:14,0.2956,4,εν ταισ καρδιαισ υμων,καρδιαισ ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:34,Mark 12:8,0.2923,4,και εξεβαλον αυτον εξω,εξεβαλον εξω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 3:15,Luke 21:14,0.2915,4,εν ταισ καρδιαισ υμων,καρδιαισ ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:17,Mark 5:1,0.2901,4,περαν τησ θαλασσησ εισ,εισ θαλασσησ περαν τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:30,Mark 15:32,0.2899,4,ινα ιδωμεν και πιστευσωμεν,αυτω ιδωμεν πιστευσωμεν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:14,Mark 11:11,0.2886,4,εισ το ιερον και,εισ ηδη ιερον τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 4:30,Mark 1:45,0.288,4,και ηρχοντο προσ αυτον,ηρχοντο προσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,2Cor 9:9,John 8:35,0.2873,4,μενει εισ τον αιωνα,αιωνα εισ μενει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:14,Luke 20:32-34,0.2857,4,ειπεν αυτοισ ο ιησουσ,απεθανεν αυτοισ ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:24,Matt 26:14,0.2853,4,των δωδεκα ο λεγομενοσ,δωδεκα εισ λεγομενοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 2:2,Matt 9:19,0.2852,4,και οι μαθηται αυτου,ιησουσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:17,John 8:34-35,0.2828,4,μενει εισ τον αιωνα,αιωνα εισ μενει ποιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:35,Luke 22:48,0.2796,4,τον υιον του ανθρωπου,ανθρωπου ιησουσ υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Pet 3:15,Luke 21:14,0.2782,4,εν ταισ καρδιαισ υμων,καρδιαισ ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 3:23,John 11:4,0.2772,4,τησ δοξησ του θεου,δοξησ τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:11,John 12:35,0.2749,4,ουκ οιδεν που υπαγει,εστιν οιδεν που σκοτια υπαγει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:40,Luke 23:52,0.2744,4,το σωμα του ιησου,ιησου σωμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Cor 15:17,John 8:23-24,0.2722,4,εν ταισ αμαρτιαισ υμων,αμαρτιαισ εστε ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:19,Luke 23:38,0.2719,4,ο βασιλευσ των ιουδαιων,βασιλευσ ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:50,Matt 5:29,0.2718,4,και μη ολον το,αποληται εισ ολον συμφερει,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1Cor 11:25,Luke 22:19,0.2712,4,εισ την εμην αναμνησιν,αναμνησιν εισ εμην εστιν ποιειτε τουτο,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:21,Luke 23:37,0.271,4,ο βασιλευσ των ιουδαιων,βασιλευσ ιουδαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 13:16,Matt 25:12,0.2709,4,αμην λεγω υμιν ουκ,αμην λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:23,Luke 12:40,0.2708,4,ο υιοσ του ανθρωπου,ανθρωπου υιοσ ωρα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 3:6,John 3:16,0.2706,4,ο θεοσ τον κοσμον,θεοσ κοσμον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:12,Luke 23:52,0.2701,4,το σωμα του ιησου,ιησου σωμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 10:7,Matt 21:31,0.269,4,αυτοισ ο ιησουσ αμην,αμην αυτοισ ιησουσ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 2:8,Matt 24:4,0.2678,4,βλεπετε μη τισ υμασ,βλεπετε τισ υμασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:5,Luke 18:17,0.2667,4,την βασιλειαν του θεου,αμην βασιλειαν εισ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 3:16,Luke 21:14,0.2664,4,εν ταισ καρδιαισ υμων,καρδιαισ ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 2:8,Mark 7:8,0.2649,4,την παραδοσιν των ανθρωπων,ανθρωπων παραδοσιν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,2Pet 1:19,Luke 21:14,0.264,4,εν ταισ καρδιαισ υμων,καρδιαισ ταισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:38,Luke 23:52,0.2639,4,το σωμα του ιησου,ιησου σωμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 1:51,Matt 26:64,0.2607,4,τον υιον του ανθρωπου,ανθρωπου αυτω λεγω οψεσθε υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:12,Mark 6:15,0.2606,4,εστιν αλλοι δε ελεγον,αλλοι ελεγον εστιν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:13,Luke 17:24,0.2581,4,ο υιοσ του ανθρωπου,ανθρωπου εισ ουρανον υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:13,John 3:16-18,0.2577,4,εισ το ονομα του,αιωνιον εισ ζωην ονομα υιου,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:3,Matt 21:31,0.2576,4,την βασιλειαν του θεου,αμην βασιλειαν ιησουσ λεγω τισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 10:7,Matt 26:19-22,0.2567,4,αμην λεγω υμιν οτι,αμην αυτοισ ειμι ιησουσ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 13:31,Luke 22:69,0.2548,4,ο υιοσ του ανθρωπου,ανθρωπου νυν υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Heb 10:15,John 14:26,0.2543,4,το πνευμα το αγιον,αγιον πνευμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 4:29,Matt 12:23,0.2539,4,μητι ουτοσ εστιν ο,εστιν μητι ουτοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:28,Mark 12:29-32,0.2532,4,και ειπεν αυτω ο,απεκριθη αυτω θεοσ κυριοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Heb 10:21,Matt 12:4,0.2518,4,τον οικον του θεου,οικον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 6:62,Luke 22:48,0.2518,4,τον υιον του ανθρωπου,ανθρωπου υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:28,Luke 22:48,0.2515,4,τον υιον του ανθρωπου,ανθρωπου ιησουσ υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:26,Luke 23:35,0.2513,4,ουτοσ εστιν ο χριστοσ,αρχοντεσ εστιν ουτοσ χριστοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 4:31,Matt 17:10,0.251,4,αυτον οι μαθηται λεγοντεσ,λεγοντεσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:2,Luke 21:38,0.2505,4,και πασ ο λαοσ,λαοσ πασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:5,John 11:25-27,0.2486,4,ο υιοσ του θεου,ιησουσ κοσμον πιστευων υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:34,Matt 21:31,0.2485,4,αυτοισ ο ιησουσ αμην,αμην αυτοισ ιησουσ λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Gal 2:2,Mark 4:34,0.2484,4,κατ ιδιαν δε τοισ,αυτοισ ιδιαν κατ τοισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:22,Matt 9:19,0.2483,4,και οι μαθηται αυτου,ιησουσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 15:21,Luke 21:17,0.2476,4,δια το ονομα μου,ονομα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Jas 5:8,Luke 16:15,0.2464,4,τασ καρδιασ υμων οτι,καρδιασ τασ υμεισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 8:34,Matt 24:45-47,0.2463,4,αμην λεγω υμιν οτι,αμην αυτοισ δουλοσ εστιν λεγω τησ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 4:15,John 20:28-31,0.2433,4,οτι ιησουσ εστιν ο,αυτω εστιν θεοσ ιησουσ υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:34,Luke 22:48,0.243,4,τον υιον του ανθρωπου,ανθρωπου αυτω υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:8,John 1:9,0.2419,4,το φωσ το αληθινον,αληθινον φωσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 13:21,Matt 24:34,0.2418,4,αμην λεγω υμιν οτι,αμην λεγω ταυτα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:2,Matt 26:25,0.241,4,ιουδασ ο παραδιδουσ αυτον,ιουδασ παραδιδουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Heb 3:7,John 14:26-27,0.2402,4,το πνευμα το αγιον,αγιον καθωσ πνευμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 3:8,John 8:34-35,0.2401,4,ο ποιων την αμαρτιαν,αμαρτιαν εισ εστιν ποιων υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:38,Matt 27:13,0.2383,4,λεγει αυτω ο πιλατοσ,αυτω πιλατοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 14:20,Mark 4:35,0.2377,4,εν εκεινη τη ημερα,εκεινη ημερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:20,Matt 12:23,0.236,4,ουτοσ εστιν ο υιοσ,εστιν ουτοσ υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 16:26,Mark 4:35,0.2359,4,εν εκεινη τη ημερα,εκεινη ημερα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:14,Luke 22:48,0.2353,4,τον υιον του ανθρωπου,ανθρωπου υιον,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 3:3,Luke 23:43,0.2347,4,και ειπεν αυτω αμην,αμην αυτω λεγω,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:40,Luke 6:2-3,0.2345,4,οι μετ αυτου οντεσ,μετ οντεσ φαρισαιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 4:14,Mark 3:29,0.233,4,εισ τον αιωνα αλλα,αιωνα αλλα εισ οσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 7:44,Luke 20:19,0.2319,4,επ αυτον τασ χειρασ,επ τασ χειρασ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:4,John 3:6,0.2306,4,το γεγεννημενον εκ του,γεγεννημενον εστιν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 20:30,Luke 3:18,0.2306,4,πολλα μεν ουν και,πολλα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 21:12,Mark 1:17,0.2297,4,αυτοισ ο ιησουσ δευτε,αυτοισ δευτε ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Gal 3:16,Luke 1:55,0.2289,4,και τω σπερματι αυτου,αβρααμ σπερματι,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 5:13,John 5:24-25,0.2287,4,του υιου του θεου,αιωνιον εισ ζωην υιου,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:2,Luke 8:9,0.2285,4,αυτον οι μαθηται αυτου,μαθηται τισ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Col 4:11,Luke 13:20,0.2281,4,την βασιλειαν του θεου,βασιλειαν,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 18:1,Matt 9:19,0.2278,4,και οι μαθηται αυτου,ιησουσ μαθηται,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,1John 2:17,Matt 7:21,0.2275,4,ποιων το θελημα του,εισ θελημα ποιων,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 12:3,Luke 10:39,0.2274,4,τουσ ποδασ του ιησου,ιησου μαριαμ ποδασ τουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 1:43,Matt 4:10-13,0.2269,4,εισ την γαλιλαιαν και,αυτω γαλιλαιαν εισ ιησουσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 19:25,Mark 15:40,0.2266,4,και μαρια η μαγδαληνη,μαγδαληνη μαρια μητηρ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 11:47,Luke 14:30,0.2248,4,οτι ουτοσ ο ανθρωποσ,ανθρωποσ ουτοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Rom 11:14,John 6:52-54,0.2238,4,μου την σαρκα και,πωσ σαρκα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+epistle_to_gospel,Eph 4:30,Mark 3:29,0.2235,4,το πνευμα το αγιον,αγιον εισ πνευμα,Scripture/liturgy patterns filtered by heuristic list; still requires human review.
+john_to_synoptic,John 9:19,Matt 12:23,0.2232,4,ουτοσ εστιν ο υιοσ,εστιν ουτοσ υιοσ,Scripture/liturgy patterns filtered by heuristic list; still requires human review.

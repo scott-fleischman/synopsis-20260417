@@ -1,0 +1,57 @@
+- rank: 1
+  view_id: conclusions_dashboard
+  title: Conclusions with evidence and contrary evidence
+  why_first: Starts with claims, not metrics; gives links to supporting and limiting data.
+  data_files:
+  - 70_conclusion_evidence_contrary_navigation.yaml
+- rank: 2
+  view_id: canonical_gospel_square
+  title: Canonical Gospel relationship square
+  why_first: Shows which method applies to each Gospel pair and where missing/strong evidence sits.
+  data_files:
+  - 40_canonical_gospel_relationship_square.csv
+  - 41_canonical_gospel_relationship_square.yaml
+- rank: 3
+  view_id: mark_luke_direct
+  title: Mark ↔ Luke direct alignment
+  why_first: Fills the largest missing Synoptic comparison and tests Mark-like narrative source behavior against Luke.
+  data_files:
+  - 11_mark_luke_primary_chain_pairs.csv
+  - 17_mark_luke_direction_ledger_by_loose_block.yaml
+  - 21_mark_luke_mark_ending_sensitivity.yaml
+- rank: 4
+  view_id: john_pairwise
+  title: John ↔ Mark/Matthew/Luke pairwise anchors
+  why_first: Promotes John from side-package to first-class Gospel relationship problem.
+  data_files:
+  - 37_john_synoptic_pairwise_anchor_registry.yaml
+  - 38_john_synoptic_pairwise_global_summary.yaml
+  - 39_john_synoptic_pairwise_support_contra.yaml
+- rank: 5
+  view_id: matthew_luke_masked_q_core
+  title: Matthew ↔ Luke masked double tradition / Q-core
+  why_first: Best existing entry for non-Markan Matthew-Luke material; retained as prior package.
+  data_files:
+  - 'prior package: matt_luke_double_masked_analysis/data/*'
+- rank: 6
+  view_id: thomas_logion_matrix
+  title: Thomas × Gospel logion matrix
+  why_first: Shows Thomas as logion-level evidence rather than a corpus-level yes/no dependence claim.
+  data_files:
+  - 50_thomas_gospel_logion_matrix.csv
+  - 51_thomas_logion_dossiers.yaml
+- rank: 7
+  view_id: epistle_case_dossiers
+  title: Epistle → Gospel case dossiers
+  why_first: Puts high-impact cases such as 1Tim 5:18/Luke 10:7 and James oath material in front of heatmaps.
+  data_files:
+  - 60_epistle_gospel_case_dossiers.yaml
+  - 61_epistle_gospel_targeted_case_table.csv
+  - 62_epistle_gospel_ranked_candidate_cases_top500.csv
+- rank: 8
+  view_id: audit_and_sensitivity
+  title: Audit and sensitivity
+  why_first: Lets scholars test whether conclusions depend on thresholds, Mark ending inclusion, or mask rules.
+  data_files:
+  - 20_mark_luke_sensitivity_score_grid.csv
+  - 21_mark_luke_mark_ending_sensitivity.yaml

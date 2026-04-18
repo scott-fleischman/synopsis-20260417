@@ -1,0 +1,1782 @@
+- block_id: loose_001
+  span:
+    Mark: Mark 1:3–Mark 1:3
+    Luke: Luke 3:4–Luke 3:4
+  pair_count: 1
+  mean_score: 0.7358
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 1.3415
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.3415
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 1:3
+    target_ref: Luke 3:4
+    score: 0.7358
+    max_exact_run_len: 9
+- block_id: loose_002
+  span:
+    Mark: Mark 1:7–Mark 1:11
+    Luke: Luke 3:16–Luke 3:22
+  pair_count: 2
+  mean_score: 0.3188
+  coded_features:
+    mark_gap_verses_inside_block: 3
+    luke_gap_verses_inside_block: 5
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.2624
+    exact_agreement_pressure_against_pure_common_tradition: 0.3826
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 7.8124
+      must_explain:
+      - 5 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 3 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 9.5124
+      must_explain:
+      - 3 Mark gap verse(s) as Markan addition.
+      - 5 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.64
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 1:7
+    target_ref: Luke 3:16
+    score: 0.3526
+    max_exact_run_len: 3
+  - source_ref: Mark 1:11
+    target_ref: Luke 3:22
+    score: 0.285
+    max_exact_run_len: 3
+- block_id: loose_003
+  span:
+    Mark: Mark 1:21–Mark 1:31
+    Luke: Luke 4:31–Luke 4:39
+  pair_count: 7
+  mean_score: 0.3943
+  coded_features:
+    mark_gap_verses_inside_block: 4
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 2
+    score_penalty: 0.3899
+    exact_agreement_pressure_against_pure_common_tradition: 3.4561
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 6.2899
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 4 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 7.3899
+      must_explain:
+      - 4 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 5.14
+      must_explain:
+      - 2 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 1:21
+    target_ref: Luke 4:31
+    score: 0.2623
+    max_exact_run_len: 2
+  - source_ref: Mark 1:22
+    target_ref: Luke 4:32
+    score: 0.2532
+    max_exact_run_len: 2
+  - source_ref: Mark 1:23
+    target_ref: Luke 4:33
+    score: 0.2689
+    max_exact_run_len: 2
+  - source_ref: Mark 1:24
+    target_ref: Luke 4:34
+    score: 0.9274
+    max_exact_run_len: 8
+  - source_ref: Mark 1:25
+    target_ref: Luke 4:35
+    score: 0.5558
+    max_exact_run_len: 5
+  - source_ref: Mark 1:29
+    target_ref: Luke 4:38
+    score: 0.2732
+    max_exact_run_len: 3
+  - source_ref: Mark 1:31
+    target_ref: Luke 4:39
+    score: 0.2191
+    max_exact_run_len: 2
+- block_id: loose_004
+  span:
+    Mark: Mark 1:39–Mark 1:39
+    Luke: Luke 4:44–Luke 4:44
+  pair_count: 1
+  mean_score: 0.4481
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.0019
+    exact_agreement_pressure_against_pure_common_tradition: 1.1689
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0019
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0019
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.17
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 1:39
+    target_ref: Luke 4:44
+    score: 0.4481
+    max_exact_run_len: 4
+- block_id: loose_005
+  span:
+    Mark: Mark 1:40–Mark 1:44
+    Luke: Luke 5:12–Luke 5:14
+  pair_count: 3
+  mean_score: 0.3745
+  coded_features:
+    mark_gap_verses_inside_block: 2
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.2265
+    exact_agreement_pressure_against_pure_common_tradition: 1.5741
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 2.4265
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 2 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 2.7265
+      must_explain:
+      - 2 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 3.16
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 1:40
+    target_ref: Luke 5:12
+    score: 0.1903
+    max_exact_run_len: 3
+  - source_ref: Mark 1:41
+    target_ref: Luke 5:13
+    score: 0.4346
+    max_exact_run_len: 3
+  - source_ref: Mark 1:44
+    target_ref: Luke 5:14
+    score: 0.4985
+    max_exact_run_len: 5
+- block_id: loose_006
+  span:
+    Mark: Mark 2:5–Mark 3:5
+    Luke: Luke 5:20–Luke 6:10
+  pair_count: 20
+  mean_score: 0.3596
+  coded_features:
+    mark_gap_verses_inside_block: 9
+    luke_gap_verses_inside_block: 10
+    low_score_primary_pairs_under_0_25: 4
+    close_pairs_score_ge_0_45_or_run_ge_4: 10
+    score_penalty: 1.808
+    exact_agreement_pressure_against_pure_common_tradition: 13.3152
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 21.458
+      must_explain:
+      - 10 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 9 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 25.308
+      must_explain:
+      - 9 Mark gap verse(s) as Markan addition.
+      - 10 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 16.35
+      must_explain:
+      - 10 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 2:5
+    target_ref: Luke 5:20
+    score: 0.2594
+    max_exact_run_len: 1
+  - source_ref: Mark 2:7
+    target_ref: Luke 5:21
+    score: 0.2599
+    max_exact_run_len: 2
+  - source_ref: Mark 2:8
+    target_ref: Luke 5:22
+    score: 0.3131
+    max_exact_run_len: 3
+  - source_ref: Mark 2:9
+    target_ref: Luke 5:23
+    score: 0.5334
+    max_exact_run_len: 3
+  - source_ref: Mark 2:10
+    target_ref: Luke 5:24
+    score: 0.4657
+    max_exact_run_len: 4
+  - source_ref: Mark 2:14
+    target_ref: Luke 5:27
+    score: 0.3513
+    max_exact_run_len: 4
+  - source_ref: Mark 2:17
+    target_ref: Luke 5:32
+    score: 0.3263
+    max_exact_run_len: 4
+  - source_ref: Mark 2:19
+    target_ref: Luke 5:34
+    score: 0.2553
+    max_exact_run_len: 4
+  - source_ref: Mark 2:20
+    target_ref: Luke 5:35
+    score: 0.714
+    max_exact_run_len: 7
+  - source_ref: Mark 2:21
+    target_ref: Luke 5:36
+    score: 0.1806
+    max_exact_run_len: 2
+  - source_ref: Mark 2:22
+    target_ref: Luke 5:37
+    score: 0.5246
+    max_exact_run_len: 7
+  - source_ref: Mark 2:23
+    target_ref: Luke 6:1
+    score: 0.2138
+    max_exact_run_len: 2
+  - source_ref: Mark 2:24
+    target_ref: Luke 6:2
+    score: 0.2149
+    max_exact_run_len: 2
+  - source_ref: Mark 2:25
+    target_ref: Luke 6:3
+    score: 0.3405
+    max_exact_run_len: 3
+  - source_ref: Mark 2:26
+    target_ref: Luke 6:4
+    score: 0.5167
+    max_exact_run_len: 4
+  - source_ref: Mark 2:28
+    target_ref: Luke 6:5
+    score: 0.5355
+    max_exact_run_len: 2
+  - source_ref: Mark 3:1
+    target_ref: Luke 6:6
+    score: 0.2257
+    max_exact_run_len: 2
+  - source_ref: Mark 3:3
+    target_ref: Luke 6:8
+    score: 0.3147
+    max_exact_run_len: 2
+  - source_ref: Mark 3:4
+    target_ref: Luke 6:9
+    score: 0.3324
+    max_exact_run_len: 4
+  - source_ref: Mark 3:5
+    target_ref: Luke 6:10
+    score: 0.314
+    max_exact_run_len: 2
+- block_id: loose_007
+  span:
+    Mark: Mark 3:18–Mark 3:19
+    Luke: Luke 6:15–Luke 6:16
+  pair_count: 2
+  mean_score: 0.4796
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 2
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 2.3755
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 2.3755
+      must_explain:
+      - 2 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 3:18
+    target_ref: Luke 6:15
+    score: 0.4615
+    max_exact_run_len: 4
+  - source_ref: Mark 3:19
+    target_ref: Luke 6:16
+    score: 0.4977
+    max_exact_run_len: 3
+- block_id: loose_008
+  span:
+    Mark: Mark 4:4–Mark 4:25
+    Luke: Luke 8:5–Luke 8:18
+  pair_count: 7
+  mean_score: 0.3259
+  coded_features:
+    mark_gap_verses_inside_block: 15
+    luke_gap_verses_inside_block: 7
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.8687
+    exact_agreement_pressure_against_pure_common_tradition: 1.3688
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 21.1187
+      must_explain:
+      - 7 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 15 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 25.1187
+      must_explain:
+      - 15 Mark gap verse(s) as Markan addition.
+      - 7 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 6.64
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 4:4
+    target_ref: Luke 8:5
+    score: 0.3928
+    max_exact_run_len: 3
+  - source_ref: Mark 4:9
+    target_ref: Luke 8:8
+    score: 0.2871
+    max_exact_run_len: 3
+  - source_ref: Mark 4:11
+    target_ref: Luke 8:10
+    score: 0.2571
+    max_exact_run_len: 2
+  - source_ref: Mark 4:15
+    target_ref: Luke 8:12
+    score: 0.1805
+    max_exact_run_len: 2
+  - source_ref: Mark 4:18
+    target_ref: Luke 8:14
+    score: 0.3391
+    max_exact_run_len: 3
+  - source_ref: Mark 4:22
+    target_ref: Luke 8:17
+    score: 0.4154
+    max_exact_run_len: 2
+  - source_ref: Mark 4:25
+    target_ref: Luke 8:18
+    score: 0.409
+    max_exact_run_len: 3
+- block_id: loose_009
+  span:
+    Mark: Mark 4:35–Mark 5:1
+    Luke: Luke 8:22–Luke 8:26
+  pair_count: 4
+  mean_score: 0.2843
+  coded_features:
+    mark_gap_verses_inside_block: 4
+    luke_gap_verses_inside_block: 1
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.6628
+    exact_agreement_pressure_against_pure_common_tradition: 1.5823
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 5.5628
+      must_explain:
+      - 1 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 4 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 6.4128
+      must_explain:
+      - 4 Mark gap verse(s) as Markan addition.
+      - 1 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 3.98
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 4:35
+    target_ref: Luke 8:22
+    score: 0.2165
+    max_exact_run_len: 3
+  - source_ref: Mark 4:39
+    target_ref: Luke 8:24
+    score: 0.2751
+    max_exact_run_len: 3
+  - source_ref: Mark 4:41
+    target_ref: Luke 8:25
+    score: 0.3351
+    max_exact_run_len: 6
+  - source_ref: Mark 5:1
+    target_ref: Luke 8:26
+    score: 0.3103
+    max_exact_run_len: 3
+- block_id: loose_010
+  span:
+    Mark: Mark 5:7–Mark 5:27
+    Luke: Luke 8:28–Luke 8:44
+  pair_count: 9
+  mean_score: 0.3807
+  coded_features:
+    mark_gap_verses_inside_block: 12
+    luke_gap_verses_inside_block: 8
+    low_score_primary_pairs_under_0_25: 2
+    close_pairs_score_ge_0_45_or_run_ge_4: 5
+    score_penalty: 0.6237
+    exact_agreement_pressure_against_pure_common_tradition: 6.5558
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 19.8237
+      must_explain:
+      - 8 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 12 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 23.6237
+      must_explain:
+      - 12 Mark gap verse(s) as Markan addition.
+      - 8 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 9.83
+      must_explain:
+      - 5 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 5:7
+    target_ref: Luke 8:28
+    score: 0.5188
+    max_exact_run_len: 6
+  - source_ref: Mark 5:11
+    target_ref: Luke 8:32
+    score: 0.2867
+    max_exact_run_len: 2
+  - source_ref: Mark 5:13
+    target_ref: Luke 8:33
+    score: 0.4773
+    max_exact_run_len: 8
+  - source_ref: Mark 5:14
+    target_ref: Luke 8:34
+    score: 0.6361
+    max_exact_run_len: 7
+  - source_ref: Mark 5:15
+    target_ref: Luke 8:35
+    score: 0.2136
+    max_exact_run_len: 2
+  - source_ref: Mark 5:16
+    target_ref: Luke 8:36
+    score: 0.3508
+    max_exact_run_len: 3
+  - source_ref: Mark 5:20
+    target_ref: Luke 8:39
+    score: 0.3091
+    max_exact_run_len: 4
+  - source_ref: Mark 5:25
+    target_ref: Luke 8:43
+    score: 0.4181
+    max_exact_run_len: 4
+  - source_ref: Mark 5:27
+    target_ref: Luke 8:44
+    score: 0.2159
+    max_exact_run_len: 2
+- block_id: loose_011
+  span:
+    Mark: Mark 5:34–Mark 5:41
+    Luke: Luke 8:48–Luke 8:54
+  pair_count: 5
+  mean_score: 0.32
+  coded_features:
+    mark_gap_verses_inside_block: 3
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.65
+    exact_agreement_pressure_against_pure_common_tradition: 1.86
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 5.7
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 3 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 6.65
+      must_explain:
+      - 3 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 3.15
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 5:34
+    target_ref: Luke 8:48
+    score: 0.4809
+    max_exact_run_len: 3
+  - source_ref: Mark 5:35
+    target_ref: Luke 8:49
+    score: 0.2786
+    max_exact_run_len: 2
+  - source_ref: Mark 5:36
+    target_ref: Luke 8:50
+    score: 0.2116
+    max_exact_run_len: 2
+  - source_ref: Mark 5:39
+    target_ref: Luke 8:52
+    score: 0.3367
+    max_exact_run_len: 3
+  - source_ref: Mark 5:41
+    target_ref: Luke 8:54
+    score: 0.2924
+    max_exact_run_len: 3
+- block_id: loose_012
+  span:
+    Mark: Mark 6:7–Mark 6:10
+    Luke: Luke 9:1–Luke 9:4
+  pair_count: 3
+  mean_score: 0.2838
+  coded_features:
+    mark_gap_verses_inside_block: 1
+    luke_gap_verses_inside_block: 1
+    low_score_primary_pairs_under_0_25: 2
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.4986
+    exact_agreement_pressure_against_pure_common_tradition: 0.5108
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 3.3486
+      must_explain:
+      - 1 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 1 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 3.7486
+      must_explain:
+      - 1 Mark gap verse(s) as Markan addition.
+      - 1 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.51
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 6:7
+    target_ref: Luke 9:1
+    score: 0.1959
+    max_exact_run_len: 2
+  - source_ref: Mark 6:8
+    target_ref: Luke 9:3
+    score: 0.2213
+    max_exact_run_len: 2
+  - source_ref: Mark 6:10
+    target_ref: Luke 9:4
+    score: 0.4342
+    max_exact_run_len: 2
+- block_id: loose_013
+  span:
+    Mark: Mark 6:16–Mark 6:16
+    Luke: Luke 9:9–Luke 9:9
+  pair_count: 1
+  mean_score: 0.2417
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.2083
+    exact_agreement_pressure_against_pure_common_tradition: 0.145
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.7083
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.7083
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.62
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 6:16
+    target_ref: Luke 9:9
+    score: 0.2417
+    max_exact_run_len: 1
+- block_id: loose_014
+  span:
+    Mark: Mark 6:30–Mark 6:30
+    Luke: Luke 9:10–Luke 9:10
+  pair_count: 1
+  mean_score: 0.24
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.21
+    exact_agreement_pressure_against_pure_common_tradition: 0.144
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.71
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.71
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.62
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 6:30
+    target_ref: Luke 9:10
+    score: 0.24
+    max_exact_run_len: 3
+- block_id: loose_015
+  span:
+    Mark: Mark 6:37–Mark 6:42
+    Luke: Luke 9:13–Luke 9:17
+  pair_count: 3
+  mean_score: 0.3785
+  coded_features:
+    mark_gap_verses_inside_block: 3
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 2
+    score_penalty: 0.2145
+    exact_agreement_pressure_against_pure_common_tradition: 2.4813
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 5.2645
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 3 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 6.2145
+      must_explain:
+      - 3 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 3.51
+      must_explain:
+      - 2 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 6:37
+    target_ref: Luke 9:13
+    score: 0.1956
+    max_exact_run_len: 4
+  - source_ref: Mark 6:41
+    target_ref: Luke 9:16
+    score: 0.6574
+    max_exact_run_len: 11
+  - source_ref: Mark 6:42
+    target_ref: Luke 9:17
+    score: 0.2825
+    max_exact_run_len: 1
+- block_id: loose_016
+  span:
+    Mark: Mark 8:28–Mark 9:7
+    Luke: Luke 9:19–Luke 9:35
+  pair_count: 11
+  mean_score: 0.4595
+  coded_features:
+    mark_gap_verses_inside_block: 7
+    luke_gap_verses_inside_block: 6
+    low_score_primary_pairs_under_0_25: 2
+    close_pairs_score_ge_0_45_or_run_ge_4: 7
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 9.3327
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 12.95
+      must_explain:
+      - 6 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 7 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 15.5
+      must_explain:
+      - 7 Mark gap verse(s) as Markan addition.
+      - 6 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 10.5827
+      must_explain:
+      - 7 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 8:28
+    target_ref: Luke 9:19
+    score: 0.4221
+    max_exact_run_len: 5
+  - source_ref: Mark 8:29
+    target_ref: Luke 9:20
+    score: 0.3855
+    max_exact_run_len: 3
+  - source_ref: Mark 8:30
+    target_ref: Luke 9:21
+    score: 0.2098
+    max_exact_run_len: 1
+  - source_ref: Mark 8:31
+    target_ref: Luke 9:22
+    score: 0.5942
+    max_exact_run_len: 10
+  - source_ref: Mark 8:34
+    target_ref: Luke 9:23
+    score: 0.3437
+    max_exact_run_len: 3
+  - source_ref: Mark 8:35
+    target_ref: Luke 9:24
+    score: 0.7043
+    max_exact_run_len: 7
+  - source_ref: Mark 8:36
+    target_ref: Luke 9:25
+    score: 0.1847
+    max_exact_run_len: 2
+  - source_ref: Mark 8:38
+    target_ref: Luke 9:26
+    score: 0.689
+    max_exact_run_len: 7
+  - source_ref: Mark 9:1
+    target_ref: Luke 9:27
+    score: 0.5535
+    max_exact_run_len: 5
+  - source_ref: Mark 9:5
+    target_ref: Luke 9:33
+    score: 0.5121
+    max_exact_run_len: 6
+  - source_ref: Mark 9:7
+    target_ref: Luke 9:35
+    score: 0.4558
+    max_exact_run_len: 3
+- block_id: loose_017
+  span:
+    Mark: Mark 9:19–Mark 9:19
+    Luke: Luke 9:41–Luke 9:41
+  pair_count: 1
+  mean_score: 0.3995
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.0505
+    exact_agreement_pressure_against_pure_common_tradition: 0.2397
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0505
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0505
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.27
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 9:19
+    target_ref: Luke 9:41
+    score: 0.3995
+    max_exact_run_len: 2
+- block_id: loose_018
+  span:
+    Mark: Mark 9:31–Mark 9:40
+    Luke: Luke 9:44–Luke 9:50
+  pair_count: 5
+  mean_score: 0.4112
+  coded_features:
+    mark_gap_verses_inside_block: 5
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 3
+    score_penalty: 0.194
+    exact_agreement_pressure_against_pure_common_tradition: 3.9336
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 6.444
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 5 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 7.694
+      must_explain:
+      - 5 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 5.7
+      must_explain:
+      - 3 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 9:31
+    target_ref: Luke 9:44
+    score: 0.252
+    max_exact_run_len: 3
+  - source_ref: Mark 9:32
+    target_ref: Luke 9:45
+    score: 0.3189
+    max_exact_run_len: 2
+  - source_ref: Mark 9:37
+    target_ref: Luke 9:48
+    score: 0.3581
+    max_exact_run_len: 5
+  - source_ref: Mark 9:38
+    target_ref: Luke 9:49
+    score: 0.4611
+    max_exact_run_len: 5
+  - source_ref: Mark 9:40
+    target_ref: Luke 9:50
+    score: 0.6657
+    max_exact_run_len: 4
+- block_id: loose_019
+  span:
+    Mark: Mark 9:50–Mark 10:5
+    Luke: Luke 14:34–Luke 15:3
+  pair_count: 2
+  mean_score: 0.2483
+  coded_features:
+    mark_gap_verses_inside_block: 4
+    luke_gap_verses_inside_block: 3
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.4034
+    exact_agreement_pressure_against_pure_common_tradition: 0.298
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 7.3034
+      must_explain:
+      - 3 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 4 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 8.6534
+      must_explain:
+      - 4 Mark gap verse(s) as Markan addition.
+      - 3 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.44
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 9:50
+    target_ref: Luke 14:34
+    score: 0.2981
+    max_exact_run_len: 3
+  - source_ref: Mark 10:5
+    target_ref: Luke 15:3
+    score: 0.1986
+    max_exact_run_len: 1
+- block_id: loose_020
+  span:
+    Mark: Mark 10:8–Mark 10:8
+    Luke: Luke 17:35–Luke 17:35
+  pair_count: 1
+  mean_score: 0.2058
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.2442
+    exact_agreement_pressure_against_pure_common_tradition: 0.1235
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.7442
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.7442
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.62
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 10:8
+    target_ref: Luke 17:35
+    score: 0.2058
+    max_exact_run_len: 2
+- block_id: loose_021
+  span:
+    Mark: Mark 10:13–Mark 10:33
+    Luke: Luke 18:15–Luke 18:32
+  pair_count: 16
+  mean_score: 0.4798
+  coded_features:
+    mark_gap_verses_inside_block: 5
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 8
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 11.8061
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 6.75
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 5 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 8.0
+      must_explain:
+      - 5 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 13.8061
+      must_explain:
+      - 8 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 10:13
+    target_ref: Luke 18:15
+    score: 0.3033
+    max_exact_run_len: 2
+  - source_ref: Mark 10:14
+    target_ref: Luke 18:16
+    score: 0.7259
+    max_exact_run_len: 9
+  - source_ref: Mark 10:15
+    target_ref: Luke 18:17
+    score: 1.0
+    max_exact_run_len: 10
+  - source_ref: Mark 10:17
+    target_ref: Luke 18:18
+    score: 0.3286
+    max_exact_run_len: 3
+  - source_ref: Mark 10:18
+    target_ref: Luke 18:19
+    score: 0.8658
+    max_exact_run_len: 6
+  - source_ref: Mark 10:19
+    target_ref: Luke 18:20
+    score: 0.7019
+    max_exact_run_len: 3
+  - source_ref: Mark 10:20
+    target_ref: Luke 18:21
+    score: 0.2619
+    max_exact_run_len: 1
+  - source_ref: Mark 10:21
+    target_ref: Luke 18:22
+    score: 0.402
+    max_exact_run_len: 3
+  - source_ref: Mark 10:23
+    target_ref: Luke 18:24
+    score: 0.5851
+    max_exact_run_len: 6
+  - source_ref: Mark 10:25
+    target_ref: Luke 18:25
+    score: 0.5171
+    max_exact_run_len: 4
+  - source_ref: Mark 10:26
+    target_ref: Luke 18:26
+    score: 0.3801
+    max_exact_run_len: 3
+  - source_ref: Mark 10:27
+    target_ref: Luke 18:27
+    score: 0.3221
+    max_exact_run_len: 2
+  - source_ref: Mark 10:28
+    target_ref: Luke 18:28
+    score: 0.262
+    max_exact_run_len: 2
+  - source_ref: Mark 10:29
+    target_ref: Luke 18:29
+    score: 0.45
+    max_exact_run_len: 7
+  - source_ref: Mark 10:30
+    target_ref: Luke 18:30
+    score: 0.3436
+    max_exact_run_len: 4
+  - source_ref: Mark 10:33
+    target_ref: Luke 18:32
+    score: 0.2273
+    max_exact_run_len: 2
+- block_id: loose_022
+  span:
+    Mark: Mark 10:46–Mark 10:52
+    Luke: Luke 18:35–Luke 18:42
+  pair_count: 5
+  mean_score: 0.3917
+  coded_features:
+    mark_gap_verses_inside_block: 2
+    luke_gap_verses_inside_block: 3
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.2915
+    exact_agreement_pressure_against_pure_common_tradition: 2.0751
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 4.9915
+      must_explain:
+      - 3 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 2 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 6.0415
+      must_explain:
+      - 2 Mark gap verse(s) as Markan addition.
+      - 3 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 2.8
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 10:46
+    target_ref: Luke 18:35
+    score: 0.2653
+    max_exact_run_len: 2
+  - source_ref: Mark 10:47
+    target_ref: Luke 18:38
+    score: 0.3131
+    max_exact_run_len: 2
+  - source_ref: Mark 10:48
+    target_ref: Luke 18:39
+    score: 0.6293
+    max_exact_run_len: 6
+  - source_ref: Mark 10:51
+    target_ref: Luke 18:41
+    score: 0.3526
+    max_exact_run_len: 2
+  - source_ref: Mark 10:52
+    target_ref: Luke 18:42
+    score: 0.3981
+    max_exact_run_len: 2
+- block_id: loose_023
+  span:
+    Mark: Mark 11:1–Mark 11:18
+    Luke: Luke 19:29–Luke 19:47
+  pair_count: 9
+  mean_score: 0.3462
+  coded_features:
+    mark_gap_verses_inside_block: 9
+    luke_gap_verses_inside_block: 10
+    low_score_primary_pairs_under_0_25: 4
+    close_pairs_score_ge_0_45_or_run_ge_4: 3
+    score_penalty: 0.9342
+    exact_agreement_pressure_against_pure_common_tradition: 4.5695
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 20.5842
+      must_explain:
+      - 10 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 9 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 24.4342
+      must_explain:
+      - 9 Mark gap verse(s) as Markan addition.
+      - 10 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 7.08
+      must_explain:
+      - 3 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 11:1
+    target_ref: Luke 19:29
+    score: 0.4515
+    max_exact_run_len: 5
+  - source_ref: Mark 11:2
+    target_ref: Luke 19:30
+    score: 0.4951
+    max_exact_run_len: 5
+  - source_ref: Mark 11:3
+    target_ref: Luke 19:34
+    score: 0.3794
+    max_exact_run_len: 3
+  - source_ref: Mark 11:7
+    target_ref: Luke 19:35
+    score: 0.1872
+    max_exact_run_len: 1
+  - source_ref: Mark 11:9
+    target_ref: Luke 19:38
+    score: 0.2244
+    max_exact_run_len: 2
+  - source_ref: Mark 11:13
+    target_ref: Luke 19:41
+    score: 0.1814
+    max_exact_run_len: 2
+  - source_ref: Mark 11:15
+    target_ref: Luke 19:45
+    score: 0.5513
+    max_exact_run_len: 7
+  - source_ref: Mark 11:17
+    target_ref: Luke 19:46
+    score: 0.4422
+    max_exact_run_len: 3
+  - source_ref: Mark 11:18
+    target_ref: Luke 19:47
+    score: 0.203
+    max_exact_run_len: 3
+- block_id: loose_024
+  span:
+    Mark: Mark 11:28–Mark 12:27
+    Luke: Luke 20:2–Luke 20:38
+  pair_count: 22
+  mean_score: 0.4309
+  coded_features:
+    mark_gap_verses_inside_block: 11
+    luke_gap_verses_inside_block: 15
+    low_score_primary_pairs_under_0_25: 2
+    close_pairs_score_ge_0_45_or_run_ge_4: 13
+    score_penalty: 0.4202
+    exact_agreement_pressure_against_pure_common_tradition: 17.3879
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 25.7702
+      must_explain:
+      - 15 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 11 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 31.1702
+      must_explain:
+      - 11 Mark gap verse(s) as Markan addition.
+      - 15 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 20.54
+      must_explain:
+      - 13 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 11:28
+    target_ref: Luke 20:2
+    score: 0.4429
+    max_exact_run_len: 5
+  - source_ref: Mark 11:30
+    target_ref: Luke 20:4
+    score: 0.8589
+    max_exact_run_len: 4
+  - source_ref: Mark 11:31
+    target_ref: Luke 20:5
+    score: 0.7769
+    max_exact_run_len: 5
+  - source_ref: Mark 11:33
+    target_ref: Luke 20:8
+    score: 0.7875
+    max_exact_run_len: 8
+  - source_ref: Mark 12:1
+    target_ref: Luke 20:9
+    score: 0.282
+    max_exact_run_len: 3
+  - source_ref: Mark 12:2
+    target_ref: Luke 20:10
+    score: 0.4051
+    max_exact_run_len: 4
+  - source_ref: Mark 12:6
+    target_ref: Luke 20:13
+    score: 0.1801
+    max_exact_run_len: 2
+  - source_ref: Mark 12:7
+    target_ref: Luke 20:14
+    score: 0.3444
+    max_exact_run_len: 3
+  - source_ref: Mark 12:8
+    target_ref: Luke 20:15
+    score: 0.2867
+    max_exact_run_len: 2
+  - source_ref: Mark 12:9
+    target_ref: Luke 20:16
+    score: 0.5114
+    max_exact_run_len: 4
+  - source_ref: Mark 12:10
+    target_ref: Luke 20:17
+    score: 0.5587
+    max_exact_run_len: 8
+  - source_ref: Mark 12:12
+    target_ref: Luke 20:19
+    score: 0.2973
+    max_exact_run_len: 4
+  - source_ref: Mark 12:14
+    target_ref: Luke 20:21
+    score: 0.3295
+    max_exact_run_len: 5
+  - source_ref: Mark 12:17
+    target_ref: Luke 20:25
+    score: 0.2758
+    max_exact_run_len: 2
+  - source_ref: Mark 12:19
+    target_ref: Luke 20:28
+    score: 0.6186
+    max_exact_run_len: 6
+  - source_ref: Mark 12:20
+    target_ref: Luke 20:29
+    score: 0.4402
+    max_exact_run_len: 4
+  - source_ref: Mark 12:21
+    target_ref: Luke 20:31
+    score: 0.2592
+    max_exact_run_len: 2
+  - source_ref: Mark 12:22
+    target_ref: Luke 20:32
+    score: 0.3507
+    max_exact_run_len: 2
+  - source_ref: Mark 12:23
+    target_ref: Luke 20:33
+    score: 0.5931
+    max_exact_run_len: 5
+  - source_ref: Mark 12:25
+    target_ref: Luke 20:35
+    score: 0.2683
+    max_exact_run_len: 4
+  - source_ref: Mark 12:26
+    target_ref: Luke 20:37
+    score: 0.1809
+    max_exact_run_len: 1
+  - source_ref: Mark 12:27
+    target_ref: Luke 20:38
+    score: 0.4313
+    max_exact_run_len: 3
+- block_id: loose_025
+  span:
+    Mark: Mark 12:35–Mark 13:17
+    Luke: Luke 20:41–Luke 21:23
+  pair_count: 15
+  mean_score: 0.4548
+  coded_features:
+    mark_gap_verses_inside_block: 12
+    luke_gap_verses_inside_block: 15
+    low_score_primary_pairs_under_0_25: 3
+    close_pairs_score_ge_0_45_or_run_ge_4: 10
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 13.0932
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 26.7
+      must_explain:
+      - 15 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 12 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 32.25
+      must_explain:
+      - 12 Mark gap verse(s) as Markan addition.
+      - 15 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 15.7932
+      must_explain:
+      - 10 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 12:35
+    target_ref: Luke 20:41
+    score: 0.1898
+    max_exact_run_len: 2
+  - source_ref: Mark 12:36
+    target_ref: Luke 20:43
+    score: 0.4326
+    max_exact_run_len: 4
+  - source_ref: Mark 12:37
+    target_ref: Luke 20:44
+    score: 0.2839
+    max_exact_run_len: 2
+  - source_ref: Mark 12:39
+    target_ref: Luke 20:46
+    score: 0.5933
+    max_exact_run_len: 6
+  - source_ref: Mark 12:40
+    target_ref: Luke 20:47
+    score: 0.6735
+    max_exact_run_len: 5
+  - source_ref: Mark 12:43
+    target_ref: Luke 21:3
+    score: 0.5052
+    max_exact_run_len: 5
+  - source_ref: Mark 12:44
+    target_ref: Luke 21:4
+    score: 0.3993
+    max_exact_run_len: 3
+  - source_ref: Mark 13:4
+    target_ref: Luke 21:7
+    score: 0.67
+    max_exact_run_len: 7
+  - source_ref: Mark 13:6
+    target_ref: Luke 21:8
+    score: 0.4912
+    max_exact_run_len: 5
+  - source_ref: Mark 13:7
+    target_ref: Luke 21:9
+    score: 0.3713
+    max_exact_run_len: 3
+  - source_ref: Mark 13:8
+    target_ref: Luke 21:10
+    score: 0.5385
+    max_exact_run_len: 6
+  - source_ref: Mark 13:9
+    target_ref: Luke 21:13
+    score: 0.2391
+    max_exact_run_len: 2
+  - source_ref: Mark 13:13
+    target_ref: Luke 21:17
+    score: 0.5382
+    max_exact_run_len: 3
+  - source_ref: Mark 13:14
+    target_ref: Luke 21:21
+    score: 0.2382
+    max_exact_run_len: 4
+  - source_ref: Mark 13:17
+    target_ref: Luke 21:23
+    score: 0.658
+    max_exact_run_len: 9
+- block_id: loose_026
+  span:
+    Mark: Mark 13:26–Mark 13:31
+    Luke: Luke 21:27–Luke 21:33
+  pair_count: 5
+  mean_score: 0.6858
+  coded_features:
+    mark_gap_verses_inside_block: 1
+    luke_gap_verses_inside_block: 2
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 4
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 5.6574
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 2.85
+      must_explain:
+      - 2 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 1 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 3.5
+      must_explain:
+      - 1 Mark gap verse(s) as Markan addition.
+      - 2 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 6.2074
+      must_explain:
+      - 4 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 13:26
+    target_ref: Luke 21:27
+    score: 0.663
+    max_exact_run_len: 4
+  - source_ref: Mark 13:28
+    target_ref: Luke 21:30
+    score: 0.2829
+    max_exact_run_len: 3
+  - source_ref: Mark 13:29
+    target_ref: Luke 21:31
+    score: 0.8569
+    max_exact_run_len: 9
+  - source_ref: Mark 13:30
+    target_ref: Luke 21:32
+    score: 0.6264
+    max_exact_run_len: 4
+  - source_ref: Mark 13:31
+    target_ref: Luke 21:33
+    score: 1.0
+    max_exact_run_len: 5
+- block_id: loose_027
+  span:
+    Mark: Mark 14:1–Mark 14:1
+    Luke: Luke 22:2–Luke 22:2
+  pair_count: 1
+  mean_score: 0.3728
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.0772
+    exact_agreement_pressure_against_pure_common_tradition: 1.1237
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0772
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0772
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.17
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:1
+    target_ref: Luke 22:2
+    score: 0.3728
+    max_exact_run_len: 4
+- block_id: loose_028
+  span:
+    Mark: Mark 14:11–Mark 14:16
+    Luke: Luke 22:5–Luke 22:13
+  pair_count: 6
+  mean_score: 0.4871
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 3
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 3
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 4.4536
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 3.0
+      must_explain:
+      - 3 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 3.75
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 3 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 6.1036
+      must_explain:
+      - 3 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:11
+    target_ref: Luke 22:5
+    score: 0.4211
+    max_exact_run_len: 3
+  - source_ref: Mark 14:12
+    target_ref: Luke 22:9
+    score: 0.3013
+    max_exact_run_len: 2
+  - source_ref: Mark 14:13
+    target_ref: Luke 22:10
+    score: 0.4664
+    max_exact_run_len: 6
+  - source_ref: Mark 14:14
+    target_ref: Luke 22:11
+    score: 0.6555
+    max_exact_run_len: 8
+  - source_ref: Mark 14:15
+    target_ref: Luke 22:12
+    score: 0.6457
+    max_exact_run_len: 4
+  - source_ref: Mark 14:16
+    target_ref: Luke 22:13
+    score: 0.4327
+    max_exact_run_len: 3
+- block_id: loose_029
+  span:
+    Mark: Mark 14:22–Mark 14:22
+    Luke: Luke 22:19–Luke 22:19
+  pair_count: 1
+  mean_score: 0.446
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.004
+    exact_agreement_pressure_against_pure_common_tradition: 0.2676
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.004
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.004
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.27
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:22
+    target_ref: Luke 22:19
+    score: 0.446
+    max_exact_run_len: 3
+- block_id: loose_030
+  span:
+    Mark: Mark 14:26–Mark 14:26
+    Luke: Luke 22:39–Luke 22:39
+  pair_count: 1
+  mean_score: 0.3577
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.0923
+    exact_agreement_pressure_against_pure_common_tradition: 0.2146
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0923
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0923
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.27
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:26
+    target_ref: Luke 22:39
+    score: 0.3577
+    max_exact_run_len: 3
+- block_id: loose_031
+  span:
+    Mark: Mark 14:36–Mark 14:48
+    Luke: Luke 22:42–Luke 22:52
+  pair_count: 5
+  mean_score: 0.2971
+  coded_features:
+    mark_gap_verses_inside_block: 8
+    luke_gap_verses_inside_block: 6
+    low_score_primary_pairs_under_0_25: 1
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.7645
+    exact_agreement_pressure_against_pure_common_tradition: 1.7913
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 14.0645
+      must_explain:
+      - 6 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 8 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 16.7645
+      must_explain:
+      - 8 Mark gap verse(s) as Markan addition.
+      - 6 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 3.7
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:36
+    target_ref: Luke 22:42
+    score: 0.2811
+    max_exact_run_len: 2
+  - source_ref: Mark 14:38
+    target_ref: Luke 22:46
+    score: 0.2234
+    max_exact_run_len: 2
+  - source_ref: Mark 14:43
+    target_ref: Luke 22:47
+    score: 0.2642
+    max_exact_run_len: 3
+  - source_ref: Mark 14:47
+    target_ref: Luke 22:50
+    score: 0.2941
+    max_exact_run_len: 2
+  - source_ref: Mark 14:48
+    target_ref: Luke 22:52
+    score: 0.4226
+    max_exact_run_len: 5
+- block_id: loose_032
+  span:
+    Mark: Mark 14:72–Mark 14:72
+    Luke: Luke 22:61–Luke 22:61
+  pair_count: 1
+  mean_score: 0.2781
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 0
+    score_penalty: 0.1719
+    exact_agreement_pressure_against_pure_common_tradition: 0.1669
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.1719
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.1719
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 0.27
+      must_explain:
+      - 0 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 14:72
+    target_ref: Luke 22:61
+    score: 0.2781
+    max_exact_run_len: 3
+- block_id: loose_033
+  span:
+    Mark: Mark 15:2–Mark 15:2
+    Luke: Luke 23:3–Luke 23:3
+  pair_count: 1
+  mean_score: 0.6114
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0
+    exact_agreement_pressure_against_pure_common_tradition: 1.2668
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.0
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.2668
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 15:2
+    target_ref: Luke 23:3
+    score: 0.6114
+    max_exact_run_len: 4
+- block_id: loose_034
+  span:
+    Mark: Mark 15:21–Mark 15:21
+    Luke: Luke 23:26–Luke 23:26
+  pair_count: 1
+  mean_score: 0.3451
+  coded_features:
+    mark_gap_verses_inside_block: 0
+    luke_gap_verses_inside_block: 0
+    low_score_primary_pairs_under_0_25: 0
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.1049
+    exact_agreement_pressure_against_pure_common_tradition: 1.1071
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 0.1049
+      must_explain:
+      - 0 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 0 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 0.1049
+      must_explain:
+      - 0 Mark gap verse(s) as Markan addition.
+      - 0 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 1.17
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 15:21
+    target_ref: Luke 23:26
+    score: 0.3451
+    max_exact_run_len: 5
+- block_id: loose_035
+  span:
+    Mark: Mark 15:26–Mark 15:43
+    Luke: Luke 23:38–Luke 23:52
+  pair_count: 5
+  mean_score: 0.3363
+  coded_features:
+    mark_gap_verses_inside_block: 12
+    luke_gap_verses_inside_block: 10
+    low_score_primary_pairs_under_0_25: 2
+    close_pairs_score_ge_0_45_or_run_ge_4: 1
+    score_penalty: 0.5685
+    exact_agreement_pressure_against_pure_common_tradition: 1.9089
+  hypotheses:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source:
+      burden_score: 21.7685
+      must_explain:
+      - 10 Luke gap verse(s) as addition, relocation, or expansion around a Markan sequence.
+      - 12 Mark gap verse(s) as omission/compression by Luke.
+    Luke_prior_Mark_uses_Luke_or_Luke_like_source:
+      burden_score: 26.0685
+      must_explain:
+      - 12 Mark gap verse(s) as Markan addition.
+      - 10 Luke gap verse(s) as material Mark omits/compresses.
+    shared_narrative_or_oral_tradition_without_direct_use:
+      burden_score: 4.05
+      must_explain:
+      - 1 close local agreement(s) without direct use.
+      - Preserved local order plus exact/near-exact wording in some blocks.
+  primary_pairs:
+  - source_ref: Mark 15:26
+    target_ref: Luke 23:38
+    score: 0.3
+    max_exact_run_len: 2
+  - source_ref: Mark 15:30
+    target_ref: Luke 23:39
+    score: 0.2433
+    max_exact_run_len: 2
+  - source_ref: Mark 15:33
+    target_ref: Luke 23:44
+    score: 0.6525
+    max_exact_run_len: 8
+  - source_ref: Mark 15:38
+    target_ref: Luke 23:45
+    score: 0.229
+    max_exact_run_len: 2
+  - source_ref: Mark 15:43
+    target_ref: Luke 23:52
+    score: 0.2566
+    max_exact_run_len: 3

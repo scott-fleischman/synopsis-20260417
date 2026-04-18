@@ -1,0 +1,125 @@
+purpose: One-screen scholarly triage matrix for canonical Gospel relationships.
+important_note: 'Cells use different methods where the textual phenomenon differs: Synoptic narrative chain for Mark/Matthew/Luke;
+  anchor/low-verbatim model for John.'
+rows:
+- pair: Mark↔Matthew
+  gospel_a: Mark
+  gospel_b: Matthew
+  method_class: synoptic_narrative_alignment
+  data_status: existing prior package
+  primary_chain_pairs: 385
+  loose_blocks: 25
+  secondary_echoes: 231
+  high_value_exact_or_close_cases: 47
+  matrix_rows: available in prior package
+  dominant_interpretive_model: Matthew uses Mark or Mark-like written narrative source
+  confidence: high
+  recommended_first_visualizations: 'Synoptic map #mm | Burden ledger #mm | Gap timeline #mm | Pair explorer #mm'
+  top_supporting_evidence: large monotonic narrative backbone | Matthean additions/discourse clustering easier than Markan
+    omissions | Markan diction/immediacy patterns
+  top_limiting_or_contrary_evidence: Matthew contains major non-Markan material | some blocks show local complexity | text-critical
+    variants require audit
+- pair: Mark↔Luke
+  gospel_a: Mark
+  gospel_b: Luke
+  method_class: synoptic_narrative_alignment
+  data_status: new high-priority package
+  primary_chain_pairs: 183
+  loose_blocks: 35
+  secondary_echoes: 140
+  high_value_exact_or_close_cases: 107
+  matrix_rows: 773277
+  dominant_interpretive_model: Luke has substantial Mark-like narrative alignment; direction ledger favors Mark prior over
+    Luke prior but requires fuller comparison to Mark-Matthew
+  confidence: medium-high
+  recommended_first_visualizations: Mark-Luke map | Mark-Luke burden ledger | Mark-Luke gap timeline | Window candidates both
+    directions
+  top_supporting_evidence: 183 monotonic primary pairs with Mark 16:9-20 excluded | high exact local agreements in passion/apocalyptic/teaching
+    units | large Lukan additions easier as Lukan expansion than Markan omission in several blocks
+  top_limiting_or_contrary_evidence: Luke’s major travel/infancy/resurrection material remains outside Markan sequence | common-tradition
+    burden remains live | threshold sensitivity should be inspected
+- pair: Matthew↔Luke full
+  gospel_a: Matthew
+  gospel_b: Luke
+  method_class: synoptic_mixed_chain_echo
+  data_status: existing prior package
+  primary_chain_pairs: 233
+  loose_blocks: 32
+  secondary_echoes: 1033
+  high_value_exact_or_close_cases: 16
+  matrix_rows: 1227132
+  dominant_interpretive_model: Full Matthew-Luke relation is extensive but non-monotonic; use masked package for double tradition
+  confidence: medium
+  recommended_first_visualizations: Matthew-Luke full map | Displacement | Echo gallery | Pair explorer
+  top_supporting_evidence: 233 primary pairs and 1033 secondary echoes | many strong nonlocal parallels | useful for detecting
+    reordered material
+  top_limiting_or_contrary_evidence: full comparison conflates Markan and non-Markan material | monotonic backbone alone underrepresents
+    double tradition
+- pair: Matthew↔Luke masked
+  gospel_a: Matthew
+  gospel_b: Luke
+  method_class: double_tradition_sayings_alignment
+  data_status: existing prior package plus sensitivity patch
+  primary_chain_pairs: 49
+  loose_blocks: 13
+  secondary_echoes: 60
+  high_value_exact_or_close_cases: 16
+  matrix_rows: 626717
+  dominant_interpretive_model: Shared sayings/tradition layer; data does not force simple Matthew→Luke or Luke→Matthew
+  confidence: medium-high
+  recommended_first_visualizations: Q core | Mask audit | Mask-regime sensitivity | Displacement | Echo gallery
+  top_supporting_evidence: strong non-Markan saying parallels | direct-direction burdens symmetric in prior run | common-source/oral
+    model fits displacement
+  top_limiting_or_contrary_evidence: masking choices are high-leverage | does not prove a single Q document | direct dependence
+    remains possible in local cases
+- pair: John↔Mark
+  gospel_a: John
+  gospel_b: Mark
+  method_class: anchor_plus_low_verbatim_pairwise
+  data_status: new high-priority pairwise package
+  primary_chain_pairs: not applicable
+  loose_blocks: not applicable
+  secondary_echoes: 33
+  high_value_exact_or_close_cases: 5
+  matrix_rows: 580358
+  dominant_interpretive_model: Shared tradition/anchor episodes more likely than simple continuous copying
+  confidence: medium
+  recommended_first_visualizations: John↔Mark anchor dashboard | John↔Mark top local cases | Greek reader overlays | Claim
+    evidence page
+  top_supporting_evidence: 10 registered anchor episodes | 33 lexical candidates score≥0.25 | top case John 12:8 ~ Mark 14:7
+  top_limiting_or_contrary_evidence: no continuous Synoptic-style chain | many lexical hits are brief/formulaic/generic |
+    direction underdetermined outside local anomalies
+- pair: John↔Matthew
+  gospel_a: John
+  gospel_b: Matthew
+  method_class: anchor_plus_low_verbatim_pairwise
+  data_status: new high-priority pairwise package
+  primary_chain_pairs: not applicable
+  loose_blocks: not applicable
+  secondary_echoes: 33
+  high_value_exact_or_close_cases: 5
+  matrix_rows: 937704
+  dominant_interpretive_model: Shared tradition/anchor episodes more likely than simple continuous copying
+  confidence: medium
+  recommended_first_visualizations: John↔Matthew anchor dashboard | John↔Matthew top local cases | Greek reader overlays |
+    Claim evidence page
+  top_supporting_evidence: 10 registered anchor episodes | 33 lexical candidates score≥0.25 | top case John 12:8 ~ Matt 26:11
+  top_limiting_or_contrary_evidence: no continuous Synoptic-style chain | many lexical hits are brief/formulaic/generic |
+    direction underdetermined outside local anomalies
+- pair: John↔Luke
+  gospel_a: John
+  gospel_b: Luke
+  method_class: anchor_plus_low_verbatim_pairwise
+  data_status: new high-priority pairwise package
+  primary_chain_pairs: not applicable
+  loose_blocks: not applicable
+  secondary_echoes: 34
+  high_value_exact_or_close_cases: 3
+  matrix_rows: 1008822
+  dominant_interpretive_model: Shared tradition/anchor episodes more likely than simple continuous copying
+  confidence: medium
+  recommended_first_visualizations: John↔Luke anchor dashboard | John↔Luke top local cases | Greek reader overlays | Claim
+    evidence page
+  top_supporting_evidence: 9 registered anchor episodes | 34 lexical candidates score≥0.25 | top case John 8:1 ~ Luke 22:39
+  top_limiting_or_contrary_evidence: no continuous Synoptic-style chain | many lexical hits are brief/formulaic/generic |
+    direction underdetermined outside local anomalies

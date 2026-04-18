@@ -1,0 +1,26 @@
+# Test results
+
+- PASS: required file exists: data/10_mark_luke_verse_similarity_full.csv.gz
+- PASS: required file exists: data/11_mark_luke_primary_chain_pairs.csv
+- PASS: required file exists: data/17_mark_luke_direction_ledger_by_loose_block.yaml
+- PASS: required file exists: data/30_john_mark_verse_similarity_full.csv.gz
+- PASS: required file exists: data/31_john_matthew_verse_similarity_full.csv.gz
+- PASS: required file exists: data/32_john_luke_verse_similarity_full.csv.gz
+- PASS: required file exists: data/37_john_synoptic_pairwise_anchor_registry.yaml
+- PASS: required file exists: data/40_canonical_gospel_relationship_square.csv
+- PASS: required file exists: data/50_thomas_gospel_logion_matrix.csv
+- PASS: required file exists: data/60_epistle_gospel_case_dossiers.yaml
+- PASS: required file exists: data/70_conclusion_evidence_contrary_navigation.yaml
+- PASS: required file exists: visualizations/index.html
+- PASS: required file exists: scripts/build_high_priority_supplement.py
+- PASS: Mark-Luke primary chain nonempty — 183
+- PASS: Mark-Luke source monotonic
+- PASS: Mark-Luke target monotonic
+- PASS: Mark-Luke default excludes Mark 16:9-20
+- PASS: Mark-Luke full matrix row count
+- PASS: John-Mark matrix row count
+- PASS: John-Matthew matrix row count
+- PASS: John-Luke matrix row count
+- PASS: Thomas matrix row count equals units
+- PASS: Conclusion nav has at least 5 claims — 5
+- PASS: Gospel square includes all required pairs — {'Matthew↔Luke masked', 'John↔Mark', 'John↔Luke', 'Mark↔Matthew', 'John↔Matthew', 'Mark↔Luke', 'Matthew↔Luke full'}

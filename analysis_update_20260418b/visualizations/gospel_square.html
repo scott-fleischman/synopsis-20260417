@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Canonical Gospel relationship square</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;margin:2rem;max-width:1200px}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92rem}
+td,th{border:1px solid #ddd;padding:0.35rem;vertical-align:top}
+th{background:#f6f6f6;text-align:left}
+code{background:#f3f3f3;padding:0.1rem 0.25rem}
+.card{border:1px solid #ddd;padding:1rem;margin:1rem 0;border-radius:6px}
+.small{color:#555;font-size:0.9rem}
+</style>
+</head>
+<body>
+
+<h1>Canonical Gospel relationship square</h1>
+<p>Cells use different methods depending on the relationship type. John is not forced into a Synoptic chain model.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>pair</th>
+      <th>method_class</th>
+      <th>primary_chain_pairs</th>
+      <th>secondary_echoes</th>
+      <th>high_value_exact_or_close_cases</th>
+      <th>dominant_interpretive_model</th>
+      <th>confidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark↔Matthew</td>
+      <td>synoptic_narrative_alignment</td>
+      <td>385</td>
+      <td>231</td>
+      <td>47</td>
+      <td>Matthew uses Mark or Mark-like written narrative source</td>
+      <td>high</td>
+    </tr>
+    <tr>
+      <td>Mark↔Luke</td>
+      <td>synoptic_narrative_alignment</td>
+      <td>183</td>
+      <td>140</td>
+      <td>107</td>
+      <td>Luke has substantial Mark-like narrative alignment; direction ledger favors Mark prior over Luke prior but requires fuller comparison to Mark-Matthew</td>
+      <td>medium-high</td>
+    </tr>
+    <tr>
+      <td>Matthew↔Luke full</td>
+      <td>synoptic_mixed_chain_echo</td>
+      <td>233</td>
+      <td>1033</td>
+      <td>16</td>
+      <td>Full Matthew-Luke relation is extensive but non-monotonic; use masked package for double tradition</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>Matthew↔Luke masked</td>
+      <td>double_tradition_sayings_alignment</td>
+      <td>49</td>
+      <td>60</td>
+      <td>16</td>
+      <td>Shared sayings/tradition layer; data does not force simple Matthew→Luke or Luke→Matthew</td>
+      <td>medium-high</td>
+    </tr>
+    <tr>
+      <td>John↔Mark</td>
+      <td>anchor_plus_low_verbatim_pairwise</td>
+      <td>not applicable</td>
+      <td>33</td>
+      <td>5</td>
+      <td>Shared tradition/anchor episodes more likely than simple continuous copying</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>John↔Matthew</td>
+      <td>anchor_plus_low_verbatim_pairwise</td>
+      <td>not applicable</td>
+      <td>33</td>
+      <td>5</td>
+      <td>Shared tradition/anchor episodes more likely than simple continuous copying</td>
+      <td>medium</td>
+    </tr>
+    <tr>
+      <td>John↔Luke</td>
+      <td>anchor_plus_low_verbatim_pairwise</td>
+      <td>not applicable</td>
+      <td>34</td>
+      <td>3</td>
+      <td>Shared tradition/anchor episodes more likely than simple continuous copying</td>
+      <td>medium</td>
+    </tr>
+  </tbody>
+</table>
+<p>Full data: <code>data/40_canonical_gospel_relationship_square.csv</code></p>
+
+</body>
+</html>

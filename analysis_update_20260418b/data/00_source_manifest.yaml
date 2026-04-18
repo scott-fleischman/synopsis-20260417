@@ -1,0 +1,27 @@
+package_name: synopsis_high_priority_missing_20260418
+created_utc: '2026-04-18'
+purpose: High-priority missing data supplement for Gospel dependence and early-Christian intertextuality workbench.
+source_snapshots_included:
+- file: sources/canonical_units_from_jtea_20260418.csv
+  description: Canonical NT verse-unit table from prior JTEA package generated in this thread.
+  ultimate_sources:
+  - Faithlife/SBLGNT Greek text
+  - MorphGNT normalized/morphological layer as used in prior packages
+  license_note: SBLGNT repository identifies CC BY 4.0; MorphGNT README states SBLGNT text is subject to SBLGNT EULA and morphology/lemmatization
+    is CC-BY-SA.
+- file: sources/thomas_units_from_jtea_20260418.csv
+  description: Coptic Thomas unit table from prior JTEA package generated in this thread.
+  ultimate_sources:
+  - Coptic Scriptorium corpora / Gospel of Thomas data as used in prior package
+  license_note: Preserve Coptic Scriptorium attribution; this supplement does not perform fresh source fetching.
+- file: sources/prior_jtea_01_source_manifest.yaml
+  description: Prior source manifest copied for audit continuity.
+- file: sources/prior_jtea_00_method_rethought_low_verbatim.yaml
+  description: Prior low-verbatim method file copied for audit continuity.
+external_reference_urls:
+  SBLGNT: https://github.com/Faithlife/SBLGNT
+  MorphGNT_SBLGNT: https://github.com/morphgnt/sblgnt
+  Coptic_Scriptorium_corpora: https://github.com/CopticScriptorium/corpora
+  M_R_James_Apocryphal_New_Testament: https://archive.org/details/apocryphalnewtes0000mont_n1i9
+provenance_policy: All generated files are derived from included source snapshots and prior package artifacts available in
+  /mnt/data in this conversation. This supplement avoids internet-dependent rebuild steps.

@@ -1,0 +1,34 @@
+package_method_summary:
+  core_change_from_previous_packages: 'Adds missing high-priority pairwise/comparative views: direct Mark-Luke, John pairwise,
+    canonical Gospel square, Thomas logion matrix, epistle case dossiers, and conclusion evidence navigation.'
+  principle: Use different models for different transmission phenomena rather than forcing every corpus into a Synoptic monotonic
+    chain.
+mark_luke:
+  method: Synoptic narrative alignment
+  default_text_critical_policy: Exclude Mark 16:9-20 from primary chain; keep full matrix rows flagged and include ending
+    sensitivity.
+  steps:
+  - full 1-to-1 verse matrix
+  - dynamic-programming monotonic chain
+  - loose/tight block segmentation
+  - gap intervals
+  - secondary echoes
+  - pair token diffs
+  - directional burden ledger
+  - threshold/ending sensitivity
+john_synoptic_pairwise:
+  method: Anchor + low-verbatim pairwise dashboard
+  steps:
+  - full 1-to-1 John-vs-each-Synoptic matrices
+  - John→Synoptic window candidates from prior JTEA
+  - Synoptic→John window candidates top5
+  - anchor registry with per-pair metrics
+  - direction/burden ledger by pair
+  warning: No continuous chain is assumed; sparse global lexical alignment does not mean no shared tradition.
+thomas:
+  method: Logion × Gospel matrix
+  warning: Coptic Thomas is not automatically Greek-to-Greek scored. Matrix is curated/logion-level.
+epistles:
+  method: Case-first dossier model
+  warning: Formula risk is separated from retrieval support; long exact liturgical/scriptural matches are not automatically
+    Gospel dependence.

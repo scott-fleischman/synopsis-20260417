@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>John pairwise dashboards</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;margin:2rem;max-width:1200px}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:0.92rem}
+td,th{border:1px solid #ddd;padding:0.35rem;vertical-align:top}
+th{background:#f6f6f6;text-align:left}
+code{background:#f3f3f3;padding:0.1rem 0.25rem}
+.card{border:1px solid #ddd;padding:1rem;margin:1rem 0;border-radius:6px}
+.small{color:#555;font-size:0.9rem}
+</style>
+</head>
+<body>
+
+<h1>John ↔ Synoptic pairwise dashboards</h1>
+<p>John is represented as anchor/candidate pairwise data, not a continuous Synoptic-style chain.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>pair</th>
+      <th>verse_matrix_rows</th>
+      <th>candidate_pairs_score_ge_0_25</th>
+      <th>exact_run_pairs_ge_4</th>
+      <th>anchors_registered</th>
+      <th>anchors_with_local_matrix_signal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John↔Mark</td>
+      <td>580358</td>
+      <td>33</td>
+      <td>5</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>John↔Matthew</td>
+      <td>937704</td>
+      <td>33</td>
+      <td>5</td>
+      <td>10</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>John↔Luke</td>
+      <td>1008822</td>
+      <td>34</td>
+      <td>3</td>
+      <td>9</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Anchor sample</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>anchor_id</th>
+      <th>pair</th>
+      <th>john_refs</th>
+      <th>synoptic_refs</th>
+      <th>provisional_best_explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>john_baptist_witness_spirit_descends</td>
+      <td>John↔Mark</td>
+      <td>John 1:29-34</td>
+      <td>Mark 1:9-11</td>
+      <td>shared Baptist/baptism tradition; direct dependence not established</td>
+    </tr>
+    <tr>
+      <td>john_baptist_witness_spirit_descends</td>
+      <td>John↔Matt</td>
+      <td>John 1:29-34</td>
+      <td>Matt 3:13-17</td>
+      <td>shared Baptist/baptism tradition; direct dependence not established</td>
+    </tr>
+    <tr>
+      <td>john_baptist_witness_spirit_descends</td>
+      <td>John↔Luke</td>
+      <td>John 1:29-34</td>
+      <td>Luke 3:21-22</td>
+      <td>shared Baptist/baptism tradition; direct dependence not established</td>
+    </tr>
+    <tr>
+      <td>temple_action_relocated</td>
+      <td>John↔Mark</td>
+      <td>John 2:13-22</td>
+      <td>Mark 11:15-19</td>
+      <td>shared temple-action tradition; direct direction underdetermined</td>
+    </tr>
+    <tr>
+      <td>temple_action_relocated</td>
+      <td>John↔Matt</td>
+      <td>John 2:13-22</td>
+      <td>Matt 21:12-17</td>
+      <td>shared temple-action tradition; direct direction underdetermined</td>
+    </tr>
+    <tr>
+      <td>temple_action_relocated</td>
+      <td>John↔Luke</td>
+      <td>John 2:13-22</td>
+      <td>Luke 19:45-48</td>
+      <td>shared temple-action tradition; direct direction underdetermined</td>
+    </tr>
+    <tr>
+      <td>prophet_no_honor</td>
+      <td>John↔Mark</td>
+      <td>John 4:44</td>
+      <td>Mark 6:4</td>
+      <td>portable proverb in Jesus tradition</td>
+    </tr>
+    <tr>
+      <td>prophet_no_honor</td>
+      <td>John↔Matt</td>
+      <td>John 4:44</td>
+      <td>Matt 13:57</td>
+      <td>portable proverb in Jesus tradition</td>
+    </tr>
+    <tr>
+      <td>prophet_no_honor</td>
+      <td>John↔Luke</td>
+      <td>John 4:44</td>
+      <td>Luke 4:24</td>
+      <td>portable proverb in Jesus tradition</td>
+    </tr>
+    <tr>
+      <td>feeding_5000</td>
+      <td>John↔Mark</td>
+      <td>John 6:1-15</td>
+      <td>Mark 6:30-44</td>
+      <td>shared miracle tradition with possible literary contact not isolated by automatic metrics</td>
+    </tr>
+    <tr>
+      <td>feeding_5000</td>
+      <td>John↔Matt</td>
+      <td>John 6:1-15</td>
+      <td>Matt 14:13-21</td>
+      <td>shared miracle tradition with possible literary contact not isolated by automatic metrics</td>
+    </tr>
+    <tr>
+      <td>feeding_5000</td>
+      <td>John↔Luke</td>
+      <td>John 6:1-15</td>
+      <td>Luke 9:10-17</td>
+      <td>shared miracle tradition with possible literary contact not isolated by automatic metrics</td>
+    </tr>
+    <tr>
+      <td>walking_on_water</td>
+      <td>John↔Mark</td>
+      <td>John 6:16-21</td>
+      <td>Mark 6:45-52</td>
+      <td>shared miracle tradition</td>
+    </tr>
+    <tr>
+      <td>walking_on_water</td>
+      <td>John↔Matt</td>
+      <td>John 6:16-21</td>
+      <td>Matt 14:22-33</td>
+      <td>shared miracle tradition</td>
+    </tr>
+    <tr>
+      <td>anointing_bethany</td>
+      <td>John↔Mark</td>
+      <td>John 12:1-8</td>
+      <td>Mark 14:3-9</td>
+      <td>tradition cluster with possible literary and memory contamination</td>
+    </tr>
+    <tr>
+      <td>anointing_bethany</td>
+      <td>John↔Matt</td>
+      <td>John 12:1-8</td>
+      <td>Matt 26:6-13</td>
+      <td>tradition cluster with possible literary and memory contamination</td>
+    </tr>
+    <tr>
+      <td>anointing_bethany</td>
+      <td>John↔Luke</td>
+      <td>John 12:1-8</td>
+      <td>Luke 7:36-50</td>
+      <td>tradition cluster with possible literary and memory contamination</td>
+    </tr>
+    <tr>
+      <td>triumphal_entry</td>
+      <td>John↔Mark</td>
+      <td>John 12:12-19</td>
+      <td>Mark 11:1-10</td>
+      <td>shared passion tradition; direct relation possible but underdetermined</td>
+    </tr>
+    <tr>
+      <td>triumphal_entry</td>
+      <td>John↔Matt</td>
+      <td>John 12:12-19</td>
+      <td>Matt 21:1-11</td>
+      <td>shared passion tradition; direct relation possible but underdetermined</td>
+    </tr>
+    <tr>
+      <td>triumphal_entry</td>
+      <td>John↔Luke</td>
+      <td>John 12:12-19</td>
+      <td>Luke 19:28-40</td>
+      <td>shared passion tradition; direct relation possible but underdetermined</td>
+    </tr>
+    <tr>
+      <td>peter_denial</td>
+      <td>John↔Mark</td>
+      <td>John 18:15-27</td>
+      <td>Mark 14:66-72</td>
+      <td>shared passion tradition; possible literary shaping</td>
+    </tr>
+    <tr>
+      <td>peter_denial</td>
+      <td>John↔Matt</td>
+      <td>John 18:15-27</td>
+      <td>Matt 26:69-75</td>
+      <td>shared passion tradition; possible literary shaping</td>
+    </tr>
+    <tr>
+      <td>peter_denial</td>
+      <td>John↔Luke</td>
+      <td>John 18:15-27</td>
+      <td>Luke 22:54-62</td>
+      <td>shared passion tradition; possible literary shaping</td>
+    </tr>
+    <tr>
+      <td>sword_ear_arrest</td>
+      <td>John↔Mark</td>
+      <td>John 18:10-11</td>
+      <td>Mark 14:47</td>
+      <td>shared passion arrest tradition; direct direction unresolved</td>
+    </tr>
+    <tr>
+      <td>sword_ear_arrest</td>
+      <td>John↔Matt</td>
+      <td>John 18:10-11</td>
+      <td>Matt 26:51-52</td>
+      <td>shared passion arrest tradition; direct direction unresolved</td>
+    </tr>
+    <tr>
+      <td>sword_ear_arrest</td>
+      <td>John↔Luke</td>
+      <td>John 18:10-11</td>
+      <td>Luke 22:49-51</td>
+      <td>shared passion arrest tradition; direct direction unresolved</td>
+    </tr>
+    <tr>
+      <td>garment_division_scripture</td>
+      <td>John↔Mark</td>
+      <td>John 19:23-24</td>
+      <td>Mark 15:24</td>
+      <td>shared passion-scripture tradition; John’s elaboration likely secondary at this local level</td>
+    </tr>
+    <tr>
+      <td>garment_division_scripture</td>
+      <td>John↔Matt</td>
+      <td>John 19:23-24</td>
+      <td>Matt 27:35</td>
+      <td>shared passion-scripture tradition; John’s elaboration likely secondary at this local level</td>
+    </tr>
+    <tr>
+      <td>garment_division_scripture</td>
+      <td>John↔Luke</td>
+      <td>John 19:23-24</td>
+      <td>Luke 23:34</td>
+      <td>shared passion-scripture tradition; John’s elaboration likely secondary at this local level</td>
+    </tr>
+  </tbody>
+</table>
+<p>Full data: <code>data/37_john_synoptic_pairwise_anchor_registry.yaml</code>, <code>data/38_john_synoptic_pairwise_global_summary.yaml</code>.</p>
+
+</body>
+</html>

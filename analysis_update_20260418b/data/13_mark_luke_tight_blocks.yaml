@@ -1,0 +1,1993 @@
+- block_id: tight_001
+  label: tight
+  source_start_ref: Mark 1:3
+  source_end_ref: Mark 1:3
+  target_start_ref: Luke 3:4
+  target_end_ref: Luke 3:4
+  source_start_idx: 3
+  source_end_idx: 3
+  target_start_idx: 136
+  target_end_idx: 136
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.7358
+  min_score: 0.7358
+  max_score: 0.7358
+  primary_pairs:
+  - source_ref: Mark 1:3
+    target_ref: Luke 3:4
+    score: 0.7358
+- block_id: tight_002
+  label: tight
+  source_start_ref: Mark 1:7
+  source_end_ref: Mark 1:7
+  target_start_ref: Luke 3:16
+  target_end_ref: Luke 3:16
+  source_start_idx: 7
+  source_end_idx: 7
+  target_start_idx: 148
+  target_end_idx: 148
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3526
+  min_score: 0.3526
+  max_score: 0.3526
+  primary_pairs:
+  - source_ref: Mark 1:7
+    target_ref: Luke 3:16
+    score: 0.3526
+- block_id: tight_003
+  label: tight
+  source_start_ref: Mark 1:11
+  source_end_ref: Mark 1:11
+  target_start_ref: Luke 3:22
+  target_end_ref: Luke 3:22
+  source_start_idx: 11
+  source_end_idx: 11
+  target_start_idx: 154
+  target_end_idx: 154
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.285
+  min_score: 0.285
+  max_score: 0.285
+  primary_pairs:
+  - source_ref: Mark 1:11
+    target_ref: Luke 3:22
+    score: 0.285
+- block_id: tight_004
+  label: tight
+  source_start_ref: Mark 1:21
+  source_end_ref: Mark 1:25
+  target_start_ref: Luke 4:31
+  target_end_ref: Luke 4:35
+  source_start_idx: 21
+  source_end_idx: 25
+  target_start_idx: 201
+  target_end_idx: 205
+  pair_count: 5
+  source_span_verses: 5
+  target_span_verses: 5
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4535
+  min_score: 0.2532
+  max_score: 0.9274
+  primary_pairs:
+  - source_ref: Mark 1:21
+    target_ref: Luke 4:31
+    score: 0.2623
+  - source_ref: Mark 1:22
+    target_ref: Luke 4:32
+    score: 0.2532
+  - source_ref: Mark 1:23
+    target_ref: Luke 4:33
+    score: 0.2689
+  - source_ref: Mark 1:24
+    target_ref: Luke 4:34
+    score: 0.9274
+  - source_ref: Mark 1:25
+    target_ref: Luke 4:35
+    score: 0.5558
+- block_id: tight_005
+  label: tight
+  source_start_ref: Mark 1:29
+  source_end_ref: Mark 1:31
+  target_start_ref: Luke 4:38
+  target_end_ref: Luke 4:39
+  source_start_idx: 29
+  source_end_idx: 31
+  target_start_idx: 208
+  target_end_idx: 209
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 2
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2461
+  min_score: 0.2191
+  max_score: 0.2732
+  primary_pairs:
+  - source_ref: Mark 1:29
+    target_ref: Luke 4:38
+    score: 0.2732
+  - source_ref: Mark 1:31
+    target_ref: Luke 4:39
+    score: 0.2191
+- block_id: tight_006
+  label: tight
+  source_start_ref: Mark 1:39
+  source_end_ref: Mark 1:39
+  target_start_ref: Luke 4:44
+  target_end_ref: Luke 4:44
+  source_start_idx: 39
+  source_end_idx: 39
+  target_start_idx: 214
+  target_end_idx: 214
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4481
+  min_score: 0.4481
+  max_score: 0.4481
+  primary_pairs:
+  - source_ref: Mark 1:39
+    target_ref: Luke 4:44
+    score: 0.4481
+- block_id: tight_007
+  label: tight
+  source_start_ref: Mark 1:40
+  source_end_ref: Mark 1:41
+  target_start_ref: Luke 5:12
+  target_end_ref: Luke 5:13
+  source_start_idx: 40
+  source_end_idx: 41
+  target_start_idx: 226
+  target_end_idx: 227
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3125
+  min_score: 0.1903
+  max_score: 0.4346
+  primary_pairs:
+  - source_ref: Mark 1:40
+    target_ref: Luke 5:12
+    score: 0.1903
+  - source_ref: Mark 1:41
+    target_ref: Luke 5:13
+    score: 0.4346
+- block_id: tight_008
+  label: tight
+  source_start_ref: Mark 1:44
+  source_end_ref: Mark 1:44
+  target_start_ref: Luke 5:14
+  target_end_ref: Luke 5:14
+  source_start_idx: 44
+  source_end_idx: 44
+  target_start_idx: 228
+  target_end_idx: 228
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4985
+  min_score: 0.4985
+  max_score: 0.4985
+  primary_pairs:
+  - source_ref: Mark 1:44
+    target_ref: Luke 5:14
+    score: 0.4985
+- block_id: tight_009
+  label: tight
+  source_start_ref: Mark 2:5
+  source_end_ref: Mark 2:10
+  target_start_ref: Luke 5:20
+  target_end_ref: Luke 5:24
+  source_start_idx: 50
+  source_end_idx: 55
+  target_start_idx: 234
+  target_end_idx: 238
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 5
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3663
+  min_score: 0.2594
+  max_score: 0.5334
+  primary_pairs:
+  - source_ref: Mark 2:5
+    target_ref: Luke 5:20
+    score: 0.2594
+  - source_ref: Mark 2:7
+    target_ref: Luke 5:21
+    score: 0.2599
+  - source_ref: Mark 2:8
+    target_ref: Luke 5:22
+    score: 0.3131
+  - source_ref: Mark 2:9
+    target_ref: Luke 5:23
+    score: 0.5334
+  - source_ref: Mark 2:10
+    target_ref: Luke 5:24
+    score: 0.4657
+- block_id: tight_010
+  label: tight
+  source_start_ref: Mark 2:14
+  source_end_ref: Mark 2:14
+  target_start_ref: Luke 5:27
+  target_end_ref: Luke 5:27
+  source_start_idx: 59
+  source_end_idx: 59
+  target_start_idx: 241
+  target_end_idx: 241
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3513
+  min_score: 0.3513
+  max_score: 0.3513
+  primary_pairs:
+  - source_ref: Mark 2:14
+    target_ref: Luke 5:27
+    score: 0.3513
+- block_id: tight_011
+  label: tight
+  source_start_ref: Mark 2:17
+  source_end_ref: Mark 3:5
+  target_start_ref: Luke 5:32
+  target_end_ref: Luke 6:10
+  source_start_idx: 62
+  source_end_idx: 78
+  target_start_idx: 246
+  target_end_idx: 263
+  pair_count: 14
+  source_span_verses: 17
+  target_span_verses: 18
+  source_gap_verses_inside_block: 3
+  target_gap_verses_inside_block: 4
+  mean_score: 0.3578
+  min_score: 0.1806
+  max_score: 0.714
+  primary_pairs:
+  - source_ref: Mark 2:17
+    target_ref: Luke 5:32
+    score: 0.3263
+  - source_ref: Mark 2:19
+    target_ref: Luke 5:34
+    score: 0.2553
+  - source_ref: Mark 2:20
+    target_ref: Luke 5:35
+    score: 0.714
+  - source_ref: Mark 2:21
+    target_ref: Luke 5:36
+    score: 0.1806
+  - source_ref: Mark 2:22
+    target_ref: Luke 5:37
+    score: 0.5246
+  - source_ref: Mark 2:23
+    target_ref: Luke 6:1
+    score: 0.2138
+  - source_ref: Mark 2:24
+    target_ref: Luke 6:2
+    score: 0.2149
+  - source_ref: Mark 2:25
+    target_ref: Luke 6:3
+    score: 0.3405
+  - source_ref: Mark 2:26
+    target_ref: Luke 6:4
+    score: 0.5167
+  - source_ref: Mark 2:28
+    target_ref: Luke 6:5
+    score: 0.5355
+  - source_ref: Mark 3:1
+    target_ref: Luke 6:6
+    score: 0.2257
+  - source_ref: Mark 3:3
+    target_ref: Luke 6:8
+    score: 0.3147
+  - source_ref: Mark 3:4
+    target_ref: Luke 6:9
+    score: 0.3324
+  - source_ref: Mark 3:5
+    target_ref: Luke 6:10
+    score: 0.314
+- block_id: tight_012
+  label: tight
+  source_start_ref: Mark 3:18
+  source_end_ref: Mark 3:19
+  target_start_ref: Luke 6:15
+  target_end_ref: Luke 6:16
+  source_start_idx: 91
+  source_end_idx: 92
+  target_start_idx: 268
+  target_end_idx: 269
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4796
+  min_score: 0.4615
+  max_score: 0.4977
+  primary_pairs:
+  - source_ref: Mark 3:18
+    target_ref: Luke 6:15
+    score: 0.4615
+  - source_ref: Mark 3:19
+    target_ref: Luke 6:16
+    score: 0.4977
+- block_id: tight_013
+  label: tight
+  source_start_ref: Mark 4:4
+  source_end_ref: Mark 4:4
+  target_start_ref: Luke 8:5
+  target_end_ref: Luke 8:5
+  source_start_idx: 112
+  source_end_idx: 112
+  target_start_idx: 357
+  target_end_idx: 357
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3928
+  min_score: 0.3928
+  max_score: 0.3928
+  primary_pairs:
+  - source_ref: Mark 4:4
+    target_ref: Luke 8:5
+    score: 0.3928
+- block_id: tight_014
+  label: tight
+  source_start_ref: Mark 4:9
+  source_end_ref: Mark 4:11
+  target_start_ref: Luke 8:8
+  target_end_ref: Luke 8:10
+  source_start_idx: 117
+  source_end_idx: 119
+  target_start_idx: 360
+  target_end_idx: 362
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 1
+  mean_score: 0.2721
+  min_score: 0.2571
+  max_score: 0.2871
+  primary_pairs:
+  - source_ref: Mark 4:9
+    target_ref: Luke 8:8
+    score: 0.2871
+  - source_ref: Mark 4:11
+    target_ref: Luke 8:10
+    score: 0.2571
+- block_id: tight_015
+  label: tight
+  source_start_ref: Mark 4:15
+  source_end_ref: Mark 4:15
+  target_start_ref: Luke 8:12
+  target_end_ref: Luke 8:12
+  source_start_idx: 123
+  source_end_idx: 123
+  target_start_idx: 364
+  target_end_idx: 364
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.1805
+  min_score: 0.1805
+  max_score: 0.1805
+  primary_pairs:
+  - source_ref: Mark 4:15
+    target_ref: Luke 8:12
+    score: 0.1805
+- block_id: tight_016
+  label: tight
+  source_start_ref: Mark 4:18
+  source_end_ref: Mark 4:18
+  target_start_ref: Luke 8:14
+  target_end_ref: Luke 8:14
+  source_start_idx: 126
+  source_end_idx: 126
+  target_start_idx: 366
+  target_end_idx: 366
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3391
+  min_score: 0.3391
+  max_score: 0.3391
+  primary_pairs:
+  - source_ref: Mark 4:18
+    target_ref: Luke 8:14
+    score: 0.3391
+- block_id: tight_017
+  label: tight
+  source_start_ref: Mark 4:22
+  source_end_ref: Mark 4:22
+  target_start_ref: Luke 8:17
+  target_end_ref: Luke 8:17
+  source_start_idx: 130
+  source_end_idx: 130
+  target_start_idx: 369
+  target_end_idx: 369
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4154
+  min_score: 0.4154
+  max_score: 0.4154
+  primary_pairs:
+  - source_ref: Mark 4:22
+    target_ref: Luke 8:17
+    score: 0.4154
+- block_id: tight_018
+  label: tight
+  source_start_ref: Mark 4:25
+  source_end_ref: Mark 4:25
+  target_start_ref: Luke 8:18
+  target_end_ref: Luke 8:18
+  source_start_idx: 133
+  source_end_idx: 133
+  target_start_idx: 370
+  target_end_idx: 370
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.409
+  min_score: 0.409
+  max_score: 0.409
+  primary_pairs:
+  - source_ref: Mark 4:25
+    target_ref: Luke 8:18
+    score: 0.409
+- block_id: tight_019
+  label: tight
+  source_start_ref: Mark 4:35
+  source_end_ref: Mark 4:35
+  target_start_ref: Luke 8:22
+  target_end_ref: Luke 8:22
+  source_start_idx: 143
+  source_end_idx: 143
+  target_start_idx: 374
+  target_end_idx: 374
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2165
+  min_score: 0.2165
+  max_score: 0.2165
+  primary_pairs:
+  - source_ref: Mark 4:35
+    target_ref: Luke 8:22
+    score: 0.2165
+- block_id: tight_020
+  label: tight
+  source_start_ref: Mark 4:39
+  source_end_ref: Mark 5:1
+  target_start_ref: Luke 8:24
+  target_end_ref: Luke 8:26
+  source_start_idx: 147
+  source_end_idx: 150
+  target_start_idx: 376
+  target_end_idx: 378
+  pair_count: 3
+  source_span_verses: 4
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3068
+  min_score: 0.2751
+  max_score: 0.3351
+  primary_pairs:
+  - source_ref: Mark 4:39
+    target_ref: Luke 8:24
+    score: 0.2751
+  - source_ref: Mark 4:41
+    target_ref: Luke 8:25
+    score: 0.3351
+  - source_ref: Mark 5:1
+    target_ref: Luke 8:26
+    score: 0.3103
+- block_id: tight_021
+  label: tight
+  source_start_ref: Mark 5:7
+  source_end_ref: Mark 5:7
+  target_start_ref: Luke 8:28
+  target_end_ref: Luke 8:28
+  source_start_idx: 156
+  source_end_idx: 156
+  target_start_idx: 380
+  target_end_idx: 380
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.5188
+  min_score: 0.5188
+  max_score: 0.5188
+  primary_pairs:
+  - source_ref: Mark 5:7
+    target_ref: Luke 8:28
+    score: 0.5188
+- block_id: tight_022
+  label: tight
+  source_start_ref: Mark 5:11
+  source_end_ref: Mark 5:16
+  target_start_ref: Luke 8:32
+  target_end_ref: Luke 8:36
+  source_start_idx: 160
+  source_end_idx: 165
+  target_start_idx: 384
+  target_end_idx: 388
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 5
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3929
+  min_score: 0.2136
+  max_score: 0.6361
+  primary_pairs:
+  - source_ref: Mark 5:11
+    target_ref: Luke 8:32
+    score: 0.2867
+  - source_ref: Mark 5:13
+    target_ref: Luke 8:33
+    score: 0.4773
+  - source_ref: Mark 5:14
+    target_ref: Luke 8:34
+    score: 0.6361
+  - source_ref: Mark 5:15
+    target_ref: Luke 8:35
+    score: 0.2136
+  - source_ref: Mark 5:16
+    target_ref: Luke 8:36
+    score: 0.3508
+- block_id: tight_023
+  label: tight
+  source_start_ref: Mark 5:20
+  source_end_ref: Mark 5:20
+  target_start_ref: Luke 8:39
+  target_end_ref: Luke 8:39
+  source_start_idx: 169
+  source_end_idx: 169
+  target_start_idx: 391
+  target_end_idx: 391
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3091
+  min_score: 0.3091
+  max_score: 0.3091
+  primary_pairs:
+  - source_ref: Mark 5:20
+    target_ref: Luke 8:39
+    score: 0.3091
+- block_id: tight_024
+  label: tight
+  source_start_ref: Mark 5:25
+  source_end_ref: Mark 5:27
+  target_start_ref: Luke 8:43
+  target_end_ref: Luke 8:44
+  source_start_idx: 174
+  source_end_idx: 176
+  target_start_idx: 395
+  target_end_idx: 396
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 2
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.317
+  min_score: 0.2159
+  max_score: 0.4181
+  primary_pairs:
+  - source_ref: Mark 5:25
+    target_ref: Luke 8:43
+    score: 0.4181
+  - source_ref: Mark 5:27
+    target_ref: Luke 8:44
+    score: 0.2159
+- block_id: tight_025
+  label: tight
+  source_start_ref: Mark 5:34
+  source_end_ref: Mark 5:36
+  target_start_ref: Luke 8:48
+  target_end_ref: Luke 8:50
+  source_start_idx: 183
+  source_end_idx: 185
+  target_start_idx: 400
+  target_end_idx: 402
+  pair_count: 3
+  source_span_verses: 3
+  target_span_verses: 3
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3237
+  min_score: 0.2116
+  max_score: 0.4809
+  primary_pairs:
+  - source_ref: Mark 5:34
+    target_ref: Luke 8:48
+    score: 0.4809
+  - source_ref: Mark 5:35
+    target_ref: Luke 8:49
+    score: 0.2786
+  - source_ref: Mark 5:36
+    target_ref: Luke 8:50
+    score: 0.2116
+- block_id: tight_026
+  label: tight
+  source_start_ref: Mark 5:39
+  source_end_ref: Mark 5:41
+  target_start_ref: Luke 8:52
+  target_end_ref: Luke 8:54
+  source_start_idx: 188
+  source_end_idx: 190
+  target_start_idx: 404
+  target_end_idx: 406
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 1
+  mean_score: 0.3145
+  min_score: 0.2924
+  max_score: 0.3367
+  primary_pairs:
+  - source_ref: Mark 5:39
+    target_ref: Luke 8:52
+    score: 0.3367
+  - source_ref: Mark 5:41
+    target_ref: Luke 8:54
+    score: 0.2924
+- block_id: tight_027
+  label: tight
+  source_start_ref: Mark 6:7
+  source_end_ref: Mark 6:10
+  target_start_ref: Luke 9:1
+  target_end_ref: Luke 9:4
+  source_start_idx: 199
+  source_end_idx: 202
+  target_start_idx: 409
+  target_end_idx: 412
+  pair_count: 3
+  source_span_verses: 4
+  target_span_verses: 4
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 1
+  mean_score: 0.2838
+  min_score: 0.1959
+  max_score: 0.4342
+  primary_pairs:
+  - source_ref: Mark 6:7
+    target_ref: Luke 9:1
+    score: 0.1959
+  - source_ref: Mark 6:8
+    target_ref: Luke 9:3
+    score: 0.2213
+  - source_ref: Mark 6:10
+    target_ref: Luke 9:4
+    score: 0.4342
+- block_id: tight_028
+  label: tight
+  source_start_ref: Mark 6:16
+  source_end_ref: Mark 6:16
+  target_start_ref: Luke 9:9
+  target_end_ref: Luke 9:9
+  source_start_idx: 208
+  source_end_idx: 208
+  target_start_idx: 417
+  target_end_idx: 417
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2417
+  min_score: 0.2417
+  max_score: 0.2417
+  primary_pairs:
+  - source_ref: Mark 6:16
+    target_ref: Luke 9:9
+    score: 0.2417
+- block_id: tight_029
+  label: tight
+  source_start_ref: Mark 6:30
+  source_end_ref: Mark 6:30
+  target_start_ref: Luke 9:10
+  target_end_ref: Luke 9:10
+  source_start_idx: 222
+  source_end_idx: 222
+  target_start_idx: 418
+  target_end_idx: 418
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.24
+  min_score: 0.24
+  max_score: 0.24
+  primary_pairs:
+  - source_ref: Mark 6:30
+    target_ref: Luke 9:10
+    score: 0.24
+- block_id: tight_030
+  label: tight
+  source_start_ref: Mark 6:37
+  source_end_ref: Mark 6:37
+  target_start_ref: Luke 9:13
+  target_end_ref: Luke 9:13
+  source_start_idx: 229
+  source_end_idx: 229
+  target_start_idx: 421
+  target_end_idx: 421
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.1956
+  min_score: 0.1956
+  max_score: 0.1956
+  primary_pairs:
+  - source_ref: Mark 6:37
+    target_ref: Luke 9:13
+    score: 0.1956
+- block_id: tight_031
+  label: tight
+  source_start_ref: Mark 6:41
+  source_end_ref: Mark 6:42
+  target_start_ref: Luke 9:16
+  target_end_ref: Luke 9:17
+  source_start_idx: 233
+  source_end_idx: 234
+  target_start_idx: 424
+  target_end_idx: 425
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4699
+  min_score: 0.2825
+  max_score: 0.6574
+  primary_pairs:
+  - source_ref: Mark 6:41
+    target_ref: Luke 9:16
+    score: 0.6574
+  - source_ref: Mark 6:42
+    target_ref: Luke 9:17
+    score: 0.2825
+- block_id: tight_032
+  label: tight
+  source_start_ref: Mark 8:28
+  source_end_ref: Mark 8:31
+  target_start_ref: Luke 9:19
+  target_end_ref: Luke 9:22
+  source_start_idx: 312
+  source_end_idx: 315
+  target_start_idx: 427
+  target_end_idx: 430
+  pair_count: 4
+  source_span_verses: 4
+  target_span_verses: 4
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4029
+  min_score: 0.2098
+  max_score: 0.5942
+  primary_pairs:
+  - source_ref: Mark 8:28
+    target_ref: Luke 9:19
+    score: 0.4221
+  - source_ref: Mark 8:29
+    target_ref: Luke 9:20
+    score: 0.3855
+  - source_ref: Mark 8:30
+    target_ref: Luke 9:21
+    score: 0.2098
+  - source_ref: Mark 8:31
+    target_ref: Luke 9:22
+    score: 0.5942
+- block_id: tight_033
+  label: tight
+  source_start_ref: Mark 8:34
+  source_end_ref: Mark 9:1
+  target_start_ref: Luke 9:23
+  target_end_ref: Luke 9:27
+  source_start_idx: 318
+  source_end_idx: 323
+  target_start_idx: 431
+  target_end_idx: 435
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 5
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.495
+  min_score: 0.1847
+  max_score: 0.7043
+  primary_pairs:
+  - source_ref: Mark 8:34
+    target_ref: Luke 9:23
+    score: 0.3437
+  - source_ref: Mark 8:35
+    target_ref: Luke 9:24
+    score: 0.7043
+  - source_ref: Mark 8:36
+    target_ref: Luke 9:25
+    score: 0.1847
+  - source_ref: Mark 8:38
+    target_ref: Luke 9:26
+    score: 0.689
+  - source_ref: Mark 9:1
+    target_ref: Luke 9:27
+    score: 0.5535
+- block_id: tight_034
+  label: tight
+  source_start_ref: Mark 9:5
+  source_end_ref: Mark 9:7
+  target_start_ref: Luke 9:33
+  target_end_ref: Luke 9:35
+  source_start_idx: 327
+  source_end_idx: 329
+  target_start_idx: 441
+  target_end_idx: 443
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 1
+  mean_score: 0.4839
+  min_score: 0.4558
+  max_score: 0.5121
+  primary_pairs:
+  - source_ref: Mark 9:5
+    target_ref: Luke 9:33
+    score: 0.5121
+  - source_ref: Mark 9:7
+    target_ref: Luke 9:35
+    score: 0.4558
+- block_id: tight_035
+  label: tight
+  source_start_ref: Mark 9:19
+  source_end_ref: Mark 9:19
+  target_start_ref: Luke 9:41
+  target_end_ref: Luke 9:41
+  source_start_idx: 341
+  source_end_idx: 341
+  target_start_idx: 449
+  target_end_idx: 449
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3995
+  min_score: 0.3995
+  max_score: 0.3995
+  primary_pairs:
+  - source_ref: Mark 9:19
+    target_ref: Luke 9:41
+    score: 0.3995
+- block_id: tight_036
+  label: tight
+  source_start_ref: Mark 9:31
+  source_end_ref: Mark 9:32
+  target_start_ref: Luke 9:44
+  target_end_ref: Luke 9:45
+  source_start_idx: 353
+  source_end_idx: 354
+  target_start_idx: 452
+  target_end_idx: 453
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2854
+  min_score: 0.252
+  max_score: 0.3189
+  primary_pairs:
+  - source_ref: Mark 9:31
+    target_ref: Luke 9:44
+    score: 0.252
+  - source_ref: Mark 9:32
+    target_ref: Luke 9:45
+    score: 0.3189
+- block_id: tight_037
+  label: tight
+  source_start_ref: Mark 9:37
+  source_end_ref: Mark 9:40
+  target_start_ref: Luke 9:48
+  target_end_ref: Luke 9:50
+  source_start_idx: 359
+  source_end_idx: 362
+  target_start_idx: 456
+  target_end_idx: 458
+  pair_count: 3
+  source_span_verses: 4
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.495
+  min_score: 0.3581
+  max_score: 0.6657
+  primary_pairs:
+  - source_ref: Mark 9:37
+    target_ref: Luke 9:48
+    score: 0.3581
+  - source_ref: Mark 9:38
+    target_ref: Luke 9:49
+    score: 0.4611
+  - source_ref: Mark 9:40
+    target_ref: Luke 9:50
+    score: 0.6657
+- block_id: tight_038
+  label: tight
+  source_start_ref: Mark 9:50
+  source_end_ref: Mark 9:50
+  target_start_ref: Luke 14:34
+  target_end_ref: Luke 14:34
+  source_start_idx: 370
+  source_end_idx: 370
+  target_start_idx: 694
+  target_end_idx: 694
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2981
+  min_score: 0.2981
+  max_score: 0.2981
+  primary_pairs:
+  - source_ref: Mark 9:50
+    target_ref: Luke 14:34
+    score: 0.2981
+- block_id: tight_039
+  label: tight
+  source_start_ref: Mark 10:5
+  source_end_ref: Mark 10:5
+  target_start_ref: Luke 15:3
+  target_end_ref: Luke 15:3
+  source_start_idx: 375
+  source_end_idx: 375
+  target_start_idx: 698
+  target_end_idx: 698
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.1986
+  min_score: 0.1986
+  max_score: 0.1986
+  primary_pairs:
+  - source_ref: Mark 10:5
+    target_ref: Luke 15:3
+    score: 0.1986
+- block_id: tight_040
+  label: tight
+  source_start_ref: Mark 10:8
+  source_end_ref: Mark 10:8
+  target_start_ref: Luke 17:35
+  target_end_ref: Luke 17:35
+  source_start_idx: 378
+  source_end_idx: 378
+  target_start_idx: 793
+  target_end_idx: 793
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2058
+  min_score: 0.2058
+  max_score: 0.2058
+  primary_pairs:
+  - source_ref: Mark 10:8
+    target_ref: Luke 17:35
+    score: 0.2058
+- block_id: tight_041
+  label: tight
+  source_start_ref: Mark 10:13
+  source_end_ref: Mark 10:30
+  target_start_ref: Luke 18:15
+  target_end_ref: Luke 18:30
+  source_start_idx: 383
+  source_end_idx: 400
+  target_start_idx: 809
+  target_end_idx: 824
+  pair_count: 15
+  source_span_verses: 18
+  target_span_verses: 16
+  source_gap_verses_inside_block: 3
+  target_gap_verses_inside_block: 1
+  mean_score: 0.4966
+  min_score: 0.2619
+  max_score: 1.0
+  primary_pairs:
+  - source_ref: Mark 10:13
+    target_ref: Luke 18:15
+    score: 0.3033
+  - source_ref: Mark 10:14
+    target_ref: Luke 18:16
+    score: 0.7259
+  - source_ref: Mark 10:15
+    target_ref: Luke 18:17
+    score: 1.0
+  - source_ref: Mark 10:17
+    target_ref: Luke 18:18
+    score: 0.3286
+  - source_ref: Mark 10:18
+    target_ref: Luke 18:19
+    score: 0.8658
+  - source_ref: Mark 10:19
+    target_ref: Luke 18:20
+    score: 0.7019
+  - source_ref: Mark 10:20
+    target_ref: Luke 18:21
+    score: 0.2619
+  - source_ref: Mark 10:21
+    target_ref: Luke 18:22
+    score: 0.402
+  - source_ref: Mark 10:23
+    target_ref: Luke 18:24
+    score: 0.5851
+  - source_ref: Mark 10:25
+    target_ref: Luke 18:25
+    score: 0.5171
+  - source_ref: Mark 10:26
+    target_ref: Luke 18:26
+    score: 0.3801
+  - source_ref: Mark 10:27
+    target_ref: Luke 18:27
+    score: 0.3221
+  - source_ref: Mark 10:28
+    target_ref: Luke 18:28
+    score: 0.262
+  - source_ref: Mark 10:29
+    target_ref: Luke 18:29
+    score: 0.45
+  - source_ref: Mark 10:30
+    target_ref: Luke 18:30
+    score: 0.3436
+- block_id: tight_042
+  label: tight
+  source_start_ref: Mark 10:33
+  source_end_ref: Mark 10:33
+  target_start_ref: Luke 18:32
+  target_end_ref: Luke 18:32
+  source_start_idx: 403
+  source_end_idx: 403
+  target_start_idx: 826
+  target_end_idx: 826
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2273
+  min_score: 0.2273
+  max_score: 0.2273
+  primary_pairs:
+  - source_ref: Mark 10:33
+    target_ref: Luke 18:32
+    score: 0.2273
+- block_id: tight_043
+  label: tight
+  source_start_ref: Mark 10:46
+  source_end_ref: Mark 10:48
+  target_start_ref: Luke 18:35
+  target_end_ref: Luke 18:39
+  source_start_idx: 416
+  source_end_idx: 418
+  target_start_idx: 829
+  target_end_idx: 833
+  pair_count: 3
+  source_span_verses: 3
+  target_span_verses: 5
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 2
+  mean_score: 0.4026
+  min_score: 0.2653
+  max_score: 0.6293
+  primary_pairs:
+  - source_ref: Mark 10:46
+    target_ref: Luke 18:35
+    score: 0.2653
+  - source_ref: Mark 10:47
+    target_ref: Luke 18:38
+    score: 0.3131
+  - source_ref: Mark 10:48
+    target_ref: Luke 18:39
+    score: 0.6293
+- block_id: tight_044
+  label: tight
+  source_start_ref: Mark 10:51
+  source_end_ref: Mark 10:52
+  target_start_ref: Luke 18:41
+  target_end_ref: Luke 18:42
+  source_start_idx: 421
+  source_end_idx: 422
+  target_start_idx: 835
+  target_end_idx: 836
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3754
+  min_score: 0.3526
+  max_score: 0.3981
+  primary_pairs:
+  - source_ref: Mark 10:51
+    target_ref: Luke 18:41
+    score: 0.3526
+  - source_ref: Mark 10:52
+    target_ref: Luke 18:42
+    score: 0.3981
+- block_id: tight_045
+  label: tight
+  source_start_ref: Mark 11:1
+  source_end_ref: Mark 11:2
+  target_start_ref: Luke 19:29
+  target_end_ref: Luke 19:30
+  source_start_idx: 423
+  source_end_idx: 424
+  target_start_idx: 866
+  target_end_idx: 867
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4733
+  min_score: 0.4515
+  max_score: 0.4951
+  primary_pairs:
+  - source_ref: Mark 11:1
+    target_ref: Luke 19:29
+    score: 0.4515
+  - source_ref: Mark 11:2
+    target_ref: Luke 19:30
+    score: 0.4951
+- block_id: tight_046
+  label: tight
+  source_start_ref: Mark 11:3
+  source_end_ref: Mark 11:3
+  target_start_ref: Luke 19:34
+  target_end_ref: Luke 19:34
+  source_start_idx: 425
+  source_end_idx: 425
+  target_start_idx: 871
+  target_end_idx: 871
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3794
+  min_score: 0.3794
+  max_score: 0.3794
+  primary_pairs:
+  - source_ref: Mark 11:3
+    target_ref: Luke 19:34
+    score: 0.3794
+- block_id: tight_047
+  label: tight
+  source_start_ref: Mark 11:7
+  source_end_ref: Mark 11:9
+  target_start_ref: Luke 19:35
+  target_end_ref: Luke 19:38
+  source_start_idx: 429
+  source_end_idx: 431
+  target_start_idx: 872
+  target_end_idx: 875
+  pair_count: 2
+  source_span_verses: 3
+  target_span_verses: 4
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 2
+  mean_score: 0.2058
+  min_score: 0.1872
+  max_score: 0.2244
+  primary_pairs:
+  - source_ref: Mark 11:7
+    target_ref: Luke 19:35
+    score: 0.1872
+  - source_ref: Mark 11:9
+    target_ref: Luke 19:38
+    score: 0.2244
+- block_id: tight_048
+  label: tight
+  source_start_ref: Mark 11:13
+  source_end_ref: Mark 11:13
+  target_start_ref: Luke 19:41
+  target_end_ref: Luke 19:41
+  source_start_idx: 435
+  source_end_idx: 435
+  target_start_idx: 878
+  target_end_idx: 878
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.1814
+  min_score: 0.1814
+  max_score: 0.1814
+  primary_pairs:
+  - source_ref: Mark 11:13
+    target_ref: Luke 19:41
+    score: 0.1814
+- block_id: tight_049
+  label: tight
+  source_start_ref: Mark 11:15
+  source_end_ref: Mark 11:18
+  target_start_ref: Luke 19:45
+  target_end_ref: Luke 19:47
+  source_start_idx: 437
+  source_end_idx: 440
+  target_start_idx: 882
+  target_end_idx: 884
+  pair_count: 3
+  source_span_verses: 4
+  target_span_verses: 3
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3988
+  min_score: 0.203
+  max_score: 0.5513
+  primary_pairs:
+  - source_ref: Mark 11:15
+    target_ref: Luke 19:45
+    score: 0.5513
+  - source_ref: Mark 11:17
+    target_ref: Luke 19:46
+    score: 0.4422
+  - source_ref: Mark 11:18
+    target_ref: Luke 19:47
+    score: 0.203
+- block_id: tight_050
+  label: tight
+  source_start_ref: Mark 11:28
+  source_end_ref: Mark 12:2
+  target_start_ref: Luke 20:2
+  target_end_ref: Luke 20:10
+  source_start_idx: 449
+  source_end_idx: 456
+  target_start_idx: 887
+  target_end_idx: 895
+  pair_count: 6
+  source_span_verses: 8
+  target_span_verses: 9
+  source_gap_verses_inside_block: 2
+  target_gap_verses_inside_block: 3
+  mean_score: 0.5922
+  min_score: 0.282
+  max_score: 0.8589
+  primary_pairs:
+  - source_ref: Mark 11:28
+    target_ref: Luke 20:2
+    score: 0.4429
+  - source_ref: Mark 11:30
+    target_ref: Luke 20:4
+    score: 0.8589
+  - source_ref: Mark 11:31
+    target_ref: Luke 20:5
+    score: 0.7769
+  - source_ref: Mark 11:33
+    target_ref: Luke 20:8
+    score: 0.7875
+  - source_ref: Mark 12:1
+    target_ref: Luke 20:9
+    score: 0.282
+  - source_ref: Mark 12:2
+    target_ref: Luke 20:10
+    score: 0.4051
+- block_id: tight_051
+  label: tight
+  source_start_ref: Mark 12:6
+  source_end_ref: Mark 12:14
+  target_start_ref: Luke 20:13
+  target_end_ref: Luke 20:21
+  source_start_idx: 460
+  source_end_idx: 468
+  target_start_idx: 898
+  target_end_idx: 906
+  pair_count: 7
+  source_span_verses: 9
+  target_span_verses: 9
+  source_gap_verses_inside_block: 2
+  target_gap_verses_inside_block: 2
+  mean_score: 0.3583
+  min_score: 0.1801
+  max_score: 0.5587
+  primary_pairs:
+  - source_ref: Mark 12:6
+    target_ref: Luke 20:13
+    score: 0.1801
+  - source_ref: Mark 12:7
+    target_ref: Luke 20:14
+    score: 0.3444
+  - source_ref: Mark 12:8
+    target_ref: Luke 20:15
+    score: 0.2867
+  - source_ref: Mark 12:9
+    target_ref: Luke 20:16
+    score: 0.5114
+  - source_ref: Mark 12:10
+    target_ref: Luke 20:17
+    score: 0.5587
+  - source_ref: Mark 12:12
+    target_ref: Luke 20:19
+    score: 0.2973
+  - source_ref: Mark 12:14
+    target_ref: Luke 20:21
+    score: 0.3295
+- block_id: tight_052
+  label: tight
+  source_start_ref: Mark 12:17
+  source_end_ref: Mark 12:27
+  target_start_ref: Luke 20:25
+  target_end_ref: Luke 20:38
+  source_start_idx: 471
+  source_end_idx: 481
+  target_start_idx: 910
+  target_end_idx: 923
+  pair_count: 9
+  source_span_verses: 11
+  target_span_verses: 14
+  source_gap_verses_inside_block: 2
+  target_gap_verses_inside_block: 5
+  mean_score: 0.3798
+  min_score: 0.1809
+  max_score: 0.6186
+  primary_pairs:
+  - source_ref: Mark 12:17
+    target_ref: Luke 20:25
+    score: 0.2758
+  - source_ref: Mark 12:19
+    target_ref: Luke 20:28
+    score: 0.6186
+  - source_ref: Mark 12:20
+    target_ref: Luke 20:29
+    score: 0.4402
+  - source_ref: Mark 12:21
+    target_ref: Luke 20:31
+    score: 0.2592
+  - source_ref: Mark 12:22
+    target_ref: Luke 20:32
+    score: 0.3507
+  - source_ref: Mark 12:23
+    target_ref: Luke 20:33
+    score: 0.5931
+  - source_ref: Mark 12:25
+    target_ref: Luke 20:35
+    score: 0.2683
+  - source_ref: Mark 12:26
+    target_ref: Luke 20:37
+    score: 0.1809
+  - source_ref: Mark 12:27
+    target_ref: Luke 20:38
+    score: 0.4313
+- block_id: tight_053
+  label: tight
+  source_start_ref: Mark 12:35
+  source_end_ref: Mark 12:40
+  target_start_ref: Luke 20:41
+  target_end_ref: Luke 20:47
+  source_start_idx: 489
+  source_end_idx: 494
+  target_start_idx: 926
+  target_end_idx: 932
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 7
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 2
+  mean_score: 0.4346
+  min_score: 0.1898
+  max_score: 0.6735
+  primary_pairs:
+  - source_ref: Mark 12:35
+    target_ref: Luke 20:41
+    score: 0.1898
+  - source_ref: Mark 12:36
+    target_ref: Luke 20:43
+    score: 0.4326
+  - source_ref: Mark 12:37
+    target_ref: Luke 20:44
+    score: 0.2839
+  - source_ref: Mark 12:39
+    target_ref: Luke 20:46
+    score: 0.5933
+  - source_ref: Mark 12:40
+    target_ref: Luke 20:47
+    score: 0.6735
+- block_id: tight_054
+  label: tight
+  source_start_ref: Mark 12:43
+  source_end_ref: Mark 12:44
+  target_start_ref: Luke 21:3
+  target_end_ref: Luke 21:4
+  source_start_idx: 497
+  source_end_idx: 498
+  target_start_idx: 935
+  target_end_idx: 936
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 2
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4522
+  min_score: 0.3993
+  max_score: 0.5052
+  primary_pairs:
+  - source_ref: Mark 12:43
+    target_ref: Luke 21:3
+    score: 0.5052
+  - source_ref: Mark 12:44
+    target_ref: Luke 21:4
+    score: 0.3993
+- block_id: tight_055
+  label: tight
+  source_start_ref: Mark 13:4
+  source_end_ref: Mark 13:9
+  target_start_ref: Luke 21:7
+  target_end_ref: Luke 21:13
+  source_start_idx: 502
+  source_end_idx: 507
+  target_start_idx: 939
+  target_end_idx: 945
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 7
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 2
+  mean_score: 0.462
+  min_score: 0.2391
+  max_score: 0.67
+  primary_pairs:
+  - source_ref: Mark 13:4
+    target_ref: Luke 21:7
+    score: 0.67
+  - source_ref: Mark 13:6
+    target_ref: Luke 21:8
+    score: 0.4912
+  - source_ref: Mark 13:7
+    target_ref: Luke 21:9
+    score: 0.3713
+  - source_ref: Mark 13:8
+    target_ref: Luke 21:10
+    score: 0.5385
+  - source_ref: Mark 13:9
+    target_ref: Luke 21:13
+    score: 0.2391
+- block_id: tight_056
+  label: tight
+  source_start_ref: Mark 13:13
+  source_end_ref: Mark 13:13
+  target_start_ref: Luke 21:17
+  target_end_ref: Luke 21:17
+  source_start_idx: 511
+  source_end_idx: 511
+  target_start_idx: 949
+  target_end_idx: 949
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.5382
+  min_score: 0.5382
+  max_score: 0.5382
+  primary_pairs:
+  - source_ref: Mark 13:13
+    target_ref: Luke 21:17
+    score: 0.5382
+- block_id: tight_057
+  label: tight
+  source_start_ref: Mark 13:14
+  source_end_ref: Mark 13:14
+  target_start_ref: Luke 21:21
+  target_end_ref: Luke 21:21
+  source_start_idx: 512
+  source_end_idx: 512
+  target_start_idx: 953
+  target_end_idx: 953
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2382
+  min_score: 0.2382
+  max_score: 0.2382
+  primary_pairs:
+  - source_ref: Mark 13:14
+    target_ref: Luke 21:21
+    score: 0.2382
+- block_id: tight_058
+  label: tight
+  source_start_ref: Mark 13:17
+  source_end_ref: Mark 13:17
+  target_start_ref: Luke 21:23
+  target_end_ref: Luke 21:23
+  source_start_idx: 515
+  source_end_idx: 515
+  target_start_idx: 955
+  target_end_idx: 955
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.658
+  min_score: 0.658
+  max_score: 0.658
+  primary_pairs:
+  - source_ref: Mark 13:17
+    target_ref: Luke 21:23
+    score: 0.658
+- block_id: tight_059
+  label: tight
+  source_start_ref: Mark 13:26
+  source_end_ref: Mark 13:31
+  target_start_ref: Luke 21:27
+  target_end_ref: Luke 21:33
+  source_start_idx: 524
+  source_end_idx: 529
+  target_start_idx: 959
+  target_end_idx: 965
+  pair_count: 5
+  source_span_verses: 6
+  target_span_verses: 7
+  source_gap_verses_inside_block: 1
+  target_gap_verses_inside_block: 2
+  mean_score: 0.6858
+  min_score: 0.2829
+  max_score: 1.0
+  primary_pairs:
+  - source_ref: Mark 13:26
+    target_ref: Luke 21:27
+    score: 0.663
+  - source_ref: Mark 13:28
+    target_ref: Luke 21:30
+    score: 0.2829
+  - source_ref: Mark 13:29
+    target_ref: Luke 21:31
+    score: 0.8569
+  - source_ref: Mark 13:30
+    target_ref: Luke 21:32
+    score: 0.6264
+  - source_ref: Mark 13:31
+    target_ref: Luke 21:33
+    score: 1.0
+- block_id: tight_060
+  label: tight
+  source_start_ref: Mark 14:1
+  source_end_ref: Mark 14:1
+  target_start_ref: Luke 22:2
+  target_end_ref: Luke 22:2
+  source_start_idx: 536
+  source_end_idx: 536
+  target_start_idx: 972
+  target_end_idx: 972
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3728
+  min_score: 0.3728
+  max_score: 0.3728
+  primary_pairs:
+  - source_ref: Mark 14:1
+    target_ref: Luke 22:2
+    score: 0.3728
+- block_id: tight_061
+  label: tight
+  source_start_ref: Mark 14:11
+  source_end_ref: Mark 14:11
+  target_start_ref: Luke 22:5
+  target_end_ref: Luke 22:5
+  source_start_idx: 546
+  source_end_idx: 546
+  target_start_idx: 975
+  target_end_idx: 975
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.4211
+  min_score: 0.4211
+  max_score: 0.4211
+  primary_pairs:
+  - source_ref: Mark 14:11
+    target_ref: Luke 22:5
+    score: 0.4211
+- block_id: tight_062
+  label: tight
+  source_start_ref: Mark 14:12
+  source_end_ref: Mark 14:16
+  target_start_ref: Luke 22:9
+  target_end_ref: Luke 22:13
+  source_start_idx: 547
+  source_end_idx: 551
+  target_start_idx: 979
+  target_end_idx: 983
+  pair_count: 5
+  source_span_verses: 5
+  target_span_verses: 5
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.5003
+  min_score: 0.3013
+  max_score: 0.6555
+  primary_pairs:
+  - source_ref: Mark 14:12
+    target_ref: Luke 22:9
+    score: 0.3013
+  - source_ref: Mark 14:13
+    target_ref: Luke 22:10
+    score: 0.4664
+  - source_ref: Mark 14:14
+    target_ref: Luke 22:11
+    score: 0.6555
+  - source_ref: Mark 14:15
+    target_ref: Luke 22:12
+    score: 0.6457
+  - source_ref: Mark 14:16
+    target_ref: Luke 22:13
+    score: 0.4327
+- block_id: tight_063
+  label: tight
+  source_start_ref: Mark 14:22
+  source_end_ref: Mark 14:22
+  target_start_ref: Luke 22:19
+  target_end_ref: Luke 22:19
+  source_start_idx: 557
+  source_end_idx: 557
+  target_start_idx: 989
+  target_end_idx: 989
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.446
+  min_score: 0.446
+  max_score: 0.446
+  primary_pairs:
+  - source_ref: Mark 14:22
+    target_ref: Luke 22:19
+    score: 0.446
+- block_id: tight_064
+  label: tight
+  source_start_ref: Mark 14:26
+  source_end_ref: Mark 14:26
+  target_start_ref: Luke 22:39
+  target_end_ref: Luke 22:39
+  source_start_idx: 561
+  source_end_idx: 561
+  target_start_idx: 1009
+  target_end_idx: 1009
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3577
+  min_score: 0.3577
+  max_score: 0.3577
+  primary_pairs:
+  - source_ref: Mark 14:26
+    target_ref: Luke 22:39
+    score: 0.3577
+- block_id: tight_065
+  label: tight
+  source_start_ref: Mark 14:36
+  source_end_ref: Mark 14:36
+  target_start_ref: Luke 22:42
+  target_end_ref: Luke 22:42
+  source_start_idx: 571
+  source_end_idx: 571
+  target_start_idx: 1012
+  target_end_idx: 1012
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2811
+  min_score: 0.2811
+  max_score: 0.2811
+  primary_pairs:
+  - source_ref: Mark 14:36
+    target_ref: Luke 22:42
+    score: 0.2811
+- block_id: tight_066
+  label: tight
+  source_start_ref: Mark 14:38
+  source_end_ref: Mark 14:38
+  target_start_ref: Luke 22:46
+  target_end_ref: Luke 22:46
+  source_start_idx: 573
+  source_end_idx: 573
+  target_start_idx: 1016
+  target_end_idx: 1016
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2234
+  min_score: 0.2234
+  max_score: 0.2234
+  primary_pairs:
+  - source_ref: Mark 14:38
+    target_ref: Luke 22:46
+    score: 0.2234
+- block_id: tight_067
+  label: tight
+  source_start_ref: Mark 14:43
+  source_end_ref: Mark 14:43
+  target_start_ref: Luke 22:47
+  target_end_ref: Luke 22:47
+  source_start_idx: 578
+  source_end_idx: 578
+  target_start_idx: 1017
+  target_end_idx: 1017
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2642
+  min_score: 0.2642
+  max_score: 0.2642
+  primary_pairs:
+  - source_ref: Mark 14:43
+    target_ref: Luke 22:47
+    score: 0.2642
+- block_id: tight_068
+  label: tight
+  source_start_ref: Mark 14:47
+  source_end_ref: Mark 14:48
+  target_start_ref: Luke 22:50
+  target_end_ref: Luke 22:52
+  source_start_idx: 582
+  source_end_idx: 583
+  target_start_idx: 1020
+  target_end_idx: 1022
+  pair_count: 2
+  source_span_verses: 2
+  target_span_verses: 3
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 1
+  mean_score: 0.3583
+  min_score: 0.2941
+  max_score: 0.4226
+  primary_pairs:
+  - source_ref: Mark 14:47
+    target_ref: Luke 22:50
+    score: 0.2941
+  - source_ref: Mark 14:48
+    target_ref: Luke 22:52
+    score: 0.4226
+- block_id: tight_069
+  label: tight
+  source_start_ref: Mark 14:72
+  source_end_ref: Mark 14:72
+  target_start_ref: Luke 22:61
+  target_end_ref: Luke 22:61
+  source_start_idx: 607
+  source_end_idx: 607
+  target_start_idx: 1031
+  target_end_idx: 1031
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2781
+  min_score: 0.2781
+  max_score: 0.2781
+  primary_pairs:
+  - source_ref: Mark 14:72
+    target_ref: Luke 22:61
+    score: 0.2781
+- block_id: tight_070
+  label: tight
+  source_start_ref: Mark 15:2
+  source_end_ref: Mark 15:2
+  target_start_ref: Luke 23:3
+  target_end_ref: Luke 23:3
+  source_start_idx: 609
+  source_end_idx: 609
+  target_start_idx: 1044
+  target_end_idx: 1044
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.6114
+  min_score: 0.6114
+  max_score: 0.6114
+  primary_pairs:
+  - source_ref: Mark 15:2
+    target_ref: Luke 23:3
+    score: 0.6114
+- block_id: tight_071
+  label: tight
+  source_start_ref: Mark 15:21
+  source_end_ref: Mark 15:21
+  target_start_ref: Luke 23:26
+  target_end_ref: Luke 23:26
+  source_start_idx: 628
+  source_end_idx: 628
+  target_start_idx: 1066
+  target_end_idx: 1066
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3451
+  min_score: 0.3451
+  max_score: 0.3451
+  primary_pairs:
+  - source_ref: Mark 15:21
+    target_ref: Luke 23:26
+    score: 0.3451
+- block_id: tight_072
+  label: tight
+  source_start_ref: Mark 15:26
+  source_end_ref: Mark 15:26
+  target_start_ref: Luke 23:38
+  target_end_ref: Luke 23:38
+  source_start_idx: 633
+  source_end_idx: 633
+  target_start_idx: 1078
+  target_end_idx: 1078
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.3
+  min_score: 0.3
+  max_score: 0.3
+  primary_pairs:
+  - source_ref: Mark 15:26
+    target_ref: Luke 23:38
+    score: 0.3
+- block_id: tight_073
+  label: tight
+  source_start_ref: Mark 15:30
+  source_end_ref: Mark 15:30
+  target_start_ref: Luke 23:39
+  target_end_ref: Luke 23:39
+  source_start_idx: 636
+  source_end_idx: 636
+  target_start_idx: 1079
+  target_end_idx: 1079
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2433
+  min_score: 0.2433
+  max_score: 0.2433
+  primary_pairs:
+  - source_ref: Mark 15:30
+    target_ref: Luke 23:39
+    score: 0.2433
+- block_id: tight_074
+  label: tight
+  source_start_ref: Mark 15:33
+  source_end_ref: Mark 15:33
+  target_start_ref: Luke 23:44
+  target_end_ref: Luke 23:44
+  source_start_idx: 639
+  source_end_idx: 639
+  target_start_idx: 1084
+  target_end_idx: 1084
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.6525
+  min_score: 0.6525
+  max_score: 0.6525
+  primary_pairs:
+  - source_ref: Mark 15:33
+    target_ref: Luke 23:44
+    score: 0.6525
+- block_id: tight_075
+  label: tight
+  source_start_ref: Mark 15:38
+  source_end_ref: Mark 15:38
+  target_start_ref: Luke 23:45
+  target_end_ref: Luke 23:45
+  source_start_idx: 644
+  source_end_idx: 644
+  target_start_idx: 1085
+  target_end_idx: 1085
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.229
+  min_score: 0.229
+  max_score: 0.229
+  primary_pairs:
+  - source_ref: Mark 15:38
+    target_ref: Luke 23:45
+    score: 0.229
+- block_id: tight_076
+  label: tight
+  source_start_ref: Mark 15:43
+  source_end_ref: Mark 15:43
+  target_start_ref: Luke 23:52
+  target_end_ref: Luke 23:52
+  source_start_idx: 649
+  source_end_idx: 649
+  target_start_idx: 1092
+  target_end_idx: 1092
+  pair_count: 1
+  source_span_verses: 1
+  target_span_verses: 1
+  source_gap_verses_inside_block: 0
+  target_gap_verses_inside_block: 0
+  mean_score: 0.2566
+  min_score: 0.2566
+  max_score: 0.2566
+  primary_pairs:
+  - source_ref: Mark 15:43
+    target_ref: Luke 23:52
+    score: 0.2566
