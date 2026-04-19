@@ -1,0 +1,39 @@
+review_date: '2026-04-19'
+findings:
+- id: conclusions_stale
+  severity: high
+  finding: Current conclusions omit later Mark-Luke, directional-dossier, and atlas
+    layers.
+  recommendation: Replace or supplement conclusions/CONCLUSIONS.md with CONCLUSIONS_REVISED_20260419.md.
+- id: mkl_not_in_shared_switcher
+  severity: high
+  finding: Shared visualization switcher currently lists mm/ml/mld, not mkl.
+  recommendation: Add mkl to VALID_DS and wire Mark-Luke data into shared Synoptic
+    pages.
+- id: missing_visualization_pages_36_42
+  severity: high
+  finding: Landing pages reference pages 36-42 for directional dossiers and model
+    atlas, but committed docs listing exposes only 01-35 and raw page 36+ fetches
+    returned 404.
+  recommendation: Commit visualization source/pages 36-42 and rebuild docs, or remove
+    references.
+- id: missing_build_loaders
+  severity: high
+  finding: preprocess.py imports loaders_h18c, loaders_dir_dossiers, loaders_atlas;
+    inspected build directory listing did not include these modules.
+  recommendation: Commit missing modules and tests, or adjust preprocess.py.
+- id: readme_landing_mismatch
+  severity: medium
+  finding: Root README and landing page disagree on package/page counts.
+  recommendation: Create one authoritative project map and use it in README, docs,
+    and visualization index.
+- id: minor_agreements_need_curation
+  severity: medium
+  finding: Minor-agreement catalog is algorithmic screening.
+  recommendation: 'Add hand-curated categories: true minor agreement, harmonization
+    risk, formula/commonality risk, textual variant risk, weak/false positive.'
+- id: variant_registry_case_assessment
+  severity: medium
+  finding: Variant registry is broad and many rows are not assessed case-by-case.
+  recommendation: Add a priority variant-impact audit for claims used in the headline
+    conclusions.

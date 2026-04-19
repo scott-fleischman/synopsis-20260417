@@ -1,0 +1,14 @@
+model_id,short_label,current_atlas_rating,main_strength,main_burden
+markan_priority_matthew_and_luke,Markan priority for Matthew and Luke,strong_with_mark_luke_caution,Mark-like narrative source explains most Mark-Matthew/Mark-Luke core,does not solve double tradition
+two_source_mark_q,Two-source / Mark + Q-like sayings source,strong_but_Q_document_and_minor_agreement_burdens,explains Markan backbone plus non-Markan sayings layer,Q/source reconstruction and minor agreements
+farrer_mark_matthew_luke,Farrer / Mark + Matthew → Luke,viable_major_alternative,avoids Q document and explains minor agreements via Luke-Matthew contact,must explain Lukan de-Mattheanization/dispersal of sayings
+matthew_used_luke_plus_mark_like,Matthew used Luke plus Mark-like material,possible_but_high_burden,explains Matthew as organizer/collector,less economical system-level pattern and Matthew-Mark relationship
+griesbach_two_gospel,Griesbach / Two-Gospel model,possible_but_high_burden,direct Matthew-Luke contact explains agreements against Mark,Markan omission/compression of major Matthean/Lukan material
+augustinian_matthew_mark_luke,Augustinian sequence Matthew → Mark → Luke,high_burden_due_mark_from_matthew,simple canonical order tradition,Mark-from-Matthew burden
+proto_mark_plus_sayings,Proto-Mark/common narrative source + sayings tradition,plausible_lost_source_hybrid,accounts for canonical-form uncertainty and Mark-like core,lost source reconstruction burden
+oral_tradition_network,Stable oral/traditional network,good_for_sayings_john_weak_for_ordered_synoptic_narrative,explains mobile sayings and John anchors,dense order and exact wording in Synoptic narrative cores
+john_uses_mark,John used Mark,local_possible_global_not_favored,accounts for selected John/Synoptic anchor overlaps as direct transformation,weak continuous order and high Johannine transformation
+john_uses_matthew,John used Matthew,weak_global_direct_model,accounts for selected John/Synoptic anchor overlaps as direct transformation,weak continuous order and high Johannine transformation
+john_uses_luke,John used Luke,local_possible_global_not_favored,accounts for selected John/Synoptic anchor overlaps as direct transformation,weak continuous order and high Johannine transformation
+synoptics_use_john_or_johnlike,Synoptics used John / John-like tradition,high_burden_if_canonical_john_source,keeps possibility of pre-Johannine shared traditions,de-Johannization/compression burden
+shared_john_synoptic_anchor_tradition,Shared John/Synoptic anchor tradition,best_current_john_global_model,explains anchors without forcing monotonic chain,local exact/specific clusters may still require case-level direct-dependence explanations

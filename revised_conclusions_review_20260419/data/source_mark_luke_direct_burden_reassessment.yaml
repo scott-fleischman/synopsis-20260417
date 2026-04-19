@@ -1,0 +1,24 @@
+original_three_way_burden_totals:
+  Mark_prior_Luke_uses_Mark_or_Mark_like_source: 254.6466
+  Luke_prior_Mark_uses_Luke_or_Luke_like_source: 303.1966
+  shared_narrative_or_oral_tradition_without_direct_use: 164.1468
+direct_use_only_result:
+  lower_direct_use_model: Mark_prior_Luke_uses_Mark_or_Mark_like_source
+  difference_Luke_prior_minus_Mark_prior: 48.55
+unpenalized_three_way_result:
+  lowest_model: shared_narrative_or_oral_tradition_without_direct_use
+  caution: Unpenalized shared tradition is lower than either direct-use model.
+order_retention_penalty_model:
+  moderate_weights:
+    order_retention_weight: 0.75
+    cluster_density_weight: 1.0
+    narrative_bridge_weight: 1.0
+  moderate_weight_result:
+    added_shared_tradition_penalty: 221.4666
+    adjusted_shared_tradition_burden: 385.6134
+    mark_prior_burden: 254.6466
+    luke_prior_burden: 303.1966
+    lowest_burden_model: Mark_prior_Luke_uses_Mark_or_Mark_like_source
+  grid_outcome_counts:
+    Mark_prior_Luke_uses_Mark_or_Mark_like_source: 211
+    shared_tradition_adjusted_for_order_retention: 34
