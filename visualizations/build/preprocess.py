@@ -383,6 +383,7 @@ def _load_conclusions() -> dict:
         "per_comparison_models": _read_yaml("02_per_comparison_models.yaml"),
         "case_snippets": _read_yaml("03_case_snippets.yaml"),
         "overall_model": _read_yaml("04_overall_model.yaml"),
+        "revised_headline_claims": _read_yaml("05_revised_headline_claims.yaml"),
     }
 
 

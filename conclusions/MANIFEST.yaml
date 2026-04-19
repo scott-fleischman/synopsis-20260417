@@ -1,25 +1,33 @@
 package: conclusions
-created_utc: '2026-04-18T15:18:18.361332+00:00'
+created_utc: '2026-04-19T00:00:00+00:00'
+revision: '2026-04-19'
+supersedes: prior 2026-04-18 MANIFEST (eight-point pairwise conclusions)
 type: interpretive synthesis (author-authored, not pipeline output)
 files:
 - path: CONCLUSIONS.md
-  bytes: 19729
-  sha256: 16037d1f4c5cc5117a85253555d23c4dcd65a7abe7fc319ee39d4d90e18473b5
+  bytes: 22921
+  sha256: dfc29275a7f392a35478b3313943eeb25d92b5d8b0779729a3c08a69c4df26e9
 - path: EXECUTIVE_SUMMARY.md
-  bytes: 2817
-  sha256: 5c71ed88a1367ca5609bc83965dac990f5020501ebfedb0c34282e52d92ac7df
+  bytes: 6035
+  sha256: 56320a25d3ddb1e253d234d2bb838c510d581f3fbcb2b3e711dc6a37aff836f8
 - path: README.md
-  bytes: 2944
-  sha256: 2083f8c6a11ac76c164112b2149b05baabd4d3eb0d8a2ead8e5e86b1088b1c5e
+  bytes: 5627
+  sha256: a69ff70bcd5e2a3ecb8e70d94436d63a4c2eec8778a0ca672bcb27d1e72040a8
 - path: data/01_confidence_table.csv
-  bytes: 1219
-  sha256: acd3e29a50de7c16d5df88a59e4161523236cc49d3fd6433e608d2227c6b85ed
+  bytes: 2226
+  sha256: 878a825e1c648154cd403f5b57a03f5bc97fedc7e4efcdd7d68f84959c1505b8
 - path: data/02_per_comparison_models.yaml
-  bytes: 1105
-  sha256: fd2fc39a4f78721634efd0cdf8fbafefecb10cbd34ab717383d79a4a62955231
+  bytes: 4068
+  sha256: b2431d0f3f3f70ac9e12700bb51a4d0c2b5775ef918677f4654fb9d9d4834916
 - path: data/03_case_snippets.yaml
   bytes: 1174
   sha256: 5e0c6871151fbca99512d898e923f1965d02b89f682f0b93160414f9b487b6f3
 - path: data/04_overall_model.yaml
-  bytes: 1703
-  sha256: 1bf42d2a18125700ded5c77981d35b75c4752fa81e8126e0f27c22d06585b691
+  bytes: 4413
+  sha256: 4ee8ce910dfb78a38f9873f2ae2ea7b62f4cf64bc42b42875adba75cf6227673
+- path: data/05_revised_headline_claims.yaml
+  bytes: 12230
+  sha256: a5bf6e7eec43806380b455cbe01281c732ac9136dd63819d6b9d6c797f20f195
+- path: data/05_revised_headline_claims.csv
+  bytes: 4086
+  sha256: 698ecae8a0253740dd0d94c9a234fae2d9c690928128fdddc7be6252583df002

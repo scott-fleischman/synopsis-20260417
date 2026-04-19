@@ -1,16 +1,55 @@
-best_current_model_from_generated_data:
-  mark:
-    role: major written narrative source
-    relation_to_matthew: Matthew probably uses Mark or Mark-like source
-  matthew_luke_double_tradition:
-    role: shared sayings/tradition layer
-    best_explanation: common written/oral Jesus tradition
-    q_implication: supports Q-like layer, not necessarily a single recoverable Q document
+revision: '2026-04-19'
+supersedes: prior 2026-04-18 model (pairwise only)
+
+current_best_model_family:
+  synoptic_narrative_backbone:
+    model: Markan priority / Mark-like written source
+    confidence:
+      matthew_used_mark_like: high
+      luke_used_mark_like: medium_high_with_order_retention_caveat
+    burden_evidence:
+      matthew_used_mark_vs_mark_used_matthew: 774.87 vs 788.66
+      mark_prior_vs_luke_prior: 254.6466 vs 303.1966
+      shared_tradition_unpenalized: 164.1468
+      shared_tradition_moderate_order_penalty: 385.6134
+  matthew_luke_non_markan_material:
+    model: shared sayings/tradition layer
+    confidence: medium_high
+    q_document_claim: medium_low_without_further_argument
+    strongest_alternative: Farrer / Luke used Matthew plus Mark
+    burden_evidence:
+      masked_direct_use_symmetry: 26.446 / 26.446
+      masked_common_source: 8.86
+      mask_regime_robustness_pair_counts: strict 60-76 / medium 58-71 / broad 57-69
   john:
-    role: independent literary-theological Gospel using overlapping Jesus/passion/sign traditions
-    direct_synoptic_use: possible locally, not globally proven
+    model: shared anchor/passion/sign tradition
+    confidence: medium
+    local_direct_use: possible_case_by_case
+    anchor_wins_for_shared_tradition: 10_of_10_mark / 10_of_10_matthew / 9_of_9_luke
+    burden_evidence:
+      john_mark: john_uses_mark 59.741 / mark_uses_john 64.041 / shared_anchor 23.5 / independent 111.0
+      john_matt: john_uses_matt 55.862 / matt_uses_john 60.162 / shared_anchor 24.8 / independent 119.5
+      john_luke: john_uses_luke 58.598 / luke_uses_john 61.698 / shared_anchor 20.8 / independent 91.6
+  minor_agreements:
+    status: unresolved_central_discriminator
+    catalog_state: algorithmic_screen_not_hand_curated
+    totals:
+      rows: 118
+      high_strength: 21
+    discriminates_between:
+      - two_source
+      - farrer
+      - griesbach
+      - shared_source
+      - harmonization
   thomas:
-    role: sayings-network witness
+    model: sayings-network witness
+    confidence_overlap: medium
+    confidence_direction: low
+    totals:
+      logia_parsed: 116
+      curated_canonical_parallels: 46
+      directional_claim_ready: 3
     direct_dependence_on_canonical_gospels: varies by logion, not globally established
   james:
     role: epistolary paraenesis saturated with Jesus-tradition motifs
@@ -18,17 +57,48 @@ best_current_model_from_generated_data:
   first_timothy:
     role: strong witness to a Luke-like fixed Jesus saying
     independent_convergence: very unlikely
+    strongest_case: 1Tim 5:18 / Luke 10:7
   paul_lord_supper:
     role: liturgical/traditional formula
     direct_luke_dependence: not the best explanation
+  johannine_letters:
+    role: intra-corpus idiolectal continuity with Gospel of John
+    single_verse_direction_claims: not warranted
+  apocrypha_beyond_thomas:
+    status: inventory_only
+    next_priority:
+      - Gospel of Peter
+      - passion apocrypha
+      - Protevangelium of James
+      - Infancy Thomas
+      - Gospel of Nicodemus / Acts of Pilate
+
+system_level_model_ranking:
+  critical_note: burden_sum_is_audit_prompt_not_posterior_probability
+  best_supported_family: Markan priority plus a non-Markan sayings/tradition layer
+  live_competitors:
+    - two_source_mark_plus_q_like_sayings
+    - farrer_mark_plus_matthew_to_luke
+  higher_burden_but_possible:
+    - griesbach_two_gospel
+    - augustinian
+    - proto_mark_plus_sayings
+    - oral_tradition_network
+  john_specific_lowest_burden: shared_anchor_tradition
 
 methodological_conclusion: >
   The early Christian textual field is not one tree. It is a mixed network:
-  one strong written narrative backbone around Mark, a sayings/tradition layer
-  behind Matthew–Luke material, shared passion and sign traditions overlapping
-  John, and epistolary reuse of fixed Jesus sayings and liturgical formulas.
+  one strong written narrative backbone around Mark (used by both Matthew and
+  Luke), a sayings/tradition layer behind Matthew-Luke double tradition,
+  shared passion and sign traditions overlapping John, and epistolary reuse of
+  fixed Jesus sayings and liturgical formulas. The two system-level
+  alternatives that remain live are Two-source (with Q understood as a
+  tradition layer rather than a single discrete document) and Farrer (Mark +
+  Matthew -> Luke, no Q); minor agreements are the key unresolved
+  discriminator between them.
 
 strongest_individual_findings:
   directional: Matthew's dependence on Mark or a Mark-like source
   non_gospel_saying: 1 Timothy 5:18's dependence on a Luke-like worker/wages saying
   cautionary: exact verbal agreement can indicate liturgy or shared tradition rather than direct literary copying (1 Corinthians 11 / Luke 22)
+  structural: shared anchor tradition wins at every John/Synoptic anchor on every pair (29/29 anchors across three pairs)

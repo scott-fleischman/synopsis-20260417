@@ -1,0 +1,227 @@
+- rank: 1
+  claim_id: matthew_used_mark_like_source
+  claim: Matthew most likely used Mark or a Mark-like written narrative source.
+  confidence:
+    retrieval: high
+    interpretive: high
+    directional: high
+  support:
+  - Mark-Matthew remains the strongest continuous narrative alignment in the project.
+  - 'Reproducibility-patch rerun headline: 386 primary pairs, 27 loose blocks, 50
+    tight blocks.'
+  - Directional burden remains lower for Matthew-used-Mark than Mark-used-Matthew
+    (774.87 vs 788.66 in the current burden reference).
+  - Matthean expansions, discourse clustering, fulfillment material, and infancy/genealogy
+    are coherent as additions to a Mark-like narrative backbone.
+  counterevidence_or_limits:
+  - The evidence supports Mark-like source priority more safely than dependence on
+    canonical Mark in precisely its extant printed form.
+  - Matthew contains major non-Markan material; Mark alone cannot explain Matthew.
+  - Some local Markan vividness or roughness can be argued secondary in isolated passages.
+  - Some apparatus/variant cases remain flagged but not assessed case-by-case.
+  best_response_model: Matthean redaction and expansion of a Mark-like narrative source,
+    supplemented by sayings, fulfillment, infancy, and discourse traditions.
+  revision_from_current_repo: Use rerun headline 386 rather than older 385 where making
+    headline claims; keep original 385 only for legacy pair-file references.
+- rank: 2
+  claim_id: luke_used_mark_like_source
+  claim: Luke probably used Mark or a Mark-like written narrative source, but this
+    conclusion is weaker than Matthew-used-Mark and must be stated with a shared-tradition
+    caveat.
+  confidence:
+    retrieval: medium-high
+    interpretive: medium-high
+    directional: medium-high over Mark-used-Luke; medium against all alternatives
+  support:
+  - 'Direct Mark-Luke package adds the previously missing control: 183 primary-chain
+    pairs, 35 loose blocks, 76 tight blocks, and 140 secondary echoes.'
+  - Direct-use burden favors Mark-prior/Luke-used-Mark over Luke-prior/Mark-used-Luke
+    (254.6466 vs 303.1966).
+  - 'MorphGNT lemma audit strengthens rather than weakens Mark-Luke local alignment:
+    mean lemma score exceeds mean surface score by about 0.0795 across primary pairs.'
+  - When shared tradition is charged for dense order retention, cluster density, and
+    narrative bridge retention, adjusted shared-tradition burden rises above Mark-prior
+    in the moderate penalty model (385.6134 vs 254.6466).
+  counterevidence_or_limits:
+  - The unpenalized three-way Mark-Luke ledger favored shared narrative/oral tradition
+    (164.1468) over either direct-use model.
+  - Luke has substantial non-Markan material and meaningful reorderings/omissions.
+  - The direct Mark-Luke signal is less extensive than the Mark-Matthew signal.
+  - The conclusion depends on whether one accepts an order-retention penalty for shared
+    tradition.
+  best_response_model: Luke used a Mark-like narrative source selectively and combined
+    it with other sources/traditions; non-direct shared-tradition accounts must explain
+    retained narrative order, cluster density, and bridge sequences.
+  revision_from_current_repo: Do not state simply 'Luke likely used Mark' without
+    the order-retention caveat.
+- rank: 3
+  claim_id: matthew_luke_double_tradition_shared_sayings
+  claim: The non-Markan Matthew-Luke double tradition is better modeled as a shared
+    sayings/tradition layer than as simple one-way direct copying.
+  confidence:
+    retrieval: medium-high
+    interpretive: medium-high
+    directional: medium for rejecting simple one-way; medium-low for a discrete Q
+      document
+  support:
+  - Earlier masked ledger favored common source/oral tradition over either direct
+    direction (8.86 vs 26.446 / 26.446).
+  - Rerun mask regimes preserve the qualitative picture that the masked material behaves
+    as sayings/echo material rather than a stable narrative chain.
+  - Atlas double-tradition order layer records 49 primary rows and 60 secondary/nonlocal
+    rows, making displacement central to the question.
+  counterevidence_or_limits:
+  - A shared sayings layer does not prove one discrete recoverable Q document.
+  - Farrer remains viable because Luke-Matthew contact can explain minor agreements
+    and does not require reconstructing Q.
+  - The masked dataset depends on Markan-mask regimes and needs continued audit.
+  - A direct-use model can remain plausible if it supplies a strong editorial theory
+    for redistribution/decontextualization.
+  best_response_model: A Q-like or tradition-layer model is the current lowest-burden
+    representation, while Farrer remains the strongest no-Q alternative requiring
+    Lukan redistribution of Matthean sayings.
+  revision_from_current_repo: Separate 'shared sayings/tradition' from 'one discrete
+    Q document' more sharply, and discuss Farrer as a live major alternative.
+- rank: 4
+  claim_id: system_model_ranking
+  claim: The best overall system-level family is Markan priority plus a non-Markan
+    sayings/tradition layer; Two-source and Farrer remain the two most important scholarly
+    competitors.
+  confidence:
+    retrieval: medium-high
+    interpretive: medium
+    directional: model-dependent
+  support:
+  - System atlas scores 13 models across Mark-Matthew, Mark-Luke, Matthew-Luke double
+    tradition, minor agreements, and John anchors.
+  - Markan priority for Matthew/Luke explains the narrative backbone but does not
+    solve the double tradition by itself.
+  - Two-source / Mark + Q-like sayings strongly explains Markan backbone plus non-Markan
+    sayings but pays Q-document/minor-agreement burdens.
+  - 'Farrer is a viable major alternative: it avoids a Q document and can explain
+    minor agreements through Luke-Matthew contact.'
+  counterevidence_or_limits:
+  - The model scorecard is an evidence-and-burden index, not a probability table.
+  - Minor-agreement catalog is algorithmic screening, not a hand-curated standard
+    list.
+  - Proto-Mark and oral/tradition-network models remain plausible but pay lost-source
+    or order-retention costs.
+  - Griesbach/Two-Gospel and Augustinian models are not impossible, but current burden
+    ledgers make Markan omission/compression costly.
+  best_response_model: 'Present model rankings as burden profiles rather than winners:
+    Markan priority + shared sayings is currently best-supported; Farrer is the strongest
+    direct-dependence alternative; Griesbach/Augustinian are higher-burden; proto-Mark/network
+    remains possible.'
+  revision_from_current_repo: Add explicit model-level conclusions rather than only
+    pairwise conclusions.
+- rank: 5
+  claim_id: john_synoptic_anchor_tradition
+  claim: John shares substantial anchor traditions with the Synoptics, but shared
+    anchor/passion/sign tradition is currently lower burden than direct John-used-Mark/Matthew/Luke
+    models.
+  confidence:
+    retrieval: medium
+    interpretive: medium
+    directional: medium against global direct dependence
+  support:
+  - John anchor-specific ledgers evaluate John↔Mark, John↔Matthew, and John↔Luke separately.
+  - For John↔Mark, shared anchor tradition totals 23.5 vs 59.741 for John-used-Mark
+    and 64.041 for Mark-used-John.
+  - For John↔Matthew, shared anchor tradition totals 24.8 vs 55.862 for John-used-Matthew
+    and 60.162 for Matthew-used-John.
+  - For John↔Luke, shared anchor tradition totals 20.8 vs 58.598 for John-used-Luke
+    and 61.698 for Luke-used-John.
+  counterevidence_or_limits:
+  - Some individual anchors may still be argued as local literary dependence.
+  - Anchor ledgers are partly interpretive and not a continuous-chain proof.
+  - John's passion/sign overlaps are specific enough that pure independence is often
+    too cheap.
+  - Global Johannine transformation makes pairwise direct direction difficult to establish.
+  best_response_model: A shared anchor/passion/sign tradition model, with local direct-use
+    possibilities evaluated anchor by anchor rather than assumed globally.
+  revision_from_current_repo: Do not frame John simply as 'shared tradition is clear';
+    add the new pairwise burden totals.
+- rank: 6
+  claim_id: minor_agreements
+  claim: Minor agreements are now a central unresolved discriminator, not a side issue.
+  confidence:
+    retrieval: medium-high for screen
+    interpretive: medium
+    directional: unresolved
+  support:
+  - The model atlas added 118 triple-tradition minor-agreement rows, including 21
+    high-strength rows.
+  - This is the key data layer where Farrer/Griesbach/direct-contact models gain explanatory
+    leverage against strict Two-source accounts.
+  counterevidence_or_limits:
+  - The catalog is algorithmic and needs hand curation by type, textual status, and
+    formula/commonality risk.
+  - Minor agreements can result from direct contact, shared non-Markan source, scribal
+    harmonization, coincidence, or redactional similarity.
+  - The current project should not treat the minor-agreement screen as a finished
+    scholarly catalog.
+  best_response_model: 'Use the minor-agreement catalog as a discriminator dashboard:
+    it strengthens direct-contact alternatives but does not itself decide Farrer vs
+    Two-source vs Griesbach.'
+  revision_from_current_repo: Promote minor agreements into headline conclusions as
+    an unresolved burden.
+- rank: 7
+  claim_id: thomas_synoptic
+  claim: Thomas is best treated as a curated logion-level sayings-network witness;
+    current data does not support a global direct-dependence claim on one canonical
+    Gospel.
+  confidence:
+    retrieval: medium for curated parallels
+    interpretive: medium
+    directional: low
+  support:
+  - Thomas matrix contains 116 logia and 46 curated canonical parallels.
+  - The Coptic-Greek boundary is explicitly marked; no automatic Greek-Coptic dependence
+    score is claimed.
+  counterevidence_or_limits:
+  - Curated parallels are not independent computational discoveries.
+  - Some logia may show canonical influence while others may preserve independent
+    or parallel sayings tradition.
+  - A full Thomas pipeline requires Coptic token/lemma/motif modeling and Greek reconstruction
+    handling.
+  best_response_model: Logion-by-logion sayings-network analysis rather than corpus-level
+    dependence.
+  revision_from_current_repo: Keep Thomas conclusions modest and curation-labeled.
+- rank: 8
+  claim_id: epistles_gospels
+  claim: Epistle-Gospel cases should be presented as case dossiers, not global dependence
+    claims.
+  confidence:
+    retrieval: high for selected exact cases
+    interpretive: case-specific
+    directional: case-specific
+  support:
+  - 1 Tim 5:18 / Luke 10:7 remains a high-value Luke-like saying case.
+  - 1 Cor 11 / Luke 22 is a high-verbal-overlap liturgical/formula case, not simple
+    proof of Paul copying Luke.
+  - James likely reflects Jesus tradition, but direct Matthew/Luke use remains unproved.
+  counterevidence_or_limits:
+  - Formula risk is high for liturgical and scriptural material.
+  - The top-500 epistle candidate list requires human validation.
+  - Chronology and source forms matter; 'Luke-like' does not automatically mean canonical
+    Luke.
+  best_response_model: 'Three-axis case grading: retrieval support, philological strength,
+    and formula risk.'
+  revision_from_current_repo: Keep 1 Timothy high, but keep Paul/Luke and James within
+    tradition/formula categories.
+- rank: 9
+  claim_id: apocrypha
+  claim: Apocrypha beyond Thomas remains inventory/roadmap only.
+  confidence:
+    retrieval: low
+    interpretive: low
+    directional: none
+  support:
+  - Current apocrypha layer is an inventory rather than parsed primary-text comparison.
+  - Gospel of Peter and infancy/passion apocrypha remain high-value future targets.
+  counterevidence_or_limits:
+  - No firm dependence conclusions should be drawn from the inventory alone.
+  - Textual language, fragmentary state, and edition choice will matter heavily.
+  best_response_model: Treat as future ingestion roadmap, not evidence in the current
+    conclusion set.
+  revision_from_current_repo: No substantive conclusion beyond status and prioritization.

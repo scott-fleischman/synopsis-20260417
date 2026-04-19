@@ -166,23 +166,25 @@ No layer in this repository claims to compute posterior probability of a given d
 
 ## Interpretive conclusions
 
-`conclusions/` is the only directory in the repo that makes directional claims. It is author-authored synthesis across all four packages, kept physically separate from the data so the burden-audit discipline stays intact. Headline findings (descending confidence):
+`conclusions/` is the only directory in the repo that makes directional claims. It is author-authored synthesis across all ten packages, kept physically separate from the data so the burden-audit discipline stays intact. **Revised 2026-04-19** from the `revised_conclusions_review_20260419` package: the prior eight-point pairwise-only ladder has been superseded by a nine-point model-aware ladder that adds Mark↔Luke, the Luke-used-Mark order-retention caveat, Farrer as a live no-Q alternative, minor agreements as a central discriminator, and an explicit system-level model ranking across 13 named models.
 
-| Question | Conclusion | Confidence |
-| - | - | - |
-| Mark–Matthew | Matthew most likely used Mark or a Mark-like written source. | High |
-| Mark–Luke (direct, 18b + 18c) | Mark-prior is the lighter *direct-use* hypothesis (254.6 vs. 303.2); once shared tradition is charged a fair order-retention cost, Mark-prior also becomes the lowest-burden model overall (Mark-prior 254.6 vs. shared-tradition-adjusted 385.6, moderate weights). | Medium-high for Mark-prior over Luke-prior among direct-use; medium for direct-use over shared-tradition alone |
-| 1 Timothy 5:18 / Luke 10:7 | Strongest case for a Luke-like written Jesus saying known to 1 Timothy. | High (targeted case); exploratory for the top-500 pool, where 166 of 500 are already flagged high formula-risk |
-| Matthew–Luke double tradition | Shared tradition layer, not simple one-way dependence; stable across strict/medium/broad mask regimes (18c). | Medium-high |
-| James / Gospel sayings | Jesus-tradition dependence likely; direct Matthew/Luke use not demonstrated. | Medium-high |
-| Q | Supports a shared sayings/tradition layer; doesn't prove one discrete Q document. | Medium-high for shared non-Markan sayings; medium for any discrete Q-document claim |
-| John–Synoptics (18b pairwise + 18c anchor ledgers) | Shared passion/sign/anchor tradition rather than simple Gospel-to-Gospel copying; `shared_anchor_tradition` is the lowest-burden model at every anchor on every pair (9/9, 10/10, 10/10). | Medium |
-| Thomas–Synoptics (18b matrix + 18c curation) | Sayings-network witness; 46 of 116 logia carry curated canonical parallels, of which only 3 are directional-claim-ready; Coptic–Greek automatic dependence scoring not implemented. | Medium for overlapping sayings tradition, low for global direction |
-| Other apocrypha | Inventory only; not enough data yet for firm conclusions. 18c's analysis-status note confirms "not a completed primary-text analysis layer". | Low |
+Headline findings (descending confidence):
 
-See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/`](conclusions/data/) for the machine-readable models and case snippets.
+| Rank | Question | Conclusion | Confidence |
+|---:| - | - | - |
+| 1 | Mark–Matthew | Matthew most likely used Mark or a Mark-like written narrative source. | High |
+| 2 | Mark–Luke (direct, 18b + 18c) | Luke probably used Mark or a Mark-like written narrative source. Direct-use burden favors Mark-prior (254.6 vs. 303.2); once shared tradition is charged a fair order-retention cost, Mark-prior becomes the lowest-burden model overall (254.6 vs. shared-tradition-adjusted 385.6, moderate weights). | Medium-high vs Mark-used-Luke; medium against all alternatives |
+| 3 | Matthew–Luke double tradition | Better modeled as a shared sayings/tradition layer than as simple one-way direct copying; stable across strict/medium/broad mask regimes. Supports a Q-like layer, not necessarily one discrete recoverable Q document. | Medium-high for shared sayings; medium-low for a discrete Q document |
+| 4 | System-level model family | Markan priority plus a non-Markan sayings/tradition layer is the best-supported family. **Two-source and Farrer remain the two live system-level competitors.** Griesbach, Augustinian, proto-Mark, and oral-network remain possible at higher burden. Burden is a burden profile, not a probability ranking. | Medium |
+| 5 | John–Synoptics | Shared passion/sign/anchor tradition rather than simple Gospel-to-Gospel copying; `shared_anchor_tradition` is the lowest-burden model at every anchor on every pair (10/10 Mark, 10/10 Matthew, 9/9 Luke). Local direct use remains possible anchor by anchor. | Medium |
+| 6 | Minor agreements | **Central unresolved discriminator** between Two-source, Farrer, and Griesbach. 118 algorithmic MA rows, 21 high-strength. Catalog is algorithmic screening, not a hand-curated scholarly list. | Medium |
+| 7 | Thomas–Synoptics | Curated logion-level sayings-network witness. 116 logia, 46 curated parallels, only 3 directional-claim-ready. Coptic–Greek automatic dependence scoring not implemented. | Medium for overlap; low for direction |
+| 8 | Epistle–Gospel cases | Case-by-case. 1 Tim 5:18 / Luke 10:7 strongest case for a Luke-like written Jesus saying; 1 Cor 11 / Luke 22 best read as liturgical/formula tradition; James reflects Jesus tradition without demonstrated direct Matthew/Luke use. | Case-specific; 1 Tim high, others graded by three-axis support/philology/formula-risk |
+| 9 | Other apocrypha | Inventory only; not enough data yet for firm conclusions. Gospel of Peter and passion apocrypha flagged as highest-value next test cases. | Low |
 
-The directional-dossiers package (`synoptic_john_directional_dossiers_20260418/`) restates this ladder as a direction-by-direction explanatory-obligation ranking: rank 1 (Matthew used Mark) is supported; rank 2 (Luke used Mark, penalty-aware) is supported; rank 3 (shared sayings/tradition for Matt–Luke) is supported; rank 4 (shared anchor tradition for John ↔ Synoptics) is supported at every anchor; rank 5 (direct synoptic use of John) is explicitly **not** supported at a global level. The burden numbers feeding the ladder are duplicated into `AUTHORITATIVE_NUMBERS.yaml` so the same value has a single authoritative definition in both the prose conclusions and the burden-audit layer.
+See [`conclusions/CONCLUSIONS.md`](conclusions/CONCLUSIONS.md) for the full revised argument, [`conclusions/EXECUTIVE_SUMMARY.md`](conclusions/EXECUTIVE_SUMMARY.md) for the short form, and [`conclusions/data/05_revised_headline_claims.yaml`](conclusions/data/05_revised_headline_claims.yaml) for the machine-readable claim cards with three-axis confidence (retrieval · interpretive · directional).
+
+The directional-dossiers package (`synoptic_john_directional_dossiers_20260418/`) restates the Synoptic/John portion of this ladder as a direction-by-direction explanatory-obligation ranking; the model-atlas package (`synoptic_problem_model_atlas_20260418/`) lifts it to 13 named system-level models with a single shared obligation ledger. The burden numbers feeding the ladder are duplicated into `AUTHORITATIVE_NUMBERS.yaml` so the same value has a single authoritative definition in both the prose conclusions and the burden-audit layer.
 
 ## Visualizations (42 browser views, 18b priority-ranked with directional-obligations and system-model-atlas bands)
 

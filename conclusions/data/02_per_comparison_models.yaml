@@ -1,33 +1,87 @@
+revision: '2026-04-19'
+supersedes: prior 2026-04-18 per-comparison model
+
 synoptic_model_inferred_from_packages:
   mark_matthew:
     best_model: Matthew uses Mark or Mark-like written narrative source
+    confidence: high
     evidence_type:
-      - broad narrative alignment
-      - many primary chain pairs
+      - broad narrative alignment (386 primary pairs, 27 loose blocks, 50 tight blocks)
       - coherent Matthean expansion/discourse clustering
+      - asymmetric gap pattern (Matt 474 extra gap verses vs Mark 87)
       - lower burden than Mark omitting major Matthean blocks
+    directional_burden:
+      matthew_used_mark: 774.87
+      mark_used_matthew: 788.66
+  mark_luke:
+    best_model: Luke uses Mark or Mark-like written narrative source
+    confidence: medium_high_with_order_retention_caveat
+    evidence_type:
+      - substantial direct alignment (183 primary pairs, 35 loose / 76 tight blocks)
+      - 140 secondary echoes at score >= 0.22
+      - MorphGNT lemma audit strengthens rather than weakens local alignment
+    direct_use_burden:
+      mark_prior: 254.6466
+      luke_prior: 303.1966
+    shared_tradition_burden:
+      unpenalized_three_way: 164.1468
+      moderate_order_retention_penalty: 385.6134
+    caveat: Mark-prior wins 211 of 245 grid combinations, but only under applied order-retention / cluster-density / narrative-bridge penalties against shared tradition.
   matthew_luke_double_tradition:
-    best_model: shared sayings source/tradition
+    best_model: shared sayings source/tradition layer
+    confidence: medium_high
+    strongest_alternative: Farrer (Luke uses Matthew plus Mark, no Q document)
     evidence_type:
       - strong verbal echoes
-      - nonlocal placement
+      - nonlocal placement (60 secondary/nonlocal order rows vs 49 primary)
       - weak monotonic order
-      - symmetric direct-dependence burden after Mark masking
+      - symmetric direct-dependence burden after Mark masking (26.446 / 26.446)
+      - common source burden lower than either direct direction (8.86)
+      - qualitative reading stable across strict/medium/broad mask regimes
   implication:
-    q_question: supports a shared sayings layer, not necessarily a single recoverable document
+    q_question: supports a shared sayings layer, not necessarily a single recoverable Q document
+    minor_agreements_relevance: 118 triple-tradition MA rows (21 high-strength) are the central unresolved discriminator between Two-source and Farrer.
 
 john_synoptic_relation:
-  global_model: overlapping tradition network
+  global_model: shared anchor/passion/sign tradition
+  confidence: medium
   direct_literary_dependence:
     possible_locally: true
     globally_demonstrated: false
+  anchor_level_burden_wins:
+    john_mark: shared_anchor 23.5 wins 10_of_10 anchors vs john_uses_mark 59.741 / mark_uses_john 64.041 / independent 111.0
+    john_matt: shared_anchor 24.8 wins 10_of_10 anchors vs john_uses_matt 55.862 / matt_uses_john 60.162 / independent 119.5
+    john_luke: shared_anchor 20.8 wins 9_of_9 anchors vs john_uses_luke 58.598 / luke_uses_john 61.698 / independent 91.6
   strongest_zones:
-    - passion narrative
-    - feeding / sea material
-    - anointing
-    - triumphal entry
-    - arrest and denial details
+    - passion narrative (arrest, sword, servant's ear)
+    - garment division and lots
+    - Peter's denial structure
+    - feeding and walking-on-water clusters
+    - anointing and "poor you always have"
+    - triumphal-entry acclamation
   weakest_evidence:
     - broad theology alone
     - generic shared phrases
     - scriptural/liturgical formulas
+
+system_level_models:
+  two_source_mark_plus_q_like:
+    status: live_competitor
+    strength: explains Markan backbone plus shared non-Markan sayings
+    main_burden: minor agreements, Q document reconstruction
+  farrer_mark_plus_matthew_to_luke:
+    status: live_competitor
+    strength: explains minor agreements via Luke-Matthew direct contact; no Q document required
+    main_burden: explaining Lukan de-Mattheanization and redistribution of sayings
+  griesbach_two_gospel:
+    status: higher_burden_possible
+    main_burden: Mark must omit/compress large Matthean and Lukan material
+  augustinian:
+    status: higher_burden_possible
+    main_burden: Mark-from-Matthew remains costly
+  proto_mark_plus_sayings:
+    status: plausible
+    main_burden: lost-source reconstruction
+  oral_tradition_network:
+    status: plausible_for_sayings
+    main_burden: weak for dense ordered Synoptic narrative unless order-retention is explained

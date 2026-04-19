@@ -1,345 +1,245 @@
 # Conclusions from the generated packages
 
-> *This prose argument was produced by **GPT-5.4 Pro** under human direction (prompting only). The four analysis packages it builds on were also produced by GPT-5.4 Pro; the machine-readable extracts in `data/` were produced by Claude Opus 4.7. See the repo-level README for the full breakdown.*
+> *Revised 2026-04-19 from `revised_conclusions_review_20260419/patch/CONCLUSIONS_REVISED_20260419.md`. The prior version of this file (produced 2026-04-18) is superseded in full. Prose produced by **GPT-5.4 Pro** under human direction (prompting only); machine-readable extracts in `data/` produced by **Claude Opus 4.7**. See the repo-level README for the full authorship breakdown.*
 
-These are LLM-authored interpretive conclusions drawn from the four analysis packages. They are synthesis, not automated pipeline output. The underlying data supports these claims at the stated confidence levels; the inferences themselves are the reader's.
+These are LLM-authored interpretive conclusions drawn from all ten analysis packages — the four base pairwise packages, the three reproducibility/supplement/patch packages (`analysis_update_20260418`, `analysis_update_20260418b`, `analysis_update_20260418c`), the directional-dossiers package (`synoptic_john_directional_dossiers_20260418`), and the system-level model atlas (`synoptic_problem_model_atlas_20260418`). They are synthesis, not automated pipeline output. The underlying data supports these claims at the stated confidence levels; the inferences themselves are the reader's.
 
-| Question | Conclusion I would draw | Confidence |
-| - | - | - |
-| Mark–Matthew | Matthew most likely used Mark or a Mark-like written text as a major narrative source. | High |
-| Matthew–Luke double tradition | The isolated non-Markan material is better explained by common written/oral Jesus tradition than by a simple one-way Matthew↔Luke dependence. | Medium-high |
-| Q | The data supports a shared sayings/tradition layer; it does not by itself prove one discrete Q document. | Medium |
-| John–Synoptics | John shares substantial tradition with the Synoptics, especially passion/sign material, but the data does not justify a simple "John copied X Gospel" model. | Medium |
-| Thomas–Synoptics | Thomas is best treated as a sayings-network witness, not as cleanly dependent on one canonical Gospel. | Medium |
-| 1 Timothy 5:18 / Luke 10:7 | This is one of the strongest cases for a Luke-like written Jesus saying known to the author of 1 Timothy, though not necessarily canonical Luke in final form. | High |
-| James / Gospel sayings | James likely draws on Jesus tradition; direct use of Matthew or Luke is not demonstrated by the data. | Medium-high |
-| Other apocrypha beyond Thomas | The package does not yet support firm conclusions; it mostly identifies future high-value texts. | Low |
+## Why this file was revised
 
-## 1. Mark–Matthew: I would infer Markan priority, or at least Mark-like priority
+The prior version of this file was written before two major evidence layers were added to the repository:
 
-The Mark–Matthew package gives the clearest result. It found a large continuous shared narrative core: 385 primary chain pairs, covering 57.21% of Mark but only 36.05% of Matthew. That asymmetry matters. Matthew contains far more non-parallel material outside the aligned Markan core: 474 more Matthew gap verses across block boundaries, versus 87 more Mark gap verses. See [`mark_matthew_analysis/data/16_global_summary.yaml`](../mark_matthew_analysis/data/16_global_summary.yaml) and [`mark_matthew_analysis/data/14_direction_ledger_by_loose_block.yaml`](../mark_matthew_analysis/data/14_direction_ledger_by_loose_block.yaml).
+1. The **directional-obligation dossiers** (`synoptic_john_directional_dossiers_20260418/`) — twelve pairwise directional hypotheses with per-direction required explanations, contrary evidence, and best-response models.
+2. The **Synoptic Problem model atlas** (`synoptic_problem_model_atlas_20260418/`) — 13 named system-level models scored against a single shared obligation ledger (1,945 pericope obligations), 118 minor agreements, 109 double-tradition order cases, and 2,682 variant-sensitivity flags.
 
-The most natural reading is not simply "Matthew is longer." Inside the aligned core, the token counts are nearly identical: Mark 8,258 tokens and Matthew 8,259 tokens inside loose blocks. So the directional issue is not that Matthew mechanically expands Mark everywhere. Rather, Matthew preserves a Mark-like narrative skeleton, sometimes abbreviates, sometimes expands, but then adds or relocates large blocks of teaching, infancy material, fulfillment material, and discourse material.
+The prior conclusions therefore (a) underrepresented direct Mark↔Luke, (b) did not incorporate the direction-by-direction obligation dossiers, (c) did not include the 13-model system scorecard, and (d) did not give minor agreements or model-level Farrer/Two-source/Griesbach tradeoffs enough prominence. The revised conclusions below treat the latest generated atlas as the most complete evidence layer, while keeping clear boundaries between **computed data**, **curated registries**, and **interpretive synthesis**.
 
-That is an easier editing program to explain than the reverse.
+## Headline conclusions (nine-point ladder)
 
-Under Matthew-from-Mark, the required program is coherent:
+| Rank | Claim | Confidence | Main caveat |
+|---:|---|---|---|
+| 1 | Matthew most likely used Mark or a Mark-like written narrative source. | High | Stronger as Mark-like source priority than canonical-Mark identity. |
+| 2 | Luke probably used Mark or a Mark-like written narrative source. | Medium-high vs Mark-used-Luke; medium against all alternatives | Requires order-retention penalties against non-direct shared-tradition accounts. |
+| 3 | Matthew–Luke double tradition is better modeled as shared sayings/tradition than simple one-way copying. | Medium-high | Supports a Q-like layer, not necessarily one discrete recoverable Q document. |
+| 4 | The strongest system-level family is Markan priority plus a non-Markan sayings/tradition layer. | Medium | Farrer remains the strongest no-Q direct-contact alternative. |
+| 5 | John shares anchor traditions with the Synoptics, but global direct Gospel-to-Gospel dependence is not currently lowest-burden. | Medium | Local direct use remains possible anchor by anchor. |
+| 6 | Minor agreements are a central unresolved discriminator. | Medium | Current catalog is algorithmic screening, not a hand-curated final list. |
+| 7 | Thomas is a curated sayings-network witness, not a proven derivative of one canonical Gospel. | Medium | No automatic Greek–Coptic dependence score exists yet. |
+| 8 | Epistle–Gospel parallels must be handled case by case. | Case-specific | 1 Tim 5:18 / Luke 10:7 is strong; liturgical/formula cases require caution. |
+| 9 | Apocrypha beyond Thomas remains inventory/roadmap. | Low | No firm dependence conclusions yet. |
 
-- preserve much of Mark's narrative order;
-- smooth or reframe Mark's diction;
-- add infancy and fulfillment material;
-- collect sayings into larger discourse blocks;
-- shift "kingdom of God" language toward "kingdom of heaven";
-- reduce some Markan vividness and immediacy.
+Machine-readable form: [`data/05_revised_headline_claims.yaml`](data/05_revised_headline_claims.yaml).
 
-Under Mark-from-Matthew, the required program is more costly:
+## 1. Matthew used Mark or a Mark-like source
 
-- omit the infancy material;
-- omit or ignore the Sermon on the Mount and other large Matthean discourse blocks;
-- often make the narrative rougher or more vivid;
-- replace some Matthean theological diction with Markan diction;
-- repeatedly remove large Matthean sections while still preserving enough of Matthew's structure to create the observed alignment.
+The strongest directional conclusion remains Matthew's dependence on Mark or a Mark-like written narrative source. The reproducibility-patch rerun headline is **386 primary pairs, 27 loose blocks, and 50 tight blocks**. The current burden reference still favors Matthew-used-Mark over Mark-used-Matthew (**774.87 vs. 788.66**; see [`synoptic_john_directional_dossiers_20260418/data/04_direct_use_burden_by_direction.csv`](../synoptic_john_directional_dossiers_20260418/data/04_direct_use_burden_by_direction.csv)).
 
-The burden is especially high in places like the Matthean-only stretches listed in the summary: Matt 4:24–7:28, Matt 9:18–11:30, Matt 24:37–26:3, and Matt 1:1–3:2. A Mark-from-Matthew hypothesis can explain them only by repeated non-use or deliberate omission of major, valuable material. That is possible, but it is a heavier cumulative burden.
+The conclusion should be phrased carefully: the data supports a **Mark-like source very close to Mark**, not necessarily the exact canonical Mark text in every detail.
 
-So my conclusion is:
+### Supporting evidence
 
-> Matthew most likely used Mark, or a Mark-like written source very close to Mark. Mark-from-Matthew is possible in isolated blocks but cumulatively less economical.
+- Large continuous Mark–Matthew narrative backbone. See [`mark_matthew_analysis/data/16_global_summary.yaml`](../mark_matthew_analysis/data/16_global_summary.yaml) and [`analysis_update_20260418/data/16_mm_global_summary.yaml`](../analysis_update_20260418/data/16_mm_global_summary.yaml).
+- Asymmetric gap pattern: Matthew contains far more non-parallel material outside the aligned Markan core (474 extra Matt gap verses vs. 87 extra Mark gap verses). See [`mark_matthew_analysis/data/14_direction_ledger_by_loose_block.yaml`](../mark_matthew_analysis/data/14_direction_ledger_by_loose_block.yaml).
+- Coherent Matthean redactional explanation: expansion, discourse grouping, fulfillment citation, infancy/genealogy, and theological reframing.
+- Reverse Mark-from-Matthew model requires repeated omission of major Matthean material (Sermon on the Mount, Matt 4:24–7:28, Matt 9:18–11:30, Matt 24:37–26:3, Matt 1:1–3:2).
+- The Matthew-from-Mark model can accept Matthew's non-Markan material as additional sources/traditions without destabilizing the Markan backbone.
 
-## 2. Matthew–Luke: the full comparison and the masked comparison point in different directions, and the masked one matters more
+### Counterevidence and limits
 
-The full Matthew–Luke package showed extensive relationship but weak monotonic order. It had only 233 primary backbone pairs, but 1,033 secondary echoes. That means Matthew and Luke share a lot of material, but not in a stable shared sequence. See [`matt_luke_analysis/data/16_global_summary.yaml`](../matt_luke_analysis/data/16_global_summary.yaml).
+- Matthew contains major non-Markan material; Mark alone cannot explain Matthew.
+- Some local Markan vividness or roughness can be argued secondary in isolated passages.
+- Some agreements may be mediated by shared tradition rather than direct copying.
+- Variant sensitivity is still not assessed case by case for all loci; see the atlas's 2,682-row variant-sensitivity registry.
 
-The full unmasked burden totals actually favored a Luke-prior / Matthew-uses-Luke model numerically:
+### Best current response model
 
-- Matt prior / Luke uses Matthew: 142.559
-- Luke prior / Matthew uses Luke: 75.477
+> Matthew used a Mark-like written narrative source and supplemented it with sayings, fulfillment, infancy, and discourse traditions.
 
-But I would not treat that as the main result for the Q/double-tradition question. The full comparison includes Markan material, infancy material, passion material, and other order effects. It is useful, but it is not the cleanest test of Matthew–Luke dependence.
+## 2. Luke used Mark or a Mark-like source
 
-The masked double-tradition package is more important. Once likely Markan material was removed, the result changed. The directional burdens became symmetrical:
+The direct Mark↔Luke package closes a major earlier gap. It found **183 primary-chain pairs, 35 loose blocks, 76 tight blocks, and 140 secondary echoes**. The direct-use burden favors Mark-prior/Luke-used-Mark over Mark-used-Luke: **254.6466 vs. 303.1966**. See [`analysis_update_20260418b/`](../analysis_update_20260418b/) for the pairwise package and [`synoptic_john_directional_dossiers_20260418/data/04_direct_use_burden_by_direction.csv`](../synoptic_john_directional_dossiers_20260418/data/04_direct_use_burden_by_direction.csv) for the direction comparison.
 
-- Luke uses Matthew: 26.446
-- Matthew uses Luke: 26.446
-- common source or oral tradition: 8.86
+However, the conclusion needs a caveat. The unpenalized three-way ledger favored **shared narrative/oral tradition at 164.1468**. Only after applying order-retention, cluster-density, and narrative-bridge penalties does the adjusted shared-tradition burden rise above Mark-prior in the moderate penalty model: **385.6134 vs. 254.6466** (Mark-prior wins in **211 of 245** grid combinations). See [`analysis_update_20260418c/`](../analysis_update_20260418c/).
 
-See [`matt_luke_double_masked_analysis/data/16_global_summary.yaml`](../matt_luke_double_masked_analysis/data/16_global_summary.yaml) and [`matt_luke_double_masked_analysis/data/15_direction_burden_totals.yaml`](../matt_luke_double_masked_analysis/data/15_direction_burden_totals.yaml).
+### Supporting evidence
 
-That is a major result. It says that once Markan material is stripped out, the remaining Matthew–Luke parallels do not naturally resolve into "Luke copied Matthew" or "Matthew copied Luke." They look more like shared sayings material: sometimes verbally close, often displaced, and frequently arranged differently.
+- Direct Mark↔Luke alignment exists and is substantial (183 primary-chain pairs).
+- Mark-prior is lower burden than Luke-prior among direct-use alternatives (254.6466 vs. 303.1966).
+- The MorphGNT lemma audit strengthens Mark↔Luke local alignment rather than weakening it (surface mean 0.4042 → lemma mean 0.4836; lemma improves/retains on 153/183 pairs).
+- Shared-tradition models must explain retained narrative order and bridge material, not merely similar episodes.
 
-The strongest double-tradition echoes are exactly the kind of material that can circulate as fixed sayings:
+### Counterevidence and limits
 
-- Matt 7:8 ↔ Luke 11:10;
-- Matt 8:20 ↔ Luke 9:58;
-- Matt 12:41–42 ↔ Luke 11:31–32;
-- Matt 6:24 ↔ Luke 16:13;
-- Matt 7:7 ↔ Luke 11:9;
-- Matt 6:11 ↔ Luke 11:3;
-- Matt 23:37 ↔ Luke 13:34.
+- Mark↔Luke is less decisive than Mark↔Matthew.
+- Unpenalized shared tradition initially looks cheaper (164.15) than either direct-use direction.
+- Luke has large non-Markan material and meaningful redactional reordering.
+- The Mark-prior conclusion depends on whether dense narrative order retention should be charged as a burden against non-direct tradition — an analytical choice rather than a purely computed result.
 
-These are not random similarities. The burden of pure independence is too high. But the nonlocal placement weakens a simple direct-copy model.
+### Best current response model
 
-So my conclusion is:
+> Luke used Mark or a Mark-like narrative source selectively, while also drawing on other traditions/sources and reorganizing material for Lukan literary and theological aims.
 
-> The Matthew–Luke double tradition is real shared tradition, often verbally fixed, but the data favors a common sayings/tradition model over direct one-way dependence.
+## 3. Matthew–Luke double tradition: shared sayings/tradition, not simple direct copying
 
-That can be called "Q" only if Q is defined cautiously. The data supports a shared source/tradition layer. It does not require that this layer was one tidy document with the exact shape traditionally reconstructed as Q.
+After Markan masking, the retained Matthew–Luke material behaves unlike Mark–Matthew or Mark–Luke narrative dependence. It is sayings-heavy, displaced, and partly nonlocal. The earlier masked ledger favored common source/oral tradition over either direct direction (**common source 8.86 vs. Luke-uses-Matthew 26.446 vs. Matthew-uses-Luke 26.446**), and the later mask-regime work preserved the qualitative conclusion across strict / medium / broad regimes (pair counts 60–76 / 58–71 / 57–69). See [`matt_luke_double_masked_analysis/data/15_direction_burden_totals.yaml`](../matt_luke_double_masked_analysis/data/15_direction_burden_totals.yaml) and [`analysis_update_20260418c/`](../analysis_update_20260418c/) for the robustness sweep.
 
-## 3. Mark and Q-like material behave differently
+This supports a **Q-like sayings/tradition layer**, but not automatically a single recoverable Q document. The atlas double-tradition order layer records **49 primary rows and 60 secondary/nonlocal rows**, making displacement central to the question; see [`synoptic_problem_model_atlas_20260418/data/40_double_tradition_order_catalog.csv`](../synoptic_problem_model_atlas_20260418/data/40_double_tradition_order_catalog.csv).
 
-This is one of the most important methodological conclusions.
+### Supporting evidence
 
-Mark–Matthew looks like **narrative-source dependence**. It has a durable backbone, stable block order, and repeated local alignment.
+- Masked direct-use burdens were symmetric and higher than common-source/oral burden.
+- The double-tradition order catalog contains many nonlocal/secondary rows.
+- The material is more sayings-like than narrative-chain-like.
+- Simple Matthew-used-Luke or Luke-used-Matthew is not forced by the current data.
+- The strongest double-tradition echoes are the kind of material that can circulate as fixed sayings: Matt 7:7–11 / Luke 11:9–13, Matt 8:20 / Luke 9:58, Matt 12:41–42 / Luke 11:31–32, Matt 6:24 / Luke 16:13, Matt 6:9–13 / Luke 11:2–4, Matt 23:37–39 / Luke 13:34–35.
 
-Matthew–Luke double tradition looks like **sayings-source or tradition dependence**. It has strong verbal echoes but weak macro-order. The strongest parallels often appear in the secondary-echo layer rather than in the monotonic chain.
+### Counterevidence and limits
 
-That difference matters. It suggests that the Synoptic relationships are not all the same kind of relationship.
+- **Farrer remains viable**: Luke-Matthew contact can explain minor agreements without a Q document.
+- A direct-use model may work if it supplies a strong editorial model for redistribution.
+- The Markan mask is an analytical choice and needs continued sensitivity audit.
+- Q as a discrete document requires more than shared sayings/tradition evidence.
 
-I would model the data like this:
+### Best current response model
 
-```yaml
-synoptic_model_inferred_from_packages:
-  mark_matthew:
-    best_model: Matthew uses Mark or Mark-like written narrative source
-    evidence_type:
-      - broad narrative alignment
-      - many primary chain pairs
-      - coherent Matthean expansion/discourse clustering
-      - lower burden than Mark omitting major Matthean blocks
-  matthew_luke_double_tradition:
-    best_model: shared sayings source/tradition
-    evidence_type:
-      - strong verbal echoes
-      - nonlocal placement
-      - weak monotonic order
-      - symmetric direct-dependence burden after Mark masking
-  implication:
-    q_question: supports a shared sayings layer, not necessarily a single recoverable document
-```
+> A shared sayings/tradition layer is the lowest-burden representation of the masked material. Two-source and Farrer remain the key competing system-level explanations.
 
-## 4. John: shared tradition is clear; direct Synoptic dependence is not yet clear
+## 4. System-level model ranking
 
-The John package shows many anchor episodes shared with the Synoptics: Baptist material, temple action, feeding, walking on water, anointing, entry, arrest, denial, passion, and garment division. See [`john_thomas_epistles_apocrypha_analysis/data/08_john_synoptic_anchor_registry.yaml`](../john_thomas_epistles_apocrypha_analysis/data/08_john_synoptic_anchor_registry.yaml).
+The project should no longer present only pairwise conclusions. The model atlas adds **13 system-level models** and makes clear that each model solves some problems while paying different burdens. See [`synoptic_problem_model_atlas_20260418/data/01_system_model_registry.yaml`](../synoptic_problem_model_atlas_20260418/data/01_system_model_registry.yaml) and [`synoptic_problem_model_atlas_20260418/data/52_system_model_comparison_scorecard.csv`](../synoptic_problem_model_atlas_20260418/data/52_system_model_comparison_scorecard.csv).
 
-But John does not behave like Matthew using Mark. It does not preserve a continuous Synoptic narrative backbone in the same way. The lexical matches are often local, formulaic, scriptural, or embedded in a heavily transformed Johannine narrative.
+### Revised system-level assessment
 
-Some cases are too specific for pure independence:
+- **Best-supported family:** Markan priority plus a shared non-Markan sayings/tradition layer.
+- **Two-source / Mark + Q-like source:** strong if Q means a shared sayings/tradition layer; less certain if Q means one discrete recoverable document.
+- **Farrer / Mark + Matthew → Luke:** strongest no-Q direct-contact alternative. Its chief burden is explaining Lukan de-Mattheanization and redistribution of sayings.
+- **Griesbach / Two-Gospel:** possible but high burden because Mark must omit/compress large Matthean and Lukan material.
+- **Augustinian sequence:** high burden because Mark-from-Matthew remains costly.
+- **Proto-Mark + sayings:** plausible lost-source/network model, but it pays reconstruction burden.
+- **Oral/tradition network:** good for sayings and John anchors, weak for dense ordered Synoptic narrative unless order-retention is explained.
 
-- sword / high priest's servant / ear in the arrest scene;
-- garment division and lots;
-- Peter's denial structure;
-- feeding and walking-on-water clusters;
-- anointing and "poor you always have" material;
-- triumphal-entry acclamation.
+**The model scorecard should be presented as a burden profile, not a probability ranking.** Every burden score in the atlas is an audit prompt, not a posterior probability. Two models with different burden sums are *not* claimed to have different Bayesian posteriors; they are claimed to commit defenders to different explanatory obligations.
 
-But these are also the kinds of materials that could belong to a shared passion or miracle tradition. The package's burden ledger therefore treats John as a network case, not as a clean direct-dependence case. See [`john_thomas_epistles_apocrypha_analysis/data/14_burden_ledger.yaml`](../john_thomas_epistles_apocrypha_analysis/data/14_burden_ledger.yaml).
+## 5. John and the Synoptics
 
-My conclusion:
+John should be treated through **anchor-specific transformation analysis**, not a Synoptic chain model.
 
-> John almost certainly shares substantial tradition with the Synoptics. Pure independence is implausible for several detail clusters. But the data does not yet justify saying John directly used Mark, Matthew, or Luke as a dominant written source.
+The latest anchor-specific ledgers favor shared anchor tradition for all three pairs; shared anchor tradition wins at *every* anchor on *every* pair (10/10, 10/10, 9/9):
 
-The most likely model is:
+| Pair | John-used-Synoptic | Synoptic-used-John | Shared anchor tradition | Independent convergence |
+|---|---:|---:|---:|---:|
+| John ↔ Mark | 59.741 | 64.041 | **23.5** | 111.0 |
+| John ↔ Matthew | 55.862 | 60.162 | **24.8** | 119.5 |
+| John ↔ Luke | 58.598 | 61.698 | **20.8** | 91.6 |
 
-```yaml
-john_synoptic_relation:
-  global_model: overlapping tradition network
-  direct_literary_dependence:
-    possible_locally: true
-    globally_demonstrated: false
-  strongest_zones:
-    - passion narrative
-    - feeding / sea material
-    - anointing
-    - triumphal entry
-    - arrest and denial details
-  weakest_evidence:
-    - broad theology alone
-    - generic shared phrases
-    - scriptural/liturgical formulas
-```
+See [`analysis_update_20260418c/`](../analysis_update_20260418c/) and [`synoptic_john_directional_dossiers_20260418/data/07_john_anchor_three_way_comparison.csv`](../synoptic_john_directional_dossiers_20260418/data/07_john_anchor_three_way_comparison.csv).
 
-## 5. Thomas: too much overlap for independence, but not enough for simple direct dependence
+### Supporting evidence
 
-The Thomas package parsed 116 Coptic Thomas units and registered 47 Thomas/canonical parallels. See [`john_thomas_epistles_apocrypha_analysis/data/09_thomas_parallel_registry.yaml`](../john_thomas_epistles_apocrypha_analysis/data/09_thomas_parallel_registry.yaml).
+- John shares important passion/sign anchors with the Synoptics (sword / high priest's servant / ear in the arrest scene; garment division and lots; Peter's denial structure; feeding and walking-on-water clusters; anointing and "poor you always have" material; triumphal-entry acclamation).
+- Pure independence is implausibly cheap for several specific clusters.
+- Shared anchor tradition explains the overlap without forcing continuous Synoptic order.
 
-The dominant conclusion is not "Thomas used Matthew" or "Thomas used Luke." The better conclusion is:
+### Counterevidence and limits
 
-> Thomas participates in a sayings network that overlaps substantially with Synoptic Jesus tradition.
+- Some anchors may still be local direct-use cases.
+- The anchor ledger is partly interpretive.
+- John heavily transforms chronology, discourse, symbolism, and narrative structure.
+- Reverse Synoptic-use-of-John models are possible only with substantial de-Johannization/compression burden.
 
-Some Thomas parallels are highly portable sayings:
+### Best current response model
 
-- hidden / revealed;
-- lamp not hidden;
-- blind leading blind;
-- whoever has will receive;
-- seek / find / knock;
-- prophet without honor.
+> Shared passion/sign/anchor tradition, with local direct dependence evaluated anchor by anchor.
 
-These have low direct-dependence value because they can circulate orally and independently within a shared teaching tradition.
+## 6. Minor agreements
 
-Other Thomas parallels are stronger because they involve more structured material:
+Minor agreements now need **headline status**. The atlas adds **118 triple-tradition minor-agreement rows, including 21 high-strength rows**. These are important because they discriminate among Two-source, Farrer, Griesbach, shared-source, and harmonization explanations. See [`synoptic_problem_model_atlas_20260418/data/30_minor_agreements_catalog.csv`](../synoptic_problem_model_atlas_20260418/data/30_minor_agreements_catalog.csv).
 
-- sower;
-- mustard seed;
-- banquet excuses;
-- wicked tenants / rejected stone;
-- Caesar's coin;
-- lost sheep;
-- treasure hidden in field;
-- pearl;
-- inheritance divider;
-- womb / breasts blessing;
-- rest / easy yoke.
+The current catalog is an **algorithmic screen, not a final hand-curated scholarly list**. It should not decide the model by itself, but it should constrain the discussion. Minor agreements can result from direct contact, shared non-Markan source, scribal harmonization, coincidence, or redactional similarity — the catalog does not itself adjudicate among these.
 
-For these, pure independence becomes less plausible. But because Thomas is sayings-only and preserved in Coptic, the package cannot automatically infer direct Greek literary dependence. The evidence has to be assessed logion by logion.
+### Best current response model
 
-My conclusion:
+> Use the minor-agreement catalog as a discriminator dashboard: it strengthens direct-contact alternatives (especially Farrer) but does not itself decide Farrer vs. Two-source vs. Griesbach.
 
-> Thomas is not best explained as an independent creation. It preserves or reworks many Jesus-tradition units known also from canonical material. But its relation is network-like, not a simple branch from one canonical Gospel.
+## 7. Thomas
 
-## 6. 1 Timothy 5:18 and Luke 10:7: this is one of the strongest non-Gospel cases
+Thomas remains a sayings-network witness. The matrix contains **116 logia and 46 curated canonical parallels**. Current data does not provide automatic Coptic–Greek dependence scoring, so the conclusion must remain logion-level and cautious. 18c's curation-status annotations confirm the consequences: of 46 curated parallels, only **3 are directional-claim-ready**; the remaining 43 are sayings-network witnesses (28 "overlapping tradition, uncertain direction"; 14 "shared sayings or parable tradition"; 4 "possible synoptic influence or harmonization"). See [`analysis_update_20260418b/`](../analysis_update_20260418b/) for the matrix and [`analysis_update_20260418c/`](../analysis_update_20260418c/) for the curation layer.
 
-This is the strongest epistle-to-Gospel case in the generated package. The relevant segment is:
+The strongest-looking parallels (sower; mustard seed; banquet excuses; wicked tenants / rejected stone; Caesar's coin; lost sheep; treasure hidden in field; pearl; inheritance divider; womb / breasts blessing; rest / easy yoke) make pure independence less plausible, but cannot by themselves decide direction.
+
+### Best current response model
+
+> Logion-by-logion sayings-network analysis rather than corpus-level dependence.
+
+## 8. Epistles and Gospel/Jesus traditions
+
+Epistle–Gospel cases should be presented as **case dossiers, not global dependence claims**.
+
+- **1 Tim 5:18 / Luke 10:7** remains the strongest non-Gospel case. The exact normalized Greek run `ο εργατης του μισθου αυτου` matches Luke's μισθός form, not Matthew's worker-worthy-of-food form. Best read as **knowledge of a Luke-like worker/wages saying**; need not prove the final canonical Gospel of Luke. See [`john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml`](../john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml).
+- **James** likely reflects Jesus tradition, especially in the oath material (Jas 5:12 / Matt 5:34–37), but direct Matthew/Luke dependence is not demonstrated. Shared oral or written catechetical tradition has lower burden.
+- **Paul/Luke eucharistic overlap** (1 Cor 11:24 / Luke 22:19, six-token run `τουτο ποιειτε εις την εμην αναμνησιν`) should be treated as **liturgical/formula tradition** unless additional directional evidence is supplied. This is a crucial negative-space control: long exact agreement does not always mean one canonical text copied the other.
+- **Johannine letters / Gospel of John overlap** (e.g., 1 John 3:13 / John 15:18–19) is best treated as **intra-corpus idiolectal continuity** (shared Johannine school, discourse world, or compositional environment), not single-verse proof of direction.
+
+Across the top-500 epistle candidate pool, 18c reports **166 high / 17 medium / 317 low** formula-risk rows and classes **59 uncertain / 41 strong-low-formula / 26 scriptural-formula / 18 moderate / 13 targeted-known / 3 high-formula-needs-review**.
+
+### Best current response model
+
+> Three-axis case grading: retrieval support, philological strength, and formula risk. 1 Timothy high; Paul/Luke and James within tradition/formula categories.
+
+## 9. Apocrypha beyond Thomas
+
+No firm conclusion. Gospel of Peter, Protevangelium of James, Infancy Thomas, and Gospel of Nicodemus / Acts of Pilate are future ingestion targets. Current apocrypha data is **inventory/roadmap only**. 18c's analysis-status note reconfirms "not a completed primary-text analysis layer"; see [`john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv`](../john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv).
+
+Gospel of Peter and passion apocrypha are probably the highest-value next test cases, because passion material has dense shared narrative detail. Infancy and childhood gospels are also valuable, but they require a different model because they often expand into narrative gaps rather than directly rewriting canonical pericopae.
+
+## Final revised model
 
 ```yaml
-case: 1Tim 5:18 ~ Luke 10:7
-exact_run: "ο εργατης του μισθου αυτου"
-max_exact_run_len: 5
-best_explanation:
-  - direct use of Luke-like written form
-  - or fixed written Jesus-saying tradition close to Luke
-disfavored:
-  - independent convergence
-```
-
-See [`john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml`](../john_thomas_epistles_apocrypha_analysis/data/07_targeted_case_studies.yaml).
-
-The important detail is that 1 Timothy agrees more closely with Luke than Matthew. Matthew has the worker worthy of food/support formulation; Luke has the worker worthy of wages, matching 1 Timothy's μισθός form.
-
-So I would conclude:
-
-> 1 Timothy 5:18 very probably knows a fixed Jesus saying in a Luke-like form. It is stronger evidence for a Luke-like written or stabilized sayings tradition than for independent oral convergence.
-
-Whether that means the author of 1 Timothy used canonical Luke depends on the dating model one accepts. The textual data alone says "Luke-like form," not necessarily "the final Gospel of Luke in our exact form."
-
-## 7. James: Jesus-tradition dependence is likely; direct Matthew dependence is not proven
-
-James is different from 1 Timothy. The James parallels are often semantically strong but lexically weak.
-
-The oath saying is the highest-value case:
-
-```yaml
-case: Jas 5:12 ~ Matt 5:34-37
-shared_features:
-  - no oaths
-  - heaven / earth
-  - yes / yes and no / no
-best_explanation: shared Jesus tradition
-direct_matthew_use: possible but not required
-independence: high burden
-```
-
-James 5:12 is too close conceptually to dismiss. But the lexical form is compressed and paraenetic. James does not look like he is mechanically copying Matthew's expanded antithesis. He looks like he is using a compact form of a Jesus ethical saying.
-
-The same pattern appears elsewhere:
-
-- Jas 2:5 with poor / kingdom material;
-- Jas 1:5–6 with ask / receive / faith motifs;
-- Jas 1:22–25 with hearing and doing the word;
-- Jas 4:10 with humble / exalt;
-- Jas 2:13 and 4:11–12 with mercy, judgment, and judging.
-
-My conclusion:
-
-> James probably reflects Jesus tradition, but the package does not support direct dependence on Matthew or Luke as the simplest explanation. Shared oral or written catechetical tradition has lower burden.
-
-This is exactly the kind of case where exact-word methods under-detect real relationship. The relationship is probably real, but not necessarily literary dependence on a canonical Gospel.
-
-## 8. Paul / Luke eucharistic material: formulaic tradition, not simple literary dependence
-
-The 1 Corinthians 11 / Luke 22 case is lexically strong. The package finds a long exact run:
-
-```yaml
-case: 1Cor 11:24 ~ Luke 22:19
-exact_run: "τουτο ποιειτε εις την εμην αναμνησιν"
-max_exact_run_len: 6
-best_explanation:
-  - shared liturgical tradition
-  - or Luke using a tradition also represented by Paul
-not_best_explanation:
-  - Paul simply copied Luke
-```
-
-The reason is not lexical; lexically the case is strong. The reason is causal and chronological. Formulaic liturgical material can be shared because both texts draw from a preexisting ritual tradition. So this is a crucial negative-space control: long exact agreement does not always mean one canonical text copied the other.
-
-My conclusion:
-
-> The Lord's Supper overlap shows strong shared formula, but it should be treated as liturgical tradition rather than direct Gospel dependence unless additional directional evidence is supplied.
-
-## 9. Johannine letters: shared school/idiolect, not one-verse proof of direction
-
-The case 1 John 3:13 / John 15:18–19 has a notable exact run around "the world hates you." The package treats this as a Johannine idiom case.
-
-My conclusion:
-
-> 1 John and John share Johannine language and conceptual tradition. That is strong evidence of a shared school, discourse world, or compositional environment, but one motif does not decide whether the epistle used the Gospel or the Gospel used epistolary tradition.
-
-This category is different from Gospel-to-Gospel dependence. It is intra-corpus idiolectal continuity.
-
-## 10. Apocrypha beyond Thomas: not enough data yet for firm dependence conclusions
-
-The package includes an apocrypha inventory, but not a full parsed, aligned, language-sensitive analysis of Gospel of Peter, Protevangelium of James, Infancy Thomas, Gospel of Nicodemus, Jewish-Christian gospel fragments, and related texts. See [`john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv`](../john_thomas_epistles_apocrypha_analysis/data/12_apocrypha_inventory_from_mr_james.csv).
-
-So I would not make strong conclusions there yet. I would only say:
-
-> Gospel of Peter and passion apocrypha are probably the highest-value next test cases, because passion material has dense shared narrative detail. Infancy and childhood gospels are also valuable, but they require a different model because they often expand into narrative gaps rather than directly rewriting canonical pericopae.
-
-## Overall model I would adopt
-
-Given all of the generated packages, I would model early Christian textual relationships like this:
-
-```yaml
-best_current_model_from_generated_data:
-  mark:
-    role: major written narrative source
-    relation_to_matthew: Matthew probably uses Mark or Mark-like source
-  matthew_luke_double_tradition:
-    role: shared sayings/tradition layer
-    best_explanation: common written/oral Jesus tradition
-    q_implication: supports Q-like layer, not necessarily a single recoverable Q document
+current_best_model_family:
+  synoptic_narrative_backbone:
+    model: Markan priority / Mark-like written source
+    confidence:
+      Matthew_used_Mark_like: high
+      Luke_used_Mark_like: medium_high_with_caveat
+  matthew_luke_non_markan_material:
+    model: shared sayings/tradition layer
+    confidence: medium_high
+    q_document_claim: medium_low_without_further_argument
+    strongest_alternative: Farrer / Luke used Matthew plus Mark
   john:
-    role: independent literary-theological Gospel using overlapping Jesus/passion/sign traditions
-    direct_synoptic_use: possible locally, not globally proven
+    model: shared anchor/passion/sign tradition
+    confidence: medium
+    local_direct_use: possible_case_by_case
+  minor_agreements:
+    status: unresolved_central_discriminator
+    catalog_state: algorithmic_screen_not_hand_curated
   thomas:
-    role: sayings-network witness
-    direct_dependence_on_canonical_gospels: varies by logion, not globally established
-  james:
-    role: epistolary paraenesis saturated with Jesus-tradition motifs
-    direct_gospel_use: not demonstrated
-  first_timothy:
-    role: strong witness to a Luke-like fixed Jesus saying
-    independent_convergence: very unlikely
-  paul_lord_supper:
-    role: liturgical/traditional formula
-    direct_luke_dependence: not the best explanation
+    model: sayings-network witness
+    confidence: medium_for_overlap_low_for_direction
+    directional_claim_ready_logia: 3_of_46_curated_parallels
+  epistles:
+    model: case-by-case fixed sayings / formula / tradition analysis
+    strongest_case: 1Tim 5:18 / Luke 10:7
+    liturgical_caution: 1Cor 11 / Luke 22
+  apocrypha:
+    model: inventory_only_currently
+    next_priority: Gospel of Peter, passion apocrypha
 ```
 
 ## The main methodological conclusion
 
-The generated data argues against using one method for all these texts.
+The generated data argues against using one method for all these texts:
 
-For **Mark–Matthew**, an order-sensitive literary-dependence model works well.
-
-For **Matthew–Luke double tradition**, a sayings-source/tradition model works better than a single linear order-chain model.
-
-For **John**, the right model is anchor-based transformation analysis.
-
-For **Thomas**, the right model is sayings-network analysis.
-
-For **James and the epistles**, the right model is formula/saying detection plus burden analysis, because exact wording often disappears while conceptual structure remains.
+- For **Mark–Matthew**, an order-sensitive literary-dependence model works well.
+- For **Mark–Luke**, an order-sensitive direct-use model is lowest-burden **once shared tradition is fairly charged for order retention** — not before.
+- For **Matthew–Luke double tradition**, a sayings-source/tradition model works better than a single linear order-chain model.
+- For **John**, the right model is anchor-based transformation analysis.
+- For **Thomas**, the right model is sayings-network analysis.
+- For **James and the epistles**, the right model is formula/saying detection plus burden analysis, because exact wording often disappears while conceptual structure remains.
+- For **minor agreements**, the right treatment is a curated discriminator dashboard — not an input to a single model's posterior.
+- At the **system level**, the right frame is a burden profile across 13 named models — not a winner-takes-all ranking.
 
 So the core conclusion is:
 
-> The early Christian textual field is not one tree. It is a mixed network: one strong written narrative backbone around Mark, a sayings/tradition layer behind Matthew–Luke material, shared passion and sign traditions overlapping John, and epistolary reuse of fixed Jesus sayings and liturgical formulas.
+> The early Christian textual field is not one tree. It is a mixed network: one strong written narrative backbone around Mark (used by both Matthew and Luke), a sayings/tradition layer behind Matthew–Luke material, shared passion and sign traditions overlapping John, and epistolary reuse of fixed Jesus sayings and liturgical formulas. The two system-level alternatives that remain live are **Two-source** (with Q understood as a tradition layer rather than a single discrete document) and **Farrer** (Mark + Matthew → Luke, no Q); minor agreements are the key unresolved discriminator between them.
 
 The strongest individual directional conclusion is **Matthew's dependence on Mark or a Mark-like source**. The strongest non-Gospel saying case is **1 Timothy 5:18's dependence on a Luke-like worker/wages saying**. The strongest cautionary result is that **exact verbal agreement can indicate liturgy or shared tradition rather than direct literary copying**, as with 1 Corinthians 11 and Luke 22.
