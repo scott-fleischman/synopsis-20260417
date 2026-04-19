@@ -97,6 +97,7 @@ if __package__ in (None, ""):
     from build.loaders_h18b import build_h18b  # type: ignore[no-redef]
     from build.loaders_h18c import build_h18c  # type: ignore[no-redef]
     from build.loaders_dir_dossiers import build_dir_dossiers  # type: ignore[no-redef]
+    from build.loaders_atlas import build_atlas  # type: ignore[no-redef]
     from build.loaders_reader import load_reader_books  # type: ignore[no-redef]
     from build.loaders_morph import load_morph_for_books  # type: ignore[no-redef]
     from build.preprocess_paths import OUT, ROOT  # type: ignore[no-redef]
@@ -163,6 +164,7 @@ else:  # imported as a package member
     from .loaders_h18b import build_h18b
     from .loaders_h18c import build_h18c
     from .loaders_dir_dossiers import build_dir_dossiers
+    from .loaders_atlas import build_atlas
     from .loaders_reader import load_reader_books
     from .loaders_morph import load_morph_for_books
     from .preprocess_paths import OUT, ROOT
@@ -443,6 +445,23 @@ def main() -> None:
         f"{len((_cr.get('directional_conclusions_ranked') or []))} ranked conclusions"
     )
 
+    print("Building atlas (2026-04-18 Synoptic Problem + John model-comparison atlas)...")
+    atlas = build_atlas()
+    _sm = atlas.get("system_model_registry") or []
+    _sc = atlas.get("system_model_comparison_scorecard") or []
+    _po = atlas.get("pericope_ontology") or []
+    _ob = atlas.get("model_pericope_obligation_ledger") or []
+    _ma = atlas.get("minor_agreements_catalog") or []
+    _dt = atlas.get("double_tradition_order_catalog") or []
+    _cc = atlas.get("conclusion_evidence_counterevidence_cards") or []
+    _vs = atlas.get("variant_sensitivity_registry") or []
+    print(
+        f"  {len(_sm)} system models; {len(_sc)} scorecard rows; "
+        f"{len(_po)} pericope units; {len(_ob)} obligation rows; "
+        f"{len(_ma)} minor-agreements rows; {len(_dt)} double-tradition rows; "
+        f"{len(_cc)} conclusion cards; {len(_vs)} variant-sensitivity rows"
+    )
+
     print("Building h18b (2026-04-18b high-priority supplement)...")
     h18b = build_h18b()
     _mkl = h18b.get("mkl") or {}
@@ -485,6 +504,7 @@ def main() -> None:
         "h18b": h18b,
         "h18c": h18c,
         "dir_dossiers": dir_dossiers,
+        "atlas": atlas,
         "conclusions": conclusions,
         "reader": reader,
         "morph": morph,

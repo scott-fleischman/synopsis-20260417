@@ -157,12 +157,22 @@
 
   <section class="card" style="margin-top:8px;" id="directionalSection">
     <h2>Directional ranked conclusions · 2026-04-18 dossiers</h2>
-    <p class="caption" style="margin-top:0;">Five-rank evidence-ordering ladder from <code>synoptic_john_directional_dossiers_20260418/data/62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>. Each rank links to the per-direction obligation dossier (page 37) and cites the supporting directions. Burden comparisons live on <a href="36_directional_registry.html">page 36</a>; the full per-direction burden/response-model detail is on <a href="37_direction_dossier.html">page 37</a>.</p>
+    <p class="caption" style="margin-top:0;">Five-rank evidence-ordering ladder from <code>synoptic_john_directional_dossiers_20260418/data/62_directional_conclusion_ranking_and_missing_key_directions.yaml</code>. Each rank links to the per-direction obligation dossier (page 37) and cites the supporting directions. Burden comparisons live on <a href="36_directional_registry.html">page 36</a>; the full per-direction burden/response-model detail is on <a href="37_direction_dossier.html">page 37</a>; the system-level model scorecard is on <a href="39_system_model_scorecard.html">page 39</a>.</p>
     <div id="directionalRanked" style="display:flex;flex-direction:column;gap:8px;margin-top:10px;"></div>
     <div id="directionalHeadline" style="margin-top:14px;padding:10px 14px;background:#faf6ec;border-left:3px solid var(--accent);font-size:12.5px;line-height:1.55;color:var(--ink-soft);">
       <b style="color:var(--ink);">Headline burdens (direct-use, primary pair).</b>
       <span id="directionalBurdenCites"></span>
       <span style="color:var(--ink-mute);">Full comparison: <a href="36_directional_registry.html#burdenSection">page 36 · Burden comparison</a>.</span>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:8px;border-left:3px solid var(--accent);" id="atlasConclSection">
+    <h2>System-model atlas · balanced evidence cards</h2>
+    <p class="caption" style="margin-top:0;">The 2026-04-18 atlas supplies <em>balanced</em> conclusion cards for each ranked claim: evidence-for, evidence-against, and the model specialists would have to extend if they want to maintain the claim. Twenty-five cards in total, covering each of the 13 system models plus the cross-cutting conclusions. They are the system-level counterpart to the rank ladder above.</p>
+    <div id="atlasConclCards" style="display:flex;flex-direction:column;gap:8px;margin-top:10px;"></div>
+    <div style="margin-top:12px;font-size:11.5px;color:var(--ink-soft);line-height:1.55;padding:10px 14px;background:#fafaf7;border-left:3px solid var(--focus);">
+      <b style="color:var(--ink);">Where to drill down.</b>
+      The 13-model scorecard with family grouping, 5-area fit matrix, and burden sums is on <a href="39_system_model_scorecard.html">page 39</a>. The 4×4 source→target direction grid is on <a href="40_direction_matrix.html">page 40</a>. The two discriminator catalogs (minor agreements, displaced double tradition) are on <a href="41_minor_agreements.html">page 41</a>. The 102-unit × per-model obligation browser is on <a href="42_pericope_dossiers.html">page 42</a>.
     </div>
   </section>
 
@@ -270,6 +280,47 @@
     }
     const host2 = document.getElementById('directionalBurdenCites');
     if (host2) host2.appendChild(document.createTextNode(' ' + cites.join('; ') + '. '));
+  })();
+
+  // ---- Atlas conclusion cards (2026-04-18 atlas) --------------------------
+  (function () {
+    const AT = B.atlas || {};
+    const cards = AT.conclusion_evidence_counterevidence_cards || [];
+    const host = document.getElementById('atlasConclCards');
+    if (!host || !cards.length) return;
+    const show = cards.slice(0, 10);
+    for (const c of show) {
+      const wrap = el('div', { style: 'border:1px solid var(--rule);border-left:4px solid var(--accent);background:#fff;padding:12px 16px;border-radius:3px;' });
+      const hd = el('div', { style: 'display:flex;align-items:baseline;gap:10px;margin-bottom:6px;' });
+      hd.appendChild(el('div', { style: 'font-family:var(--serif);font-size:14.5px;color:var(--ink);flex:1;line-height:1.35;' }, c.claim_short || c.claim_id || ''));
+      if (c.atlas_strength || c.confidence) {
+        hd.appendChild(el('span', { style: 'font-size:10px;padding:2px 8px;border:1px solid var(--rule);border-radius:11px;background:#fafaf7;color:var(--ink-soft);font-family:var(--mono);white-space:nowrap;' }, (c.atlas_strength || c.confidence || '').replace(/_/g, ' ')));
+      }
+      wrap.appendChild(hd);
+      if (c.evidence_for && c.evidence_for.length) {
+        const ef = el('div', { style: 'font-size:11.5px;line-height:1.5;color:var(--ink-soft);padding:6px 10px;background:#f1f5ec;border-left:3px solid #4d6f4b;border-radius:2px;margin-bottom:4px;' });
+        ef.appendChild(el('b', { style: 'color:var(--ink);' }, 'Evidence for: '));
+        ef.appendChild(document.createTextNode((c.evidence_for || []).slice(0, 3).join(' · ')));
+        wrap.appendChild(ef);
+      }
+      if (c.evidence_against && c.evidence_against.length) {
+        const ea = el('div', { style: 'font-size:11.5px;line-height:1.5;color:var(--ink-soft);padding:6px 10px;background:#fbeeda;border-left:3px solid var(--warn);border-radius:2px;margin-bottom:4px;' });
+        ea.appendChild(el('b', { style: 'color:var(--ink);' }, 'Evidence against: '));
+        ea.appendChild(document.createTextNode((c.evidence_against || []).slice(0, 3).join(' · ')));
+        wrap.appendChild(ea);
+      }
+      if (c.what_would_settle_it || c.minimal_model_extension) {
+        const ws = el('div', { style: 'font-size:11px;color:var(--ink-mute);margin-top:4px;font-style:italic;' });
+        ws.appendChild(document.createTextNode(c.what_would_settle_it || c.minimal_model_extension || ''));
+        wrap.appendChild(ws);
+      }
+      host.appendChild(wrap);
+    }
+    if (cards.length > show.length) {
+      const more = el('div', { style: 'font-size:11px;color:var(--ink-mute);text-align:center;margin-top:4px;' });
+      more.appendChild(document.createTextNode('+ ' + (cards.length - show.length) + ' more cards in 81_conclusion_evidence_counterevidence_cards.yaml'));
+      host.appendChild(more);
+    }
   })();
 
   // ---- h18b nav-claims (rank-1 priority view) ------------------------------

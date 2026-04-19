@@ -264,6 +264,108 @@ Visualization pages 36 (registry), 37 (per-direction dossier), and 38 (system hy
 
 ---
 
+## 11c. System-level model atlas (2026-04-18 atlas)
+
+The directional-dossiers package (§11b) enumerates twelve *pairwise* directional hypotheses. The `synoptic_problem_model_atlas_20260418/` package lifts those pairwise directions into thirteen *named* **system-level models** of the Synoptic Problem, and evaluates each model against a single shared pericope ontology, per-model obligation ledger, minor-agreements catalog, double-tradition order catalog, variant-sensitivity registry, and balanced conclusion evidence/counter-evidence cards. It is the first layer in the repository where competing system-level solutions (e.g., two-source vs. Farrer vs. Griesbach) can be read side-by-side against identical evidence.
+
+### 11c.1 What "system-level" means
+
+A *pairwise direction* is a single ordered claim like "Matthew used Mark" or "John used Luke". A *system-level model* is a combination of pairwise directions with an interpretive frame: the two-source hypothesis commits to `matthew_used_mark` + `luke_used_mark` + `shared_matt_luke_sayings_tradition` (in a written Q-document form); Farrer commits to the same two Mark directions plus `luke_used_matthew`; Griesbach commits to `mark_used_matthew` + `mark_used_luke` + `luke_used_matthew`; the Augustinian sequence commits to `mark_used_matthew` + `luke_used_mark`; and so on. The atlas registers thirteen such models and makes the component-direction structure of each one explicit in `02_model_component_direction_matrix.csv`.
+
+### 11c.2 The thirteen models and six families
+
+`01_system_model_registry.yaml` and `52_system_model_comparison_scorecard.csv` give one-row-per-model registrations across six families:
+
+| Family | Models |
+| - | - |
+| Direct-literary Synoptic chain | Markan priority for Matthew and Luke; Farrer; Matthew-used-Luke + Mark-like source; Griesbach / two-gospel; Augustinian |
+| Source-critical | Two-source / Mark + Q-like sayings source |
+| Lost-source / network | Proto-Mark + shared sayings tradition |
+| Non-direct / shared-tradition | Stable oral/traditional network |
+| John-Synoptic direct | John used Mark; John used Matthew; John used Luke |
+| John-reverse or pre-Johannine | Synoptics used John / John-like tradition; Shared John/Synoptic anchor tradition |
+
+The scorecard records, for each model, the required direction hypotheses (chip-linkable to page 37), the sum of selected burden scores available at the atlas's masked-data level, a five-cell fit grid (Mark-Matthew / Mark-Luke / Matt-Luke double tradition / minor agreements / John anchor), and a main strength plus main burden.
+
+### 11c.3 Component direction → model matrix
+
+`02_model_component_direction_matrix.csv` tells the reader, for each (model, component-direction) pair:
+
+- the component role under that model (e.g., *direct-use*, *shared-source-layer*, *component-of-larger-claim*),
+- the pair the component acts on (e.g., `Mark_Matthew`),
+- the burden model used for the component,
+- the burden score contributed,
+- the interpretive result under that model.
+
+Every model burden sum on the scorecard is the *sum* of its component-direction burden scores — there are no hidden parameters, and a reader who disagrees with a single component's burden can recompute the model sum by hand.
+
+### 11c.4 Gospel direction 4×4 matrix
+
+`04_gospel_direction_matrix_4x4.csv` is the 16-cell ordered counterpart of the pairwise Gospel square (page 31). Each off-diagonal cell records the direction_id, a status phrase ("supported / high confidence relative to reverse", "possible locally, higher cumulative burden", "low support; included for completeness"), the method class, the available burden scores, a best-response-model prose snippet, and the primary data files behind it. Visualization page 40 renders this matrix with click-through to the full 37/36/42 dossiers.
+
+### 11c.5 102-unit pericope ontology and 1,945 model obligations
+
+`10_pericope_ontology.csv` is the unified unit catalog across the Mark-Matthew, Mark-Luke, Matt-Luke double-tradition, and John-Synoptic anchor strata (102 units total). Each unit carries a block_id, block_label, per-gospel verse ranges, average pair score, and methodological status. `20_model_pericope_obligation_ledger.csv` then records, for every (model, direction, pericope) triple, the required_explanation a defender must provide, the contrary_evidence currently visible in the data, the best response_model at sub-pericope scale, and the basis for each entry. The ledger is 1,945 rows and is the raw evidence that drives the scorecard totals. Visualization page 42 is the expert-facing browser over this ledger.
+
+### 11c.6 Minor agreements and double-tradition order catalogs
+
+`30_minor_agreements_catalog.csv` records every Matthew/Luke minor agreement against Mark (118 rows) with strength labels, agreement_type categories, possible_implications, and per-row Greek text for Mark, Matthew, and Luke where available. Minor agreements are the classic problem for the two-source hypothesis; the atlas exposes the full set and, on visualization page 41's Discriminator tab, reads the aggregate fit of each system model against the catalog.
+
+`40_double_tradition_order_catalog.csv` records 109 Matt/Luke double-tradition cases with alignment_layer (primary vs. secondary), pair score, longest_common_subsequence, rank_distance, order_signal badges, nonlocal_flag, and per-case model_implication. This is the ordered counterpart of the Matt-Luke mask-regime robustness summary (§8): mask-regime numbers tell you how many double-tradition pairs survive, order catalog tells you in what order those pairs appear in each Gospel.
+
+### 11c.7 Variant-sensitivity registry
+
+`60_variant_sensitivity_registry.csv` records every SBLGNT apparatus variant that materially affects a pericope-level comparison (2,682 rows), with flag_type and per-model sensitivity impact. A model's scorecard number is stable under a variant only if that variant's sensitivity flag reads *low*; the registry lets a reviewer identify model totals that depend on a contested variant.
+
+### 11c.8 Balanced conclusion cards
+
+`70_conclusion_evidence_counterevidence_cards.yaml` gives 25 balanced evidence cards at the *conclusion* level. Each card pairs:
+
+- `claim` and `claim_short` — the conclusion in long and short form,
+- `atlas_strength` / `confidence` — the atlas's own reading,
+- `evidence_for` — direct supporting evidence from the data,
+- `evidence_against` — contrary evidence from the data,
+- `what_would_settle_it` — the falsification hook,
+- `minimal_model_extension` — what would have to change in a given model to accommodate the card.
+
+Visualization page 26 renders the first 10 cards with the green/orange evidence bands, and page 39 links each system-model card to the conclusion cards that bear on it.
+
+### 11c.9 Burden scores are audit prompts, not probabilities
+
+Every burden score in the atlas is an **audit prompt, not a posterior probability**. Model A's burden sum being lower than Model B's burden sum does *not* mean Model A has higher posterior probability than Model B; it means Model A commits a defender to fewer or cheaper pericope-level obligations under the atlas's selected direction set. A defender of a higher-burden model may legitimately argue that one or more of its obligations are acceptable under a specific model extension — the atlas's job is to make those obligations explicit so the argument can be made in the open. The scorecard groups comparisons by model family (page 39) so burden sums are only compared inside comparable families; the pair-filter burden table on page 36 enforces the same discipline for pairwise directions.
+
+Two corollaries:
+
+1. The proto-Mark model records a demonstrable-from-data burden of 8.86 (the shared Matt-Luke sayings tradition) because its proto-Mark component is unscored at model-level — it posits a lost narrative source. The 8.86 number is *not* directly comparable to the 1,029.52 of strict Markan priority, which pays the full Mark-Matthew and Mark-Luke direct-use burden.
+2. The two-source model's burden sum (1,038.38) is one component direction higher than strict Markan priority (8.86 for `shared_matt_luke_sayings_tradition`) — the atlas treats the *shared sayings tradition* as demonstrable at score 8.86 but marks the *Q-document claim* as `requires_external_assumption` in `03_direction_hypothesis_registry.yaml`. A reader who wants a disciplined Markan-priority-without-Q reading should read the `markan_priority_matthew_and_luke` row; a reader who accepts the Q-document claim should read the `two_source_mark_q` row.
+
+### 11c.10 Where the atlas numbers live
+
+| Claim | Source file in `synoptic_problem_model_atlas_20260418/data/` |
+| - | - |
+| 13-model registration with core claim, family, required direction hypotheses | `01_system_model_registry.yaml` |
+| Model → component direction matrix with per-component burden scores | `02_model_component_direction_matrix.csv` |
+| 15-entry direction hypothesis registry (superset of dossiers 12) | `03_direction_hypothesis_registry.yaml` |
+| 16-cell gospel direction 4×4 matrix | `04_gospel_direction_matrix_4x4.csv` |
+| 102-unit pericope ontology | `10_pericope_ontology.csv` |
+| Per-pericope obligation summary | `11_pericope_obligation_summary.csv` |
+| Per-model × per-direction × per-pericope obligation ledger (1,945 rows) | `20_model_pericope_obligation_ledger.csv` |
+| 118 Matt/Luke minor agreements against Mark | `30_minor_agreements_catalog.csv` · `31_minor_agreements_patterns.yaml` |
+| 109 Matt/Luke double-tradition order cases | `40_double_tradition_order_catalog.csv` · `41_double_tradition_order_patterns.yaml` |
+| 13-model scorecard (one row per model) | `52_system_model_comparison_scorecard.csv` |
+| Per-model evidence card (for/against, what-would-settle) | `51_system_model_evidence_cards.yaml` |
+| 2,682-row variant-sensitivity registry | `60_variant_sensitivity_registry.csv` |
+| 25 balanced conclusion evidence/counter-evidence cards | `70_conclusion_evidence_counterevidence_cards.yaml` |
+| Data dictionary | `99_data_dictionary.yaml` |
+
+Visualization pages 39 (system-model scorecard), 40 (gospel direction 4×4), 41 (minor agreements + double tradition), and 42 (pericope dossiers) are the expert-facing surfaces for these files.
+
+### 11c.11 Reproducibility tier
+
+The atlas is a derivative analysis layer over snapshots of prior artifacts under `synoptic_problem_model_atlas_20260418/inputs/previous_artifacts/`; it does not fetch external sources at build time. Burden sums and model comparisons are **audit prompts, not probabilistic posteriors**, so the reproducibility tier is **regenerated from prior artifacts** (tier 2 of `REPRODUCIBILITY_LEVELS.md`) for the 13 CSV/YAML data files, and **curated prose** (tier 3) for the conclusion cards, evidence cards, and system-model registry narratives.
+
+---
+
 ## 12. Text-critical policy
 
 - Mark 16:9–20 is **excluded from the default primary chain** in both the Mark-Matthew rerun and the 18b Mark-Luke package. It is retained as a sensitivity condition (see `21_mark_luke_mark_ending_sensitivity.yaml`).

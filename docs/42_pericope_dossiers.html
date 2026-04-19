@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Pericope dossiers · 102 units × per-model obligations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .frame { display: grid; grid-template-columns: 320px 1fr; gap: 16px; }
+  @media (max-width: 960px) { .frame { grid-template-columns: 1fr; } }
+
+  .unit-list-wrap { background: #fff; border: 1px solid var(--rule); border-radius: 3px; max-height: 82vh; overflow: auto; }
+  .unit-filters { position: sticky; top: 0; background: #fafaf7; padding: 10px 12px; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 6px; z-index: 1; }
+  .unit-filters input, .unit-filters select { font-family: var(--mono); font-size: 11px; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 2px; background: #fff; color: var(--ink); }
+  .unit-filters .filt-row { display: flex; gap: 6px; align-items: center; font-size: 11px; color: var(--ink-soft); }
+  .unit-filters .filt-row label { display: flex; align-items: center; gap: 4px; }
+  .unit-filters .hint { font-size: 10.5px; color: var(--ink-mute); font-style: italic; }
+
+  .unit-list { display: flex; flex-direction: column; }
+  .unit-item { padding: 9px 12px; border-bottom: 1px solid var(--rule-soft); cursor: pointer; font-size: 12px; }
+  .unit-item:hover { background: #fbf7ea; }
+  .unit-item.active { background: #fdf6ea; border-left: 3px solid var(--accent); padding-left: 9px; }
+  .unit-item .uid { font-family: var(--mono); font-size: 10.5px; color: var(--ink-soft); line-height: 1.35; word-break: break-word; }
+  .unit-item .rng { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); margin-top: 3px; line-height: 1.45; word-break: break-word; }
+  .unit-item .meta { display: flex; gap: 10px; margin-top: 4px; font-size: 10px; color: var(--ink-mute); font-variant-numeric: tabular-nums; }
+  .unit-item .meta b { color: var(--accent); font-family: var(--mono); }
+  .unit-item .pair-badge { display: inline-block; font-size: 9.5px; padding: 1px 6px; border-radius: 2px; font-family: var(--mono); background: #fafaf7; border: 1px solid var(--rule); color: var(--ink-soft); }
+  .unit-item .pair-badge.p-mm { background: #fdf4f4; border-color: #d6b3b3; color: var(--mark); }
+  .unit-item .pair-badge.p-ml { background: #f1f5fa; border-color: #a9bdce; color: var(--matt); }
+  .unit-item .pair-badge.p-mlk { background: #fbf5eb; border-color: #d6bc70; color: var(--accent); }
+  .unit-item .pair-badge.p-john { background: #eef4f3; border-color: #8bbab5; color: var(--focus); }
+
+  .unit-detail { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 16px 20px; min-height: 400px; }
+  .unit-detail .hd { margin-bottom: 12px; }
+  .unit-detail .hd h2 { margin: 0 0 4px; font-family: var(--serif); font-size: 19px; color: var(--ink); line-height: 1.3; }
+  .unit-detail .hd .meta-line { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); line-height: 1.5; margin-bottom: 6px; }
+  .unit-detail .hd .status { font-size: 11px; color: var(--ink-soft); background: #fafaf7; padding: 5px 10px; border-left: 3px solid var(--accent); border-radius: 2px; margin-top: 6px; font-style: italic; line-height: 1.5; }
+
+  .ranges-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 10px 0; }
+  .rng-cell { padding: 8px 10px; border-radius: 2px; background: #fafaf7; border: 1px solid var(--rule-soft); font-size: 11.5px; }
+  .rng-cell .g { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-mute); margin-bottom: 2px; }
+  .rng-cell.g-matt { background: #f1f5fa; border-color: var(--matt-soft); }
+  .rng-cell.g-mark { background: #fdf4f4; border-color: var(--mark-soft); }
+  .rng-cell.g-luke { background: #fbf5eb; }
+  .rng-cell.g-john { background: #eef4f3; }
+  .rng-cell .v { font-family: var(--mono); font-size: 11px; color: var(--ink); }
+
+  .obl-filters { display: flex; gap: 10px; align-items: center; margin: 10px 0; padding: 8px 10px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 3px; font-size: 11px; flex-wrap: wrap; }
+  .obl-filters label { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-soft); }
+  .obl-filters select { font-family: var(--mono); font-size: 10.5px; padding: 3px 7px; border: 1px solid var(--rule); border-radius: 2px; background: #fff; }
+  .obl-filters .hint { color: var(--ink-mute); font-size: 10.5px; }
+
+  .dir-section { margin-top: 16px; }
+  .dir-section > .dir-head { display: flex; align-items: baseline; gap: 10px; padding: 6px 10px; background: #fafaf7; border-left: 4px solid var(--mark); border-radius: 2px 0 0 2px; margin-bottom: 6px; }
+  .dir-section > .dir-head.dir-mm { border-left-color: var(--mark); }
+  .dir-section > .dir-head.dir-ml { border-left-color: var(--matt); }
+  .dir-section > .dir-head.dir-mlk { border-left-color: var(--accent); }
+  .dir-section > .dir-head.dir-john { border-left-color: var(--focus); }
+  .dir-section > .dir-head.dir-other { border-left-color: var(--ink-mute); }
+  .dir-section > .dir-head .did { font-family: var(--mono); font-size: 12px; color: var(--ink); font-weight: 600; }
+  .dir-section > .dir-head .count { font-size: 10.5px; color: var(--ink-mute); }
+  .dir-section > .dir-head .drill { margin-left: auto; font-size: 10.5px; font-family: var(--mono); }
+  .dir-section > .dir-head .drill a { color: var(--matt); text-decoration: none; border-bottom: 1px solid transparent; }
+  .dir-section > .dir-head .drill a:hover { border-color: var(--matt); }
+
+  .obl-card { padding: 8px 12px; background: #fff; border: 1px solid var(--rule-soft); border-radius: 2px; margin-bottom: 5px; font-size: 11.5px; line-height: 1.5; }
+  .obl-card .obl-model { font-family: var(--mono); font-size: 10.5px; color: var(--ink-soft); }
+  .obl-card .obl-model a { color: var(--matt); text-decoration: none; }
+  .obl-card .obl-model a:hover { border-bottom: 1px solid var(--matt); }
+  .obl-card .req { margin-top: 3px; color: var(--ink); }
+  .obl-card .req b { color: var(--ink); }
+  .obl-card .cont { margin-top: 3px; color: var(--ink-soft); font-size: 11px; padding: 3px 8px; background: #fbeeda; border-left: 3px solid var(--warn); border-radius: 2px; }
+  .obl-card .resp { margin-top: 3px; color: var(--ink-soft); font-size: 11px; padding: 3px 8px; background: #f1f5ec; border-left: 3px solid #4d6f4b; border-radius: 2px; font-style: italic; }
+  .obl-card .otype { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-mute); padding: 1px 6px; background: #fafaf7; border-radius: 2px; display: inline-block; margin-left: 6px; font-family: var(--mono); }
+
+  .overall-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 10px; }
+  .overall-strip .cell { padding: 8px 10px; background: #fafaf7; border: 1px solid var(--rule-soft); border-radius: 3px; }
+  .overall-strip .cell .k { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-mute); }
+  .overall-strip .cell .v { font-family: var(--serif); font-size: 17px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .overall-strip .cell .n { font-size: 10.5px; color: var(--ink-mute); }
+
+  .drill-footer { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule-soft); font-size: 11px; color: var(--ink-soft); }
+  .drill-footer .drill { margin-top: 4px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .drill-footer .drill a { font-family: var(--mono); font-size: 10.5px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; }
+  .drill-footer .drill a:hover { background: #fbf7ea; color: var(--ink); border-color: var(--accent); }
+
+  .empty { padding: 24px; text-align: center; color: var(--ink-mute); font-size: 12.5px; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Pericope dossiers · 102 units</h1>
+    <span class="sub">per-unit, per-direction, per-model obligation ledger (1,945 rows from atlas)</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>The atlas enumerates 102 pericope-level units (92 computational Synoptic blocks and 10 John anchor episodes) and attaches a per-model, per-direction obligation to each: a required explanation, the contrary evidence against that direction in this unit, and the best response model available. This browser lets you pick a unit and see <em>exactly</em> what each system model must explain there.</p>
+    <div class="note">
+      <b>How to read:</b> each unit card first lists its ranges across the four gospels and its <em>methodological_status</em> (these are computational alignments, not traditional pericope titles). Below the ranges, obligations are grouped by <em>direction</em>, then by <em>model</em>. Direction IDs link to the per-direction dossier (page 37); model IDs link to the system-model scorecard (page 39). A unit with no John range is a Synoptic-only alignment; John-anchor units show the anchor name in the status line.<br>
+      Sources: <code>data/10_pericope_ontology_computational_and_anchor.csv</code>, <code>data/11_pericope_model_dossiers.yaml</code>, <code>data/12_pericope_obligation_summary.csv</code>, <code>data/20_model_pericope_obligation_ledger.csv</code>.
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="unit-list-wrap">
+      <div class="unit-filters">
+        <input type="text" id="unitSearch" placeholder="search unit / block / range..." />
+        <div class="filt-row">
+          <label>pair <select id="unitPair">
+            <option value="">all</option>
+            <option value="Mark↔Matthew">Mark↔Matthew</option>
+            <option value="Mark↔Luke">Mark↔Luke</option>
+            <option value="Matthew↔Luke">Matthew↔Luke</option>
+            <option value="John↔Mark">John↔Mark</option>
+            <option value="John↔Matthew">John↔Matthew</option>
+            <option value="John↔Luke">John↔Luke</option>
+            <option value="John">John</option>
+          </select></label>
+          <label>sort <select id="unitSort">
+            <option value="id">by id</option>
+            <option value="obl">by obligations ↓</option>
+            <option value="score">by avg_score ↓</option>
+            <option value="score_asc">by avg_score ↑</option>
+          </select></label>
+        </div>
+        <span class="hint" id="unitCount"></span>
+      </div>
+      <div class="unit-list" id="unitList"></div>
+    </div>
+    <div class="unit-detail" id="unitDetail">
+      <div class="empty">Select a unit on the left to view its per-model obligation dossier.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Companion pages: <a href="39_system_model_scorecard.html">39 · System-model scorecard</a> ·
+    <a href="40_direction_matrix.html">40 · Gospel 4×4 matrix</a> ·
+    <a href="37_direction_dossier.html">37 · Per-direction dossier</a> ·
+    <a href="36_directional_registry.html">36 · Direction registry</a> ·
+    <a href="02_block_ribbon.html">02 · Block ribbon</a> ·
+    <a href="07_block_cards.html">07 · Block cards</a>.
+    Data package: <code>synoptic_problem_model_atlas_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('42_pericope_dossiers.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const AT = B.atlas || {};
+  const ontology = AT.pericope_ontology || [];
+  const summary = AT.pericope_obligation_summary || [];
+  const ledger = AT.model_pericope_obligation_ledger || [];
+  const dossiers = AT.pericope_model_dossiers || {};
+  const modelReg = AT.system_model_registry || [];
+  const dirReg = AT.direction_hypothesis_registry || [];
+  const dirDossReg = (B.dir_dossiers && B.dir_dossiers.registry) || [];
+  const modelRegById = {};
+  for (const m of modelReg) modelRegById[m.model_id] = m;
+  const dirRegById = {};
+  for (const d of dirReg) dirRegById[d.direction_id] = d;
+  const dirDossById = {};
+  for (const d of dirDossReg) dirDossById[d.direction_id] = d;
+  const summaryById = {};
+  for (const s of summary) summaryById[s.unit_id] = s;
+
+  const ledgerByUnit = {};
+  for (const r of ledger) {
+    (ledgerByUnit[r.unit_id] = ledgerByUnit[r.unit_id] || []).push(r);
+  }
+
+  function pairClass(p) {
+    if (!p) return '';
+    if (p === 'Mark↔Matthew') return 'p-mm';
+    if (p === 'Matthew↔Luke') return 'p-ml';
+    if (p === 'Mark↔Luke') return 'p-mlk';
+    if (p.indexOf('John') >= 0) return 'p-john';
+    return '';
+  }
+  function dirClass(did) {
+    if (!did) return 'dir-other';
+    if (did.indexOf('_mark') >= 0 && did.indexOf('john') < 0) {
+      if (did.indexOf('matthew') >= 0) return 'dir-mm';
+      if (did.indexOf('luke') >= 0) return 'dir-mlk';
+    }
+    if ((did.indexOf('matthew') >= 0 && did.indexOf('luke') >= 0) || did.indexOf('shared_matt_luke') >= 0) return 'dir-ml';
+    if (did.indexOf('john') >= 0) return 'dir-john';
+    if (did.indexOf('matthew') >= 0 || did.indexOf('mark') >= 0) return 'dir-mm';
+    return 'dir-other';
+  }
+  function prettyUid(u) {
+    return u.replace(/_/g, ' ');
+  }
+
+  // ----- Unit list -----
+  function filterUnits() {
+    const q = (document.getElementById('unitSearch').value || '').trim().toLowerCase();
+    const pf = document.getElementById('unitPair').value;
+    let rows = ontology.slice();
+    if (q) rows = rows.filter(function (o) {
+      const hay = (o.pericope_id + ' ' + o.block_label + ' ' + o.matthew_range + ' ' + o.mark_range + ' ' + o.luke_range + ' ' + o.john_range + ' ' + o.block_id).toLowerCase();
+      return hay.indexOf(q) >= 0;
+    });
+    if (pf) {
+      if (pf === 'John') rows = rows.filter(function (o) { return (o.pair || '').indexOf('John') >= 0 || (o.john_range || '').length > 0; });
+      else rows = rows.filter(function (o) { return o.pair === pf; });
+    }
+    const sortVal = document.getElementById('unitSort').value;
+    if (sortVal === 'obl') {
+      rows.sort(function (a, b) { return (summaryById[b.pericope_id] ? summaryById[b.pericope_id].obligation_rows : 0) - (summaryById[a.pericope_id] ? summaryById[a.pericope_id].obligation_rows : 0); });
+    } else if (sortVal === 'score') {
+      rows.sort(function (a, b) { return (b.avg_score || 0) - (a.avg_score || 0); });
+    } else if (sortVal === 'score_asc') {
+      rows.sort(function (a, b) { return (a.avg_score || 0) - (b.avg_score || 0); });
+    }
+    return rows;
+  }
+  function renderUnitList() {
+    const host = document.getElementById('unitList');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const rows = filterUnits();
+    document.getElementById('unitCount').textContent = rows.length + ' / ' + ontology.length + ' units';
+    for (const o of rows) {
+      const div = el('div', { class: 'unit-item', 'data-uid': o.pericope_id });
+      const badge = el('span', { class: 'pair-badge ' + pairClass(o.pair) }, o.pair || 'other');
+      const top = el('div', null);
+      top.appendChild(badge);
+      const uid = el('span', { class: 'uid', style: 'margin-left:6px;' }, o.pericope_id);
+      top.appendChild(uid);
+      div.appendChild(top);
+      div.appendChild(el('div', { class: 'rng' }, o.block_label || '—'));
+      const s = summaryById[o.pericope_id] || {};
+      const meta = el('div', { class: 'meta' });
+      if (s.obligation_rows) { meta.appendChild(el('span', null, 'obl ')); meta.appendChild(el('b', null, String(s.obligation_rows))); }
+      if (s.direction_count) meta.appendChild(el('span', null, '  dir ' + s.direction_count));
+      if (s.model_count) meta.appendChild(el('span', null, '  mod ' + s.model_count));
+      if (typeof o.avg_score === 'number') meta.appendChild(el('span', null, '  score ' + o.avg_score.toFixed(3)));
+      div.appendChild(meta);
+      div.addEventListener('click', function () { select(o.pericope_id); });
+      host.appendChild(div);
+    }
+  }
+
+  function select(uid) {
+    if (window.location.hash !== '#' + uid) window.location.hash = uid;
+    for (const it of document.querySelectorAll('.unit-item')) {
+      it.classList.toggle('active', it.dataset.uid === uid);
+    }
+    renderUnitDetail(uid);
+  }
+
+  // ----- Unit detail -----
+  function renderUnitDetail(uid) {
+    const host = document.getElementById('unitDetail');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const o = ontology.find(function (x) { return x.pericope_id === uid; });
+    if (!o) {
+      host.appendChild(el('div', { class: 'empty' }, 'Unknown unit: ' + uid));
+      return;
+    }
+    // Head
+    const hd = el('div', { class: 'hd' });
+    hd.appendChild(el('h2', null, o.block_label || o.pericope_id));
+    const ml = el('div', { class: 'meta-line' });
+    ml.appendChild(document.createTextNode(o.pericope_id + ' · ' + (o.unit_type || '') + ' · pair: ' + (o.pair || '—')));
+    if (typeof o.pair_count === 'number' && o.pair_count > 0) ml.appendChild(document.createTextNode(' · pair count: ' + o.pair_count));
+    if (typeof o.avg_score === 'number') ml.appendChild(document.createTextNode(' · avg_score: ' + o.avg_score.toFixed(4)));
+    hd.appendChild(ml);
+    if (o.methodological_status) hd.appendChild(el('div', { class: 'status' }, o.methodological_status));
+    host.appendChild(hd);
+
+    // Ranges
+    const rg = el('div', { class: 'ranges-grid' });
+    function rngCell(g, gk, val) {
+      if (!val) return;
+      const c = el('div', { class: 'rng-cell g-' + gk });
+      c.appendChild(el('div', { class: 'g' }, g));
+      c.appendChild(el('div', { class: 'v' }, val));
+      rg.appendChild(c);
+    }
+    rngCell('Matthew', 'matt', o.matthew_range);
+    rngCell('Mark', 'mark', o.mark_range);
+    rngCell('Luke', 'luke', o.luke_range);
+    rngCell('John', 'john', o.john_range);
+    if (rg.childNodes.length) host.appendChild(rg);
+
+    // Representative pairs
+    if (o.representative_primary_pairs) {
+      const rp = el('div', { style: 'font-size:11px;color:var(--ink-soft);background:#fafaf7;padding:6px 10px;border-left:3px solid var(--focus);border-radius:2px;margin:4px 0 6px;font-family:var(--mono);line-height:1.6;' });
+      rp.appendChild(el('span', { style: 'font-size:10px;color:var(--ink-mute);font-family:var(--sans);text-transform:uppercase;letter-spacing:0.05em;margin-right:6px;' }, 'representative pairs'));
+      rp.appendChild(document.createTextNode(o.representative_primary_pairs));
+      host.appendChild(rp);
+    }
+
+    // Overall strip
+    const s = summaryById[uid] || {};
+    const strip = el('div', { class: 'overall-strip' });
+    function cell(k, v, n) {
+      if (v === undefined || v === null || v === '') return;
+      const c = el('div', { class: 'cell' });
+      c.appendChild(el('div', { class: 'k' }, k));
+      c.appendChild(el('div', { class: 'v' }, String(v)));
+      if (n) c.appendChild(el('div', { class: 'n' }, n));
+      strip.appendChild(c);
+    }
+    cell('Obligation rows', s.obligation_rows);
+    cell('Directions', s.direction_count);
+    cell('Models', s.model_count);
+    cell('Evidence origin', o.evidence_origin || '—');
+    if (strip.childNodes.length) host.appendChild(strip);
+
+    // Obligation filters
+    const flt = el('div', { class: 'obl-filters' });
+    flt.appendChild(document.createTextNode('Filter obligations:'));
+    const dirSel = el('select', { id: 'oblDirSel' });
+    dirSel.appendChild(el('option', { value: '' }, 'all directions'));
+    const oblRows = ledgerByUnit[uid] || [];
+    const dirSet = Array.from(new Set(oblRows.map(function (r) { return r.direction_id; })));
+    dirSet.sort();
+    for (const d of dirSet) dirSel.appendChild(el('option', { value: d }, d));
+    flt.appendChild(el('label', null, 'direction ', dirSel));
+    const modSel = el('select', { id: 'oblModSel' });
+    modSel.appendChild(el('option', { value: '' }, 'all models'));
+    const modSet = Array.from(new Set(oblRows.map(function (r) { return r.model_id; })));
+    modSet.sort();
+    for (const m of modSet) modSel.appendChild(el('option', { value: m }, m));
+    flt.appendChild(el('label', null, 'model ', modSel));
+    flt.appendChild(el('span', { class: 'hint' }, oblRows.length + ' total obligations'));
+    host.appendChild(flt);
+
+    // Obligations grouped by direction then model
+    const oblHost = el('div', { id: 'oblHost' });
+    host.appendChild(oblHost);
+    function renderObligations() {
+      while (oblHost.firstChild) oblHost.removeChild(oblHost.firstChild);
+      const fd = dirSel.value;
+      const fm = modSel.value;
+      const filtered = oblRows.filter(function (r) {
+        if (fd && r.direction_id !== fd) return false;
+        if (fm && r.model_id !== fm) return false;
+        return true;
+      });
+      if (!filtered.length) {
+        oblHost.appendChild(el('div', { class: 'empty' }, 'No obligations match current filters.'));
+        return;
+      }
+      const byDir = {};
+      for (const r of filtered) {
+        (byDir[r.direction_id] = byDir[r.direction_id] || []).push(r);
+      }
+      const dirOrder = Object.keys(byDir).sort();
+      for (const d of dirOrder) {
+        const sec = el('div', { class: 'dir-section' });
+        const head = el('div', { class: 'dir-head ' + dirClass(d) });
+        head.appendChild(el('span', { class: 'did' }, d));
+        const dreg = dirRegById[d];
+        if (dreg && dreg.short_label) head.appendChild(el('span', { style: 'font-size:11px;color:var(--ink-soft);' }, dreg.short_label));
+        head.appendChild(el('span', { class: 'count' }, byDir[d].length + ' model row' + (byDir[d].length === 1 ? '' : 's')));
+        const drill = el('div', { class: 'drill' });
+        if (dirDossById[d]) drill.appendChild(el('a', { href: '37_direction_dossier.html#' + d, title: 'Open full dossier for this direction' }, 'dossier →'));
+        else drill.appendChild(el('a', { href: '36_directional_registry.html#' + d, title: 'Open registry row for this direction' }, 'registry →'));
+        head.appendChild(drill);
+        sec.appendChild(head);
+        for (const r of byDir[d]) {
+          const card = el('div', { class: 'obl-card' });
+          const mm = el('div', { class: 'obl-model' });
+          const mReg = modelRegById[r.model_id];
+          const a = el('a', { href: '39_system_model_scorecard.html#' + r.model_id, title: (mReg && mReg.short_label) || r.model_id }, r.model_id);
+          mm.appendChild(a);
+          mm.appendChild(el('span', { class: 'otype' }, (r.obligation_type || '').replace(/_/g, ' ')));
+          card.appendChild(mm);
+          if (r.source_range || r.target_range) {
+            const rng = el('div', { style: 'font-family:var(--mono);font-size:10px;color:var(--ink-mute);margin-top:2px;' });
+            rng.appendChild(document.createTextNode('source: ' + (r.source_range || '—') + '   target: ' + (r.target_range || '—')));
+            card.appendChild(rng);
+          }
+          if (r.required_explanation) {
+            const req = el('div', { class: 'req' });
+            req.appendChild(el('b', null, 'Required: '));
+            req.appendChild(document.createTextNode(r.required_explanation));
+            card.appendChild(req);
+          }
+          if (r.contrary_evidence) {
+            const ce = el('div', { class: 'cont' });
+            ce.appendChild(el('b', null, 'Contrary: '));
+            ce.appendChild(document.createTextNode(r.contrary_evidence));
+            card.appendChild(ce);
+          }
+          if (r.response_model) {
+            const rm = el('div', { class: 'resp' });
+            rm.appendChild(el('b', null, 'Response: '));
+            rm.appendChild(document.createTextNode(r.response_model));
+            card.appendChild(rm);
+          }
+          sec.appendChild(card);
+        }
+        oblHost.appendChild(sec);
+      }
+    }
+    dirSel.addEventListener('change', renderObligations);
+    modSel.addEventListener('change', renderObligations);
+    renderObligations();
+
+    // Drill footer
+    const drill = el('div', { class: 'drill-footer' });
+    drill.appendChild(el('span', null, 'Cross-links: '));
+    const d2 = el('div', { class: 'drill' });
+    d2.appendChild(el('a', { href: '02_block_ribbon.html' }, 'block ribbon'));
+    d2.appendChild(el('a', { href: '07_block_cards.html' }, 'block cards'));
+    if ((o.pair || '').indexOf('John') >= 0 || o.john_range) d2.appendChild(el('a', { href: '35_john_pairwise.html' }, 'John pairwise'));
+    if (o.pair === 'Mark↔Luke') d2.appendChild(el('a', { href: '34_mark_luke.html' }, 'Mark↔Luke direct'));
+    drill.appendChild(d2);
+    host.appendChild(drill);
+  }
+
+  // Events
+  ['unitSearch', 'unitPair', 'unitSort'].forEach(function (id) {
+    const elx = document.getElementById(id);
+    const ev = (elx.tagName === 'INPUT') ? 'input' : 'change';
+    elx.addEventListener(ev, renderUnitList);
+  });
+  window.addEventListener('hashchange', function () {
+    const h = (window.location.hash || '').replace('#', '');
+    if (h) select(h);
+  });
+
+  renderUnitList();
+  // initial selection
+  const h = (window.location.hash || '').replace('#', '');
+  if (h && ontology.find(function (x) { return x.pericope_id === h; })) select(h);
+  else if (ontology.length) select(ontology[0].pericope_id);
+})();
+</script>
+</body>
+</html>

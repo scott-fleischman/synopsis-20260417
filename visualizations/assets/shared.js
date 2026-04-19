@@ -136,6 +136,12 @@
       ['37_direction_dossier.html', 'Per-direction dossier'],
       ['38_system_hypotheses.html', 'System hypothesis space'],
     ]},
+    { id: 'atlas', label: 'Model atlas (20260418)', pages: [
+      ['39_system_model_scorecard.html', 'Scorecard · 13 models'],
+      ['40_direction_matrix.html', 'Gospel 4×4 matrix'],
+      ['41_minor_agreements.html', 'MA &amp; double tradition'],
+      ['42_pericope_dossiers.html', 'Pericope dossiers'],
+    ]},
     { id: 'mkl', label: 'Mark ↔ Luke (18b)', pages: [
       ['34_mark_luke.html', 'Mark↔Luke direct'],
       ['13_triangle.html', 'Synoptic matrix'],

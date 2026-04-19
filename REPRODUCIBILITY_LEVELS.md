@@ -51,6 +51,13 @@ These layers do regenerate, but only from snapshots of earlier packages that are
 - **Reordering / displacement catalog *(20260418 dossiers)*** (`30_reordering_and_displacement_catalog.csv`, 2,410 rows). Source: prior block-order and secondary-echo tables.
 - **Primary-pair change diffs across all directions *(20260418 dossiers)*** (`50_primary_pair_change_diffs_all_directions.csv.gz`, 1,660 rows). Source: prior pair-level source/target change tables replayed under each direction.
 - **Support/contra evidence matrix and ranked directional conclusions *(20260418 dossiers)*** (`61_support_contra_evidence_matrix.csv`, `62_directional_conclusion_ranking_and_missing_key_directions.yaml`). Source: aggregation of the above per-direction ledgers into a comparable matrix and 5-rank ranking.
+- **Gospel direction 4×4 matrix *(20260418 atlas)*** (`04_gospel_direction_matrix_4x4.csv`, 16 cells). Source: re-projection of the dossiers 12-direction registry plus the 4 self-cells, with status / method_class / available burden scores / best-response snippet fields aggregated from the Level-1/2 ledgers.
+- **Pericope ontology *(20260418 atlas)*** (`10_pericope_ontology.csv`, 102 units; `11_pericope_obligation_summary.csv`). Source: unified re-projection of the mm / ml / mld / mkl / John-anchor unit catalogs into one atlas-level unit table.
+- **Per-model pericope obligation ledger *(20260418 atlas)*** (`20_model_pericope_obligation_ledger.csv`, 1,945 rows). Source: cross-product of the 13 system models × 15 direction hypotheses × 102 pericope units, populated from prior per-direction/per-pericope ledgers and the 18b/18c/dossiers evidence files. Each row's required_explanation and contrary_evidence fields are regenerated from the upstream ledgers; the best-response_model label is curated (see Level 3).
+- **Minor agreements catalog *(20260418 atlas)*** (`30_minor_agreements_catalog.csv`, 118 rows; `31_minor_agreements_patterns.yaml`). Source: prior Mark-Matthew and mm-Luke minor-agreement audit tables plus the mm primary-chain pairs, re-projected to the atlas schema.
+- **Double-tradition order catalog *(20260418 atlas)*** (`40_double_tradition_order_catalog.csv`, 109 rows; `41_double_tradition_order_patterns.yaml`). Source: the mld package's primary-chain pairs and secondary echoes plus order-retention audit tables, re-projected per-case with alignment_layer / rank_distance / order_signal / nonlocal_flag annotations.
+- **Variant-sensitivity registry *(20260418 atlas)*** (`60_variant_sensitivity_registry.csv`, 2,682 rows). Source: SBLGNT apparatus flags propagated from the per-pair `text_critical_status` fields, filtered to variants that materially affect a pericope-level comparison.
+- **System-model comparison scorecard *(20260418 atlas)*** (`52_system_model_comparison_scorecard.csv`, 13 rows; `02_model_component_direction_matrix.csv`). Source: cross-product of the 13 system models × their component direction hypotheses; burden sums are *computed* from the component burden scores on each row (no hidden parameters). The required-direction list and family grouping are registered in `01_system_model_registry.yaml`.
 
 **Claim a Level 2 layer supports.** "This number is reproducible given the committed source snapshots, but is not a from-scratch derivation from the Greek text alone."
 
@@ -70,10 +77,23 @@ These layers are authored, not computed. They are regenerated from YAML template
 - **Directional response-model dossiers *(20260418 dossiers)*** (`14_directional_pericope_explanation_dossiers.yaml`, `17_john_synoptic_directional_anchor_dossiers.yaml`, `60_contrary_evidence_and_response_models_by_direction.yaml`) — per-direction required-explanations, supporting/contrary-evidence framings, best response models, and what-would-strengthen/weaken hooks. The burden numbers are Level 1/2; the dossier prose and "best response model" identification are curated.
 - **System hypothesis space *(20260418 dossiers)*** (`04_system_hypothesis_space.yaml`) — five system-level models (Two-Source, Farrer, Griesbach, Proto-Mark, John shared-anchor) with stance labels, assumptions, must-explain lists, contrary evidence, and best response models. Curated framing on top of the Level-2 pairwise ledgers.
 - **Directional conclusion ranking *(20260418 dossiers)*** (`62_directional_conclusion_ranking_and_missing_key_directions.yaml`) — 5-rank curated ordering with "supported" / "not supported globally" labels. Burden values come from the Level-1/2 ledgers; the rank ordering itself is curated.
+- **System model registry *(20260418 atlas)*** (`01_system_model_registry.yaml`) — 13-model registration with core_claim, family, required_direction_hypotheses, current atlas rating (e.g., *strong_with_mark_luke_caution*, *viable_major_alternative*, *possible_but_high_burden*, *best_current_john_global_model*), main strength, and main burden. Component burden scores come from the Level-1/2 ledgers; the registry's prose and rating labels are curated.
+- **Direction hypothesis registry *(20260418 atlas)*** (`03_direction_hypothesis_registry.yaml`) — 15-entry registry marking each direction as `demonstrable_from_data` or `requires_external_assumption`, with per-hypothesis prose on the evidence character. Superset of the dossiers' 12 directions; the three additions (`shared_mark_luke_tradition`, `shared_matt_luke_sayings_tradition`, `proto_mark_common_source`) are curated.
+- **System-model evidence cards *(20260418 atlas)*** (`51_system_model_evidence_cards.yaml`) — per-model evidence_for, evidence_against, what_would_settle, and minimal_model_extension. The rows cite Level-1/2 numbers; the prose framing is curated.
+- **Conclusion evidence/counter-evidence cards *(20260418 atlas)*** (`70_conclusion_evidence_counterevidence_cards.yaml`, 25 cards) — balanced atlas-level conclusion cards. Each card pairs atlas_strength / confidence (curated), evidence_for (cites Level-1/2 counts), evidence_against (cites Level-1/2 counts), what_would_settle_it (curated falsification hook), and minimal_model_extension (curated). The selection of which 25 cards to include is itself curated.
+- **Minor-agreements patterns and double-tradition order patterns *(20260418 atlas)*** (`31_minor_agreements_patterns.yaml`, `41_double_tradition_order_patterns.yaml`) — pattern-level framings on top of the Level-2 catalogs. The catalog rows are Level 2; the pattern summaries are curated.
+- **Atlas data dictionary and attribution *(20260418 atlas)*** (`99_data_dictionary.yaml`, `ATTRIBUTION.md`, `README.md`, `EXECUTIVE_SUMMARY.md`) — curated framing over Level 1/2 data.
 
 **Claim a Level 3 layer supports.** "This number or claim exists because a curator (LLM-authored) put it there. A rebuild regenerates the same YAML from the same template, but the *content* is not derived from the Greek text by computation."
 
 **Special interpretive caveat for directional-dossier burden scores.** Every burden score in the directional-dossiers package is an **explanatory-obligation audit prompt**, not a posterior probability. The lower burden score for `matthew_used_mark` (774.87) over `mark_used_matthew` (788.66) is not a 0.51-vs-0.49 probability statement; it is a quantified asymmetry in the explanatory work each direction must perform. Reviewers should read burden scores alongside the required-explanations and contrary-evidence columns that give them content.
+
+**Special interpretive caveat for atlas system-model burden sums.** The atlas's 13-model scorecard sums component-direction burden scores to give each system model a single burden total. These totals are **not posterior probabilities** on the system models. Model A's burden sum being lower than Model B's burden sum does *not* mean Model A has higher posterior probability than Model B; it means Model A commits a defender to fewer or cheaper pericope-level obligations under the atlas's selected direction set. Two corollaries:
+
+1. The proto-Mark model's demonstrable-from-data burden (8.86) is *not* comparable to strict Markan priority's demonstrable-from-data burden (1,029.52) because proto-Mark posits a lost narrative source whose reconstruction is unscored at model-level.
+2. The two-source model's burden sum (1,038.38) adds the shared Matt-Luke sayings tradition component (8.86) to strict Markan priority. The *sayings-tradition* component is demonstrable at score 8.86; the *Q-document* claim itself is marked `requires_external_assumption` in the direction hypothesis registry. A reader who wants a disciplined Markan-priority-without-Q reading should read the `markan_priority_matthew_and_luke` row; a reader who accepts the Q-document claim should read the `two_source_mark_q` row.
+
+The scorecard groups comparisons by model family so burden sums are only compared inside comparable families; cross-family comparisons require a reader to decide whether the hidden costs (lost source reconstruction, unscored Q-document claim, shared tradition order-retention penalty) are acceptable.
 
 ---
 
@@ -114,7 +134,14 @@ python3 scripts/build_data_analysis_patch.py
 cd ../synoptic_john_directional_dossiers_20260418
 python3 scripts/build_directional_dossiers.py
 
-# Visualization bundle (reads the packages above, including dir_dossiers):
+# Synoptic Problem model atlas (13 system-level models, 15-entry direction
+# hypothesis registry, 102-unit pericope ontology, 1,945-row per-model
+# pericope obligation ledger, 118 minor agreements, 109 double-tradition
+# order cases, 2,682 variant-sensitivity flags, 25 conclusion cards):
+cd ../synoptic_problem_model_atlas_20260418
+python3 scripts/build_synoptic_model_atlas.py
+
+# Visualization bundle (reads the packages above, including dir_dossiers and atlas):
 cd ..
 python3 visualizations/build/preprocess.py
 

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Gospel direction matrix 4×4 · 16 source→target cells</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .matrix-wrap { overflow-x: auto; margin: 14px 0; }
+  .matrix { border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .matrix th, .matrix td { vertical-align: top; border-right: 1px solid var(--rule-soft); border-bottom: 1px solid var(--rule-soft); padding: 0; }
+  .matrix thead th { background: #fafaf7; padding: 10px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; text-align: left; }
+  .matrix thead th.target-hdr { text-align: center; min-width: 210px; }
+  .matrix thead th.corner { font-size: 10px; color: var(--ink-mute); padding: 10px 14px; background: #fafaf7; }
+  .matrix tbody th.row-hdr { background: #fafaf7; padding: 14px 12px; text-align: left; font-family: var(--serif); font-size: 15px; color: var(--ink); min-width: 100px; font-weight: 600; border-right: 1px solid var(--rule); }
+  .matrix tbody th.row-hdr .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); display: block; margin-bottom: 2px; font-family: var(--sans); font-weight: normal; }
+
+  .cell { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; min-width: 200px; height: 100%; }
+  .cell .did { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); }
+  .cell .did a { color: var(--matt); text-decoration: none; }
+  .cell .did a:hover { color: var(--mark); border-bottom: 1px solid var(--mark); }
+  .cell .status { font-size: 11.5px; color: var(--ink); line-height: 1.4; min-height: 2.8em; }
+  .cell .burden { font-family: var(--mono); font-size: 10px; color: var(--ink-soft); margin-top: 4px; padding-top: 4px; border-top: 1px dashed var(--rule-soft); }
+  .cell .burden b { color: var(--accent); font-weight: 600; }
+  .cell.self { background: #f4efdf; color: var(--ink-mute); text-align: center; font-style: italic; font-size: 12px; justify-content: center; min-height: 90px; }
+  .cell.supported { background: #e6efe0; border-left: 3px solid #4d6f4b; }
+  .cell.medium-high { background: #f0eccb; border-left: 3px solid var(--accent); }
+  .cell.possible-local { background: #f4ecd6; border-left: 3px solid var(--tight); }
+  .cell.higher-burden { background: #f5ddc4; border-left: 3px solid var(--warn); }
+  .cell.low-support { background: #f3dede; border-left: 3px solid #864747; }
+  .cell.shared-tradition-lower { background: #eef4f3; border-left: 3px solid var(--focus); }
+
+  .cell .method { font-size: 10px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+  .cell .resp { font-size: 10.5px; color: var(--ink-soft); line-height: 1.45; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--rule-soft); font-style: italic; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--ink-soft); margin: 12px 0 14px; align-items: center; }
+  .legend .sw { display: inline-flex; align-items: center; gap: 5px; }
+  .legend .sw span.box { display: inline-block; width: 11px; height: 11px; border: 1px solid var(--rule); border-radius: 2px; }
+  .legend .sw .box.b-sup { background: #e6efe0; border-left: 3px solid #4d6f4b; }
+  .legend .sw .box.b-mh { background: #f0eccb; border-left: 3px solid var(--accent); }
+  .legend .sw .box.b-pl { background: #f4ecd6; border-left: 3px solid var(--tight); }
+  .legend .sw .box.b-hb { background: #f5ddc4; border-left: 3px solid var(--warn); }
+  .legend .sw .box.b-low { background: #f3dede; border-left: 3px solid #864747; }
+  .legend .sw .box.b-st { background: #eef4f3; border-left: 3px solid var(--focus); }
+  .legend .sw .box.b-self { background: #f4efdf; border: 1px solid var(--rule); }
+
+  .detail-panel { margin: 24px 0; background: #fff; border: 1px solid var(--rule); border-radius: 3px; border-left-width: 6px; border-left-color: var(--accent); padding: 16px 18px; display: none; }
+  .detail-panel.active { display: block; }
+  .detail-panel h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 18px; color: var(--ink); }
+  .detail-panel .sub { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); margin-bottom: 12px; }
+  .detail-panel .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 760px) { .detail-panel .grid { grid-template-columns: 1fr; } }
+  .detail-panel .blk { padding: 10px 12px; background: #fafaf7; border-radius: 3px; }
+  .detail-panel .blk .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-bottom: 3px; }
+  .detail-panel .blk .val { font-size: 12px; color: var(--ink); line-height: 1.55; }
+  .detail-panel .blk ul { margin: 4px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.55; color: var(--ink-soft); }
+  .detail-panel .blk ul li { margin-bottom: 3px; }
+  .detail-panel .drill-link { margin-top: 12px; font-size: 12px; }
+  .detail-panel .drill-link a { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fafaf7; color: var(--ink-soft); text-decoration: none; margin-right: 6px; }
+  .detail-panel .drill-link a:hover { background: #fbf7ea; color: var(--ink); border-color: var(--accent); }
+
+  .agg-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 10px 0 18px; }
+  .agg-strip .cell { padding: 10px 12px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .agg-strip .cell .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .agg-strip .cell .v { font-family: var(--serif); font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .agg-strip .cell .n { font-size: 11px; color: var(--ink-mute); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Gospel direction matrix (4 × 4)</h1>
+    <span class="sub">16 source → target cells · status · available burdens · best response models</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>This is the most compact way to see where <em>every pairwise direction</em> currently stands. Rows are the source (the text being used), columns are the target (the text that allegedly used it). Each off-diagonal cell names the direction, gives the atlas's current-status phrase, lists the available burden scores, and points to the best response model under that direction. Click a cell for a full panel including the core required explanations from the direction registry and deep-links into the per-direction dossier (page 37) and the support/contra card (below).</p>
+    <div class="note">
+      <b>How to read this matrix:</b> the <em>status</em> phrase is the atlas's qualitative conclusion, not a p-value. <em>Available burden scores</em> come from the ledgers in <code>50_direction_burden_reference.csv</code>: direct_use and anchor_direct_use scales are not comparable across rows (direct-use scores are at the pericope/block level; anchor-direct-use scores are at the John anchor level). Self-identity cells on the diagonal are not applicable.<br>
+      Sources: <code>data/04_gospel_direction_matrix_4x4.csv</code>, <code>data/03_direction_hypothesis_registry.yaml</code>, <code>data/50_direction_burden_reference.csv</code>, <code>data/80_direction_support_contra_cards.yaml</code>.
+    </div>
+    <div class="legend">
+      <span class="sw"><span class="box b-sup"></span>supported</span>
+      <span class="sw"><span class="box b-mh"></span>supported with penalties</span>
+      <span class="sw"><span class="box b-pl"></span>possible locally</span>
+      <span class="sw"><span class="box b-hb"></span>higher burden than reverse</span>
+      <span class="sw"><span class="box b-st"></span>shared tradition lower burden</span>
+      <span class="sw"><span class="box b-low"></span>low support / for completeness</span>
+      <span class="sw"><span class="box b-self"></span>self-identity</span>
+    </div>
+  </div>
+
+  <div class="agg-strip" id="aggStrip"></div>
+
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead id="mhd"></thead>
+      <tbody id="mbd"></tbody>
+    </table>
+  </div>
+
+  <div class="detail-panel" id="detailPanel"></div>
+
+  <div class="footer">
+    Companion pages: <a href="36_directional_registry.html">36 · Direction registry</a> ·
+    <a href="37_direction_dossier.html">37 · Per-direction dossier</a> ·
+    <a href="38_system_hypotheses.html">38 · System hypothesis space</a> ·
+    <a href="39_system_model_scorecard.html">39 · System-model scorecard</a> ·
+    <a href="41_minor_agreements.html">41 · Minor agreements &amp; double tradition</a> ·
+    <a href="42_pericope_dossiers.html">42 · Pericope dossiers</a>.
+    Data package: <code>synoptic_problem_model_atlas_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('40_direction_matrix.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const AT = B.atlas || {};
+  const matrix = AT.gospel_direction_matrix_4x4 || [];
+  const dirReg = AT.direction_hypothesis_registry || [];
+  const burdenRef = AT.direction_burden_reference || [];
+  const scCards = AT.direction_support_contra_cards || [];
+  const dirDossReg = (B.dir_dossiers && B.dir_dossiers.registry) || [];
+  const dirDossRegById = {};
+  for (const r of dirDossReg) dirDossRegById[r.direction_id] = r;
+
+  const dirRegById = {};
+  for (const r of dirReg) dirRegById[r.direction_id] = r;
+  const scByDir = {};
+  for (const c of scCards) scByDir[c.direction_id] = c;
+
+  const GOSPELS = ['Matthew', 'Mark', 'Luke', 'John'];
+
+  const cellByST = {};
+  for (const c of matrix) cellByST[c.source + '::' + c.target] = c;
+
+  function classifyStatus(c) {
+    if (!c) return '';
+    if (c.status === 'not_applicable') return 'self';
+    const s = (c.status || '').toLowerCase();
+    if (s.indexOf('supported / high confidence') >= 0) return 'supported';
+    if (s.indexOf('supported over reverse') >= 0) return 'medium-high';
+    if (s.indexOf('shared anchor tradition currently lower burden') >= 0) return 'shared-tradition-lower';
+    if (s.indexOf('not demonstrated') >= 0) return 'possible-local';
+    if (s.indexOf('possible locally, higher') >= 0 || s.indexOf('higher cumulative burden') >= 0 || s.indexOf('higher burden than') >= 0) return 'higher-burden';
+    if (s.indexOf('possible locally') >= 0) return 'possible-local';
+    if (s.indexOf('low support') >= 0) return 'low-support';
+    return '';
+  }
+
+  function buildHeader() {
+    const thead = document.getElementById('mhd');
+    while (thead.firstChild) thead.removeChild(thead.firstChild);
+    const tr = el('tr');
+    const corner = el('th', { class: 'corner' });
+    corner.appendChild(el('div', null, 'source ↓  ·  target →'));
+    tr.appendChild(corner);
+    for (const g of GOSPELS) {
+      const th = el('th', { class: 'target-hdr' });
+      th.appendChild(el('div', { style: 'font-family:var(--serif);font-size:15px;color:var(--ink);text-transform:none;letter-spacing:0;font-weight:600;' }, g + ' used …'));
+      tr.appendChild(th);
+    }
+    thead.appendChild(tr);
+  }
+
+  function buildBody() {
+    const tbody = document.getElementById('mbd');
+    while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
+    for (const src of GOSPELS) {
+      const tr = el('tr');
+      const rh = el('th', { class: 'row-hdr' });
+      rh.appendChild(el('span', { class: 'lbl' }, 'source'));
+      rh.appendChild(document.createTextNode(src));
+      tr.appendChild(rh);
+      for (const tgt of GOSPELS) {
+        const key = src + '::' + tgt;
+        const c = cellByST[key];
+        const td = el('td');
+        const cellCls = 'cell ' + classifyStatus(c);
+        const cellDiv = el('div', { class: cellCls });
+        if (!c || c.status === 'not_applicable') {
+          cellDiv.appendChild(document.createTextNode(src + ' = ' + tgt));
+          cellDiv.appendChild(el('div', { style: 'font-size:10px;margin-top:2px;color:var(--ink-mute);' }, 'self-identity'));
+        } else {
+          const didLine = el('div', { class: 'did' });
+          const a = el('a', { href: '#' + c.direction_id }, c.direction_id);
+          a.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            window.location.hash = c.direction_id;
+            renderDetail(c.direction_id);
+          });
+          didLine.appendChild(a);
+          cellDiv.appendChild(didLine);
+          cellDiv.appendChild(el('div', { class: 'status' }, c.status || '—'));
+          if (c.method_class) cellDiv.appendChild(el('div', { class: 'method' }, c.method_class.replace(/_/g, ' ')));
+          if (c.available_burden_scores) {
+            const burden = el('div', { class: 'burden' });
+            const parts = c.available_burden_scores.split(';').map(function (p) { return p.trim(); });
+            for (let i = 0; i < parts.length; i++) {
+              const p = parts[i];
+              const m = p.match(/^([a-z_]+):([\d.]+)$/);
+              if (m) {
+                burden.appendChild(document.createTextNode(m[1].replace(/_/g, ' ') + ' '));
+                burden.appendChild(el('b', null, m[2]));
+              } else {
+                burden.appendChild(document.createTextNode(p));
+              }
+              if (i < parts.length - 1) burden.appendChild(el('br'));
+            }
+            cellDiv.appendChild(burden);
+          }
+          if (c.best_response_model) {
+            const resp = el('div', { class: 'resp' });
+            const maxLen = 140;
+            const trimmed = c.best_response_model.length > maxLen ? (c.best_response_model.slice(0, maxLen).replace(/[,.]\s*$/, '') + '…') : c.best_response_model;
+            resp.appendChild(document.createTextNode(trimmed));
+            cellDiv.appendChild(resp);
+          }
+        }
+        td.appendChild(cellDiv);
+        tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+    }
+  }
+
+  function renderDetail(dirId) {
+    const panel = document.getElementById('detailPanel');
+    while (panel.firstChild) panel.removeChild(panel.firstChild);
+    const c = matrix.find(function (r) { return r.direction_id === dirId; });
+    const reg = dirRegById[dirId];
+    const sc = scByDir[dirId];
+    if (!c) {
+      panel.classList.remove('active');
+      return;
+    }
+    panel.classList.add('active');
+    panel.appendChild(el('h3', null, (reg && reg.short_label) || dirId));
+    panel.appendChild(el('div', { class: 'sub' }, c.source + ' → ' + c.target + ' · ' + dirId + ' · ' + (c.method_class || '')));
+
+    const grid = el('div', { class: 'grid' });
+    const status = el('div', { class: 'blk' });
+    status.appendChild(el('div', { class: 'lbl' }, 'Current status'));
+    status.appendChild(el('div', { class: 'val' }, c.status || '—'));
+    grid.appendChild(status);
+
+    const burden = el('div', { class: 'blk' });
+    burden.appendChild(el('div', { class: 'lbl' }, 'Available burden scores'));
+    burden.appendChild(el('div', { class: 'val', style: 'font-family:var(--mono);font-size:11px;' }, c.available_burden_scores || '—'));
+    grid.appendChild(burden);
+
+    const resp = el('div', { class: 'blk', style: 'grid-column:1 / -1;' });
+    resp.appendChild(el('div', { class: 'lbl' }, 'Best response model under this direction'));
+    resp.appendChild(el('div', { class: 'val' }, c.best_response_model || '—'));
+    grid.appendChild(resp);
+
+    if (reg && (reg.core_required_explanations || []).length) {
+      const req = el('div', { class: 'blk' });
+      req.appendChild(el('div', { class: 'lbl' }, 'Core required explanations'));
+      const ul = el('ul');
+      for (const s of reg.core_required_explanations) ul.appendChild(el('li', null, s));
+      req.appendChild(ul);
+      grid.appendChild(req);
+    }
+    if (reg && (reg.core_contrary_evidence || []).length) {
+      const con = el('div', { class: 'blk' });
+      con.appendChild(el('div', { class: 'lbl' }, 'Core contrary evidence'));
+      const ul = el('ul');
+      for (const s of reg.core_contrary_evidence) ul.appendChild(el('li', null, s));
+      con.appendChild(ul);
+      grid.appendChild(con);
+    }
+    if (sc) {
+      const supBlk = el('div', { class: 'blk' });
+      supBlk.appendChild(el('div', { class: 'lbl' }, 'Supporting evidence (support card)'));
+      const ulS = el('ul');
+      for (const s of sc.supporting_evidence || []) ulS.appendChild(el('li', null, s));
+      supBlk.appendChild(ulS);
+      grid.appendChild(supBlk);
+      const conBlk = el('div', { class: 'blk' });
+      conBlk.appendChild(el('div', { class: 'lbl' }, 'Contrary evidence (support card)'));
+      const ulC = el('ul');
+      for (const s of sc.contrary_evidence || []) ulC.appendChild(el('li', null, s));
+      conBlk.appendChild(ulC);
+      grid.appendChild(conBlk);
+    }
+    panel.appendChild(grid);
+
+    const drill = el('div', { class: 'drill-link' });
+    const hasDoss = dirDossRegById[dirId];
+    if (hasDoss) drill.appendChild(el('a', { href: '37_direction_dossier.html#' + dirId }, '→ full dossier (page 37)'));
+    drill.appendChild(el('a', { href: '36_directional_registry.html#' + dirId }, '→ registry row (page 36)'));
+    drill.appendChild(el('a', { href: '42_pericope_dossiers.html#' + dirId }, '→ pericope obligations (page 42)'));
+    panel.appendChild(drill);
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function buildAgg() {
+    const host = document.getElementById('aggStrip');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    function add(k, v, n) {
+      const c = el('div', { class: 'cell' });
+      c.appendChild(el('div', { class: 'k' }, k));
+      c.appendChild(el('div', { class: 'v' }, String(v)));
+      if (n) c.appendChild(el('div', { class: 'n' }, n));
+      host.appendChild(c);
+    }
+    const offDiag = matrix.filter(function (c) { return c.status !== 'not_applicable'; });
+    const supported = offDiag.filter(function (c) { return classifyStatus(c) === 'supported' || classifyStatus(c) === 'medium-high'; });
+    const shared = offDiag.filter(function (c) { return classifyStatus(c) === 'shared-tradition-lower'; });
+    const higher = offDiag.filter(function (c) { return classifyStatus(c) === 'higher-burden'; });
+    const low = offDiag.filter(function (c) { return classifyStatus(c) === 'low-support'; });
+    add('Pairwise directions', offDiag.length, '12 off-diagonal cells');
+    add('Supported', supported.length, 'matthew↔mark, luke↔mark (adjusted)');
+    add('John: shared lower', shared.length, 'anchor-tradition preferred');
+    add('Higher burden vs reverse', higher.length);
+    add('Completeness / low', low.length, 'Synoptics used John');
+  }
+
+  buildHeader();
+  buildBody();
+  buildAgg();
+
+  window.addEventListener('hashchange', function () {
+    const h = (window.location.hash || '').replace('#', '');
+    if (h) renderDetail(h);
+  });
+  if (window.location.hash) {
+    const h = window.location.hash.replace('#', '');
+    setTimeout(function () { renderDetail(h); }, 20);
+  }
+})();
+</script>
+</body>
+</html>

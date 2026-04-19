@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Minor agreements · double-tradition order · model discriminators</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .tabbar { display: flex; gap: 2px; margin: 8px 0 14px; border-bottom: 1px solid var(--rule); }
+  .tabbar .tab { padding: 10px 16px; font-size: 12.5px; background: transparent; border: 1px solid transparent; border-bottom: none; cursor: pointer; color: var(--ink-soft); border-radius: 3px 3px 0 0; user-select: none; font-family: var(--sans); }
+  .tabbar .tab:hover { background: #fafaf7; color: var(--ink); }
+  .tabbar .tab.active { background: #fff; border-color: var(--rule); color: var(--ink); font-weight: 600; margin-bottom: -1px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .summary-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 8px 0 14px; }
+  .summary-strip .cell { padding: 10px 12px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .summary-strip .cell .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .summary-strip .cell .v { font-family: var(--serif); font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .summary-strip .cell .n { font-size: 11px; color: var(--ink-mute); margin-top: 2px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 14px; padding: 10px 12px; background: #fafaf7; border: 1px solid var(--rule); border-radius: 3px; font-size: 12px; }
+  .filters label { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-soft); }
+  .filters select, .filters input[type=text] { font-family: var(--mono); font-size: 11px; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 2px; background: #fff; color: var(--ink); }
+  .filters .hint { font-size: 11px; color: var(--ink-mute); }
+
+  .ma-row, .dt-row { border: 1px solid var(--rule); background: #fff; border-radius: 3px; margin-bottom: 8px; padding: 12px 14px; display: grid; grid-template-columns: 160px 1fr 1fr 1fr; gap: 12px; font-size: 12px; }
+  .ma-row.strength-high { border-left: 4px solid #6b1f0a; }
+  .ma-row.strength-med { border-left: 4px solid var(--accent); }
+  .ma-row.strength-low { border-left: 4px solid var(--rule); }
+  @media (max-width: 900px) { .ma-row, .dt-row { grid-template-columns: 1fr; } }
+
+  .ma-row .id-col { display: flex; flex-direction: column; gap: 3px; }
+  .ma-row .id-col .mid { font-family: var(--mono); font-size: 11px; color: var(--ink); font-weight: 600; }
+  .ma-row .id-col .strength { font-variant-numeric: tabular-nums; font-family: var(--serif); font-size: 18px; color: var(--accent); font-weight: 600; }
+  .ma-row .id-col .stype { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-mute); }
+  .ma-row .id-col .run { font-size: 10px; color: var(--ink-mute); margin-top: 3px; font-family: var(--mono); }
+  .ma-row .id-col .run b { color: var(--ink); }
+
+  .gospel-cell { display: flex; flex-direction: column; gap: 3px; padding: 6px 8px; border-radius: 2px; }
+  .gospel-cell.mark { background: #fdf4f4; border-left: 3px solid var(--mark); }
+  .gospel-cell.matt { background: #f1f5fa; border-left: 3px solid var(--matt); }
+  .gospel-cell.luke { background: #fbf5eb; border-left: 3px solid var(--accent); }
+  .gospel-cell .ref { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); }
+  .gospel-cell .gk { font-family: var(--greek); font-size: 13px; color: var(--ink); line-height: 1.55; max-height: 6em; overflow: auto; }
+
+  .ma-row .imp { grid-column: 1 / -1; font-size: 11px; color: var(--ink-soft); line-height: 1.5; padding-top: 8px; border-top: 1px solid var(--rule-soft); margin-top: 4px; }
+  .ma-row .imp b { color: var(--ink); }
+  .ma-row .imp .risk { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 2px; background: #fff; border: 1px solid var(--rule); color: var(--ink-soft); margin-left: 6px; font-family: var(--mono); }
+
+  .dt-row { grid-template-columns: 180px 1fr 1fr; }
+  @media (max-width: 800px) { .dt-row { grid-template-columns: 1fr; } }
+  .dt-row .dtmid { display: flex; flex-direction: column; gap: 3px; }
+  .dt-row .dtmid .did { font-family: var(--mono); font-size: 11px; color: var(--ink); font-weight: 600; }
+  .dt-row .dtmid .layer { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 7px; border-radius: 2px; display: inline-block; width: fit-content; }
+  .dt-row .dtmid .layer.primary_monotonic_after_markan_mask { background: #e6efe0; color: #2f4a2e; }
+  .dt-row .dtmid .layer.secondary_echo_after_markan_mask { background: #fbeeda; color: var(--warn); }
+  .dt-row .dtmid .score { font-family: var(--mono); font-size: 10px; color: var(--ink-soft); margin-top: 2px; }
+  .dt-row .dtmid .score b { color: var(--accent); font-family: var(--serif); font-size: 14px; }
+  .dt-row .dtmid .tags { font-size: 10px; color: var(--ink-mute); line-height: 1.4; margin-top: 4px; }
+  .dt-row .dt-impl { grid-column: 1 / -1; font-size: 11px; color: var(--ink-soft); line-height: 1.5; padding-top: 8px; border-top: 1px solid var(--rule-soft); margin-top: 2px; }
+  .dt-row .dt-impl b { color: var(--ink); }
+  .dt-row .dt-impl .ord { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 2px; margin-right: 6px; font-family: var(--mono); background: #fafaf7; border: 1px solid var(--rule); color: var(--ink-soft); }
+  .dt-row .dt-impl .ord.nonlocal { background: #fbeeda; color: var(--warn); }
+
+  .pager { display: flex; gap: 8px; align-items: center; margin: 14px 0; font-size: 12px; color: var(--ink-soft); }
+  .pager button { font-size: 11px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 3px; background: #fff; cursor: pointer; color: var(--ink); font-family: var(--mono); }
+  .pager button:hover:not(:disabled) { background: #fbf7ea; border-color: var(--accent); }
+  .pager button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .discriminator { background: #fff; border: 1px solid var(--rule); border-radius: 3px; padding: 14px 16px; margin: 14px 0; }
+  .discriminator h3 { margin: 0 0 10px; font-family: var(--serif); font-size: 16px; color: var(--ink); }
+  .discriminator .disc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .discriminator .disc-card { padding: 10px 12px; background: #fafaf7; border: 1px solid var(--rule-soft); border-radius: 3px; font-size: 12px; }
+  .discriminator .disc-card .mn { font-family: var(--serif); font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+  .discriminator .disc-card .mi { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); margin-bottom: 6px; }
+  .discriminator .disc-card .ma-take, .disc-card .dt-take { margin-bottom: 4px; font-size: 11px; line-height: 1.45; color: var(--ink-soft); }
+  .discriminator .disc-card .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); font-weight: 600; margin-right: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>Minor agreements &amp; double-tradition order</h1>
+    <span class="sub">118 MA rows · 109 DT rows · the two atlas catalogs that discriminate Q, Farrer, and Griesbach</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>These two catalogs are the main data-driven discriminators between Q, Farrer, and Griesbach / Two-Gospel models at the system level. The <em>minor agreements</em> table lists 118 triple-tradition verses where Matthew and Luke agree together against Mark; high-strength cases (large shared content runs, lexical additions, or shared omissions) put pressure on strict <em>independent</em> use-of-Mark models. The <em>double-tradition</em> order catalog aligns 49 primary Matthew–Luke parallels (after Markan masking) plus 60 displaced "secondary echoes" — together these form the Q / double-tradition layer that direct-use models have to explain without a sayings source.</p>
+    <div class="note">
+      <b>How to read:</b> these are <em>screening</em> catalogs, not hand-curated critical lists. The minor-agreement <em>strength</em> is a combined metric (shared run + added/omitted tokens). The <em>nonlocal_flag</em> on a double-tradition row means Matthew and Luke place the same parallel at very different positions — that is the central displacement signal. Click a row to expand its Greek text. Filter, sort, or search to generate a short list for inspection.<br>
+      Sources: <code>data/30_minor_agreements_catalog_triple_tradition.csv</code>, <code>data/31_minor_agreements_summary.yaml</code>, <code>data/40_double_tradition_order_catalog_markan_masked.csv</code>, <code>data/41_double_tradition_order_summary.yaml</code>.
+    </div>
+  </div>
+
+  <div class="summary-strip" id="summaryStrip"></div>
+
+  <div class="tabbar">
+    <button class="tab active" data-tab="ma">Minor agreements · triple tradition</button>
+    <button class="tab" data-tab="dt">Double tradition · order catalog</button>
+    <button class="tab" data-tab="disc">Model-discriminator reading</button>
+  </div>
+
+  <!-- Minor agreements -->
+  <div class="tab-panel active" id="tab-ma">
+    <div class="filters">
+      <label>Strength ≥ <select id="maMinStrength"><option value="0">0</option><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20">20</option></select></label>
+      <label>Type <select id="maTypeFilter">
+        <option value="">all</option>
+        <option value="lexical_addition_against_mark">lexical_addition_against_mark</option>
+        <option value="shared_omission_against_mark">shared_omission_against_mark</option>
+        <option value="lexical_variant_against_mark">lexical_variant_against_mark</option>
+      </select></label>
+      <label>Search ref <input type="text" id="maSearch" placeholder="Mark 15:43, Matt 27, Luke 23..." style="min-width: 220px;" /></label>
+      <span class="hint" id="maCount"></span>
+    </div>
+    <div id="maList"></div>
+    <div class="pager" id="maPager"></div>
+  </div>
+
+  <!-- Double tradition -->
+  <div class="tab-panel" id="tab-dt">
+    <div class="filters">
+      <label>Layer <select id="dtLayer">
+        <option value="">all (109)</option>
+        <option value="primary_monotonic_after_markan_mask">primary (49)</option>
+        <option value="secondary_echo_after_markan_mask">secondary (60)</option>
+      </select></label>
+      <label>Order signal <select id="dtOrder">
+        <option value="">all</option>
+        <option value="order_preserved_in_primary_chain">order preserved</option>
+        <option value="secondary_echo">displaced (secondary echo)</option>
+      </select></label>
+      <label>Score ≥ <select id="dtMinScore">
+        <option value="0">0</option>
+        <option value="0.3">0.3</option>
+        <option value="0.5">0.5</option>
+        <option value="0.7">0.7</option>
+      </select></label>
+      <label>Nonlocal only <input type="checkbox" id="dtNonlocalOnly" /></label>
+      <label>Search <input type="text" id="dtSearch" placeholder="Matt 5:3, Luke 6:20..." style="min-width: 200px;" /></label>
+      <span class="hint" id="dtCount"></span>
+    </div>
+    <div id="dtList"></div>
+    <div class="pager" id="dtPager"></div>
+  </div>
+
+  <!-- Discriminator reading -->
+  <div class="tab-panel" id="tab-disc">
+    <div class="discriminator" id="discCards"></div>
+  </div>
+
+  <div class="footer">
+    Companion pages: <a href="39_system_model_scorecard.html">39 · System-model scorecard</a> ·
+    <a href="40_direction_matrix.html">40 · Gospel 4×4 matrix</a> ·
+    <a href="37_direction_dossier.html">37 · Per-direction dossier</a> ·
+    <a href="38_system_hypotheses.html">38 · System hypothesis space</a> ·
+    <a href="11_echo_gallery.html">11 · Echo gallery</a> ·
+    <a href="15_q_core.html">15 · Q core reader</a> ·
+    <a href="10_displacement.html">10 · Displacement</a>.
+    Data package: <code>synoptic_problem_model_atlas_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('41_minor_agreements.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const AT = B.atlas || {};
+  const MA = AT.minor_agreements_catalog || [];
+  const MAsum = AT.minor_agreements_summary || {};
+  const DT = AT.double_tradition_order_catalog || [];
+  const DTsum = AT.double_tradition_order_summary || {};
+  const SCORE = AT.system_model_comparison_scorecard || [];
+  const SCBY = {};
+  for (const r of SCORE) SCBY[r.model_id] = r;
+
+  function strengthClass(s) {
+    if (typeof s !== 'number') return '';
+    if (s >= 15) return 'strength-high';
+    if (s >= 8) return 'strength-med';
+    return 'strength-low';
+  }
+
+  // --- Summary strip ---
+  function buildSummary() {
+    const host = document.getElementById('summaryStrip');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    function cell(k, v, n) {
+      const c = el('div', { class: 'cell' });
+      c.appendChild(el('div', { class: 'k' }, k));
+      c.appendChild(el('div', { class: 'v' }, String(v)));
+      if (n) c.appendChild(el('div', { class: 'n' }, n));
+      host.appendChild(c);
+    }
+    cell('Minor-agreement rows', MA.length, MAsum.high_strength_ge_10 ? (MAsum.high_strength_ge_10 + ' at strength ≥ 10') : '');
+    cell('Primary DT rows', (DT.filter(function (d) { return d.alignment_layer === 'primary_monotonic_after_markan_mask'; })).length, 'after Markan masking');
+    cell('Secondary echoes', (DT.filter(function (d) { return d.alignment_layer === 'secondary_echo_after_markan_mask'; })).length, 'displaced double tradition');
+    cell('Nonlocal DT rows', DT.filter(function (d) { return String(d.nonlocal_flag).toLowerCase() === 'true'; }).length, 'large Matt↔Luke index gap');
+    cell('MA strongest runs ≥ 8', MA.filter(function (m) { return (m.matt_luke_longest_exact_content_run_len || 0) >= 8; }).length, 'Matt↔Luke exact Greek');
+  }
+
+  // --- Minor agreement list ---
+  let maPage = 1;
+  const maPageSize = 25;
+  function filterMA() {
+    const min = Number(document.getElementById('maMinStrength').value || 0);
+    const type = document.getElementById('maTypeFilter').value;
+    const q = (document.getElementById('maSearch').value || '').trim().toLowerCase();
+    const rows = MA.filter(function (m) {
+      if ((m.minor_agreement_strength || 0) < min) return false;
+      if (type && m.agreement_type !== type) return false;
+      if (q) {
+        const hay = (m.mark_ref + ' ' + m.matt_ref + ' ' + m.luke_ref + ' ' + m.minor_agreement_id).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+    rows.sort(function (a, b) { return (b.minor_agreement_strength || 0) - (a.minor_agreement_strength || 0); });
+    return rows;
+  }
+  function renderMA() {
+    const rows = filterMA();
+    const host = document.getElementById('maList');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const total = rows.length;
+    const maxPage = Math.max(1, Math.ceil(total / maPageSize));
+    if (maPage > maxPage) maPage = maxPage;
+    const slice = rows.slice((maPage - 1) * maPageSize, maPage * maPageSize);
+    for (const m of slice) host.appendChild(buildMaRow(m));
+    document.getElementById('maCount').textContent = total + ' rows · page ' + maPage + ' of ' + maxPage;
+    buildPager('maPager', maPage, maxPage, function (p) { maPage = p; renderMA(); });
+  }
+  function buildMaRow(m) {
+    const row = el('div', { class: 'ma-row ' + strengthClass(m.minor_agreement_strength) });
+    const idCol = el('div', { class: 'id-col' });
+    idCol.appendChild(el('div', { class: 'mid' }, m.minor_agreement_id));
+    idCol.appendChild(el('div', { class: 'strength' }, String(m.minor_agreement_strength || 0)));
+    idCol.appendChild(el('div', { class: 'stype' }, 'strength'));
+    idCol.appendChild(el('div', { class: 'stype' }, (m.agreement_type || '').replace(/_/g, ' ')));
+    if (m.matt_luke_longest_exact_content_run_len) {
+      const r = el('div', { class: 'run' });
+      r.appendChild(document.createTextNode('longest run '));
+      r.appendChild(el('b', null, String(m.matt_luke_longest_exact_content_run_len)));
+      idCol.appendChild(r);
+      if (m.matt_luke_longest_exact_content_run) {
+        idCol.appendChild(el('div', { style: 'font-family:var(--greek);font-size:11px;color:var(--ink-soft);margin-top:2px;' }, m.matt_luke_longest_exact_content_run));
+      }
+    }
+    row.appendChild(idCol);
+
+    const mark = el('div', { class: 'gospel-cell mark' });
+    mark.appendChild(el('div', { class: 'ref' }, m.mark_ref || '—'));
+    mark.appendChild(el('div', { class: 'gk' }, m.mark_text || '—'));
+    row.appendChild(mark);
+
+    const matt = el('div', { class: 'gospel-cell matt' });
+    matt.appendChild(el('div', { class: 'ref' }, m.matt_ref || '—'));
+    matt.appendChild(el('div', { class: 'gk' }, m.matt_text || '—'));
+    row.appendChild(matt);
+
+    const luke = el('div', { class: 'gospel-cell luke' });
+    luke.appendChild(el('div', { class: 'ref' }, m.luke_ref || '—'));
+    luke.appendChild(el('div', { class: 'gk' }, m.luke_text || '—'));
+    row.appendChild(luke);
+
+    const imp = el('div', { class: 'imp' });
+    imp.appendChild(el('b', null, 'Implication: '));
+    imp.appendChild(document.createTextNode(m.possible_implications || '—'));
+    if (m.formula_or_commonality_risk) {
+      imp.appendChild(el('span', { class: 'risk', title: 'risk that this run is formulaic or coincidental' }, m.formula_or_commonality_risk));
+    }
+    row.appendChild(imp);
+    return row;
+  }
+
+  // --- Double-tradition list ---
+  let dtPage = 1;
+  const dtPageSize = 25;
+  function filterDT() {
+    const layer = document.getElementById('dtLayer').value;
+    const order = document.getElementById('dtOrder').value;
+    const min = Number(document.getElementById('dtMinScore').value || 0);
+    const nl = document.getElementById('dtNonlocalOnly').checked;
+    const q = (document.getElementById('dtSearch').value || '').trim().toLowerCase();
+    const rows = DT.filter(function (d) {
+      if (layer && d.alignment_layer !== layer) return false;
+      if (order && d.order_signal !== order) return false;
+      if ((d.score || 0) < min) return false;
+      if (nl && String(d.nonlocal_flag).toLowerCase() !== 'true') return false;
+      if (q) {
+        const hay = (d.matt_ref + ' ' + d.luke_ref + ' ' + d.double_tradition_id + ' ' + (d.tags || '')).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+    rows.sort(function (a, b) { return (b.score || 0) - (a.score || 0); });
+    return rows;
+  }
+  function renderDT() {
+    const rows = filterDT();
+    const host = document.getElementById('dtList');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const total = rows.length;
+    const maxPage = Math.max(1, Math.ceil(total / dtPageSize));
+    if (dtPage > maxPage) dtPage = maxPage;
+    const slice = rows.slice((dtPage - 1) * dtPageSize, dtPage * dtPageSize);
+    for (const d of slice) host.appendChild(buildDtRow(d));
+    document.getElementById('dtCount').textContent = total + ' rows · page ' + dtPage + ' of ' + maxPage;
+    buildPager('dtPager', dtPage, maxPage, function (p) { dtPage = p; renderDT(); });
+  }
+  function buildDtRow(d) {
+    const row = el('div', { class: 'dt-row' });
+    const mid = el('div', { class: 'dtmid' });
+    mid.appendChild(el('div', { class: 'did' }, d.double_tradition_id));
+    mid.appendChild(el('span', { class: 'layer ' + d.alignment_layer }, d.alignment_layer.replace(/_after_markan_mask/, '').replace(/_/g, ' ')));
+    const sc = el('div', { class: 'score' });
+    sc.appendChild(document.createTextNode('score '));
+    sc.appendChild(el('b', null, typeof d.score === 'number' ? d.score.toFixed(3) : '—'));
+    sc.appendChild(document.createTextNode('   lcs ' + (typeof d.lcs === 'number' ? d.lcs.toFixed(3) : '—')));
+    sc.appendChild(document.createTextNode('   λ ' + (d.shared_lemma_count || 0)));
+    mid.appendChild(sc);
+    if (d.tags) mid.appendChild(el('div', { class: 'tags' }, d.tags.replace(/;/g, ' · ')));
+    row.appendChild(mid);
+
+    const matt = el('div', { class: 'gospel-cell matt' });
+    matt.appendChild(el('div', { class: 'ref' }, d.matt_ref + ' · index ' + d.matt_index));
+    matt.appendChild(el('div', { class: 'gk' }, d.matt_text || '—'));
+    row.appendChild(matt);
+
+    const luke = el('div', { class: 'gospel-cell luke' });
+    luke.appendChild(el('div', { class: 'ref' }, d.luke_ref + ' · index ' + d.luke_index));
+    luke.appendChild(el('div', { class: 'gk' }, d.luke_text || '—'));
+    row.appendChild(luke);
+
+    const imp = el('div', { class: 'dt-impl' });
+    const ord = el('span', { class: 'ord' + (String(d.nonlocal_flag).toLowerCase() === 'true' ? ' nonlocal' : '') }, d.order_signal.replace(/_/g, ' '));
+    imp.appendChild(ord);
+    if (typeof d.rank_distance_abs === 'number') {
+      imp.appendChild(el('span', { class: 'ord' }, 'rank Δ ' + d.rank_distance_abs));
+    }
+    imp.appendChild(document.createElement('br'));
+    imp.appendChild(el('b', null, 'Model implication: '));
+    imp.appendChild(document.createTextNode(d.model_implication || '—'));
+    if (d.main_counter_to_direct_use) {
+      imp.appendChild(document.createElement('br'));
+      imp.appendChild(el('b', null, 'Counter to direct use: '));
+      imp.appendChild(document.createTextNode(d.main_counter_to_direct_use));
+    }
+    row.appendChild(imp);
+    return row;
+  }
+
+  function buildPager(hostId, page, maxPage, onGo) {
+    const host = document.getElementById(hostId);
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const prev = el('button', null, '← prev');
+    if (page <= 1) prev.disabled = true;
+    prev.addEventListener('click', function () { onGo(page - 1); });
+    host.appendChild(prev);
+    host.appendChild(el('span', null, 'page ' + page + ' of ' + maxPage));
+    const next = el('button', null, 'next →');
+    if (page >= maxPage) next.disabled = true;
+    next.addEventListener('click', function () { onGo(page + 1); });
+    host.appendChild(next);
+  }
+
+  // --- Discriminator cards ---
+  function buildDiscriminator() {
+    const host = document.getElementById('discCards');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    host.appendChild(el('h3', null, 'What these catalogs imply for each system model'));
+    const grid = el('div', { class: 'disc-grid' });
+    const interested = [
+      'two_source_mark_q',
+      'farrer_mark_matthew_luke',
+      'griesbach_two_gospel',
+      'markan_priority_matthew_and_luke',
+      'matthew_used_luke_plus_mark_like',
+      'augustinian_matthew_mark_luke',
+      'proto_mark_plus_sayings',
+      'oral_tradition_network',
+    ];
+    for (const mid of interested) {
+      const sc = SCBY[mid];
+      if (!sc) continue;
+      const c = el('div', { class: 'disc-card' });
+      c.appendChild(el('div', { class: 'mn' }, sc.short_label || mid));
+      c.appendChild(el('div', { class: 'mi' }, mid));
+      const maTake = el('div', { class: 'ma-take' });
+      maTake.appendChild(el('span', { class: 'lbl' }, 'MA fit:'));
+      maTake.appendChild(document.createTextNode((sc.minor_agreements_fit || '—').replace(/_/g, ' ')));
+      c.appendChild(maTake);
+      const dtTake = el('div', { class: 'dt-take' });
+      dtTake.appendChild(el('span', { class: 'lbl' }, 'DT fit:'));
+      dtTake.appendChild(document.createTextNode((sc.matt_luke_double_tradition_fit || '—').replace(/_/g, ' ')));
+      c.appendChild(dtTake);
+      const a = el('div', { style: 'margin-top:6px;font-size:11px;' });
+      const link = el('a', { href: '39_system_model_scorecard.html#' + mid, style: 'font-family:var(--mono);font-size:10.5px;' }, '→ scorecard card');
+      a.appendChild(link);
+      c.appendChild(a);
+      grid.appendChild(c);
+    }
+    host.appendChild(grid);
+
+    const readout = el('div', { style: 'margin-top:14px;padding:10px 12px;background:#fafaf7;border-left:3px solid var(--focus);font-size:12px;line-height:1.55;color:var(--ink-soft);' });
+    readout.appendChild(el('b', { style: 'color:var(--ink);' }, 'Reader\u2019s takeaway: '));
+    readout.appendChild(document.createTextNode('high-strength minor agreements with long exact Matt–Luke runs add a burden to strict Q-independence (Two-source) models and are a main positive for Farrer/Griesbach. Displaced double-tradition rows (nonlocal secondary echoes) add a burden to any direct-use story that denies a sayings-source or deliberate redistribution program. The summary cards above show how each family sits with these two signals.'));
+    host.appendChild(readout);
+  }
+
+  // --- Tab switching ---
+  function switchTab(name) {
+    for (const t of document.querySelectorAll('.tabbar .tab')) {
+      t.classList.toggle('active', t.dataset.tab === name);
+    }
+    for (const p of document.querySelectorAll('.tab-panel')) {
+      p.classList.toggle('active', p.id === ('tab-' + name));
+    }
+  }
+  document.querySelectorAll('.tabbar .tab').forEach(function (t) {
+    t.addEventListener('click', function () { switchTab(t.dataset.tab); });
+  });
+
+  // Wire up filters
+  ['maMinStrength', 'maTypeFilter', 'maSearch'].forEach(function (id) {
+    const elx = document.getElementById(id);
+    const ev = (elx.tagName === 'INPUT') ? 'input' : 'change';
+    elx.addEventListener(ev, function () { maPage = 1; renderMA(); });
+  });
+  ['dtLayer', 'dtOrder', 'dtMinScore', 'dtNonlocalOnly', 'dtSearch'].forEach(function (id) {
+    const elx = document.getElementById(id);
+    const ev = (elx.tagName === 'INPUT' && elx.type !== 'checkbox') ? 'input' : 'change';
+    elx.addEventListener(ev, function () { dtPage = 1; renderDT(); });
+  });
+
+  buildSummary();
+  renderMA();
+  renderDT();
+  buildDiscriminator();
+
+  // Hash to tab
+  const h = (window.location.hash || '').replace('#', '');
+  if (h === 'dt' || h === 'double-tradition') switchTab('dt');
+  else if (h === 'disc' || h === 'discriminator') switchTab('disc');
+})();
+</script>
+</body>
+</html>

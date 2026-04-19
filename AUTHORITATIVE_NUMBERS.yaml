@@ -25,6 +25,18 @@
 #     shared-tradition vs. independent-convergence burdens). It does not
 #     replace the 18b/18c retrieval or penalty layers; it overlays a
 #     direction-by-direction "must-explain" layer on top of them.
+#   - The Synoptic Problem model atlas (synoptic_problem_model_atlas_20260418/)
+#     is authoritative for *system-level* model registration and comparison: the
+#     13 named system-level models (Markan priority, two-source / Q-like, Farrer,
+#     Griesbach, Augustinian, proto-Mark, oral-tradition network, and six more),
+#     the component-direction-to-model matrix, the 16-cell gospel direction 4x4
+#     matrix, the 102-unit pericope ontology, the 1,945-row per-model pericope
+#     obligation ledger, the 118-row minor agreements catalog, the 109-row
+#     double-tradition order catalog, the 2,682-row variant-sensitivity registry,
+#     and the 25 balanced conclusion evidence/counter-evidence cards. It does not
+#     replace the directional-dossiers package; it lifts its 12 directions into
+#     named system-level models and evaluates each model against a single shared
+#     obligation/MA/DT/variant dataset.
 #   - Prior packages remain authoritative only where no rerun or supplement
 #     has been produced (currently: apocrypha inventory).
 #
@@ -306,6 +318,105 @@ pairs:
         package also encodes the reverse (mark_used_luke = 303.1966) and five
         other directions not covered by the 18c patch.
 
+  model_atlas:
+    description: >
+      Synoptic Problem model atlas — 13 named system-level models with a shared
+      pericope ontology, per-model obligation ledger, minor-agreements catalog,
+      double-tradition order catalog, variant-sensitivity registry, and balanced
+      conclusion evidence/counter-evidence cards. Lifts the 12 pairwise
+      directional hypotheses of the dossiers package into named system models
+      and scores each model against a single shared dataset.
+    headline_source: synoptic_problem_model_atlas_20260418/
+    prior_source: null
+    models_registered: 13
+    direction_hypotheses_registered: 15
+    gospel_direction_matrix_cells: 16
+    pericope_ontology_units: 102
+    model_pericope_obligation_rows: 1945
+    minor_agreements_rows: 118
+    double_tradition_order_rows: 109
+    variant_sensitivity_rows: 2682
+    conclusion_evidence_cards: 25
+    headline_claims:
+      # System-model burden sums from
+      # synoptic_problem_model_atlas_20260418/data/52_system_model_comparison_scorecard.csv
+      # (sum of selected-direction burden scores available for the model;
+      # lower = lower cumulative explanatory obligation; NOT a probability).
+      model_burden_sums_available:
+        markan_priority_matthew_and_luke: 1029.5166
+        two_source_mark_q:                1038.3766
+        farrer_mark_matthew_luke:         1055.9626
+        matthew_used_luke_plus_mark_like:  801.316
+        griesbach_two_gospel:             1118.3026
+        augustinian_matthew_mark_luke:    1043.3066
+        proto_mark_plus_sayings:             8.86  # plus unscored lost-source cost
+        oral_tradition_network:            463.5734
+        john_uses_mark:                     59.741
+        john_uses_matthew:                  55.862
+        john_uses_luke:                     58.598
+        synoptics_use_john_or_johnlike:    185.901
+        shared_john_synoptic_anchor_tradition: 69.1
+      lowest_burden_model_synoptic: markan_priority_matthew_and_luke  # 1029.52 across demonstrable component directions
+      lowest_burden_model_john: shared_john_synoptic_anchor_tradition  # 69.1 across demonstrable John anchor directions
+      caveat_lost_source_models:
+        proto_mark_plus_sayings: >
+          Demonstrable-from-data burden is 8.86 (the shared Matt-Luke sayings tradition). The
+          proto-Mark component is unscored at model-level because it posits a lost narrative
+          source; the score is NOT directly comparable to the direct-literary model sums,
+          which pay the full Mark-Matthew and Mark-Luke direct-use burden.
+        two_source_mark_q: >
+          Adds one document-level source (Q) whose *document* form is not demonstrable from
+          the masked double-tradition data alone. The 8.86 component for shared_matt_luke
+          _sayings_tradition is common to Farrer and proto-Mark+sayings; the distinguishing
+          feature of the two-source model is the claim that this tradition was a written Q
+          document, which the atlas marks as requires_external_assumption.
+      family_groupings:
+        direct_literary:
+          - markan_priority_matthew_and_luke
+          - farrer_mark_matthew_luke
+          - matthew_used_luke_plus_mark_like
+          - griesbach_two_gospel
+          - augustinian_matthew_mark_luke
+        source_critical:
+          - two_source_mark_q
+        lost_source_network:
+          - proto_mark_plus_sayings
+        non_direct_shared_tradition:
+          - oral_tradition_network
+        john_synoptic_direct:
+          - john_uses_mark
+          - john_uses_matthew
+          - john_uses_luke
+        john_reverse_or_prejohannine:
+          - synoptics_use_john_or_johnlike
+          - shared_john_synoptic_anchor_tradition
+      minor_agreements_catalog_scope: every Matt/Luke agreement against Mark at pericope-level strata; 118 rows; used by page 41 and by the per-model discriminator reading on page 39/41.
+      double_tradition_order_catalog_scope: ordered Matt/Luke double-tradition pericopes with alignment_layer (primary vs. secondary), longest_common_subsequence, rank_distance, order_signal, and model_implication.
+      conclusion_cards_source: synoptic_problem_model_atlas_20260418/data/70_conclusion_evidence_counterevidence_cards.yaml
+    cross_reference_to_directional_dossiers:
+      direction_hypothesis_registry_superset_of: synoptic_john_directional_dossiers_20260418/data/01_direction_hypotheses_registry.yaml (12 directions)
+      atlas_additions:
+        - shared_mark_luke_tradition
+        - shared_matt_luke_sayings_tradition
+        - proto_mark_common_source
+      note: >
+        The atlas 15-hypothesis registry is a strict superset of the 12 directional
+        hypotheses in the dossiers package. The three additions are shared-tradition
+        or lost-source hypotheses that the dossiers package treated implicitly in its
+        5-model system layer; the atlas makes them first-class hypotheses so every
+        system model can be composed from them.
+    interpretive_caveat: >
+      Every burden score in this atlas is an audit prompt, not a posterior
+      probability. Model A's burden sum being lower than Model B's burden sum does
+      NOT mean Model A has higher posterior probability than Model B; it means Model
+      A commits a defender to fewer or cheaper pericope-level obligations under the
+      atlas's selected direction set. A defender of a higher-burden model may argue
+      that one or more of its obligations are acceptable under a specific extension
+      — the atlas's job is to make those obligations explicit. The scorecard groups
+      comparisons by model family (page 39) so burden sums are only compared inside
+      comparable families; the pair-filter burden table on page 36 enforces the same
+      discipline for pairwise directions.
+
   morphology_audit:
     description: MorphGNT lemma audit of the Mark-Luke primary chain (18c).
     headline_source: analysis_update_20260418c/data/84_morphology_rerun_summary.yaml
@@ -365,3 +476,19 @@ bundle_sources:
   directional_system_models:     bundle.dir_dossiers.system_hypothesis_space
   directional_pair_change_summary: bundle.dir_dossiers.pair_change_summary
   directional_support_contra:    bundle.dir_dossiers.support_contra_matrix
+  # 2026-04-18 Synoptic Problem model atlas — 13 system-level models against shared evidence:
+  atlas_system_model_registry:           bundle.atlas.system_model_registry
+  atlas_model_component_direction_matrix: bundle.atlas.model_component_direction_matrix
+  atlas_system_model_comparison_scorecard: bundle.atlas.system_model_comparison_scorecard
+  atlas_system_model_evidence_cards:     bundle.atlas.system_model_evidence_cards
+  atlas_direction_hypothesis_registry:   bundle.atlas.direction_hypothesis_registry
+  atlas_gospel_direction_matrix_4x4:     bundle.atlas.gospel_direction_matrix_4x4
+  atlas_pericope_ontology:               bundle.atlas.pericope_ontology
+  atlas_pericope_obligation_summary:     bundle.atlas.pericope_obligation_summary
+  atlas_model_pericope_obligation_ledger: bundle.atlas.model_pericope_obligation_ledger
+  atlas_minor_agreements_catalog:        bundle.atlas.minor_agreements_catalog
+  atlas_minor_agreements_patterns:       bundle.atlas.minor_agreements_patterns
+  atlas_double_tradition_order_catalog:  bundle.atlas.double_tradition_order_catalog
+  atlas_double_tradition_order_patterns: bundle.atlas.double_tradition_order_patterns
+  atlas_variant_sensitivity_registry:    bundle.atlas.variant_sensitivity_registry
+  atlas_conclusion_evidence_counterevidence_cards: bundle.atlas.conclusion_evidence_counterevidence_cards

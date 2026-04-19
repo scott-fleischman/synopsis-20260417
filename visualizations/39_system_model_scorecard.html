@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>System-model scorecard · 13 models × 5 explanatory areas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .page-intro { max-width: 1080px; font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+  .page-intro em { color: var(--ink); font-style: italic; }
+  .page-intro .note { border-left: 3px solid var(--focus); padding: 8px 14px; background: #fff8e8; font-size: 12px; line-height: 1.55; margin: 12px 0; color: var(--ink-soft); }
+  .page-intro .note b { color: var(--ink); }
+
+  .family-wrap { margin: 24px 0 8px; display: flex; align-items: baseline; gap: 14px; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+  .family-wrap h2 { margin: 0; font-family: var(--serif); font-size: 18px; color: var(--ink); }
+  .family-wrap .fam-id { font-family: var(--mono); font-size: 10px; color: var(--ink-mute); text-transform: lowercase; letter-spacing: 0.04em; }
+  .family-wrap .fam-count { font-size: 11px; color: var(--ink-mute); margin-left: auto; }
+
+  .card-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+  .card { background: #fff; border: 1px solid var(--rule); border-radius: 3px; border-left-width: 6px; padding: 16px 18px; display: grid; grid-template-columns: 1fr 260px; gap: 16px; }
+  .card.fam-direct-literary { border-left-color: var(--mark); }
+  .card.fam-source-critical { border-left-color: var(--accent); }
+  .card.fam-lost-source-network { border-left-color: #8a5340; }
+  .card.fam-non-direct-shared-tradition { border-left-color: var(--focus); }
+  .card.fam-john-synoptic-direct { border-left-color: #6b1f0a; }
+  .card.fam-john-reverse-or-prejohannine { border-left-color: #a8551a; }
+  .card.fam-other { border-left-color: var(--ink-mute); }
+  .card.best-in-family { box-shadow: 0 0 0 1px var(--accent) inset; background: #fffcf1; }
+
+  .card-head { display: flex; flex-direction: column; gap: 6px; }
+  .card-head h3 { margin: 0; font-family: var(--serif); font-size: 19px; color: var(--ink); line-height: 1.3; }
+  .card-head .mid { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); }
+  .card-head .claim { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; margin-top: 2px; max-width: 640px; }
+  .card-head .ratings { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; font-size: 11.5px; line-height: 1.45; }
+  .card-head .ratings .rk { color: var(--ink-mute); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; margin-right: 6px; }
+
+  .rating-badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 12px; font-family: var(--mono); color: #fff; background: var(--ink-soft); margin-top: 4px; }
+  .rating-badge.r-strong, .rating-badge.r-best_current_john_global_model { background: #4d6f4b; }
+  .rating-badge.r-strong_with_mark_luke_caution, .rating-badge.r-strong_but_Q_document_and_minor_agreement_burdens { background: #5a7a48; }
+  .rating-badge.r-viable_major_alternative, .rating-badge.r-plausible_lost_source_hybrid { background: var(--accent); }
+  .rating-badge.r-good_for_sayings_john_weak_for_ordered_synoptic_narrative { background: #8a7020; }
+  .rating-badge.r-possible_but_high_burden, .rating-badge.r-local_possible_global_not_favored { background: #a8551a; }
+  .rating-badge.r-high_burden_due_mark_from_matthew, .rating-badge.r-high_burden_if_canonical_john_source, .rating-badge.r-weak_global_direct_model { background: #864747; }
+
+  .req-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .req-chips a { font-size: 10.5px; padding: 3px 8px; border-radius: 2px; background: #fafaf7; border: 1px solid var(--rule); color: var(--ink-soft); text-decoration: none; font-family: var(--mono); }
+  .req-chips a:hover { background: #fbf7ea; border-color: var(--accent); color: var(--ink); }
+
+  .card-metrics { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #fafaf7; border-radius: 3px; font-size: 11.5px; }
+  .card-metrics .bsum { font-family: var(--serif); font-size: 22px; color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; }
+  .card-metrics .bsum-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .card-metrics .bnote { font-size: 10.5px; color: var(--ink-mute); line-height: 1.4; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--rule-soft); }
+  .card-metrics .bdetail { font-family: var(--mono); font-size: 10px; color: var(--ink-soft); line-height: 1.5; word-break: break-word; }
+
+  .fit-grid { grid-column: 1 / -1; margin-top: 8px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .fit-cell { border: 1px solid var(--rule-soft); border-radius: 3px; padding: 8px 10px; background: #fafaf7; }
+  .fit-cell .fit-area { font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); margin-bottom: 2px; }
+  .fit-cell .fit-val { font-family: var(--mono); font-size: 10.5px; color: var(--ink); line-height: 1.4; }
+  .fit-cell.f-strong { background: #e6efe0; border-color: #b7d6a8; }
+  .fit-cell.f-medium_high, .fit-cell.f-stronger_than_strict_independent_two_source, .fit-cell.f-strong_for_shared_sayings_low_burden, .fit-cell.f-high_for_sayings { background: #f0eccb; border-color: #d6c985; }
+  .fit-cell.f-viable_if_Lukan_redistribution_model_supplied, .fit-cell.f-possible_if_Matthean_clustering_model_supplied, .fit-cell.f-medium, .fit-cell.f-medium_or_component_dependent, .fit-cell.f-possible_local_not_lowest_global_burden, .fit-cell.f-can_absorb_with_lost_source_but_pays_lost_source_cost, .fit-cell.f-medium_requires_order_retention { background: #f4ecd6; border-color: #d6bc70; }
+  .fit-cell.f-weak_to_medium_high_burden, .fit-cell.f-unresolved_burden, .fit-cell.f-burden_needs_catalog_evaluation, .fit-cell.f-does_not_decide_Q_or_Farrer, .fit-cell.f-high_burden_for_canonical_John_as_source { background: #f5ddc4; border-color: #d8a778; }
+  .fit-cell.f-not_applicable { background: #f4efdf; color: var(--ink-mute); border-color: var(--rule); }
+  .fit-cell.f-not_applicable .fit-val { color: var(--ink-mute); }
+
+  .card-foot { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; font-size: 12px; }
+  .card-foot .strength, .card-foot .burden { padding: 10px 12px; border-radius: 3px; line-height: 1.5; }
+  .card-foot .strength { background: #f1f5ec; border-left: 3px solid #4d6f4b; }
+  .card-foot .burden { background: #fbeeda; border-left: 3px solid var(--warn); }
+  .card-foot .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); font-weight: 600; margin-bottom: 3px; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--ink-soft); margin: 10px 0 2px; align-items: center; }
+  .legend .sw { display: inline-flex; align-items: center; gap: 5px; }
+  .legend .sw span.box { display: inline-block; width: 11px; height: 11px; border: 1px solid var(--rule); border-radius: 2px; }
+  .legend .sw .box.l-strong { background: #e6efe0; border-color: #b7d6a8; }
+  .legend .sw .box.l-mh { background: #f0eccb; border-color: #d6c985; }
+  .legend .sw .box.l-med { background: #f4ecd6; border-color: #d6bc70; }
+  .legend .sw .box.l-burden { background: #f5ddc4; border-color: #d8a778; }
+  .legend .sw .box.l-na { background: #f4efdf; border-color: var(--rule); }
+
+  .summary-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 8px 0 18px; }
+  .summary-strip .cell { padding: 10px 12px; background: #fff; border: 1px solid var(--rule); border-radius: 3px; }
+  .summary-strip .cell .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-mute); }
+  .summary-strip .cell .v { font-family: var(--serif); font-size: 18px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .summary-strip .cell .n { font-size: 11px; color: var(--ink-mute); margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page-head">
+    <h1>System-model scorecard</h1>
+    <span class="sub">13 models · 5 explanatory areas · required directions · burden sums · strength/burden cards</span>
+  </header>
+  <nav id="topnav" class="topnav"></nav>
+
+  <div class="page-intro">
+    <p>Each system-level model of the Synoptic Problem has to carry a specific set of <em>required directions</em>. This page shows all thirteen atlas models side by side: the required directions (clickable, each drills into the per-direction dossier), the sum of the selected direction burdens where computable, a five-area fit matrix (Mark–Matthew, Mark–Luke, Matthew–Luke double tradition, minor agreements, John anchors), and the strongest support and heaviest remaining burden under that model.</p>
+    <p>Models are grouped by family. Within each family, rows are sorted by burden sum ascending — lowest-burden model first, with a highlight on the <em>best-in-family</em> card. Burden sums are summed from published direction burdens, not probabilities.</p>
+    <div class="note">
+      <b>How to read this page:</b> a lower <em>sum_selected_burden_scores_available</em> means the direction set under this model has accumulated less unexplained material in the current ledgers — <b>not</b> that the model is closer to truth. A model can carry additional non-burden-scored obligations (Q reconstruction, lost-source postulates, de-Johannization). The five-area fit labels are the atlas's qualitative reads of how well the current evidence sits with the model in that area; <b>not_applicable</b> marks areas a model does not claim to resolve. <br>
+      Sources: <code>data/52_system_model_comparison_scorecard.csv</code>, <code>data/02_system_model_registry.yaml</code>, <code>data/53_system_model_evidence_cards.yaml</code>, <code>data/51_model_component_direction_matrix.csv</code>.
+    </div>
+    <div class="legend">
+      <span class="sw"><span class="box l-strong"></span>strong</span>
+      <span class="sw"><span class="box l-mh"></span>medium-high / stronger-than-baseline</span>
+      <span class="sw"><span class="box l-med"></span>medium / model-dependent</span>
+      <span class="sw"><span class="box l-burden"></span>burden / unresolved</span>
+      <span class="sw"><span class="box l-na"></span>not applicable</span>
+    </div>
+  </div>
+
+  <div class="summary-strip" id="summaryStrip"></div>
+
+  <div id="cards"></div>
+
+  <div class="footer">
+    Companion pages: <a href="36_directional_registry.html">36 · Direction registry</a> ·
+    <a href="37_direction_dossier.html">37 · Per-direction dossier</a> ·
+    <a href="38_system_hypotheses.html">38 · System hypothesis space</a> ·
+    <a href="40_direction_matrix.html">40 · Gospel 4×4 matrix</a> ·
+    <a href="41_minor_agreements.html">41 · Minor agreements &amp; double tradition</a> ·
+    <a href="42_pericope_dossiers.html">42 · Pericope dossiers</a> ·
+    <a href="26_conclusions.html">26 · Conclusions</a>.
+    Data package: <code>synoptic_problem_model_atlas_20260418/</code>.
+  </div>
+</div>
+
+<script src="data/bundle.js"></script>
+<script src="assets/shared.js"></script>
+<script>
+(function () {
+  SH.buildNav('39_system_model_scorecard.html');
+  const el = SH.el;
+  const B = SH.BUNDLE;
+  const AT = B.atlas || {};
+  const scorecard = AT.system_model_comparison_scorecard || [];
+  const registry = AT.system_model_registry || [];
+  const evidence = AT.system_model_evidence_cards || [];
+  const compMatrix = AT.model_component_direction_matrix || [];
+  const dirReg = (B.dir_dossiers && B.dir_dossiers.registry) || [];
+
+  // Build lookup maps
+  const regById = {};
+  for (const r of registry) regById[r.model_id] = r;
+  const evById = {};
+  for (const e of evidence) evById[e.model_id] = e;
+  const dirRegById = {};
+  for (const d of dirReg) dirRegById[d.direction_id] = d;
+  const compByModelDir = {};
+  for (const c of compMatrix) {
+    const key = c.model_id + '::' + c.direction_id;
+    compByModelDir[key] = c;
+  }
+
+  function famClass(fam) {
+    if (!fam) return 'fam-other';
+    const s = String(fam).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    return 'fam-' + s;
+  }
+  function ratingClass(r) {
+    return 'r-' + String(r || '').replace(/[^A-Za-z0-9_]/g, '_');
+  }
+  function fitClass(f) {
+    return 'f-' + String(f || 'not_applicable').replace(/[^A-Za-z0-9_]/g, '_');
+  }
+  function prettyFit(f) {
+    return String(f || '—').replace(/_/g, ' ');
+  }
+  function num(n) {
+    if (n === null || n === undefined || n === '' || Number.isNaN(Number(n))) return null;
+    return Number(n);
+  }
+
+  // Build summary strip
+  function buildSummary() {
+    const host = document.getElementById('summaryStrip');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    function cell(k, v, n) {
+      const c = el('div', { class: 'cell' });
+      c.appendChild(el('div', { class: 'k' }, k));
+      c.appendChild(el('div', { class: 'v' }, String(v)));
+      if (n) c.appendChild(el('div', { class: 'n' }, n));
+      host.appendChild(c);
+    }
+    const withBurden = scorecard.filter(function (r) { return num(r.sum_selected_burden_scores_available) !== null; });
+    const sorted = withBurden.slice().sort(function (a, b) { return num(a.sum_selected_burden_scores_available) - num(b.sum_selected_burden_scores_available); });
+    const lowest = sorted[0];
+    const highest = sorted[sorted.length - 1];
+    cell('Models in scorecard', scorecard.length, registry.length + ' in registry');
+    cell('Families', new Set(scorecard.map(function (r) { return r.family; })).size, 'direct-literary dominates');
+    cell('Lowest burden sum', lowest ? lowest.sum_selected_burden_scores_available.toFixed(2) : '—', lowest ? lowest.short_label : '');
+    cell('Highest burden sum', highest ? highest.sum_selected_burden_scores_available.toFixed(2) : '—', highest ? highest.short_label : '');
+    const noScore = scorecard.length - withBurden.length;
+    cell('Unscored at system level', noScore, 'lost-source / pre-Johannine models');
+  }
+
+  // Render cards grouped by family, sorted by burden sum
+  function buildCards() {
+    const host = document.getElementById('cards');
+    while (host.firstChild) host.removeChild(host.firstChild);
+    const byFamily = {};
+    for (const r of scorecard) {
+      const f = r.family || 'other';
+      (byFamily[f] = byFamily[f] || []).push(r);
+    }
+    const familyOrder = [
+      'direct-literary',
+      'source-critical',
+      'lost-source/network',
+      'non-direct/shared-tradition',
+      'john-synoptic-direct',
+      'john-reverse-or-prejohannine',
+    ];
+    const families = familyOrder.filter(function (f) { return byFamily[f]; })
+      .concat(Object.keys(byFamily).filter(function (f) { return familyOrder.indexOf(f) < 0; }));
+    for (const f of families) {
+      const rows = (byFamily[f] || []).slice().sort(function (a, b) {
+        const av = num(a.sum_selected_burden_scores_available);
+        const bv = num(b.sum_selected_burden_scores_available);
+        if (av === null && bv === null) return 0;
+        if (av === null) return 1;
+        if (bv === null) return -1;
+        return av - bv;
+      });
+      const hwrap = el('div', { class: 'family-wrap' });
+      hwrap.appendChild(el('h2', null, prettyFamily(f)));
+      hwrap.appendChild(el('span', { class: 'fam-id' }, f));
+      hwrap.appendChild(el('span', { class: 'fam-count' }, rows.length + (rows.length === 1 ? ' model' : ' models')));
+      host.appendChild(hwrap);
+      const list = el('div', { class: 'card-list' });
+      let bestId = null;
+      for (const r of rows) {
+        if (num(r.sum_selected_burden_scores_available) !== null) { bestId = r.model_id; break; }
+      }
+      for (const r of rows) {
+        list.appendChild(buildCard(r, r.model_id === bestId));
+      }
+      host.appendChild(list);
+    }
+  }
+  function prettyFamily(f) {
+    switch (f) {
+      case 'direct-literary': return 'Direct-literary models';
+      case 'source-critical': return 'Source-critical models';
+      case 'lost-source/network': return 'Lost-source / network models';
+      case 'non-direct/shared-tradition': return 'Non-direct / shared-tradition models';
+      case 'john-synoptic-direct': return 'John used a Synoptic (direct)';
+      case 'john-reverse-or-prejohannine': return 'Synoptics used John / pre-Johannine';
+      default: return f || 'Other';
+    }
+  }
+
+  function buildCard(r, isBestInFamily) {
+    const reg = regById[r.model_id] || {};
+    const ev = evById[r.model_id] || {};
+    const cls = 'card ' + famClass(r.family) + (isBestInFamily ? ' best-in-family' : '');
+    const card = el('div', { class: cls, id: r.model_id });
+
+    // Head (left column)
+    const head = el('div', { class: 'card-head' });
+    head.appendChild(el('h3', null, r.short_label || r.model_id));
+    head.appendChild(el('div', { class: 'mid' }, r.model_id + '  ·  family: ' + (r.family || '—')));
+    if (reg.core_claim) head.appendChild(el('div', { class: 'claim' }, reg.core_claim));
+
+    const rate = el('div', { class: 'rating-badge ' + ratingClass(r.current_atlas_rating) }, (r.current_atlas_rating || '').replace(/_/g, ' ') || '—');
+    head.appendChild(rate);
+
+    // Required direction chips
+    const req = r.required_direction_hypotheses || [];
+    if (req.length) {
+      const chips = el('div', { class: 'req-chips' });
+      chips.appendChild(el('span', { class: 'rk', style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-mute);margin-right:4px;' }, 'required directions:'));
+      for (const did of req) {
+        const d = dirRegById[did];
+        const label = did + (d && typeof compByModelDir[r.model_id + '::' + did] !== 'undefined' && compByModelDir[r.model_id + '::' + did].burden_score !== null && typeof compByModelDir[r.model_id + '::' + did].burden_score === 'number' ? ' · ' + compByModelDir[r.model_id + '::' + did].burden_score.toFixed(2) : '');
+        const a = el('a', {
+          href: d ? ('37_direction_dossier.html#' + did) : '36_directional_registry.html#' + did,
+          title: (d && d.short_label) || did,
+        }, label);
+        chips.appendChild(a);
+      }
+      head.appendChild(chips);
+    }
+
+    // Optional/competing components
+    if (reg.optional_or_competing_components && reg.optional_or_competing_components.length) {
+      const optChips = el('div', { class: 'req-chips', style: 'margin-top:4px;' });
+      optChips.appendChild(el('span', { class: 'rk', style: 'font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-mute);margin-right:4px;' }, 'optional / competing:'));
+      for (const did of reg.optional_or_competing_components) {
+        const d = dirRegById[did];
+        const a = el('a', {
+          href: d ? ('37_direction_dossier.html#' + did) : '36_directional_registry.html#' + did,
+          style: 'background:#fdfaf0;border-color:var(--rule-soft);color:var(--ink-mute);',
+          title: (d && d.short_label) || did,
+        }, did);
+        optChips.appendChild(a);
+      }
+      head.appendChild(optChips);
+    }
+
+    card.appendChild(head);
+
+    // Metrics (right column)
+    const metr = el('div', { class: 'card-metrics' });
+    metr.appendChild(el('div', { class: 'bsum-lbl' }, 'Sum of selected direction burdens'));
+    const sum = num(r.sum_selected_burden_scores_available);
+    metr.appendChild(el('div', { class: 'bsum' }, sum !== null ? sum.toFixed(2) : '—'));
+    if (sum === null) {
+      metr.appendChild(el('div', { class: 'bnote' }, 'Model-level only; required component unscored at ledger level (lost-source / pre-Johannine).'));
+    } else {
+      metr.appendChild(el('div', { class: 'bnote' }, 'Lower is better, not a probability. Aggregates the direction burdens most directly tied to this model.'));
+    }
+    if (r.required_direction_burdens_selected) {
+      metr.appendChild(el('div', { class: 'bdetail' }, r.required_direction_burdens_selected));
+    }
+    card.appendChild(metr);
+
+    // Fit matrix (5 cells spanning both columns)
+    const fit = el('div', { class: 'fit-grid' });
+    const fitAreas = [
+      ['Mark–Matthew', r.mark_matthew_fit],
+      ['Mark–Luke', r.mark_luke_fit],
+      ['Matt–Luke double tradition', r.matt_luke_double_tradition_fit],
+      ['Minor agreements', r.minor_agreements_fit],
+      ['John anchors', r.john_anchor_fit],
+    ];
+    for (const [lab, val] of fitAreas) {
+      const cell = el('div', { class: 'fit-cell ' + fitClass(val) });
+      cell.appendChild(el('div', { class: 'fit-area' }, lab));
+      cell.appendChild(el('div', { class: 'fit-val' }, prettyFit(val)));
+      fit.appendChild(cell);
+    }
+    card.appendChild(fit);
+
+    // Strength + burden footer
+    const foot = el('div', { class: 'card-foot' });
+    const s = el('div', { class: 'strength' });
+    s.appendChild(el('div', { class: 'lbl' }, 'Strongest support'));
+    s.appendChild(document.createTextNode(r.main_strength || (ev.strongest_support || '—')));
+    const b = el('div', { class: 'burden' });
+    b.appendChild(el('div', { class: 'lbl' }, 'Heaviest remaining burden'));
+    b.appendChild(document.createTextNode(r.main_burden || (ev.strongest_contra_or_unresolved_burden || '—')));
+    foot.appendChild(s);
+    foot.appendChild(b);
+    card.appendChild(foot);
+
+    return card;
+  }
+
+  buildSummary();
+  buildCards();
+
+  // If page loaded with a hash, scroll to that card
+  if (window.location.hash) {
+    const id = window.location.hash.replace('#', '');
+    const tgt = document.getElementById(id);
+    if (tgt) setTimeout(function () { tgt.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 50);
+  }
+})();
+</script>
+</body>
+</html>
